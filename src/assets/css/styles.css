@@ -6,12 +6,15 @@
 /*----- end FONT COLORS -----*/
 /*----- DEFAULTS -----*/
 html, body {
-  font-family: 'Roboto', 'Helvetica', sans-serif;
-  padding: 0;
-  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  padding: 0;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  background-color: #F8F8FA;
 }
 
 /*headers*/
