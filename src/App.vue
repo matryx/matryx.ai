@@ -11,14 +11,15 @@
     <b-collapse is-nav id="nav_collapse">
 
       <b-nav is-nav-bar>
-        <b-nav-item class="text-color--white">
-          <a  target="_blank" href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf">
+        <!-- <b-nav-item class="text-color-white"> -->
+          <a class="nav-link text-color--white" target="_blank" href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf">
             WHITEPAPER
           </a>
-        </b-nav-item>
-        <b-nav-item class="text-color--white">
-          <router-link to="/tokensale" class="text-color--white">TOKEN SALE</router-link>
-        </b-nav-item>
+        <!-- </b-nav-item> -->
+        <!-- <b-nav-item class="text-color-white"> -->
+        <router-link to="/tokensale" id="nav-link__tokensale" class="nav-link text-color--white">TOKEN SALE</router-link>
+          <router-link to="/faq/about" class="nav-link text-color--white">faq</router-link>
+        <!-- </b-nav-item> -->
       </b-nav>
 
       <!-- Right aligned nav items -->
@@ -50,15 +51,5 @@ export default {
 <style lang="scss">
 @import './assets/css/styles';
 
-body {
-    margin: 0 auto;
-}
-
-#app {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-}
 
 </style>

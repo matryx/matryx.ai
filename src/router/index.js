@@ -25,7 +25,7 @@ export default new Router({
       component: FAQ,
       children: [
         {
-          path: '/:question',
+          path: '',
           component: About,
           children: [
             {

@@ -52,7 +52,7 @@ label.font-size--small {font-size: 12px; line-height: 16px; }
   &__social {font-size: 14px; line-height: 22px; margin-bottom: 4px;}
 }
 /*body content (non-footer/non-header)*/
-.body-content {padding: 0; margin: 0; display: -webkit-box;display: -ms-flexbox;display: flex;}
+.body-content {padding: 0; margin: 0; width:100%;} //display: -webkit-box; display: -ms-flexbox;display: flex;
 /*buttons*/
 button { font-family: 'Roboto Medium'; font-size: 16px; line-height: 21px; letter-spacing: 0.5px;}
 /*----- end DEFAULTS -----*/
@@ -69,10 +69,6 @@ button { font-family: 'Roboto Medium'; font-size: 16px; line-height: 21px; lette
   &--dark-purple {background-color: $midnight-tint-2;}
   &--white {background-color: $silver-white;}
 }
-/*body content*/
-.body-content {
-  width:100%;
-}
 /*content container*/
 .content-container {
   width: 100%;
@@ -83,7 +79,11 @@ button { font-family: 'Roboto Medium'; font-size: 16px; line-height: 21px; lette
   &--medium { max-width: 900px; }
   &--large { max-width: 1200px; }
 }
-/*text colors*/
+/*cd-word-wrapper*/
+h1.cd-headline.clip {
+  line-height: 90px;
+}
+/*text styles*/
 .text-color {
   &--black {color: $deep-black;}
   &--white {color: $white; a { color: $white;}}
@@ -91,6 +91,11 @@ button { font-family: 'Roboto Medium'; font-size: 16px; line-height: 21px; lette
   &--light-purple {color: $blue-tint-1;}
   &--blue {color: $matryx-blue;}
   &--red {color: $matryx-red;}
+}
+.text {
+  &--inline {
+    display:inline;
+  }
 }
 /*icon bar*/
 .icon-bar {
@@ -115,6 +120,15 @@ button { font-family: 'Roboto Medium'; font-size: 16px; line-height: 21px; lette
     font-size: 2.5rem;
   }
 }
+/*logo*/
+.logo {
+  &--small {
+    height: 50px;
+  }
+  &--medium {
+    height:100px;
+  }
+}
 /*social*/
 .social-icon {
   height: 40px;
@@ -133,7 +147,7 @@ button { font-family: 'Roboto Medium'; font-size: 16px; line-height: 21px; lette
   }
 }
 /*navbar*/
-.navbar {
+.navbar.navbar-light {
   position: absolute;
   width: 100%;
   max-width: 1200px;
@@ -144,5 +158,20 @@ button { font-family: 'Roboto Medium'; font-size: 16px; line-height: 21px; lette
 
     img { height: 100%; }
   }
+
+  .navbar-nav.nav-link a{
+    color: $white;
+  }
 }
 /*----- end CLASSES -----*/
+
+/* ID's */
+#app {
+  display:flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+/* end ID's */

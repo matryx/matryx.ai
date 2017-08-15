@@ -1,0 +1,307 @@
+
+/*For bigger screen then normal 960px desktop*/
+@media (min-width: 1200px) {
+
+}
+
+/*Use if needed*/
+@media (min-width: 992px) and (max-width: 1199px) {
+.comming-soon-header-section {
+   overflow: hidden;
+}
+.comming-soon-header-single-content p {
+    width: 73%;
+}
+.comming-soon-contact-form h2 {
+  font-size: 45px;
+}
+.comming-soon-contact-form p {
+    font-size: 15px;
+    width: 100%;
+}
+.comming-soon-left-single-colume p {
+  font-size: 14px;
+  line-height: 23px;
+}
+}
+
+/*For Tablet Layout*/
+@media (min-width: 768px) and (max-width: 991px) {
+.comming-soon-header-section {
+   overflow: hidden;
+}
+.comming-soon-gallery-top h2 {
+  font-size: 40px;
+}
+.comming-soon-gallery-top h3 {
+  font-size: 20px;
+  line-height: 33px;
+  width: 100%;
+}
+.comming-soon-gallery-top p {
+  font-size: 16px;
+  width: 100%;
+}
+.contact-item{
+  background-color: #222222;
+  left: 0;
+  position: relative;
+  top: 0;
+  transform: none;
+}
+.comming-soon-contact-form h2 {
+   font-size: 40px;
+}
+.comming-soon-contact-form p {
+  font-size: 16px;
+}
+.comming-soon-header-social-icon-right {
+  right: 10px;
+}
+#map {
+  height: 500px !important;
+}
+.more {
+  left: -100vw;
+  width: 100vw;
+}
+.moretop {
+  left: -100vw;
+  width: 100vw;
+}
+}
+
+/*Use if needed*/
+@media (max-width: 979px) {
+.cd-headline b {
+  font-size: 60px;
+}
+.comming-soon-header-section {
+    overflow: hidden;
+}
+.comming-soon-header-single-content p {
+    font-size: 17px;
+    width: 90%;
+}
+.comming-soon-header-input input {
+    width: 30%;
+}
+
+}
+/*For Wide Mobile Layout*/
+  @media (max-width: 767px) {
+.comming-soon-contact-form-section {
+   overflow: hidden;
+}
+
+.comming-soon-header-section {
+    overflow: hidden;
+}
+.single-comming-soon-gallery-bottom {
+  width: 50%;
+}
+.comming-soon-gallery-top h2 {
+    font-size: 40px;
+}
+.comming-soon-gallery-top h3 {
+    font-size: 20px;
+    line-height: 30px;
+    width: 100%;
+}
+.comming-soon-gallery-top p {
+    font-size: 14px;
+    width: 100%;
+    line-height: 25px;
+}
+.comming-soon-header-social-icon-left li {
+    height: 33px;
+    line-height: 32px;
+    margin-bottom: 12px;
+    width: 33px;
+}
+.comming-soon-header-social-icon-right li {
+    height: 33px;
+    line-height: 32px;
+    margin-bottom: 12px;
+    width: 33px;
+}
+
+..comming-soon-down-button a {
+    bottom: 7px;
+    font-size: 20px;
+    height: 35px;
+    line-height: 32px;
+    text-align: center;
+    width: 35px;
+}
+.contact-item{
+  background-color: #222222;
+  left: 0;
+  position: relative;
+  top: 0;
+  transform: none;
+}
+.comming-soon-contact-form h2 {
+   font-size: 40px;
+}
+.comming-soon-contact-form p {
+  font-size: 16px;
+}
+.comming-soon-header-main-content {
+    top: 40%;
+    transform: translateY(-40%);
+}
+.comming-soon-header-social-icon-left {
+    top: 40%;
+    transform: translateY(-40%);
+}
+.comming-soon-header-social-icon-right {
+    top: 40%;
+    transform: translateY(-40%);
+}
+.comming-soon-header-social-icon-right {
+  right: 10px;
+}
+.cd-headline b {
+  font-size: 50px;
+}
+.comming-soon-header-single-content h3 {
+  font-size: 22px;
+}
+.comming-soon-header-single-content p {
+    font-size: 15px;
+    padding: 10px 0 20px;
+}
+.comming-soon-header-input input {
+  font-size: 17px;
+  line-height: 40px;
+  margin-bottom: 25px;
+  width: 85%;
+}
+.comming-soon-header-input button {
+  line-height: 40px;
+}
+#map {
+  height: 400px !important;
+}
+.more {
+  left: -100vw;
+  width: 100vw;
+}
+.moretop {
+  left: -100vw;
+  width: 100vw;
+}
+.comming-soon-contact-form {
+  padding: 70px 0;
+  text-align: center;
+}
+.comming-soon-single-iteam p {
+  width: 100%;
+}
+.comming-soon-left-single-colume {
+  width: 100%;
+}
+.input-left {
+  width: 100%;
+}
+.input-right {
+  width: 100%;
+}
+}
+
+/*For 320-384px up Mobile Layout*/
+@media (max-width: 479px) {
+ .comming-soon-contact-form-section {
+    overflow: hidden;
+}
+.comming-soon-header-section {
+    overflow: hidden;
+}
+.cd-headline b {
+  font-size: 30px;
+}
+.comming-soon-gallery-top h2 {
+    font-size: 23px;
+    margin-bottom: 25px;
+}
+.comming-soon-gallery-top h3 {
+    font-size: 16px;
+    line-height: 25px;
+}
+.comming-soon-gallery-top {
+    padding: 50px 10px;
+}
+.single-comming-soon-gallery-bottom {
+    width: 100%;
+}
+.comming-soon-header-single-content h3 {
+    font-size: 20px;
+}
+.comming-soon-header-single-content p {
+    font-size: 15px;
+    width: 70%;
+}
+.comming-soon-header-input button {
+  padding: 0 18px;
+  line-height: 40px;
+}
+.comming-soon-header-single-content-bottom p {
+    font-size: 16px;
+}
+.comming-soon-main-colume-inner{
+  background-color: #222222;
+  left: 0;
+  position: relative;
+  top: 0;
+  transform: none;
+}
+.comming-soon-contact-form h2 {
+  font-size: 30px;
+}
+.comming-soon-contact-form p {
+  font-size: 13px;
+}
+.comming-soon-contact-form h3 {
+  font-size: 20px;
+}
+.comming-soon-left-single-colume p {
+   font-size: 16px;  
+}
+.comming-soon-header-input input{
+  width: 100%;
+  height: 40px;
+  font-size: 17px;
+}
+.comming-soon-header-social-icon-right {
+  right: 10px;
+}
+
+#map {
+  height: 300px !important;
+}
+.more {
+  left: -100vw;
+  width: 100vw;
+}
+.moretop {
+  left: -100vw;
+  width: 100vw;
+}
+.comming-soon-contact-form {
+  padding: 70px 0;
+  text-align: center;
+}
+.comming-soon-single-iteam p {
+  width: 100%;
+}
+.comming-soon-left-single-colume {
+  width: 100%;
+}
+.input-left {
+  width: 100%;
+}
+.input-right {
+  width: 100%;
+}
+}
