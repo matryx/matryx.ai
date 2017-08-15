@@ -10,7 +10,8 @@ $midnight-tint-1 : #4D4D5C;
 $midnight-tint-2 : #696985; //dark purple
 $midnight-tint-3 : #B0B2BF;
 $platinum-gray : #E4E5EF;
-$silver-white : #F8F8FA; //light background
+$silver-white : #F8F8FA; //lighter background
+$light-gray : #EBEBEC; //light gray background
 
 /*blues*/
 $matryx-blue : #4C68FF;
@@ -23,8 +24,15 @@ $matryx-red : #FF5C63; //red
 /*----- end FONT COLORS -----*/
 
 /*----- DEFAULTS -----*/
-html, body {font-family: 'Roboto', 'Helvetica', sans-serif; padding: 0; margin: 0; display: -webkit-box;display: -ms-flexbox;display: flex;}
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  padding: 0;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
 /*headers*/
+h1, h2, h3 { font-weight: lighter;}
 h1 {font-size: 28px; line-height:40px; }
 h1.font-size--large {font-size: 40px;}
 h2 {font-size: 24px; line-height:36px; }
@@ -32,6 +40,7 @@ h3 {font-size: 20px; line-height: 27px; }
 /*body text*/
 p {font-size: 16px; line-height: 28px; }
 p.font-size--small {font-size: 14px; line-height:24px; }
+p.font-size--xsmall {font-size: 12px; line-height:14px; }
 /*captions & labels*/
 caption {font-size:14px; line-height: 19px; font-style: italic; }
 label {font-size: 14px; line-height: 19px; }
@@ -41,7 +50,7 @@ label.font-size--small {font-size: 12px; line-height: 16px; }
   &__social {font-size: 14px; line-height: 22px; margin-bottom: 4px;}
 }
 /*body content (non-footer/non-header)*/
-.body-content {padding: 0; margin: 0; width:100%; height: 100%; display: -webkit-box;display: -ms-flexbox;display: flex;}
+.body-content {padding: 0; margin: 0; display: -webkit-box;display: -ms-flexbox;display: flex;}
 /*buttons*/
 button { font-family: 'Roboto Medium'; font-size: 16px; line-height: 21px; letter-spacing: 0.5px;}
 /*----- end DEFAULTS -----*/
@@ -56,7 +65,8 @@ button { font-family: 'Roboto Medium'; font-size: 16px; line-height: 21px; lette
 /*content container*/
 .content-container {
   width: 100%;
-  margin: auto;
+  margin-left:auto;
+  margin-right: auto;
 
   &--small { max-width: 600px; }
   &--medium { max-width: 900px; }
@@ -70,5 +80,14 @@ button { font-family: 'Roboto Medium'; font-size: 16px; line-height: 21px; lette
   &--light-purple {color: $blue-tint-1;}
   &--blue {color: $matryx-blue;}
   &--red {color: $matryx-red;}
+}
+/*icon bar*/
+.icon-bar {
+  display: block;
+  height: 0px;
+  width: 30px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  transition: all 0.2s;
 }
 /*----- end CLASSES -----*/
