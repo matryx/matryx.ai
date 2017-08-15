@@ -9,6 +9,8 @@ $midnight : #282833;
 $midnight-tint-1 : #4D4D5C;
 $midnight-tint-2 : #696985; //dark purple
 $midnight-tint-3 : #B0B2BF;
+$purple: #423176;
+$light-purple: #645788;
 $platinum-gray : #E4E5EF;
 $silver-white : #F8F8FA; //lighter background
 $light-gray : #EBEBEC; //light gray background
@@ -63,8 +65,13 @@ button { font-family: 'Roboto Medium'; font-size: 16px; line-height: 21px; lette
 /*background colors*/
 .bkg-color {
   &--black {background-color: $deep-black;}
+  &--purple {background-color: $purple;}
   &--dark-purple {background-color: $midnight-tint-2;}
   &--white {background-color: $silver-white;}
+}
+/*body content*/
+.body-content {
+  width:100%;
 }
 /*content container*/
 .content-container {
@@ -79,7 +86,7 @@ button { font-family: 'Roboto Medium'; font-size: 16px; line-height: 21px; lette
 /*text colors*/
 .text-color {
   &--black {color: $deep-black;}
-  &--white {color: $white;}
+  &--white {color: $white; a { color: $white;}}
   &--dark-purple {color: $midnight-tint-2;}
   &--light-purple {color: $blue-tint-1;}
   &--blue {color: $matryx-blue;}
@@ -94,9 +101,48 @@ button { font-family: 'Roboto Medium'; font-size: 16px; line-height: 21px; lette
   border-radius: 20px;
   transition: all 0.2s;
 }
-
-.navbar {
+/*jumbotron*/
+.jumbotron{
   width: 100%;
-  background-color: $deep-black;
+
+  .container {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+    color: $white;
+  }
+  .display-3 {
+    font-size: 2.5rem;
+  }
+}
+/*social*/
+.social-icon {
+  height: 40px;
+  width: 40px;
+
+  a {
+    height: 100%;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+}
+/*navbar*/
+.navbar {
+  position: absolute;
+  width: 100%;
+  max-width: 1200px;
+  background-color: $light-purple;
+
+  .navbar-brand {
+    height: 50px;
+
+    img { height: 100%; }
+  }
 }
 /*----- end CLASSES -----*/

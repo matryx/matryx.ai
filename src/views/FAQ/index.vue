@@ -49,7 +49,7 @@
 
 <style lang="scss">
   // @import '../../assets/css/styles.scss';
-  // @import '../../assets/css/faq.scss';
+  @import '../../assets/css/faq.scss';
 
 </style>
 

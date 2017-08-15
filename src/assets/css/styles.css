@@ -111,12 +111,21 @@ button {
   background-color: #000;
 }
 
+.bkg-color--purple {
+  background-color: #423176;
+}
+
 .bkg-color--dark-purple {
   background-color: #696985;
 }
 
 .bkg-color--white {
   background-color: #F8F8FA;
+}
+
+/*body content*/
+.body-content {
+  width: 100%;
 }
 
 /*content container*/
@@ -147,6 +156,10 @@ button {
   color: #FFF;
 }
 
+.text-color--white a {
+  color: #FFF;
+}
+
 .text-color--dark-purple {
   color: #696985;
 }
@@ -173,9 +186,54 @@ button {
   transition: all 0.2s;
 }
 
-.navbar {
+/*jumbotron*/
+.jumbotron {
   width: 100%;
-  background-color: #000;
+}
+
+.jumbotron .container {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+  color: #FFF;
+}
+
+.jumbotron .display-3 {
+  font-size: 2.5rem;
+}
+
+/*social*/
+.social-icon {
+  height: 40px;
+  width: 40px;
+}
+
+.social-icon a {
+  height: 100%;
+}
+
+.social-icon a:hover {
+  cursor: pointer;
+}
+
+.social-icon a img {
+  height: 100%;
+}
+
+/*navbar*/
+.navbar {
+  position: absolute;
+  width: 100%;
+  max-width: 1200px;
+  background-color: #645788;
+}
+
+.navbar .navbar-brand {
+  height: 50px;
+}
+
+.navbar .navbar-brand img {
+  height: 100%;
 }
 
 /*----- end CLASSES -----*/
