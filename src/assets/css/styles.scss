@@ -55,6 +55,10 @@ label.font-size--small {font-size: 12px; line-height: 16px; }
 button { font-family: 'Roboto Medium'; font-size: 16px; line-height: 21px; letter-spacing: 0.5px;}
 /*----- end DEFAULTS -----*/
 
+/*----- ELEMENTS -----*/
+/*----- end ELEMENTS -----*/
+
+
 /*----- CLASSES -----*/
 /*background colors*/
 .bkg-color {
@@ -89,5 +93,10 @@ button { font-family: 'Roboto Medium'; font-size: 16px; line-height: 21px; lette
   margin-bottom: 10px;
   border-radius: 20px;
   transition: all 0.2s;
+}
+
+.navbar {
+  width: 100%;
+  background-color: $deep-black;
 }
 /*----- end CLASSES -----*/

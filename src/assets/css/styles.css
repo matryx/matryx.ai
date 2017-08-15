@@ -103,6 +103,8 @@ button {
 }
 
 /*----- end DEFAULTS -----*/
+/*----- ELEMENTS -----*/
+/*----- end ELEMENTS -----*/
 /*----- CLASSES -----*/
 /*background colors*/
 .bkg-color--black {
@@ -169,6 +171,11 @@ button {
   margin-bottom: 10px;
   border-radius: 20px;
   transition: all 0.2s;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #000;
 }
 
 /*----- end CLASSES -----*/
