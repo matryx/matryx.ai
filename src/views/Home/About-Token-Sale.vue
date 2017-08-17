@@ -53,17 +53,15 @@ export default {
     }
     &--vertical {
       flex-flow: column;
-      flex: 1 1 0;
-      width: calc(50% - 10px);
+      flex: 1 1 calc(100% - 10px);
       justify-content: space-between;
     }
   }
   .card {
-    flex: 1 1 0;
+    flex: 1 1 calc(100% - 10px);
     border: 1px solid $purple;
     border-radius: 0;
     padding: 20px;
-    width: calc(50% - 10px);
     justify-content: space-between;
 
     img {
