@@ -92,6 +92,11 @@ label.font-size--small {
   width: 100%;
 }
 
+section {
+  margin: 20px 0;
+  padding: 0;
+}
+
 /*buttons*/
 button {
   font-family: 'Roboto Medium';
@@ -158,6 +163,10 @@ h1.cd-headline.clip {
   color: #FFF;
 }
 
+.text-color--purple {
+  color: #423176;
+}
+
 .text-color--dark-purple {
   color: #696985;
 }
@@ -176,6 +185,10 @@ h1.cd-headline.clip {
 
 .text--inline {
   display: inline;
+}
+
+.text--bold {
+  font-weight: bold;
 }
 
 /*icon bar*/
@@ -211,32 +224,6 @@ h1.cd-headline.clip {
 
 .logo--medium {
   height: 100px;
-}
-
-/*media mentions*/
-.media-mentions {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-direction: column;
-}
-
-.media-mentions p {
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.media-mentions__img-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.media-mentions__img-container img {
-  width: 200px;
 }
 
 /*social*/
