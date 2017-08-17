@@ -1,6 +1,6 @@
 <template>
   <section>
-
+    About Token Sale
   </section>
 </template>
 
