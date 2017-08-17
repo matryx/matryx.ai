@@ -31,9 +31,7 @@
             feugiat laboramus mel ei. Ipsum fugit cu eam, pri id omittam consulatu.
             Sed cu eirmod commune deterruisset, ceteros maiorum qui ut.
           </p>
-          <div class="card__image">
-            <img src="../../assets/images/video-preview.png" alt="">
-          </div>
+          <img src="../../assets/images/video-preview.png" alt="">
         </div>
       </div>
     </div>
@@ -80,14 +78,9 @@ export default {
       flex: 0 1 auto;
     }
 
-    &__img {
-      flex: 1 1 auto;
-      overflow: hidden;
-
-      img {
-        height: auto;
-        width: 100%;
-      }
+    img {
+      height: auto;
+      width: 100%;
     }
   }
 
@@ -95,16 +88,18 @@ export default {
   @media screen and (max-width: 750px) {
     .card-container {
       &--vertical {
-        & > * {
-          height: 100%;
-        }
+        width: 100%;
       }
       &--horizontal {
+        flex-flow:column;
+        width: 100%;
         & > * {
-          flex-flow:column;
-          width: 100%;
+          width:100%;
         }
       }
+    }
+    .card {
+      margin-bottom: 20px;
     }
   }
 </style>
