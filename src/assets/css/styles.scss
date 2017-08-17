@@ -39,6 +39,10 @@ button { font-family: 'Roboto Medium', Helvetica, sans-serif;
   letter-spacing: 0.5px;
   transition: 0.3s all;
   text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 /*----- end DEFAULTS -----*/
 
@@ -62,14 +66,14 @@ button { font-family: 'Roboto Medium', Helvetica, sans-serif;
   }
 
   &-purple {
-    border: 1px solid $purple;
-    color: $purple;
+    border: 1px solid #6B3FD6;
+    color: $white;
     padding: 10px 20px;
-    background-color: $white;
+    background-color: #6B3FD6;
 
     &:hover {
-      color: $white;
-      background-color: $purple;
+      color: $purple;
+      background-color: $white;
     }
   }
 }

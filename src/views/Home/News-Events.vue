@@ -13,6 +13,7 @@
             :name="event.name"
             :date="event.date"
             :desc="event.desc"
+            :cta="event.cta"
           >
           </Primary-Event>
         </div>
@@ -36,7 +37,8 @@ export default {
       events: [{
         name: 'Big Event',
         date: '10 Sept 2081',
-        description: 'asjdkfls;dalfkdsjfkl;alskdjfkdlsa'
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        cta: 'Read Article'
       }]
     }
   }
