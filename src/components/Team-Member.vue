@@ -1,10 +1,10 @@
 <template>
-  <section class="team-member">
-    <img class="team-member__img" :src="src" :alt="alt">
+  <section class="team-member member">
+    <img class="team-member__img member__img" :src="src" :alt="alt">
 
     <div class="team-member__name">{{ name }}</div>
 
-    <div class="team-member__title"> {{ title }} </div>
+    <div class="team-member__title member__title"> {{ title }} </div>
 
     <div class="team-member__social-icons">
       <img class="linkedin icon":src="twitterIcon">
@@ -35,25 +35,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/css/styles';
-
-.team-member {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 140px;
-  height: 195px;
-  margin: 25px 32px;
-}
-
-.team-member__img {
-  max-height: 120px;
-  max-width: 120px;
-  border-radius: 100%;
-  margin-bottom: 7.5px;
-}
-
 .team-member__title {
   font-size: 11px;
   margin: 2.5px;
@@ -71,8 +52,4 @@ export default {
   width: 30px;
   margin: 5px;
 }
-
-.name {
-}
-
 </style>
