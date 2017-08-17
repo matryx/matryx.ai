@@ -30,12 +30,14 @@ import WhatIsMatryx from './What-is-Matryx'
 
 import CTABanner from '../../components/CTA-Banner'
 
+console.log(AboveTheFold)
+
 export default {
   name: 'home',
   data () {
     return {}
   },
-  component: {
+  components: {
     AboutTokenSale,
     AboveTheFold,
     BountySystem,
