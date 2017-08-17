@@ -1,27 +1,51 @@
 <template>
   <div class="body-content">
-    <b-jumbotron
-      class="bkg-color--purple"
-      header="A Decentralized Research Platform."
-      lead="Driven by Collaboration &amp; Competition." >
-    </b-jumbotron>
-    <div class="media-mentions bkg-purple">
-      <p>Featured in</p>
-      <div class="media-mentions__img-container">
-        <img src="../../assets/images/gizmodo.png" alt="">
-        <img src="../../assets/images/sdut-logo.png" alt="">
-        <img src="../../assets/images/UCSD-logo.png" alt="">
-        <img src="../../assets/images/singularity.png" alt="">
-      </div>
-    </div>
+
+    <Above-the-Fold></Above-the-Fold>
+    <Company-Overview></Company-Overview>
+    <What-is-Matryx></What-is-Matryx>
+    <Matryx-Marketplace></Matryx-Marketplace>
+    <Bounty-System></Bounty-System>
+    <About-Token-Sale></About-Token-Sale>
+    <Roadmap></Roadmap>
+    <CTA-Banner></CTA-Banner>
+    <Nanome-Info></Nanome-Info>
+    <Matryx-Team></Matryx-Team>
+    <News-Events></News-Events>
+
   </div>
 </template>
 
 <script>
+import AboutTokenSale from './About-Token-Sale'
+import AboveTheFold from './Above-the-Fold'
+import BountySystem from './BountySystem'
+import CompanyOverview from './Company-Overview'
+import MatryxMarketplace from './Matryx-Marketplace'
+import MatryxTeam from './Matryx-Team'
+import NanomeInfo from './Nanome-Info'
+import NewsEvents from './News-Events'
+import Roadmap from './Roadmap'
+import WhatIsMatryx from './What-is-Matryx'
+
+import CTABanner from '../../components/CTA-Banner'
+
 export default {
   name: 'home',
   data () {
     return {}
+  },
+  component: {
+    AboutTokenSale,
+    AboveTheFold,
+    BountySystem,
+    CompanyOverview,
+    MatryxMarketplace,
+    MatryxTeam,
+    NanomeTeam,
+    NewsEvents,
+    Roadmap,
+    WhatIsMatryx
   }
 }
 </script>
