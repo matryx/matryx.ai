@@ -1,5 +1,5 @@
 <template>
-  <section></section>
+  <section>nanome info</section>
 </template>
 
 <script>

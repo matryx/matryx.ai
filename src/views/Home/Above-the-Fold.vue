@@ -1,5 +1,5 @@
 <template>
-  <section></section>
+  <section>above the fold</section>
 </template>
 
 <script>

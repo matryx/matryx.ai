@@ -1,5 +1,5 @@
 <template>
-  <section></section>
+  <section>matryx marketplace</section>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <section></section>
+  <section>About token sale</section>
 </template>
 
 <script>
