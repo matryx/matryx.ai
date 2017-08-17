@@ -7,6 +7,7 @@
     <Matryx-Marketplace></Matryx-Marketplace>
     <Bounty-System></Bounty-System>
     <About-Token-Sale></About-Token-Sale>
+    <Quotes></Quotes>
     <Roadmap></Roadmap>
     <CTA-Banner></CTA-Banner>
     <Nanome-Info></Nanome-Info>
@@ -26,6 +27,7 @@ import MatryxTeam from './Matryx-Team'
 import NanomeInfo from './Nanome-Info'
 import NewsEvents from './News-Events'
 import Roadmap from './Roadmap'
+import Quotes from './Quotes'
 import WhatIsMatryx from './What-is-Matryx'
 
 import CTABanner from '../../components/CTA-Banner'
@@ -48,7 +50,8 @@ export default {
     NewsEvents,
     Roadmap,
     WhatIsMatryx,
-    CTABanner
+    CTABanner,
+    Quotes
   }
 }
 </script>
