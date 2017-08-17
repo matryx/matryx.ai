@@ -112,7 +112,7 @@ button {
 /*----- ELEMENTS -----*/
 /*----- end ELEMENTS -----*/
 /*----- CLASSES -----*/
-j
+/*buttons*/
 .btn-yellow {
   border: 1px solid #EF8A11;
   color: #EF8A11;
@@ -120,13 +120,11 @@ j
   background-color: #FFF;
 }
 
-j
 .btn-yellow:hover {
   color: #FFF;
   background-color: #EF8A11;
 }
 
-j
 .btn-purple {
   border: 1px solid #423176;
   color: #423176;
@@ -134,7 +132,6 @@ j
   background-color: #FFF;
 }
 
-j
 .btn-purple:hover {
   color: #FFF;
   background-color: #423176;
