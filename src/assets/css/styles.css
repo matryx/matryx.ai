@@ -15,6 +15,10 @@ html, body {
 }
 
 /*headers*/
+h1, h2, h3 {
+  font-weight: lighter;
+}
+
 h1 {
   font-size: 28px;
   line-height: 40px;
@@ -90,13 +94,8 @@ label.font-size--small {
 }
 
 section {
-  margin: 0;
+  margin: 20px 0;
   padding: 0;
-}
-
-hr {
-  border-top: 1px solid #423176;
-  max-width: 1400px;
 }
 
 /*buttons*/
@@ -105,28 +104,12 @@ button {
   font-size: 16px;
   line-height: 21px;
   letter-spacing: 0.5px;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  transition: 0.3s all;
 }
 
 /*----- end DEFAULTS -----*/
 /*----- ELEMENTS -----*/
 /*----- end ELEMENTS -----*/
 /*----- CLASSES -----*/
-/*button styles*/
-.btn-yellow {
-  border: 1px solid #EF8A11;
-  color: #EF8A11;
-  background-color: #FFF;
-}
-
-.btn-yellow:hover {
-  color: #FFF;
-  background-color: #EF8A11;
-  cursor: pointer;
-}
-
 /*background colors*/
 .bkg-color--black {
   background-color: #000;
@@ -146,10 +129,9 @@ button {
 
 /*content container*/
 .content-container {
-  width: calc(100% - 40px);
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 20px;
 }
 
 .content-container--small {
@@ -191,8 +173,7 @@ h1.cd-headline.clip {
 }
 
 .text-color--light-purple {
-  color: #423176;
-  opacity: 0.55;
+  color: #A5B2FF;
 }
 
 .text-color--blue {
