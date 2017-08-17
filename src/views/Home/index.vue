@@ -27,6 +27,7 @@ import MatryxTeam from './Matryx-Team'
 import NanomeInfo from './Nanome-Info'
 import NewsEvents from './News-Events'
 import Roadmap from './Roadmap'
+import Quotes from './Quotes'
 import WhatIsMatryx from './What-is-Matryx'
 import Quotes from './Quotes'
 
