@@ -34,28 +34,31 @@ export default {
 
 .primary-event {
   width: 355px;
-  height: 235px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  margin: 20px 20px;
 
   &__heading {
     height: 155px;
-    padding: 15px;
     position: relative;
     margin-bottom: 10px;
+    box-sizing: border-box;
 
     &__img {
       position: absolute;
       width: 100%;
       height: 100%;
+      opacity: 0.5;
     }
 
     &__text {
       width: 305px;
-      height: 90px;
+      height: 95px;
       background-color: $white;
       position: absolute;
-      left: 38px;
-      top: 55px;
-      padding: 20px;
+      left: 25px;
+      top: 40px;
+      padding: 15px 20px;
     }
 
     &__name {
@@ -84,9 +87,9 @@ export default {
   button.btn-purple {
     height: 30px;
     width: 115px;
-    border-radius: 5px;
     font-size: 11px;
     padding: 5px 10px;
+    margin-left: 25px;
   }
 }
 </style>
