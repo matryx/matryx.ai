@@ -19,7 +19,7 @@
 <script>
 import AboutTokenSale from './About-Token-Sale'
 import AboveTheFold from './Above-the-Fold'
-import BountySystem from './BountySystem'
+import BountySystem from './Bounty-System'
 import CompanyOverview from './Company-Overview'
 import MatryxMarketplace from './Matryx-Marketplace'
 import MatryxTeam from './Matryx-Team'
@@ -42,10 +42,11 @@ export default {
     CompanyOverview,
     MatryxMarketplace,
     MatryxTeam,
-    NanomeTeam,
+    NanomeInfo,
     NewsEvents,
     Roadmap,
-    WhatIsMatryx
+    WhatIsMatryx,
+    CTABanner
   }
 }
 </script>
