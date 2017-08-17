@@ -1,5 +1,5 @@
 <template>
-  <section></section>
+  <section>bounty system</section>
 </template>
 
 <script>

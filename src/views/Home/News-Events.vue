@@ -1,5 +1,5 @@
 <template>
-  <section></section>
+  <section>news events</section>
 </template>
 
 <script>

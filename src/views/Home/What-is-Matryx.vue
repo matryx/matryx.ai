@@ -1,5 +1,5 @@
 <template>
-  <section></section>
+  <section>what is matryx</section>
 </template>
 
 <script>

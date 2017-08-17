@@ -1,5 +1,5 @@
 <template>
-  <section></section>
+  <section>company overview</section>
 </template>
 
 <script>
