@@ -5,6 +5,7 @@
         <h2 class="matryx-team__title__title">The Team</h2>
         <div class="matryx-team__title__line"></div>
       </div>
+
       <div class="matryx-team__team">
         <div class="matryx-team__team__members" v-for="member in team">
           <Team-Member
@@ -16,12 +17,26 @@
           </Team-Member>
         </div>
       </div>
+
+      <div class="matryx-team__advisors">
+        <div class="matryx-team__team__advisors" v-for="advisor in advisors">
+          <Advisor-Member
+            :src="advisor.src"
+            :alt="advisor.name"
+            :name="advisor.name"
+            :desc="advisor.desc"
+          >
+          </Advisor-Member>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
 import TeamMember from '@/components/Team-Member'
+import AdvisorMember from '@/components/Advisors-Member'
+
 import Steve from '@/assets/images/team/steve.jpg'
 import Keita from '@/assets/images/team/keita.jpg'
 import Scott from '@/assets/images/team/scott.jpg'
@@ -34,7 +49,8 @@ export default {
   name: 'MatryxTeam',
 
   components: {
-    TeamMember
+    TeamMember,
+    AdvisorMember
   },
 
   data () {
@@ -66,6 +82,11 @@ export default {
       }, {
         name: 'Kyle Lee',
         title: 'Mathematician',
+        src: Kyle
+      }],
+      advisors: [{
+        name: 'Advisor',
+        desc: 'ajskldf;',
         src: Kyle
       }]
     }
