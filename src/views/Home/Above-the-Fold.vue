@@ -25,25 +25,15 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 section {
   margin-top: 0px;
 }
 
 .jumbotron {
-  .container{
-    position: static;
-    // p, h1{
-    //   z-index: 2;
-    //   position: absolute;
-    //   width: calc(100% - 248px);
-    //   text-align: center;
-    // }
-    // p{
-    //   bottom: 0px;
-    // }
-  }
+  border-radius: 0;
+
 }
 
 /*media mentions*/
@@ -63,7 +53,8 @@ section {
     flex-wrap: wrap;
 
     img {
-      width:200px;
+      width: 20%;
+      max-width: 200px;
     }
   }
 
@@ -77,5 +68,10 @@ section {
   left:0;
   z-index: 1;
 }
+
+
+
+/*----- MEDIA QUERIESS -----*/
+
 
 </style>
