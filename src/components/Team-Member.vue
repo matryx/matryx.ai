@@ -44,7 +44,7 @@ export default {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 200px;
+  width: 140px;
 }
 
 .team-img {
