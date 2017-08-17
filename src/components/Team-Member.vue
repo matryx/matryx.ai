@@ -4,11 +4,11 @@
     <span class="name">{{ name }}</span>
     <div class="title" {{ title }} </span>
     <div class="social-icons">
-      <img class="linkedin"
+      <img class="linkedin icon"
         src=""
         alt="LinkedIn Icon"
       >
-      <img class="twitter"
+      <img class="twitter icon"
         :src="twitterIcon"
         alt="Twitter Icon"
       >
@@ -25,7 +25,8 @@ export default {
   props: {
     src: String,
     alt: String,
-    name: String
+    name: String,
+    title: String
   },
 
   data () {
@@ -45,12 +46,17 @@ export default {
   align-items: center;
   text-align: center;
   width: 140px;
+  height: 195px;
 }
 
 .team-img {
   height: 120px;
   width: 120px;
   border-radius: 100%;
+}
+
+.social-icons {
+  width: 140px;
 }
 
 .name {

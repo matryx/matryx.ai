@@ -9,7 +9,9 @@
         <Team-Member
           :src="member.src"
           :alt="member.name"
-          :name="member.name">
+          :name="member.name"
+          :title="member.title"
+        >
         </Team-Member>
       </div>
     </div>
@@ -20,6 +22,7 @@
 import TeamMember from '@/components/Team-Member'
 import Steve from '@/assets/images/team/s-steven.jpg'
 import Keita from '@/assets/images/team/keita-1024x1024.jpg'
+
 export default {
   name: 'MatryxTeam',
 
@@ -45,6 +48,8 @@ export default {
 
 <style lang="scss">
 
-.team-title {
+.team-members {
+  display: flex;
+  flex-direction: row;
 }
 </style>
