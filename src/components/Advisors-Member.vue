@@ -1,6 +1,6 @@
 <template>
-  <section class="advisors-member">
-    <img class="advisor-member__img" :src="src" :alt="alt">
+  <section class="advisors-member member">
+    <img class="advisor-member__img member__img" :src="src" :alt="alt">
 
     <div class="advisor-member__name">{{ name }}</div>
 
