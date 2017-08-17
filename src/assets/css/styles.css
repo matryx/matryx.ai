@@ -213,6 +213,32 @@ h1.cd-headline.clip {
   height: 100px;
 }
 
+/*media mentions*/
+.media-mentions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+}
+
+.media-mentions p {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.media-mentions__img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.media-mentions__img-container img {
+  width: 200px;
+}
+
 /*social*/
 .social-icon {
   height: 40px;
