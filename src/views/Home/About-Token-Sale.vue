@@ -31,7 +31,9 @@
             feugiat laboramus mel ei. Ipsum fugit cu eam, pri id omittam consulatu.
             Sed cu eirmod commune deterruisset, ceteros maiorum qui ut.
           </p>
-          <img src="../../assets/images/video-preview.png" alt="">
+          <div class="card__image">
+            <img src="../../assets/images/video-preview.png" alt="">
+          </div>
         </div>
       </div>
     </div>
@@ -50,22 +52,59 @@ export default {
     &--horizontal,
     &--vertical {
       display:-webkit-box;display:-ms-flexbox;display:flex;
+      justify-content: space-between;
     }
     &--vertical {
       flex-flow: column;
-      flex: 1 1 calc(100% - 10px);
-      justify-content: space-between;
+      & > * {
+        height: calc(50% - 10px);
+      }
+    }
+    &--horizontal {
+      margin-top: 40px;
+
+      & > * {
+        width: calc(50% - 10px);
+      }
     }
   }
   .card {
-    flex: 1 1 calc(100% - 10px);
+    display: -webkit-box; display: -ms-flexbox;display: flex;
+    flex-direction: column;
     border: 1px solid $purple;
     border-radius: 0;
     padding: 20px;
-    justify-content: space-between;
+    justify-content: flex-start;
 
-    img {
-      width: 100%;
+    h1, p {
+      flex: 0 1 auto;
+    }
+
+    &__img {
+      flex: 1 1 auto;
+      overflow: hidden;
+
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+
+  /*----- MEDIA QUERIESS -----*/
+  @media screen and (max-width: 750px) {
+    .card-container {
+      &--vertical {
+        & > * {
+          height: 100%;
+        }
+      }
+      &--horizontal {
+        & > * {
+          flex-flow:column;
+          width: 100%;
+        }
+      }
     }
   }
 </style>
