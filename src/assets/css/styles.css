@@ -159,6 +159,7 @@ button {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding: 0px 20px;
 }
 
 .content-container--small {
@@ -200,7 +201,8 @@ h1.cd-headline.clip {
 }
 
 .text-color--light-purple {
-  color: #A5B2FF;
+  color: #423176;
+  opacity: 0.55;
 }
 
 .text-color--blue {

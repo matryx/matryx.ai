@@ -50,24 +50,56 @@ export default {
     &--horizontal,
     &--vertical {
       display:-webkit-box;display:-ms-flexbox;display:flex;
+      justify-content: space-between;
     }
     &--vertical {
       flex-flow: column;
-      flex: 1 1 0;
-      width: calc(50% - 10px);
-      justify-content: space-between;
+      & > * {
+        height: calc(50% - 10px);
+      }
+    }
+    &--horizontal {
+      margin-top: 40px;
+
+      & > * {
+        width: calc(50% - 10px);
+      }
     }
   }
   .card {
-    flex: 1 1 0;
+    display: -webkit-box; display: -ms-flexbox;display: flex;
+    flex-direction: column;
     border: 1px solid $purple;
     border-radius: 0;
     padding: 20px;
-    width: calc(50% - 10px);
-    justify-content: space-between;
+    justify-content: flex-start;
+
+    h1, p {
+      flex: 0 1 auto;
+    }
 
     img {
+      height: auto;
       width: 100%;
+    }
+  }
+
+  /*----- MEDIA QUERIESS -----*/
+  @media screen and (max-width: 750px) {
+    .card-container {
+      &--vertical {
+        width: 100%;
+      }
+      &--horizontal {
+        flex-flow:column;
+        width: 100%;
+        & > * {
+          width:100%;
+        }
+      }
+    }
+    .card {
+      margin-bottom: 20px;
     }
   }
 </style>

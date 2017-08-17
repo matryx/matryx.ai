@@ -90,6 +90,7 @@ button { font-family: 'Roboto Medium', Helvetica, sans-serif;
   width: 100%;
   margin-left:auto;
   margin-right: auto;
+  padding: 0px 20px;
 
   &--small { max-width: 600px; }
   &--medium { max-width: 900px; }
@@ -105,7 +106,7 @@ h1.cd-headline.clip {
   &--white {color: $white; a { color: $white;}}
   &--purple {color: $purple;}
   &--dark-purple {color: $midnight-tint-2;}
-  &--light-purple {color: $blue-tint-1;}
+  &--light-purple {color: $purple; opacity:0.55}
   &--blue {color: $matryx-blue;}
   &--red {color: $matryx-red;}
 }
