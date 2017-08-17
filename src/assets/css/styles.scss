@@ -33,14 +33,47 @@ section {
   padding: 0;
 }
 /*buttons*/
-button { font-family: 'Roboto Medium', Helvetica, sans-serif; font-size: 16px; line-height: 21px; letter-spacing: 0.5px;}
+button { font-family: 'Roboto Medium', Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  transition: 0.3s all;
+  text-transform: uppercase;
+}
 /*----- end DEFAULTS -----*/
 
 /*----- ELEMENTS -----*/
 /*----- end ELEMENTS -----*/
 
 
-/*----- CLASSES -----*/
+/*----- CLASSES -----*/j
+/*buttons*/
+.btn{
+  &-yellow {
+    border: 1px solid $yellow;
+    color: $yellow;
+    padding: 10px 20px;
+    background-color: $white;
+
+    &:hover {
+      color: $white;
+      background-color: $yellow;
+    }
+  }
+
+  &-purple {
+    border: 1px solid $purple;
+    color: $purple;
+    padding: 10px 20px;
+    background-color: $white;
+
+    &:hover {
+      color: $white;
+      background-color: $purple;
+    }
+  }
+}
+
 /*background colors*/
 .bkg-color {
   &--black {background-color: $deep-black;}
