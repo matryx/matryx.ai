@@ -8,12 +8,14 @@
       </div>
 
       <div class="news-events__events">
-        <div class="news-events__events__primary" v-for="event in events">
+        <div class="news-events__events__primary">
           <Primary-Event
+            v-for="event in events"
             :name="event.name"
             :date="event.date"
             :desc="event.desc"
             :cta="event.cta"
+            :key="event.name"
           >
           </Primary-Event>
         </div>
@@ -39,6 +41,11 @@ export default {
         date: '10 Sept 2081',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         cta: 'Read Article'
+      }, {
+        name: 'Blah blah blahig Event',
+        date: 'Nev er Sept 2081',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        cta: 'Read Article'
       }]
     }
   }
@@ -48,8 +55,23 @@ export default {
 <style lang="scss">
 @import '../../assets/css/colors';
 
-.news-events__title h2 {
-  color: $purple;
+.news-events {
+
+  &__title h2 {
+    color: $purple;
+  }
+
+  &__events {
+
+    &__primary {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-bottom: 50px;
+      border-bottom: 1px solid grey;
+    }
+  }
 }
 
 </style>
