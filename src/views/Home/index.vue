@@ -1,19 +1,15 @@
 <template>
   <div class="body-content">
-
     <Above-the-Fold></Above-the-Fold>
     <Company-Overview></Company-Overview>
-    <What-is-Matryx></What-is-Matryx>
-    <Matryx-Marketplace></Matryx-Marketplace>
-    <Bounty-System></Bounty-System>
+    <CTA-Banner :purpleBkg="true" cta-location="top"></CTA-Banner>
     <About-Token-Sale></About-Token-Sale>
     <Quotes></Quotes>
-    <Roadmap></Roadmap>
-    <CTA-Banner></CTA-Banner>
     <Nanome-Info></Nanome-Info>
+    <Bounty-System></Bounty-System>
+    <CTA-Banner cta-location="bottom"></CTA-Banner>
     <Matryx-Team></Matryx-Team>
     <News-Events></News-Events>
-
   </div>
 </template>
 
@@ -22,13 +18,10 @@ import AboutTokenSale from './About-Token-Sale'
 import AboveTheFold from './Above-the-Fold'
 import BountySystem from './Bounty-System'
 import CompanyOverview from './Company-Overview'
-import MatryxMarketplace from './Matryx-Marketplace'
 import MatryxTeam from './Matryx-Team'
 import NanomeInfo from './Nanome-Info'
 import NewsEvents from './News-Events'
-import Roadmap from './Roadmap'
 import Quotes from './Quotes'
-import WhatIsMatryx from './What-is-Matryx'
 
 import CTABanner from '../../components/CTA-Banner'
 
@@ -36,22 +29,25 @@ console.log(AboveTheFold)
 
 export default {
   name: 'home',
+
   data () {
     return {}
   },
+
   components: {
     AboutTokenSale,
     AboveTheFold,
     BountySystem,
     CompanyOverview,
-    MatryxMarketplace,
     MatryxTeam,
     NanomeInfo,
     NewsEvents,
-    Roadmap,
-    WhatIsMatryx,
     CTABanner,
     Quotes
+  },
+
+  mounted () {
+    window.analytics.page('Home')
   }
 }
 </script>

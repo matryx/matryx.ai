@@ -12,7 +12,9 @@
             feugiat laboramus mel ei. Ipsum fugit cu eam, pri id omittam consulatu.
             Sed cu eirmod commune deterruisset, ceteros maiorum qui ut.
           </p>
-          <button class="btn-yellow">Read the Whitepaper</button>
+          <a href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf" target="_blank">
+            <button class="btn-yellow">Read the Whitepaper</button>
+          </a>
         </div>
         <div class="overview__column-2 mobile--order-2">
           <img src="../../assets/images/video-preview.png" alt="">
@@ -30,7 +32,6 @@
             feugiat laboramus mel ei. Ipsum fugit cu eam, pri id omittam consulatu.
              Sed cu eirmod commune deterruisset, ceteros maiorum qui ut.
           </p>
-          <button class="btn-yellow">Read the Whitepaper</button>
         </div>
       </div>
       <div class="overview">
@@ -42,7 +43,6 @@
             feugiat laboramus mel ei. Ipsum fugit cu eam, pri id omittam consulatu.
              Sed cu eirmod commune deterruisset, ceteros maiorum qui ut.
           </p>
-          <button class="btn-yellow">Read the Whitepaper</button>
         </div>
         <div class="overview__column-2 mobile--order-2">
           <img src="../../assets/images/video-preview.png" alt="">
@@ -94,6 +94,16 @@ export default {
       img {
         width: 100%;
       }
+    }
+  }
+
+  .btn-yellow {
+    background-color: $white;
+    color: $yellow;
+
+    &:hover {
+      background-color: $yellow;
+      color: $white;
     }
   }
 
