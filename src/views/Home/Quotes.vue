@@ -3,13 +3,11 @@
     <div class="content-container content-container--small" >
       <h1 class="text-color--white">What People are Saying</h1>
 
-      <b-carousel id="quote-carousel"
-                indicators
-                :interval="3000"
-                v-model="slide"
-                @slide="onSlide"
-                @slid="onSlid"
-    >
+      <b-carousel
+        id="quote-carousel"
+        indicators
+        :interval="3000"
+      >
 
       <b-carousel-slide >
         <p class="quote-text text-color--white">
