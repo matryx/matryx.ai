@@ -13,7 +13,7 @@
         placeholder="your@email.com"
         >
         </b-form-input>
-        <button class="btn btn-lg btn-yellow cta__form__submit"
+        <button class="btn btn-yellow cta__form__submit"
         :class="{ 'purple-btn': purpleBkg }"
         @click.prevent="getNotified"
         >
@@ -77,16 +77,39 @@ export default {
   border-radius: 20px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  height: 40px;
-  border: 1px solid $purple;
+  height: 42px;
   border-right: none;
   font-size: 12px;
   width: 200px;
+
+  &:active, &:focus {
+    outline: none;
+  }
 }
 
 .cta .cta__form__submit {
   border-radius: 20px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  height: 40px;
+}
+
+/*----- MEDIA QUERIES -----*/
+@media screen and (max-width: 500px) {
+  .cta .cta__form__email {
+    width: calc(100% - 20px);
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+  }
+  .cta .cta__form__submit {
+    width: calc(100% - 140px);
+    margin-top: 10px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+  }
 }
 </style>

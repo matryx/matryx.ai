@@ -12,7 +12,7 @@
         <div class="event-item__body__date">{{ date }}</div>
         <div class="event-item__body__day">{{ day }}</div>
       </div>
-      <a :href="eventLink" target="_blank"> 
+      <a :href="eventLink" target="_blank">
         <button class="btn-purple">RSVP</button>
       </a>
     </div>
@@ -37,7 +37,8 @@ export default {
 @import '../assets/css/colors';
 
 .event-item {
-  width: 355px;
+  width: calc(33.3333% - 40px);
+  min-width: 300px;
   box-sizing: border-box;
   box-shadow: 0 2px 5px rgba(0,0,0,0.5);
   margin: 20px 20px;
@@ -48,10 +49,10 @@ export default {
     box-sizing: border-box;
 
     &__img {
-      position: absolute;
       width: 100%;
-      height: 100%;
       opacity: 0.5;
+      max-height: 110px;
+      height: auto;
     }
 
     &__text {
@@ -75,14 +76,12 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    padding: 15px 0px 30px 0px;
+    padding: 20px;
 
     &__description {
       color: $purple;
       font-size: 16px;
-      max-width: 185px;
-      margin-left: -150px;
-      padding-bottom: 10px;
+      width: 100%;
     }
   }
 
@@ -91,7 +90,7 @@ export default {
     width: 120px;
     font-size: 11px;
     padding: 5px 10px;
-    margin-left: 25px;
+    margin-top: 20px;
   }
 }
 </style>

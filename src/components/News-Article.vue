@@ -38,7 +38,8 @@ export default {
 @import '../assets/css/colors';
 
 .primary-event {
-  width: 355px;
+  width: calc(33.3333% - 40px);
+  min-width: 300px;
   box-sizing: border-box;
   box-shadow: 0 2px 5px rgba(0,0,0,0.5);
   margin: 20px 20px;
