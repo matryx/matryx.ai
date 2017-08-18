@@ -169,7 +169,7 @@ export default {
 
       &__description {
         position: relative;
-        left: 17px;
+        left: 20px;
 
         p {
           font-size: 18px;
@@ -202,7 +202,9 @@ export default {
       margin-bottom: 20px;
     }
     .roadmap {
-      max-width: calc(100% - 20px);
+      width:calc(100% - 80px);
+      max-width: 500px;
+      margin: 0 auto;
 
       h2 {
         text-align: center;

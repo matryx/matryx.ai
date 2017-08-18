@@ -34,26 +34,60 @@ export default {
 }
 
 .nanome__info {
-  padding: 20px 40px;
+  padding: 20px 40px 20px 0;
 
   &__title {
     font-size: 28px;
+    line-height: 34px;
   }
 
   &__text {
-    margin-top: 50px;
+    margin-top: 30px;
     font-size: 18px;
     line-height: 30px;
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
   }
 }
 
 .logo {
   margin-bottom: 20px;
+  min-width: 300px;
+  text-align: center;
 }
 
 .logo > img {
   max-height: 175px;
   max-width: 175px;
+}
+
+/*----- MEDIA QUERIES -----*/
+@media screen and (max-width: 850px) {
+  .nanome__info {
+
+    &__text {
+      max-width: 100%;
+    }
+  }
+  .nanome__logos {
+    display:-webkit-box;display:-ms-flexbox;display:flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 50px;
+
+    .logo {
+      min-width: 200px;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .logo {
+    img {
+      max-height: 125px;
+      max-width: 125px;
+    }
+  }
 }
 </style>

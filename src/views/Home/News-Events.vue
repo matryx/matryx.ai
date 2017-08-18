@@ -105,13 +105,16 @@ export default {
 
     &__sub {
       text-transform: uppercase;
-      width: 12%;
       color: grey;
+      background-color: white;
+      border: 2px solid white;
 
       &--events {
         color: grey;
         text-align: right;
         text-transform: uppercase;
+        background-color: white;
+        border: 2px solid white;
       }
     }
 
