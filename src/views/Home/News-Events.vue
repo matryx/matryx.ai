@@ -121,20 +121,16 @@ export default {
 
     &__sub {
       text-transform: uppercase;
-      width: 12%;
       color: grey;
-      text-align: right;
-      padding: 0px 15px;
-      font-size: 25px;
-      font-weight: 700;
+      background-color: white;
+      border: 2px solid white;
 
       &--events {
         color: grey;
         text-align: right;
         text-transform: uppercase;
-        margin-right: 30px;
-        font-size: 25px;
-        font-weight: 700;
+        background-color: white;
+        border: 2px solid white;
       }
     }
 

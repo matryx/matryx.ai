@@ -181,19 +181,22 @@ export default {
   color: $white;
 }
 
-.matryx-team__title {
+.matryx-team__title,
+.matryx-advisors__title {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .matryx-team__title__title {
-  width: 20%;
+  font-size: 200%;
+  flex-flow: 0 1 auto;
   font-size: 200%;
 }
 
 .matryx-team__title__line {
-  border-bottom: 1px solid $white;
-  width: 75%;
+  border-bottom: 1px solid #FFF;
+  width: calc(100% - 190px);
   height: 20px;
 }
 
@@ -202,21 +205,37 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 90px;
 }
 
 .matryx-advisors__title__title {
-  width: 30%;
   font-size: 200%;
-  float: right;
-  padding-top:90px;
+  order: 2;
 }
 
 .matryx-advisors__title__line {
-  border-bottom: 1px solid $white;
-  width: 65%;
-  padding-top:50px;
-  padding-bottom:60px;
+  width: calc(100% - 230px);
+  border-bottom: 1px solid rgb(255, 255, 255);
+  align-self: center;
 }
 
+/*----- MEDIA QUERIES -----*/
+@media screen and (max-width: 500px) {
+  .matryx-team,
+  .matryx-advisors {
+    &__team,
+    &__advisors {
+      margin-top: 20px;
+    }
+    &__title {
+      justify-content: center;
+        &__line {display:none;}
+    }
+  }
+  .member {
+    margin: 25px 6px;
+  }
+}
 
 </style>
