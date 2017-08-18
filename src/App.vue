@@ -64,7 +64,6 @@ export default {
 @import './assets/css/colors';
 @import './assets/css/styles';
 
-
 /*navbar*/
 .navbar.navbar-light {
   position: absolute;
