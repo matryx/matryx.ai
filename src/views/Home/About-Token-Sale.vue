@@ -6,30 +6,21 @@
       <div class="card-container--horizontal">
         <div class="about-container card-container--vertical">
           <div class="card">
-            <h2 class="text-color--purple">Whey We're Having a Token Sale</h2>
+            <h2 class="text-color--purple">Why do a Token Sale?</h2>
             <p class="text-color--light-purple">
-              Lorem ipsum dolor sit amet, integre prompta sadipscing et per.
-              No eius utinam fierent sea. Duo illud error at, has minim aliquid oportere in,
-              feugiat laboramus mel ei. Ipsum fugit cu eam, pri id omittam consulatu.
-              Sed cu eirmod commune deterruisset, ceteros maiorum qui ut.
+              The ultimate goal of Matryx is to incentivize collaboration in fields of knowledge and creation like STEM. To reach that goal, we need resources that support R&D demands and help create a community of participants and contributors. Token Sales have quickly become a proven means to achieve such growth for blockchain-based technologies like Matryx. 
             </p>
           </div>
           <div class="card">
-            <h2 class="text-color--purple">View Details in Our Whitepaper</h2>
+            <h2 class="text-color--purple">Why do we need a Blockchain?</h2>
             <p class="text-color--light-purple">
-              Lorem ipsum dolor sit amet, integre prompta sadipscing et per.
-              No eius utinam fierent sea. Duo illud error at, has minim aliquid oportere in,
-              feugiat laboramus mel ei. Ipsum fugit cu eam, pri id omittam consulatu.
-              Sed cu eirmod commune deterruisset, ceteros maiorum qui ut.
+              Utilizing blockchain-based bounties, Matryx enables users to validate each participant's contribution to a solution and reward them with MTX tokens. Using a token enables us to leverage smart contract systems, upgrade over time, and gives us the flexibility to shape the platform to the needs of the users.
             </p>
           </div>
           <div class="card">
-            <h2 class="text-color--purple">Benefits of the Blockchain</h2>
+            <h2 class="text-color--purple">What are the benefits? </h2>
             <p class="text-color--light-purple">
-              Lorem ipsum dolor sit amet, integre prompta sadipscing et per.
-              No eius utinam fierent sea. Duo illud error at, has minim aliquid oportere in,
-              feugiat laboramus mel ei. Ipsum fugit cu eam, pri id omittam consulatu.
-              Sed cu eirmod commune deterruisset, ceteros maiorum qui ut.
+              Smart contracts reduce the friction of tracking and compensating contributors. Each round of a bounty competition, the winners are rewarded, and a new generation of children is created. All fiterations are managed by the tournament contracts. The provenance of an idea or work can be easily tracked and can be rewarded fairly and publicly.
             </p>
           </div>
         </div>
