@@ -33,7 +33,8 @@ section {
 
 .jumbotron {
   border-radius: 0;
-
+  background-image: url('../../assets/images/purplebkg.jpg');
+  background-size: cover;
 }
 
 /*media mentions*/
