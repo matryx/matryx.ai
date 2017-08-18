@@ -21,7 +21,7 @@
           href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ"
           class="social-icon"
         >
-          <img src="../src/assets/icons/icon-Slack-white.svg" alt="Matryx Slack">
+          <img src="../src/assets/icons/slack.svg" alt="Matryx Slack">
         </b-nav-item>
 
         <b-nav-item target="_blank" href="https://www.facebook.com/matryxai/" class="social-icon">
