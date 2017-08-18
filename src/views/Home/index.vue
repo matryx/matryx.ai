@@ -29,7 +29,6 @@ import NewsEvents from './News-Events'
 import Roadmap from './Roadmap'
 import Quotes from './Quotes'
 import WhatIsMatryx from './What-is-Matryx'
-import Quotes from './Quotes'
 
 import CTABanner from '../../components/CTA-Banner'
 
