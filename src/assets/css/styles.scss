@@ -52,6 +52,10 @@ button { font-family: 'Roboto Medium', Helvetica, sans-serif;
 
 
 /*----- CLASSES -----*/
+.uppercase {
+  text-transform: uppercase;
+}
+
 /*buttons*/
 .btn{
   &-yellow {
