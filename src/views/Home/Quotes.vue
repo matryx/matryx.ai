@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="scss">
 .carousel-indicators {
   height: 10px;
   width: 10px;
