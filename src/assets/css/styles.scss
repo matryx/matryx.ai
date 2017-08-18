@@ -88,6 +88,7 @@ button { font-family: 'Roboto Medium', Helvetica, sans-serif;
   &--lighter-purple {background-color: $light-purple;}
   &--dark-purple {background-color: $midnight-tint-2;}
   &--white {background-color: $silver-white;}
+  &--grey {background-color: $classic-grey;}
 }
 /*content container*/
 .content-container {
@@ -113,14 +114,17 @@ h1.cd-headline.clip {
   &--light-purple {color: $purple; opacity:0.55}
   &--blue {color: $matryx-blue;}
   &--red {color: $matryx-red;}
+  &--grey {color: $classic-grey;}
 }
 .text {
+  &--center {
+    text-align: center;
+  }
   &--inline {
     display:inline;
   }
   &--bold {
     font-weight: bold;
-
   }
 }
 /*icon bar*/

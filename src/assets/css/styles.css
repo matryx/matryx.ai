@@ -1,6 +1,6 @@
 /*----- FONT COLORS -----*/
 /*neutrals*/
-/*purples/grays*/
+/*purples/greys*/
 /*blues*/
 /*reds*/
 /*yellows*/
@@ -124,14 +124,15 @@ button:hover {
 /*buttons*/
 .btn-yellow {
   border: 1px solid #EF8A11;
-  color: #EF8A11;
+  color: #FFF;
   padding: 10px 20px;
-  background-color: #FFF;
+  background-color: #EF8A11;
 }
 
 .btn-yellow:hover {
-  color: #FFF;
-  background-color: #EF8A11;
+  color: #EF8A11;
+  background-color: #FFF;
+  border-color: #EF8A11;
 }
 
 .btn-purple {
@@ -169,6 +170,10 @@ button:hover {
 
 .bkg-color--white {
   background-color: #F8F8FA;
+}
+
+.bkg-color--grey {
+  background-color: #80828D;
 }
 
 /*content container*/
@@ -228,6 +233,14 @@ h1.cd-headline.clip {
 
 .text-color--red {
   color: #FF5C63;
+}
+
+.text-color--grey {
+  color: #80828D;
+}
+
+.text--center {
+  text-align: center;
 }
 
 .text--inline {
