@@ -12,7 +12,9 @@
         <div class="event-item__body__date">{{ date }}</div>
         <div class="event-item__body__day">{{ day }}</div>
       </div>
-      <button class="btn-purple">RSVP</button>
+      <a :href="eventLink" target="_blank"> 
+        <button class="btn-purple">RSVP</button>
+      </a>
     </div>
   </div>
 </template>
@@ -25,7 +27,8 @@ export default {
     name: String,
     date: String,
     day: String,
-    image: String
+    image: String,
+    eventLink: String
   }
 }
 </script>
@@ -40,7 +43,7 @@ export default {
   margin: 20px 20px;
 
   &__heading {
-    height: 87px;
+    height:130px;
     position: relative;
     margin-bottom: 10px;
     box-sizing: border-box;
@@ -73,18 +76,20 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    padding: 10px;
+    padding: 15px 0px 30px 0px;
 
     &__description {
       color: $purple;
       font-size: 16px;
       max-width: 185px;
+      margin-left: -150px;
+      padding-bottom: 10px;
     }
   }
 
   button.btn-purple {
-    height: 30px;
-    width: 115px;
+    height: 35px;
+    width: 120px;
     font-size: 11px;
     padding: 5px 10px;
     margin-left: 25px;

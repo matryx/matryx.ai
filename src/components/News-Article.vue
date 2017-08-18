@@ -13,7 +13,9 @@
       <div class="primary-event__body__description">
         <span>{{ desc }}</span>
       </div>
-      <button class="btn-purple">Read Article</button>
+      <a :href="articleLink" target="_blank">
+        <button class="btn-purple">Read Article</button>
+      </a>
     </div>
   </div>
 </template>
@@ -26,7 +28,8 @@ export default {
     name: String,
     date: String,
     desc: String,
-    image: String
+    image: String,
+    articleLink: String
   }
 }
 </script>
@@ -55,16 +58,17 @@ export default {
 
     &__text {
       width: 305px;
-      height: 95px;
+      height: 105px;
       background-color: $white;
       position: absolute;
       left: 25px;
-      top: 40px;
+      top: 27px;
       padding: 15px 20px;
     }
 
     &__name {
-      color: $purple
+      color: $purple;
+      font-weight: 700;
     }
 
     &__date {
@@ -79,19 +83,21 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    padding: 10px;
+    padding: 15px 0px 10px 0px;
 
     &__description {
-      max-width: 185px;
+      max-width: 240px;
+      align-items: center;
+      margin-left: -60px;
     }
   }
 
   button.btn-purple {
-    height: 30px;
-    width: 115px;
+    height: 35px;
+    width: 120px;
     font-size: 11px;
     padding: 5px 10px;
-    margin-left: 25px;
+    margin: 20px 0px 20px 0px;
   }
 }
 </style>
