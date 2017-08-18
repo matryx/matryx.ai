@@ -19,7 +19,7 @@
           </Team-Member>
         </div>
       </div>
-      
+
       <div class="matryx-advisors__title">
         <h2 class="matryx-advisors__title__title">The Advisors</h2>
         <div class="matryx-advisors__title__line"></div>
@@ -179,7 +179,6 @@ export default {
 .matryx-team {
   background-color: #6B3FD6;
   color: $white;
-  padding: 3rem 2rem;
 }
 
 .matryx-team__title {
@@ -214,7 +213,7 @@ export default {
 
 .matryx-advisors__title__line {
   border-bottom: 1px solid $white;
-  width: 65%; 
+  width: 65%;
   padding-top:50px;
   padding-bottom:60px;
 }
