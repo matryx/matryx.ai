@@ -29,9 +29,11 @@ console.log(AboveTheFold)
 
 export default {
   name: 'home',
+
   data () {
     return {}
   },
+
   components: {
     AboutTokenSale,
     AboveTheFold,
@@ -42,6 +44,10 @@ export default {
     NewsEvents,
     CTABanner,
     Quotes
+  },
+
+  mounted () {
+    window.analytics.page('Home')
   }
 }
 </script>

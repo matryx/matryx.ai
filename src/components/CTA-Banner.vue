@@ -46,6 +46,7 @@ export default {
     getNotified () {
       console.log('hello', this.ctaLocation, this.email)
       console.log(getUTMS())
+      window.analytics.track(`CTA ${this.ctaLocation} Click`)
     }
   }
 }
