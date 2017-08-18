@@ -7,7 +7,7 @@
           Want to join in on the action? Enter your email to be notified when our
           token sale launches.
         </p>
-        <h2>Insert Counter Here</h2>
+        <Countdown></Countdown>
         <b-form class="form-inline cta__form">
           <b-form-input class="form-control cta__form__email"
           v-model="email"
@@ -40,8 +40,14 @@
 </template>
 
 <script>
+import Countdown from '@/components/Countdown'
+
 export default {
-  name: 'AboveTheFold'
+  name: 'AboveTheFold',
+
+  components: {
+    Countdown
+  }
 }
 </script>
 

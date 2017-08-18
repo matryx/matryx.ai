@@ -9,6 +9,14 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.config.productionTip = false
 
+Vue.filter('two_digits', function (value) {
+  const val = value.toString()
+  if (val && val.length <= 1) {
+    return `0${val}`
+  }
+  return val
+})
+
 Vue.use(BootstrapVue)
 
 /* eslint-disable no-new */
