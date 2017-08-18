@@ -56,13 +56,14 @@ button { font-family: 'Roboto Medium', Helvetica, sans-serif;
 .btn{
   &-yellow {
     border: 1px solid $yellow;
-    color: $yellow;
+    color: $white;
     padding: 10px 20px;
-    background-color: $white;
+    background-color: $yellow;
 
     &:hover {
-      color: $white;
-      background-color: $yellow;
+      color: $yellow;
+      background-color: $white;
+      border-color: $yellow;
     }
   }
 

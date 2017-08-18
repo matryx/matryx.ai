@@ -1,30 +1,31 @@
 <template>
-  <div class="primary-event">
-    <div class="primary-event__heading">
-      <img class="primary-event__heading__img"
-        src="../assets/images/video-preview.png">
-      <div class="primary-event__heading__text">
-        <h4 class="primary-event__heading__name">{{ name }}</h4>
-        <div class="primary-event__heading__date">{{ date }}</div>
+  <div class="event-item">
+    <div class="event-item__heading">
+      <img class="event-item__heading__img" :src="image">
+      <div class="event-item__heading__text">
+        <h4 class="event-item__heading__name">{{ name }}</h4>
       </div>
     </div>
 
-    <div class="primary-event__body">
-      <div class="primary-event__body__description">{{ desc }}</div>
-      <button class="btn-purple">{{ cta }}</button>
+    <div class="event-item__body">
+      <div class="event-item__body__description">
+        <div class="event-item__body__date">{{ date }}</div>
+        <div class="event-item__body__day">{{ day }}</div>
+      </div>
+      <button class="btn-purple">RSVP</button>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'PrimaryEvent',
+  name: 'Secondary Event',
 
   props: {
     name: String,
     date: String,
-    desc: String,
-    cta: String
+    day: String,
+    image: String
   }
 }
 </script>
@@ -32,14 +33,14 @@ export default {
 <style lang="scss">
 @import '../assets/css/colors';
 
-.primary-event {
+.event-item {
   width: 355px;
   box-sizing: border-box;
   box-shadow: 0 2px 5px rgba(0,0,0,0.5);
   margin: 20px 20px;
 
   &__heading {
-    height: 155px;
+    height: 87px;
     position: relative;
     margin-bottom: 10px;
     box-sizing: border-box;
@@ -53,33 +54,30 @@ export default {
 
     &__text {
       width: 305px;
-      height: 95px;
+      max-height: 95px;
       background-color: $white;
       position: absolute;
       left: 25px;
-      top: 40px;
+      top: 20px;
       padding: 15px 20px;
     }
 
     &__name {
       color: $purple
     }
-
-    &__date {
-      color: grey;
-      letter-spacing: 0.5px;
-    }
   }
 
   &__body {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     padding: 10px;
 
     &__description {
+      color: $purple;
+      font-size: 16px;
       max-width: 185px;
     }
   }
