@@ -1,27 +1,27 @@
 <template lang="html">
-  <div class="cta content-container content-container--large"
-    :class="{ 'purple-bkg': purpleBkg }"
-  >
-    <h4 class="cta__main">
-      Join the Token Sale
-    </h4>
-    <h6>Enter your email address to stay updated on the token sale launch</h6>
-    <b-form class="form-inline cta__form">
-      <b-form-input class="form-control cta__form__email"
+  <section :class="{ 'purple-bkg': purpleBkg }">
+    <div class="cta content-container content-container--large">
+      <h4 class="cta__main">
+        Join the Token Sale
+      </h4>
+      <h6>Enter your email address to stay updated on the token sale launch</h6>
+      <b-form class="form-inline cta__form">
+        <b-form-input class="form-control cta__form__email"
         size="lg"
         v-model="email"
         type="email"
         placeholder="your@email.com"
-      >
-      </b-form-input>
-      <button class="btn btn-lg btn-yellow cta__form__submit"
+        >
+        </b-form-input>
+        <button class="btn btn-lg btn-yellow cta__form__submit"
         :class="{ 'purple-btn': purpleBkg }"
         @click.prevent="getNotified"
-      >
+        >
         Get Notified
-      </button>
-    </b-form>
-  </div>
+        </button>
+      </b-form>
+    </div>
+  </section>
 </template>
 
 <script>
