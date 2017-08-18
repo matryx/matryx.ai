@@ -1,23 +1,35 @@
 <template>
 <div id="app">
-  <b-navbar toggleable toggle-breakpoint="md">
+  <b-navbar toggleable toggle-breakpoint="sm">
     <div class="content-container--large">
       <b-nav-toggle target="nav_collapse"></b-nav-toggle>
       <b-navbar-brand href="#">
-        <router-link to="/"><img src="../src/assets/images/Matryx-Logo-Black-large.svg" alt=""></router-link>
+        <router-link to="/"><img src="../src/assets/images/Matryx-Logo-White-640px.png" alt=""></router-link>
       </b-navbar-brand>
       <b-collapse is-nav id="nav_collapse">
 
-        <b-nav is-nav-bar>
+      <b-nav is-nav-bar>
+        <b-nav-link class="nav-link white" href="#">Contact</b-nav-link>
+         <b-nav-link class="nav-link white" href="#">Blog</b-nav-link>
+      </b-nav>
+
+<!--         <b-nav is-nav-bar>
           <a class="nav-link text-color--white" target="_blank" href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf">
             WHITEPAPER
           </a>
           <router-link to="/#company-overview" class="nav-link text-color--white">WHAT IS MATRYX</router-link>
           <router-link to="/faq/about" class="nav-link text-color--white">ABOUT</router-link>
         </b-nav>
-
+ -->
         <!-- Right aligned nav items -->
         <b-nav is-nav-bar class="ml-auto">
+          <b-nav-item target="_blank"
+            href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ"
+            class="social-icon"
+          >
+            <img src="../src/assets/icons/icon-Slack-white.svg" alt="Matryx Slack">
+          </b-nav-item>
+
           <b-nav-item target="_blank" href="https://www.facebook.com/matryxai/" class="social-icon">
             <img src="../src/assets/icons/icon-facebook.png" alt="Matryx Facebook Page">
           </b-nav-item>
@@ -64,7 +76,7 @@ export default {
 .navbar.navbar-light {
   position: absolute;
   width: 100%;
-  background-color: white;
+  background-color: $purple;
 
   .content-container--large{
     width: 100%;
@@ -80,25 +92,42 @@ export default {
       height: 100%;
     }
   }
+  .social-icon-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 
   .social-icon {
-    background-color: $matryx-red;
+    display: flex;
+    justify-content: center;
+    background-color: $purple;
+    height: 40px;
+    width: 40px;
   }
-  .nav.navbar-nav a.nav-link{
+  .nav-link{
     transition: all 0.3s;
     color: $purple;
     padding: 10px 10px 0;
     margin: 0 10px;
     border-radius: 5px;
+    text-transform: uppercase;
 
     &:hover {
+      cursor: pointer;
       color: $white;
       background-color:$purple;
     }
   }
+  .white {
+    color: $white;
+  }
 }
 .navbar-toggleable-md .navbar-collapse {
   width: calc(100% - 130px);
+}
+.navbar-toggler.navbar-toggler-right {
+  color: $white;
 }
 
 
