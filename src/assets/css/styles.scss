@@ -87,7 +87,7 @@ button { font-family: 'Roboto Medium', Helvetica, sans-serif;
   &--bright-purple {background-color: $bright-purple;}
   &--lighter-purple {background-color: $light-purple;}
   &--dark-purple {background-color: $midnight-tint-2;}
-  &--white {background-color: $silver-white;}
+  &--white {background-color: $white;}
   &--grey {background-color: $classic-grey;}
 }
 /*content container*/
@@ -177,23 +177,6 @@ h1.cd-headline.clip {
     }
   }
 }
-/*navbar*/
-.navbar.navbar-light {
-  position: absolute;
-  width: 100%;
-  max-width: 1200px;
-  background-color: $light-purple;
-
-  .navbar-brand {
-    height: 50px;
-
-    img { height: 100%; }
-  }
-
-  .navbar-nav.nav-link a{
-    color: $white;
-  }
-}
 
 /* members */
 .member {
@@ -216,11 +199,12 @@ h1.cd-headline.clip {
 
 /* ID's */
 #app {
-  display:flex;
-  justify-content: center;
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 /* end ID's */

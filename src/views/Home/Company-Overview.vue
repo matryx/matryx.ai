@@ -24,7 +24,7 @@
         <div class="overview__column-1">
           <h1 class="text-color--purple">The Problem</h1>
           <p class="text-color--light-purple">
-            Solving the world’s hardest problems in silos leads to duplication of effort and redundancy. By providing a global community that encourages and incentivizes the exchange of ideas, time to innovation is greatly reduced while problems are solved at a rate otherwise impossible. 
+            Solving the world’s hardest problems in silos leads to duplication of effort and redundancy. By providing a global community that encourages and incentivizes the exchange of ideas, time to innovation is greatly reduced while problems are solved at a rate otherwise impossible.
             <br/> <br/>
             Research and engineering efforts are fragmented. Time and money are wasted when different teams work on the same problem without coordination. Recognition and grants go to the last people to work on a problem, ignoring dozens of critical contributors. As such there’s no incentive to cooperate with other teams, and no repository of solved problems.
           </p>
@@ -34,7 +34,7 @@
         <div class="overview__column-1 mobile--order-1">
           <h1 class="text-color--purple">The Matryx Solution</h1>
           <p class="text-color--light-purple">
-            Matryx’s blockchain-based bounty system provides incentives for collaborative problem solving. Creators are rewarded for contributions with MTX tokens. Anyone can post bounties to Matryx. Participants compete to solve these problems in a tournament. 
+            Matryx’s blockchain-based bounty system provides incentives for collaborative problem solving. Creators are rewarded for contributions with MTX tokens. Anyone can post bounties to Matryx. Participants compete to solve these problems in a tournament.
 
             <br/> <br/>The winning solution of each round is shared publicly so that new contributors can remix into a new iteration, enabling users to reach the goal faster and more effectively.
 
@@ -60,7 +60,12 @@ export default {
 @import '../../assets/css/colors';
 
   section {
-    padding: 40px 0px;
+    margin-top: 0px;
+    padding: 0px 0px 40px;
+  }
+
+  h4 {
+    margin-top: 0;
   }
 
   h1.font-size--large {

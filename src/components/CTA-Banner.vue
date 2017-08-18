@@ -112,4 +112,8 @@ export default {
     border-bottom-left-radius: 40px;
   }
 }
+
+#cta-bottom .cta.content-container{
+  padding-bottom: 0;
+}
 </style>

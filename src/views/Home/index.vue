@@ -1,15 +1,16 @@
 <template>
   <div class="body-content">
     <Above-the-Fold></Above-the-Fold>
-    <Company-Overview></Company-Overview>
+    <Company-Overview id="company-overview"></Company-Overview>
     <CTA-Banner :purpleBkg="true" cta-location="top"></CTA-Banner>
     <About-Token-Sale></About-Token-Sale>
     <Quotes></Quotes>
     <Nanome-Info></Nanome-Info>
     <Bounty-System></Bounty-System>
-    <CTA-Banner cta-location="bottom"></CTA-Banner>
+    <CTA-Banner cta-location="middle"></CTA-Banner>
     <Matryx-Team></Matryx-Team>
     <News-Events></News-Events>
+    <CTA-Banner :purpleBkg="true" cta-location="bottom" id="cta-bottom"></CTA-Banner>
   </div>
 </template>
 

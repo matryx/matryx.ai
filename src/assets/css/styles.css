@@ -170,7 +170,7 @@ button:hover {
 }
 
 .bkg-color--white {
-  background-color: #F8F8FA;
+  background-color: #FFF;
 }
 
 .bkg-color--grey {
@@ -182,7 +182,7 @@ button:hover {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 80px 80px;
+  padding: 80px 40px;
 }
 
 .content-container--small {
@@ -305,26 +305,6 @@ h1.cd-headline.clip {
   height: 100%;
 }
 
-/*navbar*/
-.navbar.navbar-light {
-  position: absolute;
-  width: 100%;
-  max-width: 1200px;
-  background-color: #645788;
-}
-
-.navbar.navbar-light .navbar-brand {
-  height: 50px;
-}
-
-.navbar.navbar-light .navbar-brand img {
-  height: 100%;
-}
-
-.navbar.navbar-light .navbar-nav.nav-link a {
-  color: #FFF;
-}
-
 /* members */
 .member {
   display: flex;
@@ -346,12 +326,13 @@ h1.cd-headline.clip {
 /*----- end CLASSES -----*/
 /* ID's */
 #app {
-  display: flex;
-  justify-content: center;
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* end ID's */
