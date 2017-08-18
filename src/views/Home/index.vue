@@ -9,7 +9,8 @@
     <About-Token-Sale></About-Token-Sale>
     <Quotes></Quotes>
     <Roadmap></Roadmap>
-    <CTA-Banner></CTA-Banner>
+    <CTA-Banner :purpleBkg="true" cta-location="top"></CTA-Banner>
+    <CTA-Banner cta-location="bottom"></CTA-Banner>
     <Nanome-Info></Nanome-Info>
     <Matryx-Team></Matryx-Team>
     <News-Events></News-Events>

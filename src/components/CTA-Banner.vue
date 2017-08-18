@@ -1,6 +1,8 @@
 <template lang="html">
-  <div class="cta">
-    <h4 class="cta__main" :class="{ 'white': white }">
+  <div class="cta content-container content-container--large"
+    :class="{ 'purple-bkg': purpleBkg }"
+  >
+    <h4 class="cta__main">
       Join the Token Sale
     </h4>
     <h6>Enter your email address to stay updated on the token sale launch</h6>
@@ -13,6 +15,7 @@
       >
       </b-form-input>
       <button class="btn btn-lg btn-yellow cta__form__submit"
+        :class="{ 'purple-btn': purpleBkg }"
         @click.prevent="getNotified"
       >
         Get Notified
@@ -26,7 +29,9 @@ export default {
   name: 'CTABanner',
 
   props: {
-    white: String
+    white: Boolean,
+    purpleBkg: Boolean,
+    ctaLocation: String
   },
 
   data () {
@@ -37,7 +42,7 @@ export default {
 
   methods: {
     getNotified () {
-      console.log('hello')
+      console.log('hello', this.ctaLocation, this.email)
     }
   }
 }
@@ -53,6 +58,15 @@ export default {
     display: flex;
     justify-content: center;
   }
+}
+
+.purple-bkg {
+  background-color: $purple;
+  color: $white;
+}
+
+.purple-btn {
+  border: none;
 }
 
 .cta .cta__form__email {
@@ -72,8 +86,3 @@ export default {
   border-bottom-left-radius: 0;
 }
 </style>
-
-<!--     border: 1px solid #EF8A11;
-    color: #EF8A11;
-    padding: 10px 20px;
-    background-color: #FFF; -->
