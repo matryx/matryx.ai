@@ -23,4 +23,17 @@ export default {
 
 <style lang="scss">
 
+.advisor-member__desc {
+  font-size: 11px;
+  margin: 2.5px;
+}
+
+.matryx-team__advisors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top:50px;
+}
+
 </style>
