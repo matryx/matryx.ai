@@ -7,10 +7,7 @@
         <div class="overview__column-1 mobile--order-1">
           <h1 class="text-color--purple">Company Background</h1>
           <p class="text-color--light-purple">
-            Lorem ipsum dolor sit amet, integre prompta sadipscing et per.
-            No eius utinam fierent sea. Duo illud error at, has minim aliquid oportere in,
-            feugiat laboramus mel ei. Ipsum fugit cu eam, pri id omittam consulatu.
-            Sed cu eirmod commune deterruisset, ceteros maiorum qui ut.
+            Matryx is a product of Nanome. Nanome seeks to democratize science, engineering, and research using Virtual Reality and blockchain technology. Nanome is the creator of Calcflow, the industry-leading VR mathematics toolkit, and nano-one, a VR interface for nanoscale design and simulation.
           </p>
           <a href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf" target="_blank">
             <button class="btn-yellow">Read the Whitepaper</button>
@@ -27,10 +24,9 @@
         <div class="overview__column-1">
           <h1 class="text-color--purple">The Problem</h1>
           <p class="text-color--light-purple">
-            Lorem ipsum dolor sit amet, integre prompta sadipscing et per.
-            No eius utinam fierent sea. Duo illud error at, has minim aliquid oportere in,
-            feugiat laboramus mel ei. Ipsum fugit cu eam, pri id omittam consulatu.
-             Sed cu eirmod commune deterruisset, ceteros maiorum qui ut.
+            Solving the world’s hardest problems in silos leads to duplication of effort and redundancy. By providing a global community that encourages and incentivizes the exchange of ideas, time to innovation is greatly reduced while problems are solved at a rate otherwise impossible. 
+            <br/> <br/>
+            Research and engineering efforts are fragmented. Time and money are wasted when different teams work on the same problem without coordination. Recognition and grants go to the last people to work on a problem, ignoring dozens of critical contributors. As such there’s no incentive to cooperate with other teams, and no repository of solved problems.
           </p>
         </div>
       </div>
@@ -38,10 +34,12 @@
         <div class="overview__column-1 mobile--order-1">
           <h1 class="text-color--purple">The Matryx Solution</h1>
           <p class="text-color--light-purple">
-            Lorem ipsum dolor sit amet, integre prompta sadipscing et per.
-            No eius utinam fierent sea. Duo illud error at, has minim aliquid oportere in,
-            feugiat laboramus mel ei. Ipsum fugit cu eam, pri id omittam consulatu.
-             Sed cu eirmod commune deterruisset, ceteros maiorum qui ut.
+            Matryx’s blockchain-based bounty system provides incentives for collaborative problem solving. Creators are rewarded for contributions with MTX tokens. Anyone can post bounties to Matryx. Participants compete to solve these problems in a tournament. 
+
+            <br/> <br/>The winning solution of each round is shared publicly so that new contributors can remix into a new iteration, enabling users to reach the goal faster and more effectively.
+
+            Once a problem is solved, rewards and recognition are given to all winning contributors, not just the last contributor, for fairness and transparency.
+
           </p>
         </div>
         <div class="overview__column-2 mobile--order-2">
