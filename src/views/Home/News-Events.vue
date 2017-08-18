@@ -104,12 +104,17 @@ export default {
 @import '../../assets/css/colors';
 
 .news-events {
-  
+
+  &__news__primary {
+    display:-webkit-box;display:-ms-flexbox;display:flex;
+
+  }
+
   &__sectionHeader {
       font-size: 40px;
       font-weight: 700;
       color: $purple;
-      padding: 25px;
+      padding: 25px 0;
     }
 
   &__title {
@@ -117,13 +122,15 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 30px;
-    margin-bottom: 15px;
 
     &__sub {
       text-transform: uppercase;
       color: grey;
       background-color: white;
       border: 2px solid white;
+      padding: 0 20px;
+      position: relative;
+      left: -20px;
 
       &--events {
         color: grey;
@@ -131,13 +138,14 @@ export default {
         text-transform: uppercase;
         background-color: white;
         border: 2px solid white;
+        padding: 0 20px;
       }
     }
 
     &__line {
       height: 15px;
       border-bottom: 1px solid grey;
-      width: 88%;
+      width: 100%;
     }
   }
 

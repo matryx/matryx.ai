@@ -5,11 +5,10 @@
       header="A Decentralized Research Platform."
       lead="Driven by Collaboration &amp; Competition." >
       <!-- <video src="../../assets/media/giphy.mp4" autoplay loop poster="posterimage.jpg" class="tokensale-background"></video> -->
-
     </b-jumbotron>
     <div class="media-mentions bkg-purple">
-      <p>Featured in</p>
       <div class=" content-container content-container--large media-mentions__img-container">
+        <p>Featured By</p>
         <img src="../../assets/images/gizmodo.png" alt="">
         <img src="../../assets/images/sdut-logo.png" alt="">
         <img src="../../assets/images/UCSD-logo.png" alt="">
@@ -35,6 +34,7 @@ section {
   border-radius: 0;
   background-image: url('../../assets/images/purplebkg.jpg');
   background-size: cover;
+  margin-bottom: 0;
 }
 
 /*media mentions*/
@@ -45,6 +45,7 @@ section {
   p{
     text-align: center;
     text-transform: uppercase;
+    width: 100%;
   }
 
   &__img-container {
