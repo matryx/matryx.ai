@@ -25,6 +25,8 @@
 </template>
 
 <script>
+import { getUTMS } from '@/utils'
+
 export default {
   name: 'CTABanner',
 
@@ -43,6 +45,7 @@ export default {
   methods: {
     getNotified () {
       console.log('hello', this.ctaLocation, this.email)
+      console.log(getUTMS())
     }
   }
 }
