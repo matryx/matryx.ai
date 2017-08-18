@@ -15,7 +15,7 @@ html, body {
 }
 
 /*headers*/
-h1, h2, h3 {
+h1, h2, h3, h6 {
   font-weight: lighter;
 }
 
@@ -38,6 +38,11 @@ h3 {
   line-height: 27px;
 }
 
+h4 {
+  font-size: 16px;
+  line-height: 14px;
+}
+
 /*body text*/
 p {
   font-size: 16px;
@@ -56,7 +61,7 @@ p.font-size--xsmall {
 
 /*captions & labels*/
 caption {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 19px;
   font-style: italic;
 }
@@ -108,6 +113,10 @@ button {
   text-transform: uppercase;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 /*----- end DEFAULTS -----*/
 /*----- ELEMENTS -----*/
 /*----- end ELEMENTS -----*/
@@ -126,15 +135,15 @@ button {
 }
 
 .btn-purple {
-  border: 1px solid #423176;
-  color: #423176;
+  border: 1px solid #6B3FD6;
+  color: #FFF;
   padding: 10px 20px;
-  background-color: #FFF;
+  background-color: #6B3FD6;
 }
 
 .btn-purple:hover {
-  color: #FFF;
-  background-color: #423176;
+  color: #423176;
+  background-color: #FFF;
 }
 
 /*background colors*/
@@ -144,6 +153,14 @@ button {
 
 .bkg-color--purple {
   background-color: #423176;
+}
+
+.bkg-color--bright-purple {
+  background-color: #6B3FD6;
+}
+
+.bkg-color--lighter-purple {
+  background-color: #645788;
 }
 
 .bkg-color--dark-purple {
@@ -159,7 +176,7 @@ button {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 0px 20px;
+  padding: 0px 40px;
 }
 
 .content-container--small {
