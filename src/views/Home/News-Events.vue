@@ -3,8 +3,8 @@
     <div class="content-container content-container--large">
       <div class="news-events__title">
         <h2>News & Events</h2>
-        <div class="news-events__title__sub">News</div>
-        <div class="news-events__title__line">News</div>
+        <h5 class="news-events__title__sub">News</h5>
+        <div class="news-events__title__line"></div>
       </div>
 
       <div class="news-events__events">
@@ -57,8 +57,18 @@ export default {
 
 .news-events {
 
-  &__title h2 {
-    color: $purple;
+  &__title {
+    h2 {
+      color: $purple;
+    }
+
+    &__sub {
+      text-transform: uppercase;
+    }
+
+    &__line {
+      border-bottom: 1px solid blue;
+    }
   }
 
   &__events {
