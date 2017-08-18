@@ -1,7 +1,7 @@
 // Get UTM variables
-export const getUTMS = function () {
+export const getUTMS = function (email) {
   console.log('getUTM')
-  const traits = {}
+  const traits = { email }
 
   if (window.location.search) {
     const queries = document.location.search.substr(1).split('&')
