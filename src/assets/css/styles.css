@@ -104,12 +104,39 @@ button {
   font-size: 16px;
   line-height: 21px;
   letter-spacing: 0.5px;
+  transition: 0.3s all;
+  text-transform: uppercase;
 }
 
 /*----- end DEFAULTS -----*/
 /*----- ELEMENTS -----*/
 /*----- end ELEMENTS -----*/
 /*----- CLASSES -----*/
+/*buttons*/
+.btn-yellow {
+  border: 1px solid #EF8A11;
+  color: #EF8A11;
+  padding: 10px 20px;
+  background-color: #FFF;
+}
+
+.btn-yellow:hover {
+  color: #FFF;
+  background-color: #EF8A11;
+}
+
+.btn-purple {
+  border: 1px solid #423176;
+  color: #423176;
+  padding: 10px 20px;
+  background-color: #FFF;
+}
+
+.btn-purple:hover {
+  color: #FFF;
+  background-color: #423176;
+}
+
 /*background colors*/
 .bkg-color--black {
   background-color: #000;
@@ -132,6 +159,7 @@ button {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding: 0px 20px;
 }
 
 .content-container--small {
@@ -173,7 +201,8 @@ h1.cd-headline.clip {
 }
 
 .text-color--light-purple {
-  color: #A5B2FF;
+  color: #423176;
+  opacity: 0.55;
 }
 
 .text-color--blue {

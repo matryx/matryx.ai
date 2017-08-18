@@ -33,7 +33,17 @@ section {
   padding: 0;
 }
 /*buttons*/
-button { font-family: 'Roboto Medium', Helvetica, sans-serif; font-size: 16px; line-height: 21px; letter-spacing: 0.5px;}
+button { font-family: 'Roboto Medium', Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  transition: 0.3s all;
+  text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
 /*----- end DEFAULTS -----*/
 
 /*----- ELEMENTS -----*/
@@ -41,6 +51,33 @@ button { font-family: 'Roboto Medium', Helvetica, sans-serif; font-size: 16px; l
 
 
 /*----- CLASSES -----*/
+/*buttons*/
+.btn{
+  &-yellow {
+    border: 1px solid $yellow;
+    color: $yellow;
+    padding: 10px 20px;
+    background-color: $white;
+
+    &:hover {
+      color: $white;
+      background-color: $yellow;
+    }
+  }
+
+  &-purple {
+    border: 1px solid #6B3FD6;
+    color: $white;
+    padding: 10px 20px;
+    background-color: #6B3FD6;
+
+    &:hover {
+      color: $purple;
+      background-color: $white;
+    }
+  }
+}
+
 /*background colors*/
 .bkg-color {
   &--black {background-color: $deep-black;}
@@ -53,6 +90,7 @@ button { font-family: 'Roboto Medium', Helvetica, sans-serif; font-size: 16px; l
   width: 100%;
   margin-left:auto;
   margin-right: auto;
+  padding: 0px 20px;
 
   &--small { max-width: 600px; }
   &--medium { max-width: 900px; }
@@ -68,7 +106,7 @@ h1.cd-headline.clip {
   &--white {color: $white; a { color: $white;}}
   &--purple {color: $purple;}
   &--dark-purple {color: $midnight-tint-2;}
-  &--light-purple {color: $blue-tint-1;}
+  &--light-purple {color: $purple; opacity:0.55}
   &--blue {color: $matryx-blue;}
   &--red {color: $matryx-red;}
 }
