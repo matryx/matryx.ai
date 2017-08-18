@@ -8,7 +8,7 @@
           <div class="card">
             <h2 class="text-color--purple">Why do a Token Sale?</h2>
             <p class="text-color--light-purple">
-              The ultimate goal of Matryx is to incentivize collaboration in fields of knowledge and creation like STEM. To reach that goal, we need resources that support R&D demands and help create a community of participants and contributors. Token Sales have quickly become a proven means to achieve such growth for blockchain-based technologies like Matryx. 
+              The ultimate goal of Matryx is to incentivize collaboration in fields of knowledge and creation like STEM. To reach that goal, we need resources that support R&D demands and help create a community of participants and contributors. Token Sales have quickly become a proven means to achieve such growth for blockchain-based technologies like Matryx.
             </p>
           </div>
           <div class="card">
@@ -88,7 +88,7 @@ export default {
   .card {
     display: -webkit-box; display: -ms-flexbox;display: flex;
     flex-direction: column;
-    border: 1px solid $purple;
+    border: 1px solid $light-purple-border;
     border-radius: 0;
     padding: 20px;
     justify-content: flex-start;

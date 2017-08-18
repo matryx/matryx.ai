@@ -61,7 +61,6 @@ export default {
 
   section {
     margin-top: 0px;
-    padding: 0px 0px 40px;
   }
 
   h4 {
@@ -83,7 +82,7 @@ export default {
     display:-webkit-box;display:-ms-flexbox;display:flex;
     justify-content: space-between;
     padding: 30px 0;
-    border-bottom: 1px solid $purple;
+    border-bottom: 1px solid $light-purple-border;
 
     &__column-1,
     &__column-2 {

@@ -105,7 +105,7 @@ p.content-container--medium {
     }
 
     &__card {
-      border: 1px solid white;
+      border: 1px solid rgba(255,255, 255,0.3);
       padding: 20px;
 
       &__item {
