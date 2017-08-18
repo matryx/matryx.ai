@@ -40,7 +40,6 @@ export default {
   margin: 20px 20px;
 
   &__heading {
-    height: 87px;
     position: relative;
     margin-bottom: 10px;
     box-sizing: border-box;
@@ -53,7 +52,7 @@ export default {
     }
 
     &__text {
-      width: 305px;
+      width: calc(100% - 40px);
       max-height: 95px;
       background-color: $white;
       position: absolute;

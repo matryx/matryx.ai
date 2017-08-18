@@ -54,7 +54,7 @@ export default {
     }
 
     &__text {
-      width: 305px;
+      width: calc(100% - 40px);
       height: 95px;
       background-color: $white;
       position: absolute;
@@ -79,19 +79,13 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    padding: 10px;
-
-    &__description {
-      max-width: 185px;
-    }
+    padding: 20px 30px;
   }
 
   button.btn-purple {
-    height: 30px;
-    width: 115px;
     font-size: 11px;
     padding: 5px 10px;
-    margin-left: 25px;
+    margin-top: 30px;
   }
 }
 </style>
