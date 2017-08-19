@@ -45,24 +45,54 @@ export default {
 
   &__heading {
     position: relative;
-    margin-bottom: 10px;
-    box-sizing: border-box;
+    height:120px;
+    overflow:hidden;
+    // margin-bottom: 10px;
+    // box-sizing: border-box;
 
     &__img {
+      position:absolute;
       width: 100%;
-      opacity: 0.5;
-      max-height: 110px;
-      height: auto;
+      // opacity: 0.5;
+      // max-height: 110px;
+      // height: auto;
     }
 
     &__text {
-      width: calc(100% - 40px);
-      max-height: 95px;
+
+      height: 65px;
       background-color: $white;
-      position: absolute;
-      left: 25px;
-      top: 20px;
       padding: 15px 20px;
+      position: absolute;
+      top: 30px;
+      width: calc(100% - 40px);
+      left: 20px;
+
+      h4 {
+        overflow: hidden;
+        position: relative;
+        line-height: 1.15em;
+        max-height: 2.3em;
+        text-align: left;
+        margin-right: -1em;
+        padding-right: 1em;
+      }
+      h4:before {
+        content: '...';
+        position: absolute;
+        right: 22px;
+        bottom: 0;
+        background-color: #FFF;
+      }
+      h4:after {
+        content: '';
+        position: absolute;
+        right: 22px;
+        width: 1em;
+        height: 1em;
+        margin-top: 0.2em;
+        background: white;
+      }
     }
 
     &__name {
@@ -72,15 +102,15 @@ export default {
 
   &__body {
     width: 100%;
+    margin: 0 auto;
+    padding: 20px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    padding: 20px 40px;
 
     &__description {
       color: $purple;
-      font-size: 20px;
+      font-size: 18px;
       width: 100%;
     }
   }

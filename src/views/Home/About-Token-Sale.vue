@@ -150,6 +150,8 @@ export default {
     }
   }
 
+
+
   .roadmap {
     max-width: 300px;
     width: 100%;
@@ -159,17 +161,21 @@ export default {
 
     h2 {
       position: relative;
-      right: 40px;
+      right: 60px;
     }
     h3 {
       position: relative;
-      right: 15px;
+      right: 30px;
     }
 
     &__section {
       position:relative;
       border-left: 1px solid $classic-grey;
       display:-webkit-box;display:-ms-flexbox;display:flex;
+
+      &:last-child {
+        border-left: none;
+      }
 
       & > * {
 
@@ -182,7 +188,7 @@ export default {
         flex: 0 1 0;
         min-width: 80px;
         position: relative;
-        left: 20px;
+        left: 30px;
 
         &--future { color: $green; }
         &--past { color: $classic-grey;}
@@ -194,12 +200,12 @@ export default {
         color: rgba(255, 255, 255, 0.7);
         display: inline-block;
         border-radius: 50px;
-        padding: 2px;
-        height: 32px;
-        width: 32px;
+        padding: 2px 2px 2px 2px;
+        height: 34px;
+        width: 34px;
         text-align: center;
         position: absolute;
-        left: -15px;
+        left: -17px;
 
           &--future { background-color: $green; color: rgba(255,255,255,0.7);}
           &--past { background-color: $classic-grey;color: rgba(255,255,255,0.7);}

@@ -66,7 +66,7 @@ export default {
       news: [{
         name: 'ETHNews: State of Digital Money 2017',
         date: '24 July 2017',
-        desc: 'Matryx debuted a custom built vector calculus tool to learn the subject in VR.',
+        desc: 'adfadfadsfadf adfa adsf adfadMatryx debuted a custom built vector calculus tool to learn the subject in VR.',
         image: newsImage1,
         articleLink: 'https://www.ethnews.com/state-of-digital-money-2017-recap'
       }, {
@@ -76,7 +76,7 @@ export default {
         image: newsImage1,
         articleLink: 'https://www.ethnews.com/state-of-digital-money-2017-recap'
       }, {
-        name: 'Decentralized Scientific Collaboration',
+        name: 'adf adfafwef adf adfaw Decentralized Scientific Collaboration',
         date: '20 July 2017',
         desc: 'Blockchain technology is the gateway to an Open Access society and the technologies of tomorrow.Blockchain technology is the gateway to an Open Access society and the technologies of tomorrow.',
         image: newsImage2,
@@ -89,7 +89,7 @@ export default {
         image: newsImage3,
         eventLink: 'https://www.meetup.com/Los-Angeles-Ethereum/events/242564631/'
       }, {
-        name: 'Matryx. A Decentralized Research Platform',
+        name: 'Matryx. A Decentralized Research Platform Matryx. A Decentralized Research Platform',
         date: '13 Sept 2017 @ 7pm',
         day: 'Wednesday',
         image: newsImage4,
