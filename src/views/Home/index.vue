@@ -2,6 +2,7 @@
   <div class="body-content">
     <!-- <Navbar></Navbar> -->
     <Above-the-Fold></Above-the-Fold>
+
     <div class="media-mentions bkg-color--white">
       <div class=" content-container content-container--large media-mentions__img-container">
         <p>Featured By</p>
@@ -11,6 +12,7 @@
         <img src="../../assets/images/singularity.png" alt="">
       </div>
     </div>
+
     <Company-Overview id="company-overview"></Company-Overview>
     <div class="cta-middle-banner">
       <CTA-Banner :purpleBkg="true":white="true" cta-location="Top-Middle"></CTA-Banner>

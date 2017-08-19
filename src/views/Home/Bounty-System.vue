@@ -15,23 +15,26 @@
           <div class="bounty__explanation__card">
             <div class="bounty__explanation__card__item">
               <span>1</span>
-              <h3>Bounty is Posted <span>Tom requests a 3D Spaceship model & posts a bounty</span></h3>
+              <h3>Bounty is Posted
+              <p>Tom requests a 3D Spaceship model & posts a bounty</p>
+              </h3>
+
             </div>
             <div class="bounty__explanation__card__item">
               <span>2</span>
               <h3>Designs Submitted
-                <span>Two users submit their best Spaceship models.
+                <p>Two users submit their best Spaceship models.
                   Tom likes a design and requests a round of revision.
-                </span>
+                </p>
               </h3>
             </div>
             <div class="bounty__explanation__card__item">
               <span>3</span>
               <h3>Winner is Chosen
-                <span>
+                <p>
                   Two new users take Tom's favorite designs and 'remix' them.
                   Tom chooses a winner, giving the original creator &amp; the creator of the 'remix' MTX.
-                </span>
+                </p>
               </h3>
             </div>
           </div>
@@ -112,6 +115,7 @@ p.content-container--medium {
         & > span {
           display:inline-block;
           vertical-align: top;
+          font-size: 16px;
         }
         h3 {
           display: inline-block;
@@ -123,7 +127,7 @@ p.content-container--medium {
             clear: both;
           }
 
-          span {
+          span, p {
             font-size: 16px;
             display:block;
             opacity: 0.8;
