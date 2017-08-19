@@ -27,29 +27,76 @@
         <div class="roadmap-container card-container--vertical">
           <div class="roadmap">
             <h2 class="text-color--purple">Roadmap</h2>
-            <h3 class="roadmap__year text-color--grey">2015</h3>
+            <h3 class="roadmap__year text-color--grey">2017</h3>
             <div class="roadmap__section ">
               <div class="roadmap__section__quarter roadmap__section__quarter--past ">Q2</div>
-              <p class="roadmap__section__date roadmap__section__date--past">10 NOV 2015</p>
+              <p class="roadmap__section__date roadmap__section__date--past">JUN 2017</p>
               <div class="roadmap__section__description">
-                <p>Nanome Incorporation</p>
-                <caption>Token Pre-Sale Launches at 10am GMT for purchases of over
-                  150 ETH. Pre-sale period will remain open for one week from Sept. 6 to Setpt 13.
+                <p>White Paper & Token Sale Announcement</p>
+                <caption>Token Pre-Sale Launches at 10am GMT for purchases of over 150 ETH. Pre-sale period will remain open for one week from Sept. 6 to Sept 13.
                 </caption>
               </div>
             </div>
             <h3 class="roadmap__year text-color--grey">2017</h3>
             <div class="roadmap__section ">
-              <div class="roadmap__section__quarter roadmap__section__quarter--future">Q2</div>
-              <p class="roadmap__section__date roadmap__section__date--future">10 NOV 2015</p>
+              <div class="roadmap__section__quarter roadmap__section__quarter--future">Q3</div>
+              <p class="roadmap__section__date roadmap__section__date--future">SEPT 2017</p>
               <div class="roadmap__section__description">
-                <p>Nanome Incorporation</p>
-                <caption>Token Pre-Sale Launches at 10am GMT for purchases of over
-                  150 ETH. Pre-sale period will remain open for one week from Sept. 6 to Setpt 13.
+                <p>Token Sale Launch</p>
+                <caption>User acquisition focused primarily on Universities and academia, building small and dedicated community of users.
+                </caption>
+              </div>
+            </div>
+            <h3 class="roadmap__year text-color--grey">2018</h3>
+            <div class="roadmap__section ">
+              <div class="roadmap__section__quarter roadmap__section__quarter--future">Q1</div>
+              <p class="roadmap__section__date roadmap__section__date--future">MAR 2018</p>
+              <div class="roadmap__section__description">
+                <p>Marketplace Alpha Testnet</p>
+                <caption>Working MVP for public use. Expand focus to research and model a variety of attribution solutions.
+                </caption>
+              </div>
+            </div>
+            <div class="roadmap__section ">
+              <div class="roadmap__section__quarter roadmap__section__quarter--future">Q2</div>
+              <p class="roadmap__section__date roadmap__section__date--future">JUN 2018</p>
+              <div class="roadmap__section__description">
+                <p>Marketplace Beta Testnet</p>
+                <caption>Centralized tests of implemented systems. Create decentralized reputation board, identifying users and their contributions.
+                </caption>
+              </div>
+            </div>
+            <div class="roadmap__section ">
+              <div class="roadmap__section__quarter roadmap__section__quarter--future">Q4</div>
+              <p class="roadmap__section__date roadmap__section__date--future">NOV 2018</p>
+              <div class="roadmap__section__description">
+                <p>Marketplace Beta Mainnet</p>
+                <caption>Expand user base to tens of thousands. Cultivate economy of practical/ less academic bounties.
+                </caption>
+              </div>
+            </div>
+            <h3 class="roadmap__year text-color--grey">2019</h3>
+            <div class="roadmap__section ">
+              <div class="roadmap__section__quarter roadmap__section__quarter--future">Q2</div>
+              <p class="roadmap__section__date roadmap__section__date--future">JUN 2019</p>
+              <div class="roadmap__section__description">
+                <p>Marketplace Public Launch</p>
+                <caption>Begin to decentralize storage solutions and narrow down attribution + reputation systems.
+                </caption>
+              </div>
+            </div>
+            <h3 class="roadmap__year text-color--grey">2020</h3>
+            <div class="roadmap__section ">
+              <div class="roadmap__section__quarter roadmap__section__quarter--future">Q4</div>
+              <p class="roadmap__section__date roadmap__section__date--future">NOV 2020</p>
+              <div class="roadmap__section__description">
+                <p>Decentralized Reputation & Storage</p>
+                <caption>Begin to decentralize storage solutions and narrow down attribution + reputation systems.
                 </caption>
               </div>
             </div>
           </div>
+         </div>
         </div>
       </div>
     </div>
