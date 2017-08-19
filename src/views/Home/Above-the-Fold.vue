@@ -11,38 +11,13 @@
         <Get-Notified ctaLocation="Above the Fold"></Get-Notified>
       </div>
       <div class="token-sale__video-launcher content-container--medium">
-        <!-- <a href="#" class="launch-video" data-modal-id="matryx-video" @click.prevent="launchVideo">
-            <img src="../../assets/images/videothumbnail.png" class="video-link-image" alt="">
-        </a> -->
         <b-btn v-b-modal.matryx-video>
           <img src="../../assets/images/videothumbnail.png" class="video-link-image" alt="">
         </b-btn>
-
       </div>
     </div>
-    <!-- <div class="modal fade" id="matryx-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-video">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="../../assets/media/giphy.mp4"
-                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
     <b-modal id="matryx-video" >
-
       <video :src="Video" controls></video>
-
     </b-modal>
   </section>
 </template>
@@ -69,7 +44,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 @import '../../assets/css/colors.scss';
 
 section.above-the-fold {
@@ -102,20 +77,31 @@ section.above-the-fold {
 }
 
 /*video link*/
-a.launch-video {
+/*a.launch-video {
   position:relative;
 
   img.video-link-play {
     position: absolute;
   }
-  img.video-link-image {
-    width:calc(100% - 60px);
-    max-width: 450px;
+}*/
+.token-sale__video-launcher button {
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 2px 20px #aeaeae, -2px -2px 20px #aeaeae;
+
+  &:hover {
+    box-shadow: 3px 3px 30px #aeaeae, -3px -3px 30px #aeaeae;
+
   }
 }
 
 
 /*video modal*/
+.modal-dialog {
+  max-width: 900px;
+}
 .modal-content{
   background-color: transparent;
   border:none;
@@ -146,30 +132,7 @@ a.launch-video {
   opacity:1;
 }
 
-/*media mentions*/
-.media-mentions {
-  display:-webkit-box;display:-ms-flexbox;display:flex;
-  flex-direction: column;
 
-  p{
-    text-align: center;
-    text-transform: uppercase;
-    width: 100%;
-  }
-
-  &__img-container {
-    display:-webkit-box;display:-ms-flexbox;display:flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    img {
-      width: 20%;
-      max-width: 200px;
-    }
-  }
-
-}
 
 .tokensale-background {
   position:absolute;
@@ -180,13 +143,7 @@ a.launch-video {
   z-index: 1;
 }
 
-.cta {
 
-  &__form {
-    display: flex;
-    justify-content: flex-start;
-  }
-}
 
 .purple-bkg {
   background-image: url('../../assets/images/backgrounds/ctapurple.png');
@@ -244,10 +201,7 @@ a.launch-video {
 
   }
 
-  .cta__form {
-    justify-content: center;
-    margin-top: 20px;
-  }
+
 
 }
 

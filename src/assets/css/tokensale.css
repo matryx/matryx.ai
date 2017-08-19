@@ -843,7 +843,7 @@ div#bodyContent span {
   font-size: 18px;
   font-weight: 400;
   padding: 3px 25px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   border: 1px solid #fff;
 
 }

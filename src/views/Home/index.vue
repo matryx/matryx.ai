@@ -15,13 +15,13 @@
 
     <Company-Overview id="company-overview"></Company-Overview>
     <div class="cta-middle-banner">
-      <CTA-Banner :purpleBkg="true":white="true" cta-location="Top-Middle"></CTA-Banner>
+      <CTA-Banner :purpleBkg="true" cta-location="Top-Middle"></CTA-Banner>
     </div>
     <About-Token-Sale></About-Token-Sale>
     <Quotes></Quotes>
     <Nanome-Info></Nanome-Info>
     <Bounty-System></Bounty-System>
-    <CTA-Banner cta-location="Bottom-Middle"></CTA-Banner>
+    <CTA-Banner :whiteBkg="true" cta-location="Bottom-Middle" ></CTA-Banner>
     <Matryx-Team></Matryx-Team>
     <News-Events></News-Events>
     <CTA-Banner :purpleBkg="true" cta-location="Bottom" id="cta-bottom"></CTA-Banner>
@@ -82,4 +82,29 @@ export default {
 //     padding: 80px 0;
 //   }
 // }
+
+/*media mentions*/
+.media-mentions {
+  display:-webkit-box;display:-ms-flexbox;display:flex;
+  flex-direction: column;
+
+  p{
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  &__img-container {
+    display:-webkit-box;display:-ms-flexbox;display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    img {
+      width: 20%;
+      max-width: 200px;
+    }
+  }
+
+}
 </style>

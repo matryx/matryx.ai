@@ -1,11 +1,11 @@
 <template lang="html">
-  <section :class="{ 'purple-bkg': purpleBkg, 'white': white }" class="cta-banner">
+  <section :class="{ 'purple-bkg': purpleBkg, 'white': white, 'white-bkg':whiteBkg }" class="cta-banner">
     <div class="cta content-container content-container--large">
       <h4 class="cta__main">
         Join the Token Sale
       </h4>
       <h6 class="cta__desc">Enter your email address to stay updated on the token sale launch</h6>
-       <Get-Notified  :ctaLocation="ctaLocation"> <!-- :purpleBkg="purpleBkg" -->
+       <Get-Notified  :ctaLocation="ctaLocation" > 
       </Get-Notified>
     </div>
   </section>
@@ -22,6 +22,7 @@ export default {
   props: {
     white: Boolean,
     purpleBkg: Boolean,
+    whiteBkg: Boolean,
     ctaLocation: String
   }
 }
@@ -33,7 +34,11 @@ export default {
 .cta {
   text-align: center;
 }
-
+.cta__form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
 .white {
   color: white;
 }
@@ -60,7 +65,9 @@ export default {
   }
 }
 
-section.cta-banner:not(.purpble-bkg) {
+
+
+section.cta-banner.white-bkg {
   background-image: url('../assets/images/backgrounds/ctawhite.png');
   background-size: cover;
   margin:-20px 0;

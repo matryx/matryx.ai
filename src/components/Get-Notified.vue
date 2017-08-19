@@ -65,10 +65,8 @@ export default {
 <style lang="scss">
 @import '../assets/css/styles';
 
-.cta {
-  text-align: center;
 
-  &__form {
+  .cta__form {
     display: flex;
     justify-content: center;
   }
@@ -101,7 +99,6 @@ export default {
     background-color: $green;
     color: $white;
   }
-}
 
 .purple-bkg {
   background-color: $purple;
