@@ -60,7 +60,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import './assets/css/colors';
 @import './assets/css/styles';
 
@@ -99,11 +99,11 @@ export default {
   }
   .nav-link{
     transition: all 0.3s;
-    color: $purple;
     padding: 10px 10px 0;
-    margin: 0 10px;
+    // margin: 0 10px;
     border-radius: 5px;
     text-transform: uppercase;
+    color: $white;
 
     &:hover {
       cursor: pointer;
@@ -122,7 +122,6 @@ export default {
 .navbar-toggler.navbar-toggler-right {
   color: $white;
 }
-
 
 
 footer {
