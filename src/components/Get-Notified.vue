@@ -1,7 +1,7 @@
 <template lang="html">
   <section :class="{ 'purple-bkg': purpleBkg }">
     <b-form class="form-inline cta__form">
-      <input class="form-control cta__form__email"
+      <input class="cta__form__email"
         v-model="email"
         type="email"
         placeholder="your@email.com"
@@ -64,50 +64,74 @@ export default {
 
 <style lang="scss">
 @import '../assets/css/styles';
-
+@import '../assets/css/colors';
 
   .cta__form {
     display: flex;
     justify-content: center;
-  }
 
-  .cta__form__email {
-    border-radius: 20px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    height: 42px;
-    border-right: none;
-    font-size: 14px;
-    width: 250px;
-    padding-left: 20px;
+    .cta__form__email {
+      padding: 0 20px 0;
+      border: none;
+      border-radius: 20px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      height: 40px;
+      border-right: none;
+      font-size: 14px;
+      width: 250px;
+      background-color: #fff;
+      background-image: none;
+      background-clip: padding-box;
+      color: #464a4c;
+      // left: 1px;
+      // position:relative;
 
-    &:active, &:focus {
-      outline: none;
+      &:active, &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: #464a4c;
+      }
+    }
+
+    .cta__form__submit {
+      transition: all 0.3s ease-in-out;
+      border-radius: 20px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      height: 40px;
+      width: 150px;
+      text-transform: uppercase;
+      background-image: none;
+      background-clip: padding-box;
+      color:white;
+      border: 1px solid $yellow;
+    }
+
+    .cta-btn-green {
+      background-color: $green;
+      color: $white;
     }
   }
 
-  .cta__form__submit {
-    border-radius: 20px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    height: 40px;
-    width: 150px;
-    text-transform: uppercase;
+  .white-bkg .cta__form__email {
+    border: 1px solid $purple;
+    border-right:none;
+
+    &::placeholder {
+      color: $purple;
+    }
   }
 
-  .cta-btn-green {
-    background-color: $green;
+  .purple-bkg {
     color: $white;
   }
 
-.purple-bkg {
-  background-color: $purple;
-  color: $white;
-}
-
-.purple-btn {
-  border: none;
-}
+  .purple-btn {
+    border: none;
+  }
 
 /*----- MEDIA QUERIES -----*/
 @media screen and (max-width: 500px) {

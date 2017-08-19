@@ -76,19 +76,19 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    padding: 20px;
+    padding: 20px 40px;
 
     &__description {
       color: $purple;
-      font-size: 16px;
+      font-size: 20px;
       width: 100%;
     }
   }
 
   button.btn-purple {
     height: 35px;
-    width: 120px;
-    font-size: 11px;
+    width: 200px;
+    font-size: 14px;
     padding: 5px 10px;
     margin-top: 20px;
   }

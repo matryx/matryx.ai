@@ -83,14 +83,20 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 20px 30px;
+    height:calc(100% - 165px);
+
+    a {
+    }
   }
 
   button.btn-purple {
-    font-size: 11px;
+    font-size: 14px;
     padding: 5px 10px;
     margin-top: 30px;
   }
+
+
 }
 </style>

@@ -13,12 +13,12 @@
             <button class="btn-yellow">Read the Whitepaper</button>
           </a>
         </div>
-        <div class="overview__column-2 mobile--order-2">
+        <div class="overview__column-2 mobile--order-2 overview__img--1">
           <img src="../../assets/images/video-preview.png" alt="">
         </div>
       </div>
       <div class="overview">
-        <div class="overview__column-2">
+        <div class="overview__column-2 overview__img--2">
           <img src="../../assets/images/video-preview.png" alt="">
         </div>
         <div class="overview__column-1">
@@ -42,7 +42,7 @@
 
           </p>
         </div>
-        <div class="overview__column-2 mobile--order-2">
+        <div class="overview__column-2 mobile--order-2 overview__img--3">
           <img src="../../assets/images/video-preview.png" alt="">
         </div>
       </div>
@@ -93,6 +93,19 @@ export default {
     padding: 30px 0;
     border-bottom: 1px solid $light-purple-border;
 
+    // &__img--1 {
+    //   background-image: url('../../assets/images/video-preview.png');
+    //   background-size: cover;
+    // }
+    // &__img--2 {
+    //   background-image: url('../../assets/images/video-preview.png');
+    //   background-size: cover;
+    // }
+    // &__img--3 {
+    //   background-image: url('../../assets/images/video-preview.png');
+    //   background-size: cover;
+    // }
+
     &__column-1,
     &__column-2 {
       width: calc(50% - 40px);
@@ -111,6 +124,7 @@ export default {
   .btn-yellow {
     background-color: $white;
     color: $yellow;
+    text-transform: uppercase;
 
     &:hover {
       background-color: $yellow;

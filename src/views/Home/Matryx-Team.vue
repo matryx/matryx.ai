@@ -189,9 +189,8 @@ export default {
 }
 
 .matryx-team__title__title {
-  font-size: 200%;
   flex-flow: 0 1 auto;
-  font-size: 200%;
+  font-size: 35px;
 }
 
 .matryx-team__title__line {

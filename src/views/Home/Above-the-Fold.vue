@@ -155,29 +155,6 @@ section.above-the-fold {
   border: none;
 }
 
-.above-the-fold .cta__form__email {
-  border-radius: 20px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  height: 42px;
-  border-right: none;
-  font-size: 12px;
-  width: 220px;
-  padding-left: 20px;
-
-  &:active, &:focus {
-    outline: none;
-  }
-}
-
-.above-the-fold .cta__form__submit {
-  border-radius: 20px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  height: 40px;
-  width: 150px;
-  text-transform: uppercase;
-}
 
 /*----- MEDIA QUERIES -----*/
 @media screen and (max-width: 1000px) {

@@ -22,9 +22,14 @@ export default {
 </script>
 
 <style lang="scss">
+.advisor-member__name {
+  font-size: 14px;
+  opacity: 0.8;
+}
 
 .advisor-member__desc {
   font-size: 11px;
+  opacity: 0.8;
   margin: 2.5px;
 }
 

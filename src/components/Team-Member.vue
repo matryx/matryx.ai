@@ -43,8 +43,13 @@ export default {
 </script>
 
 <style lang="scss">
+.team-member__name {
+  font-size: 14px;
+  opacity: 0.8;
+}
 .team-member__title {
   font-size: 11px;
+  opacity: 0.8;
   margin: 2.5px;
 }
 
