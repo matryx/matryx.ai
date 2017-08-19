@@ -66,17 +66,18 @@ export default {
 </script>
 
 <style lang="scss">
-.cta-middle-banner {
-  position: relative;
-  height: 350px;
-  // background-size: 100% 100%;
-  // background-position: stretch;
-  // background-image: url('../../assets/images/backgrounds/BG_MIDDLE.svg');
-  // background-repeat: no-repeat;
-
-  .cta-banner {
-    top: 35px;
-    position: relative;
-  }
-}
+// .cta-middle-banner {
+//   position: relative;
+//   height: 350px;
+//   // background-size: 100% 100%;
+//   // background-position: stretch;
+//   // background-image: url('../../assets/images/backgrounds/BG_MIDDLE.svg');
+//   // background-repeat: no-repeat;
+//
+//   .cta-banner {
+//     top: 35px;
+//     position: relative;
+//     padding: 80px 0;
+//   }
+// }
 </style>

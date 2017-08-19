@@ -1,5 +1,5 @@
 <template>
-  <section class="above-the-fold bkg-color--purple">
+  <section class="above-the-fold">
     <div class="token-sale content-container content-container--large ">
       <div class="token-sale__text content-container--medium text-color--white">
         <h1 class="font-size--large uppercase">Join the Matryx Token Sale</h1>
@@ -10,16 +10,47 @@
         <Countdown></Countdown>
         <Get-Notified ctaLocation="Above the Fold"></Get-Notified>
       </div>
-      <div class="token-sale__video content-container--medium">
-        <video src="../../assets/media/giphy.mp4" controls ></video>
+      <div class="token-sale__video-launcher content-container--medium">
+        <!-- <a href="#" class="launch-video" data-modal-id="matryx-video" @click.prevent="launchVideo">
+            <img src="../../assets/images/videothumbnail.png" class="video-link-image" alt="">
+        </a> -->
+        <b-btn v-b-modal.matryx-video>
+          <img src="../../assets/images/videothumbnail.png" class="video-link-image" alt="">
+        </b-btn>
+
       </div>
     </div>
+    <!-- <div class="modal fade" id="matryx-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-video">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="../../assets/media/giphy.mp4"
+                                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <b-modal id="matryx-video" >
+
+      <video :src="Video" controls></video>
+
+    </b-modal>
   </section>
 </template>
 
 <script>
 import Countdown from '@/components/Countdown'
 import GetNotified from '@/components/Get-Notified'
+import Video from '../../assets/media/giphy.mp4'
 
 export default {
   name: 'AboveTheFold',
@@ -27,7 +58,14 @@ export default {
   components: {
     Countdown,
     GetNotified
+  },
+
+  data () {
+    return {
+      Video
+    }
   }
+
 }
 </script>
 
@@ -43,7 +81,6 @@ section.above-the-fold {
   }
 }
 
-
 .token-sale__text {
   p.lead {
     border-left: 1px solid $yellow;
@@ -55,11 +92,58 @@ section.above-the-fold {
   }
 }
 
-.above-the-fold .jumbotron {
+.above-the-fold {
   border-radius: 0;
-  background-image: url('../../assets/images/purplebkg.jpg');
+  background-image: url('../../assets/images/backgrounds/purplewavebig.png');
   background-size: cover;
+  background-repeat: no-repeat;
   margin-bottom: 0;
+  background-position-y: bottom;
+}
+
+/*video link*/
+a.launch-video {
+  position:relative;
+
+  img.video-link-play {
+    position: absolute;
+  }
+  img.video-link-image {
+    width:calc(100% - 60px);
+    max-width: 450px;
+  }
+}
+
+
+/*video modal*/
+.modal-content{
+  background-color: transparent;
+  border:none;
+}
+.modal-header {
+  border-bottom: none;
+  padding:0;
+}
+.modal-body {
+  padding:0;
+
+  video {
+    width: 100%;
+  }
+}
+.modal-footer {
+  display:none;
+}
+.close, .close:focus {
+  color: #fff;
+  text-shadow: 0 1px 0 #000;
+  opacity: 0.7;
+  outline: none;
+}
+.close:hover {
+  color: #fff;
+  text-shadow: 0 1px 0 #000;
+  opacity:1;
 }
 
 /*media mentions*/
@@ -105,7 +189,8 @@ section.above-the-fold {
 }
 
 .purple-bkg {
-  background-color: $purple;
+  background-image: url('../../assets/images/backgrounds/ctapurple.png');
+  background-size:cover;
   color: $white;
 }
 
@@ -145,7 +230,7 @@ section.above-the-fold {
     flex-direction: column;
   }
   .token-sale__text,
-  .token-sale__video {
+  .token-sale__video-launcher {
     width: 100%;
     margin: 20px 0;
     max-width: 100%;

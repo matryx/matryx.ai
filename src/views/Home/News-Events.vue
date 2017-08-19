@@ -78,7 +78,7 @@ export default {
       }, {
         name: 'Decentralized Scientific Collaboration',
         date: '20 July 2017',
-        desc: 'Blockchain technology is the gateway to an Open Access society and the technologies of tomorrow.',
+        desc: 'Blockchain technology is the gateway to an Open Access society and the technologies of tomorrow.Blockchain technology is the gateway to an Open Access society and the technologies of tomorrow.',
         image: newsImage2,
         articleLink: 'http://stateofdigitalmoney.com/2017/07/20/matryx-demo-at-sodm17/'
       }],
