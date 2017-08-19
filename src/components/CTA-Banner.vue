@@ -5,7 +5,7 @@
         Join the Token Sale
       </h4>
       <h6 class="cta__desc">Enter your email address to stay updated on the token sale launch</h6>
-       <Get-Notified  :ctaLocation="ctaLocation" > 
+       <Get-Notified  :ctaLocation="ctaLocation" >
       </Get-Notified>
     </div>
   </section>
@@ -75,7 +75,7 @@ section.cta-banner.white-bkg {
   padding: 80px 0px;
 }
 
-#cta-bottom.purple-bkg {
+#Footer.purple-bkg {
   background-image: url('../assets/images/backgrounds/ctapurplebottom.png');
   background-position: top;
   padding-top: 80px;

@@ -81,15 +81,18 @@ p.content-container--medium {
 
   &__diagram {
     flex: 1 1 auto;
+    padding-top: 30px;
 
     h4, caption {
       width: 100%;
       text-align:center;
+      font-size: 20px;
     }
     caption{
       display: block;
       padding-top: 0;
       margin-bottom: 20px;
+      font-size: 14px;
     }
     img {
       width: 100%;
@@ -105,6 +108,8 @@ p.content-container--medium {
 
     & > h4 {
       opacity: 0.8;
+      font-size:22px;
+      margin-bottom: 20px;
     }
 
     &__card {

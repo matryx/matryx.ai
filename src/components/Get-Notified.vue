@@ -108,6 +108,14 @@ export default {
       background-clip: padding-box;
       color:white;
       border: 1px solid $yellow;
+
+      &:hover {
+        color: $yellow;
+
+        .cta__form__email {
+          border-color: $purple;
+        }
+      }
     }
 
     .cta-btn-green {
@@ -135,7 +143,7 @@ export default {
 
 /*----- MEDIA QUERIES -----*/
 @media screen and (max-width: 500px) {
-  .cta {
+  .cta__form {
     .cta__form__email {
       width: calc(100% - 20px);
       border-top-right-radius: 40px;

@@ -24,7 +24,7 @@
     <CTA-Banner :whiteBkg="true" cta-location="Bottom-Middle" ></CTA-Banner>
     <Matryx-Team></Matryx-Team>
     <News-Events></News-Events>
-    <CTA-Banner :purpleBkg="true" cta-location="Bottom" id="cta-bottom"></CTA-Banner>
+    <CTA-Banner :purpleBkg="true" cta-location="Bottom" id="Footer"></CTA-Banner>
   </div>
 </template>
 

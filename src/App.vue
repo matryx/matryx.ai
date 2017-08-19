@@ -17,6 +17,9 @@
 
       <!-- Right aligned nav items -->
       <b-nav is-nav-bar class="ml-auto">
+        <b-nav-item class="get-notified">
+          <button v-b-modal.getNotified>GET NOTIFIED</button>
+        </b-nav-item>
         <b-nav-item target="_blank"
           href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ"
           class="social-icon"
@@ -33,6 +36,12 @@
       </b-nav>
     </b-collapse>
   </b-navbar>
+
+  <b-modal id="getNotified" >
+
+    <CTABanner cta-location="Header"></CTABanner>
+
+  </b-modal>
 
   <router-view></router-view>
 
@@ -55,8 +64,12 @@
 </template>
 
 <script>
+import CTABanner from './components/CTA-Banner'
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    CTABanner
+  }
 }
 </script>
 
@@ -66,9 +79,10 @@ export default {
 
 /*navbar*/
 .navbar.navbar-light {
-  position: absolute;
+  position: fixed;
   width: 100%;
   background-color: $purple;
+  z-index:1000;
 
   .content-container--large {
     width: 100%;
@@ -96,6 +110,7 @@ export default {
     background-color: $purple;
     height: 40px;
     width: 40px;
+    line-height: 40px;
   }
   .nav-link{
     transition: all 0.3s;
@@ -104,6 +119,7 @@ export default {
     border-radius: 5px;
     text-transform: uppercase;
     color: $white;
+    line-height: 40px;
 
     &:hover {
       cursor: pointer;
@@ -123,7 +139,50 @@ export default {
   color: $white;
 }
 
+/*get notified button and modal*/
+.navbar.navbar-light .get-notified {
+  margin-right: 40px;
+  & > .nav-link {
+    padding: 3px 0 0 0 !important;
 
+    button {
+      height: 40px;
+      padding: 10px 20px;
+      border-radius: 40px;
+      border: 1px solid #fff;
+      background-color: $purple;
+      color: #fff;
+      outline:none;
+
+
+      &:active,&:hover {
+        outline: none;
+        background-color: #fff;
+        color: $purple;
+      }
+      &:active {
+        box-shadow: 1px 1px 10px #fff, -1px -1px 10px #fff;
+      }
+    }
+  }
+}
+
+/*had to put some css for this modal inside above-the-fold file
+**because the modal css in above the fold is overriding this file's modal css*/
+#getNotified{
+  .modal-dialog{
+    max-width:100% ;
+    background-image:url('./assets/images/backgrounds/whiteWave.png');
+
+    #getNotified__BV_body_.modal-body {
+      .cta-banner {
+        width:100%;
+      }
+    }
+  }
+}
+
+/*footer*/
 footer {
   margin-top: -20px;
   padding: 20px;
@@ -159,6 +218,9 @@ footer {
 @media screen and (max-width: 991px) {
   .navbar-nav {
     align-items: flex-start;
+  }
+  .navbar.navbar-light .get-notified {
+    margin-right: 0px;
   }
 }
 @media screen and (max-width: 750px) {
