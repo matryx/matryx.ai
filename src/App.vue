@@ -78,6 +78,12 @@ export default {
 @import './assets/css/styles';
 
 /*navbar*/
+// nav {
+//   box-shadow: 0px 3px 40px #000;
+// }
+//section.above-the-fold {
+//  margin-top: 50px;
+//}
 .navbar.navbar-light {
   position: fixed;
   width: 100%;
@@ -136,7 +142,8 @@ export default {
   width: calc(100% - 130px);
 }
 .navbar-toggler.navbar-toggler-right {
-  color: $white;
+  background-color: #fff;
+  opacity: 0.9;
 }
 
 /*get notified button and modal*/
