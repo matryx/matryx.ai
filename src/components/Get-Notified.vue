@@ -94,6 +94,7 @@ export default {
     border-bottom-left-radius: 0;
     height: 40px;
     width: 150px;
+    text-transform: uppercase;
   }
 
   .cta-btn-green {

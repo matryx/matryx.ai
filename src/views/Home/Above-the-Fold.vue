@@ -219,6 +219,7 @@ a.launch-video {
   border-bottom-left-radius: 0;
   height: 40px;
   width: 150px;
+  text-transform: uppercase;
 }
 
 /*----- MEDIA QUERIES -----*/
