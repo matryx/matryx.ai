@@ -63,12 +63,21 @@ export default {
     margin-top: 0px;
   }
 
+  hr {
+    max-width: 1400px;
+    margin: auto;
+  }
+
   h4 {
     margin-top: 0;
   }
 
   h1.font-size--large {
     margin: 40px 0;
+  }
+
+  .content-container--large.content-container {
+    padding-top: 40px;
   }
 
   .pull-left {
