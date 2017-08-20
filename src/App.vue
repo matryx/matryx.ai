@@ -1,7 +1,7 @@
 <template>
 <div id="app">
   <div id="sub-nav" class="bkg-color--dark-blue-gradient">
-    <b-navbar toggleable toggle-breakpoint="sm" class="content-container content-container--medium ">
+    <b-navbar toggleable toggle-breakpoint="sm" class="">
       <b-nav-toggle target="nav_collapse"></b-nav-toggle>
       <b-navbar-brand href="#">
         <router-link to="/"><img src="../src/assets/images/Matryx-Logo-White-640px.png" alt=""></router-link>
@@ -10,43 +10,54 @@
       <b-collapse is-nav id="nav_collapse">
 
       <b-nav is-nav-bar>
-        <a class="nav-link text-color--matryx-grey" target="_blank" href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf">
-          Whitepaper
-        </a>
-        <b-nav-link href="#" class="text-color--white">
+        <b-nav-link href="#" class="nav-link text-color--white">
           CONTACT
         </b-nav-link>
-        <b-nav-link href="#" class="text-color--white">
+        <b-nav-link href="#" class="nav-link text-color--white">
           BLOG
         </b-nav-link>
-        <b-nav-link href="#" class="text-color--white">
+        <b-nav-link href="#" class="nav-link text-color--white">
           FAQ
         </b-nav-link>
-        <b-nav-link href="#" class="text-color--white">
+        <b-nav-link href="#" class="nav-link text-color--white">
           PRESS
         </b-nav-link>
-        <b-nav-link href="#" class="text-color--white">
+        <b-nav-link href="#" class="nav-link text-color--white">
           LEGAL
         </b-nav-link>
       </b-nav>
 
         <!-- Right aligned nav items -->
         <b-nav is-nav-bar class="ml-auto">
-          <b-nav-item class="get-notified">
-            <button v-b-modal.getNotified>GET NOTIFIED</button>
-          </b-nav-item>
           <b-nav-item target="_blank"
             href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ"
-            class="social-icon"
-          >
+            class="social-icon">
             <img src="../src/assets/icons/slack.svg" alt="Matryx Slack">
           </b-nav-item>
-
           <b-nav-item target="_blank" href="https://www.facebook.com/matryxai/" class="social-icon">
             <img src="../src/assets/icons/icon-facebook.png" alt="Matryx Facebook Page">
           </b-nav-item>
           <b-nav-item target="_blank" href="" class="social-icon">
             <img src="../src/assets/icons/icon-twitter.gif" alt="Matryx Twitter Page">
+          </b-nav-item>
+          <b-nav-item class="nav-item-language">
+            <!-- <div id="language">
+              <button data-v-660df142="" type="button" class="dropdown-toggle" id="language__BV_button_" aria-haspopup="true" aria-expanded="false">Language</button>
+              <div data-v-660df142="" role="menu" aria-labelledby="language__BV_button_" class="dropdown-menu">
+                <a data-v-011c7f2e="" aria-disabled="false" href="#" target="_self" class="dropdown-item" role="menuitem" data-v-660df142="">English</a>
+                <a data-v-011c7f2e="" aria-disabled="false" href="#" target="_self" class="dropdown-item" role="menuitem" data-v-660df142="">Chinese</a>
+                <a data-v-011c7f2e="" aria-disabled="false" href="#" target="_self" class="dropdown-item" role="menuitem" data-v-660df142="">Japanese</a>
+                <a data-v-011c7f2e="" aria-disabled="false" href="#" target="_self" class="dropdown-item" role="menuitem" data-v-660df142="">Russian</a>
+                <a data-v-011c7f2e="" aria-disabled="false" href="#" target="_self" class="dropdown-item" role="menuitem" data-v-660df142="">Spanish</a>
+              </div>
+            </div> -->
+            <b-dropdown id="language" text="Language" class="">
+              <b-dropdown-item>English</b-dropdown-item>
+              <b-dropdown-item>Chinese</b-dropdown-item>
+              <b-dropdown-item>Japanese</b-dropdown-item>
+              <b-dropdown-item>Russian</b-dropdown-item>
+              <b-dropdown-item>Spanish</b-dropdown-item>
+            </b-dropdown>
           </b-nav-item>
         </b-nav>
       </b-collapse>
@@ -56,7 +67,7 @@
     <b-navbar toggleable toggle-breakpoint="sm" class="content-container content-container--medium ">
       <b-nav-toggle target="nav_collapse"></b-nav-toggle>
       <b-navbar-brand href="#">
-        <router-link to="/"><img src="../src/assets/images/Matryx-Logo-Grey.png" alt=""></router-link>
+        <router-link to="/"><img src="../src/assets/images/Matryx-Logo-Grey-CMYK.png" alt=""></router-link>
       </b-navbar-brand>
       <b-collapse is-nav id="nav_collapse">
 
@@ -64,27 +75,14 @@
         <a class="nav-link text-color--matryx-grey" target="_blank" href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf">
           Whitepaper
         </a>
-        <b-nav-link class="nav-link text-color--matryx-grey" href="#">Contact</b-nav-link>
-         <b-nav-link class="nav-link text-color--matryx-grey" href="#">Blog</b-nav-link>
+        <b-nav-link class="nav-link text-color--matryx-grey" href="#">WHAT IS MATRYX</b-nav-link>
+         <b-nav-link class="nav-link text-color--matryx-grey" href="#">ABOUT</b-nav-link>
       </b-nav>
 
       <!-- Right aligned nav items -->
       <b-nav is-nav-bar class="ml-auto">
         <b-nav-item class="get-notified">
-          <button v-b-modal.getNotified>GET NOTIFIED</button>
-        </b-nav-item>
-        <b-nav-item target="_blank"
-          href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ"
-          class="social-icon"
-        >
-          <img src="../src/assets/icons/slack.svg" alt="Matryx Slack">
-        </b-nav-item>
-
-        <b-nav-item target="_blank" href="https://www.facebook.com/matryxai/" class="social-icon">
-          <img src="../src/assets/icons/icon-facebook.png" alt="Matryx Facebook Page">
-        </b-nav-item>
-        <b-nav-item target="_blank" href="" class="social-icon">
-          <img src="../src/assets/icons/icon-twitter.gif" alt="Matryx Twitter Page">
+          <button v-b-modal.getNotified class="bkg-color--dark-blue-gradient">GET NOTIFIED</button>
         </b-nav-item>
       </b-nav>
       </b-collapse>
@@ -130,17 +128,43 @@ export default {
 @import './assets/css/colors';
 @import './assets/css/styles';
 
+
 /*navbar*/
-// nav {
-//   box-shadow: 0px 3px 40px #000;
-// }
-//section.above-the-fold {
-//  margin-top: 50px;
-//}
+#sub-nav {
+  width:100%;
+  &>.navbar.navbar-light {
+    padding: 0 10px;
+    background-color: transparent;
+
+    .nav-link {
+      color: $white;
+
+      .btn-group > .btn:first-child {
+        background-color: transparent;
+      }
+    }
+  }
+}
+.navbar .nav-item.nav-item-language {
+  .nav-link {
+    padding: 0;
+  }
+}
+
+/*language*/
+/*#language {*/
+  button#language__BV_button_.btn.btn-secondary.dropdown-toggle {
+    background-color:none !important;
+    color:#fff !important;
+    border: none !important;
+  }
+/*}*/
+
 #nav {
   /*position: fixed;*/
   width: 100%;
   z-index: 2;
+  padding: 0 10px;
 }
 nav {
   padding: 0;
@@ -151,7 +175,7 @@ nav {
 .navbar.navbar-light {
   width: 100%;
   background-color: $white;
-  z-index:1000;
+  /*z-index:1000;*/
 
   .content-container--large {
     width: 100%;
@@ -192,9 +216,9 @@ nav {
 
     &:hover {
       cursor: pointer;
-      color: $white;
-      background-color:$purple;
-      text-decoration: underline;
+      /*color: $white;*/
+      /*background-color:$purple;*/
+      /*text-decoration: underline;*/
     }
   }
 }
@@ -216,16 +240,15 @@ nav {
       height: 40px;
       padding: 10px 20px;
       border-radius: 40px;
-      border: 1px solid #fff;
-      background-color: $purple;
+      /*border: 1px solid $matryx-light-blue;*/
       color: #fff;
       outline:none;
 
 
       &:active,&:hover {
         outline: none;
-        background-color: #fff;
-        color: $purple;
+        /*background-color: $matryx-light-blue;*/
+        color: #082135;
       }
       &:active {
         box-shadow: 1px 1px 10px #fff, -1px -1px 10px #fff;
