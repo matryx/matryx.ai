@@ -1,5 +1,5 @@
 <template>
-  <section class="matryx-team">
+  <section class="matryx-team bkg--grey-gradient">
     <div class="content-container content-container--large">
       <div class="matryx-team__title">
         <h2 class="matryx-team__title__title">The Team</h2>
@@ -176,9 +176,10 @@ export default {
 <style lang="scss">
 @import '../../assets/css/colors';
 
-.matryx-team {
-  background-color: #6B3FD6;
-  color: $white;
+.bkg--grey-gradient {
+  background-image: url('../../assets/images/backgrounds/greygradient.png');
+  background-size:cover;
+  background-repeat: no-repeat;
 }
 
 .matryx-team__title,

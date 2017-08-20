@@ -1,5 +1,5 @@
 <template>
-  <section class="bkg-color--bright-purple">
+  <section class="bkg--blue-gradient">
     <div class="content-container content-container--large   text-color--white">
       <h1 class="content-container--medium">
         Incentivized Innovation Through Collaborative Compeition
@@ -67,6 +67,13 @@ h1, h4, p, caption {
 h1 {
   margin-bottom: 20px;
   max-width: 550px;
+}
+
+.bkg--blue-gradient {
+  background-image: url('../../assets/images/backgrounds/bluegradient.png');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position:bottom;
 }
 
 p.content-container--medium {
