@@ -10,7 +10,7 @@
             Matryx is a product of Nanome. Nanome seeks to democratize science, engineering, and research using Virtual Reality and blockchain technology. Nanome is the creator of Calcflow, the industry-leading VR mathematics toolkit, and nano-one, a VR interface for nanoscale design and simulation.
           </p>
           <a href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf" target="_blank">
-            <button class="btn-yellow">Read the Whitepaper</button>
+            <button class="btn-red">Read the Whitepaper</button>
           </a>
         </div>
         <div class="overview__column-2 mobile--order-2 overview__img--1">
@@ -121,13 +121,14 @@ export default {
     }
   }
 
-  .btn-yellow {
+  .btn-red {
     background-color: $white;
-    color: $yellow;
+    color: $matryx-red;
+    border-radius: 25px;
     text-transform: uppercase;
 
     &:hover {
-      background-color: $yellow;
+      background-color: $matryx-red;
       color: $white;
     }
   }

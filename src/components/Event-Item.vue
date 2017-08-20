@@ -118,7 +118,6 @@ export default {
 
   button.btn-blue {
     font-size: 14px;
-    min-width: 100px;
     padding: 5px 10px;
     margin-top: 30px;
     border-radius: 25px;

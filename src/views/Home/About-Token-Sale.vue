@@ -31,7 +31,7 @@
             <div class="roadmap__section ">
               <div class="roadmap__section__quarter roadmap__section__quarter--past ">Q2</div>
               <p class="roadmap__section__date roadmap__section__date--past">JUN 2017</p>
-              <div class="roadmap__section__description">
+              <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>White Paper &#38; Token Sale Announcement</p>
                 <caption>Token Pre-Sale Launches at 10am GMT for purchases of over 150 ETH. Pre-sale period will remain open for one week from Sept. 6 to Sept 13.
                 </caption>
@@ -41,7 +41,7 @@
             <div class="roadmap__section ">
               <div class="roadmap__section__quarter roadmap__section__quarter--future">Q3</div>
               <p class="roadmap__section__date roadmap__section__date--future">SEPT 2017</p>
-              <div class="roadmap__section__description">
+              <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>Token Sale Launch</p>
                 <caption>User acquisition focused primarily on Universities and academia, building small and dedicated community of users.
                 </caption>
@@ -51,7 +51,7 @@
             <div class="roadmap__section ">
               <div class="roadmap__section__quarter roadmap__section__quarter--future">Q1</div>
               <p class="roadmap__section__date roadmap__section__date--future">MAR 2018</p>
-              <div class="roadmap__section__description">
+              <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>Marketplace Alpha Testnet</p>
                 <caption>Working MVP for public use. Expand focus to research and model a variety of attribution solutions.
                 </caption>
@@ -60,7 +60,7 @@
             <div class="roadmap__section ">
               <div class="roadmap__section__quarter roadmap__section__quarter--future">Q2</div>
               <p class="roadmap__section__date roadmap__section__date--future">JUN 2018</p>
-              <div class="roadmap__section__description">
+              <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>Marketplace Beta Testnet</p>
                 <caption>Centralized tests of implemented systems. Create decentralized reputation board, identifying users and their contributions.
                 </caption>
@@ -69,7 +69,7 @@
             <div class="roadmap__section ">
               <div class="roadmap__section__quarter roadmap__section__quarter--future">Q4</div>
               <p class="roadmap__section__date roadmap__section__date--future">NOV 2018</p>
-              <div class="roadmap__section__description">
+              <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>Marketplace Beta Mainnet</p>
                 <caption>Expand user base to tens of thousands. Cultivate economy of practical/ less academic bounties.
                 </caption>
@@ -79,7 +79,7 @@
             <div class="roadmap__section ">
               <div class="roadmap__section__quarter roadmap__section__quarter--future">Q2</div>
               <p class="roadmap__section__date roadmap__section__date--future">JUN 2019</p>
-              <div class="roadmap__section__description">
+              <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>Marketplace Public Launch</p>
                 <caption>Begin to decentralize storage solutions and narrow down attribution + reputation systems.
                 </caption>
@@ -89,7 +89,7 @@
             <div class="roadmap__section ">
               <div class="roadmap__section__quarter roadmap__section__quarter--future">Q4</div>
               <p class="roadmap__section__date roadmap__section__date--future">NOV 2020</p>
-              <div class="roadmap__section__description">
+              <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>Decentralized Reputation &#38; Storage</p>
                 <caption>Begin to decentralize storage solutions and narrow down attribution + reputation systems.
                 </caption>
@@ -190,7 +190,7 @@ export default {
         position: relative;
         left: 30px;
 
-        &--future { color: $green; }
+        &--future { color: $matryx-blue; }
         &--past { color: $classic-grey;}
       }
 
@@ -207,7 +207,7 @@ export default {
         position: absolute;
         left: -17px;
 
-          &--future { background-color: $green; color: rgba(255,255,255,0.7);}
+          &--future { background-color: $matryx-blue; color: rgba(255,255,255,0.7);}
           &--past { background-color: $classic-grey;color: rgba(255,255,255,0.7);}
       }
 

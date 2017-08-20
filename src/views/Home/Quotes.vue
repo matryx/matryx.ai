@@ -1,7 +1,7 @@
 <template lang="html">
   <section class="bkg-color--lighter-grey">
     <div class="content-container content-container--medium" >
-      <!-- <h1 class="text-color--white">What People are Saying</h1> -->
+      <!-- <h1 class="text-color--dark-grey">What People are Saying</h1> -->
 
       <carousel
           :pagination-enabled=true
@@ -12,10 +12,10 @@
           :autoplay-timeout="5000">
        <slide>
          <span class="quote__quotes">&#x275D;</span>
-         <p class="quote-text text-color--white">
+         <p class="quote-text">
            People have been waiting for this both in academia and I think in industry as well. And I think specifically in the scientific genres within industries, so life sciences for example have been wanting it really well.
          </p>
-         <h3 class="quote-author text-color--white">
+         <h3 class="quote-author">
            <span class="quote-author__name">Geoff Odel</span>
            <span class="quote-author__company">Novartis</span>
          </h3>
@@ -83,7 +83,7 @@ export default {
   font-size:20px;
   opacity: 0.8;
   font-style: italic;
-  color: $purple;
+  color: $matryx-darker-grey;
 }
 .quote-author {
   opacity: 0.8;
