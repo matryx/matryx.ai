@@ -120,7 +120,16 @@ h1.cd-headline.clip {
   &--blue {color: $matryx-blue;}
   &--red {color: $matryx-red;}
   &--grey {color: $classic-grey;}
+  &--matryx-darker-grey {color: $matryx-darker-grey;}
+  &--matryx-dark-grey {color: $matryx-dark-grey;}
   &--matryx-grey {color: $matryx-grey;}
+  &--matryx-light-grey {color: $matryx-light-grey;}
+  &--matryx-lighter-grey {color: $matryx-lighter-grey;}
+  &--matryx-blue {color: $matryx-blue;}
+  &--matryx-light-blue {color: $matryx-light-blue;}
+  &--matryx-lighter-blue {color: $matryx-lighter-blue;}
+  &--matryx-black {color: $matryx-black;}
+  /*&--matryx-lighter-red {color: $matryx-lighter-red;}*/
 }
 .text {
   &--center {
