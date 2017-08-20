@@ -81,12 +81,14 @@ export default {
       }
       h4:before {
         content: '...';
+        background-color:$matryx-darker-grey;
         position: absolute;
         right: 22px;
         bottom: 0;
       }
       h4:after {
         content: '';
+        background-color:$matryx-darker-grey;
         position: absolute;
         right: 22px;
         width: 1em;

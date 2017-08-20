@@ -121,6 +121,7 @@ export default {
       &:before {
         /* points in the end */
         content: '...';
+        background-color:$matryx-darker-grey;
         /* absolute position */
         position: absolute;
         /* set position to right bottom corner of block */
@@ -131,6 +132,7 @@ export default {
       &:after {
         /* points in the end */
         content: '';
+        background-color:$matryx-darker-grey;
         /* absolute position */
         position: absolute;
         /* set position to right bottom corner of text */
@@ -165,7 +167,7 @@ export default {
 
   button.btn-blue {
     font-size: 14px;
-    padding: 5px 10px;
+    padding: 5px 20px;
     margin-top: 30px;
     border-radius: 25px;
   }
