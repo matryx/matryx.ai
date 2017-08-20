@@ -73,7 +73,7 @@ export default {
 }
 
 section.cta-banner.white-bkg {
-  background-image: url('../assets/images/backgrounds/whitewave.png');
+  background-image: url('../assets/images/backgrounds/whiteWave.png');
   background-size: cover;
   margin:-20px 0;
   background-position: center;
