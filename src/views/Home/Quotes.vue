@@ -1,45 +1,36 @@
 <template lang="html">
-  <section class="bkg-color--purple">
-    <div class="content-container content-container--small" >
-      <h1 class="text-color--white">What People are Saying</h1>
+  <section class="bkg-color--lighter-grey">
+    <div class="content-container content-container--medium" >
+      <!-- <h1 class="text-color--white">What People are Saying</h1> -->
 
       <carousel
-      :pagination-enabled=true
-      :per-page=1
-      :scroll-per-page=true
-      :click-target-size=20
-      :autoplay=true
-      :autoplay-timeout="5000">
+          :pagination-enabled=true
+          :per-page=1
+          :scroll-per-page=true
+          :click-target-size=20
+          :autoplay=true
+          :autoplay-timeout="5000">
        <slide>
-         Slide 1 Content
+         <span class="quote__quotes">&#x275D;</span>
+         <p class="quote-text text-color--white">
+           People have been waiting for this both in academia and I think in industry as well. And I think specifically in the scientific genres within industries, so life sciences for example have been wanting it really well.
+         </p>
+         <h3 class="quote-author text-color--white">
+           <span class="quote-author__name">Geoff Odel</span>
+           <span class="quote-author__company">Novartis</span>
+         </h3>
        </slide>
        <slide>
-         Slide 2 Content
+         <span class="quote__quotes">&#x275D;</span>
+         <p class="quote-text">
+           One thing we really like about their team is every single time we meet them, they have amazing progress. And their execution is extremely well done… they’re providing a solution that the industry really needs and no one actually has done it yet.
+         </p>
+         <h5 class="quote-author">
+           <span class="quote-author__name">Allen Hsu</span>
+           <span class="quote-author__company">Sparkland Capital</span>
+         </h5>
        </slide>
      </carousel>
-
-      <!-- <b-carousel id="quote-carousel" indicators :interval="3000">
-
-        <b-carousel-slide>
-          <p class="quote-text text-color--white">
-            Mollit commodo in exercitation duis irure sit fugiat non consequat pariatur exercitation labore tempor nulla eu elit dolor.
-          </p>
-          <h3 class="quote-author text-color--white">
-            <span class="quote-author__name">John Smith</span>
-            <span class="quote-author__company">company name</span>
-          </h3>
-        </b-carousel-slide>
-        <b-carousel-slide >
-          <p class="quote-text text-color--white">
-            Proident aliqua exercitation incididunt nostrud irure eiusmod nulla aute pariatur.
-          </p>
-          <h3 class="quote-author text-color--white">
-            <span class="quote-author__name">John Smith</span>
-            <span class="quote-author__company">company name</span>
-          </h3>
-        </b-carousel-slide>
-
-      </b-carousel> -->
 
     </div>
   </section>
@@ -54,37 +45,53 @@ export default {
     Carousel,
     Slide
   }
-  // methods: {
-  //   onSlide (slide) {
-  //     this.sliding = true
-  //   },
-  //   onSlid (slide) {
-  //     this.sliding = false
-  //   }
-  // }
 }
 </script>
 
 <style lang="scss">
-.carousel-indicators {
-  position:relative;
+@import '../../assets/css/colors';
 
-  li{
-    height: 10px;
-    width: 10px;
-    border: none;
-    border-radius: 50px;
-    max-width: 10px;
+.content-container--medium{
+  max-width: 750px;
+}
+
+.VueCarousel-slide {
+  position:relative;
+  padding-left: 60px;
+  padding-top: 20px;
+}
+
+.VueCarousel-dot--active{
+  .VueCarousel-dot-inner {
+      background-color: $purple !important;
   }
 }
+
+.VueCarousel-dot-inner {
+  border: 1px solid $purple;
+}
+
+.quote__quotes {
+  font-size: 80px;
+  line-height: .9em;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .quote-text {
-  opacity: 0.7;
+  font-size:20px;
+  opacity: 0.8;
   font-style: italic;
+  color: $purple;
 }
 .quote-author {
+  opacity: 0.8;
   float: right;
+  color: $midnight-tint-2;
 
   &__name {
+    font-size: 20px;
     font-weight: bold;
     display:block;
     text-align:right;
@@ -92,6 +99,20 @@ export default {
   &__company {
     display:block;
     text-align:right;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .quote-text {
+    font-size:14px;
+  }
+  .quote-author {
+    &__name {
+      font-size: 16px;
+    }
+    &__company {
+      font-size:14px;
+    }
   }
 }
 </style>

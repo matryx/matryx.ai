@@ -122,6 +122,10 @@ button:hover {
 /*----- ELEMENTS -----*/
 /*----- end ELEMENTS -----*/
 /*----- CLASSES -----*/
+.uppercase {
+  text-transform: uppercase;
+}
+
 /*buttons*/
 .btn-yellow {
   border: 1px solid #EF8A11;
@@ -175,6 +179,10 @@ button:hover {
 
 .bkg-color--grey {
   background-color: #80828D;
+}
+
+.bkg-color--lighter-grey {
+  background-color: #e6e8f1;
 }
 
 /*content container*/
