@@ -4,7 +4,7 @@
     <b-navbar toggleable toggle-breakpoint="sm" class="">
       <b-nav-toggle target="nav_collapse"></b-nav-toggle>
       <b-navbar-brand href="#">
-        <router-link to="/"><img src="../src/assets/images/Matryx-Logo-White-640px.png" alt=""></router-link>
+        <router-link to="/"><img src="../src/assets/images/Matryx-Mark-White.png" alt=""></router-link>
       </b-navbar-brand>
 
       <b-collapse is-nav id="nav_collapse">
