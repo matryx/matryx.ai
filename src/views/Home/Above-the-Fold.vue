@@ -49,10 +49,12 @@ export default {
 
 section.above-the-fold {
   margin-bottom: 0px;
+  margin-top:0;
 
   & > .content-container {
     display:flex;
     justify-content: space-between;
+    padding: 160px 40px;
   }
 }
 
@@ -69,7 +71,7 @@ section.above-the-fold {
 
 .above-the-fold {
   border-radius: 0;
-  background-image: url('../../assets/images/backgrounds/purplewavebig.png');
+  background-image: url('../../assets/images/backgrounds/abovethefoldbkg.png');
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 0;

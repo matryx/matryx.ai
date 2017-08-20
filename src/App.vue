@@ -1,19 +1,72 @@
 <template>
 <div id="app">
-  <b-navbar toggleable toggle-breakpoint="sm">
-    <b-nav-toggle target="nav_collapse"></b-nav-toggle>
-    <b-navbar-brand href="#">
-      <router-link to="/"><img src="../src/assets/images/Matryx-Logo-White-640px.png" alt=""></router-link>
-    </b-navbar-brand>
-    <b-collapse is-nav id="nav_collapse">
+  <div id="sub-nav" class="bkg-color--dark-blue-gradient">
+    <b-navbar toggleable toggle-breakpoint="sm" class="content-container content-container--medium ">
+      <b-nav-toggle target="nav_collapse"></b-nav-toggle>
+      <b-navbar-brand href="#">
+        <router-link to="/"><img src="../src/assets/images/Matryx-Logo-White-640px.png" alt=""></router-link>
+      </b-navbar-brand>
 
-    <b-nav is-nav-bar>
-      <a class="nav-link white" target="_blank" href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf">
-        Whitepaper
-      </a>
-      <b-nav-link class="nav-link white" href="#">Contact</b-nav-link>
-       <b-nav-link class="nav-link white" href="#">Blog</b-nav-link>
-    </b-nav>
+      <b-collapse is-nav id="nav_collapse">
+
+      <b-nav is-nav-bar>
+        <a class="nav-link text-color--matryx-grey" target="_blank" href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf">
+          Whitepaper
+        </a>
+        <b-nav-link href="#" class="text-color--white">
+          CONTACT
+        </b-nav-link>
+        <b-nav-link href="#" class="text-color--white">
+          BLOG
+        </b-nav-link>
+        <b-nav-link href="#" class="text-color--white">
+          FAQ
+        </b-nav-link>
+        <b-nav-link href="#" class="text-color--white">
+          PRESS
+        </b-nav-link>
+        <b-nav-link href="#" class="text-color--white">
+          LEGAL
+        </b-nav-link>
+      </b-nav>
+
+        <!-- Right aligned nav items -->
+        <b-nav is-nav-bar class="ml-auto">
+          <b-nav-item class="get-notified">
+            <button v-b-modal.getNotified>GET NOTIFIED</button>
+          </b-nav-item>
+          <b-nav-item target="_blank"
+            href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ"
+            class="social-icon"
+          >
+            <img src="../src/assets/icons/slack.svg" alt="Matryx Slack">
+          </b-nav-item>
+
+          <b-nav-item target="_blank" href="https://www.facebook.com/matryxai/" class="social-icon">
+            <img src="../src/assets/icons/icon-facebook.png" alt="Matryx Facebook Page">
+          </b-nav-item>
+          <b-nav-item target="_blank" href="" class="social-icon">
+            <img src="../src/assets/icons/icon-twitter.gif" alt="Matryx Twitter Page">
+          </b-nav-item>
+        </b-nav>
+      </b-collapse>
+    </b-navbar>
+  </div>
+  <div id="nav" class="bkg-color--white">
+    <b-navbar toggleable toggle-breakpoint="sm" class="content-container content-container--medium ">
+      <b-nav-toggle target="nav_collapse"></b-nav-toggle>
+      <b-navbar-brand href="#">
+        <router-link to="/"><img src="../src/assets/images/Matryx-Logo-Grey.png" alt=""></router-link>
+      </b-navbar-brand>
+      <b-collapse is-nav id="nav_collapse">
+
+      <b-nav is-nav-bar>
+        <a class="nav-link text-color--matryx-grey" target="_blank" href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf">
+          Whitepaper
+        </a>
+        <b-nav-link class="nav-link text-color--matryx-grey" href="#">Contact</b-nav-link>
+         <b-nav-link class="nav-link text-color--matryx-grey" href="#">Blog</b-nav-link>
+      </b-nav>
 
       <!-- Right aligned nav items -->
       <b-nav is-nav-bar class="ml-auto">
@@ -34,13 +87,13 @@
           <img src="../src/assets/icons/icon-twitter.gif" alt="Matryx Twitter Page">
         </b-nav-item>
       </b-nav>
-    </b-collapse>
-  </b-navbar>
+      </b-collapse>
+    </b-navbar>
+  </div>
+
 
   <b-modal id="getNotified" >
-
     <CTABanner cta-location="Header"></CTABanner>
-
   </b-modal>
 
   <router-view></router-view>
@@ -84,10 +137,20 @@ export default {
 //section.above-the-fold {
 //  margin-top: 50px;
 //}
-.navbar.navbar-light {
-  position: fixed;
+#nav {
+  /*position: fixed;*/
   width: 100%;
-  background-color: $purple;
+  z-index: 2;
+}
+nav {
+  padding: 0;
+  &.content-container {
+    padding:0;
+  }
+}
+.navbar.navbar-light {
+  width: 100%;
+  background-color: $white;
   z-index:1000;
 
   .content-container--large {
@@ -113,7 +176,7 @@ export default {
   .social-icon {
     display: flex;
     justify-content: center;
-    background-color: $purple;
+    background-color: transparent;
     height: 40px;
     width: 40px;
     line-height: 40px;
@@ -124,7 +187,7 @@ export default {
     // margin: 0 10px;
     border-radius: 5px;
     text-transform: uppercase;
-    color: $white;
+    // color: $white;
     line-height: 40px;
 
     &:hover {
@@ -133,9 +196,6 @@ export default {
       background-color:$purple;
       text-decoration: underline;
     }
-  }
-  .white {
-    color: $white;
   }
 }
 .navbar-toggleable-md .navbar-collapse {
