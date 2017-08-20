@@ -177,8 +177,8 @@ section.above-the-fold {
 
 
 
-.purple-bkg {
-  background-image: url('../../assets/images/backgrounds/ctapurple.png');
+.grey-bkg {
+  background-image: url('../../assets/images/backgrounds/greywave.png');
   background-size:cover;
   color: $white;
 }

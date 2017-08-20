@@ -41,16 +41,6 @@
             <img src="../src/assets/icons/icon-twitter.gif" alt="Matryx Twitter Page">
           </b-nav-item>
           <b-nav-item class="nav-item-language">
-            <!-- <div id="language">
-              <button data-v-660df142="" type="button" class="dropdown-toggle" id="language__BV_button_" aria-haspopup="true" aria-expanded="false">Language</button>
-              <div data-v-660df142="" role="menu" aria-labelledby="language__BV_button_" class="dropdown-menu">
-                <a data-v-011c7f2e="" aria-disabled="false" href="#" target="_self" class="dropdown-item" role="menuitem" data-v-660df142="">English</a>
-                <a data-v-011c7f2e="" aria-disabled="false" href="#" target="_self" class="dropdown-item" role="menuitem" data-v-660df142="">Chinese</a>
-                <a data-v-011c7f2e="" aria-disabled="false" href="#" target="_self" class="dropdown-item" role="menuitem" data-v-660df142="">Japanese</a>
-                <a data-v-011c7f2e="" aria-disabled="false" href="#" target="_self" class="dropdown-item" role="menuitem" data-v-660df142="">Russian</a>
-                <a data-v-011c7f2e="" aria-disabled="false" href="#" target="_self" class="dropdown-item" role="menuitem" data-v-660df142="">Spanish</a>
-              </div>
-            </div> -->
             <b-dropdown id="language" text="Language" class="language">
               <b-dropdown-item>English</b-dropdown-item>
               <b-dropdown-item>Chinese</b-dropdown-item>
@@ -82,7 +72,7 @@
       <!-- Right aligned nav items -->
       <b-nav is-nav-bar class="ml-auto">
         <b-nav-item class="get-notified">
-          <button v-b-modal.getNotified class="bkg-color--dark-blue-gradient">GET NOTIFIED</button>
+          <button v-b-modal.getNotified class="">GET NOTIFIED</button>
         </b-nav-item>
       </b-nav>
       </b-collapse>
@@ -96,7 +86,7 @@
 
   <router-view></router-view>
 
-  <footer class="bkg-color--purple">
+  <footer class="">
     <div class="footer__social">
       <a href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ" target="_blank"><img class="footer__social__icon" src="./assets/icons/slack.svg" alt=""></a>
       <a href="https://blog.matryx.ai/" target="_blank"><img class="footer__social__icon" src="./assets/icons/medium.svg" alt=""></a>
@@ -250,15 +240,17 @@ nav {
       height: 40px;
       padding: 10px 20px;
       border-radius: 40px;
-      /*border: 1px solid $matryx-light-blue;*/
+      border: 1px solid $matryx-light-blue;
       color: #fff;
       outline:none;
+      background-color: $matryx-light-blue !important;
 
 
       &:active,&:hover {
         outline: none;
-        /*background-color: $matryx-light-blue;*/
-        color: #082135;
+        background: $white !important;
+        color: $matryx-light-blue;
+        /*color: #082135;*/
       }
       &:active {
         box-shadow: 1px 1px 10px #fff, -1px -1px 10px #fff;
@@ -272,7 +264,7 @@ nav {
 #getNotified{
   .modal-dialog{
     max-width:100% ;
-    background-image:url('./assets/images/backgrounds/whiteWave.png');
+    /*background-image:url('./assets/images/backgrounds/whiteWave.png');*/
 
     #getNotified__BV_body_.modal-body {
       .cta-banner {
@@ -283,6 +275,8 @@ nav {
 }
 
 /*footer*/
+
+
 footer {
   margin-top: -20px;
   padding: 20px;
