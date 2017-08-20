@@ -134,16 +134,17 @@ button, button:hover, button:active, button:focus {
 }
 
 /*buttons*/
-.btn-cta-blue {
-  border: 1px solid $matryx-blue;
+.btn-yellow {
+  border: 1px solid #EF8A11;
   color: #FFF;
   padding: 10px 20px;
-  background-color: $matryx-blue;
+  background-color: #EF8A11;
 }
 
-.btn-cta-blue:hover {
-  color: $matryx-blue;
+.btn-yellow:hover {
+  color: #EF8A11;
   background-color: #FFF;
+  border-color: #EF8A11;
 }
 
 .btn-purple {
@@ -211,8 +212,8 @@ button, button:hover, button:active, button:focus {
   background-color: #80828D;
 }
 
-.bkg-color--lighter-grey {
-  background-color: #e6e8f1;
+.bkg-color--matryx-lighter-grey {
+  background-color: #F4F4F4;
 }
 
 .bkg-color--dark-blue-gradient {
