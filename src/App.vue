@@ -1,29 +1,5 @@
 <template>
 <div id="app" >
-  <!-- <div  class="bkg-color--white sticky-nav" >
-    <b-navbar toggleable toggle-breakpoint="sm" class="content-container content-container--medium " >
-      <b-nav-toggle target="nav-sticky"></b-nav-toggle>
-      <b-navbar-brand href="#">
-        <router-link to="/"><img src="../src/assets/images/Matryx-Logo-Grey-CMYK.png" alt=""></router-link>
-      </b-navbar-brand>
-      <b-collapse is-nav id="nav-sticky">
-
-      <b-nav is-nav-bar>
-        <a class="nav-link text-color--matryx-grey" target="_blank" href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf">
-          Whitepaper
-        </a>
-        <b-nav-link class="nav-link text-color--matryx-grey" href="#">WHAT IS MATRYX</b-nav-link>
-         <b-nav-link class="nav-link text-color--matryx-grey" href="#">ABOUT</b-nav-link>
-      </b-nav>
-
-      <b-nav is-nav-bar class="ml-auto">
-        <b-nav-item class="get-notified">
-          <button v-b-modal.getNotified class="">GET NOTIFIED</button>
-        </b-nav-item>
-      </b-nav>
-      </b-collapse>
-    </b-navbar>
-  </div> -->
   <div id="sub-nav" class="bkg-color--dark-blue-gradient">
     <b-navbar toggleable toggle-breakpoint="sm" class="">
       <b-nav-toggle target="sub-nav--toggle"></b-nav-toggle>
@@ -200,7 +176,7 @@ export default {
 }
 
 #nav {
-  /*position: fixed;*/
+  box-shadow: 0px 1px 10px #bdbdbd;
   width: 100%;
   z-index: 2;
   padding: 0 10px;
