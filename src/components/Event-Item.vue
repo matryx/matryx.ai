@@ -120,7 +120,7 @@ export default {
 
   button.btn-blue {
     font-size: 14px;
-    padding: 5px 10px;
+    padding: 5px 30px;
     margin-top: 30px;
     border-radius: 25px;
   }

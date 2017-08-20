@@ -60,7 +60,7 @@ section.above-the-fold {
 
 .token-sale__text {
   p.lead {
-    border-left: 1px solid $yellow;
+    border-left: 4px solid $matryx-blue;
     padding-left: 20px;
     font-size: 16px;
     max-width: 350px;

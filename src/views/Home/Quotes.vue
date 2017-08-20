@@ -1,5 +1,5 @@
 <template lang="html">
-  <section class="bkg-color--lighter-grey">
+  <section class="bkg-color--matryx-lighter-grey">
     <div class="content-container content-container--medium" >
       <!-- <h1 class="text-color--dark-grey">What People are Saying</h1> -->
 
@@ -63,21 +63,21 @@ export default {
 
 .VueCarousel-dot--active{
   .VueCarousel-dot-inner {
-      background-color: $purple !important;
+      background-color: $matryx-light-blue !important;
   }
 }
 
 .VueCarousel-dot-inner {
-  border: 1px solid $purple;
+  background-color: $matryx-grey !important;
 }
 
 .quote__quotes {
   font-size: 80px;
   line-height: .9em;
-  opacity: 0.2;
   position: absolute;
   top: 0;
   left: 0;
+  color: $matryx-light-blue;
 }
 .quote-text {
   font-size:20px;

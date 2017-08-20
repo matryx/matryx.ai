@@ -30,7 +30,6 @@ export default {
 
 .nanome {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   color: #4A4A4A;
 }
@@ -59,12 +58,15 @@ export default {
 }
 
 .logo > img {
-  max-height: 175px;
+  max-height: 215px;
   max-width: 175px;
 }
 
 /*----- MEDIA QUERIES -----*/
 @media screen and (max-width: 850px) {
+  .nanome {
+    flex-wrap: wrap;
+  }
   .nanome__info {
 
     &__text {
@@ -75,7 +77,7 @@ export default {
     display:-webkit-box;display:-ms-flexbox;display:flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
     margin-top: 50px;
 
