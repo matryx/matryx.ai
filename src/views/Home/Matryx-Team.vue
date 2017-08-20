@@ -90,7 +90,8 @@ export default {
         name: 'Scott Morgan',
         title: 'Chief Financial Officer',
         src: Scott,
-        linkedInLink: 'https://www.linkedin.com/in/scottdmorgan/'
+        linkedInLink: 'https://www.linkedin.com/in/scottdmorgan/',
+        twitterLink: 'https://twitter.com/btcjournal'
       }, {
         name: 'Edgardo Leija',
         title: 'Chief Experience Officer',
@@ -187,11 +188,13 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  color: $white;
 }
 
 .matryx-team__title__title {
   flex-flow: 0 1 auto;
   font-size: 35px;
+  color: $white;
 }
 
 .matryx-team__title__line {
@@ -202,6 +205,7 @@ export default {
 
 .matryx-team__team {
   display: flex;
+  color: $white;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
@@ -211,6 +215,7 @@ export default {
 
 .matryx-advisors__title__title {
   font-size: 200%;
+  color: $white;
   order: 2;
 }
 

@@ -1,7 +1,7 @@
 <template>
   <section class="news-events">
     <div class="content-container content-container--large">
-      <h2 class="news-events__sectionHeader text-color--matryx-grey">News &#38; Events</h2>
+      <h2 class="news-events__sectionHeader text-color--matryx-grey">NEWS &#38; EVENTS</h2>
       <div class="news-events__title">
         <h3 class="news-events__title__sub">News</h3>
         <div class="news-events__title__line"></div>
