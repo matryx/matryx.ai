@@ -15,10 +15,10 @@
          <p class="quote-text">
            People have been waiting for this both in academia and I think in industry as well. And I think specifically in the scientific genres within industries, so life sciences for example have been wanting it really well.
          </p>
-         <h3 class="quote-author">
+         <h5 class="quote-author">
            <span class="quote-author__name">Geoff Odel</span>
            <span class="quote-author__company">Novartis</span>
-         </h3>
+         </h5>
        </slide>
        <slide>
          <span class="quote__quotes">&#x275D;</span>
@@ -57,7 +57,7 @@ export default {
 
 .VueCarousel-slide {
   position:relative;
-  padding-left: 60px;
+  padding-left: 65px;
   padding-top: 20px;
 }
 

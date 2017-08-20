@@ -98,7 +98,8 @@ export default {
     }
 
     &__name {
-      color: $purple
+      color: $purple;
+      font-size: 14px;
     }
   }
 
