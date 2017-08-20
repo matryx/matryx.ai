@@ -6,8 +6,8 @@
     <div class="media-mentions bkg-color--white">
       <div class=" content-container content-container--large media-mentions__img-container center">
         <p>Featured By</p>
-        <a href="https://www.gizmodo.com.au/2017/01/you-can-do-maths-in-virtual-reality-now/" >
-          <img src="../../assets/images/gizmodo.png" alt="" target="_blank"></a>
+        <a  href="https://www.gizmodo.com.au/2017/01/you-can-do-maths-in-virtual-reality-now/" >
+          <img  src="../../assets/images/gizmodo.png" alt="" target="_blank"></a>
         <a href="http://www.sandiegouniontribune.com/business/sd-fi-ignite-conference-20170223-story.html" >
           <img src="../../assets/images/sdut-logo.png" alt="" target="_blank"></a>
         <a href="http://jacobsschool.ucsd.edu/news/news_releases/release.sfe?id=2081" >
@@ -19,7 +19,7 @@
 
     <Company-Overview id="company-overview"></Company-Overview>
     <div class="cta-middle-banner">
-      <CTA-Banner :lighterText="true" :greyBkg="true" cta-location="Top-Middle"></CTA-Banner>
+      <CTA-Banner  :lighterText="true" :greyBkg="true" cta-location="Top-Middle"></CTA-Banner>
     </div>
     <About-Token-Sale></About-Token-Sale>
     <Quotes></Quotes>

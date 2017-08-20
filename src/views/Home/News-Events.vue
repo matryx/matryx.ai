@@ -104,10 +104,11 @@ export default {
 @import '../../assets/css/colors';
 
 .news-events {
+  margin-bottom: -200px;
 
   &__news__primary {
     display:-webkit-box;display:-ms-flexbox;display:flex;
-    
+
   }
 
   &__sectionHeader {

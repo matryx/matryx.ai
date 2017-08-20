@@ -1,13 +1,37 @@
 <template>
-<div id="app">
+<div id="app" >
+  <!-- <div  class="bkg-color--white sticky-nav" >
+    <b-navbar toggleable toggle-breakpoint="sm" class="content-container content-container--medium " >
+      <b-nav-toggle target="nav-sticky"></b-nav-toggle>
+      <b-navbar-brand href="#">
+        <router-link to="/"><img src="../src/assets/images/Matryx-Logo-Grey-CMYK.png" alt=""></router-link>
+      </b-navbar-brand>
+      <b-collapse is-nav id="nav-sticky">
+
+      <b-nav is-nav-bar>
+        <a class="nav-link text-color--matryx-grey" target="_blank" href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf">
+          Whitepaper
+        </a>
+        <b-nav-link class="nav-link text-color--matryx-grey" href="#">WHAT IS MATRYX</b-nav-link>
+         <b-nav-link class="nav-link text-color--matryx-grey" href="#">ABOUT</b-nav-link>
+      </b-nav>
+
+      <b-nav is-nav-bar class="ml-auto">
+        <b-nav-item class="get-notified">
+          <button v-b-modal.getNotified class="">GET NOTIFIED</button>
+        </b-nav-item>
+      </b-nav>
+      </b-collapse>
+    </b-navbar>
+  </div> -->
   <div id="sub-nav" class="bkg-color--dark-blue-gradient">
     <b-navbar toggleable toggle-breakpoint="sm" class="">
-      <b-nav-toggle target="nav_collapse"></b-nav-toggle>
+      <b-nav-toggle target="sub-nav--toggle"></b-nav-toggle>
       <b-navbar-brand href="#">
         <router-link to="/"><img src="../src/assets/images/Matryx-Mark-White.png" alt=""></router-link>
       </b-navbar-brand>
 
-      <b-collapse is-nav id="nav_collapse">
+      <b-collapse is-nav id="sub-nav--toggle">
 
       <b-nav is-nav-bar>
         <b-nav-link href="#" class="nav-link text-color--white">
@@ -53,13 +77,14 @@
       </b-collapse>
     </b-navbar>
   </div>
-  <div id="nav" class="bkg-color--white">
-    <b-navbar toggleable toggle-breakpoint="sm" class="content-container content-container--medium ">
-      <b-nav-toggle target="nav_collapse"></b-nav-toggle>
+  <div id="nav" class="bkg-color--white " style="top: 0; position: -webkit-sticky;
+    position: sticky;">
+    <b-navbar toggleable toggle-breakpoint="sm" class="content-container content-container--medium " >
+      <b-nav-toggle target="nav-toggle"></b-nav-toggle>
       <b-navbar-brand href="#">
         <router-link to="/"><img src="../src/assets/images/Matryx-Logo-Grey-CMYK.png" alt=""></router-link>
       </b-navbar-brand>
-      <b-collapse is-nav id="nav_collapse">
+      <b-collapse is-nav id="nav-toggle">
 
       <b-nav is-nav-bar>
         <a class="nav-link text-color--matryx-grey" target="_blank" href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf">
@@ -106,10 +131,16 @@
 
 <script>
 import CTABanner from './components/CTA-Banner'
+
+import VueSticky from 'vue-sticky' // Es6 module
+
 export default {
   name: 'app',
   components: {
     CTABanner
+  },
+  directives: {
+    'sticky': VueSticky
   }
 }
 </script>
@@ -122,6 +153,7 @@ export default {
 /*navbar*/
 #sub-nav {
   width:100%;
+  z-index:3;
   &>.navbar.navbar-light {
     padding: 0 10px;
     background-color: transparent;
@@ -159,6 +191,13 @@ export default {
     }
   }
 /*}*/
+
+.sticky-nav {
+  position:fixed;
+  width: 100%;
+  padding: 0 10px;
+  z-index: 2;
+}
 
 #nav {
   /*position: fixed;*/
