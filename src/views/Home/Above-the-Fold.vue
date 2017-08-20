@@ -71,7 +71,7 @@ section.above-the-fold {
 
 .above-the-fold {
   border-radius: 0;
-  background-image: url('../../assets/images/backgrounds/abovethefoldbkg.png');
+  background-image: url('../../assets/images/backgrounds/abovethefoldbkg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 0;
@@ -131,6 +131,13 @@ section.above-the-fold {
 
 
 #getNotified{
+  .modal-footer {
+    display:none;
+  }
+  .modal-header {
+    border-bottom: none;
+    padding:0;
+  }
   .modal-dialog{
     background-color: #fff;
     border-radius:10px;
@@ -153,15 +160,15 @@ section.above-the-fold {
     }
 
     .content-container {
-      padding: 40px;
+      padding: 0 40px 20px;
     }
 
     .cta__form__email {
-      border: 1px solid $purple;
+      border: 1px solid $matryx-dark-grey;
       border-right: none;
 
       &::placeholder {
-        color: $purple;
+        color: $matryx-dark-grey;
       }
     }
   }
@@ -181,7 +188,7 @@ section.above-the-fold {
 
 
 .grey-bkg {
-  background-image: url('../../assets/images/backgrounds/greywave.png');
+  background-image: url('../../assets/images/backgrounds/greywave.jpg');
   background-size:cover;
   color: $white;
 }

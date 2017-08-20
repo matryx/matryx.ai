@@ -1,6 +1,5 @@
 <template>
   <div class="body-content">
-    <!-- <Navbar></Navbar> -->
     <Above-the-Fold></Above-the-Fold>
 
     <div class="media-mentions bkg-color--white">
@@ -39,7 +38,6 @@ import BountySystem from './Bounty-System'
 import CompanyOverview from './Company-Overview'
 import MatryxTeam from './Matryx-Team'
 import NanomeInfo from './Nanome-Info'
-import Navbar from './Navbar'
 import NewsEvents from './News-Events'
 import Quotes from './Quotes'
 import CTABanner from '../../components/CTA-Banner'
@@ -58,7 +56,6 @@ export default {
     CompanyOverview,
     MatryxTeam,
     NanomeInfo,
-    Navbar,
     NewsEvents,
     CTABanner,
     Quotes
