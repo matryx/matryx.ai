@@ -177,13 +177,23 @@ button:hover {
   background-color: #FFF;
 }
 
-.bkg-color--grey {
-  background-color: #80828D;
+
+.bkg-color--matryx-darker-grey {
+  color: #3D454D;
+}
+.bkg-color--matryx-dark-grey {
+  color: #636A74;
+}
+.bkg-color--matryx-grey {
+  color: #C1CBD5;
+}
+.bkg-color--matryx-light-grey {
+  color: #DCE6EC;
+}
+.bkg-color--matryx-lighter-grey {
+  color: #F4F4F4;
 }
 
-.bkg-color--lighter-grey {
-  background-color: #e6e8f1;
-}
 
 .bkg-color--dark-blue-gradient {
   background: #071827;
@@ -252,17 +262,43 @@ h1.cd-headline.clip {
 .text-color--blue {
   color: #4C68FF;
 }
+.text-color--matryx-black {
+  color: #0086CB;
+}
+.text-color--matryx-blue {
+  color: #0086CB;
+}
+.text-color--matryx-light-blue {
+  color: #4EB1DE;
+}
+.text-color--matryx-black {
+  color: #3B3C3F;
+}
 
 .text-color--red {
   color: #FF5C63;
+}
+.text-color--matryx-red {
+  color: #D3342B;
 }
 
 .text-color--grey {
   color: #80828D;
 }
-
-.text-color--matryx-grey {
+.text-color--matryx-darker-grey {
+  color: #3D454D;
+}
+.text-color--matryx-dark-grey {
   color: #636A74;
+}
+.text-color--matryx-grey {
+  color: #C1CBD5;
+}
+.text-color--matryx-light-grey {
+  color: #DCE6EC;
+}
+.text-color--matryx-lighter-grey {
+  color: #F4F4F4;
 }
 
 .text--center {

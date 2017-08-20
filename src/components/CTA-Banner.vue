@@ -1,10 +1,10 @@
 <template lang="html">
   <section :class="{ 'purple-bkg': purpleBkg, 'white': white, 'white-bkg':whiteBkg }" class="cta-banner">
     <div class="cta content-container content-container--large">
-      <h4 class="cta__main">
+      <h4 class="cta__main text-color--matryx-blue">
         Join the Token Sale
       </h4>
-      <h6 class="cta__desc">Enter your email address to stay updated on the token sale launch</h6>
+      <h6 class="cta__desc text-color--matryx-dark-grey">Enter your email address to stay updated on the token sale launch</h6>
        <Get-Notified  :ctaLocation="ctaLocation" >
       </Get-Notified>
     </div>
