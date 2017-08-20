@@ -4,7 +4,7 @@
       <h4 class="cta__main text-color--matryx-blue">
         Join the Token Sale
       </h4>
-      <h6 class="cta__desc text-color--matryx-dark-grey">Enter your email address to stay updated on the token sale launch</h6>
+      <h6 :class="{ 'lighter-text':lighterText  }" class="cta__desc text-color--matryx-dark-grey">Enter your email address to stay updated on the token sale launch</h6>
        <Get-Notified  :ctaLocation="ctaLocation" >
       </Get-Notified>
     </div>
@@ -24,6 +24,7 @@ export default {
     greyBkg: Boolean,
     whiteBkg: Boolean,
     footerBkg: Boolean,
+    lighterText: Boolean,
     ctaLocation: String
   }
 }
@@ -66,7 +67,10 @@ export default {
   }
 }
 
-
+.lighter-text {
+  color: #fff !important;
+  opacity: 0.9;
+}
 
 section.cta-banner.white-bkg {
   background-image: url('../assets/images/backgrounds/whitewave.png');

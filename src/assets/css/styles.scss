@@ -44,6 +44,9 @@ button { font-family: 'Roboto Medium', Helvetica, sans-serif;
   &:hover {
     cursor: pointer;
   }
+  &, &:hover, &:active, &:focus {
+    outline: none;
+  }
 }
 /*----- end DEFAULTS -----*/
 
