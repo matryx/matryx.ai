@@ -194,7 +194,7 @@ export default {
 }
 
 .matryx-team__title__line {
-  border-bottom: 1px solid #FFF;
+  border-bottom: 1px solid $matryx-light-blue;
   width: calc(100% - 190px);
   height: 20px;
 }
@@ -215,7 +215,7 @@ export default {
 
 .matryx-advisors__title__line {
   width: calc(100% - 230px);
-  border-bottom: 1px solid rgb(255, 255, 255);
+  border-bottom: 1px solid $matryx-light-blue;
   align-self: center;
 }
 

@@ -14,7 +14,7 @@
         <span>{{ desc }}</span>
       </div>
       <a :href="articleLink" target="_blank">
-        <button class="btn-purple">Read Article</button>
+        <button class="btn-blue">Read Article</button>
       </a>
     </div>
   </div>
@@ -71,6 +71,7 @@ export default {
   box-shadow: 0 2px 5px rgba(0,0,0,0.5);
   margin: 20px 20px;
 
+
   &__heading {
     height: 155px;
     position: relative;
@@ -87,18 +88,19 @@ export default {
     &__text {
       width: calc(100% - 40px);
       height: 110px;
-      background-color: $white;
       position: absolute;
       left: 25px;
       top: 27px;
       padding: 15px 20px;
+      background-color: $matryx-darker-grey;
     }
 
     &__name {
       color: $purple;
       // @include multiLineEllipsis($lineHeight: 1.1em, $lineCount: 2, $bgColor: white);
-      font-weight: 700;
+      font-weight: 100;
       font-size: 24px;
+      color: $white;
       /* styles for '...' */
       & {
         /* hide text if it more than N lines  */
@@ -124,7 +126,6 @@ export default {
         /* set position to right bottom corner of block */
         right: 27px;
         bottom: 0;
-        background-color: #FFF;
       }
       /* hide ... if we have text, which is less than or equal to max lines */
       &:after {
@@ -139,7 +140,6 @@ export default {
         height: 1em;
         margin-top: 0.2em;
         /* bg color = bg color under block */
-        background: white;
       }
     }
 
@@ -156,16 +156,18 @@ export default {
     align-items: center;
     justify-content: space-between;
     padding: 20px 30px;
+    color: $matryx-dark-grey;
     height:calc(100% - 165px);
 
     a {
     }
   }
 
-  button.btn-purple {
+  button.btn-blue {
     font-size: 14px;
     padding: 5px 10px;
     margin-top: 30px;
+    border-radius: 25px;
   }
 
 

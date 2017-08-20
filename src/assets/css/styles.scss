@@ -82,6 +82,18 @@ button { font-family: 'Roboto Medium', Helvetica, sans-serif;
       background-color: $white;
     }
   }
+
+  &-blue {
+    border: 1px solid $matryx-light-blue;
+    color: $white;
+    padding: 10px 20px;
+    background-color: $matryx-light-blue;
+
+    &:hover {
+      color: $matryx-light-blue;
+      background-color: $white;
+    }
+  }
 }
 
 /*background colors*/

@@ -1,7 +1,7 @@
 <template>
   <section class="news-events">
     <div class="content-container content-container--large">
-      <h2 class="news-events__sectionHeader">News &#38; Events</h2>
+      <h2 class="news-events__sectionHeader text-color--matryx-grey">News &#38; Events</h2>
       <div class="news-events__title">
         <h3 class="news-events__title__sub">News</h3>
         <div class="news-events__title__line"></div>
@@ -107,13 +107,11 @@ export default {
 
   &__news__primary {
     display:-webkit-box;display:-ms-flexbox;display:flex;
-
+    
   }
 
   &__sectionHeader {
       font-size: 40px;
-      font-weight: 700;
-      color: $purple;
       padding: 25px 0;
     }
 
@@ -125,7 +123,6 @@ export default {
 
     &__sub {
       text-transform: uppercase;
-      color: grey;
       background-color: white;
       border: 2px solid white;
       padding: 0 20px;
@@ -133,7 +130,8 @@ export default {
       left: -20px;
 
       &--events {
-        color: grey;
+        color: $matryx-black;
+        font-size: 30px;
         text-align: right;
         text-transform: uppercase;
         background-color: white;

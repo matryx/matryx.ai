@@ -13,7 +13,7 @@
         <div class="event-item__body__day">{{ day }}</div>
       </div>
       <a :href="eventLink" target="_blank">
-        <button class="btn-purple">RSVP</button>
+        <button class="btn-blue">RSVP</button>
       </a>
     </div>
   </div>
@@ -47,6 +47,7 @@ export default {
     position: relative;
     height:120px;
     overflow:hidden;
+    background-color: $matryx-darker-grey;
     // margin-bottom: 10px;
     // box-sizing: border-box;
 
@@ -61,7 +62,7 @@ export default {
     &__text {
 
       height: 65px;
-      background-color: $white;
+      background-color: $matryx-darker-grey;
       padding: 15px 20px;
       position: absolute;
       top: 30px;
@@ -76,13 +77,13 @@ export default {
         text-align: left;
         margin-right: -1em;
         padding-right: 1em;
+        color: $white;
       }
       h4:before {
         content: '...';
         position: absolute;
         right: 22px;
         bottom: 0;
-        background-color: #FFF;
       }
       h4:after {
         content: '';
@@ -91,7 +92,6 @@ export default {
         width: 1em;
         height: 1em;
         margin-top: 0.2em;
-        background: white;
       }
     }
 
@@ -109,18 +109,19 @@ export default {
     align-items: center;
 
     &__description {
-      color: $purple;
+      color: $matryx-dark-grey;
       font-size: 18px;
       width: 100%;
+      padding-bottom: 14px;
     }
   }
 
-  button.btn-purple {
-    height: 35px;
-    width: 200px;
+  button.btn-blue {
     font-size: 14px;
+    min-width: 100px;
     padding: 5px 10px;
-    margin-top: 20px;
+    margin-top: 30px;
+    border-radius: 25px;
   }
 }
 </style>
