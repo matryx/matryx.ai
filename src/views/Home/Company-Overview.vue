@@ -2,7 +2,9 @@
   <section>
     <hr>
     <div class="content-container--large content-container">
-      <h1 class="text-color--purple text--bold font-size--large">Company Overview</h1>
+      <h2 class="text-color--purple text--bold font-size--large text-center">
+        Matryx is a platform <br> that incentivizes collaborative problem-solving
+      </h2>
       <div class="overview">
         <div class="overview__column-1 mobile--order-1">
           <h1 class="text-color--purple">Company Background</h1>
@@ -72,7 +74,9 @@ export default {
     margin-top: 0;
   }
 
-  h1.font-size--large {
+  h2.font-size--large {
+    font-size: 46px;
+    line-height: 55px;
     margin: 40px 0;
   }
 
