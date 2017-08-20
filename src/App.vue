@@ -51,7 +51,7 @@
                 <a data-v-011c7f2e="" aria-disabled="false" href="#" target="_self" class="dropdown-item" role="menuitem" data-v-660df142="">Spanish</a>
               </div>
             </div> -->
-            <b-dropdown id="language" text="Language" class="">
+            <b-dropdown id="language" text="Language" class="language">
               <b-dropdown-item>English</b-dropdown-item>
               <b-dropdown-item>Chinese</b-dropdown-item>
               <b-dropdown-item>Japanese</b-dropdown-item>
@@ -148,6 +148,10 @@ export default {
 .navbar .nav-item.nav-item-language {
   .nav-link {
     padding: 0;
+
+    button {
+      display:none;
+    }
   }
 }
 
@@ -157,6 +161,12 @@ export default {
     background-color:none !important;
     color:#fff !important;
     border: none !important;
+  }
+
+  .language {
+    button.btn.btn-secondary {
+      display:none;
+    }
   }
 /*}*/
 
