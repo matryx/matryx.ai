@@ -1,5 +1,5 @@
 <template>
-  <section class="bkg-color--bright-purple">
+  <section class="bkg--blue-gradient">
     <div class="content-container content-container--large   text-color--white">
       <h1 class="content-container--medium">
         Incentivized Innovation Through Collaborative Compeition
@@ -69,6 +69,13 @@ h1 {
   max-width: 550px;
 }
 
+.bkg--blue-gradient {
+  background-image: url('../../assets/images/backgrounds/bluegradient.png');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position:bottom;
+}
+
 p.content-container--medium {
   max-width: 750px;
   font-size: 18px;
@@ -81,15 +88,18 @@ p.content-container--medium {
 
   &__diagram {
     flex: 1 1 auto;
+    padding-top: 30px;
 
     h4, caption {
       width: 100%;
       text-align:center;
+      font-size: 20px;
     }
     caption{
       display: block;
       padding-top: 0;
       margin-bottom: 20px;
+      font-size: 14px;
     }
     img {
       width: 100%;
@@ -105,6 +115,8 @@ p.content-container--medium {
 
     & > h4 {
       opacity: 0.8;
+      font-size:22px;
+      margin-bottom: 20px;
     }
 
     &__card {

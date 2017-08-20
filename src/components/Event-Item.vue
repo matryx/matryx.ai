@@ -13,7 +13,7 @@
         <div class="event-item__body__day">{{ day }}</div>
       </div>
       <a :href="eventLink" target="_blank">
-        <button class="btn-purple">RSVP</button>
+        <button class="btn-blue">RSVP</button>
       </a>
     </div>
   </div>
@@ -45,52 +45,85 @@ export default {
 
   &__heading {
     position: relative;
-    margin-bottom: 10px;
-    box-sizing: border-box;
+    height:120px;
+    overflow:hidden;
+    background-color: $matryx-darker-grey;
+    // margin-bottom: 10px;
+    // box-sizing: border-box;
 
     &__img {
+      position:absolute;
       width: 100%;
-      opacity: 0.5;
-      max-height: 110px;
-      height: auto;
+      // opacity: 0.5;
+      // max-height: 110px;
+      // height: auto;
     }
 
     &__text {
-      width: calc(100% - 40px);
-      max-height: 95px;
-      background-color: $white;
-      position: absolute;
-      left: 25px;
-      top: 20px;
+
+      height: 65px;
+      background-color: $matryx-darker-grey;
       padding: 15px 20px;
+      position: absolute;
+      top: 30px;
+      width: calc(100% - 40px);
+      left: 20px;
+
+      h4 {
+        overflow: hidden;
+        position: relative;
+        line-height: 1.15em;
+        max-height: 2.3em;
+        text-align: left;
+        margin-right: -1em;
+        padding-right: 1em;
+        color: $white;
+      }
+      h4:before {
+        content: '...';
+        background-color:$matryx-darker-grey;
+        position: absolute;
+        right: 22px;
+        bottom: 0;
+      }
+      h4:after {
+        content: '';
+        background-color:$matryx-darker-grey;
+        position: absolute;
+        right: 22px;
+        width: 1em;
+        height: 1em;
+        margin-top: 0.2em;
+      }
     }
 
     &__name {
-      color: $purple
+      color: $purple;
+      font-size: 14px;
     }
   }
 
   &__body {
     width: 100%;
+    margin: 0 auto;
+    padding: 20px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    padding: 20px 40px;
 
     &__description {
-      color: $purple;
-      font-size: 20px;
+      color: $matryx-dark-grey;
+      font-size: 18px;
       width: 100%;
+      padding-bottom: 14px;
     }
   }
 
-  button.btn-purple {
-    height: 35px;
-    width: 200px;
+  button.btn-blue {
     font-size: 14px;
-    padding: 5px 10px;
-    margin-top: 20px;
+    padding: 5px 30px;
+    margin-top: 30px;
+    border-radius: 25px;
   }
 }
 </style>

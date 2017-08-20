@@ -1,5 +1,5 @@
 <template>
-  <section class="matryx-team">
+  <section class="matryx-team bkg--grey-gradient">
     <div class="content-container content-container--large">
       <div class="matryx-team__title">
         <h2 class="matryx-team__title__title">The Team</h2>
@@ -90,7 +90,8 @@ export default {
         name: 'Scott Morgan',
         title: 'Chief Financial Officer',
         src: Scott,
-        linkedInLink: 'https://www.linkedin.com/in/scottdmorgan/'
+        linkedInLink: 'https://www.linkedin.com/in/scottdmorgan/',
+        twitterLink: 'https://twitter.com/btcjournal'
       }, {
         name: 'Edgardo Leija',
         title: 'Chief Experience Officer',
@@ -176,9 +177,10 @@ export default {
 <style lang="scss">
 @import '../../assets/css/colors';
 
-.matryx-team {
-  background-color: #6B3FD6;
-  color: $white;
+.bkg--grey-gradient {
+  background-image: url('../../assets/images/backgrounds/greygradient.png');
+  background-size:cover;
+  background-repeat: no-repeat;
 }
 
 .matryx-team__title,
@@ -186,21 +188,24 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  color: $white;
 }
 
 .matryx-team__title__title {
   flex-flow: 0 1 auto;
   font-size: 35px;
+  color: $white;
 }
 
 .matryx-team__title__line {
-  border-bottom: 1px solid #FFF;
+  border-bottom: 1px solid $matryx-light-blue;
   width: calc(100% - 190px);
   height: 20px;
 }
 
 .matryx-team__team {
   display: flex;
+  color: $white;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
@@ -210,12 +215,13 @@ export default {
 
 .matryx-advisors__title__title {
   font-size: 200%;
+  color: $white;
   order: 2;
 }
 
 .matryx-advisors__title__line {
   width: calc(100% - 230px);
-  border-bottom: 1px solid rgb(255, 255, 255);
+  border-bottom: 1px solid $matryx-light-blue;
   align-self: center;
 }
 

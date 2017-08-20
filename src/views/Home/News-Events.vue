@@ -1,7 +1,7 @@
 <template>
   <section class="news-events">
     <div class="content-container content-container--large">
-      <h2 class="news-events__sectionHeader">News &#38; Events</h2>
+      <h2 class="news-events__sectionHeader text-color--matryx-grey">NEWS &#38; EVENTS</h2>
       <div class="news-events__title">
         <h3 class="news-events__title__sub">News</h3>
         <div class="news-events__title__line"></div>
@@ -66,7 +66,7 @@ export default {
       news: [{
         name: 'ETHNews: State of Digital Money 2017',
         date: '24 July 2017',
-        desc: 'Matryx debuted a custom built vector calculus tool to learn the subject in VR.',
+        desc: 'adfadfadsfadf adfa adsf adfadMatryx debuted a custom built vector calculus tool to learn the subject in VR.',
         image: newsImage1,
         articleLink: 'https://www.ethnews.com/state-of-digital-money-2017-recap'
       }, {
@@ -76,7 +76,7 @@ export default {
         image: newsImage1,
         articleLink: 'https://www.ethnews.com/state-of-digital-money-2017-recap'
       }, {
-        name: 'Decentralized Scientific Collaboration',
+        name: 'adf adfafwef adf adfaw Decentralized Scientific Collaboration',
         date: '20 July 2017',
         desc: 'Blockchain technology is the gateway to an Open Access society and the technologies of tomorrow.Blockchain technology is the gateway to an Open Access society and the technologies of tomorrow.',
         image: newsImage2,
@@ -89,7 +89,7 @@ export default {
         image: newsImage3,
         eventLink: 'https://www.meetup.com/Los-Angeles-Ethereum/events/242564631/'
       }, {
-        name: 'Matryx. A Decentralized Research Platform',
+        name: 'Matryx. A Decentralized Research Platform Matryx. A Decentralized Research Platform',
         date: '13 Sept 2017 @ 7pm',
         day: 'Wednesday',
         image: newsImage4,
@@ -104,6 +104,7 @@ export default {
 @import '../../assets/css/colors';
 
 .news-events {
+  margin-bottom: -200px;
 
   &__news__primary {
     display:-webkit-box;display:-ms-flexbox;display:flex;
@@ -112,8 +113,6 @@ export default {
 
   &__sectionHeader {
       font-size: 40px;
-      font-weight: 700;
-      color: $purple;
       padding: 25px 0;
     }
 
@@ -125,7 +124,6 @@ export default {
 
     &__sub {
       text-transform: uppercase;
-      color: grey;
       background-color: white;
       border: 2px solid white;
       padding: 0 20px;
@@ -133,7 +131,8 @@ export default {
       left: -20px;
 
       &--events {
-        color: grey;
+        color: $matryx-black;
+        font-size: 30px;
         text-align: right;
         text-transform: uppercase;
         background-color: white;

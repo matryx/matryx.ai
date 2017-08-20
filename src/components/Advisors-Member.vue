@@ -39,6 +39,7 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   margin-top:50px;
+  color: #fff;
 }
 
 </style>

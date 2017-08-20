@@ -6,7 +6,7 @@
         type="email"
         placeholder="your@email.com"
       >
-      <button class="btn btn-yellow cta__form__submit"
+      <button class="btn btn-cta-blue cta__form__submit"
         v-if="!success"
         :class="{ 'purple-btn': purpleBkg }"
         @click.prevent="getNotified"
@@ -71,7 +71,7 @@ export default {
     justify-content: center;
 
     .cta__form__email {
-      padding: 0 20px 0;
+      padding: 0 30px 0;
       border: none;
       border-radius: 20px;
       border-top-right-radius: 0;
@@ -79,11 +79,11 @@ export default {
       height: 40px;
       border-right: none;
       font-size: 14px;
-      width: 250px;
-      background-color: #fff;
+      // width: 250px;
+      // background-color: #fff;
       background-image: none;
       background-clip: padding-box;
-      color: #464a4c;
+      // color: #464a4c;
       // left: 1px;
       // position:relative;
 
@@ -92,7 +92,7 @@ export default {
       }
 
       &::placeholder {
-        color: #464a4c;
+        color: $matryx-darker-grey;
       }
     }
 
@@ -104,10 +104,19 @@ export default {
       height: 40px;
       width: 150px;
       text-transform: uppercase;
-      background-image: none;
       background-clip: padding-box;
+      background-color: $matryx-blue;
       color:white;
-      border: 1px solid $yellow;
+      border: 1px solid $matryx-blue;
+
+      &:hover {
+        color: $matryx-blue;
+        background-color: $white;
+
+        .cta__form__email {
+          // border-color: $purple;
+        }
+      }
     }
 
     .cta-btn-green {
@@ -135,7 +144,7 @@ export default {
 
 /*----- MEDIA QUERIES -----*/
 @media screen and (max-width: 500px) {
-  .cta {
+  .cta__form {
     .cta__form__email {
       width: calc(100% - 20px);
       border-top-right-radius: 40px;

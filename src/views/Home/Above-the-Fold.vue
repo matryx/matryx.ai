@@ -49,16 +49,18 @@ export default {
 
 section.above-the-fold {
   margin-bottom: 0px;
+  margin-top:0;
 
   & > .content-container {
     display:flex;
     justify-content: space-between;
+    padding: 160px 40px;
   }
 }
 
 .token-sale__text {
   p.lead {
-    border-left: 1px solid $yellow;
+    border-left: 4px solid $matryx-blue;
     padding-left: 20px;
     font-size: 16px;
     max-width: 350px;
@@ -69,21 +71,13 @@ section.above-the-fold {
 
 .above-the-fold {
   border-radius: 0;
-  background-image: url('../../assets/images/backgrounds/purplewavebig.png');
+  background-image: url('../../assets/images/backgrounds/abovethefoldbkg.png');
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 0;
   background-position-y: bottom;
 }
 
-/*video link*/
-/*a.launch-video {
-  position:relative;
-
-  img.video-link-play {
-    position: absolute;
-  }
-}*/
 .token-sale__video-launcher button {
   padding: 0;
   border: none;
@@ -91,7 +85,7 @@ section.above-the-fold {
   overflow: hidden;
   box-shadow: 2px 2px 20px #aeaeae, -2px -2px 20px #aeaeae;
 
-  &:hover {
+  &:hover, &:active, &:focus {
     box-shadow: 3px 3px 30px #aeaeae, -3px -3px 30px #aeaeae;
 
   }
@@ -99,7 +93,7 @@ section.above-the-fold {
 
 
 /*video modal*/
-.modal-dialog {
+.above-the-fold .modal-dialog {
   max-width: 900px;
 }
 .modal-content{
@@ -133,6 +127,44 @@ section.above-the-fold {
 }
 
 
+#getNotified{
+  .modal-dialog{
+    background-color: #fff;
+    border-radius:10px;
+
+    .close{
+      right: 10px;
+      position: relative;
+      padding: 10px;
+    }
+    .close, .close:focus {
+      color: #000;
+      text-shadow: 0 1px 0 #fff;
+      opacity: 0.7;
+      outline: none;
+    }
+    .close:hover {
+      color: #000;
+      text-shadow: 0 1px 0 #fff;
+      opacity:1;
+    }
+
+    .content-container {
+      padding: 40px;
+    }
+
+    .cta__form__email {
+      border: 1px solid $purple;
+      border-right: none;
+
+      &::placeholder {
+        color: $purple;
+      }
+    }
+  }
+}
+
+
 
 .tokensale-background {
   position:absolute;
@@ -145,8 +177,8 @@ section.above-the-fold {
 
 
 
-.purple-bkg {
-  background-image: url('../../assets/images/backgrounds/ctapurple.png');
+.grey-bkg {
+  background-image: url('../../assets/images/backgrounds/greywave.png');
   background-size:cover;
   color: $white;
 }
@@ -171,6 +203,10 @@ section.above-the-fold {
     max-width: 100%;
     text-align:center;
   }
+  .token-sale__video-launcher {
+    width: 100%;
+    img {width: 100%;}
+  }
   .token-sale__text p.lead {
     margin: 20px auto;
     width: 100%;
@@ -183,14 +219,17 @@ section.above-the-fold {
 }
 
 @media screen and (max-width: 500px) {
-  .above-the-fold .cta__form__email {
+  #getNotified .modal-dialog .cta__form__email {
+    border-right: 1px solid $purple;
+  }
+  .above-the-fold .cta .cta__form .cta__form__email {
     width: calc(100% - 20px);
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
   }
-  .above-the-fold .cta__form__submit {
+  .above-the-fold .cta .cta__form .cta__form__submit {
     width: calc(100% - 20px);
     margin-top: 10px;
     border-top-right-radius: 40px;

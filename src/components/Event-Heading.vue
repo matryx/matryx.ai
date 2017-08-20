@@ -23,38 +23,58 @@ export default {
 <style lang="scss">
 @import '../assets/css/colors';
 
+// .primary-event {
+//   &__heading {
+//     height: 155px;
+//     position: relative;
+//     margin-bottom: 10px;
+//     box-sizing: border-box;
+//
+//     &__img {
+//       position: absolute;
+//       width: 100%;
+//       height: 100%;
+//       opacity: 0.5;
+//     }
+//
+//     &__text {
+//       width: 305px;
+//       max-height: 95px;
+//       background-color: $white;
+//       position: absolute;
+//       left: 25px;
+//       top: 40px;
+//       padding: 15px 20px;
+//     }
+//
+//     &__name {
+//       color: $purple
+//     }
+//
+//     &__date {
+//       color: grey;
+//       letter-spacing: 0.5px;
+//     }
+//   }
+// }
+
 .primary-event {
   &__heading {
-    height: 155px;
-    position: relative;
-    margin-bottom: 10px;
-    box-sizing: border-box;
+
 
     &__img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      opacity: 0.5;
+
     }
 
     &__text {
-      width: 305px;
-      max-height: 95px;
-      background-color: $white;
-      position: absolute;
-      left: 25px;
-      top: 40px;
-      padding: 15px 20px;
+
     }
 
     &__name {
-      color: $purple
     }
 
     &__date {
-      color: grey;
-      letter-spacing: 0.5px;
-    }
+
   }
 }
 </style>

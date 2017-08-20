@@ -5,7 +5,6 @@ html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
   padding: 0;
   margin: 0 auto;
-  height: 100%;
   width: 100%;
 }
 /*headers*/
@@ -43,6 +42,9 @@ button { font-family: 'Roboto Medium', Helvetica, sans-serif;
 
   &:hover {
     cursor: pointer;
+  }
+  &, &:hover, &:active, &:focus {
+    outline: none;
   }
 }
 /*----- end DEFAULTS -----*/
@@ -82,6 +84,29 @@ button { font-family: 'Roboto Medium', Helvetica, sans-serif;
       background-color: $white;
     }
   }
+
+  &-blue {
+    border: 1px solid $matryx-light-blue;
+    color: $white;
+    padding: 10px 20px;
+    background-color: $matryx-light-blue;
+
+    &:hover {
+      color: $matryx-light-blue;
+      background-color: $white;
+    }
+  }
+  &-red {
+    border: 1px solid $matryx-red;
+    color: $white;
+    padding: 10px 20px;
+    background-color: $matryx-light-blue;
+
+    &:hover {
+      color: $matryx-light-blue;
+      background-color: $white;
+    }
+  }
 }
 
 /*background colors*/
@@ -93,7 +118,15 @@ button { font-family: 'Roboto Medium', Helvetica, sans-serif;
   &--dark-purple {background-color: $midnight-tint-2;}
   &--white {background-color: $white;}
   &--grey {background-color: $classic-grey;}
-}
+  // &--lighter-grey {background-color: $lighter-grey;}
+  &--matryx-lighter-grey {background-color: $matryx-lighter-grey;}
+  &--dark-blue-gradient {
+    background: rgb(7,24,39); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(7,24,39,1) 0%, rgba(8,33,53,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(7,24,39,1) 0%,rgba(8,33,53,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(7,24,39,1) 0%,rgba(8,33,53,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#071827', endColorstr='#082135',GradientType=0 ); /* IE6-9 */}
+  }
 /*content container*/
 .content-container {
   width: 100%;
@@ -119,6 +152,16 @@ h1.cd-headline.clip {
   &--blue {color: $matryx-blue;}
   &--red {color: $matryx-red;}
   &--grey {color: $classic-grey;}
+  &--matryx-darker-grey {color: $matryx-darker-grey;}
+  &--matryx-dark-grey {color: $matryx-dark-grey;}
+  &--matryx-grey {color: $matryx-grey;}
+  &--matryx-light-grey {color: $matryx-light-grey;}
+  &--matryx-lighter-grey {color: $matryx-lighter-grey;}
+  &--matryx-blue {color: $matryx-blue;}
+  &--matryx-light-blue {color: $matryx-light-blue;}
+  &--matryx-lighter-blue {color: $matryx-lighter-blue;}
+  &--matryx-black {color: $matryx-black;}
+  /*&--matryx-lighter-red {color: $matryx-lighter-red;}*/
 }
 .text {
   &--center {

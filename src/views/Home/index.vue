@@ -5,17 +5,21 @@
 
     <div class="media-mentions bkg-color--white">
       <div class=" content-container content-container--large media-mentions__img-container">
-        <p>Featured By</p>
-        <img src="../../assets/images/gizmodo.png" alt="">
-        <img src="../../assets/images/sdut-logo.png" alt="">
-        <img src="../../assets/images/UCSD-logo.png" alt="">
-        <img src="../../assets/images/singularity.png" alt="">
+        <p class="text-color--matryx-grey">Featured By</p>
+        <a class="press-logo" href="https://www.gizmodo.com.au/2017/01/you-can-do-maths-in-virtual-reality-now/" >
+          <img src="../../assets/images/press/gizmodo.png" alt="" target="_blank"></a>
+        <a class="press-logo" href="http://www.sandiegouniontribune.com/business/sd-fi-ignite-conference-20170223-story.html" >
+          <img src="../../assets/images/press/sdut-logo.png" alt="" target="_blank"></a>
+        <a class="press-logo" href="http://jacobsschool.ucsd.edu/news/news_releases/release.sfe?id=2081" >
+          <img src="../../assets/images/press/UCSD-logo.png" alt="" target="_blank"></a>
+        <a class="press-logo" href="https://singularityhub.com/2017/01/18/get-ready-to-love-math-with-this-sweet-vr-calculator/" >
+          <img src="../../assets/images/press/singularity.png" alt="" target="_blank"></a>
       </div>
     </div>
 
     <Company-Overview id="company-overview"></Company-Overview>
     <div class="cta-middle-banner">
-      <CTA-Banner :purpleBkg="true" cta-location="Top-Middle"></CTA-Banner>
+      <CTA-Banner  :lighterText="true" :greyBkg="true" cta-location="Top-Middle"></CTA-Banner>
     </div>
     <About-Token-Sale></About-Token-Sale>
     <Quotes></Quotes>
@@ -24,7 +28,7 @@
     <CTA-Banner :whiteBkg="true" cta-location="Bottom-Middle" ></CTA-Banner>
     <Matryx-Team></Matryx-Team>
     <News-Events></News-Events>
-    <CTA-Banner :purpleBkg="true" cta-location="Bottom" id="cta-bottom"></CTA-Banner>
+    <CTA-Banner :lighterText="true" :footerBkg="true" cta-location="Bottom" id="Footer"></CTA-Banner>
   </div>
 </template>
 
@@ -38,7 +42,6 @@ import NanomeInfo from './Nanome-Info'
 import Navbar from './Navbar'
 import NewsEvents from './News-Events'
 import Quotes from './Quotes'
-
 import CTABanner from '../../components/CTA-Banner'
 
 export default {
@@ -68,20 +71,6 @@ export default {
 </script>
 
 <style lang="scss">
-// .cta-middle-banner {
-//   position: relative;
-//   height: 350px;
-//   // background-size: 100% 100%;
-//   // background-position: stretch;
-//   // background-image: url('../../assets/images/backgrounds/BG_MIDDLE.svg');
-//   // background-repeat: no-repeat;
-//
-//   .cta-banner {
-//     top: 35px;
-//     position: relative;
-//     padding: 80px 0;
-//   }
-// }
 
 /*media mentions*/
 .media-mentions {
@@ -93,6 +82,13 @@ export default {
     text-transform: uppercase;
     width: 100%;
   }
+  a{
+    opacity: 0.2;
+  }
+  a:hover{
+    opacity: 1;
+    transition: all 0.3s;
+  }
 
   &__img-container {
     display:-webkit-box;display:-ms-flexbox;display:flex;
@@ -101,10 +97,20 @@ export default {
     flex-wrap: wrap;
 
     img {
-      width: 20%;
       max-width: 200px;
+      padding: 10px;
     }
   }
 
 }
+
+@media screen and (max-width: 500px) {
+  .media-mentions__img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
 </style>

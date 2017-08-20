@@ -3,7 +3,7 @@
     <div class="content-container content-container--large nanome">
       <div class="nanome__info">
         <h4 class="nanome__info__title">Built by the Team at Nanome</h4>
-        <div class="nanome__info__text">
+        <div class="nanome__info__text text-color--matryx-dark-grey">
           Nanome builds intelligent virtual reality interfaces that enable scientists and engineers to collaborate, design and simulate with nanoscale precision. Our software helps advance research and development in life sciences, materials sciences, and nanoengineering by integrating a hands-on virtual reality interface with cloud computing.
         </div>
       </div>
@@ -30,7 +30,6 @@ export default {
 
 .nanome {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   color: #4A4A4A;
 }
@@ -39,7 +38,7 @@ export default {
   padding: 20px 40px 20px 0;
 
   &__title {
-    font-size: 28px;
+    font-size: 38px;
     line-height: 34px;
   }
 
@@ -59,12 +58,15 @@ export default {
 }
 
 .logo > img {
-  max-height: 175px;
+  max-height: 215px;
   max-width: 175px;
 }
 
 /*----- MEDIA QUERIES -----*/
 @media screen and (max-width: 850px) {
+  .nanome {
+    flex-wrap: wrap;
+  }
   .nanome__info {
 
     &__text {
@@ -75,7 +77,7 @@ export default {
     display:-webkit-box;display:-ms-flexbox;display:flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
     margin-top: 50px;
 

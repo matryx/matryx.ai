@@ -1,11 +1,11 @@
 <template lang="html">
-  <section :class="{ 'purple-bkg': purpleBkg, 'white': white, 'white-bkg':whiteBkg }" class="cta-banner">
+  <section :class="{ 'grey-bkg': greyBkg, 'white': white, 'white-bkg':whiteBkg, 'bkg-footer':footerBkg }" class="cta-banner">
     <div class="cta content-container content-container--large">
-      <h4 class="cta__main">
+      <h4 class="cta__main text-color--matryx-blue">
         Join the Token Sale
       </h4>
-      <h6 class="cta__desc">Enter your email address to stay updated on the token sale launch</h6>
-       <Get-Notified  :ctaLocation="ctaLocation" > 
+      <h6 :class="{ 'lighter-text':lighterText  }" class="cta__desc text-color--matryx-dark-grey">Enter your email address to stay updated on the token sale launch</h6>
+       <Get-Notified  :ctaLocation="ctaLocation" >
       </Get-Notified>
     </div>
   </section>
@@ -21,8 +21,10 @@ export default {
 
   props: {
     white: Boolean,
-    purpleBkg: Boolean,
+    greyBkg: Boolean,
     whiteBkg: Boolean,
+    footerBkg: Boolean,
+    lighterText: Boolean,
     ctaLocation: String
   }
 }
@@ -65,21 +67,40 @@ export default {
   }
 }
 
-
+.lighter-text {
+  color: #fff !important;
+  opacity: 0.9;
+}
 
 section.cta-banner.white-bkg {
-  background-image: url('../assets/images/backgrounds/ctawhite.png');
+  background-image: url('../assets/images/backgrounds/whitewave.png');
   background-size: cover;
   margin:-20px 0;
   background-position: center;
   padding: 80px 0px;
 }
 
-#cta-bottom.purple-bkg {
-  background-image: url('../assets/images/backgrounds/ctapurplebottom.png');
+#Footer {
   background-position: top;
   padding-top: 80px;
-  background-size: cover;
+  position: relative;
+  bottom: -110px;
+  padding-bottom: 60px;
+  margin-bottom: 0;
+}
+
+.bkg-footer {
+  background-image: url('../assets/images/backgrounds/bkg-footer.png');
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+
+@media screen and (max-width: 550px) {
+  #Footer {
+    bottom: -180px;
+    padding-bottom: 100px;
+  }
 }
 
 </style>
