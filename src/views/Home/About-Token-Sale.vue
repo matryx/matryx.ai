@@ -115,9 +115,14 @@ export default {
     &--horizontal,
     &--vertical {
       display:-webkit-box;display:-ms-flexbox;display:flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
     }
     &--vertical {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: column;
       flex-flow: column;
 
       &.about-container > * {
@@ -134,13 +139,20 @@ export default {
   }
   .card {
     display: -webkit-box; display: -ms-flexbox;display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
     border: 1px solid $light-purple-border;
     border-radius: 0;
     padding: 20px;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
 
     h2, p {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
       flex: 0 1 auto;
     }
 

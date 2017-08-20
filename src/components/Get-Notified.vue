@@ -79,7 +79,7 @@ export default {
       height: 40px;
       border-right: none;
       font-size: 14px;
-      width: 250px;
+      // width: 250px;
       // background-color: #fff;
       background-image: none;
       background-clip: padding-box;

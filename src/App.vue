@@ -287,6 +287,15 @@ nav {
       }
     }
   }
+  .modal-header {
+    border: none;
+    padding: 0;
+    margin-bottom: -50px;
+    z-index: 2;
+  }
+  .modal-footer {
+    display:none;
+  }
 }
 
 /*footer*/
