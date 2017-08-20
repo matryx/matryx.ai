@@ -93,37 +93,40 @@ section.above-the-fold {
 
 
 /*video modal*/
-.above-the-fold .modal-dialog {
-  max-width: 900px;
-}
-.modal-content{
-  background-color: transparent;
-  border:none;
-}
-.modal-header {
-  border-bottom: none;
-  padding:0;
-}
-.modal-body {
-  padding:0;
+.above-the-fold{
 
-  video {
-    width: 100%;
+  .modal-dialog {
+    max-width: 900px;
   }
-}
-.modal-footer {
-  display:none;
-}
-.close, .close:focus {
-  color: #fff;
-  text-shadow: 0 1px 0 #000;
-  opacity: 0.7;
-  outline: none;
-}
-.close:hover {
-  color: #fff;
-  text-shadow: 0 1px 0 #000;
-  opacity:1;
+  .modal-content{
+    background-color: transparent;
+    border:none;
+  }
+  .modal-header {
+    border-bottom: none;
+    padding:0;
+  }
+  .modal-body {
+    padding:0;
+
+    video {
+      width: 100%;
+    }
+  }
+  .modal-footer {
+    display:none;
+  }
+  .close, .close:focus {
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
+    opacity: 0.7;
+    outline: none;
+  }
+  .close:hover {
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
+    opacity:1;
+  }
 }
 
 
