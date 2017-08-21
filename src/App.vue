@@ -73,7 +73,7 @@
       <!-- Right aligned nav items -->
       <b-nav is-nav-bar class="ml-auto">
         <b-nav-item class="get-notified">
-          <button v-b-modal.getNotified class="">GET NOTIFIED</button>
+          <button v-b-modal.getNotified>GET NOTIFIED</button>
         </b-nav-item>
       </b-nav>
       </b-collapse>
