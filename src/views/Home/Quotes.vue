@@ -13,11 +13,21 @@
        <slide>
          <span class="quote__quotes">&#x275D;</span>
          <p class="quote-text">
-           People have been waiting for this both in academia and I think in industry as well. And I think specifically in the scientific genres within industries, so life sciences for example have been wanting it really well.
+           [Matryx] will allow more people to enter into the space earlier… which will have network effects, catalyze the pace of innovation in the space, and will be as important for biotech as it is for science more generally.
          </p>
          <h5 class="quote-author">
-           <span class="quote-author__name">Geoff Odel</span>
-           <span class="quote-author__company">Novartis</span>
+           <span class="quote-author__name">Benjamin Bratton PhD.</span>
+           <span class="quote-author__company">Sociologist, Architectural and design theorist, UC San Diego</span>
+         </h5>
+       </slide>
+       <slide>
+         <span class="quote__quotes">&#x275D;</span>
+         <p class="quote-text">
+           People have been waiting for this both in academia and industry. I think it’s going to disrupt some of the challenges in the life science industry and how do you bring information together. If you can imagine someone of the amazing scientists at work at these companies-- at Novartis, GSK, Pfizer, Astrozennica, whomever-- have them get together to try and solve a human health problem, as opposed to trying to do it individually…
+         </p>
+         <h5 class="quote-author">
+           <span class="quote-author__name">Geoff Odell</span>
+           <span class="quote-author__company"> Former VP of Global Operations, Novartis</span>
          </h5>
        </slide>
        <slide>
@@ -27,7 +37,7 @@
          </p>
          <h5 class="quote-author">
            <span class="quote-author__name">Allen Hsu</span>
-           <span class="quote-author__company">Sparkland Capital</span>
+           <span class="quote-author__company">Venture Capitalist, Sparkland Capital</span>
          </h5>
        </slide>
      </carousel>

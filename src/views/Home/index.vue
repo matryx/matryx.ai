@@ -5,14 +5,14 @@
     <div class="media-mentions bkg-color--white">
       <div class=" content-container content-container--large media-mentions__img-container">
         <p class="text-color--matryx-grey">Featured By</p>
-        <a class="press-logo" href="https://www.gizmodo.com.au/2017/01/you-can-do-maths-in-virtual-reality-now/" >
-          <img src="../../assets/images/press/gizmodo.png" alt="" target="_blank"></a>
-        <a class="press-logo" href="http://www.sandiegouniontribune.com/business/sd-fi-ignite-conference-20170223-story.html" >
-          <img src="../../assets/images/press/sdut-logo.png" alt="" target="_blank"></a>
-        <a class="press-logo" href="http://jacobsschool.ucsd.edu/news/news_releases/release.sfe?id=2081" >
-          <img src="../../assets/images/press/UCSD-logo.png" alt="" target="_blank"></a>
-        <a class="press-logo" href="https://singularityhub.com/2017/01/18/get-ready-to-love-math-with-this-sweet-vr-calculator/" >
-          <img src="../../assets/images/press/singularity.png" alt="" target="_blank"></a>
+        <a class="press-logo" href="https://www.gizmodo.com.au/2017/01/you-can-do-maths-in-virtual-reality-now/" target="_blank">
+          <img src="../../assets/images/press/gizmodo.png" alt=""></a>
+        <a class="press-logo" href="http://www.sandiegouniontribune.com/business/sd-fi-ignite-conference-20170223-story.html" target="_blank">
+          <img src="../../assets/images/press/sdut-logo.png" alt=""></a>
+        <a class="press-logo" href="http://jacobsschool.ucsd.edu/news/news_releases/release.sfe?id=2081" target="_blank">
+          <img src="../../assets/images/press/UCSD-logo.png" alt=""></a>
+        <a class="press-logo" href="https://singularityhub.com/2017/01/18/get-ready-to-love-math-with-this-sweet-vr-calculator/" target="_blank">
+          <img src="../../assets/images/press/singularity.png" alt=""></a>
       </div>
     </div>
 

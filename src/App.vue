@@ -13,9 +13,9 @@
         <b-nav-link href="#" class="nav-link text-color--white">
           CONTACT
         </b-nav-link>
-        <b-nav-link href="#" class="nav-link text-color--white">
+        <a href="https://blog.matryx.ai/" target="_blank"><b-nav-link class="nav-link text-color--white">
           BLOG
-        </b-nav-link>
+        </b-nav-link></a>
         <b-nav-link href="#" class="nav-link text-color--white">
           FAQ
         </b-nav-link>
@@ -37,7 +37,7 @@
           <b-nav-item target="_blank" href="https://www.facebook.com/matryxai/" class="social-icon">
             <img src="../src/assets/icons/icon-facebook.png" alt="Matryx Facebook Page">
           </b-nav-item>
-          <b-nav-item target="_blank" href="" class="social-icon">
+          <b-nav-item target="_blank" href="https://www.twitter.com/matryx_ai" class="social-icon">
             <img src="../src/assets/icons/icon-twitter.gif" alt="Matryx Twitter Page">
           </b-nav-item>
           <b-nav-item class="nav-item-language">

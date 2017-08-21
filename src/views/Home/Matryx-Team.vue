@@ -102,7 +102,8 @@ export default {
         name: 'Vincent Brunet',
         title: 'Chief Technology Officer',
         src: Vincent,
-        linkedInLink: 'https://www.linkedin.com/in/vbrunet/'
+        linkedInLink: 'https://www.linkedin.com/in/vbrunet/',
+        twitterLink: 'https://www.twitter.com/seriousbrunet'
       }, {
         name: 'Adam Simon',
         title: 'Project Manager',
