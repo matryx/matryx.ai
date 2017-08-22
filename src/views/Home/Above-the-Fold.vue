@@ -40,7 +40,6 @@ export default {
       Video
     }
   }
-
 }
 </script>
 
@@ -54,7 +53,7 @@ section.above-the-fold {
   & > .content-container {
     display:flex;
     justify-content: space-between;
-    padding: 160px 40px;
+    padding: 80px 40px 160px;
   }
 }
 
@@ -71,7 +70,7 @@ section.above-the-fold {
 
 .above-the-fold {
   border-radius: 0;
-  background-image: url('../../assets/images/backgrounds/abovethefoldbkg.png');
+  background-image: url('../../assets/images/backgrounds/abovethefoldbkg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 0;
@@ -93,41 +92,51 @@ section.above-the-fold {
 
 
 /*video modal*/
-.above-the-fold .modal-dialog {
-  max-width: 900px;
-}
-.modal-content{
-  background-color: transparent;
-  border:none;
-}
-.modal-header {
-  border-bottom: none;
-  padding:0;
-}
-.modal-body {
-  padding:0;
+.above-the-fold{
 
-  video {
-    width: 100%;
+  .modal-dialog {
+    max-width: 900px;
   }
-}
-.modal-footer {
-  display:none;
-}
-.close, .close:focus {
-  color: #fff;
-  text-shadow: 0 1px 0 #000;
-  opacity: 0.7;
-  outline: none;
-}
-.close:hover {
-  color: #fff;
-  text-shadow: 0 1px 0 #000;
-  opacity:1;
+  .modal-content{
+    background-color: transparent;
+    border:none;
+  }
+  .modal-header {
+    border-bottom: none;
+    padding:0;
+  }
+  .modal-body {
+    padding:0;
+
+    video {
+      width: 100%;
+    }
+  }
+  .modal-footer {
+    display:none;
+  }
+  .close, .close:focus {
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
+    opacity: 0.7;
+    outline: none;
+  }
+  .close:hover {
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
+    opacity:1;
+  }
 }
 
 
 #getNotified{
+  .modal-footer {
+    display:none;
+  }
+  .modal-header {
+    border-bottom: none;
+    padding:0;
+  }
   .modal-dialog{
     background-color: #fff;
     border-radius:10px;
@@ -150,15 +159,15 @@ section.above-the-fold {
     }
 
     .content-container {
-      padding: 40px;
+      padding: 0 40px 20px;
     }
 
     .cta__form__email {
-      border: 1px solid $purple;
+      border: 1px solid $matryx-dark-grey;
       border-right: none;
 
       &::placeholder {
-        color: $purple;
+        color: $matryx-dark-grey;
       }
     }
   }
@@ -178,7 +187,7 @@ section.above-the-fold {
 
 
 .grey-bkg {
-  background-image: url('../../assets/images/backgrounds/greywave.png');
+  background-image: url('../../assets/images/backgrounds/greywave.jpg');
   background-size:cover;
   color: $white;
 }
@@ -219,6 +228,12 @@ section.above-the-fold {
 }
 
 @media screen and (max-width: 500px) {
+  section.above-the-fold {
+    & > .content-container {
+      padding-top: 40px;
+    }
+  }
+
   #getNotified .modal-dialog .cta__form__email {
     border-right: 1px solid $purple;
   }

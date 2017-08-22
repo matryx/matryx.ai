@@ -102,7 +102,8 @@ export default {
         name: 'Vincent Brunet',
         title: 'Chief Technology Officer',
         src: Vincent,
-        linkedInLink: 'https://www.linkedin.com/in/vbrunet/'
+        linkedInLink: 'https://www.linkedin.com/in/vbrunet/',
+        twitterLink: 'https://www.twitter.com/seriousbrunet'
       }, {
         name: 'Adam Simon',
         title: 'Project Manager',
@@ -178,9 +179,16 @@ export default {
 @import '../../assets/css/colors';
 
 .bkg--grey-gradient {
-  background-image: url('../../assets/images/backgrounds/greygradient.png');
-  background-size:cover;
-  background-repeat: no-repeat;
+  // background-image: url('../../assets/images/backgrounds/greygradient.png');
+  // background-size:cover;
+  // background-repeat: no-repeat;
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#333c44+0,333c44+50,636a74+100 */
+  background: rgb(51,60,68); /* Old browsers */
+  background: -moz-linear-gradient(-45deg, rgba(51,60,68,1) 0%, rgba(51,60,68,1) 50%, rgba(99,106,116,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, rgba(51,60,68,1) 0%,rgba(51,60,68,1) 50%,rgba(99,106,116,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(51,60,68,1) 0%,rgba(51,60,68,1) 50%,rgba(99,106,116,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333c44', endColorstr='#636a74',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 .matryx-team__title,

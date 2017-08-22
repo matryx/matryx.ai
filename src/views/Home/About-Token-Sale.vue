@@ -27,30 +27,52 @@
         <div class="roadmap-container card-container--vertical">
           <div class="roadmap">
             <h2 class="text-color--matryx-black">ROADMAP</h2>
-            <h3 class="roadmap__year text-color--grey">2017</h3>
+            <h3 class="roadmap__year text-color--grey">2016</h3>
             <div class="roadmap__section ">
-              <div class="roadmap__section__quarter roadmap__section__quarter--past ">Q2</div>
-              <p class="roadmap__section__date roadmap__section__date--past">JUN 2017</p>
+              <div class="roadmap__section__quarter roadmap__section__quarter--past ">Q4</div>
               <div class="roadmap__section__description text-color--matryx-dark-grey">
-                <p>White Paper &#38; Token Sale Announcement</p>
-                <caption>Token Pre-Sale Launches at 10am GMT for purchases of over 150 ETH. Pre-sale period will remain open for one week from Sept. 6 to Sept 13.
-                </caption>
+                <p>Nano-One &#38; Calcflow Launch</p>
+                <caption>First STEM tools for modern VR                </caption>
               </div>
             </div>
             <h3 class="roadmap__year text-color--grey">2017</h3>
             <div class="roadmap__section ">
+              <div class="roadmap__section__quarter roadmap__section__quarter--past ">Q1</div>
+              <div class="roadmap__section__description text-color--matryx-dark-grey">
+                <p>Nano Pro Private Beta Opens</p>
+                <caption>Pharmaceutical R&#38;D pilots 
+                </caption>
+                <br/>
+              </div>
+            </div>
+            <div class="roadmap__section ">
+              <div class="roadmap__section__quarter roadmap__section__quarter--past ">Q2</div>
+              <div class="roadmap__section__description text-color--matryx-dark-grey">
+                <p>Matryx White Paper Release</p>
+                <caption>Read the white paper <a href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf">here</a> 
+                </caption>
+                <br/>
+              </div>
+            </div>
+            <div class="roadmap__section ">
               <div class="roadmap__section__quarter roadmap__section__quarter--future">Q3</div>
-              <p class="roadmap__section__date roadmap__section__date--future">SEPT 2017</p>
               <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>Token Sale Launch</p>
-                <caption>User acquisition focused primarily on Universities and academia, building small and dedicated community of users.
+                <caption>Token Pre-Sale Launches at 10am GMT for purchases of over 150 ETH. Pre-sale period will remain open for one week from Sept. 6 to Sept 13
+                </caption>
+              </div>
+            </div>
+            <div class="roadmap__section ">
+              <div class="roadmap__section__quarter roadmap__section__quarter--future">Q4</div>
+              <div class="roadmap__section__description text-color--matryx-dark-grey">
+                <p>Matryx Platform Alpha</p>
+                <caption>Upload and download parametric assets
                 </caption>
               </div>
             </div>
             <h3 class="roadmap__year text-color--grey">2018</h3>
             <div class="roadmap__section ">
               <div class="roadmap__section__quarter roadmap__section__quarter--future">Q1</div>
-              <p class="roadmap__section__date roadmap__section__date--future">MAR 2018</p>
               <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>Marketplace Alpha Testnet</p>
                 <caption>Working MVP for public use. Expand focus to research and model a variety of attribution solutions.
@@ -59,16 +81,14 @@
             </div>
             <div class="roadmap__section ">
               <div class="roadmap__section__quarter roadmap__section__quarter--future">Q2</div>
-              <p class="roadmap__section__date roadmap__section__date--future">JUN 2018</p>
               <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>Marketplace Beta Testnet</p>
-                <caption>Centralized tests of implemented systems. Create decentralized reputation board, identifying users and their contributions.
+                <caption>Centralized tests of implemented systems. Create reputation board, identifying users and their contributions.
                 </caption>
               </div>
             </div>
             <div class="roadmap__section ">
-              <div class="roadmap__section__quarter roadmap__section__quarter--future">Q4</div>
-              <p class="roadmap__section__date roadmap__section__date--future">NOV 2018</p>
+              <div class="roadmap__section__quarter roadmap__section__quarter--future">Q3</div>
               <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>Marketplace Beta Mainnet</p>
                 <caption>Expand user base to tens of thousands. Cultivate economy of practical/ less academic bounties.
@@ -78,20 +98,18 @@
             <h3 class="roadmap__year text-color--grey">2019</h3>
             <div class="roadmap__section ">
               <div class="roadmap__section__quarter roadmap__section__quarter--future">Q2</div>
-              <p class="roadmap__section__date roadmap__section__date--future">JUN 2019</p>
               <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>Marketplace Public Launch</p>
-                <caption>Begin to decentralize storage solutions and narrow down attribution + reputation systems.
+                <caption>Begin to integrate alt-chain decentralized storage solutions and narrow down attribution + reputation systems.
                 </caption>
               </div>
             </div>
             <h3 class="roadmap__year text-color--grey">2020</h3>
             <div class="roadmap__section ">
               <div class="roadmap__section__quarter roadmap__section__quarter--future">Q4</div>
-              <p class="roadmap__section__date roadmap__section__date--future">NOV 2020</p>
               <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>Decentralized Reputation &#38; Storage</p>
-                <caption>Begin to decentralize storage solutions and narrow down attribution + reputation systems.
+                <caption>Continue steps towards a fully decentralized platform and refine token economics for mass adoption.
                 </caption>
               </div>
             </div>
@@ -184,6 +202,7 @@ export default {
       position:relative;
       border-left: 1px solid $classic-grey;
       display:-webkit-box;display:-ms-flexbox;display:flex;
+      padding-left: 25px;
 
       &:last-child {
         border-left: none;

@@ -6,8 +6,8 @@
     <defs></defs>
     <g id="✅️---LATEST" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="beta_reduxSüp3r_J" transform="translate(-629.000000, -4720.000000)">
-            <g id="INCENTIVIZED_SECTION" transform="translate(0.000000, 4197.000000)">
-                <g id="BOUNTY_DRAWING" transform="translate(627.000000, 522.000000)">
+            <g id="INCENTIVIZED_SECTION" transform="translate(-11.000000, 4189.000000)">
+                <g id="BOUNTY_DRAWING" transform="translate(638.000000, 530.000000)">
                     <g id="Saucer" transform="translate(14.541284, 55.287462)" stroke="#8C9EAE">
                         <path d="M40.0370031,37.6134557 C36.8379205,38.0981651 32.5724771,37.32263 28.2100917,35.383792 C23.8477064,33.4449541 20.4547401,30.6336391 18.612844,27.8223242" id="Stroke-1"></path>
                         <path d="M55.6446483,17.3525994 C64.5633028,23.5568807 69.6042813,29.858104 68.053211,33.6388379 C65.6296636,39.3584098 49.0525994,37.32263 30.9244648,28.9856269 C12.7963303,20.6486239 4.4408921e-16,9.30642202 2.4235474,3.58685015 C3.97461774,-0.193883792 11.8269113,-0.581651376 22.1027523,2.03577982" id="Stroke-3"></path>
@@ -87,8 +87,9 @@
                     <path d="M285.978593,209.909786 L337.357798,254.503058" id="Line-2-Copy-3" stroke="#979797" stroke-linecap="square" transform="translate(311.668196, 232.206422) scale(1, -1) translate(-311.668196, -232.206422) "></path>
                     <circle id="Oval-3-Copy-4" fill="#0086CB" cx="285.493884" cy="163.862385" r="2.90825688"></circle>
                     <circle id="Oval-3-Copy-3" fill="#0086CB" cx="285.493884" cy="254.987768" r="2.90825688"></circle>
+                    <path d="M337.908257,212.816514 C339.514443,212.816514 340.816514,211.362385 340.816514,209.908257 C340.816514,208.454128 339.514443,207 337.908257,207 C336.302071,207 335,208.302071 335,209.908257 C335,211.514443 336.302071,212.816514 337.908257,212.816514 Z" id="Oval-3" fill="#D3342B"></path>
                     <g id="Group-16" transform="translate(242.354740, 97.941896)">
-                        <g id="Group-14" fill="#4EB1DE">
+                        <g id="Group-14" fill="#D3342B">
                             <g id="Group-13">
                                 <circle id="Oval-2" cx="15.314757" cy="16.1793739" r="15.314757"></circle>
                             </g>
@@ -101,7 +102,7 @@
                     <g id="Group-16-Copy" transform="translate(247.544343, 107.495413)">
                         <g id="Group-14" transform="translate(0.000000, -0.000000)">
                             <g id="Group-13">
-                                <circle id="Oval-2" fill="#4EB1DE" cx="194.314757" cy="84.1793739" r="15.314757"></circle>
+                                <circle id="Oval-2" fill="#D3342B" cx="194.314757" cy="84.1793739" r="15.314757"></circle>
                                 <text id="MTX" font-family="Helvetica" font-size="10" font-weight="normal" fill="#FFFFFF">
                                     <tspan x="184" y="88">MTX</tspan>
                                 </text>

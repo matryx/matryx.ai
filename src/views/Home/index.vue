@@ -1,19 +1,18 @@
 <template>
   <div class="body-content">
-    <!-- <Navbar></Navbar> -->
-    <Above-the-Fold></Above-the-Fold>
+    <Above-the-Fold v-on:openThankYou="showThankYouModal"></Above-the-Fold>
 
     <div class="media-mentions bkg-color--white">
       <div class=" content-container content-container--large media-mentions__img-container">
         <p class="text-color--matryx-grey">Featured By</p>
-        <a class="press-logo" href="https://www.gizmodo.com.au/2017/01/you-can-do-maths-in-virtual-reality-now/" >
-          <img src="../../assets/images/press/gizmodo.png" alt="" target="_blank"></a>
-        <a class="press-logo" href="http://www.sandiegouniontribune.com/business/sd-fi-ignite-conference-20170223-story.html" >
-          <img src="../../assets/images/press/sdut-logo.png" alt="" target="_blank"></a>
-        <a class="press-logo" href="http://jacobsschool.ucsd.edu/news/news_releases/release.sfe?id=2081" >
-          <img src="../../assets/images/press/UCSD-logo.png" alt="" target="_blank"></a>
-        <a class="press-logo" href="https://singularityhub.com/2017/01/18/get-ready-to-love-math-with-this-sweet-vr-calculator/" >
-          <img src="../../assets/images/press/singularity.png" alt="" target="_blank"></a>
+        <a class="press-logo" href="https://www.gizmodo.com.au/2017/01/you-can-do-maths-in-virtual-reality-now/" target="_blank">
+          <img src="../../assets/images/press/gizmodo.png" alt=""></a>
+        <a class="press-logo" href="http://www.sandiegouniontribune.com/business/sd-fi-ignite-conference-20170223-story.html" target="_blank">
+          <img src="../../assets/images/press/sdut-logo.png" alt=""></a>
+        <a class="press-logo" href="http://jacobsschool.ucsd.edu/news/news_releases/release.sfe?id=2081" target="_blank">
+          <img src="../../assets/images/press/UCSD-logo.png" alt=""></a>
+        <a class="press-logo" href="https://singularityhub.com/2017/01/18/get-ready-to-love-math-with-this-sweet-vr-calculator/" target="_blank">
+          <img src="../../assets/images/press/singularity.png" alt=""></a>
       </div>
     </div>
 
@@ -25,7 +24,7 @@
     <Quotes></Quotes>
     <Nanome-Info></Nanome-Info>
     <Bounty-System></Bounty-System>
-    <CTA-Banner :whiteBkg="true" cta-location="Bottom-Middle" ></CTA-Banner>
+    <CTA-Banner :whiteBkg="true" cta-location="Bottom-Middle"></CTA-Banner>
     <Matryx-Team></Matryx-Team>
     <News-Events></News-Events>
     <CTA-Banner :lighterText="true" :footerBkg="true" cta-location="Bottom" id="Footer"></CTA-Banner>
@@ -39,7 +38,6 @@ import BountySystem from './Bounty-System'
 import CompanyOverview from './Company-Overview'
 import MatryxTeam from './Matryx-Team'
 import NanomeInfo from './Nanome-Info'
-import Navbar from './Navbar'
 import NewsEvents from './News-Events'
 import Quotes from './Quotes'
 import CTABanner from '../../components/CTA-Banner'
@@ -58,7 +56,6 @@ export default {
     CompanyOverview,
     MatryxTeam,
     NanomeInfo,
-    Navbar,
     NewsEvents,
     CTABanner,
     Quotes
@@ -71,6 +68,11 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../../assets/css/colors';
+
+.warn {
+  color: $matryx-red;
+}
 
 /*media mentions*/
 .media-mentions {
