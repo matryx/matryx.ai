@@ -1,7 +1,7 @@
 <template>
 <div id="app" >
   <div id="sub-nav" class="bkg-color--dark-blue-gradient">
-    <b-navbar toggleable toggle-breakpoint="sm" class="">
+    <!-- <b-navbar toggleable toggle-breakpoint="sm" class="">
       <b-nav-toggle target="sub-nav--toggle"></b-nav-toggle>
       <b-navbar-brand href="#">
         <router-link to="/"><img src="../src/assets/images/Matryx-Mark-White.png" alt=""></router-link>
@@ -10,24 +10,24 @@
       <b-collapse is-nav id="sub-nav--toggle">
 
       <b-nav is-nav-bar>
-        <b-nav-link href="#" class="nav-link text-color--white">
+        <b-nav-item href="#" class="nav-link text-color--white" style="color: #FFF">
           CONTACT
-        </b-nav-link>
-        <a href="https://blog.matryx.ai/" target="_blank"><b-nav-link class="nav-link text-color--white">
+        </b-nav-item>
+        <b-nav-item href="https://blog.matryx.ai/" target="_blank" class="nav-link text-color--white" style="color: #FFF">
           BLOG
-        </b-nav-link></a>
-        <b-nav-link href="#" class="nav-link text-color--white">
+        </b-nav-item>
+        <b-nav-item href="#" class="nav-link text-color--white" style="color: #FFF">
           FAQ
-        </b-nav-link>
-        <b-nav-link href="#" class="nav-link text-color--white">
+        </b-nav-item>
+        <b-nav-item href="#" class="nav-link text-color--white" style="color: #FFF">
           PRESS
-        </b-nav-link>
-        <b-nav-link href="#" class="nav-link text-color--white">
+        </b-nav-item>
+        <b-nav-item href="#" class="nav-link text-color--white" style="color: #FFF">
           LEGAL
-        </b-nav-link>
+        </b-nav-item>
       </b-nav>
 
-        <!-- Right aligned nav items -->
+
         <b-nav is-nav-bar class="ml-auto">
           <b-nav-item target="_blank"
             href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ"
@@ -51,7 +51,62 @@
           </b-nav-item>
         </b-nav>
       </b-collapse>
-    </b-navbar>
+    </b-navbar> -->
+    <nav class="navbar navbar-light navbar-toggleable-sm">
+      <button type="button" aria-label="Toggle navigation" aria-controls="sub-nav--toggle" aria-expanded="false" class="navbar-toggler navbar-toggler-right">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a aria-disabled="false" href="#" target="_self" class="navbar-brand">
+        <a href="/" class="router-link-exact-active router-link-active">
+          <img src="./assets/images/Matryx-Mark-White.png" alt="">
+        </a>
+      </a>
+      <div id="sub-nav--toggle" class="navbar-collapse collapse" style="display: none;">
+        <ul class="nav navbar-nav">
+          <li class="nav-item nav-link text-color--white">
+            <a aria-disabled="false" href="#" target="_self" class="nav-link">CONTACT</a>
+          </li>
+          <li class="nav-item nav-link text-color--white">
+            <a aria-disabled="false" href="https://blog.matryx.ai/" target="_self" class="nav-link">BLOG</a>
+          </li>
+          <li class="nav-item nav-link text-color--white">
+            <a aria-disabled="false" href="#" target="_self" class="nav-link">FAQ</a>
+          </li>
+          <li class="nav-item nav-link text-color--white">
+            <a aria-disabled="false" href="#" target="_self" class="nav-link">PRESS</a>
+          </li>
+          <li class="nav-item nav-link text-color--white">
+            <a aria-disabled="false" href="#" target="_self" class="nav-link">LEGAL</a>
+          </li>
+        </ul>
+        <ul class="ml-auto nav navbar-nav">
+          <li class="nav-item social-icon">
+            <a aria-disabled="false" href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ" target="_blank" rel="noopener" class="nav-link">
+              <img src="./assets/icons/icon-slack.svg" alt="Matryx Slack">
+            </a>
+          </li>
+          <li class="nav-item social-icon">
+            <a aria-disabled="false" href="https://www.twitter.com/matryx_ai" target="_blank" rel="noopener" class="nav-link">
+              <img src="./assets/icons/icon-twitter.gif" alt="Matryx Twitter Page">
+            </a>
+          </li>
+          <li class="nav-item social-icon">
+            <a aria-disabled="false" href="https://www.facebook.com/matryxai/" target="_blank" rel="noopener" class="nav-link">
+              <img src="./assets/icons/icon-facebook.png" alt="Matryx Facebook Page">
+            </a>
+          </li>
+          <li class="nav-item nav-item-language">
+            <b-dropdown id="language" text="Language" class="language">
+              <b-dropdown-item>English</b-dropdown-item>
+              <b-dropdown-item>Chinese</b-dropdown-item>
+              <b-dropdown-item>Japanese</b-dropdown-item>
+              <b-dropdown-item>Russian</b-dropdown-item>
+              <b-dropdown-item>Spanish</b-dropdown-item>
+            </b-dropdown>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </div>
   <div id="nav" class="bkg-color--white " style="top: 0; position: -webkit-sticky;
     position: sticky;">
@@ -63,12 +118,35 @@
       <b-collapse is-nav id="nav-toggle">
 
       <b-nav is-nav-bar>
-        <a class="nav-link text-color--matryx-grey" target="_blank" href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf">
-          Whitepaper
-        </a>
-        <b-nav-link class="nav-link text-color--matryx-grey" href="#">WHAT IS MATRYX</b-nav-link>
-         <b-nav-link class="nav-link text-color--matryx-grey" href="#">ABOUT</b-nav-link>
-      </b-nav>
+       <b-nav-item class="nav-link text-color--matryx-grey" target="_blank" href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf">WHITEPAPER</b-nav-item>
+       <b-nav-item class="nav-link text-color--matryx-grey" href="#">WHAT IS MATRYX</b-nav-item>
+       <b-nav-item class="nav-link text-color--matryx-grey" href="#">ABOUT</b-nav-item>
+       <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">CONTACT</b-nav-item>
+       <b-nav-item href="https://blog.matryx.ai/" target="_blank" class="nav-link text-color--matryx-grey nav-link--mobile-only">BLOG</b-nav-item>
+       <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">FAQ</b-nav-item>
+       <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">PRESS</b-nav-item>
+       <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">LEGAL</b-nav-item>
+       <b-nav-item target="_blank"
+         href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ"
+         class="social-icon nav-link--mobile-only bkg-color--matryx-grey">
+         <img src="../src/assets/icons/slack.svg" alt="Matryx Slack">
+       </b-nav-item>
+       <b-nav-item target="_blank" href="https://www.facebook.com/matryxai/" class="social-icon nav-link--mobile-only bkg-color--matryx-grey">
+         <img src="../src/assets/icons/icon-facebook.png" alt="Matryx Facebook Page">
+       </b-nav-item>
+       <b-nav-item target="_blank" href="https://www.twitter.com/matryx_ai" class="social-icon nav-link--mobile-only bkg-color--matryx-grey">
+         <img src="../src/assets/icons/icon-twitter.gif" alt="Matryx Twitter Page">
+       </b-nav-item>
+       <b-nav-item class="nav-item-language nav-link--mobile-only">
+         <b-dropdown id="language" text="Language" class="language">
+           <b-dropdown-item>English</b-dropdown-item>
+           <b-dropdown-item>Chinese</b-dropdown-item>
+           <b-dropdown-item>Japanese</b-dropdown-item>
+           <b-dropdown-item>Russian</b-dropdown-item>
+           <b-dropdown-item>Spanish</b-dropdown-item>
+         </b-dropdown>
+       </b-nav-item>
+     </b-nav>
 
       <!-- Right aligned nav items -->
       <b-nav is-nav-bar class="ml-auto">
@@ -80,10 +158,22 @@
     </b-navbar>
   </div>
 
-
   <b-modal id="getNotified" >
-    <CTABanner cta-location="Header"></CTABanner>
+    <CTABanner cta-location="Header" v-on:subscriptionSent="showSuccessModule"></CTABanner>
   </b-modal>
+
+  <div class="success-modal--container" role="document"  v-show="successModuleOpen">
+    <div class="success-modal--body">
+      <h2>Thank you for subscribing. </h2>
+      <p>Please enter your intended purchasing amount:</p>
+      <label for="amount1"></label><input id="amount1" type="radio" value="1">
+      <label for="amount2"></label><input id="amount2" type="radio" value="2">
+      <label for="amount3"></label><input id="amount3" type="radio" value="3">
+      <label for="amount4"></label><input id="amount4" type="radio" value="4">
+      <label for="amount5"></label><input id="amount5" type="radio" value="5">
+      <label for="amount6"></label><input id="amount6" type="radio" value="6">
+    </div>
+</div>
 
   <router-view></router-view>
 
@@ -110,13 +200,28 @@ import CTABanner from './components/CTA-Banner'
 
 import VueSticky from 'vue-sticky' // Es6 module
 
+jQuery(document).ready(function () {
+  jQuery('.spinner-container').appendTo('body')
+})
+
 export default {
   name: 'app',
+  data: function () {
+    return {
+      successModuleOpen: false
+    }
+  },
   components: {
     CTABanner
   },
   directives: {
     'sticky': VueSticky
+  },
+  methods: {
+    showSuccessModule: function () {
+      console.log('called in app.vue')
+      this.successModuleOpen = true
+    }
   }
 }
 </script>
@@ -134,27 +239,64 @@ export default {
     padding: 0 10px;
     background-color: transparent;
 
-    .nav-link {
-      color: $white;
+    .text-color--white > .nav-link {
+      color: #FFF !important;
+    }
+
+    .nav-link{
+      color: $white !important;
+      border-radius: 0;
+      transition: background-color 0s;
+
+      &:hover {
+        background-color: $matryx-blue;
+        color: $matryx-dark-grey;
+      }
 
       .btn-group > .btn:first-child {
+        margin: 10px;
+        background-color: transparent;
+        border:1px solid #FFF;
+        color:#FFF;
+
+        &:hover, &:active, &:focus {
+          background-color:#FFF;
+          color: $matryx-dark-grey;
+        }
+      }
+    }
+    .social-icon .nav-link:hover {
+      background-color: transparent;
+    }
+    .nav-item-language .nav-link {
+      &:hover {
         background-color: transparent;
       }
     }
   }
 }
+
+
+
 .navbar .nav-item.nav-item-language {
+  &:hover {
+    background-color:transparent;
+  }
   .nav-link {
     padding: 0;
 
     button {
-      display:none;
+      //display:none;
     }
   }
 }
 
 /*language*/
 /*#language {*/
+#language {
+  padding: 10px 0;
+  margin: 0 0 0 10px;
+}
   button#language__BV_button_.btn.btn-secondary.dropdown-toggle {
     background-color:none !important;
     color:#fff !important;
@@ -180,6 +322,15 @@ export default {
   width: 100%;
   z-index: 2;
   padding: 0 10px;
+
+  .navbar.navbar-light .nav-link {
+    line-height: 50px;
+  }
+
+  .navbar-toggleable-sm .navbar-nav .nav-link {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
 }
 nav {
   padding: 0;
@@ -190,7 +341,6 @@ nav {
 .navbar.navbar-light {
   width: 100%;
   background-color: $white;
-  /*z-index:1000;*/
 
   .content-container--large {
     width: 100%;
@@ -213,27 +363,34 @@ nav {
   }
 
   .social-icon {
-    display: flex;
-    justify-content: center;
     background-color: transparent;
-    height: 40px;
+    height: 60px;
     width: 40px;
-    line-height: 40px;
+    margin: 0;
+    padding: 10px 0px;
+
+    a {
+      line-height: 30px;
+    }
+  }
+  .navbar-toggleable-sm .navbar-nav .nav-link {
+    padding-right:0 !important;
+    padding-left: 0 !important;
+    padding-top: 0 !important;
   }
   .nav-link{
     transition: all 0.3s;
-    padding: 10px 10px 0;
-    // margin: 0 10px;
+    padding: 5px 10px;
     border-radius: 5px;
     text-transform: uppercase;
-    // color: $white;
     line-height: 40px;
 
     &:hover {
       cursor: pointer;
-      /*color: $white;*/
-      /*background-color:$purple;*/
-      /*text-decoration: underline;*/
+    }
+
+    &.text-color--white a.nav-link{
+      color: #FFF !important;
     }
   }
 }
@@ -244,6 +401,11 @@ nav {
   background-color: #fff;
   opacity: 0.9;
 }
+
+.nav-link--mobile-only {
+  display:none;
+}
+
 
 /*get notified button and modal*/
 .navbar.navbar-light .get-notified {
@@ -276,6 +438,9 @@ nav {
 
 /*had to put some css for this modal inside above-the-fold file
 **because the modal css in above the fold is overriding this file's modal css*/
+.nav-item.get-notified {
+  line-height: 60px;
+}
 #getNotified{
   .modal-dialog{
     max-width:100% ;
@@ -334,14 +499,29 @@ footer {
 
 /*----- MEDIA QUERIES -----*/
 @media screen and (max-width: 991px) {
+
   .navbar-nav {
     align-items: flex-start;
   }
   .navbar.navbar-light .get-notified {
     margin-right: 0px;
   }
+
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 767px) {
+  #sub-nav {
+    display:none;
+  }
+  #nav {
+    padding: 10px;
+  }
+  #nav .navbar.navbar-light .nav-link {
+    line-height: 15px;
+  }
+  .nav-link--mobile-only {
+    display:block;
+  }
+
   footer .footer__social {
     position:relative;
     position: relative;
