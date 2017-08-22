@@ -40,7 +40,6 @@ export default {
       Video
     }
   }
-
 }
 </script>
 
@@ -54,7 +53,7 @@ section.above-the-fold {
   & > .content-container {
     display:flex;
     justify-content: space-between;
-    padding: 160px 40px;
+    padding: 80px 40px 160px;
   }
 }
 
@@ -229,6 +228,12 @@ section.above-the-fold {
 }
 
 @media screen and (max-width: 500px) {
+  section.above-the-fold {
+    & > .content-container {
+      padding-top: 40px;
+    }
+  }
+
   #getNotified .modal-dialog .cta__form__email {
     border-right: 1px solid $purple;
   }

@@ -17,6 +17,26 @@
         Success!
       </button> -->
     </b-form>
+    <p class="warn" v-show="showEmailWarning">Please enter a valid email address</p>
+
+    <div class="spinner-container" v-show="showSpinner">
+      <div class="spinner" >
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
+    </div>
+
+    <div
+        class="success-modal--overlay"
+        id="success-modal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+        v-show="openSuccessModal"
+    >
+
+  </div>
 
   </section>
 </template>
@@ -72,27 +92,48 @@ export default {
   data () {
     return {
       email: '',
-      success: false
+      success: false,
+      openSuccessModal: false,
+      showSpinner: false,
+      showEmailWarning: false
     }
   },
 
   methods: {
     getNotified () {
-      console.log('hello', this.ctaLocation, this.email)
-      console.log(getUTMS(this.email))
-      const traits = getUTMS(this.email)
-      if (this.email) {
-        window.analytics.identify(this.email, traits)
-        window.analytics.track(`CTA ${this.ctaLocation} Click`, {
-          category: 'Website',
-          label: 'lp-cta'
-        })
+      if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(this.email)) {
+        this.showEmailWarning = false
+        this.showSpinner = true
+        // console.log('hello', this.ctaLocation, this.email)
+        // console.log(getUTMS(this.email))
+        const traits = getUTMS(this.email)
+        if (this.email) {
+          window.analytics.identify(this.email, traits)
+          window.analytics.track(`CTA ${this.ctaLocation} Click`, {
+            category: 'Website',
+            label: 'lp-cta'
+          })
 
-        this.email = ''
-        this.success = true
+          this.email = ''
+          this.success = true
+          setTimeout(() => {
+            this.success = false
+          }, 1000)
+        }
+
+        // if (this.ctaLocation === 'Header') {
+        // this.openSuccess = true;
+        // console.log('clicked on get notified button')
+        // console.log('after emit')
+        // }
+
         setTimeout(() => {
-          this.success = false
-        }, 3000)
+          this.showSpinner = false
+          this.$emit('subscriptionSent')
+          this.openSuccessModal = true
+        }, 2000)
+      } else {
+        this.showEmailWarning = true
       }
     }
   }
@@ -190,6 +231,61 @@ export default {
   .purple-btn {
     border: none;
   }
+
+
+  /* SPINNER */
+  .spinner-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    z-index: 9999;
+    background-color: rgba(0,0,0,0.5)
+  }
+
+  .spinner {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 45vh;
+  }
+
+  .double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #FFF;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+  }
+
+  .double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+
+  @-webkit-keyframes sk-bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+  }
+
+  @keyframes sk-bounce {
+    0%, 100% {
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    } 50% {
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+  }
+
 
 /*----- MEDIA QUERIES -----*/
 @media screen and (max-width: 500px) {
