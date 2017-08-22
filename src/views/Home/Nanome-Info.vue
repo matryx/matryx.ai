@@ -14,6 +14,7 @@
         <div class="nanome__logos__nanoone logo">
           <img src="../../assets/images/nanoone.png" alt="Nano One">
         </div>
+        <p class="text-align-center">Available on <a href="http://store.steampowered.com/app/493430/nanoone/" target="_blank">Steam</a> and <a href="http://calcflow.io/" target="_blank">Oculus</a></p>
       </div>
     </div>
   </section>
