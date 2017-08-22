@@ -40,7 +40,7 @@
               <div class="roadmap__section__quarter roadmap__section__quarter--past ">Q1</div>
               <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>Nano Pro Private Beta Opens</p>
-                <caption>Pharmaceutical R&#38;D pilots 
+                <caption>Pharmaceutical R&#38;D pilots
                 </caption>
                 <br/>
               </div>
@@ -49,7 +49,7 @@
               <div class="roadmap__section__quarter roadmap__section__quarter--past ">Q2</div>
               <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>Matryx White Paper Release</p>
-                <caption>Read the white paper <a href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf">here</a> 
+                <caption>Read the white paper <a href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf">here</a>
                 </caption>
                 <br/>
               </div>
@@ -130,21 +130,19 @@ export default {
 <style lang="scss" scoped>
 @import '../../assets/css/colors';
   .card-container {
-    &--horizontal,
-    &--vertical {
+    &--horizontal{
       display:-webkit-box;display:-ms-flexbox;display:flex;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
     }
     &--vertical {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-      flex-flow: column;
+      .card {
+        display:block;
+      }
 
       &.about-container > * {
-        height: calc(33.3333% - 10px);
+        height: calc(33.3333% - 20px);
       }
     }
     &--horizontal {
@@ -156,17 +154,10 @@ export default {
     }
   }
   .card {
-    display: -webkit-box; display: -ms-flexbox;display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: column;
-    flex-flow: column;
     border: 1px solid $light-purple-border;
     border-radius: 0;
     padding: 20px;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+    margin-bottom: 20px;
 
     h2, p {
       -webkit-box-flex: 0;

@@ -15,8 +15,8 @@
         no-close-on-esc
         no-close-on-backdrop
       >
-        <div id="thankYouInBody">
-          <h2>Thank you for subscribing</h2>
+        <div id="thank-you--body">
+          <h2 class="text-color--matryx-blue">Thank you for subscribing</h2>
           <p>Please enter your intended purchasing amount:</p>
           <p v-show="noIntendedAmount" class="warn">Please select a value</p>
 
