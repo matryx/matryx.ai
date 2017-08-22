@@ -1,6 +1,6 @@
 <template>
   <div class="body-content">
-    <Above-the-Fold></Above-the-Fold>
+    <Above-the-Fold v-on:openThankYou="showThankYouModal"></Above-the-Fold>
 
     <div class="media-mentions bkg-color--white">
       <div class=" content-container content-container--large media-mentions__img-container">
@@ -24,7 +24,7 @@
     <Quotes></Quotes>
     <Nanome-Info></Nanome-Info>
     <Bounty-System></Bounty-System>
-    <CTA-Banner :whiteBkg="true" cta-location="Bottom-Middle" ></CTA-Banner>
+    <CTA-Banner :whiteBkg="true" cta-location="Bottom-Middle"></CTA-Banner>
     <Matryx-Team></Matryx-Team>
     <News-Events></News-Events>
     <CTA-Banner :lighterText="true" :footerBkg="true" cta-location="Bottom" id="Footer"></CTA-Banner>
@@ -68,6 +68,11 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../../assets/css/colors';
+
+.warn {
+  color: $matryx-red;
+}
 
 /*media mentions*/
 .media-mentions {

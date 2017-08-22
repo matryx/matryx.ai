@@ -17,6 +17,8 @@
         Success!
       </button> -->
     </b-form>
+    <p class="warn" v-show="showEmailWarning">Please enter a valid email address</p>
+
     <div class="spinner-container" v-show="showSpinner">
       <div class="spinner" >
         <div class="double-bounce1"></div>
@@ -92,41 +94,47 @@ export default {
       email: '',
       success: false,
       openSuccessModal: false,
-      showSpinner: false
+      showSpinner: false,
+      showEmailWarning: false
     }
   },
 
   methods: {
     getNotified () {
-      this.showSpinner = true
-      // console.log('hello', this.ctaLocation, this.email)
-      // console.log(getUTMS(this.email))
-      const traits = getUTMS(this.email)
-      if (this.email) {
-        window.analytics.identify(this.email, traits)
-        window.analytics.track(`CTA ${this.ctaLocation} Click`, {
-          category: 'Website',
-          label: 'lp-cta'
-        })
+      if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(this.email)) {
+        this.showEmailWarning = false
+        this.showSpinner = true
+        // console.log('hello', this.ctaLocation, this.email)
+        // console.log(getUTMS(this.email))
+        const traits = getUTMS(this.email)
+        if (this.email) {
+          window.analytics.identify(this.email, traits)
+          window.analytics.track(`CTA ${this.ctaLocation} Click`, {
+            category: 'Website',
+            label: 'lp-cta'
+          })
 
-        this.email = ''
-        this.success = true
-        setTimeout(() => {
-          this.success = false
-        }, 1000)
-      }
+          this.email = ''
+          this.success = true
+          setTimeout(() => {
+            this.success = false
+          }, 1000)
+        }
 
-      if (this.ctaLocation === 'Header') {
+        // if (this.ctaLocation === 'Header') {
         // this.openSuccess = true;
-        // console.log('clicked on header button')
-        this.$emit('subscriptionSent')
+        // console.log('clicked on get notified button')
         // console.log('after emit')
-      }
+        // }
 
-      setTimeout(() => {
-        this.showSpinner = false
-        this.openSuccessModal = true
-      }, 2000)
+        setTimeout(() => {
+          this.showSpinner = false
+          this.$emit('subscriptionSent')
+          this.openSuccessModal = true
+        }, 2000)
+      } else {
+        this.showEmailWarning = true
+      }
     }
   }
 }

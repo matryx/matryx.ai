@@ -158,11 +158,29 @@
     </b-navbar>
   </div>
 
-  <b-modal id="getNotified" v-model="getNotifiedModal"  no-close-on-esc no-close-on-backdrop>
-    <CTABanner cta-location="Header" v-on:sentViaRoot="root" v-on:openThankYou="showSuccessModal" v-show="!successModalOpen"></CTABanner>
-    <div id="thankYou" v-show="successModalOpen">
+
+<!--
+BARBARA:
+All clicks on <Get-Notified> component should open the thankYouModal modal after a 2 second animation I already added.
+When clicking on the <Get-Notified> component in the getNotifiedModal modal below it should close by calling this.getNotifiedModal = !this.getNotifiedModal
+and then it should open the thankYouModal modal, again after the 2 second animation
+I think that's it.
+I'm working on the styling and email validation
+ -->
+  <b-modal id="getNotified" v-model="showGetNotifiedModal"  no-close-on-esc no-close-on-backdrop >
+    <CTABanner cta-location="Header"></CTABanner>
+  </b-modal>
+
+  <b-modal id="thankYouModal"
+    v-model="showThankYouModal"
+    hide-header
+    hide-footer
+    no-close-on-esc
+    no-close-on-backdrop >
+    <div id="thankYouInBody" >
       <h2>Thank you for subscribing. </h2>
       <p>Please enter your intended purchasing amount:</p>
+      <p v-show="noIntendedAmount" class="warn">Please select a value</p>
       <form>
         <input id="amount1" name="intendedAmount" type="radio" value="1" v-model="intendedAmount">1<br>
         <input id="amount2" name="intendedAmount" type="radio" value="2" v-model="intendedAmount">2<br>
@@ -174,23 +192,6 @@
       </form>
     </div>
   </b-modal>
-
-  <!-- <b-modal id="successModal" no-close-on-esc no-close-on-backdrop >
-    <CTABanner cta-location="Header" v-on:subscriptionSent="showSuccessModule"></CTABanner>
-  </b-modal>
-
-  <div class="success-modal--container" role="document"  v-show="successModuleOpen">
-    <div class="success-modal--body">
-      <h2>Thank you for subscribing. </h2>
-      <p>Please enter your intended purchasing amount:</p>
-      <label for="amount1"></label><input id="amount1" type="radio" value="1">
-      <label for="amount2"></label><input id="amount2" type="radio" value="2">
-      <label for="amount3"></label><input id="amount3" type="radio" value="3">
-      <label for="amount4"></label><input id="amount4" type="radio" value="4">
-      <label for="amount5"></label><input id="amount5" type="radio" value="5">
-      <label for="amount6"></label><input id="amount6" type="radio" value="6">
-    </div>
-</div> -->
 
   <router-view></router-view>
 
@@ -225,9 +226,9 @@ export default {
   name: 'app',
   data: function () {
     return {
-      successModalOpen: false,
       intendedAmount: 'No Amount Selected',
-      getNotifiedModal: false
+      showThankYouModal: false,
+      showGetNotifiedModal: false
     }
   },
   components: {
@@ -237,16 +238,13 @@ export default {
     'sticky': VueSticky
   },
   methods: {
-    showSuccessModal: function () {
-      console.log('called in app.vue')
-      setTimeout(() => {
-        this.successModalOpen = true
-      }, 2000)
-    },
     submitIntendedAmount: function () {
       console.log('Intended Amount: ', this.intendedAmount)
-      // this.$root.$emit('hide::modal', 'getNotifiedModal')
-      this.getNotifiedModal = !this.getNotifiedModal
+      if (this.intendedAmount === 0) {
+        this.noIntendedAmount = true
+      } else {
+        this.showThankYouModal = !this.showThankYouModal
+      }
     }
   }
 }
@@ -391,7 +389,7 @@ nav {
   .social-icon {
     background-color: transparent;
     height: 60px;
-    width: 40px;
+    width: 60px;
     margin: 0;
     padding: 10px 0px;
 
@@ -487,6 +485,10 @@ nav {
   .modal-footer {
     display:none;
   }
+}
+
+.warn {
+  color: $matryx-red;
 }
 
 /*footer*/

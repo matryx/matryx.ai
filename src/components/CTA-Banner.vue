@@ -5,7 +5,7 @@
         Join the Token Sale
       </h4>
       <h6 :class="{ 'lighter-text':lighterText  }" class="cta__desc text-color--matryx-dark-grey">Enter your email address to stay updated on the token sale launch</h6>
-      <Get-Notified  :ctaLocation="ctaLocation" v-on:subscriptionSent="openThankYou">
+      <Get-Notified  :ctaLocation="ctaLocation">
       </Get-Notified>
     </div>
   </section>
@@ -26,12 +26,6 @@ export default {
     footerBkg: Boolean,
     lighterText: Boolean,
     ctaLocation: String
-  },
-  methods: {
-    openThankYou: function () {
-      console.log('reach cta')
-      this.$emit('openThankYou')
-    }
   }
 }
 </script>
