@@ -28,7 +28,7 @@
                 :value="amt"
                 v-model="intendedAmount"
               >
-                {{ amt }}
+                <label :for="index"><span></span>{{ amt }}</label>
               <br>
             </div>
             <input type="submit"
@@ -62,5 +62,70 @@ export default {
 </script>
 
 <style lang="scss">
+  @import '../assets/css/colors';
 
+  #thank-you--body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+
+    label {
+      margin: 5px 10px;
+
+      span {
+        vertical-align: text-top;
+      }
+      span::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border: 1px solid #071828;
+        border-radius: 100%;
+        display: inline-block;
+        position:relative;
+        top: 2px;
+      }
+      span::after {
+        content: '';
+        width: 14px;
+        color: #ffffff;
+        position: relative;
+        right: 17px;
+        bottom: 1px;
+        height: 14px;
+        border-radius: 100%;
+        display: inline-block;
+      }
+    }
+
+    input[type="radio"] {
+      display:none;
+    }
+
+    input:checked + label{
+       span::after{
+        background-color: #071828;
+      }
+    }
+
+    input[type="submit"] {
+      width: 120px;
+      padding: 5px 10px;
+      margin-top: 10px;
+      background-color:#FFF;
+      border: 1px solid $matryx-blue;
+      border-radius: 40px;
+    }
+    input[type="submit"]:hover,
+    input[type="submit"]:focus {
+      cursor:pointer;
+      color: #FFF;
+      background-color: $matryx-blue;
+    }
+  }
 </style>
