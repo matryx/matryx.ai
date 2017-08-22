@@ -5,10 +5,19 @@
     <div class="advisor-member__name">{{ name }}</div>
 
     <div class="advisor-member__desc">{{ desc }}</div>
+
+    <div class="advisor-member__desc">{{ twitterLink }}</div>
+
+    <div class="">
+      <a :href="twitterLink" target="_blank">
+        <img class="twitter icon" :src="twitterIcon">
+      </a>
+    </div>
   </section>
 </template>
 
 <script>
+
 export default {
   name: 'AdvisorsMember',
 
@@ -16,7 +25,8 @@ export default {
     src: String,
     alt: String,
     name: String,
-    desc: String
+    desc: String,
+    twitterLink: String
   }
 }
 </script>

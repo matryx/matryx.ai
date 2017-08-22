@@ -2,7 +2,7 @@
   <section class="bkg--blue-gradient">
     <div class="content-container content-container--large   text-color--white">
       <h1 class="content-container--medium">
-        Incentivized Innovation Through Collaborative Compeition
+        Incentivized Innovation Through Collaborative Competition
       </h1>
       <p class="content-container--medium">
         The Matryx Bounty Marketplace aims to accelerate innovation and reward all users who contribute.
@@ -16,15 +16,15 @@
             <div class="bounty__explanation__card__item">
               <span>1</span>
               <h3>Bounty is Posted
-              <p>Tom requests a 3D Spaceship model & posts a bounty</p>
+              <p>Marshall requests a 3D Spacecraft model &#38; posts a bounty</p>
               </h3>
 
             </div>
             <div class="bounty__explanation__card__item">
               <span>2</span>
               <h3>Designs Submitted
-                <p>Two users submit their best Spaceship models.
-                  Tom likes a design and requests a round of revision.
+                <p>Two users submit their best Spacecraft models.
+                  Marshall likes a design and requests a round of revision from the community.
                 </p>
               </h3>
             </div>
@@ -32,8 +32,7 @@
               <span>3</span>
               <h3>Winner is Chosen
                 <p>
-                  Two new users take Tom's favorite designs and 'remix' them.
-                  Tom chooses a winner, giving the original creator &amp; the creator of the 'remix' MTX.
+                  Two new users take Marshall's favorite designs and 'remix' it. Marshall chooses a winner and a smart contract distributes MTX to all contributors.
                 </p>
               </h3>
             </div>
@@ -41,7 +40,7 @@
         </div>
         <div class="bounty__diagram">
           <h4>COMPETITION STARTS</h4>
-          <caption class="text-color--white ">BOUNTY: BUILD SPACESHIP</caption>
+          <caption class="text-color--white ">BOUNTY: DESIGN A SPACECRAFT</caption>
           <img src="../../assets/images/bounty-drawing.svg" alt="">
         </div>
       </div>

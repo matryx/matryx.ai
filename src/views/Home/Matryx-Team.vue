@@ -15,8 +15,7 @@
             :title="member.title"
             :linkedInLink="member.linkedInLink"
             :twitterLink="member.twitterLink"
-          >
-          </Team-Member>
+          ></Team-Member>
         </div>
       </div>
 
@@ -120,15 +119,16 @@ export default {
       advisors: [{
         name: 'Greg Horowitt',
         desc: 'Venture Capitalist, Author, Serial Entrepreneur',
+        twitterLink: 'https://www.twitter.com/themrkylelee',
         src: Greg
       }, {
         name: 'Benjamin Bratton',
         desc: 'Professor of Visual Arts at UCSD, Author',
         src: Ben
       }, {
-        name: 'Jurgen Schulze',
-        desc: 'Prof. of Computer Science at UCSD. 18+ years in VR & Computer Graphics',
-        src: Jurgen
+        name: 'Paul Puey',
+        desc: 'CEO & Co-Founder at Airbitz',
+        src: Paul
       }, {
         name: 'David Brin',
         desc: 'Author, Futurist, Public Speaker',
@@ -146,9 +146,9 @@ export default {
         desc: 'Former dean of Physical Sciences at UC San Diego',
         src: Mark
       }, {
-        name: 'Paul Puey',
-        desc: 'CEO & Co-Founder at Airbitz',
-        src: Paul
+        name: 'Jurgen Schulze',
+        desc: 'Prof. of Computer Science at UCSD. 18+ years in VR & Computer Graphics',
+        src: Jurgen
       }, {
         name: 'Silvia Mah',
         desc: 'Executive Director of Hera-Labs',

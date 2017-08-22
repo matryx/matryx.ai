@@ -7,12 +7,12 @@
     <div class="team-member__title member__title"> {{ title }} </div>
 
     <div class="team-member__social-icons">
-      <a :href="linkedInLink" target="_blank">
-        <img class="linkedin icon" :src="linkedinIcon">
-      </a>
-      <a :href="twitterLink" target="_blank">
-        <img class="twitter icon" :src="twitterIcon">
-      </a>
+        <a :href="linkedInLink" target="_blank">
+          <img class="linkedin icon" :src="linkedinIcon">
+        </a>
+        <a :href="twitterLink" target="_blank">
+          <img class="twitter icon" :src="twitterIcon">
+        </a>
     </div>
   </section>
 </template>
