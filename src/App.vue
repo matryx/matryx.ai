@@ -158,40 +158,11 @@
     </b-navbar>
   </div>
 
-
-<!--
-BARBARA:
-All clicks on <Get-Notified> component should open the thankYouModal modal after a 2 second animation I already added.
-When clicking on the <Get-Notified> component in the getNotifiedModal modal below it should close by calling this.getNotifiedModal = !this.getNotifiedModal
-and then it should open the thankYouModal modal, again after the 2 second animation
-I think that's it.
-I'm working on the styling and email validation
- -->
   <b-modal id="getNotified" v-model="showGetNotifiedModal"  no-close-on-esc no-close-on-backdrop >
     <CTABanner cta-location="Header"></CTABanner>
   </b-modal>
 
-  <b-modal id="thankYouModal"
-    v-model="showThankYouModal"
-    hide-header
-    hide-footer
-    no-close-on-esc
-    no-close-on-backdrop >
-    <div id="thankYouInBody" >
-      <h2>Thank you for subscribing. </h2>
-      <p>Please enter your intended purchasing amount:</p>
-      <p v-show="noIntendedAmount" class="warn">Please select a value</p>
-      <form>
-        <input id="amount1" name="intendedAmount" type="radio" value="1" v-model="intendedAmount">1<br>
-        <input id="amount2" name="intendedAmount" type="radio" value="2" v-model="intendedAmount">2<br>
-        <input id="amount3" name="intendedAmount" type="radio" value="3" v-model="intendedAmount">3<br>
-        <input id="amount4" name="intendedAmount" type="radio" value="4" v-model="intendedAmount">4<br>
-        <input id="amount5" name="intendedAmount" type="radio" value="5" v-model="intendedAmount">5<br>
-        <input id="amount6" name="intendedAmount" type="radio" value="6" v-model="intendedAmount">6<br>
-        <input type="submit" text="Submit" @click.prevent="submitIntendedAmount" >
-      </form>
-    </div>
-  </b-modal>
+  <Survey-Modal></Survey-Modal>
 
   <router-view></router-view>
 
@@ -203,6 +174,7 @@ I'm working on the styling and email validation
 <script>
 import CTABanner from './components/CTA-Banner'
 import AppFooter from './components/App-Footer'
+import SurveyModal from './components/Survey-Modal'
 
 import VueSticky from 'vue-sticky' // Es6 module
 
@@ -212,29 +184,21 @@ jQuery(document).ready(function () {
 
 export default {
   name: 'app',
-  data: function () {
+
+  data () {
     return {
-      intendedAmount: 'No Amount Selected',
-      showThankYouModal: false,
       showGetNotifiedModal: false
     }
   },
+
   components: {
     CTABanner,
-    AppFooter
+    AppFooter,
+    SurveyModal
   },
+
   directives: {
     'sticky': VueSticky
-  },
-  methods: {
-    submitIntendedAmount: function () {
-      console.log('Intended Amount: ', this.intendedAmount)
-      if (this.intendedAmount === 0) {
-        this.noIntendedAmount = true
-      } else {
-        this.showThankYouModal = !this.showThankYouModal
-      }
-    }
   }
 }
 </script>
@@ -453,6 +417,7 @@ nav {
 .nav-item.get-notified {
   line-height: 60px;
 }
+
 #getNotified{
   .modal-dialog{
     max-width:100% ;
