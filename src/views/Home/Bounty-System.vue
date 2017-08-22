@@ -55,8 +55,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 section {
-  padding: 40px 0;
+  padding: 20px 0 ;
 }
 
 h1, h4, p, caption {
@@ -152,6 +153,9 @@ p.content-container--medium {
 
 /*----- MEDIA QUERIES -----*/
 @media screen and (max-width: 900px) {
+  .content-container {
+    padding-bottom: 0;
+  }
   .bounty {
     flex-direction: column;
 

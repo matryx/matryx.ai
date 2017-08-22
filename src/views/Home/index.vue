@@ -1,6 +1,6 @@
 <template>
   <div class="body-content">
-    <Above-the-Fold v-on:openThankYou="showThankYouModal"></Above-the-Fold>
+    <Above-the-Fold ></Above-the-Fold>
 
     <div class="media-mentions bkg-color--white">
       <div class=" content-container content-container--large media-mentions__img-container">

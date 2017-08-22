@@ -119,13 +119,24 @@
 
       <b-nav is-nav-bar>
        <b-nav-item class="nav-link text-color--matryx-grey" target="_blank" href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf">WHITEPAPER</b-nav-item>
-       <b-nav-item class="nav-link text-color--matryx-grey" href="#">WHAT IS MATRYX</b-nav-item>
-       <b-nav-item class="nav-link text-color--matryx-grey" href="#">ABOUT</b-nav-item>
        <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">CONTACT</b-nav-item>
        <b-nav-item href="https://blog.matryx.ai/" target="_blank" class="nav-link text-color--matryx-grey nav-link--mobile-only">BLOG</b-nav-item>
        <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">FAQ</b-nav-item>
+       <b-nav-item class="nav-item-language nav-link--mobile-only">
+         <b-dropdown id="language" text="Language" class="language">
+           <b-dropdown-item>English</b-dropdown-item>
+           <b-dropdown-item>Chinese</b-dropdown-item>
+           <b-dropdown-item>Japanese</b-dropdown-item>
+           <b-dropdown-item>Russian</b-dropdown-item>
+           <b-dropdown-item>Spanish</b-dropdown-item>
+         </b-dropdown>
+       </b-nav-item>
+
+       <!-- REMOVED MOBILE ITEMS
        <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">PRESS</b-nav-item>
        <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">LEGAL</b-nav-item>
+       <b-nav-item class="nav-link text-color--matryx-grey" href="#">WHAT IS MATRYX</b-nav-item>
+       <b-nav-item class="nav-link text-color--matryx-grey" href="#">ABOUT</b-nav-item>
        <b-nav-item target="_blank"
          href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ"
          class="social-icon nav-link--mobile-only bkg-color--matryx-grey">
@@ -136,22 +147,15 @@
        </b-nav-item>
        <b-nav-item target="_blank" href="https://www.twitter.com/matryx_ai" class="social-icon nav-link--mobile-only bkg-color--matryx-grey">
          <img src="../src/assets/icons/icon-twitter.gif" alt="Matryx Twitter Page">
-       </b-nav-item>
-       <b-nav-item class="nav-item-language nav-link--mobile-only">
-         <b-dropdown id="language" text="Language" class="language">
-           <b-dropdown-item>English</b-dropdown-item>
-           <b-dropdown-item>Chinese</b-dropdown-item>
-           <b-dropdown-item>Japanese</b-dropdown-item>
-           <b-dropdown-item>Russian</b-dropdown-item>
-           <b-dropdown-item>Spanish</b-dropdown-item>
-         </b-dropdown>
-       </b-nav-item>
+       </b-nav-item>-->
+       
      </b-nav>
 
       <!-- Right aligned nav items -->
       <b-nav is-nav-bar class="ml-auto">
         <b-nav-item class="get-notified">
           <button v-b-modal.getNotified>GET NOTIFIED</button>
+          <!-- <button v-b-modal.thankYouModal>openthakyou</button> -->
         </b-nav-item>
       </b-nav>
       </b-collapse>
@@ -176,20 +180,23 @@ I'm working on the styling and email validation
     hide-header
     hide-footer
     no-close-on-esc
-    no-close-on-backdrop >
-    <div id="thankYouInBody" >
-      <h2>Thank you for subscribing. </h2>
-      <p>Please enter your intended purchasing amount:</p>
-      <p v-show="noIntendedAmount" class="warn">Please select a value</p>
-      <form>
-        <input id="amount1" name="intendedAmount" type="radio" value="1" v-model="intendedAmount">1<br>
-        <input id="amount2" name="intendedAmount" type="radio" value="2" v-model="intendedAmount">2<br>
-        <input id="amount3" name="intendedAmount" type="radio" value="3" v-model="intendedAmount">3<br>
-        <input id="amount4" name="intendedAmount" type="radio" value="4" v-model="intendedAmount">4<br>
-        <input id="amount5" name="intendedAmount" type="radio" value="5" v-model="intendedAmount">5<br>
-        <input id="amount6" name="intendedAmount" type="radio" value="6" v-model="intendedAmount">6<br>
-        <input type="submit" text="Submit" @click.prevent="submitIntendedAmount" >
-      </form>
+    no-close-on-backdrop
+    >
+    <div id="thank-you--body" >
+      <h2 class="text-color--matryx-blue">Thank you for subscribing. </h2>
+      <div v-show="!intendedAmountSent">
+        <p>Please select your intended purchasing amount:</p>
+        <p v-show="noIntendedAmount" class="warn">Please select a value</p>
+        <form>
+          <input id="amount1" name="intendedAmount" type="radio" value="1" v-model="intendedAmount"><label for="amount1"><span></span>1</label><br>
+          <input id="amount2" name="intendedAmount" type="radio" value="2" v-model="intendedAmount"><label for="amount2"><span></span>2</label><br>
+          <input id="amount3" name="intendedAmount" type="radio" value="3" v-model="intendedAmount"><label for="amount3"><span></span>3</label><br>
+          <input id="amount4" name="intendedAmount" type="radio" value="4" v-model="intendedAmount"><label for="amount4"><span></span>4</label><br>
+          <input id="amount5" name="intendedAmount" type="radio" value="5" v-model="intendedAmount"><label for="amount5"><span></span>5</label><br>
+          <input id="amount6" name="intendedAmount" type="radio" value="6" v-model="intendedAmount"><label for="amount6"><span></span>6</label><br>
+          <input type="submit" text="Submit" @click.prevent="submitIntendedAmount" >
+        </form>
+      </div>
     </div>
   </b-modal>
 
@@ -226,9 +233,11 @@ export default {
   name: 'app',
   data: function () {
     return {
-      intendedAmount: 'No Amount Selected',
+      intendedAmount: 0,
       showThankYouModal: false,
-      showGetNotifiedModal: false
+      showGetNotifiedModal: false,
+      noIntendedAmount: false,
+      intendedAmountSent: false
     }
   },
   components: {
@@ -244,6 +253,7 @@ export default {
         this.noIntendedAmount = true
       } else {
         this.showThankYouModal = !this.showThankYouModal
+        this.intendedAmountSent = true
       }
     }
   }
@@ -292,34 +302,14 @@ export default {
     .social-icon .nav-link:hover {
       background-color: transparent;
     }
-    .nav-item-language .nav-link {
-      &:hover {
-        background-color: transparent;
-      }
-    }
+
   }
 }
 
-
-
-.navbar .nav-item.nav-item-language {
-  &:hover {
-    background-color:transparent;
-  }
-  .nav-link {
-    padding: 0;
-
-    button {
-      //display:none;
-    }
-  }
-}
-
-/*language*/
-/*#language {*/
+// language
 #language {
   padding: 10px 0;
-  margin: 0 0 0 10px;
+  margin: 0 50px 0 10px;
 }
   button#language__BV_button_.btn.btn-secondary.dropdown-toggle {
     background-color:none !important;
@@ -332,7 +322,6 @@ export default {
       display:none;
     }
   }
-/*}*/
 
 .sticky-nav {
   position:fixed;
@@ -404,7 +393,7 @@ nav {
   }
   .nav-link{
     transition: all 0.3s;
-    padding: 5px 10px;
+    padding: 5px 3px;
     border-radius: 5px;
     text-transform: uppercase;
     line-height: 40px;
@@ -489,6 +478,73 @@ nav {
 
 .warn {
   color: $matryx-red;
+}
+
+#thank-you--body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+
+
+
+  label {
+    margin: 5px 10px;
+
+    span {
+      vertical-align: text-top;
+    }
+    span::before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      border: 1px solid #071828;
+      border-radius: 100%;
+      display: inline-block;
+      position:relative;
+      top: 2px;
+    }
+    span::after {
+      content: '';
+      width: 14px;
+      color: #ffffff;
+      position: relative;
+      right: 17px;
+      bottom: 1px;
+      height: 14px;
+      border-radius: 100%;
+      display: inline-block;
+    }
+  }
+
+  input[type="radio"] {
+    display:none;
+  }
+
+  input:checked + label{
+     span::after{
+      background-color: #071828;
+    }
+  }
+
+  input[type="submit"] {
+    width: 120px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    background-color:#FFF;
+    border: 1px solid $matryx-blue;
+    border-radius: 40px;
+  }
+  input[type="submit"]:hover,
+  input[type="submit"]:focus {
+    cursor:pointer;
+    color: #FFF;
+    background-color: $matryx-blue;
+  }
 }
 
 /*footer*/
