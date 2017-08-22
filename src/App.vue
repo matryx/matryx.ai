@@ -158,7 +158,24 @@
     </b-navbar>
   </div>
 
-  <b-modal id="getNotified" >
+  <b-modal id="getNotified" v-model="getNotifiedModal"  no-close-on-esc no-close-on-backdrop>
+    <CTABanner cta-location="Header" v-on:sentViaRoot="root" v-on:openThankYou="showSuccessModal" v-show="!successModalOpen"></CTABanner>
+    <div id="thankYou" v-show="successModalOpen">
+      <h2>Thank you for subscribing. </h2>
+      <p>Please enter your intended purchasing amount:</p>
+      <form>
+        <input id="amount1" name="intendedAmount" type="radio" value="1" v-model="intendedAmount">1<br>
+        <input id="amount2" name="intendedAmount" type="radio" value="2" v-model="intendedAmount">2<br>
+        <input id="amount3" name="intendedAmount" type="radio" value="3" v-model="intendedAmount">3<br>
+        <input id="amount4" name="intendedAmount" type="radio" value="4" v-model="intendedAmount">4<br>
+        <input id="amount5" name="intendedAmount" type="radio" value="5" v-model="intendedAmount">5<br>
+        <input id="amount6" name="intendedAmount" type="radio" value="6" v-model="intendedAmount">6<br>
+        <input type="submit" text="Submit" @click.prevent="submitIntendedAmount" >
+      </form>
+    </div>
+  </b-modal>
+
+  <!-- <b-modal id="successModal" no-close-on-esc no-close-on-backdrop >
     <CTABanner cta-location="Header" v-on:subscriptionSent="showSuccessModule"></CTABanner>
   </b-modal>
 
@@ -173,7 +190,7 @@
       <label for="amount5"></label><input id="amount5" type="radio" value="5">
       <label for="amount6"></label><input id="amount6" type="radio" value="6">
     </div>
-</div>
+</div> -->
 
   <router-view></router-view>
 
@@ -208,7 +225,9 @@ export default {
   name: 'app',
   data: function () {
     return {
-      successModuleOpen: false
+      successModalOpen: false,
+      intendedAmount: 'No Amount Selected',
+      getNotifiedModal: false
     }
   },
   components: {
@@ -218,9 +237,16 @@ export default {
     'sticky': VueSticky
   },
   methods: {
-    showSuccessModule: function () {
+    showSuccessModal: function () {
       console.log('called in app.vue')
-      this.successModuleOpen = true
+      setTimeout(() => {
+        this.successModalOpen = true
+      }, 2000)
+    },
+    submitIntendedAmount: function () {
+      console.log('Intended Amount: ', this.intendedAmount)
+      // this.$root.$emit('hide::modal', 'getNotifiedModal')
+      this.getNotifiedModal = !this.getNotifiedModal
     }
   }
 }

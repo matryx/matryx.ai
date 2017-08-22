@@ -99,8 +99,8 @@ export default {
   methods: {
     getNotified () {
       this.showSpinner = true
-      console.log('hello', this.ctaLocation, this.email)
-      console.log(getUTMS(this.email))
+      // console.log('hello', this.ctaLocation, this.email)
+      // console.log(getUTMS(this.email))
       const traits = getUTMS(this.email)
       if (this.email) {
         window.analytics.identify(this.email, traits)
@@ -118,16 +118,15 @@ export default {
 
       if (this.ctaLocation === 'Header') {
         // this.openSuccess = true;
-        console.log('clicked on header button')
+        // console.log('clicked on header button')
         this.$emit('subscriptionSent')
-        console.log('after emit')
+        // console.log('after emit')
       }
 
       setTimeout(() => {
         this.showSpinner = false
         this.openSuccessModal = true
       }, 2000)
-      // open modal
     }
   }
 }
