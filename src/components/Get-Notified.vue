@@ -17,7 +17,9 @@
         Success!
       </button> -->
     </b-form>
-    <p class="warn" v-show="showEmailWarning">Please enter a valid email address</p>
+    <p class="warn" v-show="showEmailWarning">
+      Please enter a valid email address
+    </p>
 
     <div class="spinner-container" v-show="showSpinner">
       <div class="spinner" >
@@ -26,18 +28,15 @@
       </div>
     </div>
 
-    <div
-        class="success-modal--overlay"
-        id="success-modal"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-        v-show="openSuccessModal"
+    <div class="success-modal--overlay"
+      id="success-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      v-show="openSuccessModal"
     >
-
-  </div>
-
+    </div>
   </section>
 </template>
 
@@ -286,29 +285,28 @@ export default {
     }
   }
 
-
-/*----- MEDIA QUERIES -----*/
-@media screen and (max-width: 500px) {
-  .cta__form {
-    .cta__form__email {
-      width: calc(100% - 20px);
-      border-top-right-radius: 40px;
-      border-bottom-right-radius: 40px;
-      border-top-left-radius: 40px;
-      border-bottom-left-radius: 40px;
-    }
-    .cta__form__submit {
-      width: calc(100% - 20px);
-      margin-top: 10px;
-      border-top-right-radius: 40px;
-      border-bottom-right-radius: 40px;
-      border-top-left-radius: 40px;
-      border-bottom-left-radius: 40px;
+  /*----- MEDIA QUERIES -----*/
+  @media screen and (max-width: 500px) {
+    .cta__form {
+      .cta__form__email {
+        width: calc(100% - 20px);
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 40px;
+        border-top-left-radius: 40px;
+        border-bottom-left-radius: 40px;
+      }
+      .cta__form__submit {
+        width: calc(100% - 20px);
+        margin-top: 10px;
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 40px;
+        border-top-left-radius: 40px;
+        border-bottom-left-radius: 40px;
+      }
     }
   }
-}
 
-#cta-bottom .cta.content-container{
-  padding-bottom: 0;
-}
+  #cta-bottom .cta.content-container{
+    padding-bottom: 0;
+  }
 </style>
