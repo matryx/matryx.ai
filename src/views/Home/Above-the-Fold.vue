@@ -187,8 +187,9 @@ section.above-the-fold {
 
 
 .grey-bkg {
-  background-image: url('../../assets/images/backgrounds/greywave.jpg');
+  background-image: url('../../assets/images/backgrounds/greywave.png');
   background-size:cover;
+  background-position: center;
   color: $white;
 }
 

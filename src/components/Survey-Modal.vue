@@ -16,46 +16,89 @@
         no-close-on-backdrop
       >
         <div id="thank-you--body">
-          <h2 class="text-color--matryx-blue">Thank you for subscribing</h2>
-          <p>Please enter your intended purchasing amount:</p>
-          <p v-show="noIntendedAmount" class="warn">Please select a value</p>
+          <div class="close-modal text-muted" @click.prevent="closeModal">
+            X
+          </div>
+          <div v-show="!submitted">
+            <h2 class="text-color--matryx-blue">
+              Thank you for subscribing
+            </h2>
+            <p>Token distribution is done on a first-come, first-serve basis. Please select the value of MTX you wish you purchase:</p>
+            <p v-show="noIntendedAmount" class="warn">Please select a value</p>
 
-          <form>
-            <div v-for="(amt, index) in amounts">
-              <input :id="index"
-                name="intendedAmount"
-                type="radio"
-                :value="amt"
-                v-model="intendedAmount"
+            <form>
+              <div v-for="(amt, index) in amounts">
+                <input :id="index"
+                  name="intendedAmount"
+                  type="radio"
+                  :value="amt.display"
+                  v-model="intendedAmount"
+                >
+                  <label :for="index"><span></span>{{ amt.display }} ETH</label>
+                <br>
+              </div>
+              <input type="submit"
+                text="Submit"
+                @click.prevent="handleSubmit"
               >
-                <label :for="index"><span></span>{{ amt }}</label>
-              <br>
-            </div>
-            <input type="submit"
-              text="Submit"
-              @click.prevent="handleSubmit"
-            >
-          </form>
-
+            </form>
+          </div>
         </div>
       </b-modal>
   </section>
 </template>
 
 <script>
+import { appAnalytics } from '@/analytics'
+
 export default {
   data () {
     return {
-      amounts: ['0-75 ETH', '150 ETH', '300 ETH', '750 ETH', '750+ ETH'],
+      amounts: [{
+        display: '0-75',
+        label: '0-75eth'
+      }, {
+        display: '75-150',
+        label: '75-150eth'
+      }, {
+        display: '150-300',
+        label: '150-300eth'
+      }, {
+        display: '300-750',
+        label: '300-750eth'
+      }, {
+        display: '750+',
+        label: '750+eth'
+      }],
       intendedAmount: 'None Selected',
       showModal: false,
-      noIntendedAmount: false
+      noIntendedAmount: false,
+      submitted: false
+    }
+  },
+
+  computed: {
+    showModal () {
+      return this.$store.state.showModal
+    },
+    email () {
+      return this.$store.state.email
     }
   },
 
   methods: {
     handleSubmit () {
       console.log('Intended Amount', this.intendedAmount)
+      // Analytics
+      appAnalytics.surveyModal(this.email, this.intendedAmount)
+      // Reset intended amount
+      this.intendedAmount = 'None Selected'
+      // Close modal
+      this.$store.commit('showModal', false)
+    },
+
+    closeModal () {
+      this.$store.commit('showModal', false)
     }
   }
 }
@@ -105,6 +148,10 @@ export default {
 
     input[type="radio"] {
       display:none;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     input:checked + label{
@@ -126,6 +173,15 @@ export default {
       cursor:pointer;
       color: #FFF;
       background-color: $matryx-blue;
+    }
+
+    .close-modal {
+      position: absolute;
+      right: 20px;
+
+      &:hover {
+        cursor: pointer
+      }
     }
   }
 </style>

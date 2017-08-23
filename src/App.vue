@@ -1,57 +1,6 @@
 <template>
 <div id="app" >
   <div id="sub-nav" class="bkg-color--dark-blue-gradient">
-    <!-- <b-navbar toggleable toggle-breakpoint="sm" class="">
-      <b-nav-toggle target="sub-nav--toggle"></b-nav-toggle>
-      <b-navbar-brand href="#">
-        <router-link to="/"><img src="../src/assets/images/Matryx-Mark-White.png" alt=""></router-link>
-      </b-navbar-brand>
-
-      <b-collapse is-nav id="sub-nav--toggle">
-
-      <b-nav is-nav-bar>
-        <b-nav-item href="#" class="nav-link text-color--white" style="color: #FFF">
-          CONTACT
-        </b-nav-item>
-        <b-nav-item href="https://blog.matryx.ai/" target="_blank" class="nav-link text-color--white" style="color: #FFF">
-          BLOG
-        </b-nav-item>
-        <b-nav-item href="#" class="nav-link text-color--white" style="color: #FFF">
-          FAQ
-        </b-nav-item>
-        <b-nav-item href="#" class="nav-link text-color--white" style="color: #FFF">
-          PRESS
-        </b-nav-item>
-        <b-nav-item href="#" class="nav-link text-color--white" style="color: #FFF">
-          LEGAL
-        </b-nav-item>
-      </b-nav>
-
-
-        <b-nav is-nav-bar class="ml-auto">
-          <b-nav-item target="_blank"
-            href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ"
-            class="social-icon">
-            <img src="../src/assets/icons/slack.svg" alt="Matryx Slack">
-          </b-nav-item>
-          <b-nav-item target="_blank" href="https://www.facebook.com/matryxai/" class="social-icon">
-            <img src="../src/assets/icons/icon-facebook.png" alt="Matryx Facebook Page">
-          </b-nav-item>
-          <b-nav-item target="_blank" href="https://www.twitter.com/matryx_ai" class="social-icon">
-            <img src="../src/assets/icons/icon-twitter.gif" alt="Matryx Twitter Page">
-          </b-nav-item>
-          <b-nav-item class="nav-item-language">
-            <b-dropdown id="language" text="Language" class="language">
-              <b-dropdown-item>English</b-dropdown-item>
-              <b-dropdown-item>Chinese</b-dropdown-item>
-              <b-dropdown-item>Japanese</b-dropdown-item>
-              <b-dropdown-item>Russian</b-dropdown-item>
-              <b-dropdown-item>Spanish</b-dropdown-item>
-            </b-dropdown>
-          </b-nav-item>
-        </b-nav>
-      </b-collapse>
-    </b-navbar> -->
     <nav class="navbar navbar-light navbar-toggleable-sm">
       <button type="button" aria-label="Toggle navigation" aria-controls="sub-nav--toggle" aria-expanded="false" class="navbar-toggler navbar-toggler-right">
         <span class="navbar-toggler-icon"></span>
@@ -154,7 +103,7 @@
       <!-- Right aligned nav items -->
       <b-nav is-nav-bar class="ml-auto">
         <b-nav-item class="get-notified">
-          <button v-b-modal.getNotified>GET NOTIFIED</button>
+          <button @click.prevent="openGetNotified">GET NOTIFIED</button>
           <!-- <button v-b-modal.thankYouModal>openthakyou</button> -->
         </b-nav-item>
       </b-nav>
@@ -162,8 +111,8 @@
     </b-navbar>
   </div>
 
-  <b-modal id="getNotified" v-model="showGetNotifiedModal"  no-close-on-esc no-close-on-backdrop >
-    <CTABanner cta-location="Header"></CTABanner>
+  <b-modal id="getNotified" v-model="showGetNotifiedModal" no-close-on-esc no-close-on-backdrop>
+    <CTA-Banner ctaLocation="Header"></CTA-Banner>
   </b-modal>
 
   <Survey-Modal></Survey-Modal>
@@ -191,11 +140,7 @@ export default {
 
   data () {
     return {
-      intendedAmount: 0,
-      showThankYouModal: false,
-      showGetNotifiedModal: false,
-      noIntendedAmount: false,
-      intendedAmountSent: false
+      showThankYouModal: false
     }
   },
 
@@ -207,18 +152,17 @@ export default {
 
   directives: {
     'sticky': VueSticky
+  },
 
+  computed: {
+    showGetNotifiedModal () {
+      return this.$store.state.showGetNotifiedModal
+    }
   },
 
   methods: {
-    submitIntendedAmount: function () {
-      console.log('Intended Amount: ', this.intendedAmount)
-      if (this.intendedAmount === 0) {
-        this.noIntendedAmount = true
-      } else {
-        this.showThankYouModal = !this.showThankYouModal
-        this.intendedAmountSent = true
-      }
+    openGetNotified () {
+      this.$store.commit('showGetNotifiedModal', true)
     }
   }
 }

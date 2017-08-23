@@ -12,6 +12,12 @@
             Matryx is a platform for decentralized collaboration. Matryx consists of a bounty system, a library of digital assets, and a marketplace. Problems are posted, along with a bounty for a verified solution. Users then collaborate to solve problems, share results, and earn rewards. Rewards are given to all contributors, and all submissions are added to the Matryx library and marketplace for future purchase. This will create an ecosystem of public collaboration and ideas that will drive research and innovation.
           </p>
         </div>
+<<<<<<< HEAD
+=======
+        <div class="overview__column-2 mobile--order-2 overview__img--1">
+          <!-- <img src="../../assets/images/video-preview.png" alt=""> -->
+        </div>
+>>>>>>> 51e992847ffcf2b84f17526c607c20996a2e6501
       </div>
       <div class="overview">
         <div class="overview__column-1 mobile--order-1">
@@ -21,12 +27,12 @@
           </p>
         </div>
         <div class="overview__column-2 mobile--order-2 overview__img--1">
-          <img src="../../assets/images/video-preview.png" alt="">
+          <!-- <img src="../../assets/images/video-preview.png" alt=""> -->
         </div>
       </div>
       <div class="overview">
         <div class="overview__column-2 overview__img--2">
-          <img src="../../assets/images/video-preview.png" alt="">
+          <!-- <img src="../../assets/images/video-preview.png" alt=""> -->
         </div>
         <div class="overview__column-1">
           <h1 class="text-color--matryx-black">The Problem</h1>
@@ -52,7 +58,7 @@
           </a>
         </div>
         <div class="overview__column-2 mobile--order-2 overview__img--3">
-          <img src="../../assets/images/video-preview.png" alt="">
+          <!-- <img src="../../assets/images/video-preview.png" alt=""> -->
         </div>
       </div>
     </div>
@@ -104,10 +110,10 @@ export default {
     padding: 30px 0;
     border-bottom: 1px solid $light-purple-border;
 
-    // &__img--1 {
-    //   background-image: url('../../assets/images/video-preview.png');
-    //   background-size: cover;
-    // }
+    &__img--1 {
+      background-image: url('../../assets/images/video-preview.png');
+      background-size: cover;
+    }
     // &__img--2 {
     //   background-image: url('../../assets/images/video-preview.png');
     //   background-size: cover;

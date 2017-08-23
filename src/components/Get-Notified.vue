@@ -7,15 +7,11 @@
         placeholder="your@email.com"
       >
       <button class="btn btn-cta-blue cta__form__submit"
-        v-if="!success"
         :class="{ 'purple-btn': purpleBkg }"
         @click.prevent="getNotified"
       >
         Get Notified
       </button>
-      <!-- <button class="btn cta__form__submit cta-btn-green" v-else>
-        Success!
-      </button> -->
     </b-form>
     <p class="warn" v-show="showEmailWarning">
       Please enter a valid email address
@@ -41,7 +37,7 @@
 </template>
 
 <script>
-import { getUTMS } from '@/utils'
+import { getUTMS, isValidEmail } from '@/utils'
 
 // var submitBtn = $('.cta__form__submit'),
 //     // emailInput = $('.cta__form__email');
@@ -91,7 +87,6 @@ export default {
   data () {
     return {
       email: '',
-      success: false,
       openSuccessModal: false,
       showSpinner: false,
       showEmailWarning: false
@@ -100,37 +95,38 @@ export default {
 
   methods: {
     getNotified () {
-      if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(this.email)) {
+      if (isValidEmail(this.email)) {
+        // Close modal just in case
+        this.$store.commit('showGetNotifiedModal', false)
+
         this.showEmailWarning = false
         this.showSpinner = true
-        // console.log('hello', this.ctaLocation, this.email)
-        // console.log(getUTMS(this.email))
-        const traits = getUTMS(this.email)
+
+        const traits = getUTMS()
+        traits.email = this.email
+        traits.ctaLocation = `${this.ctaLocation}`
+
         if (this.email) {
+          // Store email in local and store
+          window.localStorage.setItem('email', this.email)
+          this.$store.commit('setEmail', this.email)
+
+          console.log('email', this.email, 'traits', traits)
+
           window.analytics.identify(this.email, traits)
+
           window.analytics.track(`CTA ${this.ctaLocation} Click`, {
-            category: 'Website',
-            label: 'lp-cta'
+            category: 'Get Notified',
+            label: `cta-${this.ctaLocation}`
           })
 
           this.email = ''
-          this.success = true
-          setTimeout(() => {
-            this.success = false
-          }, 1000)
         }
-
-        // if (this.ctaLocation === 'Header') {
-        // this.openSuccess = true;
-        // console.log('clicked on get notified button')
-        // console.log('after emit')
-        // }
 
         setTimeout(() => {
           this.showSpinner = false
-          this.$emit('subscriptionSent')
-          this.openSuccessModal = true
-        }, 2000)
+          this.$store.commit('showModal', true)
+        }, 1000)
       } else {
         this.showEmailWarning = true
       }
@@ -189,16 +185,7 @@ export default {
       &:hover {
         color: $matryx-blue;
         background-color: $white;
-
-        .cta__form__email {
-          // border-color: $purple;
-        }
       }
-    }
-
-    .cta-btn-green {
-      background-color: $green;
-      color: $white;
     }
   }
 

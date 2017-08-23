@@ -6,37 +6,25 @@ Vue.use(Vuex)
 const debug = process.env.NODE_ENV !== 'production'
 
 export default new Vuex.Store({
-  actions: {
-    toggleModal ({ commit }, data) {
-      this.survey.open = true
-      this.survey.location = data.location
-    },
-    submitSurvey ({ commit }, data) {
-
-    }
+  state: {
+    showModal: false,
+    showGetNotifiedModal: false,
+    email: ''
   },
   getters: {
 
   },
   mutations: {
-    survey: {
-      submitted: false,
-      open: false,
-      location: ''
+    showModal (state, show) {
+      console.log('toggle modal', show)
+      state.showModal = show
     },
-    email: ''
-  }
+    setEmail (state, email) {
+      state.email = email
+    },
+    showGetNotifiedModal (state, show) {
+      state.showGetNotifiedModal = show
+    }
+  },
   strict: debug
 })
-
-
-
-import * as types from './mutation-types'
-
-export const addToCart = ({ commit }, product) => {
-  if (product.inventory > 0) {
-    commit(types.ADD_TO_CART, {
-      id: product.id
-    })
-  }
-}
