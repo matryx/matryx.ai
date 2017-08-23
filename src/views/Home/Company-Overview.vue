@@ -18,7 +18,7 @@
         <div class="overview__column-1 mobile--order-1">
           <h1 class="text-color--matryx-black">Project Background</h1>
           <p class="text-color--matryx-dark-grey">
-            Matryx is a product of Nanome. Nanome seeks to democratize science, engineering, and research using Virtual Reality and blockchain technology. Nanome is the creator of Calcflow, the industry-leading VR mathematics toolkit, and nano-one, a VR interface for nanoscale design and simulation.
+            Matryx is a product of <a target="_blank" href="http://nanome.ai/">Nanome</a>. Nanome seeks to democratize science, engineering, and research using Virtual Reality and blockchain technology. Nanome is the creator of Calcflow, the industry-leading VR mathematics toolkit, and nano-one, a VR interface for nanoscale design and simulation.
           </p>
         </div>
         <div class="overview__column-2 mobile--order-2 overview__img--1">
@@ -94,6 +94,21 @@ export default {
     font-size: 46px;
     line-height: 55px;
     margin: 40px 0;
+  }
+
+  p > a {
+    color: $matryx-blue;
+
+    &:hover {
+      color: $matryx-light-blue;
+      text-decoration: none;
+    }
+    &:active {
+      color: $matryx-dark-grey;
+    }
+    &:focus {
+      text-decoration: none;
+    }
   }
 
   .content-container--large.content-container {

@@ -16,21 +16,11 @@
        <slide>
          <span class="quote__quotes">&#x275D;</span>
          <p class="quote-text">
-           [Matryx] will allow more people to enter into the space earlier… which will have network effects, catalyze the pace of innovation in the space, and will be as important for biotech as it is for science more generally.
+           Matryx will allow more people to enter into the space earlier… which will have network effects, catalyze the pace of innovation in the space, and will be as important for biotech as it is for science more generally.
          </p>
          <h5 class="quote-author">
            <span class="quote-author__name">Benjamin Bratton PhD.</span>
            <span class="quote-author__company">Sociologist, Architectural and design theorist, UC San Diego</span>
-         </h5>
-       </slide>
-       <slide>
-         <span class="quote__quotes">&#x275D;</span>
-         <p class="quote-text">
-           People have been waiting for this both in academia and I think in industry as well. And I think specifically in the scientific genres within industries, so life sciences for example have been wanting it really well.
-         </p>
-         <h5 class="quote-author">
-           <span class="quote-author__name">Geoff Odell</span>
-           <span class="quote-author__company"> Former VP of Global Operations, Novartis</span>
          </h5>
        </slide>
        <slide>
@@ -41,6 +31,16 @@
          <h5 class="quote-author">
            <span class="quote-author__name">Allen Hsu</span>
            <span class="quote-author__company">Venture Capitalist, Sparkland Capital</span>
+         </h5>
+       </slide>
+       <slide>
+         <span class="quote__quotes">&#x275D;</span>
+         <p class="quote-text">
+           People have been waiting for this both in academia and I think in industry as well. And I think specifically in the scientific genres within industries, so life sciences for example have been wanting it really well.
+         </p>
+         <h5 class="quote-author">
+           <span class="quote-author__name">Geoff Odell</span>
+           <span class="quote-author__company"> Former VP of Global Operations, Novartis</span>
          </h5>
        </slide>
      </carousel>

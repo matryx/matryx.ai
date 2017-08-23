@@ -278,6 +278,10 @@ export default {
   z-index: 2;
   padding: 0 10px;
 
+  .navbar-brand {
+    width: 200px;
+  }
+
   .navbar.navbar-light .nav-link {
     line-height: 50px;
   }
