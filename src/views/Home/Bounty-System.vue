@@ -72,6 +72,7 @@ h1 {
 }
 
 .bkg--blue-gradient {
+  background-color: #0F3249;
   background-image: url('../../assets/images/backgrounds/bluegradient.png');
   background-size:cover;
   background-repeat: no-repeat;
