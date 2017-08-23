@@ -4605,9 +4605,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "lighterText": true,
       "greyBkg": true,
-      "cta-location": "Bottom-Middle"
+      "cta-location": "Top-Middle"
     }
-  })], 1), _vm._v(" "), _c('Bounty-System'), _vm._v(" "), _c('About-Token-Sale'), _vm._v(" "), _c('Quotes'), _vm._v(" "), _c('Nanome-Info'), _vm._v(" "), _c('CTA-Banner', {
+  })], 1), _vm._v(" "), _c('About-Token-Sale'), _vm._v(" "), _c('Quotes'), _vm._v(" "), _c('Nanome-Info'), _vm._v(" "), _c('Bounty-System'), _vm._v(" "), _c('CTA-Banner', {
     attrs: {
       "whiteBkg": true,
       "cta-location": "Top-Middle"
@@ -5073,4 +5073,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ],[19]);
-//# sourceMappingURL=app.8e4db71184dbfb75770b.js.map
+//# sourceMappingURL=app.b659e235a70d531fb7fa.js.map
