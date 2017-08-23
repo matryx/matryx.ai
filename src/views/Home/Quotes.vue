@@ -63,6 +63,7 @@ export default {
 
 .content-container--medium{
   max-width: 750px;
+  padding: 50px 0px 90px 0px;
 }
 
 .VueCarousel-slide {

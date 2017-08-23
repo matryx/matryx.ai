@@ -72,6 +72,7 @@ export default {
       }],
       // showModal: false,
       intendedAmount: 'None Selected',
+      showModal: false,
       noIntendedAmount: false,
       submitted: false
     }

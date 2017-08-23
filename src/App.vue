@@ -36,7 +36,7 @@
           </li>
           <li class="nav-item social-icon">
             <a aria-disabled="false" href="https://www.twitter.com/matryx_ai" target="_blank" rel="noopener" class="nav-link">
-              <img src="./assets/icons/icon-twitter.gif" alt="Matryx Twitter Page">
+              <img src="./assets/icons/icon-twitter.png" alt="Matryx Twitter Page">
             </a>
           </li>
           <li class="nav-item social-icon">
