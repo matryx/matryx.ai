@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'Secondary Event',
+  name: 'EventItem',
 
   props: {
     name: String,
