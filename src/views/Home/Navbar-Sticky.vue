@@ -1,99 +1,100 @@
 <template>
-  <section>
-    <div id="nav" class="bkg-color--white " style="top: 0; position: -webkit-sticky;
+  <section id="nav" class="bkg-color--white " style="top: 0; position: -webkit-sticky;
       position: sticky;">
-      <b-navbar toggleable toggle-breakpoint="sm" class="content-container content-container--medium " >
-        <b-nav-toggle target="nav-toggle"></b-nav-toggle>
-        <b-navbar-brand href="#">
-          <router-link to="/">
-            <img src="../../assets/images/Matryx-Logo-Grey-CMYK.png" alt="" class="matryx-logo-words">
-          </router-link>
-        </b-navbar-brand>
-        <b-collapse is-nav id="nav-toggle">
+    <b-navbar toggleable toggle-breakpoint="sm" class="content-container content-container--medium " >
+      <b-nav-toggle target="nav-toggle"></b-nav-toggle>
+      <b-navbar-brand href="#">
+        <router-link to="/">
+          <img src="../../assets/images/Matryx-Logo-Grey-CMYK.png" alt="" class="matryx-logo-words">
+        </router-link>
+      </b-navbar-brand>
+      <b-collapse is-nav id="nav-toggle">
 
-        <b-nav is-nav-bar>
-          <b-nav-item class="nav-link text-color--matryx-grey"
-            target="_blank"
-            href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf"
-            @click="whitePaperClick"
-          >
-            WHITEPAPER
-          </b-nav-item>
-          <b-nav-item
-            class="nav-link text-color--matryx-grey nav-link--mobile-hide"
-            href="#what-is-matryx">
-            WHAT IS MATRYX
-          </b-nav-item>
-          <b-nav-item
-            class="nav-link text-color--matryx-grey nav-link--mobile-hide"
-            href="#about-token-sale">
-            TOKEN SALE
-          </b-nav-item>
-          <b-nav-item
-            class="nav-link text-color--matryx-grey nav-link--mobile-hide"
-            href="#bounty-system">
-            BOUNTY SYSTEM
-          </b-nav-item>
+      <b-nav is-nav-bar>
+        <b-nav-item class="nav-link text-color--matryx-grey"
+          target="_blank"
+          href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf"
+          @click="whitePaperClick"
+        >
+          WHITEPAPER
+        </b-nav-item>
+        <b-nav-item
+          class="nav-link text-color--matryx-grey nav-link--mobile-hide"
+          href="#what-is-matryx">
+          WHAT IS MATRYX
+        </b-nav-item>
+        <b-nav-item
+          class="nav-link text-color--matryx-grey nav-link--mobile-hide"
+          href="#about-token-sale">
+          TOKEN SALE
+        </b-nav-item>
+        <b-nav-item
+          class="nav-link text-color--matryx-grey nav-link--mobile-hide"
+          href="#bounty-system">
+          BOUNTY SYSTEM
+        </b-nav-item>
 
-          <!-- Only Mobile View -->
-          <b-nav-item href="mailto:team@matryx.ai?subject=Matryx Token Sale" class="nav-link text-color--matryx-grey nav-link--mobile-only">
-            CONTACT
-          </b-nav-item>
-          <b-nav-item href="https://blog.matryx.ai/" target="_blank" class="nav-link text-color--matryx-grey nav-link--mobile-only">
-            BLOG
-          </b-nav-item>
-  <!--         <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">FAQ</b-nav-item> -->
-  <!--         <b-nav-item class="nav-item-language nav-link--mobile-only">
-            <b-dropdown id="language" text="Language" class="language">
-              <b-dropdown-item>English</b-dropdown-item>
-              <b-dropdown-item>Chinese</b-dropdown-item>
-              <b-dropdown-item>Japanese</b-dropdown-item>
-              <b-dropdown-item>Russian</b-dropdown-item>
-              <b-dropdown-item>Spanish</b-dropdown-item>
-            </b-dropdown>
-          </b-nav-item>
-   -->
-         <!-- REMOVED MOBILE ITEMS
-         <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">PRESS</b-nav-item>
-         <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">LEGAL</b-nav-item>
+        <!-- Only Mobile View -->
+        <b-nav-item href="mailto:team@matryx.ai?subject=Matryx Token Sale" class="nav-link text-color--matryx-grey nav-link--mobile-only">
+          CONTACT
+        </b-nav-item>
+        <b-nav-item href="https://blog.matryx.ai/" target="_blank" class="nav-link text-color--matryx-grey nav-link--mobile-only">
+          BLOG
+        </b-nav-item>
+<!--         <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">FAQ</b-nav-item> -->
+<!--         <b-nav-item class="nav-item-language nav-link--mobile-only">
+          <b-dropdown id="language" text="Language" class="language">
+            <b-dropdown-item>English</b-dropdown-item>
+            <b-dropdown-item>Chinese</b-dropdown-item>
+            <b-dropdown-item>Japanese</b-dropdown-item>
+            <b-dropdown-item>Russian</b-dropdown-item>
+            <b-dropdown-item>Spanish</b-dropdown-item>
+          </b-dropdown>
+        </b-nav-item>
+ -->
+       <!-- REMOVED MOBILE ITEMS
+       <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">PRESS</b-nav-item>
+       <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">LEGAL</b-nav-item>
 
-         <b-nav-item target="_blank"
-           href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ"
-           class="social-icon nav-link--mobile-only bkg-color--matryx-grey">
-           <img src="../../assets/icons/slack.svg" alt="Matryx Slack">
-         </b-nav-item>
-         <b-nav-item target="_blank" href="https://www.facebook.com/matryxai/" class="social-icon nav-link--mobile-only bkg-color--matryx-grey">
-           <img src="../../assets/icons/icon-facebook.png" alt="Matryx Facebook Page">
-         </b-nav-item>
-         <b-nav-item target="_blank" href="https://www.twitter.com/matryx_ai" class="social-icon nav-link--mobile-only bkg-color--matryx-grey">
-           <img src="../../assets/icons/icon-twitter.gif" alt="Matryx Twitter Page">
-         </b-nav-item>-->
+       <b-nav-item target="_blank"
+         href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ"
+         class="social-icon nav-link--mobile-only bkg-color--matryx-grey">
+         <img src="../../assets/icons/slack.svg" alt="Matryx Slack">
+       </b-nav-item>
+       <b-nav-item target="_blank" href="https://www.facebook.com/matryxai/" class="social-icon nav-link--mobile-only bkg-color--matryx-grey">
+         <img src="../../assets/icons/icon-facebook.png" alt="Matryx Facebook Page">
+       </b-nav-item>
+       <b-nav-item target="_blank" href="https://www.twitter.com/matryx_ai" class="social-icon nav-link--mobile-only bkg-color--matryx-grey">
+         <img src="../../assets/icons/icon-twitter.gif" alt="Matryx Twitter Page">
+       </b-nav-item>-->
 
-       </b-nav>
+     </b-nav>
 
-        <b-nav is-nav-bar class="ml-auto">
-          <b-nav-item class="get-notified">
-            <button @click.prevent="openGetNotified">GET NOTIFIED</button>
-          </b-nav-item>
-        </b-nav>
-        </b-collapse>
-      </b-navbar>
-    </div>
+      <b-nav is-nav-bar class="ml-auto">
+        <b-nav-item class="get-notified">
+          <button @click.prevent="openGetNotified">GET NOTIFIED</button>
+        </b-nav-item>
+      </b-nav>
+      </b-collapse>
+    </b-navbar>
 
-    <b-modal id="getNotified" v-model="showGetNotifiedModal" no-close-on-esc no-close-on-backdrop>
-      <CTA-Banner ctaLocation="Header"></CTA-Banner>
-    </b-modal>
   </section>
 </template>
 
 <script>
-import CTABanner from '../../components/CTA-Banner'
+import { appAnalytics } from '@/analytics'
 
 export default {
   name: 'NavbarSticky',
 
-  components: {
-    CTABanner
+  methods: {
+    openGetNotified () {
+      this.$store.commit('showGetNotifiedModal', true)
+    },
+
+    whitePaperClick () {
+      appAnalytics.whitePaperClick('Navbar')
+    }
   }
 }
 </script>
@@ -106,6 +107,7 @@ export default {
   width: 100%;
   z-index: 2;
   padding: 0 10px;
+  margin: 0;
 
   .navbar.navbar-light .nav-link {
     line-height: 50px;
@@ -257,32 +259,6 @@ nav {
 **because the modal css in above the fold is overriding this file's modal css*/
 .nav-item.get-notified {
   line-height: 60px;
-}
-
-#getNotified{
-  .modal-dialog{
-    max-width:100% ;
-    /*background-image:url('./assets/images/backgrounds/whiteWave.png');*/
-
-    #getNotified__BV_body_.modal-body {
-      .cta-banner {
-        width:100%;
-      }
-    }
-  }
-  .modal-header {
-    border: none;
-    padding: 0;
-    margin-bottom: -50px;
-    z-index: 2;
-  }
-  .modal-footer {
-    display:none;
-  }
-}
-
-.warn {
-  color: $matryx-red;
 }
 
 /*----- MEDIA QUERIES -----*/
