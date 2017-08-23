@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2624.72041px" height="447px" viewBox="0 0 2624.72041 447" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #FFFFFF;">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>greywave</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="51.2147626%" cy="37.8109056%" fx="51.2147626%" fy="37.8109056%" r="30.5728588%" gradientTransform="translate(0.512148,0.378109),scale(0.201357,1.000000),rotate(-2.784677),translate(-0.512148,-0.378109)" id="radialGradient-1">
+            <stop stop-color="#C1CBD5" offset="0%"></stop>
+            <stop stop-color="#636A74" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="51.2147626%" cy="37.8109056%" fx="51.2147626%" fy="37.8109056%" r="54.1825853%" gradientTransform="translate(0.512148,0.378109),scale(0.201357,1.000000),rotate(0.000000),translate(-0.512148,-0.378109)" id="radialGradient-2">
+            <stop stop-color="#2A2E32" offset="0%"></stop>
+            <stop stop-color="#5C5F65" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="backgrounds" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="greywave">
+            <path d="M-96.9400472,24.7620661 C1338.16864,181.717817 1585.24223,136.725231 1982.32903,97.2891158 C2379.41583,57.8530007 2689.89148,29.9991296 2711.47047,172.162641 C2727.35941,276.839814 3184.45163,221.857837 2659.34233,395.624618 C2464.86544,459.980028 1876.94723,401.777088 1105.3769,349.526636 C111.031292,282.189927 -262.527236,381.347715 -15.2986824,647 C-207.18942,217.140565 -234.403208,9.72791997 -96.9400472,24.7620661 Z" id="BG_MIDDLE-Copy" fill="url(#radialGradient-1)"></path>
+            <path d="M-96.9400472,13.7620661 C1338.16864,170.717817 1585.24223,125.725231 1982.32903,86.2891158 C2379.41583,46.8530007 2689.89148,18.9991296 2711.47047,161.162641 C2727.35941,265.839814 3184.45163,210.857837 2659.34233,384.624618 C2464.86544,448.980028 1876.94723,390.777088 1105.3769,338.526636 C111.031292,271.189927 -262.527236,370.347715 -15.2986824,636 C-207.18942,206.140565 -234.403208,-1.27208003 -96.9400472,13.7620661 Z" id="BG_MIDDLE" fill="url(#radialGradient-2)"></path>
+        </g>
+    </g>
+</svg>
