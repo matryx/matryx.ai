@@ -8,14 +8,15 @@
         </div>
       </div>
       <div class="nanome__logos">
-        <h3 class="text-color--matryx-grey">OUR CURRENT PRODUCTS</h3>
         <div class="nanone__logos__calcflow logo">
           <img src="../../assets/images/calcflow.png" alt="Calcflow">
         </div>
         <div class="nanome__logos__nanoone logo">
           <img src="../../assets/images/nanoone.png" alt="Nano One">
         </div>
-        <p>Available on <a href="http://store.steampowered.com/app/493430/nanoone/" target="_blank">Steam</a> and <a href="http://calcflow.io/" target="_blank">Oculus</a></p>
+          <h3 class="text-color--matryx-grey text-align-center">OUR CURRENT PRODUCTS</h3>
+          <p>Available on <a href="http://store.steampowered.com/app/493430/nanoone/" target="_blank">Steam</a> and <a href="http://calcflow.io/" target="_blank">Oculus</a>
+          </p>
       </div>
     </div>
   </section>
@@ -39,6 +40,7 @@ export default {
 
 .nanome__info {
   padding: 20px 40px 20px 0;
+  max-width: 600px;
 
   &__title {
     font-size: 38px;
