@@ -2,13 +2,13 @@
   <section id="what-matryx">
     <hr>
     <div class="content-container--large text--light content-container" id="what-is-matryx">
-      <h2 class="text-color--matryx-grey font-size--large text-center">
+      <h2 class="text-color--matryx-dark-grey font-size--large text-center">
         Matryx: The Platform for Decentralized Collaboration
       </h2>
       <hr>
       <div class="overview">
         <div class="overview__column-3 mobile--order-1">
-          <h1 class="text-color--matryx-black">What is Matryx</h1>
+          <!-- <h1 class="text-color--matryx-black">What is Matryx</h1> -->
           <p class="text-color--matryx-dark-grey">
             Matryx is a platform for decentralized collaboration. Matryx consists of a bounty system, a library of digital assets, and a marketplace. Problems are posted, along with a bounty for a verified solution. Users then collaborate to solve problems, share results, and earn rewards. Rewards are given to all contributors, and all submissions are added to the Matryx library and marketplace for future purchase. This will create an ecosystem of public collaboration and ideas that will drive research and innovation.
           </p>
@@ -16,7 +16,7 @@
       </div>
       <div class="overview">
         <div class="overview__column-1 mobile--order-1">
-          <h1 class="text-color--matryx-black">Project Background</h1>
+          <h1 class="text-color--matryx-black">Matryx Background</h1>
           <p class="text-color--matryx-dark-grey">
             Matryx is a product of <a target="_blank" href="http://nanome.ai/">Nanome</a>. Nanome seeks to democratize science, engineering, and research using Virtual Reality and blockchain technology. Nanome is the creator of Calcflow, the industry-leading VR mathematics toolkit, and nano-one, a VR interface for nanoscale design and simulation.
           </p>
@@ -49,7 +49,7 @@
             Once a problem is solved, rewards and recognition are given to all winning contributors, not just the last contributor, for fairness and transparency.
           </p>
           <a href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf" target="_blank" @click="whitePaperClick">
-            <button class="btn-red">Read the Whitepaper</button>
+            <button class="btn-red whitepaper-btn">Read the Whitepaper</button>
           </a>
         </div>
         <div class="overview__column-2 mobile--order-2 overview__img--3">
@@ -168,6 +168,10 @@ export default {
       background-color: $matryx-red;
       color: $white;
     }
+  }
+
+  .whitepaper-btn {
+    width: 100%;
   }
 
   /*----- MEDIA QUERIESS -----*/

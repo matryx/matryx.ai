@@ -4,7 +4,7 @@
       <div class="token-sale__text content-container--medium text-color--white">
         <h1 class="font-size--large uppercase">Matryx Token Sale</h1>
         <p class="lead ">
-          Want to join in on the action? Enter your email to be notified when our
+          Join in on the action. Enter your email to be notified when our
           token sale launches.
         </p>
         <Countdown></Countdown>

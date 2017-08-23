@@ -5,7 +5,7 @@
         Incentivized Innovation Through Collaborative Competition
       </h1>
       <p class="content-container--medium">
-        The Matryx Bounty Marketplace aims to accelerate innovation and reward all users who contribute.
+        The Matryx Bounty system aims to accelerate innovation and reward all users who contribute.
         A bounty is simply a challenge posted to the platform with a fair MTX reward for users who contribute
         to the answer. Any user can post bounties to the Matryx community and any user can participate.
       </p>

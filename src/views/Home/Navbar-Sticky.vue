@@ -3,7 +3,7 @@
       position: sticky;">
     <b-navbar toggleable toggle-breakpoint="sm" class="content-container content-container--medium " >
       <b-nav-toggle target="nav-toggle"></b-nav-toggle>
-      <b-navbar-brand href="#sub-nav">
+      <b-navbar-brand>
         <router-link to="/">
           <img src="../../assets/images/Matryx-Logo-Grey-CMYK.png"
             class="matryx-logo-word">

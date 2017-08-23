@@ -2,7 +2,7 @@
   <section id="about-token-sale">
     <!-- I'm Dominique now.-->
     <div class="content-container--large content-container">
-      <h1 class="text-color--matryx-grey font-size--large text--left">ABOUT OUR TOKEN SALE</h1>
+      <h1 class="text-color--matryx-grey font-size--large text--left">About Our Token Sale</h1>
       <div class="card-container--horizontal">
         <div class="about-container card-container--vertical">
           <div class="card">
