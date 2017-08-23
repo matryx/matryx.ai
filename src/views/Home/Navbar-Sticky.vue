@@ -181,6 +181,12 @@ export default {
       line-height: 30px;
     }
   }
+
+  .nav-link {
+    font-size: 11.5px;
+    line-height: 40px;
+  }
+
   .navbar-toggleable-sm .navbar-nav .nav-link {
     padding-right:0 !important;
     padding-left: 0 !important;
