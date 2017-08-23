@@ -13,7 +13,7 @@
           </p>
         </div>
         <div class="overview__column-2 mobile--order-2 overview__img--1">
-          <img src="../../assets/images/video-preview.png" alt="">
+          <!-- <img src="../../assets/images/video-preview.png" alt=""> -->
         </div>
       </div>
       <div class="overview">
@@ -24,12 +24,12 @@
           </p>
         </div>
         <div class="overview__column-2 mobile--order-2 overview__img--1">
-          <img src="../../assets/images/video-preview.png" alt="">
+          <!-- <img src="../../assets/images/video-preview.png" alt=""> -->
         </div>
       </div>
       <div class="overview">
         <div class="overview__column-2 overview__img--2">
-          <img src="../../assets/images/video-preview.png" alt="">
+          <!-- <img src="../../assets/images/video-preview.png" alt=""> -->
         </div>
         <div class="overview__column-1">
           <h1 class="text-color--matryx-black">The Problem</h1>
@@ -55,7 +55,7 @@
           </a>
         </div>
         <div class="overview__column-2 mobile--order-2 overview__img--3">
-          <img src="../../assets/images/video-preview.png" alt="">
+          <!-- <img src="../../assets/images/video-preview.png" alt=""> -->
         </div>
       </div>
     </div>
@@ -107,10 +107,10 @@ export default {
     padding: 30px 0;
     border-bottom: 1px solid $light-purple-border;
 
-    // &__img--1 {
-    //   background-image: url('../../assets/images/video-preview.png');
-    //   background-size: cover;
-    // }
+    &__img--1 {
+      background-image: url('../../assets/images/video-preview.png');
+      background-size: cover;
+    }
     // &__img--2 {
     //   background-image: url('../../assets/images/video-preview.png');
     //   background-size: cover;
