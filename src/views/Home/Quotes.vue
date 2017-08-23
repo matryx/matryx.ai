@@ -5,9 +5,12 @@
 
       <carousel
           :pagination-enabled=true
+          pagination-active-color="#0086CB"
+          pagination-color="#636A74"
           :per-page=1
           :scroll-per-page=true
           :click-target-size=20
+          :loop=true
           :autoplay=true
           :autoplay-timeout="5000">
        <slide>
@@ -23,7 +26,7 @@
        <slide>
          <span class="quote__quotes">&#x275D;</span>
          <p class="quote-text">
-           People have been waiting for this both in academia and industry. I think it’s going to disrupt some of the challenges in the life science industry and how do you bring information together. If you can imagine someone of the amazing scientists at work at these companies-- at Novartis, GSK, Pfizer, Astrozennica, whomever-- have them get together to try and solve a human health problem, as opposed to trying to do it individually…
+           People have been waiting for this both in academia and I think in industry as well. And I think specifically in the scientific genres within industries, so life sciences for example have been wanting it really well.
          </p>
          <h5 class="quote-author">
            <span class="quote-author__name">Geoff Odell</span>
@@ -58,7 +61,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../../assets/css/colors';
 
 .content-container--medium{
@@ -80,6 +83,7 @@ export default {
 
 .VueCarousel-dot-inner {
   background-color: $matryx-grey !important;
+  border: 1px solid $matryx-dark-grey !important;
 }
 
 .quote__quotes {
@@ -124,6 +128,15 @@ export default {
     &__company {
       font-size:14px;
     }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .VueCarousel-slide {
+    position: relative;
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-top: 40px;
   }
 }
 </style>

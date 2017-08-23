@@ -53,7 +53,7 @@ section.above-the-fold {
   & > .content-container {
     display:flex;
     justify-content: space-between;
-    padding: 80px 40px 160px;
+    padding: 40px 40px 160px;
   }
 }
 

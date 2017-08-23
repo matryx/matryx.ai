@@ -278,4 +278,9 @@ export default {
       }
     }
   }
+  @media screen and (max-width: 500px) {
+    .content-container {
+      padding: 0px 40px 80px;
+    }
+  }
 </style>

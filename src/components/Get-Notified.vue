@@ -152,11 +152,11 @@ export default {
   }
 
   .white-bkg .cta__form__email {
-    border: 1px solid $purple;
+    border: 1px solid $matryx-blue;
     border-right:none;
 
     &::placeholder {
-      color: $purple;
+      color: $matryx-darker-grey;
     }
   }
 
@@ -187,7 +187,7 @@ export default {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     z-index: 9999;
     background-color: rgba(0,0,0,0.5)
   }
@@ -236,9 +236,10 @@ export default {
 
   /*----- MEDIA QUERIES -----*/
   @media screen and (max-width: 500px) {
-    .cta__form {
+    .cta__form, .white-bkg {
       .cta__form__email {
         width: calc(100% - 20px);
+        border-right: 1px solid $matryx-blue;
         border-top-right-radius: 40px;
         border-bottom-right-radius: 40px;
         border-top-left-radius: 40px;

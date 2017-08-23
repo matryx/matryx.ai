@@ -8,15 +8,15 @@
         </div>
       </div>
       <div class="nanome__logos">
-        <div class="nanone__logos__calcflow logo">
-          <img src="../../assets/images/calcflow.png" alt="Calcflow">
-        </div>
-        <div class="nanome__logos__nanoone logo">
-          <img src="../../assets/images/nanoone.png" alt="Nano One">
-        </div>
-          <h3 class="text-color--matryx-grey text-align-center">OUR CURRENT PRODUCTS</h3>
+        <h3 class="text-color--matryx-grey text-align-center">OUR CURRENT PRODUCTS</h3>
           <p>Available on <a href="http://store.steampowered.com/app/493430/nanoone/" target="_blank">Steam</a> and <a href="http://calcflow.io/" target="_blank">Oculus</a>
           </p>
+        <div class="nanone__logos__calcflow logo">
+          <img src="../../assets/images/nanometeam.png" alt="team">
+        </div>
+        <!-- <div class="nanome__logos__nanoone logo">
+          <img src="../../assets/images/nanoone.png" alt="Nano One">
+        </div> -->
       </div>
     </div>
   </section>
@@ -34,20 +34,20 @@ export default {
 .nanome {
   display: flex;
   justify-content: center;
-  color: #4A4A4A;
-  flex-direction: column;
+  color: #4A4A4A ;
+  flex-direction: row;
 }
 
 .nanome__info {
   padding: 20px 40px 20px 0;
   max-width: 600px;
 
-  &__title {
+ &__title {
     font-size: 38px;
     line-height: 34px;
   }
 
-  &__text {
+ &__text {
     margin-top: 30px;
     font-size: 18px;
     line-height: 30px;
@@ -55,19 +55,28 @@ export default {
     width: 100%;
   }
 }
+.nanome__logos{
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+
+   h3 {
+      padding-top: 20px;
+    }
+  }
 
 .logo {
   margin-bottom: 20px;
-  /*min-width: 300px;*/
   text-align: left;
   display: inline-block;
   max-width: calc(50%-10px);
+  width: 100%;
+  text-align: center;
 }
 
 
 .logo > img {
-  max-height: 215px;
-  max-width: 175px;
+  max-height: 300px;
 }
 
 /*----- MEDIA QUERIES -----*/
@@ -76,7 +85,7 @@ export default {
     flex-wrap: wrap;
   }
   .nanome__info {
-
+    padding: 20px 0;
     &__text {
       max-width: 100%;
     }
@@ -84,7 +93,7 @@ export default {
   .nanome__logos {
     margin-top: 50px;
 
-    h3{
+   h3{
       margin-bottom: 40px;
     }
   }
@@ -92,8 +101,7 @@ export default {
 @media screen and (max-width: 500px) {
   .logo {
     img {
-      max-height: 125px;
-      max-width: 125px;
+      max-height: 150px;
     }
   }
 }

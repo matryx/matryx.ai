@@ -99,8 +99,20 @@ section.cta-banner.white-bkg {
 
 @media screen and (max-width: 550px) {
   #Footer {
-    bottom: -180px;
-    padding-bottom: 100px;
+    bottom: -220px;
+    padding: 100px 0 170px;
+  }
+
+ .cta-middle-banner .cta-banner  {
+    top: 0;
+    position: relative;
+    padding: 180px 0 90px;
+    margin-top: -130px;
+  }
+
+ section.cta-banner.white-bkg {
+    padding: 140px 0px;
+    margin-top: -180px;
   }
 }
 

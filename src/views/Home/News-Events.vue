@@ -159,4 +159,10 @@ export default {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .news-events {
+    margin-bottom: -300px;
+  }
+}
+
 </style>

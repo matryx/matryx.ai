@@ -54,8 +54,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
 
+
+
+// <style lang="scss" scoped>
 section {
   padding: 20px 0 ;
 }
@@ -86,11 +88,11 @@ p.content-container--medium {
   justify-content: space-between;
   margin: 40px 0;
 
-  &__diagram {
+ &__diagram {
     flex: 1 1 auto;
     padding-top: 30px;
 
-    h4, caption {
+   h4, caption {
       width: 100%;
       text-align:center;
       font-size: 20px;
@@ -106,24 +108,24 @@ p.content-container--medium {
     }
   }
 
-  &__explanation{
+ &__explanation{
     padding-top: 20px;
     width: 50%;
     max-width: 400px;
     margin-right: 80px;
     position:relative;
 
-    & > h4 {
+   & > h4 {
       opacity: 0.8;
       font-size:22px;
       margin-bottom: 20px;
     }
 
-    &__card {
+   &__card {
       border: 1px solid rgba(255,255, 255,0.3);
       padding: 20px;
 
-      &__item {
+     &__item {
         & > span {
           display:inline-block;
           vertical-align: top;
@@ -134,12 +136,12 @@ p.content-container--medium {
           width: calc(100% - 70px);
           margin-left: 20px;
 
-          &::after {
+         &::after {
             content: '';
             clear: both;
           }
 
-          span, p {
+         span, p {
             font-size: 16px;
             display:block;
             opacity: 0.8;
@@ -159,12 +161,12 @@ p.content-container--medium {
   .bounty {
     flex-direction: column;
 
-    & > * {
+   & > * {
       width: 100%;
       max-width: 100%;
     }
 
-    &__explanation__card {
+   &__explanation__card {
       margin-bottom: 40px;
     }
     &__diagram img {
@@ -174,5 +176,122 @@ p.content-container--medium {
     }
   }
 }
-
+//
+// section {
+//   padding: 20px 0 ;
+// }
+//
+// h1, h4, p, caption {
+//   opacity: 0.8;
+// }
+//
+// h1 {
+//   margin-bottom: 20px;
+//   max-width: 550px;
+// }
+//
+// .bkg--blue-gradient {
+//   background-image: url('../../assets/images/backgrounds/bluegradient.png');
+//   background-size:cover;
+//   background-repeat: no-repeat;
+//   background-position:bottom;
+// }
+//
+// p.content-container--medium {
+//   max-width: 750px;
+//   font-size: 18px;
+// }
+//
+// .bounty {
+//   display:-webkit-box;display:-ms-flexbox;display:flex;
+//   justify-content: space-between;
+//   margin: 40px 0;
+//
+//   &__diagram {
+//     flex: 1 1 auto;
+//     padding-top: 30px;
+//
+//     h4, caption {
+//       width: 100%;
+//       text-align:center;
+//       font-size: 20px;
+//     }
+//     caption{
+//       display: block;
+//       padding-top: 0;
+//       margin-bottom: 20px;
+//       font-size: 14px;
+//     }
+//     img {
+//       width: 100%;
+//     }
+//   }
+//
+//   &__explanation{
+//     padding-top: 20px;
+//     width: 50%;
+//     max-width: 400px;
+//     margin-right: 80px;
+//     position:relative;
+//
+//     & > h4 {
+//       opacity: 0.8;
+//       font-size:22px;
+//       margin-bottom: 20px;
+//     }
+//
+//     &__card {
+//       border: 1px solid rgba(255,255, 255,0.3);
+//       padding: 20px;
+//
+//       &__item {
+//         & > span {
+//           display:inline-block;
+//           vertical-align: top;
+//           font-size: 16px;
+//         }
+//         h3 {
+//           display: inline-block;
+//           width: calc(100% - 70px);
+//           margin-left: 20px;
+//
+//           &::after {
+//             content: '';
+//             clear: both;
+//           }
+//
+//           span, p {
+//             font-size: 16px;
+//             display:block;
+//             opacity: 0.8;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+//
+//
+// /*----- MEDIA QUERIES -----*/
+// @media screen and (max-width: 900px) {
+//   .content-container {
+//     padding-bottom: 0;
+//   }
+//   .bounty {
+//     flex-direction: column;
+//     & > * {
+//       width: 100%;
+//       max-width: 100%;
+//     }
+//     &__explanation__card {
+//       margin-bottom: 40px;
+//     }
+//     &__diagram img {
+//       max-width: 500px;
+//       margin: 0 auto;
+//       display: block;
+//     }
+//   }
+// }
+//
 </style>

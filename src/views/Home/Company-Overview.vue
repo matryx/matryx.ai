@@ -12,9 +12,6 @@
             Matryx is a platform for decentralized collaboration. Matryx consists of a bounty system, a library of digital assets, and a marketplace. Problems are posted, along with a bounty for a verified solution. Users then collaborate to solve problems, share results, and earn rewards. Rewards are given to all contributors, and all submissions are added to the Matryx library and marketplace for future purchase. This will create an ecosystem of public collaboration and ideas that will drive research and innovation.
           </p>
         </div>
-        <div class="overview__column-2 mobile--order-2 overview__img--1">
-          <!-- <img src="../../assets/images/video-preview.png" alt=""> -->
-        </div>
       </div>
       <div class="overview">
         <div class="overview__column-1 mobile--order-1">
@@ -107,17 +104,19 @@ export default {
     padding: 30px 0;
     border-bottom: 1px solid $light-purple-border;
 
-    &__img--1 {
-      background-image: url('../../assets/images/video-preview.png');
+    & > * {
       background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &__img--1 {
+      background-image: url('../../assets/images/co1.jpeg');
     }
     &__img--2 {
-      background-image: url('../../assets/images/video-preview.png');
-      background-size: cover;
+      background-image: url('../../assets/images/math.jpg');
     }
     &__img--3 {
-      background-image: url('../../assets/images/video-preview.png');
-      background-size: cover;
+      background-image: url('../../assets/images/co2.jpeg');
     }
 
     &__column-1,

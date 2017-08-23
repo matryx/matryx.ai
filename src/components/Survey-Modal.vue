@@ -19,7 +19,7 @@
           <div class="close-modal text-muted" @click.prevent="closeModal">
             X
           </div>
-          <div v-show="!submitted">
+          <!-- <div v-show="!submitted"> -->
             <h2 class="text-color--matryx-blue">
               Thank you for subscribing
             </h2>
@@ -70,9 +70,8 @@ export default {
         display: '750+',
         label: '750+eth'
       }],
-      // showModal: false,
       intendedAmount: 'None Selected',
-      showModal: false,
+      // showModal: false,
       noIntendedAmount: false,
       submitted: false
     }
