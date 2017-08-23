@@ -16,7 +16,7 @@
             <a aria-disabled="false" href="#" target="_self" class="nav-link">CONTACT</a>
           </li>
           <li class="nav-item nav-link text-color--white">
-            <a aria-disabled="false" href="https://blog.matryx.ai/" target="_self" class="nav-link">BLOG</a>
+            <a aria-disabled="false" href="https://blog.matryx.ai/" target="_blank" class="nav-link">BLOG</a>
           </li>
           <li class="nav-item nav-link text-color--white">
             <a aria-disabled="false" href="#" target="_self" class="nav-link">FAQ</a>
@@ -67,11 +67,17 @@
       <b-collapse is-nav id="nav-toggle">
 
       <b-nav is-nav-bar>
-       <b-nav-item class="nav-link text-color--matryx-grey" target="_blank" href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf">WHITEPAPER</b-nav-item>
-       <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">CONTACT</b-nav-item>
-       <b-nav-item href="https://blog.matryx.ai/" target="_blank" class="nav-link text-color--matryx-grey nav-link--mobile-only">BLOG</b-nav-item>
-       <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">FAQ</b-nav-item>
-       <b-nav-item class="nav-item-language nav-link--mobile-only">
+        <b-nav-item class="nav-link text-color--matryx-grey"
+          target="_blank"
+          href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf"
+          @click.prevent="whitePaperClick"
+        >
+          WHITEPAPER
+        </b-nav-item>
+        <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">CONTACT</b-nav-item>
+        <b-nav-item href="https://blog.matryx.ai/" target="_blank" class="nav-link text-color--matryx-grey nav-link--mobile-only">BLOG</b-nav-item>
+        <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">FAQ</b-nav-item>
+        <b-nav-item class="nav-item-language nav-link--mobile-only">
          <b-dropdown id="language" text="Language" class="language">
            <b-dropdown-item>English</b-dropdown-item>
            <b-dropdown-item>Chinese</b-dropdown-item>
@@ -79,7 +85,7 @@
            <b-dropdown-item>Russian</b-dropdown-item>
            <b-dropdown-item>Spanish</b-dropdown-item>
          </b-dropdown>
-       </b-nav-item>
+        </b-nav-item>
 
        <!-- REMOVED MOBILE ITEMS
        <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">PRESS</b-nav-item>
@@ -128,6 +134,7 @@
 import CTABanner from './components/CTA-Banner'
 import AppFooter from './components/App-Footer'
 import SurveyModal from './components/Survey-Modal'
+import { appAnalytics } from '@/analytics'
 
 import VueSticky from 'vue-sticky' // Es6 module
 
@@ -163,6 +170,10 @@ export default {
   methods: {
     openGetNotified () {
       this.$store.commit('showGetNotifiedModal', true)
+    },
+
+    whitePaperClick () {
+      appAnalytics.whitePaperClick('Navbar')
     }
   }
 }
