@@ -140,7 +140,9 @@ export default {
 
   data () {
     return {
-      showThankYouModal: false
+      showThankYouModal: false,
+      showGetNotifiedModal: false,
+      showModal: false
     }
   },
 
