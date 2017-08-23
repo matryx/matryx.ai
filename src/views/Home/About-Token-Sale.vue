@@ -6,19 +6,25 @@
       <div class="card-container--horizontal">
         <div class="about-container card-container--vertical">
           <div class="card">
-            <h2 class="text-color--matryx-black">Why do a Token Sale?</h2>
+            <h2 class="text-color--matryx-black">
+              Why We're Having a Token Sale
+            </h2>
             <p class="text-color--matryx-dark-grey">
               The ultimate goal of Matryx is to incentivize collaboration in fields of knowledge and creation like STEM. To reach that goal, we need resources that support R&#38;D demands and help create a community of participants and contributors. Token Sales have quickly become a proven means to achieve such growth for blockchain-based technologies like Matryx.
             </p>
           </div>
           <div class="card">
-            <h2 class="text-color--matryx-black">Why do we need a Blockchain?</h2>
+            <h2 class="text-color--matryx-black">
+              How Matryx Uses the Blockchain
+            </h2>
             <p class="text-color--matryx-dark-grey">
               Utilizing blockchain-based bounties, Matryx enables users to validate each participant's contribution to a solution and reward them with MTX tokens. Using a token enables us to leverage smart contract systems, upgrade over time, and gives us the flexibility to shape the platform to the needs of the users.
             </p>
           </div>
           <div class="card">
-            <h2 class="text-color--matryx-black">What are the benefits? </h2>
+            <h2 class="text-color--matryx-black">
+              Benefits of the Blockchain
+            </h2>
             <p class="text-color--matryx-dark-grey">
               Smart contracts reduce the friction of tracking and compensating contributors. Each round of a bounty competition, the winners are rewarded, and a new generation of children is created. All fiterations are managed by the tournament contracts. The provenance of an idea or work can be easily tracked and can be rewarded fairly and publicly.
             </p>
@@ -220,14 +226,17 @@ export default {
         background-color: #80828D;
         border: 3px solid white;
         color: rgba(255, 255, 255, 0.7);
-        display: inline-block;
+        // display: inline-block;
         border-radius: 50px;
         padding: 2px 2px 2px 2px;
         height: 34px;
         width: 34px;
-        text-align: center;
+        // text-align: center;
         position: absolute;
         left: -17px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
           &--future { background-color: $matryx-blue; color: rgba(255,255,255,0.7);}
           &--past { background-color: $classic-grey;color: rgba(255,255,255,0.7);}
