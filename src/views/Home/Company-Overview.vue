@@ -48,7 +48,7 @@
 
             Once a problem is solved, rewards and recognition are given to all winning contributors, not just the last contributor, for fairness and transparency.
           </p>
-          <a href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf" target="_blank" @click="whitePaperClick">
+          <a href="../../assets/paper/matryx-white-paper.pdf" target="_blank" @click="whitePaperClick">
             <button class="btn-red whitepaper-btn">Read the Whitepaper</button>
           </a>
         </div>
@@ -134,13 +134,13 @@ export default {
       background-position: center;
     }
     &__img--1 {
-      background-image: url('../../assets/images/co1.jpeg');
+      background-image: url('../../assets/images/overview/co0.jpg');
     }
     &__img--2 {
-      background-image: url('../../assets/images/math.jpg');
+      background-image: url('../../assets/images/overview/co2.jpg');
     }
     &__img--3 {
-      background-image: url('../../assets/images/co2.jpeg');
+      background-image: url('../../assets/images/overview/co1.jpg');
     }
 
     &__column-1,
