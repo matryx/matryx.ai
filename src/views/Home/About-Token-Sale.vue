@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section  id="about-tokensale">
     <!-- I'm Dominique now.-->
     <div class="content-container--large content-container">
       <h1 class="text-color--matryx-grey font-size--large text--left">ABOUT OUR TOKEN SALE</h1>

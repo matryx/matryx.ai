@@ -1,7 +1,7 @@
 <template>
   <section>
     <hr>
-    <div class="content-container--large text--light content-container">
+    <div class="content-container--large text--light content-container" id="what-is-matryx">
       <h2 class="text-color--matryx-grey font-size--large text-center">
         Matryx: The Platform for Decentralized Collaboration
       </h2>

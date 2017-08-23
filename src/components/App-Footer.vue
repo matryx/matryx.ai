@@ -24,7 +24,7 @@
     <div class="footer__legal">
       <img src="../assets/images/Matryx-Logo-White-640px.png" alt="Logo">
       <p class="font-size--small text-color--white">
-        Copyright &copy; 2017 Matryx
+        &copy; 2017 All rights reserved.
       </p>
     </div>
   </footer>

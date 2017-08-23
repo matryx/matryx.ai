@@ -5,28 +5,28 @@
       <button type="button" aria-label="Toggle navigation" aria-controls="sub-nav--toggle" aria-expanded="false" class="navbar-toggler navbar-toggler-right">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a aria-disabled="false" href="#" target="_self" class="navbar-brand">
-        <a href="/" class="router-link-exact-active router-link-active">
+      <a aria-disabled="false" href="/" target="_self" class="navbar-brand">
+        <!-- <a href="/" class="router-link-exact-active router-link-active"> -->
           <img src="./assets/images/Matryx-Mark-White.png" alt="">
-        </a>
+        <!-- </a> -->
       </a>
       <div id="sub-nav--toggle" class="navbar-collapse collapse" style="display: none;">
         <ul class="nav navbar-nav">
-          <li class="nav-item nav-link text-color--white">
+          <!-- <li class="nav-item nav-link text-color--white">
             <a aria-disabled="false" href="#" target="_self" class="nav-link">CONTACT</a>
-          </li>
+          </li> -->
           <li class="nav-item nav-link text-color--white">
             <a aria-disabled="false" href="https://blog.matryx.ai/" target="_blank" class="nav-link">BLOG</a>
           </li>
-          <li class="nav-item nav-link text-color--white">
+          <!-- <li class="nav-item nav-link text-color--white">
             <a aria-disabled="false" href="#" target="_self" class="nav-link">FAQ</a>
-          </li>
-          <li class="nav-item nav-link text-color--white">
+          </li> -->
+          <!-- <li class="nav-item nav-link text-color--white">
             <a aria-disabled="false" href="#" target="_self" class="nav-link">PRESS</a>
           </li>
           <li class="nav-item nav-link text-color--white">
             <a aria-disabled="false" href="#" target="_self" class="nav-link">LEGAL</a>
-          </li>
+          </li> -->
         </ul>
         <ul class="ml-auto nav navbar-nav">
           <li class="nav-item social-icon">
@@ -44,7 +44,7 @@
               <img src="./assets/icons/icon-facebook.png" alt="Matryx Facebook Page">
             </a>
           </li>
-          <li class="nav-item nav-item-language">
+          <!-- <li class="nav-item nav-item-language">
             <b-dropdown id="language" text="Language" class="language">
               <b-dropdown-item>English</b-dropdown-item>
               <b-dropdown-item>Chinese</b-dropdown-item>
@@ -52,7 +52,7 @@
               <b-dropdown-item>Russian</b-dropdown-item>
               <b-dropdown-item>Spanish</b-dropdown-item>
             </b-dropdown>
-          </li>
+          </li> -->
         </ul>
       </div>
     </nav>
@@ -61,25 +61,25 @@
     position: sticky;">
     <b-navbar toggleable toggle-breakpoint="sm" class="content-container content-container--medium " >
       <b-nav-toggle target="nav-toggle"></b-nav-toggle>
-      <b-navbar-brand href="#">
-        <router-link to="/"><img src="../src/assets/images/Matryx-Logo-Grey-CMYK.png" alt=""></router-link>
-      </b-navbar-brand>
+      <!-- <b-navbar-brand href="#"> -->
+        <router-link to="/" class="navbar-brand"><img src="../src/assets/images/Matryx-Logo-Grey-CMYK.png" alt=""></router-link>
+      <!-- </b-navbar-brand> -->
       <b-collapse is-nav id="nav-toggle">
 
       <b-nav is-nav-bar>
         <b-nav-item class="nav-link text-color--matryx-grey"
           target="_blank"
-          href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf"
+          href="https://drive.google.com/file/d/0BzKF4Hs96tr5RzRmalBZMGlZQ0U/view"
           @click="whitePaperClick"
         >
           WHITEPAPER
         </b-nav-item>
-        <b-nav-item class="nav-link text-color--matryx-grey nav-link--mobile-hide" href="#">WHAT IS MATRYX</b-nav-item>
-        <b-nav-item class="nav-link text-color--matryx-grey nav-link--mobile-hide" href="#">ABOUT</b-nav-item>
-        <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">CONTACT</b-nav-item>
+        <b-nav-item class="nav-link text-color--matryx-grey nav-link--mobile-hide" href="#what-is-matryx">WHAT IS MATRYX</b-nav-item>
+        <b-nav-item class="nav-link text-color--matryx-grey nav-link--mobile-hide" href="#about-tokensale">ABOUT</b-nav-item>
+        <!-- <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">CONTACT</b-nav-item> -->
         <b-nav-item href="https://blog.matryx.ai/" target="_blank" class="nav-link text-color--matryx-grey nav-link--mobile-only">BLOG</b-nav-item>
-        <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">FAQ</b-nav-item>
-        <b-nav-item class="nav-item-language nav-link--mobile-only">
+        <!-- <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">FAQ</b-nav-item> -->
+        <!-- <b-nav-item class="nav-item-language nav-link--mobile-only">
           <b-dropdown id="language" text="Language" class="language">
             <b-dropdown-item>English</b-dropdown-item>
             <b-dropdown-item>Chinese</b-dropdown-item>
@@ -87,7 +87,7 @@
             <b-dropdown-item>Russian</b-dropdown-item>
             <b-dropdown-item>Spanish</b-dropdown-item>
           </b-dropdown>
-        </b-nav-item>
+        </b-nav-item> -->
 
        <!-- REMOVED MOBILE ITEMS
        <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">PRESS</b-nav-item>
