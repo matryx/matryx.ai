@@ -55,7 +55,10 @@
               <div class="roadmap__section__quarter roadmap__section__quarter--past ">Q2</div>
               <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>Matryx White Paper Release</p>
-                <caption>Read the white paper <a href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf">here</a>
+                <caption>Read the white paper
+                  <a href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf" target="_blank">
+                    here
+                  </a>
                 </caption>
                 <br/>
               </div>
@@ -64,7 +67,7 @@
               <div class="roadmap__section__quarter roadmap__section__quarter--future">Q3</div>
               <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>Token Sale Launch</p>
-                <caption>Token Pre-Sale Launches at 10am GMT for purchases of over 150 ETH. Pre-sale period will remain open for one week from Sept. 6 to Sept 13
+                <caption>Token Pre-Sale Launches Sept. 6 at 10am GMT for purchases of over 150 ETH. Pre-sale period will remain open for one week from Sept. 6 to Sept 13
                 </caption>
               </div>
             </div>

@@ -70,7 +70,7 @@ section.above-the-fold {
 
 .above-the-fold {
   border-radius: 0;
-  background-image: url('../../assets/images/backgrounds/abovethefoldbkg.jpg');
+  background-image: url('../../assets/images/backgrounds/abovethefoldbkg.png');
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 0;
