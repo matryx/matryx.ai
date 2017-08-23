@@ -48,7 +48,7 @@ export default {
     return {
       amounts: ['0-75 ETH', '150 ETH', '300 ETH', '750 ETH', '750+ ETH'],
       intendedAmount: 'None Selected',
-      showModal: true,
+      showModal: false,
       noIntendedAmount: false
     }
   },

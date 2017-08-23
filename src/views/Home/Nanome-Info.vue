@@ -8,13 +8,14 @@
         </div>
       </div>
       <div class="nanome__logos">
+        <h3 class="text-color--matryx-grey">OUR CURRENT PRODUCTS</h3>
         <div class="nanone__logos__calcflow logo">
           <img src="../../assets/images/calcflow.png" alt="Calcflow">
         </div>
         <div class="nanome__logos__nanoone logo">
           <img src="../../assets/images/nanoone.png" alt="Nano One">
         </div>
-        <p class="text-align-center">Available on <a href="http://store.steampowered.com/app/493430/nanoone/" target="_blank">Steam</a> and <a href="http://calcflow.io/" target="_blank">Oculus</a></p>
+        <p>Available on <a href="http://store.steampowered.com/app/493430/nanoone/" target="_blank">Steam</a> and <a href="http://calcflow.io/" target="_blank">Oculus</a></p>
       </div>
     </div>
   </section>
@@ -33,6 +34,7 @@ export default {
   display: flex;
   justify-content: center;
   color: #4A4A4A;
+  flex-direction: column;
 }
 
 .nanome__info {
@@ -47,16 +49,19 @@ export default {
     margin-top: 30px;
     font-size: 18px;
     line-height: 30px;
-    max-width: 400px;
+    max-width: 900px;
     width: 100%;
   }
 }
 
 .logo {
   margin-bottom: 20px;
-  min-width: 300px;
-  text-align: center;
+  /*min-width: 300px;*/
+  text-align: left;
+  display: inline-block;
+  max-width: calc(50%-10px);
 }
+
 
 .logo > img {
   max-height: 215px;
@@ -75,15 +80,10 @@ export default {
     }
   }
   .nanome__logos {
-    display:-webkit-box;display:-ms-flexbox;display:flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
     margin-top: 50px;
 
-    .logo {
-      min-width: 200px;
+    h3{
+      margin-bottom: 40px;
     }
   }
 }

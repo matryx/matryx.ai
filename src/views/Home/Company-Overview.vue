@@ -2,7 +2,7 @@
   <section>
     <hr>
     <div class="content-container--large text--light content-container">
-      <h2 class="text-color--matryx-grey font-size--medium text-left">
+      <h2 class="text-color--matryx-grey font-size--large text-left">
         Overview
       </h2>
       <div class="overview">
