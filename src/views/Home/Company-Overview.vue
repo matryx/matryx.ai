@@ -2,9 +2,10 @@
   <section>
     <hr>
     <div class="content-container--large text--light content-container">
-      <h2 class="text-color--matryx-grey font-size--large text-left">
-        Overview
+      <h2 class="text-color--matryx-grey font-size--large text-center">
+        Matryx: The Platform for Decentralized Collaboration
       </h2>
+      <hr>
       <div class="overview">
         <div class="overview__column-3 mobile--order-1">
           <h1 class="text-color--matryx-black">What is Matryx</h1>
@@ -47,7 +48,7 @@
 
             Once a problem is solved, rewards and recognition are given to all winning contributors, not just the last contributor, for fairness and transparency.
           </p>
-          <a href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf" target="_blank">
+          <a href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf" target="_blank" @click="whitePaperClick">
             <button class="btn-red">Read the Whitepaper</button>
           </a>
         </div>
@@ -60,8 +61,16 @@
 </template>
 
 <script>
+import { appAnalytics } from '@/analytics'
+
 export default {
-  name: 'CompanyOverview'
+  name: 'CompanyOverview',
+
+  methods: {
+    whitePaperClick () {
+      appAnalytics.whitePaperClick('Company-Overview')
+    }
+  }
 }
 </script>
 
