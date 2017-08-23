@@ -8,6 +8,7 @@ const debug = process.env.NODE_ENV !== 'production'
 export default new Vuex.Store({
   state: {
     showModal: false,
+    showGetNotifiedModal: false,
     email: ''
   },
   getters: {
@@ -20,6 +21,9 @@ export default new Vuex.Store({
     },
     setEmail (state, email) {
       state.email = email
+    },
+    showGetNotifiedModal (state, show) {
+      state.showGetNotifiedModal = show
     }
   },
   strict: debug

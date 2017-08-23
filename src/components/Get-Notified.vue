@@ -96,6 +96,9 @@ export default {
   methods: {
     getNotified () {
       if (isValidEmail(this.email)) {
+        // Close modal just in case
+        this.$store.commit('showGetNotifiedModal', false)
+
         this.showEmailWarning = false
         this.showSpinner = true
 

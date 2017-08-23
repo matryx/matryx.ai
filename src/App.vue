@@ -154,7 +154,7 @@
       <!-- Right aligned nav items -->
       <b-nav is-nav-bar class="ml-auto">
         <b-nav-item class="get-notified">
-          <button v-b-modal.getNotified>GET NOTIFIED</button>
+          <button @click.prevent="openGetNotified">GET NOTIFIED</button>
           <!-- <button v-b-modal.thankYouModal>openthakyou</button> -->
         </b-nav-item>
       </b-nav>
@@ -162,8 +162,8 @@
     </b-navbar>
   </div>
 
-  <b-modal id="getNotified" v-model="showGetNotifiedModal"  no-close-on-esc no-close-on-backdrop >
-    <CTABanner cta-location="Header"></CTABanner>
+  <b-modal id="getNotified" v-model="showGetNotifiedModal" no-close-on-esc no-close-on-backdrop>
+    <CTA-Banner ctaLocation="Header"></CTA-Banner>
   </b-modal>
 
   <Survey-Modal></Survey-Modal>
@@ -191,8 +191,7 @@ export default {
 
   data () {
     return {
-      showThankYouModal: false,
-      showGetNotifiedModal: false
+      showThankYouModal: false
     }
   },
 
@@ -204,18 +203,17 @@ export default {
 
   directives: {
     'sticky': VueSticky
+  },
 
+  computed: {
+    showGetNotifiedModal () {
+      return this.$store.state.showGetNotifiedModal
+    }
   },
 
   methods: {
-    submitIntendedAmount: function () {
-      console.log('Intended Amount: ', this.intendedAmount)
-      if (this.intendedAmount === 0) {
-        this.noIntendedAmount = true
-      } else {
-        this.showThankYouModal = !this.showThankYouModal
-        this.intendedAmountSent = true
-      }
+    openGetNotified () {
+      this.$store.commit('showGetNotifiedModal', true)
     }
   }
 }
