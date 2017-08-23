@@ -1,5 +1,5 @@
 <template>
-  <section class="news-events">
+  <section class="news-events" id="news-events">
     <div class="content-container content-container--large">
       <h2 class="news-events__sectionHeader text-color--matryx-grey">NEWS &#38; EVENTS</h2>
       <div class="news-events__title">

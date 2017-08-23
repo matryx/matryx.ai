@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="what-matryx">
     <hr>
     <div class="content-container--large text--light content-container">
       <h2 class="text-color--matryx-grey font-size--large text-center">
@@ -30,7 +30,7 @@
           <!-- <img src="../../assets/images/video-preview.png" alt=""> -->
         </div>
         <div class="overview__column-1">
-          <h1 class="text-color--matryx-black">The Problem</h1>
+          <h1 class="text-color--matryx-black">The Collaboration Problem</h1>
           <p class="text-color--matryx-dark-grey">
             Solving the world’s hardest problems in silos leads to duplication of effort and redundancy. By providing a global community that encourages and incentivizes the exchange of ideas, time to innovation is greatly reduced while problems are solved at a rate otherwise impossible.
             <br/> <br/>

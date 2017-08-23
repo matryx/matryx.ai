@@ -1,5 +1,5 @@
 <template>
-  <section class="bkg--blue-gradient">
+  <section class="bkg--blue-gradient" id="bounty-system">
     <div class="content-container content-container--large   text-color--white">
       <h1 class="content-container--medium">
         Incentivized Innovation Through Collaborative Competition
