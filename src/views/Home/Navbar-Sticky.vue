@@ -123,6 +123,23 @@ export default {
   .nav-link--mobile-only {
     display:none;
   }
+
+  .nav-link{
+    transition: all 0.3s;
+    padding: 5px 3px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    line-height: 40px;
+    font-size: 11.5px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.text-color--white a.nav-link{
+      color: #FFF !important;
+    }
+  }
 }
 
 .navbar.navbar-light {
@@ -168,21 +185,6 @@ export default {
     padding-right:0 !important;
     padding-left: 0 !important;
     padding-top: 0 !important;
-  }
-  .nav-link{
-    transition: all 0.3s;
-    padding: 5px 3px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    line-height: 40px;
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    &.text-color--white a.nav-link{
-      color: #FFF !important;
-    }
   }
 }
 .navbar-toggleable-md .navbar-collapse {
