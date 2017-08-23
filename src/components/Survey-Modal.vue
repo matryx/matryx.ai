@@ -49,6 +49,8 @@
 </template>
 
 <script>
+import { appAnalytics } from '@/analytics'
+
 export default {
   data () {
     return {
@@ -86,15 +88,8 @@ export default {
   methods: {
     handleSubmit () {
       console.log('Intended Amount', this.intendedAmount)
-      // Call Identify again so Mailchimp tags are updated
-      window.analytics.identify(this.email, {
-        'Intent Amount': `${this.intendedAmount}`
-      })
-      // Track Intent for Google Analytics
-      window.analytics.track(`${this.intendedAmount} ETH Intent`, {
-        category: 'Intent',
-        label: `${this.intendedAmount}eth`
-      })
+      // Analytics
+      appAnalytics.surveyModal(this.email, this.intendedAmount)
       // Reset intended amount
       this.intendedAmount = 'None Selected'
       // Close modal
