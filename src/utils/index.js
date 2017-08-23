@@ -1,18 +1,25 @@
 // Get UTM variables
-export const getUTMS = function (email) {
+export const getUTMS = function () {
   console.log('getUTM')
-  const traits = { email }
+  const traits = {}
 
   if (window.location.search) {
     const queries = document.location.search.substr(1).split('&')
-    console.log('queries', queries)
 
     queries.forEach(q => {
       var i = q.split('=')
-      var utm = i[0].split('_')
-      traits[utm[1].toString().toUpperCase()] = i[1].toString()
+      // var utm = i[0].split('_')
+      var utm = i[0]
+      traits[utm.toString().toUpperCase()] = i[1].toString()
     })
 
     return traits
   }
+
+  return traits
+}
+
+export function isValidEmail (value) {
+  const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  return regex.test(value)
 }
