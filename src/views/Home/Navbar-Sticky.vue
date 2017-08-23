@@ -5,7 +5,8 @@
       <b-nav-toggle target="nav-toggle"></b-nav-toggle>
       <b-navbar-brand href="#">
         <router-link to="/">
-          <img src="../../assets/images/Matryx-Logo-Grey-CMYK.png" alt="" class="matryx-logo-words">
+          <img src="../../assets/images/Matryx-Logo-Grey-CMYK.png"
+            class="matryx-logo-word">
         </router-link>
       </b-navbar-brand>
       <b-collapse is-nav id="nav-toggle">
@@ -118,11 +119,10 @@ export default {
     padding-right: 0 !important;
     padding-left: 0 !important;
   }
-}
 
-// Matryx logo so it doesn't get squished in the build
-.navbar .navbar-light .navbar-brand .matryx-logo-words {
-  min-width: 184px;
+  .nav-link--mobile-only {
+    display:none;
+  }
 }
 
 .navbar.navbar-light {
@@ -141,6 +141,10 @@ export default {
 
     img {
       height: 100%;
+    }
+
+    .matryx-logo-word {
+      min-width: 184px;
     }
   }
   .social-icon-holder {
@@ -187,10 +191,6 @@ export default {
 .navbar-toggler.navbar-toggler-right {
   background-color: #fff;
   opacity: 0.9;
-}
-
-.nav-link--mobile-only {
-  display:none;
 }
 
 // language
@@ -240,7 +240,9 @@ nav {
       color: #fff;
       outline:none;
       background-color: $matryx-light-blue !important;
-
+      display: flex;
+      align-items: center;
+      line-height: 0;
 
       &:active,&:hover {
         outline: none;
