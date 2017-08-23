@@ -36,7 +36,7 @@
           </li>
           <li class="nav-item social-icon">
             <a aria-disabled="false" href="https://www.twitter.com/matryx_ai" target="_blank" rel="noopener" class="nav-link">
-              <img src="./assets/icons/icon-twitter.gif" alt="Matryx Twitter Page">
+              <img src="./assets/icons/icon-twitter.png" alt="Matryx Twitter Page">
             </a>
           </li>
           <li class="nav-item social-icon">
@@ -70,28 +70,29 @@
         <b-nav-item class="nav-link text-color--matryx-grey"
           target="_blank"
           href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf"
-          @click.prevent="whitePaperClick"
+          @click="whitePaperClick"
         >
           WHITEPAPER
         </b-nav-item>
+        <b-nav-item class="nav-link text-color--matryx-grey nav-link--mobile-hide" href="#">WHAT IS MATRYX</b-nav-item>
+        <b-nav-item class="nav-link text-color--matryx-grey nav-link--mobile-hide" href="#">ABOUT</b-nav-item>
         <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">CONTACT</b-nav-item>
         <b-nav-item href="https://blog.matryx.ai/" target="_blank" class="nav-link text-color--matryx-grey nav-link--mobile-only">BLOG</b-nav-item>
         <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">FAQ</b-nav-item>
         <b-nav-item class="nav-item-language nav-link--mobile-only">
-         <b-dropdown id="language" text="Language" class="language">
-           <b-dropdown-item>English</b-dropdown-item>
-           <b-dropdown-item>Chinese</b-dropdown-item>
-           <b-dropdown-item>Japanese</b-dropdown-item>
-           <b-dropdown-item>Russian</b-dropdown-item>
-           <b-dropdown-item>Spanish</b-dropdown-item>
-         </b-dropdown>
+          <b-dropdown id="language" text="Language" class="language">
+            <b-dropdown-item>English</b-dropdown-item>
+            <b-dropdown-item>Chinese</b-dropdown-item>
+            <b-dropdown-item>Japanese</b-dropdown-item>
+            <b-dropdown-item>Russian</b-dropdown-item>
+            <b-dropdown-item>Spanish</b-dropdown-item>
+          </b-dropdown>
         </b-nav-item>
 
        <!-- REMOVED MOBILE ITEMS
        <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">PRESS</b-nav-item>
        <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">LEGAL</b-nav-item>
-       <b-nav-item class="nav-link text-color--matryx-grey" href="#">WHAT IS MATRYX</b-nav-item>
-       <b-nav-item class="nav-link text-color--matryx-grey" href="#">ABOUT</b-nav-item>
+
        <b-nav-item target="_blank"
          href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ"
          class="social-icon nav-link--mobile-only bkg-color--matryx-grey">
@@ -106,16 +107,15 @@
 
      </b-nav>
 
-      <!-- Right aligned nav items -->
       <b-nav is-nav-bar class="ml-auto">
         <b-nav-item class="get-notified">
           <button @click.prevent="openGetNotified">GET NOTIFIED</button>
-          <!-- <button v-b-modal.thankYouModal>openthakyou</button> -->
         </b-nav-item>
       </b-nav>
       </b-collapse>
     </b-navbar>
   </div>
+
 
   <b-modal id="getNotified" v-model="showGetNotifiedModal" no-close-on-esc no-close-on-backdrop>
     <CTA-Banner ctaLocation="Header"></CTA-Banner>
@@ -146,9 +146,7 @@ export default {
   name: 'app',
 
   data () {
-    return {
-      showThankYouModal: false
-    }
+    return {}
   },
 
   components: {
@@ -168,6 +166,15 @@ export default {
   },
 
   methods: {
+    submitIntendedAmount: function () {
+      console.log('Intended Amount: ', this.intendedAmount)
+      if (this.intendedAmount === 0) {
+        this.noIntendedAmount = true
+      } else {
+        this.intendedAmountSent = true
+        this.$store.commit('showModal', false)
+      }
+    },
     openGetNotified () {
       this.$store.commit('showGetNotifiedModal', true)
     },
@@ -425,8 +432,8 @@ nav {
   .navbar.navbar-light .get-notified {
     margin-right: 0px;
   }
-
 }
+
 @media screen and (max-width: 767px) {
   #sub-nav {
     display:none;
@@ -439,6 +446,9 @@ nav {
   }
   .nav-link--mobile-only {
     display:block;
+  }
+  .nav-link--mobile-hide {
+    display:none;
   }
 }
 </style>

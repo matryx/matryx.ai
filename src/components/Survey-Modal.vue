@@ -70,7 +70,9 @@ export default {
         display: '750+',
         label: '750+eth'
       }],
+      // showModal: false,
       intendedAmount: 'None Selected',
+      showModal: false,
       noIntendedAmount: false,
       submitted: false
     }
@@ -103,8 +105,12 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   @import '../assets/css/colors';
+
+  section {
+    margin: 0 ;
+  }
 
   #thank-you--body {
     display: -webkit-box;
