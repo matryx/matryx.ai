@@ -107,10 +107,10 @@ export default {
     padding: 30px 0;
     border-bottom: 1px solid $light-purple-border;
 
-    // &__img--1 {
-    //   background-image: url('../../assets/images/video-preview.png');
-    //   background-size: cover;
-    // }
+    &__img--1 {
+      background-image: url('../../assets/images/video-preview.png');
+      background-size: cover;
+    }
     // &__img--2 {
     //   background-image: url('../../assets/images/video-preview.png');
     //   background-size: cover;

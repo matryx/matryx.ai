@@ -140,11 +140,8 @@ export default {
 
   data () {
     return {
-      intendedAmount: 0,
       showThankYouModal: false,
-      showGetNotifiedModal: false,
-      noIntendedAmount: false,
-      intendedAmountSent: false
+      showGetNotifiedModal: false
     }
   },
 
