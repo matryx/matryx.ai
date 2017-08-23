@@ -16,7 +16,7 @@
       </div>
       <div class="overview">
         <div class="overview__column-1 mobile--order-1">
-          <h1 class="text-color--matryx-black">Matryx Background</h1>
+          <h2 class="text-color--matryx-black">Matryx Background</h2>
           <p class="text-color--matryx-dark-grey">
             Matryx is a product of <a target="_blank" href="http://nanome.ai/">Nanome</a>. Nanome seeks to democratize science, engineering, and research using Virtual Reality and blockchain technology. Nanome is the creator of Calcflow, the industry-leading VR mathematics toolkit, and nano-one, a VR interface for nanoscale design and simulation.
           </p>
@@ -30,7 +30,7 @@
           <!-- <img src="../../assets/images/video-preview.png" alt=""> -->
         </div>
         <div class="overview__column-1">
-          <h1 class="text-color--matryx-black">The Collaboration Problem</h1>
+          <h2 class="text-color--matryx-black">The Collaboration Problem</h2>
           <p class="text-color--matryx-dark-grey">
             Solving the world’s hardest problems in silos leads to duplication of effort and redundancy. By providing a global community that encourages and incentivizes the exchange of ideas, time to innovation is greatly reduced while problems are solved at a rate otherwise impossible.
             <br/> <br/>
@@ -40,7 +40,7 @@
       </div>
       <div class="overview">
         <div class="overview__column-1 mobile--order-1">
-          <h1 class="text-color--matryx-black">The Matryx Solution</h1>
+          <h2 class="text-color--matryx-black">The Matryx Solution</h2>
           <p class="text-color--matryx-dark-grey">
             Matryx’s blockchain-based bounty system provides incentives for collaborative problem solving. Creators are rewarded for contributions with MTX tokens. Anyone can post bounties to Matryx. Participants compete to solve these problems in a tournament.
 
