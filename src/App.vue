@@ -111,7 +111,7 @@
     </b-navbar>
   </div>
 
-  <b-modal id="getNotified" v-model="showGetNotifiedModal"  no-close-on-esc no-close-on-backdrop >
+  <b-modal id="getNotified" v-model="showModal"  no-close-on-esc no-close-on-backdrop >
     <CTABanner cta-location="Header"></CTABanner>
   </b-modal>
 
@@ -141,7 +141,8 @@ export default {
   data () {
     return {
       showThankYouModal: false,
-      showGetNotifiedModal: false
+      showGetNotifiedModal: false,
+      showModal: false
     }
   },
 
@@ -162,8 +163,10 @@ export default {
       if (this.intendedAmount === 0) {
         this.noIntendedAmount = true
       } else {
-        this.showThankYouModal = !this.showThankYouModal
+        this.showGetNotifiedModal = false
+        // this.showThankYouModal = !this.showThankYouModal
         this.intendedAmountSent = true
+        this.$store.commit('showModal', false)
       }
     }
   }
