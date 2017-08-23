@@ -1,8 +1,6 @@
 <template>
   <div class="body-content">
-
     <Navbar-Sticky></Navbar-Sticky>
-
     <Above-the-Fold></Above-the-Fold>
 
     <div class="media-mentions bkg-color--white">
@@ -20,14 +18,18 @@
     </div>
 
     <Company-Overview id="company-overview"></Company-Overview>
+
     <div class="cta-middle-banner">
-      <CTA-Banner  :lighterText="true" :greyBkg="true" cta-location="Top-Middle"></CTA-Banner>
+      <CTA-Banner  :lighterText="true" :greyBkg="true" cta-location="Bottom-Middle"></CTA-Banner>
     </div>
+
+    <Bounty-System></Bounty-System>
+
     <About-Token-Sale></About-Token-Sale>
     <Quotes></Quotes>
     <Nanome-Info></Nanome-Info>
-    <Bounty-System></Bounty-System>
-    <CTA-Banner :whiteBkg="true" cta-location="Bottom-Middle"></CTA-Banner>
+    <CTA-Banner :whiteBkg="true" cta-location="Top-Middle"></CTA-Banner>
+
     <Matryx-Team></Matryx-Team>
     <News-Events></News-Events>
     <CTA-Banner :lighterText="true" :footerBkg="true" cta-location="Bottom" id="Footer"></CTA-Banner>
