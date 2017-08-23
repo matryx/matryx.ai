@@ -5,10 +5,10 @@
       <button type="button" aria-label="Toggle navigation" aria-controls="sub-nav--toggle" aria-expanded="false" class="navbar-toggler navbar-toggler-right">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a aria-disabled="false" href="#" target="_self" class="navbar-brand">
-        <a href="/" class="router-link-exact-active router-link-active">
+      <a aria-disabled="false" href="/" target="_self" class="navbar-brand">
+        <!-- <a href="/" class="router-link-exact-active router-link-active"> -->
           <img src="./assets/images/Matryx-Mark-White.png" alt="">
-        </a>
+        <!-- </a> -->
       </a>
       <div id="sub-nav--toggle" class="navbar-collapse collapse" style="display: none;">
         <ul class="nav navbar-nav">
@@ -71,6 +71,18 @@
 
   <Survey-Modal></Survey-Modal>
 
+  <b-modal id="getNotified"
+    v-model="showGetNotifiedModal"
+    no-close-on-esc
+    no-close-on-backdrop
+    hide-header
+  >
+    <div class="close-modal text-muted" @click.prevent="closeModal">
+      X
+    </div>
+    <CTA-Banner ctaLocation="Header"></CTA-Banner>
+  </b-modal>
+
   <router-view></router-view>
 
   <App-Footer></App-Footer>
@@ -80,9 +92,8 @@
 
 <script>
 import AppFooter from './components/App-Footer'
+import CTABanner from './components/CTA-Banner'
 import SurveyModal from './components/Survey-Modal'
-import { appAnalytics } from '@/analytics'
-
 import VueSticky from 'vue-sticky' // Es6 module
 
 jQuery(document).ready(function () {
@@ -98,6 +109,7 @@ export default {
 
   components: {
     AppFooter,
+    CTABanner,
     SurveyModal
   },
 
@@ -112,21 +124,8 @@ export default {
   },
 
   methods: {
-    submitIntendedAmount: function () {
-      console.log('Intended Amount: ', this.intendedAmount)
-      if (this.intendedAmount === 0) {
-        this.noIntendedAmount = true
-      } else {
-        this.intendedAmountSent = true
-        this.$store.commit('showModal', false)
-      }
-    },
-    openGetNotified () {
-      this.$store.commit('showGetNotifiedModal', true)
-    },
-
-    whitePaperClick () {
-      appAnalytics.whitePaperClick('Navbar')
+    closeModal () {
+      this.$store.commit('showGetNotifiedModal', false)
     }
   }
 }
@@ -190,6 +189,42 @@ export default {
 
   }
 }
+
+#getNotified {
+  .modal-dialog{
+    max-width:100% ;
+    /*background-image:url('./assets/images/backgrounds/whiteWave.png');*/
+
+    #getNotified__BV_body_.modal-body {
+      .cta-banner {
+        width:100%;
+        margin-top: 40px;
+      }
+    }
+  }
+  .modal-header {
+    border: none;
+    padding: 0;
+    margin-bottom: -50px;
+    z-index: 2;
+  }
+  .modal-footer {
+    display:none;
+  }
+  .close-modal {
+    position: absolute;
+    right: 20px;
+
+    &:hover {
+      cursor: pointer
+    }
+  }
+}
+
+.warn {
+  color: $matryx-red;
+}
+
 
 @media screen and (max-width: 767px) {
   #sub-nav {
