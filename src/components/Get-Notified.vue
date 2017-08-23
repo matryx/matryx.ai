@@ -85,7 +85,6 @@ export default {
 
           this.email = ''
         }
-        this.$store.commit('showHeaderModal', false)
         setTimeout(() => {
           this.showSpinner = false
           this.$store.commit('showModal', true)

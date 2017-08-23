@@ -145,7 +145,7 @@ export default {
   }
 
   /*----- MEDIA QUERIESS -----*/
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 1000px) {
     .overview {
       flex-direction: column;
 

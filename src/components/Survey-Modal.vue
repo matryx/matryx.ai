@@ -70,7 +70,7 @@ export default {
         display: '750+',
         label: '750+eth'
       }],
-      showModal: false,
+      // showModal: false,
       intendedAmount: 'None Selected',
       noIntendedAmount: false,
       submitted: false
