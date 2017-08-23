@@ -68,7 +68,7 @@ export default {
 
   methods: {
     whitePaperClick () {
-      appAnalytics.whitePaperClick('Company-Overview')
+      appAnalytics.whitePaperClick('What-Is-Matryx')
     }
   }
 }
