@@ -148,7 +148,7 @@
        <b-nav-item target="_blank" href="https://www.twitter.com/matryx_ai" class="social-icon nav-link--mobile-only bkg-color--matryx-grey">
          <img src="../src/assets/icons/icon-twitter.gif" alt="Matryx Twitter Page">
        </b-nav-item>-->
-       
+
      </b-nav>
 
       <!-- Right aligned nav items -->
@@ -162,66 +162,23 @@
     </b-navbar>
   </div>
 
-
-<!--
-BARBARA:
-All clicks on <Get-Notified> component should open the thankYouModal modal after a 2 second animation I already added.
-When clicking on the <Get-Notified> component in the getNotifiedModal modal below it should close by calling this.getNotifiedModal = !this.getNotifiedModal
-and then it should open the thankYouModal modal, again after the 2 second animation
-I think that's it.
-I'm working on the styling and email validation
- -->
   <b-modal id="getNotified" v-model="showGetNotifiedModal"  no-close-on-esc no-close-on-backdrop >
     <CTABanner cta-location="Header"></CTABanner>
   </b-modal>
 
-  <b-modal id="thankYouModal"
-    v-model="showThankYouModal"
-    hide-header
-    hide-footer
-    no-close-on-esc
-    no-close-on-backdrop
-    >
-    <div id="thank-you--body" >
-      <h2 class="text-color--matryx-blue">Thank you for subscribing. </h2>
-      <div v-show="!intendedAmountSent">
-        <p>Please select your intended purchasing amount:</p>
-        <p v-show="noIntendedAmount" class="warn">Please select a value</p>
-        <form>
-          <input id="amount1" name="intendedAmount" type="radio" value="1" v-model="intendedAmount"><label for="amount1"><span></span>1</label><br>
-          <input id="amount2" name="intendedAmount" type="radio" value="2" v-model="intendedAmount"><label for="amount2"><span></span>2</label><br>
-          <input id="amount3" name="intendedAmount" type="radio" value="3" v-model="intendedAmount"><label for="amount3"><span></span>3</label><br>
-          <input id="amount4" name="intendedAmount" type="radio" value="4" v-model="intendedAmount"><label for="amount4"><span></span>4</label><br>
-          <input id="amount5" name="intendedAmount" type="radio" value="5" v-model="intendedAmount"><label for="amount5"><span></span>5</label><br>
-          <input id="amount6" name="intendedAmount" type="radio" value="6" v-model="intendedAmount"><label for="amount6"><span></span>6</label><br>
-          <input type="submit" text="Submit" @click.prevent="submitIntendedAmount" >
-        </form>
-      </div>
-    </div>
-  </b-modal>
+  <Survey-Modal></Survey-Modal>
 
   <router-view></router-view>
 
-  <footer class="">
-    <div class="footer__social">
-      <a href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ" target="_blank"><img class="footer__social__icon" src="./assets/icons/slack.svg" alt=""></a>
-      <a href="https://blog.matryx.ai/" target="_blank"><img class="footer__social__icon" src="./assets/icons/medium.svg" alt=""></a>
-      <a href="https://t.me/matryxtoken"><img class="footer__social__icon" src="./assets/icons/telegram.svg" alt=""></a>
-      <a href="https://twitter.com/matryx_ai" target="_blank"><img class="footer__social__icon" src="./assets/icons/icon-twitter.png" alt=""></a>
-      <a href="https://www.linkedin.com/company-beta/11238967/" target="_blank"><img class="footer__social__icon" src="./assets/icons/icon-linkedin.png" alt=""></a>
-      <a href="https://www.facebook.com/matryxai/" target="_blank"><img class="footer__social__icon" src="./assets/icons/icon-facebook.png" alt=""></a>
-    </div>
-    <div class="footer__legal">
-      <img src="./assets/images/Matryx-Logo-White-640px.png" alt="">
-      <p class="font-size--small text-color--white">Copyright &copy; 2017 Matryx</p>
-    </div>
-  </footer>
+  <App-Footer></App-Footer>
 
 </div>
 </template>
 
 <script>
 import CTABanner from './components/CTA-Banner'
+import AppFooter from './components/App-Footer'
+import SurveyModal from './components/Survey-Modal'
 
 import VueSticky from 'vue-sticky' // Es6 module
 
@@ -231,7 +188,8 @@ jQuery(document).ready(function () {
 
 export default {
   name: 'app',
-  data: function () {
+
+  data () {
     return {
       intendedAmount: 0,
       showThankYouModal: false,
@@ -240,12 +198,18 @@ export default {
       intendedAmountSent: false
     }
   },
+
   components: {
-    CTABanner
+    CTABanner,
+    AppFooter,
+    SurveyModal
   },
+
   directives: {
     'sticky': VueSticky
+
   },
+
   methods: {
     submitIntendedAmount: function () {
       console.log('Intended Amount: ', this.intendedAmount)
@@ -302,6 +266,22 @@ export default {
     .social-icon .nav-link:hover {
       background-color: transparent;
     }
+
+    .nav-item-language .nav-link {
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+
+.navbar .nav-item.nav-item-language {
+  &:hover {
+    background-color:transparent;
+  }
+  .nav-link {
+    padding: 0;
 
   }
 }
@@ -454,6 +434,7 @@ nav {
 .nav-item.get-notified {
   line-height: 60px;
 }
+
 #getNotified{
   .modal-dialog{
     max-width:100% ;
@@ -480,107 +461,6 @@ nav {
   color: $matryx-red;
 }
 
-#thank-you--body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  text-align: center;
-
-
-
-  label {
-    margin: 5px 10px;
-
-    span {
-      vertical-align: text-top;
-    }
-    span::before {
-      content: '';
-      width: 20px;
-      height: 20px;
-      border: 1px solid #071828;
-      border-radius: 100%;
-      display: inline-block;
-      position:relative;
-      top: 2px;
-    }
-    span::after {
-      content: '';
-      width: 14px;
-      color: #ffffff;
-      position: relative;
-      right: 17px;
-      bottom: 1px;
-      height: 14px;
-      border-radius: 100%;
-      display: inline-block;
-    }
-  }
-
-  input[type="radio"] {
-    display:none;
-  }
-
-  input:checked + label{
-     span::after{
-      background-color: #071828;
-    }
-  }
-
-  input[type="submit"] {
-    width: 120px;
-    padding: 5px 10px;
-    margin-top: 10px;
-    background-color:#FFF;
-    border: 1px solid $matryx-blue;
-    border-radius: 40px;
-  }
-  input[type="submit"]:hover,
-  input[type="submit"]:focus {
-    cursor:pointer;
-    color: #FFF;
-    background-color: $matryx-blue;
-  }
-}
-
-/*footer*/
-
-
-footer {
-  margin-top: -20px;
-  padding: 20px;
-  width: 100%;
-  position:relative;
-
-  .footer__legal {
-    float: left;
-    p{
-      opacity: 0.8;
-    }
-    img {
-      width: 100px;
-      margin-bottom: 20px;
-    }
-  }
-  .footer__social {
-    float:right;
-    padding-right: 50px;
-    bottom: 20px;
-    position:absolute;
-    right: 0;
-
-    &__icon {
-      width: 50px;
-      height: 50px;
-      padding: 10px;
-    }
-  }
-}
-
 /*----- MEDIA QUERIES -----*/
 @media screen and (max-width: 991px) {
 
@@ -604,13 +484,6 @@ footer {
   }
   .nav-link--mobile-only {
     display:block;
-  }
-
-  footer .footer__social {
-    position:relative;
-    position: relative;
-    margin: 20px auto 0;
-    padding-right: 0;
   }
 }
 </style>
