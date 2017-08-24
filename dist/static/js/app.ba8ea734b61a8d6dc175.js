@@ -187,6 +187,7 @@ module.exports = Component.exports
 __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]);
 
 /* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
+  mode: 'history',
   routes: [{
     path: '/',
     name: 'home',
@@ -3586,7 +3587,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "roadmap__section__description text-color--matryx-dark-grey"
   }, [_c('p', [_vm._v("Matryx White Paper Release")]), _vm._v(" "), _c('caption', [_vm._v("Read the white paper\n                "), _c('a', {
     attrs: {
-      "href": "http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf",
+      "href": "/matryx-whitepaper.pdf",
       "target": "_blank"
     },
     on: {
@@ -5148,4 +5149,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ],[19]);
-//# sourceMappingURL=app.d9fde56e0ba78720c303.js.map
+//# sourceMappingURL=app.ba8ea734b61a8d6dc175.js.map
