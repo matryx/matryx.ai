@@ -48,7 +48,7 @@
 
             Once a problem is solved, rewards and recognition are given to all winning contributors, not just the last contributor, for fairness and transparency.
           </p>
-          <a href="../../assets/paper/matryx-white-paper.pdf" target="_blank" @click="whitePaperClick">
+          <a href="/matryx-whitepaper.pdf" target="_blank" @click="whitePaperClick">
             <button class="btn-red whitepaper-btn">Read the Whitepaper</button>
           </a>
         </div>

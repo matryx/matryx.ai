@@ -29,7 +29,7 @@
         </b-nav-item>
         <b-nav-item class="nav-link text-color--matryx-grey"
           target="_blank"
-          href="https://drive.google.com/open?id=0B5QKwKWN2HntVk9DWWlHOXVMQUE"
+          href="/matryx-whitepaper.pdf"
           @click="whitePaperClick"
         >
           WHITEPAPER
