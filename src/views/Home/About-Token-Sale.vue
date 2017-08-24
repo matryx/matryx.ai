@@ -26,7 +26,7 @@
               Benefits of the Blockchain
             </h2>
             <p class="text-color--matryx-dark-grey">
-              Smart contracts reduce the friction of tracking and compensating contributors. Each round of a bounty competition, the winners are rewarded, and a new generation of children is created. All fiterations are managed by the tournament contracts. The provenance of an idea or work can be easily tracked and can be rewarded fairly and publicly.
+              Smart contracts reduce the friction of tracking and compensating contributors. Each round of a bounty competition, the winners are rewarded, and a new generation of children is created. All iterations are managed by the tournament contracts. The provenance of an idea or work can be easily tracked and can be rewarded fairly and publicly.
             </p>
           </div>
         </div>
@@ -56,7 +56,7 @@
               <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>Matryx White Paper Release</p>
                 <caption>Read the white paper
-                  <a href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf" target="_blank" @click="whitePaperClick">
+                  <a href="/matryx-whitepaper.pdf" target="_blank" @click="whitePaperClick">
                     here
                   </a>
                 </caption>

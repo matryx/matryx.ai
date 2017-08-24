@@ -99,7 +99,7 @@ export default {
       color: $purple;
       // @include multiLineEllipsis($lineHeight: 1.1em, $lineCount: 2, $bgColor: white);
       font-weight: 100;
-      font-size: 24px;
+      font-size: 20px;
       color: $white;
       /* styles for '...' */
       & {

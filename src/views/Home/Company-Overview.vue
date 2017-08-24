@@ -16,7 +16,7 @@
       </div>
       <div class="overview">
         <div class="overview__column-1 mobile--order-1">
-          <h1 class="text-color--matryx-black">Matryx Background</h1>
+          <h2 class="text-color--matryx-black">Matryx Background</h2>
           <p class="text-color--matryx-dark-grey">
             Matryx is a product of <a target="_blank" href="http://nanome.ai/">Nanome</a>. Nanome seeks to democratize science, engineering, and research using Virtual Reality and blockchain technology. Nanome is the creator of Calcflow, the industry-leading VR mathematics toolkit, and nano-one, a VR interface for nanoscale design and simulation.
           </p>
@@ -30,7 +30,7 @@
           <!-- <img src="../../assets/images/video-preview.png" alt=""> -->
         </div>
         <div class="overview__column-1">
-          <h1 class="text-color--matryx-black">The Collaboration Problem</h1>
+          <h2 class="text-color--matryx-black">The Collaboration Problem</h2>
           <p class="text-color--matryx-dark-grey">
             Solving the world’s hardest problems in silos leads to duplication of effort and redundancy. By providing a global community that encourages and incentivizes the exchange of ideas, time to innovation is greatly reduced while problems are solved at a rate otherwise impossible.
             <br/> <br/>
@@ -40,7 +40,7 @@
       </div>
       <div class="overview">
         <div class="overview__column-1 mobile--order-1">
-          <h1 class="text-color--matryx-black">The Matryx Solution</h1>
+          <h2 class="text-color--matryx-black">The Matryx Solution</h2>
           <p class="text-color--matryx-dark-grey">
             Matryx’s blockchain-based bounty system provides incentives for collaborative problem solving. Creators are rewarded for contributions with MTX tokens. Anyone can post bounties to Matryx. Participants compete to solve these problems in a tournament.
 
@@ -48,7 +48,7 @@
 
             Once a problem is solved, rewards and recognition are given to all winning contributors, not just the last contributor, for fairness and transparency.
           </p>
-          <a href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf" target="_blank" @click="whitePaperClick">
+          <a href="/matryx-whitepaper.pdf" target="_blank" @click="whitePaperClick">
             <button class="btn-red whitepaper-btn">Read the Whitepaper</button>
           </a>
         </div>
@@ -134,13 +134,13 @@ export default {
       background-position: center;
     }
     &__img--1 {
-      background-image: url('../../assets/images/co1.jpeg');
+      background-image: url('../../assets/images/overview/co0.jpg');
     }
     &__img--2 {
-      background-image: url('../../assets/images/math.jpg');
+      background-image: url('../../assets/images/overview/co2.jpg');
     }
     &__img--3 {
-      background-image: url('../../assets/images/co2.jpeg');
+      background-image: url('../../assets/images/overview/co1.jpg');
     }
 
     &__column-1,
