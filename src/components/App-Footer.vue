@@ -4,19 +4,19 @@
       <a href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ" target="_blank">
         <img class="footer__social__icon" src="../assets/icons/slack.svg" alt="Slack">
       </a>
-      <a href="https://blog.matryx.ai/" target="_blank">
+      <a href="https://blog.matryx.ai/" target="_blank" @click="socialMediaClick('blog', 'footer')">
         <img class="footer__social__icon" src="../assets/icons/medium.svg" alt="Blog">
       </a>
-      <a href="https://t.me/matryxtoken" target="_blank">
+      <a href="https://t.me/matryxtoken" target="_blank" @click="socialMediaClick('telegram', 'footer')">
         <img class="footer__social__icon" src="../assets/icons/telegram.svg" alt="Telegram">
       </a>
-      <a href="https://twitter.com/matryx_ai" target="_blank">
+      <a href="https://twitter.com/matryx_ai" target="_blank" @click="socialMediaClick('twitter', 'footer')">
         <img class="footer__social__icon" src="../assets/icons/icon-twitter.gif" alt="Twitter">
       </a>
-      <a href="https://www.linkedin.com/company-beta/11238967/" target="_blank">
+      <a href="https://www.linkedin.com/company-beta/11238967/" target="_blank" @click="socialMediaClick('linkedin', 'footer')">
       <img class="footer__social__icon" src="../assets/icons/icon-linkedin.png" alt="LinkedIn">
       </a>
-      <a href="https://www.facebook.com/matryxai/" target="_blank">
+      <a href="https://www.facebook.com/matryxai/" target="_blank" @click="socialMediaClick('facebook', 'footer')">
         <img class="footer__social__icon" src="../assets/icons/icon-facebook.png" alt="Facebook">
       </a>
     </div>
@@ -31,8 +31,14 @@
 </template>
 
 <script>
-export default {
+import { appAnalytics } from '@/analytics'
 
+export default {
+  methods: {
+    socialMediaClick (media, location) {
+      appAnalytics.socialMediaClick(media, location)
+    }
+  }
 }
 </script>
 
