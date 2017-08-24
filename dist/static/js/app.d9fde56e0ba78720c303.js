@@ -2198,17 +2198,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       news: [{
         name: 'ETHNews: State of Digital Money 2017',
         date: '24 July 2017',
-        desc: 'adfadfadsfadf adfa adsf adfadMatryx debuted a custom built vector calculus tool to learn the subject in VR.',
-        image: __WEBPACK_IMPORTED_MODULE_2__assets_images_backgrounds_bg1_jpg___default.a,
-        articleLink: 'https://www.ethnews.com/state-of-digital-money-2017-recap'
-      }, {
-        name: 'ETHNews: State of Digital Money 2017',
-        date: '24 July 2017',
         desc: 'Matryx debuted a custom built vector calculus tool to learn the subject in VR.',
         image: __WEBPACK_IMPORTED_MODULE_2__assets_images_backgrounds_bg1_jpg___default.a,
         articleLink: 'https://www.ethnews.com/state-of-digital-money-2017-recap'
       }, {
-        name: 'adf adfafwef adf adfaw Decentralized Scientific Collaboration',
+        name: 'Decentralized Scientific Collaboration',
         date: '20 July 2017',
         desc: 'Blockchain technology is the gateway to an Open Access society and the technologies of tomorrow.Blockchain technology is the gateway to an Open Access society and the technologies of tomorrow.',
         image: __WEBPACK_IMPORTED_MODULE_3__assets_images_backgrounds_bg2_jpg___default.a,
@@ -2221,7 +2215,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         image: __WEBPACK_IMPORTED_MODULE_4__assets_images_backgrounds_bg3_jpg___default.a,
         eventLink: 'https://www.meetup.com/Los-Angeles-Ethereum/events/242564631/'
       }, {
-        name: 'Matryx. A Decentralized Research Platform Matryx. A Decentralized Research Platform',
+        name: 'Matryx. A Decentralized Research Platform',
         date: '13 Sept 2017 @ 7pm',
         day: 'Wednesday',
         image: __WEBPACK_IMPORTED_MODULE_5__assets_images_backgrounds_bg4_jpg___default.a,
@@ -3626,7 +3620,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "text-color--matryx-black"
   }, [_vm._v("\n            Benefits of the Blockchain\n          ")]), _vm._v(" "), _c('p', {
     staticClass: "text-color--matryx-dark-grey"
-  }, [_vm._v("\n            Smart contracts reduce the friction of tracking and compensating contributors. Each round of a bounty competition, the winners are rewarded, and a new generation of children is created. All fiterations are managed by the tournament contracts. The provenance of an idea or work can be easily tracked and can be rewarded fairly and publicly.\n          ")])])])
+  }, [_vm._v("\n            Smart contracts reduce the friction of tracking and compensating contributors. Each round of a bounty competition, the winners are rewarded, and a new generation of children is created. All iterations are managed by the tournament contracts. The provenance of an idea or work can be easily tracked and can be rewarded fairly and publicly.\n          ")])])])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "roadmap__section "
@@ -4537,15 +4531,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "is-nav-bar": ""
     }
   }, [_c('b-nav-item', {
-    staticClass: "nav-link text-color--matryx-grey",
-    attrs: {
-      "target": "_blank",
-      "href": "http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf"
-    },
-    on: {
-      "click": _vm.whitePaperClick
-    }
-  }, [_vm._v("\n          WHITEPAPER\n        ")]), _vm._v(" "), _c('b-nav-item', {
     staticClass: "nav-link text-color--matryx-grey nav-link--mobile-hide",
     attrs: {
       "href": "#what-is-matryx"
@@ -4561,6 +4546,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "href": "#bounty-system"
     }
   }, [_vm._v("\n          BOUNTY SYSTEM\n        ")]), _vm._v(" "), _c('b-nav-item', {
+    staticClass: "nav-link text-color--matryx-grey",
+    attrs: {
+      "target": "_blank",
+      "href": "/matryx-whitepaper.pdf"
+    },
+    on: {
+      "click": _vm.whitePaperClick
+    }
+  }, [_vm._v("\n          WHITEPAPER\n        ")]), _vm._v(" "), _c('b-nav-item', {
     staticClass: "nav-link text-color--matryx-grey nav-link--mobile-only",
     attrs: {
       "href": "mailto:team@matryx.ai?subject=Matryx Token Sale"
@@ -4895,7 +4889,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "text-color--matryx-black"
   }, [_vm._v("The Matryx Solution")]), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('a', {
     attrs: {
-      "href": "http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf",
+      "href": "/matryx-whitepaper.pdf",
       "target": "_blank"
     },
     on: {
@@ -5154,4 +5148,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ],[19]);
-//# sourceMappingURL=app.969319dbb906e8089ff8.js.map
+//# sourceMappingURL=app.d9fde56e0ba78720c303.js.map
