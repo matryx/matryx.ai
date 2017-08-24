@@ -12,13 +12,6 @@
       <b-collapse is-nav id="nav-toggle">
 
       <b-nav is-nav-bar>
-        <b-nav-item class="nav-link text-color--matryx-grey"
-          target="_blank"
-          href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf"
-          @click="whitePaperClick"
-        >
-          WHITEPAPER
-        </b-nav-item>
         <b-nav-item
           class="nav-link text-color--matryx-grey nav-link--mobile-hide"
           href="#what-is-matryx">
@@ -33,6 +26,13 @@
           class="nav-link text-color--matryx-grey nav-link--mobile-hide"
           href="#bounty-system">
           BOUNTY SYSTEM
+        </b-nav-item>
+        <b-nav-item class="nav-link text-color--matryx-grey"
+          target="_blank"
+          href="https://drive.google.com/open?id=0B5QKwKWN2HntVk9DWWlHOXVMQUE"
+          @click="whitePaperClick"
+        >
+          WHITEPAPER
         </b-nav-item>
 
         <!-- Only Mobile View -->

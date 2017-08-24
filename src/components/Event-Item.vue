@@ -60,8 +60,7 @@ export default {
     }
 
     &__text {
-
-      height: 65px;
+      height: 73px;
       background-color: $matryx-darker-grey;
       padding: 15px 20px;
       position: absolute;
@@ -99,7 +98,7 @@ export default {
 
     &__name {
       color: $purple;
-      font-size: 14px;
+      font-size: 18px;
     }
   }
 

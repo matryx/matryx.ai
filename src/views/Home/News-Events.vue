@@ -66,7 +66,7 @@ export default {
       news: [{
         name: 'ETHNews: State of Digital Money 2017',
         date: '24 July 2017',
-        desc: 'adfadfadsfadf adfa adsf adfadMatryx debuted a custom built vector calculus tool to learn the subject in VR.',
+        desc: 'Matryx debuted a custom built vector calculus tool to learn the subject in VR.',
         image: newsImage1,
         articleLink: 'https://www.ethnews.com/state-of-digital-money-2017-recap'
       }, {
