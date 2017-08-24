@@ -1,5 +1,6 @@
 <template>
   <div class="body-content">
+    <Navbar-Token></Navbar-Token>
     <Navbar-Sticky></Navbar-Sticky>
     <Above-the-Fold></Above-the-Fold>
 
@@ -47,6 +48,7 @@ import NavbarSticky from './Navbar-Sticky'
 import NewsEvents from './News-Events'
 import Quotes from './Quotes'
 import CTABanner from '../../components/CTA-Banner'
+import NavbarToken from '../../components/Navbar-Tokensale'
 
 export default {
   name: 'home',
@@ -65,7 +67,8 @@ export default {
     NavbarSticky,
     NewsEvents,
     CTABanner,
-    Quotes
+    Quotes,
+    NavbarToken
   },
 
   mounted () {
