@@ -41,17 +41,31 @@
         </ul>
         <ul class="ml-auto nav navbar-nav">
           <li class="nav-item social-icon">
-            <a aria-disabled="false" href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ" target="_blank" rel="noopener" class="nav-link">
+            <a aria-disabled="false" href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ"
+              target="_blank"
+              rel="noopener"
+              class="nav-link"
+              @click="socialMediaClick('slack', 'navbar')"
+            >
               <img src="./assets/icons/icon-slack.svg" alt="Matryx Slack">
             </a>
           </li>
           <li class="nav-item social-icon">
-            <a aria-disabled="false" href="https://www.twitter.com/matryx_ai" target="_blank" rel="noopener" class="nav-link">
+            <a aria-disabled="false" href="https://www.twitter.com/matryx_ai" target="_blank"
+            rel="noopener"
+            class="nav-link"
+            @click="socialMediaClick('twitter', 'navbar')"
+          >
               <img src="./assets/icons/icon-twitter.png" alt="Matryx Twitter Page">
             </a>
           </li>
           <li class="nav-item social-icon">
-            <a aria-disabled="false" href="https://www.facebook.com/matryxai/" target="_blank" rel="noopener" class="nav-link">
+            <a aria-disabled="false" href="https://www.facebook.com/matryxai/"
+              target="_blank"
+              rel="noopener"
+              class="nav-link"
+              @click="socialMediaClick('facebook', 'navbar')"
+            >
               <img src="./assets/icons/icon-facebook.png" alt="Matryx Facebook Page">
             </a>
           </li>
@@ -95,6 +109,7 @@ import AppFooter from './components/App-Footer'
 import CTABanner from './components/CTA-Banner'
 import SurveyModal from './components/Survey-Modal'
 import VueSticky from 'vue-sticky' // Es6 module
+import { appAnalytics } from '@/analytics'
 
 jQuery(document).ready(function () {
   jQuery('.spinner-container').appendTo('body')
@@ -126,6 +141,10 @@ export default {
   methods: {
     closeModal () {
       this.$store.commit('showGetNotifiedModal', false)
+    },
+
+    socialMediaClick (media, location) {
+      appAnalytics.socialMediaClick(media, location)
     }
   }
 }

@@ -31,6 +31,13 @@ const appAnalytics = {
       category: 'Information',
       label: 'whitepaper'
     })
+  },
+
+  socialMediaClick (media, location) {
+    window.analytics.track(`${media} Link - ${location}`, {
+      category: 'Social',
+      label: `${media}Link`
+    })
   }
 }
 
