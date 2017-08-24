@@ -138,6 +138,12 @@ export default {
 #sub-nav {
   width:100%;
   z-index:3;
+
+  .navbar-brand img {
+    max-width: 30px;
+    max-height: 30px;
+  }
+
   &>.navbar.navbar-light {
     padding: 0 10px;
     background-color: transparent;
