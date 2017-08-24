@@ -56,7 +56,7 @@
               <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>Matryx White Paper Release</p>
                 <caption>Read the white paper
-                  <a href="http://matryx.ai/site/wp-content/uploads/2017/08/Matryx-Technical-Whitepaper.pdf" target="_blank" @click="whitePaperClick">
+                  <a href="/matryx-whitepaper.pdf" target="_blank" @click="whitePaperClick">
                     here
                   </a>
                 </caption>
