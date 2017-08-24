@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import Home from '@/views/Home/index'
 import FAQ from '@/views/FAQ/index'
 import TokenSale from '@/views/TokenSale/index'
-import Whitepaper from '@/views/Whitepaper'
 
 // import Accordion from '@/views/FAQ/Accordion'
 import About from '@/views/FAQ/Accordions/About'
