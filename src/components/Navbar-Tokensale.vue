@@ -52,11 +52,11 @@ export default {
 section{
   margin: 0;
   padding: 0;
-  background: rgb(8,31,54); /* Old browsers */
-  background: -moz-linear-gradient(-45deg, rgba(8,31,54,1) 0%, rgba(0,134,203,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, rgba(8,31,54,1) 0%,rgba(0,134,203,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, rgba(8,31,54,1) 0%,rgba(0,134,203,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#081f36', endColorstr='#0086cb',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: rgb(8,31,54); 
+  background: -moz-linear-gradient(-45deg, rgba(8,31,54,1) 0%, rgba(0,134,203,1) 100%); 
+  background: -webkit-linear-gradient(-45deg, rgba(8,31,54,1) 0%,rgba(0,134,203,1) 100%); 
+  background: linear-gradient(135deg, rgba(8,31,54,1) 0%,rgba(0,134,203,1) 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#081f36', endColorstr='#0086cb',GradientType=1 ); 
 }
 
 .content-container {

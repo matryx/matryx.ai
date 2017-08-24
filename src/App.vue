@@ -171,6 +171,10 @@ export default {
       color: #FFF !important;
     }
 
+    .navbar-collapse {
+      height: 60px;
+    }
+
     .nav-link{
       color: $white !important;
       border-radius: 0;
