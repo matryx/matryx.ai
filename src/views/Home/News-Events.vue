@@ -64,6 +64,12 @@ export default {
   data () {
     return {
       news: [{
+        name: 'PR News Wire',
+        date: '24 Aug 2017',
+        desc: 'Virtual Reality Software Maker Nanome Introduces Matryx with Token Sale',
+        image: newsImage3,
+        articleLink: 'http://www.prnewswire.com/news-releases/virtual-reality-software-maker-nanome-introduces-matryx-with-token-sale-300509203.html'
+      }, {
         name: 'ETHNews: State of Digital Money 2017',
         date: '24 July 2017',
         desc: 'Matryx debuted a custom built vector calculus tool to learn the subject in VR.',
@@ -72,7 +78,7 @@ export default {
       }, {
         name: 'Decentralized Scientific Collaboration',
         date: '20 July 2017',
-        desc: 'Blockchain technology is the gateway to an Open Access society and the technologies of tomorrow.Blockchain technology is the gateway to an Open Access society and the technologies of tomorrow.',
+        desc: 'Blockchain technology is the gateway to an Open Access society and the technologies of tomorrow.',
         image: newsImage2,
         articleLink: 'http://stateofdigitalmoney.com/2017/07/20/matryx-demo-at-sodm17/'
       }],

@@ -7,7 +7,7 @@
       <a href="https://blog.matryx.ai/" target="_blank" @click="socialMediaClick('blog', 'footer')">
         <img class="footer__social__icon" src="../assets/icons/medium.svg" alt="Blog">
       </a>
-      <a href="https://t.me/matryxtoken" target="_blank" @click="socialMediaClick('telegram', 'footer')">
+      <a href="https://t.me/matryxai" target="_blank" @click="socialMediaClick('telegram', 'footer')">
         <img class="footer__social__icon" src="../assets/icons/telegram.svg" alt="Telegram">
       </a>
       <a href="https://twitter.com/matryx_ai" target="_blank" @click="socialMediaClick('twitter', 'footer')">
