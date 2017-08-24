@@ -11,14 +11,16 @@
         <Get-Notified ctaLocation="Above the Fold"></Get-Notified>
       </div>
       <div class="token-sale__video-launcher content-container--medium">
-        <b-btn v-b-modal.matryx-video>
-          <img src="../../assets/images/videothumbnail.png" class="video-link-image" alt="">
-        </b-btn>
+        <b v-b-modal.matryx-video>
+          <!-- <img src="../../assets/images/videothumbnail.png" class="video-link-image" alt=""> -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/ZJ47AoYdlYw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        </b>
       </div>
     </div>
-    <b-modal id="matryx-video" >
-      <video :src="Video" controls></video>
-    </b-modal>
+    <!-- <b-modal id="matryx-video">
+      <!-- <video :src="Video" controls></video> --
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ZJ47AoYdlYw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+    </b-modal> -->
   </section>
 </template>
 

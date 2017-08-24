@@ -41,13 +41,13 @@
         </ul>
         <ul class="ml-auto nav navbar-nav">
           <li class="nav-item social-icon">
-            <a aria-disabled="false" href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ"
+            <a aria-disabled="false" href="https://t.me/matryxai"
               target="_blank"
               rel="noopener"
               class="nav-link"
-              @click="socialMediaClick('slack', 'navbar')"
+              @click="socialMediaClick('telegram', 'navbar')"
             >
-              <img src="./assets/icons/icon-slack.svg" alt="Matryx Slack">
+              <img src="./assets/icons/icon-telegram.svg" alt="Matryx telegram">
             </a>
           </li>
           <li class="nav-item social-icon">
