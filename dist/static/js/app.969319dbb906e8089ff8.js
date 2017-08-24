@@ -38,6 +38,13 @@ const appAnalytics = {
       category: 'Information',
       label: 'whitepaper'
     });
+  },
+
+  socialMediaClick(media, location) {
+    window.analytics.track(`${media} Link - ${location}`, {
+      category: 'Social',
+      label: `${media}Link`
+    });
   }
 };
 
@@ -180,7 +187,6 @@ module.exports = Component.exports
 __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]);
 
 /* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
-  mode: 'history',
   routes: [{
     path: '/',
     name: 'home',
@@ -375,6 +381,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Survey_Modal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_Survey_Modal__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vue_sticky__ = __webpack_require__(166);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vue_sticky___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_vue_sticky__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__analytics__ = __webpack_require__(1);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -473,6 +494,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
  // Es6 module
 
+
 jQuery(document).ready(function () {
   jQuery('.spinner-container').appendTo('body');
 });
@@ -503,6 +525,10 @@ jQuery(document).ready(function () {
   methods: {
     closeModal() {
       this.$store.commit('showGetNotifiedModal', false);
+    },
+
+    socialMediaClick(media, location) {
+      __WEBPACK_IMPORTED_MODULE_4__analytics__["a" /* appAnalytics */].socialMediaClick(media, location);
     }
   }
 });
@@ -543,6 +569,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__analytics__ = __webpack_require__(1);
 //
 //
 //
@@ -576,7 +603,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  methods: {
+    socialMediaClick(media, location) {
+      __WEBPACK_IMPORTED_MODULE_0__analytics__["a" /* appAnalytics */].socialMediaClick(media, location);
+    }
+  }
+});
 
 /***/ }),
 /* 24 */
@@ -3361,7 +3396,84 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "id": "app"
     }
-  }, [_vm._m(0), _vm._v(" "), _c('Survey-Modal'), _vm._v(" "), _c('b-modal', {
+  }, [_c('div', {
+    staticClass: "bkg-color--dark-blue-gradient",
+    attrs: {
+      "id": "sub-nav"
+    }
+  }, [_c('nav', {
+    staticClass: "navbar navbar-light navbar-toggleable-sm"
+  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('div', {
+    staticClass: "navbar-collapse collapse",
+    staticStyle: {
+      "display": "none"
+    },
+    attrs: {
+      "id": "sub-nav--toggle"
+    }
+  }, [_vm._m(2), _vm._v(" "), _c('ul', {
+    staticClass: "ml-auto nav navbar-nav"
+  }, [_c('li', {
+    staticClass: "nav-item social-icon"
+  }, [_c('a', {
+    staticClass: "nav-link",
+    attrs: {
+      "aria-disabled": "false",
+      "href": "https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ",
+      "target": "_blank",
+      "rel": "noopener"
+    },
+    on: {
+      "click": function($event) {
+        _vm.socialMediaClick('slack', 'navbar')
+      }
+    }
+  }, [_c('img', {
+    attrs: {
+      "src": __webpack_require__(79),
+      "alt": "Matryx Slack"
+    }
+  })])]), _vm._v(" "), _c('li', {
+    staticClass: "nav-item social-icon"
+  }, [_c('a', {
+    staticClass: "nav-link",
+    attrs: {
+      "aria-disabled": "false",
+      "href": "https://www.twitter.com/matryx_ai",
+      "target": "_blank",
+      "rel": "noopener"
+    },
+    on: {
+      "click": function($event) {
+        _vm.socialMediaClick('twitter', 'navbar')
+      }
+    }
+  }, [_c('img', {
+    attrs: {
+      "src": __webpack_require__(80),
+      "alt": "Matryx Twitter Page"
+    }
+  })])]), _vm._v(" "), _c('li', {
+    staticClass: "nav-item social-icon"
+  }, [_c('a', {
+    staticClass: "nav-link",
+    attrs: {
+      "aria-disabled": "false",
+      "href": "https://www.facebook.com/matryxai/",
+      "target": "_blank",
+      "rel": "noopener"
+    },
+    on: {
+      "click": function($event) {
+        _vm.socialMediaClick('facebook', 'navbar')
+      }
+    }
+  }, [_c('img', {
+    attrs: {
+      "src": __webpack_require__(5),
+      "alt": "Matryx Facebook Page"
+    }
+  })])])])])])]), _vm._v(" "), _c('Survey-Modal'), _vm._v(" "), _c('b-modal', {
     attrs: {
       "id": "getNotified",
       "no-close-on-esc": "",
@@ -3389,14 +3501,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   })], 1), _vm._v(" "), _c('router-view'), _vm._v(" "), _c('App-Footer')], 1)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "bkg-color--dark-blue-gradient",
-    attrs: {
-      "id": "sub-nav"
-    }
-  }, [_c('nav', {
-    staticClass: "navbar navbar-light navbar-toggleable-sm"
-  }, [_c('button', {
+  return _c('button', {
     staticClass: "navbar-toggler navbar-toggler-right",
     attrs: {
       "type": "button",
@@ -3406,7 +3511,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('span', {
     staticClass: "navbar-toggler-icon"
-  })]), _vm._v(" "), _c('a', {
+  })])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('a', {
     staticClass: "navbar-brand",
     attrs: {
       "aria-disabled": "false",
@@ -3418,15 +3525,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "src": __webpack_require__(85),
       "alt": ""
     }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "navbar-collapse collapse",
-    staticStyle: {
-      "display": "none"
-    },
-    attrs: {
-      "id": "sub-nav--toggle"
-    }
-  }, [_c('ul', {
+  })])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('ul', {
     staticClass: "nav navbar-nav"
   }, [_c('li', {
     staticClass: "nav-item nav-link text-color--white"
@@ -3455,54 +3556,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "href": "#news-events",
       "target": "_self"
     }
-  }, [_vm._v("PRESS")])])]), _vm._v(" "), _c('ul', {
-    staticClass: "ml-auto nav navbar-nav"
-  }, [_c('li', {
-    staticClass: "nav-item social-icon"
-  }, [_c('a', {
-    staticClass: "nav-link",
-    attrs: {
-      "aria-disabled": "false",
-      "href": "https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ",
-      "target": "_blank",
-      "rel": "noopener"
-    }
-  }, [_c('img', {
-    attrs: {
-      "src": __webpack_require__(79),
-      "alt": "Matryx Slack"
-    }
-  })])]), _vm._v(" "), _c('li', {
-    staticClass: "nav-item social-icon"
-  }, [_c('a', {
-    staticClass: "nav-link",
-    attrs: {
-      "aria-disabled": "false",
-      "href": "https://www.twitter.com/matryx_ai",
-      "target": "_blank",
-      "rel": "noopener"
-    }
-  }, [_c('img', {
-    attrs: {
-      "src": __webpack_require__(80),
-      "alt": "Matryx Twitter Page"
-    }
-  })])]), _vm._v(" "), _c('li', {
-    staticClass: "nav-item social-icon"
-  }, [_c('a', {
-    staticClass: "nav-link",
-    attrs: {
-      "aria-disabled": "false",
-      "href": "https://www.facebook.com/matryxai/",
-      "target": "_blank",
-      "rel": "noopener"
-    }
-  }, [_c('img', {
-    attrs: {
-      "src": __webpack_require__(5),
-      "alt": "Matryx Facebook Page"
-    }
-  })])])])])])])
+  }, [_vm._v("PRESS")])])])
 }]}
 
 /***/ }),
@@ -4837,7 +4891,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "overview"
   }, [_c('div', {
     staticClass: "overview__column-1 mobile--order-1"
-  }, [_c('h1', {
+  }, [_c('h2', {
     staticClass: "text-color--matryx-black"
   }, [_vm._v("The Matryx Solution")]), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('a', {
     attrs: {
@@ -4865,7 +4919,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "overview"
   }, [_c('div', {
     staticClass: "overview__column-1 mobile--order-1"
-  }, [_c('h1', {
+  }, [_c('h2', {
     staticClass: "text-color--matryx-black"
   }, [_vm._v("Matryx Background")]), _vm._v(" "), _c('p', {
     staticClass: "text-color--matryx-dark-grey"
@@ -4884,7 +4938,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "overview__column-2 overview__img--2"
   }), _vm._v(" "), _c('div', {
     staticClass: "overview__column-1"
-  }, [_c('h1', {
+  }, [_c('h2', {
     staticClass: "text-color--matryx-black"
   }, [_vm._v("The Collaboration Problem")]), _vm._v(" "), _c('p', {
     staticClass: "text-color--matryx-dark-grey"
@@ -4989,25 +5043,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('footer', [_c('div', {
     staticClass: "footer__social"
-  }, [_c('a', {
-    attrs: {
-      "href": "https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ",
-      "target": "_blank"
-    }
-  }, [_c('img', {
-    staticClass: "footer__social__icon",
-    attrs: {
-      "src": __webpack_require__(82),
-      "alt": "Slack"
-    }
-  })]), _vm._v(" "), _c('a', {
+  }, [_vm._m(0), _vm._v(" "), _c('a', {
     attrs: {
       "href": "https://blog.matryx.ai/",
       "target": "_blank"
+    },
+    on: {
+      "click": function($event) {
+        _vm.socialMediaClick('blog', 'footer')
+      }
     }
   }, [_c('img', {
     staticClass: "footer__social__icon",
@@ -5019,6 +5065,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "href": "https://t.me/matryxtoken",
       "target": "_blank"
+    },
+    on: {
+      "click": function($event) {
+        _vm.socialMediaClick('telegram', 'footer')
+      }
     }
   }, [_c('img', {
     staticClass: "footer__social__icon",
@@ -5030,6 +5081,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "href": "https://twitter.com/matryx_ai",
       "target": "_blank"
+    },
+    on: {
+      "click": function($event) {
+        _vm.socialMediaClick('twitter', 'footer')
+      }
     }
   }, [_c('img', {
     staticClass: "footer__social__icon",
@@ -5041,6 +5097,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "href": "https://www.linkedin.com/company-beta/11238967/",
       "target": "_blank"
+    },
+    on: {
+      "click": function($event) {
+        _vm.socialMediaClick('linkedin', 'footer')
+      }
     }
   }, [_c('img', {
     staticClass: "footer__social__icon",
@@ -5052,6 +5113,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "href": "https://www.facebook.com/matryxai/",
       "target": "_blank"
+    },
+    on: {
+      "click": function($event) {
+        _vm.socialMediaClick('facebook', 'footer')
+      }
     }
   }, [_c('img', {
     staticClass: "footer__social__icon",
@@ -5059,7 +5125,22 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "src": __webpack_require__(5),
       "alt": "Facebook"
     }
-  })])]), _vm._v(" "), _c('div', {
+  })])]), _vm._v(" "), _vm._m(1)])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('a', {
+    attrs: {
+      "href": "https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ",
+      "target": "_blank"
+    }
+  }, [_c('img', {
+    staticClass: "footer__social__icon",
+    attrs: {
+      "src": __webpack_require__(82),
+      "alt": "Slack"
+    }
+  })])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
     staticClass: "footer__legal"
   }, [_c('img', {
     attrs: {
@@ -5068,9 +5149,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }), _vm._v(" "), _c('p', {
     staticClass: "font-size--small text-color--white"
-  }, [_vm._v("\n      © 2017 All rights reserved.\n    ")])])])
+  }, [_vm._v("\n      © 2017 All rights reserved.\n    ")])])
 }]}
 
 /***/ })
 ],[19]);
-//# sourceMappingURL=app.b659e235a70d531fb7fa.js.map
+//# sourceMappingURL=app.969319dbb906e8089ff8.js.map
