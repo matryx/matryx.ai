@@ -1,9 +1,9 @@
 <template>
   <footer>
     <div class="footer__social">
-      <a href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ" target="_blank">
+      <!-- <a href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ" target="_blank">
         <img class="footer__social__icon" src="../assets/icons/slack.svg" alt="Slack">
-      </a>
+      </a> -->
       <a href="https://blog.matryx.ai/" target="_blank" @click="socialMediaClick('blog', 'footer')">
         <img class="footer__social__icon" src="../assets/icons/medium.svg" alt="Blog">
       </a>
