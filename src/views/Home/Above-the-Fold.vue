@@ -228,8 +228,13 @@ section.above-the-fold {
 
   }
 
+}
 
-
+@media screen and (max-width: 750px) {
+  iframe{
+    width: 300px !important;
+    height: 200px !important;
+  } 
 }
 
 @media screen and (max-width: 500px) {
@@ -238,7 +243,6 @@ section.above-the-fold {
       padding-top: 40px;
     }
   }
-
   #getNotified .modal-dialog .cta__form__email {
     border-right: 1px solid $purple;
   }
