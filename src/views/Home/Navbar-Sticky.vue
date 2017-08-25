@@ -15,7 +15,7 @@
         <b-nav-item
           class="nav-link text-color--matryx-grey nav-link--mobile-hide"
           href="#what-is-matryx">
-          WHAT IS MATRYX
+          ABOUT
         </b-nav-item>
         <b-nav-item
           class="nav-link text-color--matryx-grey nav-link--mobile-hide"
