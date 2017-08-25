@@ -11,10 +11,10 @@
         <Get-Notified ctaLocation="Above the Fold"></Get-Notified>
       </div>
       <div class="token-sale__video-launcher content-container--medium">
-        <b v-b-modal.matryx-video>
+        <iframe class="matryx-video-yt" width="560" height="315" src="https://www.youtube.com/embed/ZJ47AoYdlYw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        <!-- <b v-b-modal.matryx-video> -->
           <!-- <img src="../../assets/images/videothumbnail.png" class="video-link-image" alt=""> -->
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/ZJ47AoYdlYw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-        </b>
+        <!-- </b> -->
       </div>
     </div>
     <!-- <b-modal id="matryx-video">
@@ -47,6 +47,10 @@ export default {
 
 <style lang="scss" >
 @import '../../assets/css/colors.scss';
+
+iframe{
+  width: 560px !important;
+}
 
 section.above-the-fold {
   margin-bottom: 0px;
@@ -202,9 +206,7 @@ section.above-the-fold {
 
 /*----- MEDIA QUERIES -----*/
 @media screen and (max-width: 1000px) {
-  video {
-    width: 100%;
-  }
+
   .token-sale {
     flex-direction: column;
   }
