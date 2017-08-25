@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280px" height="795px" viewBox="0 0 1280 795" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>abovethefoldbkg copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="100%" x2="25.3314209%" y2="38.1911404%" id="linearGradient-1">
+            <stop stop-color="#134863" offset="0%"></stop>
+            <stop stop-color="#081F36" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="backgrounds" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="abovethefoldbkg-copy">
+            <g id="Group-22" transform="translate(0.000000, 2.000000)">
+                <g id="abovethefoldbkg" transform="translate(0.000000, 616.000000)">
+                    <g id="bg">
+                        <g id="Group-23">
+                            <g id="Group-22-Copy">
+                                <rect id="Rectangle" fill="#FFFFFF" x="0" y="50" width="1280" height="127"></rect>
+                                <path d="M0,6.4354019 L1280,44.3043676 L1280,173.451228 C1165.30691,142.487814 1053.2937,127.099896 943.960371,127.287473 C779.960371,127.568838 601.337521,178.518714 357.024048,175 C239.045457,173.300818 120.037441,135.849245 0,62.645279 L0,6.4354019 Z" id="Rectangle-7-Copy-3" fill-opacity="0.799999952" fill="#DCE6EC"></path>
+                                <path d="M0,5.83625342 L1280,41.6275304 L1280,159.086666 C1214.56562,124.157906 1127.18177,106.787315 1017.84843,106.974892 C853.848434,107.256258 604.242338,168.286282 368.819866,159.086666 C250.258821,154.45365 127.318866,118.433264 0,51.0255089 L0,5.83625342 Z" id="Rectangle-7-Copy" fill-opacity="0.326200181" fill="#8C9EAE"></path>
+                                <path d="M0,0.796749002 L1280,34.4521767 L1280,138.57427 C1174.77105,88.9619801 1067.4899,64.2507478 958.156569,64.4405731 C794.156569,64.7253111 612.726207,146.268583 374.126365,138.57427 C256.658425,134.786191 131.949636,97.6707645 0,27.2279909 L0,0.796749002 Z" id="Rectangle-7-Copy-2" fill-opacity="0.509142889" fill="#8C9EAE"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="iStock-493833694" fill="url(#linearGradient-1)">
+                    <path d="M4.4408921e-15,0 L1280,0 L1280,761.152631 C1117.82338,683.465466 979.73507,647.393894 865.73507,652.937916 C694.73507,661.253948 596.224006,731.353049 366.03038,727.335213 C258.631618,725.460658 136.621491,692.866238 0,629.551954 L4.4408921e-15,0 Z" id="Mask"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
