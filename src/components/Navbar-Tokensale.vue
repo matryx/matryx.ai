@@ -52,11 +52,11 @@ export default {
 section{
   margin: 0;
   padding: 0;
-  background: rgb(8,31,54); 
-  background: -moz-linear-gradient(-45deg, rgba(8,31,54,1) 0%, rgba(0,134,203,1) 100%); 
-  background: -webkit-linear-gradient(-45deg, rgba(8,31,54,1) 0%,rgba(0,134,203,1) 100%); 
-  background: linear-gradient(135deg, rgba(8,31,54,1) 0%,rgba(0,134,203,1) 100%); 
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#081f36', endColorstr='#0086cb',GradientType=1 ); 
+  background: rgb(8,31,54);
+  background: -moz-linear-gradient(-45deg, rgba(8,31,54,1) 0%, rgba(0,134,203,1) 100%);
+  background: -webkit-linear-gradient(-45deg, rgba(8,31,54,1) 0%,rgba(0,134,203,1) 100%);
+  background: linear-gradient(135deg, rgba(8,31,54,1) 0%,rgba(0,134,203,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#081f36', endColorstr='#0086cb',GradientType=1 );
 }
 
 .content-container {
@@ -105,26 +105,26 @@ section{
 
 .first {
   left: 100%;
-  animation: scroll-first 15s linear infinite;
+  animation: scroll-first 30s linear -30s infinite;
 }
 .second {
   left: 80%;
-  animation: scroll-second 15s linear 3s infinite;
+  animation: scroll-second 30s linear -24s infinite;
 }
 
 .third {
   left: 60%;
-  animation: scroll-third 15s linear 6s infinite;
+  animation: scroll-third 30s linear -18s infinite;
 }
 
 .fourth {
   left: 40%;
-  animation: scroll-fourth 15s linear 9s infinite;
+  animation: scroll-fourth 30s linear -12s infinite;
 }
 
 .fifth {
   left: 20%;
-  animation: scroll-fifth 15s linear 12s infinite;
+  animation: scroll-fifth 30s linear -6s infinite;
 
   p{ line-height:24px; }
 }
