@@ -119,6 +119,7 @@ export default {
     &__sub {
       text-transform: uppercase;
       background-color: white;
+      font-size: 30px;
       border: 2px solid white;
       padding: 0 20px;
       position: relative;
