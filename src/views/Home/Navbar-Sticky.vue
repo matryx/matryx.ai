@@ -112,7 +112,8 @@ export default {
 
   .navbar.navbar-light .nav-link {
     line-height: 50px;
-    margin-right: 5px;
+    margin-right: 2.5px;
+    margin-left: 5px;
   }
 
   .navbar-toggleable-sm .navbar-nav .nav-link {
