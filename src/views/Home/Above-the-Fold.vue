@@ -11,7 +11,7 @@
         <Get-Notified ctaLocation="Above the Fold"></Get-Notified>
       </div>
       <div class="token-sale__video-launcher content-container--medium">
-        <iframe class="matryx-video-yt" width="560" height="315" src="https://www.youtube.com/embed/ZJ47AoYdlYw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        <iframe class="matryx-video-yt" width="560" height="315" src="https://www.youtube.com/embed/7adVECvMfWA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
         <!-- <b v-b-modal.matryx-video> -->
           <!-- <img src="../../assets/images/videothumbnail.png" class="video-link-image" alt=""> -->
         <!-- </b> -->

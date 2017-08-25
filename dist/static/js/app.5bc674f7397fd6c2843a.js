@@ -1954,7 +1954,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         twitterLink: 'https://www.twitter.com/seriousbrunet'
       }, {
         name: 'Adam Simon',
-        title: 'Project Manager',
+        title: 'Project Developer',
         src: __WEBPACK_IMPORTED_MODULE_5__assets_images_team_adam_jpg___default.a,
         linkedInLink: 'https://www.linkedin.com/in/ottomanbob/',
         twitterLink: 'https://www.twitter.com/ottomanbob/'
@@ -5135,7 +5135,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "width": "560",
       "height": "315",
-      "src": "https://www.youtube.com/embed/ZJ47AoYdlYw?rel=0&showinfo=0",
+      "src": "https://www.youtube.com/embed/7adVECvMfWA?rel=0&showinfo=0",
       "frameborder": "0",
       "allowfullscreen": ""
     }
@@ -5287,4 +5287,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ],[19]);
-//# sourceMappingURL=app.751e505ddc4fea913c20.js.map
+//# sourceMappingURL=app.5bc674f7397fd6c2843a.js.map
