@@ -255,3 +255,12 @@ h1.cd-headline.clip {
   align-items: center;
 }
 /* end ID's */
+
+
+
+@media screen and (max-width: 500px) {
+  h2.font-size--large {
+  font-size: 36px;
+  line-height: 45px;
+}
+}

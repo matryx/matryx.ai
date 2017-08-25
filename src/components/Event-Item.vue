@@ -13,7 +13,7 @@
         <div class="event-item__body__day">{{ day }}</div>
       </div>
       <a :href="eventLink" target="_blank">
-        <button class="btn-blue">RSVP</button>
+        <button class="btn-blue">See Details</button>
       </a>
     </div>
   </div>
