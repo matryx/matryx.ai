@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import { getUTMS, isValidEmail } from '@/utils'
+import { getUTMS, isValidEmail, setlStorage } from '@/utils'
 
 export default {
   name: 'GetNotified',
@@ -72,7 +72,7 @@ export default {
         traits.ctaLocation = `${this.ctaLocation}`
 
         // Store email in local and store
-        window.localStorage.setItem('email', this.email)
+        setlStorage('email', this.email)
         this.$store.commit('setEmail', this.email)
 
         window.analytics.identify(this.email, traits)
