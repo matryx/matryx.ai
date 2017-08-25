@@ -19,13 +19,13 @@
         </b-nav-item>
         <b-nav-item
           class="nav-link text-color--matryx-grey nav-link--mobile-hide"
-          href="#bounty-system">
-          BOUNTY SYSTEM
+          href="#about-token-sale">
+          TOKEN SALE
         </b-nav-item>
         <b-nav-item
           class="nav-link text-color--matryx-grey nav-link--mobile-hide"
-          href="#about-token-sale">
-          TOKEN SALE
+          href="#bounty-system">
+          BOUNTY SYSTEM
         </b-nav-item>
         <b-nav-item class="nav-link text-color--matryx-grey"
           target="_blank"
