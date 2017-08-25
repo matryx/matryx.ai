@@ -2972,7 +2972,7 @@ module.exports = __webpack_require__.p + "static/img/scott.30f7480.jpg";
 /* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/img/steve.f2238f5.jpg";
+module.exports = __webpack_require__.p + "static/img/steve.a252a5f.jpg";
 
 /***/ }),
 /* 121 */
@@ -5298,4 +5298,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ],[19]);
-//# sourceMappingURL=app.34c3d886e62d93b48251.js.map
+//# sourceMappingURL=app.96e41e7723a912e49583.js.map
