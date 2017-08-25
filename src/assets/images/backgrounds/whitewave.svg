@@ -4,15 +4,15 @@
     <title>whitewave</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <linearGradient x1="100%" y1="100%" x2="0%" y2="0%" id="linearGradient-1">
+        <linearGradient x1="53.7702084%" y1="100%" x2="53.7702084%" y2="0%" id="linearGradient-1">
             <stop stop-color="#134863" offset="0%"></stop>
-            <stop stop-color="#081F36" offset="100%"></stop>
+            <stop stop-color="#0F3249" offset="100%"></stop>
         </linearGradient>
     </defs>
     <g id="backgrounds" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="whitewave">
-            <rect id="bg-copy-2" fill="url(#linearGradient-1)" transform="translate(1197.000000, 501.500000) scale(1, -1) translate(-1197.000000, -501.500000) " x="0" y="0" width="2394" height="1003"></rect>
-            <rect id="Rectangle-2" fill="#FFFFFF" x="0" y="257" width="2394" height="132"></rect>
+            <rect id="Rectangle-2" fill="#333C44" x="0" y="257" width="2394" height="132"></rect>
+            <rect id="Rectangle-2-Copy" fill="url(#linearGradient-1)" x="0" y="0" width="2394" height="132"></rect>
             <path d="M-280.521477,0.719253417 C1178.24285,148.857266 1429.38908,106.392353 1833.02127,69.1717497 C2236.65346,31.9511467 2552.24684,5.66209982 2574.18152,139.838897 C2590.33236,238.63533 3054.95908,186.742228 2521.19413,350.746831 C2323.51157,411.486768 1725.9024,356.553656 941.613883,307.238623 C-69.1220382,243.684875 -448.838124,337.272 -197.534375,588 C-392.588147,182.289971 -420.250514,-13.4702778 -280.521477,0.719253417 Z" id="BG_MIDDLE-Copy" fill="#F4F4F4"></path>
         </g>
     </g>

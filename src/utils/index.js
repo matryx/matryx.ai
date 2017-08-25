@@ -23,3 +23,27 @@ export function isValidEmail (value) {
   const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   return regex.test(value)
 }
+
+export function getlStorage (item) {
+  if (window.localStorage) {
+    try {
+      return window.localStorage.getItem(item)
+    } catch (e) {
+      return false
+    }
+  }
+}
+
+/*
+ * name: String
+ * item: String
+ */
+export function setlStorage (name, item) {
+  if (window.localStorage) {
+    try {
+      return window.localStorage.setItem(name, item)
+    } catch (e) {
+      return false
+    }
+  }
+}

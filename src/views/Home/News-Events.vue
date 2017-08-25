@@ -64,34 +64,28 @@ export default {
   data () {
     return {
       news: [{
-        name: 'PR News Wire',
+        name: 'SD News: Nanome Launches Matryx',
         date: '24 Aug 2017',
-        desc: 'Virtual Reality Software Maker Nanome Introduces Matryx with Token Sale',
+        desc: 'The three primary components of Matryx are the bounty system for rewarding users for solving problems posed on the platform by researchers, a library of digital assets for use in developing models and solutions and a marketplace for exchanging these ideas and assets.',
         image: newsImage3,
-        articleLink: 'http://www.prnewswire.com/news-releases/virtual-reality-software-maker-nanome-introduces-matryx-with-token-sale-300509203.html'
+        articleLink: 'http://sdtimes.com/nanome-launches-vr-collaboration-platform-matryx/'
       }, {
-        name: 'ETHNews: State of Digital Money 2017',
+        name: 'Blockchain News: Nanome Introduces Matryx',
+        date: '24 Aug 2017',
+        desc: 'Nanome, creator of virtual reality software for scientific research and development, has announced Matryx, an open source platform for decentralized collaboration. The Matryx token sale will kick off with a public pre-sale on Wednesday, September 6, 2017.',
+        image: newsImage2,
+        articleLink: 'http://sdtimes.com/nanome-launches-vr-collaboration-platform-matryx/'
+      }, {
+        name: 'ETH News: State of Digital Money 2017',
         date: '24 July 2017',
-        desc: 'Matryx debuted a custom built vector calculus tool to learn the subject in VR.',
+        desc: 'A number of use cases for Ethereum were also highlighted. A team from Matryx took a significant share of the spotlight for the debut of its take on virtual reality applications. Matryx debuted a custom built vector calculus tool to learn the subject in VR.',
         image: newsImage1,
         articleLink: 'https://www.ethnews.com/state-of-digital-money-2017-recap'
-      }, {
-        name: 'Decentralized Scientific Collaboration',
-        date: '20 July 2017',
-        desc: 'Blockchain technology is the gateway to an Open Access society and the technologies of tomorrow.',
-        image: newsImage2,
-        articleLink: 'http://stateofdigitalmoney.com/2017/07/20/matryx-demo-at-sodm17/'
       }],
       events: [{
-        name: 'Marketing & PR in the Blockchain Industry',
-        date: '23 Aug 2017 @ 7pm',
-        day: 'Wednesday',
-        image: newsImage3,
-        eventLink: 'https://www.meetup.com/Los-Angeles-Ethereum/events/242564631/'
-      }, {
         name: 'Matryx. A Decentralized Research Platform',
         date: '13 Sept 2017 @ 7pm',
-        day: 'Wednesday',
+        day: 'Nanome CEO presents Matryx in Venice CA',
         image: newsImage4,
         eventLink: 'https://www.meetup.com/Los-Angeles-Ethereum/events/242566534/'
       }]
@@ -130,6 +124,7 @@ export default {
       padding: 0 20px;
       position: relative;
       left: -20px;
+      font-size: 30px;
 
       &--events {
         color: $matryx-black;

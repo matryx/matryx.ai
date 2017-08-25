@@ -1,11 +1,6 @@
 // Group all analytics here so we can see them at a glance
 // Import into components
-
-function getlStorage (item) {
-  if (window.localStorage) {
-    return window.localStorage.getItem(item)
-  }
-}
+import { getlStorage } from '../utils'
 
 const appAnalytics = {
   surveyModal (email, intendedAmount) {

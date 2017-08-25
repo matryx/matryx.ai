@@ -105,7 +105,7 @@ export default {
         twitterLink: 'https://www.twitter.com/seriousbrunet'
       }, {
         name: 'Adam Simon',
-        title: 'Project Manager',
+        title: 'Project Developer',
         src: Adam,
         linkedInLink: 'https://www.linkedin.com/in/ottomanbob/',
         twitterLink: 'https://www.twitter.com/ottomanbob/'
