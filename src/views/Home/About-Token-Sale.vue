@@ -67,7 +67,7 @@
               <div class="roadmap__section__quarter roadmap__section__quarter--future">Q3</div>
               <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>Token Sale Launch</p>
-                <caption>Token Pre-Sale Launches Sept. 6 at 10am GMT for purchases of over 150 ETH. Pre-sale period will remain open for one week from Sept. 6 to Sept 13
+                <caption>Token Pre-Sale Launches Sept. 6 at 10am GMT for purchases of over 75 ETH. Pre-sale period will remain open for one week from Sept. 6 to Sept 13
                 </caption>
               </div>
             </div>
