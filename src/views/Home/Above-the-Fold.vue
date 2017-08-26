@@ -230,11 +230,17 @@ section.above-the-fold {
 
 }
 
+@media screen and (min-width: 1600px) {
+  section.above-the-fold {
+    padding-bottom: 220px;
+  }
+}
+
 @media screen and (max-width: 750px) {
   iframe{
     width: 300px !important;
     height: 200px !important;
-  } 
+  }
 }
 
 @media screen and (max-width: 500px) {
