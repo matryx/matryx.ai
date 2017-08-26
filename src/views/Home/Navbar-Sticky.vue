@@ -15,7 +15,7 @@
         <b-nav-item
           class="nav-link text-color--matryx-grey nav-link--mobile-hide"
           href="#what-is-matryx">
-          WHAT IS MATRYX
+          ABOUT
         </b-nav-item>
         <b-nav-item
           class="nav-link text-color--matryx-grey nav-link--mobile-hide"
@@ -112,7 +112,8 @@ export default {
 
   .navbar.navbar-light .nav-link {
     line-height: 50px;
-    margin-right: 5px;
+    margin-right: 2.5px;
+    margin-left: 5px;
   }
 
   .navbar-toggleable-sm .navbar-nav .nav-link {
