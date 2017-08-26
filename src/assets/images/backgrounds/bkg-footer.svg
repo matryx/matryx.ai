@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1280px" height="401px" viewBox="0 0 1280 401" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="2115px" height="401px" viewBox="0 0 2115 401" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
     <title>bkg-footer</title>
     <desc>Created with Sketch.</desc>
@@ -11,7 +11,7 @@
     </defs>
     <g id="backgrounds" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="bkg-footer" fill="url(#linearGradient-1)">
-            <path d="M-90.6095976,2.19257166 C88.1158552,17.7400576 306.432685,149.516458 637.854458,75.854515 C969.276231,2.19257166 1275.65193,-14.0935358 1361.80074,122.886703 C1399.39118,182.65709 1371.56005,275.361523 1278.30733,401 L-2.59841752,401 C-305.315235,113.89889 -334.652295,-19.0369194 -90.6095976,2.19257166 Z" id="bg_bottom"></path>
+            <path d="M-144.985346,2.19257166 C150.371606,17.7400576 511.15622,149.516458 1058.85507,75.854515 C1606.55392,2.19257166 2112.86229,-14.0935358 2255.22954,122.886703 C2317.3505,182.65709 2271.35751,275.361523 2117.25054,401 L0.459600454,401 C-499.802199,113.89889 -548.283847,-19.0369194 -144.985346,2.19257166 Z" id="bg_bottom"></path>
         </g>
     </g>
 </svg>

@@ -17,6 +17,8 @@
             :key="item.name"
             :image="item.image"
             :articleLink="item.articleLink"
+            :facebookLink="item.facebookLink"
+            :twitterLink="item.twitterLink"
           >
           </News-Article>
         </div>
@@ -37,6 +39,8 @@
             :key="item.name"
             :image="item.image"
             :eventLink="item.eventLink"
+            :facebookLink="item.facebookLink"
+            :twitterLink="item.twitterLink"
           >
           </Event-Item>
         </div>
@@ -63,31 +67,40 @@ export default {
 
   data () {
     return {
+      // http://sharingbuttons.io/
       news: [{
         name: 'SD News: Nanome Launches Matryx',
         date: '24 Aug 2017',
         desc: 'The three primary components of Matryx are the bounty system for rewarding users for solving problems posed on the platform by researchers, a library of digital assets for use in developing models and solutions and a marketplace for exchanging these ideas and assets.',
         image: newsImage3,
-        articleLink: 'http://sdtimes.com/nanome-launches-vr-collaboration-platform-matryx/'
+        articleLink: 'http://sdtimes.com/nanome-launches-vr-collaboration-platform-matryx/',
+        facebookLink: 'https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsdtimes.com%2Fnanome-launches-vr-collaboration-platform-matryx%2F',
+        twitterLink: 'https://twitter.com/intent/tweet/?text=&amp;url=http%3A%2F%2Fsdtimes.com%2Fnanome-launches-vr-collaboration-platform-matryx%2F'
       }, {
         name: 'Blockchain News: Nanome Introduces Matryx',
         date: '24 Aug 2017',
         desc: 'Nanome, creator of virtual reality software for scientific research and development, has announced Matryx, an open source platform for decentralized collaboration. The Matryx token sale will kick off with a public pre-sale on Wednesday, September 6, 2017.',
         image: newsImage2,
-        articleLink: 'http://sdtimes.com/nanome-launches-vr-collaboration-platform-matryx/'
+        articleLink: 'http://www.prnewswire.com/news-releases/virtual-reality-software-maker-nanome-introduces-matryx-with-token-sale-300509203.html',
+        facebookLink: 'https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.prnewswire.com%2Fnews-releases%2Fvirtual-reality-software-maker-nanome-introduces-matryx-with-token-sale-300509203.html',
+        twitterLink: 'https://twitter.com/intent/tweet/?text=&amp;url=http%3A%2F%2Fwww.prnewswire.com%2Fnews-releases%2Fvirtual-reality-software-maker-nanome-introduces-matryx-with-token-sale-300509203.html'
       }, {
         name: 'ETH News: State of Digital Money 2017',
         date: '24 July 2017',
         desc: 'A number of use cases for Ethereum were also highlighted. A team from Matryx took a significant share of the spotlight for the debut of its take on virtual reality applications. Matryx debuted a custom built vector calculus tool to learn the subject in VR.',
         image: newsImage1,
-        articleLink: 'https://www.ethnews.com/state-of-digital-money-2017-recap'
+        articleLink: 'https://www.ethnews.com/state-of-digital-money-2017-recap',
+        facebookLink: 'https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ethnews.com%2Fstate-of-digital-money-2017-recap',
+        twitterLink: 'https://twitter.com/intent/tweet/?text=&amp;url=https%3A%2F%2Fwww.ethnews.com%2Fstate-of-digital-money-2017-recap'
       }],
       events: [{
         name: 'Matryx. A Decentralized Research Platform',
         date: '13 Sept 2017 @ 7pm',
         day: 'Nanome CEO presents Matryx in Venice CA',
         image: newsImage4,
-        eventLink: 'https://www.meetup.com/Los-Angeles-Ethereum/events/242566534/'
+        eventLink: 'https://www.meetup.com/Los-Angeles-Ethereum/events/242566534/',
+        facebookLink: 'https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.meetup.com%2FLos-Angeles-Ethereum%2Fevents%2F242566534%2F',
+        twitterLink: 'https://twitter.com/intent/tweet/?text=&amp;url=https%3A%2F%2Fwww.meetup.com%2FLos-Angeles-Ethereum%2Fevents%2F242566534%2F'
       }]
     }
   }
@@ -154,6 +167,96 @@ export default {
     }
   }
 }
+
+
+/* share buttons */
+.resp-sharing-button__link,
+.resp-sharing-button__icon {
+  display: inline-block
+}
+
+.resp-sharing-button__link {
+  text-decoration: none;
+  color: #fff;
+  margin: 0.5em
+}
+
+.resp-sharing-button {
+  border-radius: 5px;
+  transition: 25ms ease-out;
+  padding: 0.5em 0.75em;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif
+}
+
+.resp-sharing-button__icon svg {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.4em;
+  vertical-align: top
+}
+
+.resp-sharing-button--small svg {
+  margin: 0;
+  vertical-align: middle
+}
+
+/* Non solid icons get a stroke */
+.resp-sharing-button__icon {
+  stroke: #fff;
+  fill: none
+}
+
+/* Solid icons get a fill */
+.resp-sharing-button__icon--solid,
+.resp-sharing-button__icon--solidcircle {
+  fill: #fff;
+  stroke: none
+}
+
+.resp-sharing-button--twitter {
+  background-color: #55acee
+}
+
+.resp-sharing-button--twitter:hover {
+  background-color: #2795e9
+}
+
+.resp-sharing-button--facebook {
+  background-color: #3b5998
+}
+
+.resp-sharing-button--facebook:hover {
+  background-color: #2d4373
+}
+
+.resp-sharing-button--facebook {
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+
+.resp-sharing-button--facebook:hover,
+.resp-sharing-button--facebook:active {
+  background-color: #2d4373;
+  border-color: #2d4373;
+}
+
+.resp-sharing-button--twitter {
+  background-color: #55acee;
+  border-color: #55acee;
+}
+
+.resp-sharing-button--twitter:hover,
+.resp-sharing-button--twitter:active {
+  background-color: #2795e9;
+  border-color: #2795e9;
+}
+
+p.share-social--title.text-color--matryx-blue {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+
+
 
 @media screen and (max-width: 500px) {
   .news-events {

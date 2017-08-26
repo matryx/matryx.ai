@@ -51,7 +51,8 @@
             </a>
           </li>
           <li class="nav-item social-icon">
-            <a aria-disabled="false" href="https://www.twitter.com/matryx_ai" target="_blank"
+            <a aria-disabled="false" href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Flocalhost%3A8080%2F&ref_src=twsrc%5Etfw&region=follow_link&screen_name=matryx_ai&tw_p=followbutton"
+            target="_blank"
             rel="noopener"
             class="nav-link"
             @click="socialMediaClick('twitter', 'navbar')"
@@ -66,9 +67,11 @@
               class="nav-link"
               @click="socialMediaClick('facebook', 'navbar')"
             >
-              <img src="./assets/icons/icon-facebook.png" alt="Matryx Facebook Page">
+            <img src="./assets/icons/icon-facebook.png" alt="Matryx Facebook Page">
             </a>
+
           </li>
+
          <!--  <li class="nav-item nav-item-language">
             <b-dropdown id="language" text="Language" class="language">
               <b-dropdown-item>English</b-dropdown-item>
