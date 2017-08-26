@@ -2,7 +2,7 @@
   <section class="above-the-fold">
     <div class="token-sale content-container content-container--large ">
       <div class="token-sale__text content-container--medium text-color--white">
-        <h1 class="font-size--large uppercase">Matryx Token Sale</h1>
+        <h1 class="font-size--large uppercase">Join Our Token Sale</h1>
         <p class="lead ">
           Join in on the action. Enter your email to be notified when our
           token sale launches.
