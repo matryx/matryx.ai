@@ -76,7 +76,7 @@ section.above-the-fold {
 
 .above-the-fold {
   border-radius: 0;
-  background-image: url('../../assets/images/backgrounds/abovethefoldbkg.png');
+  background-image: url('../../assets/images/backgrounds/abovethefoldbkg.svg');
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 0;
@@ -193,7 +193,7 @@ section.above-the-fold {
 
 
 .grey-bkg {
-  background-image: url('../../assets/images/backgrounds/greywave.png');
+  background-image: url('../../assets/images/backgrounds/greywave.svg');
   background-size:cover;
   background-position: center;
   color: $white;

@@ -74,7 +74,7 @@ export default {
 
 section.cta-banner.white-bkg {
   background-color: #333C44;
-  background-image: url('../assets/images/backgrounds/whiteWave.png');
+  background-image: url('../assets/images/backgrounds/whitewave.svg');
   background-size: cover;
   margin:-20px 0;
   background-position: center;
@@ -91,7 +91,7 @@ section.cta-banner.white-bkg {
 }
 
 .bkg-footer {
-  background-image: url('../assets/images/backgrounds/bkg-footer.png');
+  background-image: url('../assets/images/backgrounds/bkg-footer.svg');
   background-size:cover;
   background-repeat: no-repeat;
 }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280px" height="401px" viewBox="0 0 1280 401" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>bkg-footer</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="93.8774884%" y1="100%" x2="17.1051215%" y2="3.39580736%" id="linearGradient-1">
+            <stop stop-color="#474F54" offset="0%"></stop>
+            <stop stop-color="#081F36" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="backgrounds" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="bkg-footer" fill="url(#linearGradient-1)">
+            <path d="M-90.6095976,2.19257166 C88.1158552,17.7400576 306.432685,149.516458 637.854458,75.854515 C969.276231,2.19257166 1275.65193,-14.0935358 1361.80074,122.886703 C1399.39118,182.65709 1371.56005,275.361523 1278.30733,401 L-2.59841752,401 C-305.315235,113.89889 -334.652295,-19.0369194 -90.6095976,2.19257166 Z" id="bg_bottom"></path>
+        </g>
+    </g>
+</svg>

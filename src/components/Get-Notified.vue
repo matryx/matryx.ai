@@ -37,7 +37,8 @@
 </template>
 
 <script>
-import { getUTMS, isValidEmail } from '@/utils'
+import { getUTMS, isValidEmail, setlStorage } from '@/utils'
+import { appAnalytics } from '@/analytics'
 
 export default {
   name: 'GetNotified',
@@ -61,30 +62,25 @@ export default {
       if (isValidEmail(this.email)) {
         // Close modal just in case
         this.$store.commit('showGetNotifiedModal', false)
-
+        // Email is valid, so no need warning
         this.showEmailWarning = false
+        // Set spinner to true
         this.showSpinner = true
 
+        // Send analytics
         const traits = getUTMS()
         traits.email = this.email
         traits.ctaLocation = `${this.ctaLocation}`
 
-        if (this.email) {
-          // Store email in local and store
-          window.localStorage.setItem('email', this.email)
-          this.$store.commit('setEmail', this.email)
+        // Store email in local and store
+        setlStorage('email', this.email)
+        this.$store.commit('setEmail', this.email)
 
-          console.log('email', this.email, 'traits', traits)
+        appAnalytics.emailSignup(this.email, traits, this.ctaLocation)
 
-          window.analytics.identify(this.email, traits)
+        // Reset email input
+        this.email = ''
 
-          window.analytics.track(`CTA ${this.ctaLocation} Click`, {
-            category: 'Get Notified',
-            label: `cta-${this.ctaLocation}`
-          })
-
-          this.email = ''
-        }
         setTimeout(() => {
           this.showSpinner = false
           this.$store.commit('showModal', true)
