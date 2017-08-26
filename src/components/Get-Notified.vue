@@ -38,6 +38,7 @@
 
 <script>
 import { getUTMS, isValidEmail, setlStorage } from '@/utils'
+import { appAnalytics } from '@/analytics'
 
 export default {
   name: 'GetNotified',
@@ -75,12 +76,7 @@ export default {
         setlStorage('email', this.email)
         this.$store.commit('setEmail', this.email)
 
-        window.analytics.identify(this.email, traits)
-
-        window.analytics.track(`CTA ${this.ctaLocation} Click`, {
-          category: 'Get Notified',
-          label: `cta-${this.ctaLocation}`
-        })
+        appAnalytics.emailSignup(this.email, traits, this.ctaLocation)
 
         // Reset email input
         this.email = ''
