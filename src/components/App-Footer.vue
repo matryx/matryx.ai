@@ -10,7 +10,7 @@
       <a href="https://t.me/matryxai" target="_blank" @click="socialMediaClick('telegram', 'footer')">
         <img class="footer__social__icon" src="../assets/icons/telegram.svg" alt="Telegram">
       </a>
-      <a href="https://twitter.com/matryx_ai" target="_blank" @click="socialMediaClick('twitter', 'footer')">
+      <a href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Flocalhost%3A8080%2F&ref_src=twsrc%5Etfw&region=follow_link&screen_name=matryx_ai&tw_p=followbutton" target="_blank" @click="socialMediaClick('twitter', 'footer')">
         <img class="footer__social__icon" src="../assets/icons/icon-twitter.gif" alt="Twitter">
       </a>
       <a href="https://www.linkedin.com/company-beta/11238967/" target="_blank" @click="socialMediaClick('linkedin', 'footer')">

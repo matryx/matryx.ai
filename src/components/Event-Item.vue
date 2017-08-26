@@ -15,7 +15,7 @@
       <a :href="eventLink" target="_blank">
         <button class="btn-blue">See Details</button>
       </a>
-      
+
       <p class="share-social--title text-color--matryx-blue">Share:</p>
       <div class="share-social">
         <!-- Sharingbutton Facebook -->

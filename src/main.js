@@ -5,6 +5,8 @@ import App from './App'
 import router from './router'
 import store from './store'
 import BootstrapVue from 'bootstrap-vue'
+import SocialSharing from 'vue-social-sharing'
+
 import 'bootstrap/dist/css/bootstrap.css'
 import 'jquery'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -20,6 +22,7 @@ Vue.filter('two_digits', function (value) {
 })
 
 Vue.use(BootstrapVue)
+Vue.use(SocialSharing)
 
 /* eslint-disable no-new */
 new Vue({
