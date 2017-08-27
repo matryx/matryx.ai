@@ -1,7 +1,7 @@
 <template lang="html">
   <section class="content-container content-container--large">
-    <h3 class="section__header text--center">TOKEN SALE</h3>
-    <h2 class="text--center">Launches September 13, 2017</h2>
+    <h2 class="section__header text--center title">TOKEN SALE</h2>
+    <h3 class="text--center sub-title">Launches September 13, 2017</h3>
     <div class="icon-list">
       <SaleIcon
         v-for="(icon, index) in icons"
@@ -53,24 +53,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/*@import '../../assets/css/colors.scss';*/
 section.content-container {
   margin-top: 0;
   padding: 40px 0 80px;
-}
 
-.icon-list {
-  display:-webkit-box;
-  display:-ms-flexbox;
-  display:flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-around;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
+  .title {
+    font-size: 24px;
+  }
 
-h2 {
-  margin-bottom: 20px;
+  .sub-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .icon-list {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
 }
 </style>

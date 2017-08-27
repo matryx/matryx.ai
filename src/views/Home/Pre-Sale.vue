@@ -1,7 +1,7 @@
 <template lang="html">
   <section class="content-container content-container--large">
-    <h3 class="section__header text--center">PRE-SALE</h3>
-    <h2 class="text--center">Opening September 6, 2017</h2>
+    <h2 class="section__header text--center title">PRE-SALE</h2>
+    <h3 class="sub-title text--center">Opening September 6, 2017</h3>
     <div class="icon-list">
       <SaleIcon
         v-for="(icon, index) in icons"
@@ -56,28 +56,31 @@ export default {
 <style lang="scss" scoped>
 section.content-container {
   padding: 20px 0 40px;
+
+  .title {
+    font-size: 24px;
+  }
+
+  .sub-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .discount {
+    font-size: smaller;
+    text-align:center;
+    margin-top: 50px;
+  }
+
+  .icon-list {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
 }
-h2 {
-  margin-bottom: 20px;
-}
-
-.discount {
-  font-size: smaller;
-  text-align:center;
-  margin-top: 50px;
-}
-
-.icon-list {
-  display:-webkit-box;
-  display:-ms-flexbox;
-  display:flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-around;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-
-
 </style>
