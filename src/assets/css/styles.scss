@@ -225,6 +225,14 @@ h1.cd-headline.clip {
   }
 }
 
+/*section styles*/
+.section {
+  &__header {
+    text-transform: uppercase;
+    color: $matryx-grey-blue;
+  }
+}
+
 /* members */
 .member {
   display: flex;
