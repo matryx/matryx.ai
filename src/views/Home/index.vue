@@ -13,7 +13,7 @@
           <img src="../../assets/images/press/business-insider.png" alt=""></a>
         <a class="press-logo" href="http://www.sandiegouniontribune.com/business/sd-fi-ignite-conference-20170223-story.html" target="_blank">
           <img src="../../assets/images/press/sdut-logo.png" alt=""></a>
-      
+
         <a class="press-logo" href="http://jacobsschool.ucsd.edu/news/news_releases/release.sfe?id=2081" target="_blank">
           <img src="../../assets/images/press/UCSD-logo.png" alt=""></a>
         <a class="press-logo" href="http://sdtimes.com/nanome-launches-vr-collaboration-platform-matryx/" target="_blank">
@@ -91,7 +91,7 @@ export default {
 
 /*media mentions*/
 .content-container{
-  paddin: 0px; 
+  padding: 0px;
 }
 .media-mentions {
   display:-webkit-box;display:-ms-flexbox;display:flex;
