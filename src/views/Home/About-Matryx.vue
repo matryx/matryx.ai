@@ -11,5 +11,12 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="scss" scoped>
+@import '../../assets/css/colors.scss';
+
+section.content-container {
+  border-top: 1px solid $matryx-grey;
+  border-bottom: 1px solid $matryx-grey;
+  padding:40px 80px ;
+}
 </style>

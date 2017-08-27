@@ -1,19 +1,16 @@
 <template lang="html">
-  <section>
-    <div class="content-container content-container--large">
-
-      <h3 class="section__header text--center">PRE-SALE</h3>
-      <h2 class="text--center">Opening September 6, 2017</h2>
-      <div class="icon-list">
-        <SaleIcon
-          v-for="icon in icons"
-          :img="icon.img"
-          :text="icon.text"
-          :alt="icon.text"
-        ></SaleIcon>
-      </div>
-      <p class="discount">*Discounts only apply for purchases during the Pre-Sale.</p>
+  <section class="content-container content-container--large">
+    <h3 class="section__header text--center">PRE-SALE</h3>
+    <h2 class="text--center">Opening September 6, 2017</h2>
+    <div class="icon-list">
+      <SaleIcon
+        v-for="icon in icons"
+        :img="icon.img"
+        :text="icon.text"
+        :alt="icon.text"
+      ></SaleIcon>
     </div>
+    <p class="discount">*Discounts only apply for purchases during the Pre-Sale.</p>
   </section>
 </template>
 
@@ -56,6 +53,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+section.content-container {
+  padding: 20px 0 40px;
+}
 h2 {
   margin-bottom: 20px;
 }

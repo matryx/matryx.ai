@@ -1,6 +1,5 @@
 <template>
   <section id="what-matryx">
-    <hr>
     <div class="content-container--large text--light content-container" id="what-is-matryx">
       <div class="overview">
         <div class="overview__column-1 mobile--order-1">

@@ -1,17 +1,14 @@
 <template lang="html">
-  <section>
-    <div class="content-container content-container--large">
-
-      <h3 class="section__header text--center">TOKEN SALE</h3>
-      <h2 class="text--center">Launches September 13, 2017</h2>
-      <div class="icon-list">
-        <SaleIcon
-          v-for="icon in icons"
-          :img="icon.img"
-          :text="icon.text"
-          :alt="icon.text"
-        ></SaleIcon>
-      </div>
+  <section class="content-container content-container--large">
+    <h3 class="section__header text--center">TOKEN SALE</h3>
+    <h2 class="text--center">Launches September 13, 2017</h2>
+    <div class="icon-list">
+      <SaleIcon
+        v-for="icon in icons"
+        :img="icon.img"
+        :text="icon.text"
+        :alt="icon.text"
+      ></SaleIcon>
     </div>
   </section>
 </template>
@@ -56,6 +53,10 @@ export default {
 
 <style lang="scss" scoped>
 /*@import '../../assets/css/colors.scss';*/
+section.content-container {
+  margin-top: 0;
+  padding: 40px 0 80px;
+}
 
 .icon-list {
   display:-webkit-box;
