@@ -4,7 +4,7 @@
     <h2 class="text--center">Launches September 13, 2017</h2>
     <div class="icon-list">
       <SaleIcon
-        v-for="(index, icon) in icons"
+        v-for="(icon, index) in icons"
         :img="icon.img"
         :text="icon.text"
         :alt="icon.text"
