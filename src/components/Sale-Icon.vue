@@ -33,7 +33,6 @@ export default {
   p {
     line-height: 20px;
     font-weight:lighter;
-    font-size:smaller;
   }
 }
 </style>

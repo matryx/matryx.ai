@@ -1,18 +1,16 @@
 <template lang="html">
-  <section>
-    <div class="content-container content-container--large">
-
-      <h3 class="section__header text--center">PRE-SALE</h3>
-      <h2 class="text--center">Opening September 6, 2017</h2>
-      <div class="icon-list">
-        <SaleIcon
-          v-for="icon in icons"
-          :img="icon.img"
-          :text="icon.text"
-          :alt="icon.text"
-        ></SaleIcon>
-      </div>
+  <section class="content-container content-container--large">
+    <h3 class="section__header text--center">PRE-SALE</h3>
+    <h2 class="text--center">Opening September 6, 2017</h2>
+    <div class="icon-list">
+      <SaleIcon
+        v-for="icon in icons"
+        :img="icon.img"
+        :text="icon.text"
+        :alt="icon.text"
+      ></SaleIcon>
     </div>
+    <p class="discount">*Discounts only apply for purchases during the Pre-Sale.</p>
   </section>
 </template>
 
@@ -34,19 +32,19 @@ export default {
       icons: [
         {
           img: eth,
-          text: 'Purchases over 75 ETH eligible for Pre-Sale'
+          text: 'Purchases Over 75 ETH Eligible for Pre-Sale'
         },
         {
           img: discount10,
-          text: '150 ETH eligible from 10% discount'
+          text: '150 ETH Eligible for 10% Discount*'
         },
         {
           img: discount15,
-          text: '300+ ETH eligible for 15% discount'
+          text: '300+ ETH Eligible for 15% Discount*'
         },
         {
           img: upto50,
-          text: 'UP to 50% of target to be sold'
+          text: 'Up to 50% of Total Sale Cap'
         }
       ]
     }
@@ -55,7 +53,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/*@import '../../assets/css/colors.scss';*/
+section.content-container {
+  padding: 20px 0 40px;
+}
+h2 {
+  margin-bottom: 20px;
+}
+
+.discount {
+  font-size: smaller;
+  text-align:center;
+  margin-top: 50px;
+}
 
 .icon-list {
   display:-webkit-box;
@@ -68,7 +77,6 @@ export default {
   flex-wrap: wrap;
 }
 
-h2 {
-  margin-bottom: 20px;
-}
+
+
 </style>

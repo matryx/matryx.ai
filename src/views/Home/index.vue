@@ -22,26 +22,25 @@
       </div>
     </div>
 
-    <!-- insert new stuff here -->
-    <!-- matryx blurb -->
-    <!-- presale -->
+    <AboutMatryx></AboutMatryx>
     <PreSale></PreSale>
-    <!-- cta banner, location=presale :lighterText="true" :blueBkg="true" -->
-    <!-- tokensale -->
-    <TokenSale></TokenSale>
+    <div class="cta-middle-banner">
+      <CTA-Banner :lighterText="true" :blueBkg="true" cta-location="Top"></CTA-Banner>
+    </div>
+    <div class="bkg-color--matryx-lighter-grey">
+      <TokenSale></TokenSale>
+    </div>
 
-
-    <!-- make tokensale and presale -->
 
     <About-Token-Sale></About-Token-Sale>
     <div class="cta-middle-banner">
-      <CTA-Banner :lighterText="true" :greyBkg="true" cta-location="Top-Middle"></CTA-Banner>
+      <CTA-Banner :lighterText="true" :greyBkg="true" cta-location="Middle"></CTA-Banner>
     </div>
     <Company-Overview id="company-overview"></Company-Overview>
     <Quotes></Quotes>
     <Nanome-Info></Nanome-Info>
     <Bounty-System></Bounty-System>
-    <CTA-Banner :whiteBkg="true" cta-location="Top-Middle"></CTA-Banner>
+    <CTA-Banner :whiteBkg="true" cta-location="Bottom"></CTA-Banner>
     <Matryx-Team></Matryx-Team>
     <News-Events></News-Events>
     <CTA-Banner :lighterText="true" :footerBkg="true" cta-location="Bottom" id="Footer"></CTA-Banner>
@@ -62,6 +61,7 @@ import CTABanner from '../../components/CTA-Banner'
 import NavbarToken from '../../components/Navbar-Tokensale'
 import PreSale from './Pre-Sale'
 import TokenSale from './Token-Sale'
+import AboutMatryx from './About-Matryx'
 
 export default {
   name: 'home',
@@ -83,7 +83,8 @@ export default {
     Quotes,
     NavbarToken,
     PreSale,
-    TokenSale
+    TokenSale,
+    AboutMatryx
   },
 
   mounted () {
