@@ -111,11 +111,11 @@ export default {
 @media screen and (min-width: 2900px) {
   .blueBkg {
     background-image: none;
-    background: rgb(30,87,153); /* Old browsers */
-    background: -moz-linear-gradient(-45deg, rgba(30,87,153,1) 0%, rgba(8,31,54,1) 0%, rgba(19,72,99,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(-45deg, rgba(30,87,153,1) 0%,rgba(8,31,54,1) 0%,rgba(19,72,99,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg, rgba(30,87,153,1) 0%,rgba(8,31,54,1) 0%,rgba(19,72,99,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#134863',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background: rgb(8,31,54); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(8,31,54,1) 1%, rgba(19,72,99,1) 100%, rgba(92,95,101,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(8,31,54,1) 1%,rgba(19,72,99,1) 100%,rgba(92,95,101,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(8,31,54,1) 1%,rgba(19,72,99,1) 100%,rgba(92,95,101,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#081f36', endColorstr='#5c5f65',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   }
   .grey-bkg {
     background-image:none;
