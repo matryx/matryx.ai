@@ -5,14 +5,19 @@
     <Above-the-Fold></Above-the-Fold>
 
     <div class="media-mentions bkg-color--white">
-      <div class=" content-container content-container--large media-mentions__img-container">
-        <p class="text-color--matryx-grey">Featured By</p>
+      <div class=" content-container content-container--medium media-mentions__img-container">
+        <p class="text-color--matryx-grey">Featured in</p>
         <a class="press-logo" href="https://www.gizmodo.com.au/2017/01/you-can-do-maths-in-virtual-reality-now/" target="_blank">
           <img src="../../assets/images/press/gizmodo.png" alt=""></a>
+        <a class="press-logo" href="http://markets.businessinsider.com/news/stocks/Virtual-Reality-Software-Maker-Nanome-Introduces-Matryx-with-Token-Sale-1002282833?utm_source=matryx&utm_medium=web" target="_blank">
+          <img src="../../assets/images/press/business-insider.png" alt=""></a>
         <a class="press-logo" href="http://www.sandiegouniontribune.com/business/sd-fi-ignite-conference-20170223-story.html" target="_blank">
           <img src="../../assets/images/press/sdut-logo.png" alt=""></a>
+
         <a class="press-logo" href="http://jacobsschool.ucsd.edu/news/news_releases/release.sfe?id=2081" target="_blank">
           <img src="../../assets/images/press/UCSD-logo.png" alt=""></a>
+        <a class="press-logo" href="http://sdtimes.com/nanome-launches-vr-collaboration-platform-matryx/" target="_blank">
+          <img src="../../assets/images/press/sd_times.png" alt=""></a>
         <a class="press-logo" href="https://singularityhub.com/2017/01/18/get-ready-to-love-math-with-this-sweet-vr-calculator/" target="_blank">
           <img src="../../assets/images/press/singularity.png" alt=""></a>
       </div>
@@ -77,7 +82,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../../assets/css/colors';
 
 .warn {
@@ -85,6 +90,9 @@ export default {
 }
 
 /*media mentions*/
+.content-container{
+  padding: 0px;
+}
 .media-mentions {
   display:-webkit-box;display:-ms-flexbox;display:flex;
   flex-direction: column;
@@ -96,6 +104,7 @@ export default {
   }
   a{
     opacity: 0.2;
+    padding: 25px;
   }
   a:hover{
     opacity: 1;
@@ -105,7 +114,7 @@ export default {
   &__img-container {
     display:-webkit-box;display:-ms-flexbox;display:flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 
     img {
@@ -113,7 +122,6 @@ export default {
       padding: 10px;
     }
   }
-
 }
 
 @media screen and (max-width: 500px) {
