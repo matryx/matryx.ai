@@ -42,11 +42,11 @@ export default {
         },
         {
           img: cap,
-          text: '161,803.0 ETH Sale Cap \n ETH Smart Contract Sale'
+          text: '161,803.0 ETH Sale Cap'
         },
         {
           img: matryx,
-          text: 'Address will <strong>ONLY</strong> be posted on matryx.ai'
+          text: 'Address will ONLY be posted on matryx.ai'
         }
       ]
     }

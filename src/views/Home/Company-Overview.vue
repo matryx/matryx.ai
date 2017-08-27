@@ -2,7 +2,6 @@
   <section id="what-matryx">
     <hr>
     <div class="content-container--large text--light content-container" id="what-is-matryx">
-      <h3 class="section__header text--left">Company Overview</h3>
       <div class="overview">
         <div class="overview__column-1 mobile--order-1">
           <h2 class="text-color--matryx-black">Matryx Background</h2>

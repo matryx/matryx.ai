@@ -34,19 +34,19 @@ export default {
       icons: [
         {
           img: eth,
-          text: 'Purchases over 75 ETH eligible for Pre-Sale'
+          text: 'Purchases Over 75 ETH Eligible for Pre-Sale'
         },
         {
           img: discount10,
-          text: '150 ETH eligible from 10% discount'
+          text: '150 ETH Eligible for 10% Discount'
         },
         {
           img: discount15,
-          text: '300+ ETH eligible for 15% discount'
+          text: '300+ ETH Eligible for 15% Discount'
         },
         {
           img: upto50,
-          text: 'UP to 50% of target to be sold'
+          text: 'Up to 50% of Total Sale Cap'
         }
       ]
     }
