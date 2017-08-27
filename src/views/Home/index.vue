@@ -3,7 +3,6 @@
     <Navbar-Token></Navbar-Token>
     <Navbar-Sticky></Navbar-Sticky>
     <Above-the-Fold></Above-the-Fold>
-
     <div class="media-mentions bkg-color--white">
       <div class=" content-container content-container--medium media-mentions__img-container">
         <p class="text-color--matryx-grey">Featured in</p>
@@ -13,7 +12,7 @@
           <img src="../../assets/images/press/business-insider.png" alt=""></a>
         <a class="press-logo" href="http://www.sandiegouniontribune.com/business/sd-fi-ignite-conference-20170223-story.html" target="_blank">
           <img src="../../assets/images/press/sdut-logo.png" alt=""></a>
-      
+
         <a class="press-logo" href="http://jacobsschool.ucsd.edu/news/news_releases/release.sfe?id=2081" target="_blank">
           <img src="../../assets/images/press/UCSD-logo.png" alt=""></a>
         <a class="press-logo" href="http://sdtimes.com/nanome-launches-vr-collaboration-platform-matryx/" target="_blank">
@@ -23,18 +22,25 @@
       </div>
     </div>
 
-    <Company-Overview id="company-overview"></Company-Overview>
+    <!-- insert new stuff here -->
+    <!-- matryx blurb -->
+    <!-- presale -->
+    <PreSale></PreSale>
+    <!-- cta banner, location=presale :lighterText="true" :blueBkg="true" -->
+    <!-- tokensale -->
+    <TokenSale></TokenSale>
 
+
+    <!-- make tokensale and presale -->
+
+    <About-Token-Sale></About-Token-Sale>
     <div class="cta-middle-banner">
       <CTA-Banner :lighterText="true" :greyBkg="true" cta-location="Top-Middle"></CTA-Banner>
     </div>
-
-    <About-Token-Sale></About-Token-Sale>
+    <Company-Overview id="company-overview"></Company-Overview>
     <Quotes></Quotes>
-
     <Nanome-Info></Nanome-Info>
     <Bounty-System></Bounty-System>
-
     <CTA-Banner :whiteBkg="true" cta-location="Top-Middle"></CTA-Banner>
     <Matryx-Team></Matryx-Team>
     <News-Events></News-Events>
@@ -54,6 +60,8 @@ import NewsEvents from './News-Events'
 import Quotes from './Quotes'
 import CTABanner from '../../components/CTA-Banner'
 import NavbarToken from '../../components/Navbar-Tokensale'
+import PreSale from './Pre-Sale'
+import TokenSale from './Token-Sale'
 
 export default {
   name: 'home',
@@ -73,7 +81,9 @@ export default {
     NewsEvents,
     CTABanner,
     Quotes,
-    NavbarToken
+    NavbarToken,
+    PreSale,
+    TokenSale
   },
 
   mounted () {
@@ -91,7 +101,7 @@ export default {
 
 /*media mentions*/
 .content-container{
-  paddin: 0px; 
+  paddin: 0px;
 }
 .media-mentions {
   display:-webkit-box;display:-ms-flexbox;display:flex;

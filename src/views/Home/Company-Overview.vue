@@ -2,18 +2,7 @@
   <section id="what-matryx">
     <hr>
     <div class="content-container--large text--light content-container" id="what-is-matryx">
-      <h2 class="text-color--matryx-dark-grey font-size--large text-center">
-        Matryx: The Platform for Decentralized Collaboration
-      </h2>
-      <hr>
-      <div class="overview">
-        <div class="overview__column-3 mobile--order-1">
-          <!-- <h1 class="text-color--matryx-black">What is Matryx</h1> -->
-          <p class="text-color--matryx-dark-grey">
-            Matryx is a platform for decentralized collaboration. Matryx consists of a bounty system, a library of digital assets, and a marketplace. Problems are posted, along with a bounty for a verified solution. Users then collaborate to solve problems, share results, and earn rewards. Rewards are given to all relevant contributors, and all submissions are added to the Matryx library and marketplace for future purchase. This will create an ecosystem of public collaboration and ideas that will drive research and innovation.
-          </p>
-        </div>
-      </div>
+      <h3 class="section__header text--left">Company Overview</h3>
       <div class="overview">
         <div class="overview__column-1 mobile--order-1">
           <h2 class="text-color--matryx-black">Matryx Background</h2>

@@ -396,6 +396,12 @@ h1.cd-headline.clip {
   height: 100%;
 }
 
+/*section styles*/
+.section__header {
+  text-transform: uppercase;
+  color: #829AB1;
+}
+
 /* members */
 .member {
   display: flex;
@@ -427,3 +433,9 @@ h1.cd-headline.clip {
 }
 
 /* end ID's */
+@media screen and (max-width: 500px) {
+  h2.font-size--large {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
