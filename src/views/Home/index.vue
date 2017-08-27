@@ -22,13 +22,13 @@
       </div>
     </div>
 
-    <AboutMatryx></AboutMatryx>
-    <PreSale></PreSale>
+    <About-Matryx></About-Matryx>
+    <Pre-Sale></Pre-Sale>
     <div class="cta-middle-banner">
       <CTA-Banner :lighterText="true" :blueBkg="true" cta-location="Top"></CTA-Banner>
     </div>
     <div class="bkg-color--matryx-lighter-grey">
-      <TokenSale></TokenSale>
+      <Token-Sale></Token-Sale>
     </div>
 
 
