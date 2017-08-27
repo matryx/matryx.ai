@@ -8,6 +8,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+var MinifyPlugin = require('babel-minify-webpack-plugin')
 
 var env = config.build.env
 
@@ -35,6 +36,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     //   },
     //   sourceMap: true
     // }),
+    new MinifyPlugin(),
     // extract css into its own file
     new ExtractTextPlugin({
       filename: utils.assetsPath('css/[name].[contenthash].css')
