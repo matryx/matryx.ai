@@ -24,6 +24,7 @@
 
     <!-- insert new stuff here -->
     <!-- matryx blurb -->
+    <AboutMatryx></AboutMatryx>
     <!-- presale -->
     <PreSale></PreSale>
     <!-- cta banner, location=presale :lighterText="true" :blueBkg="true" -->
@@ -62,6 +63,7 @@ import CTABanner from '../../components/CTA-Banner'
 import NavbarToken from '../../components/Navbar-Tokensale'
 import PreSale from './Pre-Sale'
 import TokenSale from './Token-Sale'
+import AboutMatryx from './About-Matryx'
 
 export default {
   name: 'home',
@@ -83,7 +85,8 @@ export default {
     Quotes,
     NavbarToken,
     PreSale,
-    TokenSale
+    TokenSale,
+    AboutMatryx
   },
 
   mounted () {

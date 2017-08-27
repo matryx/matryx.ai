@@ -12,6 +12,7 @@
           :alt="icon.text"
         ></SaleIcon>
       </div>
+      <p class="discount">*Discounts only apply for purchases during the Pre-Sale.</p>
     </div>
   </section>
 </template>
@@ -38,11 +39,11 @@ export default {
         },
         {
           img: discount10,
-          text: '150 ETH Eligible for 10% Discount'
+          text: '150 ETH Eligible for 10% Discount*'
         },
         {
           img: discount15,
-          text: '300+ ETH Eligible for 15% Discount'
+          text: '300+ ETH Eligible for 15% Discount*'
         },
         {
           img: upto50,
@@ -55,7 +56,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/*@import '../../assets/css/colors.scss';*/
+h2 {
+  margin-bottom: 20px;
+}
+
+.discount {
+  font-size: smaller;
+  text-align:center;
+  margin-top: 50px;
+}
 
 .icon-list {
   display:-webkit-box;
@@ -68,7 +77,6 @@ export default {
   flex-wrap: wrap;
 }
 
-h2 {
-  margin-bottom: 20px;
-}
+
+
 </style>
