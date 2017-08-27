@@ -4,10 +4,11 @@
     <h2 class="text--center">Opening September 6, 2017</h2>
     <div class="icon-list">
       <SaleIcon
-        v-for="icon in icons"
+        v-for="(index, icon) in icons"
         :img="icon.img"
         :text="icon.text"
         :alt="icon.text"
+        :key="index"
       ></SaleIcon>
     </div>
     <p class="discount">*Discounts only apply for purchases during the Pre-Sale.</p>
