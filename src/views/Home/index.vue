@@ -101,7 +101,7 @@ export default {
 
 /*media mentions*/
 .content-container{
-  paddin: 0px;
+  padding: 0;
 }
 .media-mentions {
   display:-webkit-box;display:-ms-flexbox;display:flex;
