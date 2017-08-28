@@ -2,7 +2,7 @@
   <section>
     <div class="content-container content-container--large nanome">
       <div class="nanome__info">
-        <h4 class="nanome__info__title">Built by the Team at Nanome</h4>
+        <h2 class="nanome__info__title">Built by the Team at Nanome</h2>
         <div class="nanome__info__text text-color--matryx-dark-grey">
           Nanome builds intelligent virtual reality interfaces that enable scientists and engineers to collaborate, design and simulate with nanoscale precision. Our software helps advance research and development in life sciences, materials sciences, and nanoengineering by integrating a hands-on virtual reality interface with cloud computing.
         </div>

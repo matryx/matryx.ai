@@ -206,7 +206,7 @@ section.above-the-fold {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1690px) {
   section.above-the-fold {
     padding-bottom: 220px;
   }

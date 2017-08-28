@@ -14,13 +14,13 @@
       <b-nav is-nav-bar>
         <b-nav-item
           class="nav-link text-color--matryx-grey nav-link--mobile-hide"
-          href="#what-is-matryx">
-          ABOUT
+          href="#about-token-sale">
+          TOKEN SALE
         </b-nav-item>
         <b-nav-item
           class="nav-link text-color--matryx-grey nav-link--mobile-hide"
-          href="#about-token-sale">
-          TOKEN SALE
+          href="#what-is-matryx">
+          ABOUT
         </b-nav-item>
         <b-nav-item
           class="nav-link text-color--matryx-grey nav-link--mobile-hide"

@@ -1,13 +1,14 @@
 <template lang="html">
   <section class="content-container content-container--large">
-    <h3 class="section__header text--center">TOKEN SALE</h3>
-    <h2 class="text--center">Launches September 13, 2017</h2>
+    <h2 class="section__header text--center title">TOKEN SALE</h2>
+    <h3 class="text--center sub-title">Launches September 13, 2017</h3>
     <div class="icon-list">
       <SaleIcon
-        v-for="icon in icons"
+        v-for="(icon, index) in icons"
         :img="icon.img"
         :text="icon.text"
         :alt="icon.text"
+        :key="index"
       ></SaleIcon>
     </div>
   </section>
@@ -31,7 +32,7 @@ export default {
       icons: [
         {
           img: mtx,
-          text: '314,159,265.0 Total MTX Supply'
+          text: '314,159,265 Total MTX Supply'
         },
         {
           img: allocated60,
@@ -39,7 +40,7 @@ export default {
         },
         {
           img: cap,
-          text: '161,803.0 ETH Sale Cap'
+          text: '161,803 ETH Sale Cap'
         },
         {
           img: matryx,
@@ -52,24 +53,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/*@import '../../assets/css/colors.scss';*/
 section.content-container {
   margin-top: 0;
   padding: 40px 0 80px;
-}
 
-.icon-list {
-  display:-webkit-box;
-  display:-ms-flexbox;
-  display:flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-around;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
+  .title {
+    font-size: 24px;
+  }
 
-h2 {
-  margin-bottom: 20px;
+  .sub-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .icon-list {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
 }
 </style>

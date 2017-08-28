@@ -1,13 +1,14 @@
 <template lang="html">
   <section class="content-container content-container--large">
-    <h3 class="section__header text--center">PRE-SALE</h3>
-    <h2 class="text--center">Opening September 6, 2017</h2>
+    <h2 class="section__header text--center title">PRE-SALE</h2>
+    <h3 class="sub-title text--center">Opening September 6, 2017</h3>
     <div class="icon-list">
       <SaleIcon
-        v-for="icon in icons"
+        v-for="(icon, index) in icons"
         :img="icon.img"
         :text="icon.text"
         :alt="icon.text"
+        :key="index"
       ></SaleIcon>
     </div>
     <p class="discount">*Discounts only apply for purchases during the Pre-Sale.</p>
@@ -32,19 +33,19 @@ export default {
       icons: [
         {
           img: eth,
-          text: 'Purchases Over 75 ETH Eligible for Pre-Sale'
+          text: '75 ETH Minimum Purchase'
         },
         {
           img: discount10,
-          text: '150 ETH Eligible for 10% Discount*'
+          text: 'Purchases > 150 ETH Eligible for 10% Discount*'
         },
         {
           img: discount15,
-          text: '300+ ETH Eligible for 15% Discount*'
+          text: 'Purchases > 300 ETH Eligible for 15% Discount*'
         },
         {
           img: upto50,
-          text: 'Up to 50% of Total Sale Cap'
+          text: 'Up to 50% of Total Sale Cap Alloted for Pre-Sale'
         }
       ]
     }
@@ -54,29 +55,38 @@ export default {
 
 <style lang="scss" scoped>
 section.content-container {
-  padding: 20px 0 40px;
+  padding: 30px 0 30px;
+
+  .title {
+    font-size: 24px;
+  }
+
+  .sub-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .discount {
+    font-size: smaller;
+    text-align:center;
+    margin-top: 50px;
+  }
+
+  .icon-list {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 560px) {
+    .discount {
+      margin-bottom: 80px;
+    }
+  }
 }
-h2 {
-  margin-bottom: 20px;
-}
-
-.discount {
-  font-size: smaller;
-  text-align:center;
-  margin-top: 50px;
-}
-
-.icon-list {
-  display:-webkit-box;
-  display:-ms-flexbox;
-  display:flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-around;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-
-
 </style>

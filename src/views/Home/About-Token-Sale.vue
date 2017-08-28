@@ -2,29 +2,29 @@
   <section id="about-token-sale">
     <!-- I'm Dominique now.-->
     <div class="content-container--large content-container">
-      <h3 class="section__header text--left">About Our Token Sale</h3>
+      <h2 class="section__header text--left">ABOUT OUR TOKEN SALE</h2>
       <div class="card-container--horizontal">
         <div class="about-container card-container--vertical">
           <div class="card">
-            <h2 class="text-color--matryx-black">
+            <h4 class="text-color--matryx-black">
               Why We're Having a Token Sale
-            </h2>
+            </h4>
             <p class="text-color--matryx-dark-grey">
               The ultimate goal of Matryx is to incentivize collaboration in fields of knowledge and creation like STEM. To reach that goal, we need resources that support R&#38;D demands and help create a community of participants and contributors. Token Sales have quickly become a proven means to achieve such growth for blockchain-based technologies like Matryx.
             </p>
           </div>
           <div class="card">
-            <h2 class="text-color--matryx-black">
+            <h4 class="text-color--matryx-black">
               How Matryx Uses the Blockchain
-            </h2>
+            </h4>
             <p class="text-color--matryx-dark-grey">
               Utilizing blockchain-based bounties, Matryx enables users to validate each participant's contribution to a solution and reward them with MTX tokens. Using a token enables us to leverage smart contract systems, upgrade over time, and gives us the flexibility to shape the platform to the needs of the users.
             </p>
           </div>
           <div class="card">
-            <h2 class="text-color--matryx-black">
+            <h4 class="text-color--matryx-black">
               Benefits of the Blockchain
-            </h2>
+            </h4>
             <p class="text-color--matryx-dark-grey">
               Smart contracts reduce the friction of tracking and compensating contributors. Each round of a bounty competition, the winners are rewarded, and a new generation of children is created. All iterations are managed by the tournament contracts. The provenance of an idea or work can be easily tracked and can be rewarded fairly and publicly.
             </p>
@@ -32,8 +32,8 @@
         </div>
         <div class="roadmap-container card-container--vertical">
           <div class="roadmap">
-            <h2 class="text-color--matryx-black">ROADMAP</h2>
-            <h3 class="roadmap__year text-color--grey">2016</h3>
+            <h5 class="text-color--matryx-black roadmap__title">ROADMAP</h5>
+            <h6 class="roadmap__year text-color--grey">2016</h6>
             <div class="roadmap__section ">
               <div class="roadmap__section__quarter roadmap__section__quarter--past ">Q4</div>
               <div class="roadmap__section__description text-color--matryx-dark-grey">
@@ -41,7 +41,7 @@
                 <caption>First STEM tools for modern VR                </caption>
               </div>
             </div>
-            <h3 class="roadmap__year text-color--grey">2017</h3>
+            <h6 class="roadmap__year text-color--grey">2017</h6>
             <div class="roadmap__section ">
               <div class="roadmap__section__quarter roadmap__section__quarter--past ">Q1</div>
               <div class="roadmap__section__description text-color--matryx-dark-grey">
@@ -79,7 +79,7 @@
                 </caption>
               </div>
             </div>
-            <h3 class="roadmap__year text-color--grey">2018</h3>
+            <h6 class="roadmap__year text-color--grey">2018</h6>
             <div class="roadmap__section ">
               <div class="roadmap__section__quarter roadmap__section__quarter--future">Q1</div>
               <div class="roadmap__section__description text-color--matryx-dark-grey">
@@ -104,7 +104,7 @@
                 </caption>
               </div>
             </div>
-            <h3 class="roadmap__year text-color--grey">2019</h3>
+            <h6 class="roadmap__year text-color--grey">2019</h6>
             <div class="roadmap__section ">
               <div class="roadmap__section__quarter roadmap__section__quarter--future">Q2</div>
               <div class="roadmap__section__description text-color--matryx-dark-grey">
@@ -113,7 +113,7 @@
                 </caption>
               </div>
             </div>
-            <h3 class="roadmap__year text-color--grey">2020</h3>
+            <h6 class="roadmap__year text-color--grey">2020</h6>
             <div class="roadmap__section ">
               <div class="roadmap__section__quarter roadmap__section__quarter--future">Q4</div>
               <div class="roadmap__section__description text-color--matryx-dark-grey">
@@ -156,8 +156,14 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '../../assets/css/colors';
+
+section#about-token-sale {
+  .section__header {
+    font-size: 32px;
+  }
+
   .card-container {
     &--horizontal{
       display:-webkit-box;display:-ms-flexbox;display:flex;
@@ -188,10 +194,14 @@ export default {
     padding: 20px;
     margin-bottom: 20px;
 
-    h2, p {
+    h4, p {
       -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
       flex: 0 1 auto;
+    }
+
+    h4 {
+      font-size: 22px;
     }
 
     img {
@@ -200,22 +210,23 @@ export default {
     }
   }
 
-
-
   .roadmap {
     max-width: 300px;
     width: 100%;
-    margin: 0 0 0 auto;
+    margin: 0 0 20px auto;
     right: 20px;
     position: relative;
 
-    h2 {
+    &__title {
+      font-size: 22px;
       position: relative;
       right: 60px;
     }
-    h3 {
+
+    &__year {
       position: relative;
       right: 30px;
+      font-size: 20px;
     }
 
     &__section {
@@ -293,6 +304,7 @@ export default {
         width: 100%;
         & > * {
           width:100%;
+          padding-bottom: 30px;
         }
       }
     }
@@ -304,7 +316,7 @@ export default {
       max-width: 500px;
       margin: 0 auto;
 
-      h2 {
+      &__title {
         text-align: center;
         right: 0;
       }
@@ -312,7 +324,9 @@ export default {
   }
   @media screen and (max-width: 500px) {
     .content-container {
-      padding: 0px 40px 80px;
+      padding: 20px 40px 80px;
     }
   }
+
+}
 </style>

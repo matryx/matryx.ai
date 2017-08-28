@@ -21,13 +21,13 @@
           <img src="../../assets/images/press/singularity.png" alt=""></a>
       </div>
     </div>
-    <AboutMatryx></AboutMatryx>
-    <PreSale></PreSale>
+    <About-Matryx></About-Matryx>
+    <Pre-Sale></Pre-Sale>
     <div class="cta-middle-banner">
       <CTA-Banner :lighterText="true" :blueBkg="true" cta-location="Top"></CTA-Banner>
     </div>
     <div class="bkg-color--matryx-lighter-grey">
-      <TokenSale></TokenSale>
+      <Token-Sale></Token-Sale>
     </div>
     <About-Token-Sale></About-Token-Sale>
     <div class="cta-middle-banner">
@@ -86,6 +86,14 @@ export default {
 
   mounted () {
     window.analytics.page('Home')
+
+    if (this.$route.query.allocation === 'open') {
+      this.$store.commit('showModal', true)
+    }
+
+    if (this.$route.query.email) {
+      this.$store.commit('setEmail', this.$route.query.email)
+    }
   }
 }
 </script>
