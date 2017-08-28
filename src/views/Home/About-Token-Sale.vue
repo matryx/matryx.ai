@@ -32,7 +32,7 @@
         </div>
         <div class="roadmap-container card-container--vertical">
           <div class="roadmap">
-            <h4 class="text-color--matryx-black">ROADMAP</h4>
+            <h5 class="text-color--matryx-black">ROADMAP</h5>
             <h6 class="roadmap__year text-color--grey">2016</h6>
             <div class="roadmap__section ">
               <div class="roadmap__section__quarter roadmap__section__quarter--past ">Q4</div>
@@ -176,7 +176,7 @@ export default {
     padding: 20px;
     margin-bottom: 20px;
 
-    h2, p {
+    h4, p {
       -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
       flex: 0 1 auto;
@@ -197,7 +197,7 @@ export default {
     right: 20px;
     position: relative;
 
-    h2 {
+    h5 {
       position: relative;
       right: 60px;
     }
@@ -292,7 +292,7 @@ export default {
       max-width: 500px;
       margin: 0 auto;
 
-      h2 {
+      h5 {
         text-align: center;
         right: 0;
       }
