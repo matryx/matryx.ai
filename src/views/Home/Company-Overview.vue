@@ -1,22 +1,9 @@
 <template>
-  <section id="what-matryx">
-    <hr>
+  <section>
     <div class="content-container--large text--light content-container" id="what-is-matryx">
-      <h2 class="text-color--matryx-dark-grey font-size--large text-center">
-        Matryx: The Platform for Decentralized Collaboration
-      </h2>
-      <hr>
-      <div class="overview">
-        <div class="overview__column-3 mobile--order-1">
-          <!-- <h1 class="text-color--matryx-black">What is Matryx</h1> -->
-          <p class="text-color--matryx-dark-grey">
-            Matryx is a platform for decentralized collaboration. Matryx consists of a bounty system, a library of digital assets, and a marketplace. Problems are posted, along with a bounty for a verified solution. Users then collaborate to solve problems, share results, and earn rewards. Rewards are given to all relevant contributors, and all submissions are added to the Matryx library and marketplace for future purchase. This will create an ecosystem of public collaboration and ideas that will drive research and innovation.
-          </p>
-        </div>
-      </div>
       <div class="overview">
         <div class="overview__column-1 mobile--order-1">
-          <h2 class="text-color--matryx-black">Matryx Background</h2>
+          <h3 class="text-color--matryx-black subheader">Matryx Background</h3>
           <p class="text-color--matryx-dark-grey">
             Matryx is a product of <a target="_blank" href="http://nanome.ai/">Nanome</a>. Nanome seeks to democratize science, engineering, and research using Virtual Reality and blockchain technology. Nanome is the creator of Calcflow, the industry-leading VR mathematics toolkit, and nano-one, a VR interface for nanoscale design and simulation.
           </p>
@@ -30,7 +17,7 @@
           <!-- <img src="../../assets/images/video-preview.png" alt=""> -->
         </div>
         <div class="overview__column-1">
-          <h2 class="text-color--matryx-black">The Collaboration Problem</h2>
+          <h3 class="text-color--matryx-black subheader">The Collaboration Problem</h3>
           <p class="text-color--matryx-dark-grey">
             Solving the world’s hardest problems in silos leads to duplication of effort and redundancy. By providing a global community that encourages and incentivizes the exchange of ideas, time to innovation is greatly reduced while problems are solved at a rate otherwise impossible.
             <br/> <br/>
@@ -40,7 +27,7 @@
       </div>
       <div class="overview">
         <div class="overview__column-1 mobile--order-1">
-          <h2 class="text-color--matryx-black">The Matryx Solution</h2>
+          <h3 class="text-color--matryx-black subheader">The Matryx Solution</h3>
           <p class="text-color--matryx-dark-grey">
             Matryx’s blockchain-based bounty system provides incentives for collaborative problem solving. Creators are rewarded for contributions with MTX tokens. Anyone can post bounties to Matryx. Participants compete to solve these problems in a tournament.
 
@@ -74,26 +61,15 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '../../assets/css/colors';
 
-  section {
-    margin-top: 0px;
-  }
+#what-is-matryx {
+  margin-top: 0px;
+  padding-top: 40px;
 
-  hr {
-    max-width: 1400px;
-    margin: auto;
-  }
-
-  h4 {
-    margin-top: 0;
-  }
-
-  h2.font-size--large {
-    font-size: 46px;
-    line-height: 55px;
-    margin: 40px 0;
+  .subheader {
+    font-size: 24px;
   }
 
   p > a {
@@ -109,17 +85,6 @@ export default {
     &:focus {
       text-decoration: none;
     }
-  }
-
-  .content-container--large.content-container {
-    padding-top: 40px;
-  }
-
-  .pull-left {
-    float: left;
-  }
-  .pull-right {
-    float: right;
   }
 
   .overview {
@@ -172,6 +137,7 @@ export default {
 
   .whitepaper-btn {
     width: 100%;
+    font-size: 18px;
   }
 
   /*----- MEDIA QUERIESS -----*/
@@ -196,4 +162,5 @@ export default {
       order: 2;
     }
   }
+}
 </style>
