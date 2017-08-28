@@ -82,6 +82,10 @@ export default {
     if (this.$route.query.allocation === 'open') {
       this.$store.commit('showModal', true)
     }
+
+    if (this.$route.query.email) {
+      this.$store.commit('setEmail', this.$route.query.email)
+    }
   }
 }
 </script>
