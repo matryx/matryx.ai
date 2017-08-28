@@ -78,6 +78,10 @@ export default {
 
   mounted () {
     window.analytics.page('Home')
+
+    if (this.$route.query.allocation === 'open') {
+      this.$store.commit('showModal', true)
+    }
   }
 }
 </script>
