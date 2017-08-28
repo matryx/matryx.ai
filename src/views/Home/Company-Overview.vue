@@ -1,7 +1,6 @@
 <template>
   <section>
     <div class="content-container--large text--light content-container" id="what-is-matryx">
-      <h2 class="section__header text--left">ABOUT OUR PROJECT</h2>
       <div class="overview">
         <div class="overview__column-1 mobile--order-1">
           <h3 class="text-color--matryx-black subheader">Matryx Background</h3>
@@ -68,11 +67,6 @@ export default {
 #what-is-matryx {
   margin-top: 0px;
   padding-top: 40px;
-
-  .section__header {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
 
   .subheader {
     font-size: 24px;
