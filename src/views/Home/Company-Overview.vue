@@ -1,6 +1,7 @@
 <template>
   <section id="what-matryx">
     <div class="content-container--large text--light content-container" id="what-is-matryx">
+      <h2 class="section__header text--left">ABOUT OUR PROJECT</h2>
       <div class="overview">
         <div class="overview__column-1 mobile--order-1">
           <h3 class="text-color--matryx-black">Matryx Background</h3>
