@@ -1,9 +1,9 @@
 <template>
   <section class="bkg--blue-gradient" id="bounty-system">
     <div class="content-container content-container--large   text-color--white">
-      <h1 class="content-container--medium">
+      <h2 class="content-container--medium">
         Incentivized Innovation Through Collaborative Competition
-      </h1>
+      </h2>
       <p class="content-container--medium">
         The Matryx Bounty system aims to accelerate innovation and reward all users who contribute.
         A bounty is simply a challenge posted to the platform with a fair MTX reward for users who contribute
@@ -11,35 +11,35 @@
       </p>
       <div class="bounty">
         <div class="bounty__explanation">
-          <h4 class="">How it Works</h4>
+          <h6 class="">How it Works</h6>
           <div class="bounty__explanation__card">
             <div class="bounty__explanation__card__item">
               <span>1</span>
-              <h3>Bounty is Posted
+              <h6>Bounty is Posted
               <p>Marshall requests a 3D Spacecraft model &#38; posts a bounty</p>
-              </h3>
+              </h6>
 
             </div>
             <div class="bounty__explanation__card__item">
               <span>2</span>
-              <h3>Designs Submitted
+              <h6>Designs Submitted
                 <p>Two users submit their best Spacecraft models.
                   Marshall likes a design and requests a round of revision from the community.
                 </p>
-              </h3>
+              </h6>
             </div>
             <div class="bounty__explanation__card__item">
               <span>3</span>
-              <h3>Winner is Chosen
+              <h6>Winner is Chosen
                 <p>
                   Two new users take Marshall's favorite designs and 'remix' it. Marshall chooses a winner and a smart contract distributes MTX to all contributors.
                 </p>
-              </h3>
+              </h6>
             </div>
           </div>
         </div>
         <div class="bounty__diagram">
-          <h4>COMPETITION STARTS</h4>
+          <h6>COMPETITION STARTS</h6>
           <caption class="text-color--white ">BOUNTY: DESIGN A SPACECRAFT</caption>
           <img src="../../assets/images/bounty-drawing.svg" alt="">
         </div>
@@ -54,19 +54,16 @@ export default {
 }
 </script>
 
-
-
-
-// <style lang="scss" scoped>
+<style lang="scss" scoped>
 section {
   padding: 20px 0 ;
 }
 
-h1, h4, p, caption {
+h2, h5, p, caption {
   opacity: 0.8;
 }
 
-h1 {
+h2 {
   margin-bottom: 20px;
   max-width: 550px;
 }
@@ -93,7 +90,7 @@ p.content-container--medium {
     flex: 1 1 auto;
     padding-top: 30px;
 
-   h4, caption {
+   h6, caption {
       width: 100%;
       text-align:center;
       font-size: 20px;
@@ -132,7 +129,7 @@ p.content-container--medium {
           vertical-align: top;
           font-size: 16px;
         }
-        h3 {
+        h6 {
           display: inline-block;
           width: calc(100% - 70px);
           margin-left: 20px;
