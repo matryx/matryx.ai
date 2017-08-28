@@ -32,7 +32,7 @@ export default {
       icons: [
         {
           img: mtx,
-          text: '314,159,265.0 Total MTX Supply'
+          text: '314,159,265 Total MTX Supply'
         },
         {
           img: allocated60,
@@ -40,7 +40,7 @@ export default {
         },
         {
           img: cap,
-          text: '161,803.0 ETH Sale Cap'
+          text: '161,803 ETH Sale Cap'
         },
         {
           img: matryx,
