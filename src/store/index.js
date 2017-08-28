@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import { setlStorage } from '../utils'
 
 Vue.use(Vuex)
 
@@ -20,6 +21,7 @@ export default new Vuex.Store({
       state.showModal = show
     },
     setEmail (state, email) {
+      setlStorage('email', email)
       state.email = email
     },
     showGetNotifiedModal (state, show) {

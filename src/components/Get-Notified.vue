@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import { getUTMS, isValidEmail, setlStorage } from '@/utils'
+import { getUTMS, isValidEmail } from '@/utils'
 import { appAnalytics } from '@/analytics'
 
 export default {
@@ -72,8 +72,7 @@ export default {
         traits.email = this.email
         traits.ctaLocation = `${this.ctaLocation}`
 
-        // Store email in local and store
-        setlStorage('email', this.email)
+        // Store email
         this.$store.commit('setEmail', this.email)
 
         appAnalytics.emailSignup(this.email, traits, this.ctaLocation)
