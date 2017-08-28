@@ -141,6 +141,18 @@ export default {
       appAnalytics.whitePaperClick('Roadmap')
     }
   }
+  // mounted () {
+  //   let section = document.querySelector('#about-token-sale')
+  //   let distanceBottom = section.offsetTop
+  //   let distanceTop = distanceBottom + window.innerHeight
+  //   console.log(section, distanceTop, window.scrollY)
+  //   window.onscroll = function () {
+  //     let scrollDistance = window.scrollY
+  //     if (scrollDistance < distanceTop && scrollDistance > distanceBottom) {
+  //       location.hash = '#about-token-sale'
+  //     }
+  //   }
+  // }
 }
 </script>
 

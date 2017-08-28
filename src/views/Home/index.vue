@@ -21,7 +21,6 @@
           <img src="../../assets/images/press/singularity.png" alt=""></a>
       </div>
     </div>
-
     <AboutMatryx></AboutMatryx>
     <PreSale></PreSale>
     <div class="cta-middle-banner">
@@ -30,8 +29,6 @@
     <div class="bkg-color--matryx-lighter-grey">
       <TokenSale></TokenSale>
     </div>
-
-
     <About-Token-Sale></About-Token-Sale>
     <div class="cta-middle-banner">
       <CTA-Banner :lighterText="true" :greyBkg="true" cta-location="Middle"></CTA-Banner>
