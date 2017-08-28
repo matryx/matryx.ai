@@ -1,10 +1,10 @@
 <template>
-  <section id="what-matryx">
+  <section>
     <div class="content-container--large text--light content-container" id="what-is-matryx">
       <h2 class="section__header text--left">ABOUT OUR PROJECT</h2>
       <div class="overview">
         <div class="overview__column-1 mobile--order-1">
-          <h3 class="text-color--matryx-black">Matryx Background</h3>
+          <h3 class="text-color--matryx-black subheader">Matryx Background</h3>
           <p class="text-color--matryx-dark-grey">
             Matryx is a product of <a target="_blank" href="http://nanome.ai/">Nanome</a>. Nanome seeks to democratize science, engineering, and research using Virtual Reality and blockchain technology. Nanome is the creator of Calcflow, the industry-leading VR mathematics toolkit, and nano-one, a VR interface for nanoscale design and simulation.
           </p>
@@ -18,7 +18,7 @@
           <!-- <img src="../../assets/images/video-preview.png" alt=""> -->
         </div>
         <div class="overview__column-1">
-          <h3 class="text-color--matryx-black">The Collaboration Problem</h3>
+          <h3 class="text-color--matryx-black subheader">The Collaboration Problem</h3>
           <p class="text-color--matryx-dark-grey">
             Solving the world’s hardest problems in silos leads to duplication of effort and redundancy. By providing a global community that encourages and incentivizes the exchange of ideas, time to innovation is greatly reduced while problems are solved at a rate otherwise impossible.
             <br/> <br/>
@@ -28,7 +28,7 @@
       </div>
       <div class="overview">
         <div class="overview__column-1 mobile--order-1">
-          <h3 class="text-color--matryx-black">The Matryx Solution</h3>
+          <h3 class="text-color--matryx-black subheader">The Matryx Solution</h3>
           <p class="text-color--matryx-dark-grey">
             Matryx’s blockchain-based bounty system provides incentives for collaborative problem solving. Creators are rewarded for contributions with MTX tokens. Anyone can post bounties to Matryx. Participants compete to solve these problems in a tournament.
 
@@ -62,26 +62,20 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '../../assets/css/colors';
 
-  section {
-    margin-top: 0px;
+#what-is-matryx {
+  margin-top: 0px;
+  padding-top: 40px;
+
+  .section__header {
+    font-size: 32px;
+    margin-bottom: 20px;
   }
 
-  hr {
-    max-width: 1400px;
-    margin: auto;
-  }
-
-  h4 {
-    margin-top: 0;
-  }
-
-  h3.font-size--large {
-    font-size: 46px;
-    line-height: 55px;
-    margin: 40px 0;
+  .subheader {
+    font-size: 24px;
   }
 
   p > a {
@@ -97,17 +91,6 @@ export default {
     &:focus {
       text-decoration: none;
     }
-  }
-
-  .content-container--large.content-container {
-    padding-top: 40px;
-  }
-
-  .pull-left {
-    float: left;
-  }
-  .pull-right {
-    float: right;
   }
 
   .overview {
@@ -160,6 +143,7 @@ export default {
 
   .whitepaper-btn {
     width: 100%;
+    font-size: 18px;
   }
 
   /*----- MEDIA QUERIESS -----*/
@@ -184,4 +168,5 @@ export default {
       order: 2;
     }
   }
+}
 </style>

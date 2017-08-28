@@ -55,7 +55,7 @@ export default {
 
 <style lang="scss" scoped>
 section.content-container {
-  padding: 20px 0 40px;
+  padding: 30px 0 30px;
 
   .title {
     font-size: 24px;
@@ -81,6 +81,12 @@ section.content-container {
     justify-content: space-around;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 560px) {
+    .discount {
+      margin-bottom: 80px;
+    }
   }
 }
 </style>

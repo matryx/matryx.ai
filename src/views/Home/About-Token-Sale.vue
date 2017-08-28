@@ -2,7 +2,7 @@
   <section id="about-token-sale">
     <!-- I'm Dominique now.-->
     <div class="content-container--large content-container">
-      <h2 class="section__header text--left">About Our Token Sale</h2>
+      <h2 class="section__header text--left">ABOUT OUR TOKEN SALE</h2>
       <div class="card-container--horizontal">
         <div class="about-container card-container--vertical">
           <div class="card">
@@ -32,7 +32,7 @@
         </div>
         <div class="roadmap-container card-container--vertical">
           <div class="roadmap">
-            <h5 class="text-color--matryx-black">ROADMAP</h5>
+            <h5 class="text-color--matryx-black roadmap__title">ROADMAP</h5>
             <h6 class="roadmap__year text-color--grey">2016</h6>
             <div class="roadmap__section ">
               <div class="roadmap__section__quarter roadmap__section__quarter--past ">Q4</div>
@@ -144,8 +144,14 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '../../assets/css/colors';
+
+section#about-token-sale {
+  .section__header {
+    font-size: 32px;
+  }
+
   .card-container {
     &--horizontal{
       display:-webkit-box;display:-ms-flexbox;display:flex;
@@ -182,28 +188,33 @@ export default {
       flex: 0 1 auto;
     }
 
+    h4 {
+      font-size: 22px;
+    }
+
     img {
       height: auto;
       width: 100%;
     }
   }
 
-
-
   .roadmap {
     max-width: 300px;
     width: 100%;
-    margin: 0 0 0 auto;
+    margin: 0 0 20px auto;
     right: 20px;
     position: relative;
 
-    h5 {
+    &__title {
+      font-size: 22px;
       position: relative;
       right: 60px;
     }
-    h6 {
+
+    &__year {
       position: relative;
       right: 30px;
+      font-size: 20px;
     }
 
     &__section {
@@ -281,6 +292,7 @@ export default {
         width: 100%;
         & > * {
           width:100%;
+          padding-bottom: 30px;
         }
       }
     }
@@ -292,7 +304,7 @@ export default {
       max-width: 500px;
       margin: 0 auto;
 
-      h5 {
+      &__title {
         text-align: center;
         right: 0;
       }
@@ -300,7 +312,9 @@ export default {
   }
   @media screen and (max-width: 500px) {
     .content-container {
-      padding: 0px 40px 80px;
+      padding: 20px 40px 80px;
     }
   }
+
+}
 </style>
