@@ -15,12 +15,12 @@
         </div>
         <div class="token-bar__section third">
           <img src="../assets/icons/icon-matryx-token-blue.png" alt="">
-          <p class="text-color--white">314,159,265.0</p>
+          <p class="text-color--white">314,159,265</p>
           <p class="text-color--matryx-lighter-blue">Total MTX Available</p>
         </div>
         <div class="token-bar__section fourth">
           <img src="../assets/icons/icon-eth-token-blue.png" alt="">
-          <p class="text-color--white">161,803.0</p>
+          <p class="text-color--white">161,803</p>
           <p class="text-color--matryx-lighter-blue">ETH Cap</p>
         </div>
         <div class="token-bar__section fifth">

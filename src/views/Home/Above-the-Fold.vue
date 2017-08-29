@@ -192,12 +192,7 @@ section.above-the-fold {
 
 
 
-.grey-bkg {
-  background-image: url('../../assets/images/backgrounds/greywave.svg');
-  background-size:cover;
-  background-position: center;
-  color: $white;
-}
+
 
 .purple-btn {
   border: none;
@@ -205,6 +200,18 @@ section.above-the-fold {
 
 
 /*----- MEDIA QUERIES -----*/
+@media screen and (min-width: 1400px) {
+  section.above-the-fold {
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 1690px) {
+  section.above-the-fold {
+    padding-bottom: 220px;
+  }
+}
+
 @media screen and (max-width: 1000px) {
 
   .token-sale {
@@ -228,12 +235,6 @@ section.above-the-fold {
 
   }
 
-}
-
-@media screen and (min-width: 1600px) {
-  section.above-the-fold {
-    padding-bottom: 220px;
-  }
 }
 
 @media screen and (max-width: 750px) {

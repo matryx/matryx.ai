@@ -99,6 +99,7 @@ export default {
   opacity: 0.8;
   font-style: italic;
   color: $matryx-darker-grey;
+  margin-left: 15px;
 }
 .quote-author {
   opacity: 0.8;
