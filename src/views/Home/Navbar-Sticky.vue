@@ -73,7 +73,14 @@
 
       <b-nav is-nav-bar class="ml-auto">
         <b-nav-item class="get-notified">
-          <button @click.prevent="openGetNotified">GET NOTIFIED</button>
+          <button @click.prevent="openGetNotified">
+            <span class="russian" v-if=" language === 'ru' ">ПОЛУЧАЙТЕ <span class="line-break"></span> УВЕДОМЛЕНИЯ</span>
+            <span v-else-if=" language === 'ch' ">接收通知</span>
+            <span class="german" v-else-if=" language === 'ge' ">MICH BENACHRICHTIGEN</span>
+            <span v-else-if=" language === 'ja' ">通知を受ける</span>
+            <span v-else-if=" language === 'ko' ">알림을 받으세요</span>
+            <span v-else>Get Notified</span>
+          </button>
         </b-nav-item>
       </b-nav>
       </b-collapse>
