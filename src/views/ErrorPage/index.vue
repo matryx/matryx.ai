@@ -3,7 +3,7 @@
    		<h1 class="error__content__title">404 ERROR</h1>
    		<img src="../../assets/images/backgrounds/404.png" alt="">
 		<p class="error__content__body text-color--matryx-dark-grey">Something's not right here, you and I both know it.</p>
-		<p class="text-color--matryx-dark-grey">Were you looking for our <a href="https://matryx.ai/matryx-whitepaper.pdf"> white paper</a>? No? Then make your way back <a href="https://www.matryx.ai"> home.</a></p>
+		<p class="text-color--matryx-dark-grey">Were you looking for our <a href="https://matryx.ai/matryx-whitepaper.pdf"> white paper</a>? No? Then maybe you should make your way back <a href="https://www.matryx.ai"> home.</a></p>
 	</div>
 </template>
 
@@ -28,13 +28,20 @@ document.title = '(╯°□°)╯︵ ┻━┻'
 }
 .error__content__title{
 	font-weight: bold;
-	font-size: 100px;
+	font-size: 80px;
 	margin: 50px;
+	padding: 10px;
 }
 
 .error__content__body{
 	font-size: 24px;
 	padding: 50px 0px 10px 0px; 
+}
+
+@media screen and (max-width: 850px) {
+	.error__content__title{	
+		font-size: 50px;
+	}
 }
 
 @media screen and (max-width: 500px) {
@@ -44,6 +51,9 @@ document.title = '(╯°□°)╯︵ ┻━┻'
 
 	.error__content__body{
 		padding: 25px;
+	}
+	.error__content p{
+		padding: 15px;
 	}
 }
 
