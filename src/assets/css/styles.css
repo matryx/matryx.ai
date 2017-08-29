@@ -23,8 +23,8 @@ h1, h2, h3, h6 {
 }
 
 h1 {
-  font-size: 28px;
-  line-height: 40px;
+  font-size: 40px;
+  line-height: 44px;
 }
 
 h1.font-size--large {
@@ -32,18 +32,28 @@ h1.font-size--large {
 }
 
 h2 {
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 32px;
+  line-height: 40px;
 }
 
 h3 {
-  font-size: 20px;
-  line-height: 27px;
+  font-size: 28px;
+  line-height: 36px;
 }
 
 h4 {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+h6 {
+  font-size: 18px;
+  line-height: 24px;
 }
 
 /*body text*/
@@ -255,6 +265,13 @@ button, button:hover, button:active, button:focus {
 /*cd-word-wrapper*/
 h1.cd-headline.clip {
   line-height: 90px;
+}
+
+/*line break for inline styles -> need for translations*/
+.line-break {
+  display: block;
+  line-height: 0;
+  height: 0;
 }
 
 /*text styles*/
