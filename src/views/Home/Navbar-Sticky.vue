@@ -15,6 +15,12 @@
         <b-nav-item
           class="nav-link text-color--matryx-grey nav-link--mobile-hide"
           href="#about-token-sale">
+          <!-- <span v-if=" language === 'ru' "></span>
+          <span v-else-if=" language === 'ch' "></span>
+          <span v-else-if=" language === 'ge' "></span>
+          <span v-else-if=" language === 'ja' "></span>
+          <span v-else-if=" language === 'ko' "></span>
+          <span v-else>TOKEN SALE</span> -->
           TOKEN SALE
         </b-nav-item>
         <b-nav-item
@@ -43,16 +49,10 @@
           BLOG
         </b-nav-item>
 <!--         <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">FAQ</b-nav-item> -->
-<!--         <b-nav-item class="nav-item-language nav-link--mobile-only">
-          <b-dropdown id="language" text="Language" class="language">
-            <b-dropdown-item>English</b-dropdown-item>
-            <b-dropdown-item>Chinese</b-dropdown-item>
-            <b-dropdown-item>Japanese</b-dropdown-item>
-            <b-dropdown-item>Russian</b-dropdown-item>
-            <b-dropdown-item>Spanish</b-dropdown-item>
-          </b-dropdown>
+        <b-nav-item class="nav-item-language "><!-- nav-link--mobile-only -->
+            <b-form-select v-model="language" :options="languages" @input="changeLanguage"></b-form-select>
         </b-nav-item>
- -->
+
        <!-- REMOVED MOBILE ITEMS
        <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">PRESS</b-nav-item>
        <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">LEGAL</b-nav-item>
@@ -88,6 +88,21 @@ import { appAnalytics } from '@/analytics'
 export default {
   name: 'NavbarSticky',
 
+  data () {
+    return {
+      language: null,
+      languages: [
+        { value: null, text: 'Language', disabled: true },
+        { value: 'en', text: 'English' },
+        { value: 'ru', text: 'русский' },
+        { value: 'ch', text: '中文' },
+        { value: 'ge', text: 'Deutsche' },
+        { value: 'ja', text: '日本語' },
+        { value: 'ko', text: '한국어' }
+      ]
+    }
+  },
+
   methods: {
     openGetNotified () {
       this.$store.commit('showGetNotifiedModal', true)
@@ -95,6 +110,15 @@ export default {
 
     whitePaperClick () {
       appAnalytics.whitePaperClick('Navbar')
+    },
+    changeLanguage () {
+      console.log('changeLanguage', this.language)
+      this.$store.commit('setLanguage', this.language)
+    }
+  },
+  computed: {
+    language () {
+      return this.$store.state.language
     }
   }
 }
@@ -140,6 +164,24 @@ export default {
     &.text-color--white a.nav-link{
       color: #FFF !important;
     }
+  }
+  .nav-item.nav-item-language {
+    padding: 17px 0;
+
+    a.nav-link {
+
+    }
+
+    select.form-control.custom-select {
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 40px;
+      height:40px;
+      width: 160px;
+      padding-left: 20px;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
   }
 }
 
@@ -290,10 +332,10 @@ nav {
   #nav .navbar.navbar-light .nav-link {
     line-height: 15px;
   }
-  .nav-link--mobile-only {
+  #nav .nav-link--mobile-only {
     display:block;
   }
-  .nav-link--mobile-hide {
+  #nav .nav-link--mobile-hide {
     display:none;
   }
 }

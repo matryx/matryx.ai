@@ -10,11 +10,21 @@
         :class="{ 'purple-btn': purpleBkg }"
         @click.prevent="getNotified"
       >
-        Get Notified
+        <span class="russian" v-if=" language === 'ru' ">ПОЛУЧАЙТЕ <span class="line-break"></span> УВЕДОМЛЕНИЯ</span>
+        <span v-else-if=" language === 'ch' ">接收通知</span>
+        <span class="german" v-else-if=" language === 'ge' ">MICH BENACHRICHTIGEN</span>
+        <span v-else-if=" language === 'ja' ">通知を受ける</span>
+        <span v-else-if=" language === 'ko' ">알림을 받으세요</span>
+        <span v-else>Get Notified</span>
       </button>
     </b-form>
     <p class="warn" v-show="showEmailWarning">
-      Please enter a valid email address
+      <span v-if=" language === 'ru' ">Пожалуйста, введите верный адрес эл. почты</span>
+				<span v-else-if=" language === 'ch' ">请输入有效的电子邮箱地址</span>
+				<span v-else-if=" language === 'ge' ">Bitte geben Sie eine gültige E-Mail-Adresse ein</span>
+				<span v-else-if=" language === 'ja' ">有効なメールアドレスを入力してください</span>
+				<span v-else-if=" language === 'ko' ">유효한 이메일 주소를 입력해 주세요</span>
+				<span v-else>Please enter a valid email address</span>
     </p>
 
     <div class="spinner-container" v-show="showSpinner">
@@ -46,6 +56,11 @@ export default {
   props: {
     purpleBkg: Boolean,
     ctaLocation: String
+  },
+  computed: {
+    language () {
+      return this.$store.state.language
+    }
   },
 
   data () {
@@ -96,6 +111,13 @@ export default {
 @import '../assets/css/styles';
 @import '../assets/css/colors';
 
+  .russian {
+    font-size: 10px;
+  }
+  .german {
+    font-size: 10px;
+  }
+
   .cta__form {
     display: flex;
     justify-content: center;
@@ -127,6 +149,7 @@ export default {
     }
 
     .cta__form__submit {
+      padding: 0;
       transition: all 0.3s ease-in-out;
       border-radius: 20px;
       border-top-left-radius: 0;
@@ -165,6 +188,10 @@ export default {
       height: inherit;
       box-shadow: 0 0 black;
       margin: 0;
+  }
+
+  .warn {
+    color: $matryx-red;
   }
 
   .purple-bkg {

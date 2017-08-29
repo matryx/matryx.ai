@@ -5,7 +5,14 @@
     <Above-the-Fold></Above-the-Fold>
     <div class="media-mentions bkg-color--white">
       <div class=" content-container content-container--medium media-mentions__img-container">
-        <p class="text-color--matryx-grey">Featured in</p>
+        <p class="text-color--matryx-grey">
+          <span v-if=" language === 'ru' ">Было показано в</span>
+          <span v-else-if=" language === 'ch' ">刊登在</span>
+          <span v-else-if=" language === 'ge' ">Vorgestellt in</span>
+          <span v-else-if=" language === 'ja' ">以下のメディアで取り上げられました:</span>
+          <span v-else-if=" language === 'ko' ">다뤄진 매체들</span>
+          <span v-else>Featured in</span>
+        </p>
         <a class="press-logo" href="https://www.gizmodo.com.au/2017/01/you-can-do-maths-in-virtual-reality-now/" target="_blank">
           <img src="../../assets/images/press/gizmodo.png" alt=""></a>
         <a class="press-logo" href="http://markets.businessinsider.com/news/stocks/Virtual-Reality-Software-Maker-Nanome-Introduces-Matryx-with-Token-Sale-1002282833?utm_source=matryx&utm_medium=web" target="_blank">
@@ -62,7 +69,11 @@ import AboutMatryx from './About-Matryx'
 
 export default {
   name: 'home',
-
+  computed: {
+    language () {
+      return this.$store.state.language
+    }
+  },
   data () {
     return {}
   },

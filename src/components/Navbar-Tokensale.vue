@@ -5,29 +5,85 @@
         <div class="token-bar__section first">
           <!-- GIVE TEXT A TEXT SHADOW -->
           <img src="../assets/icons/icon-lightning.png" alt="">
-          <p class="text-color--white">Pre-Sale</p>
-          <p class="text-color--matryx-lighter-blue">September 6, 2017</p>
+          <p class="text-color--white">
+            <span v-if=" language === 'ru' ">Предпродажа</span>
+    				<span v-else-if=" language === 'ch' ">预售</span>
+    				<span v-else-if=" language === 'ge' ">Vorverkauf</span>
+    				<span v-else-if=" language === 'ja' ">プリセール</span>
+    				<span v-else-if=" language === 'ko' ">사전판매</span>
+    				<span v-else>Pre-Sale</span>
+          </p>
+          <p class="text-color--matryx-lighter-blue">
+            <span v-if=" language === 'ru' ">6 сентября 2017 года</span>
+    				<span v-else-if=" language === 'ch' ">2017 年 9 月 6 日</span>
+    				<span v-else-if=" language === 'ge' ">6. September 2017</span>
+    				<span v-else-if=" language === 'ja' ">2017年9月6日</span>
+    				<span v-else-if=" language === 'ko' ">2017년 9월 6일</span>
+    				<span v-else>September 6, 2017</span>
+          </p>
         </div>
         <div class="token-bar__section second">
           <img src="../assets/icons/icon-rocket.png" alt="">
-          <p class="text-color--white">Launch</p>
-          <p class="text-color--matryx-lighter-blue">September 13, 2017</p>
+          <p class="text-color--white">
+            <span v-if=" language === 'ru' ">Запуск</span>
+    				<span v-else-if=" language === 'ch' ">发行</span>
+    				<span v-else-if=" language === 'ge' ">Start</span>
+    				<span v-else-if=" language === 'ja' ">ローンチ</span>
+    				<span v-else-if=" language === 'ko' ">런칭</span>
+    				<span v-else>Launch</span>
+          </p>
+          <p class="text-color--matryx-lighter-blue">
+            <span v-if=" language === 'ru' ">13 сентября 2017 года</span>
+    				<span v-else-if=" language === 'ch' ">2017 年 9 月 13 日</span>
+    				<span v-else-if=" language === 'ge' ">13. September 2017</span>
+    				<span v-else-if=" language === 'ja' ">2017年9月13日</span>
+    				<span v-else-if=" language === 'ko' ">2017년 9월 13일</span>
+    				<span v-else>September 13, 2017</span>
+          </p>
         </div>
         <div class="token-bar__section third">
           <img src="../assets/icons/icon-matryx-token-blue.png" alt="">
           <p class="text-color--white">314,159,265</p>
-          <p class="text-color--matryx-lighter-blue">Total MTX Available</p>
+          <p class="text-color--matryx-lighter-blue">
+            <span v-if=" language === 'ru' ">Всего доступно MTX</span>
+    				<span v-else-if=" language === 'ch' ">可提供的 MTX 总量</span>
+    				<span v-else-if=" language === 'ge' ">Verfügbarer MTX-Gesamtbetrag</span>
+    				<span v-else-if=" language === 'ja' ">入手可能なMTXの合計</span>
+    				<span v-else-if=" language === 'ko' ">이용가능 MTX 총액</span>
+    				<span v-else>Total MTX Available</span>
+          </p>
         </div>
         <div class="token-bar__section fourth">
           <img src="../assets/icons/icon-eth-token-blue.png" alt="">
           <p class="text-color--white">161,803</p>
-          <p class="text-color--matryx-lighter-blue">ETH Cap</p>
+          <p class="text-color--matryx-lighter-blue">
+            <span v-if=" language === 'ru' ">Предел ETH</span>
+    				<span v-else-if=" language === 'ch' ">ETH 上限</span>
+    				<span v-else-if=" language === 'ge' ">ETH-Limit</span>
+    				<span v-else-if=" language === 'ja' ">ETHキャップ</span>
+    				<span v-else-if=" language === 'ko' ">ETH 한도</span>
+    				<span v-else>ETH Cap</span>
+          </p>
         </div>
         <div class="token-bar__section fifth">
           <p>
-            <span class="text-color--matryx-grey">60% To Be Sold | ETH Smart Contract Sale</span>
+            <span class="text-color--matryx-grey">
+              <span v-if=" language === 'ru' ">60% будет продано | ПРОДАЖА СМАРТ-КОНТРАКТОВ ETH</span>
+      				<span v-else-if=" language === 'ch' ">60% 待售 | ETH 智能销售联系人</span>
+      				<span v-else-if=" language === 'ge' ">60 % stehen zum Verkauf | ETH-SMART-CONTRACT-VERKAUF</span>
+      				<span v-else-if=" language === 'ja' ">60%が販売予定 | ETHスマートコントラクトセール</span>
+      				<span v-else-if=" language === 'ko' ">60%의 판매할당 비율 | ETH 스마트 계약 판매</span>
+      				<span v-else>60% To Be Sold | ETH Smart Contract Sale</span>
+            </span>
             <br>
-            <span class="text-color--white">Address will ONLY be posted on matryx.ai</span>
+            <span class="text-color--white">
+              <span v-if=" language === 'ru' ">Адрес Ethereum будет размещаться непосредственно на matryx.ai</span>
+      				<span v-else-if=" language === 'ch' ">以太坊地址只会直接发布在 matryx.ai</span>
+      				<span v-else-if=" language === 'ge' ">Die Ethereum-Adresse wird nur direkt auf matryx.ai gepostet</span>
+      				<span v-else-if=" language === 'ja' ">イーサリアム (Ethereum) のアドレスはmatryx.aiにのみ直接掲示されます</span>
+      				<span v-else-if=" language === 'ko' ">이더리움 주소는 matrix.ai에서만 직접 게시됩니다</span>
+      				<span v-else>Address will ONLY be posted on matryx.ai</span>
+            </span>
           </p>
         </div>
       </div>
@@ -39,9 +95,10 @@
 <script>
 export default {
   name: 'NavbarToken',
-
-  props: {
-
+  computed: {
+    language () {
+      return this.$store.state.language
+    }
   }
 }
 </script>
@@ -91,7 +148,7 @@ section{
     height:30px;
   }
 
-  p, span{
+  p, & > span{
     font-size: 12px;
     white-space: nowrap;
     margin-bottom:0;

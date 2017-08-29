@@ -10,7 +10,8 @@ export default new Vuex.Store({
   state: {
     showModal: false,
     showGetNotifiedModal: false,
-    email: ''
+    email: '',
+    language: null
   },
   getters: {
 
@@ -26,6 +27,9 @@ export default new Vuex.Store({
     },
     showGetNotifiedModal (state, show) {
       state.showGetNotifiedModal = show
+    },
+    setLanguage (state, language) {
+      state.language = language
     }
   },
   strict: debug

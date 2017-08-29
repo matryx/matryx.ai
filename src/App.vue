@@ -6,9 +6,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <a aria-disabled="false" href="/" target="_self" class="navbar-brand">
-        <!-- <a href="/" class="router-link-exact-active router-link-active"> -->
           <img src="./assets/images/Matryx-Mark-White.png" alt="">
-        <!-- </a> -->
       </a>
       <div id="sub-nav--toggle" class="navbar-collapse collapse" style="display: none;">
         <ul class="nav navbar-nav">
@@ -18,7 +16,12 @@
               target="_self"
               class="nav-link"
             >
-              CONTACT
+              <span v-if=" language === 'ru' ">контакты</span>
+              <span v-else-if=" language === 'ch' ">联系人</span>
+              <span v-else-if=" language === 'ge' ">Kontakt</span>
+              <span v-else-if=" language === 'ja' ">問い合わせ</span>
+              <span v-else-if=" language === 'ko' ">연락처</span>
+              <span v-else>CONTACT</span>
             </a>
           </li>
           <li class="nav-item nav-link text-color--white">
@@ -26,16 +29,28 @@
               href="https://blog.matryx.ai/"
               target="_blank"
               class="nav-link">
-                BLOG
+                <span v-if=" language === 'ru' ">блог</span>
+                <span v-else-if=" language === 'ch' ">博客</span>
+                <span v-else-if=" language === 'ge' ">Blog</span>
+                <span v-else-if=" language === 'ja' ">ブログ</span>
+                <span v-else-if=" language === 'ko' ">블로그</span>
+                <span v-else>BLOG</span>
               </a>
           </li>
-<!--           <li class="nav-item nav-link text-color--white">
+          <!--  <li class="nav-item nav-link text-color--white">
             <a aria-disabled="false" href="#" target="_self" class="nav-link">FAQ</a>
           </li> -->
           <li class="nav-item nav-link text-color--white">
-            <a aria-disabled="false" href="#news-events" target="_self" class="nav-link">PRESS</a>
+            <a aria-disabled="false" href="#news-events" target="_self" class="nav-link">
+              <span v-if=" language === 'ru' ">для прессы</span>
+              <span v-else-if=" language === 'ch' ">新闻报道</span>
+              <span v-else-if=" language === 'ge' ">Presse</span>
+              <span v-else-if=" language === 'ja' ">プレス</span>
+              <span v-else-if=" language === 'ko' ">보도자료</span>
+              <span v-else>PRESS</span>
+            </a>
           </li>
-<!--           <li class="nav-item nav-link text-color--white">
+          <!--   <li class="nav-item nav-link text-color--white">
             <a aria-disabled="false" href="#" target="_self" class="nav-link">LEGAL</a>
           </li> -->
         </ul>
@@ -56,7 +71,7 @@
             rel="noopener"
             class="nav-link"
             @click="socialMediaClick('twitter', 'navbar')"
-          >
+           >
               <img src="./assets/icons/icon-twitter.png" alt="Matryx Twitter Page">
             </a>
           </li>
@@ -72,15 +87,9 @@
 
           </li>
 
-         <!--  <li class="nav-item nav-item-language">
-            <b-dropdown id="language" text="Language" class="language">
-              <b-dropdown-item>English</b-dropdown-item>
-              <b-dropdown-item>Chinese</b-dropdown-item>
-              <b-dropdown-item>Japanese</b-dropdown-item>
-              <b-dropdown-item>Russian</b-dropdown-item>
-              <b-dropdown-item>Spanish</b-dropdown-item>
-            </b-dropdown>
-          </li> -->
+          <li class="nav-item nav-item-language">
+            <b-form-select v-model="language" :options="languages" @input="changeLanguage"></b-form-select>
+          </li>
         </ul>
       </div>
     </nav>
@@ -122,7 +131,18 @@ export default {
   name: 'app',
 
   data () {
-    return {}
+    return {
+      language: null,
+      languages: [
+        { value: null, text: 'Language', disabled: true },
+        { value: 'en', text: 'English' },
+        { value: 'ru', text: 'русский' },
+        { value: 'ch', text: '中文' },
+        { value: 'ge', text: 'Deutsche' },
+        { value: 'ja', text: '日本語' },
+        { value: 'ko', text: '한국어' }
+      ]
+    }
   },
 
   components: {
@@ -138,6 +158,9 @@ export default {
   computed: {
     showGetNotifiedModal () {
       return this.$store.state.showGetNotifiedModal
+    },
+    language () {
+      return this.$store.state.language
     }
   },
 
@@ -148,6 +171,11 @@ export default {
 
     socialMediaClick (media, location) {
       appAnalytics.socialMediaClick(media, location)
+    },
+    changeLanguage () {
+      console.log('changeLanguage', this.language)
+      this.$store.commit('setLanguage', this.language)
+      // this.$store.state.language = this.language
     }
   }
 }
@@ -204,21 +232,16 @@ export default {
       background-color: transparent;
     }
 
-    .nav-item-language .nav-link {
-      &:hover {
-        background-color: transparent;
+    .nav-item.nav-item-language {
+      padding: 17px 0;
+
+      select.form-control.custom-select {
+        border: 1px solid #fff;
+        height:29px;
+        font-size: 13px;
       }
+
     }
-  }
-}
-
-.navbar .nav-item.nav-item-language {
-  &:hover {
-    background-color:transparent;
-  }
-  .nav-link {
-    padding: 0;
-
   }
 }
 
