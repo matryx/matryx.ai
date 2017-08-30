@@ -61,6 +61,10 @@ export default {
     navigateToRoute (route) {
       console.log('route', route)
     }
+  },
+
+  mounted () {
+    document.title = 'Matryx: A Decentralized Collaboration Platform'
   }
 }
 </script>

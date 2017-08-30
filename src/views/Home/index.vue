@@ -96,6 +96,8 @@ export default {
   },
 
   mounted () {
+    document.title = 'Matryx: A Decentralized Collaboration Platform'
+
     window.analytics.page('Home')
 
     if (this.$route.query.allocation === 'open') {
