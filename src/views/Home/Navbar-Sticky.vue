@@ -57,10 +57,20 @@
 
         <!-- Only Mobile View -->
         <b-nav-item href="mailto:team@matryx.ai?subject=Matryx Token Sale" class="nav-link text-color--matryx-grey nav-link--mobile-only">
-          CONTACT
+          <span v-if=" language === 'ru' ">контакты</span>
+          <span v-else-if=" language === 'ch' ">联系人</span>
+          <span v-else-if=" language === 'ge' ">KONTAKT</span>
+          <span v-else-if=" language === 'ja' ">問い合わせ</span>
+          <span v-else-if=" language === 'ko' ">연락처</span>
+          <span v-else>CONTACT</span>
         </b-nav-item>
         <b-nav-item href="https://blog.matryx.ai/" target="_blank" class="nav-link text-color--matryx-grey nav-link--mobile-only">
-          BLOG
+          <span v-if=" language === 'ru' ">блог</span>
+          <span v-else-if=" language === 'ch' ">博客</span>
+          <span v-else-if=" language === 'ge' ">BLOG</span>
+          <span v-else-if=" language === 'ja' ">ブログ</span>
+          <span v-else-if=" language === 'ko' ">블로그</span>
+          <span v-else>BLOG</span>
         </b-nav-item>
 <!--         <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">FAQ</b-nav-item> -->
         <b-nav-item class="nav-item-language nav-link--mobile-only"><!--  -->
