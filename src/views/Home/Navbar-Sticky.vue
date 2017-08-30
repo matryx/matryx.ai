@@ -49,7 +49,7 @@
           BLOG
         </b-nav-item>
 <!--         <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">FAQ</b-nav-item> -->
-        <b-nav-item class="nav-item-language "><!-- nav-link--mobile-only -->
+        <b-nav-item class="nav-item-language nav-link--mobile-only"><!--  -->
             <b-form-select v-model="language" :options="languages" @input="changeLanguage"></b-form-select>
         </b-nav-item>
 
