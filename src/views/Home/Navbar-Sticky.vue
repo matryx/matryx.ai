@@ -50,7 +50,11 @@
         </b-nav-item>
 <!--         <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">FAQ</b-nav-item> -->
         <b-nav-item class="nav-item-language nav-link--mobile-only"><!--  -->
-            <b-form-select v-model="language" :options="languages" @input="changeLanguage"></b-form-select>
+          <b-form-select
+            v-model="selectedLanguage"
+            :options="languages"
+            @input="changeLanguage">
+          </b-form-select>
         </b-nav-item>
 
        <!-- REMOVED MOBILE ITEMS
@@ -97,9 +101,8 @@ export default {
 
   data () {
     return {
-      language: null,
+      selectedLanguage: 'en',
       languages: [
-        { value: null, text: 'Language', disabled: true },
         { value: 'en', text: 'English' },
         { value: 'ru', text: 'русский' },
         { value: 'ch', text: '中文' },
@@ -119,8 +122,7 @@ export default {
       appAnalytics.whitePaperClick('Navbar')
     },
     changeLanguage () {
-      console.log('changeLanguage', this.language)
-      this.$store.commit('setLanguage', this.language)
+      this.$store.commit('setLanguage', this.selectedLanguage)
     }
   },
   computed: {
