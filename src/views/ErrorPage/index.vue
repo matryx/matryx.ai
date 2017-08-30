@@ -9,10 +9,14 @@
 
 <script>
 export default {
-  name: 'error-page',
-
-  mounted () {
+  name: 'ErrorPage',
+  beforeRouteEnter (to, from, next) {
     document.title = '(╯°□°)╯︵ ┻━┻'
+    next()
+  },
+  beforeRouteLeave (to, from, next) {
+    document.title = 'Matryx: A Decentralized Collaboration Platform'
+    next()
   }
 }
 </script>
@@ -24,40 +28,40 @@ export default {
 @import '../../assets/css/jquery.mCustomScrollbar.css';
 @import '../../assets/css/responsive.css';
 
-.error__content img{
+.error__content img {
   position: relative;
   display: inline;
   max-width: 60%;
 }
-.error__content__title{
+.error__content__title {
   font-weight: bold;
   font-size: 80px;
   margin: 50px;
   padding: 10px;
 }
 
-.error__content__body{
-  font-size: 24px;
-  padding: 50px 0px 10px 0px;
+.error__content__body {
+	font-size: 24px;
+	padding: 50px 0px 10px 0px;
 }
 
 @media screen and (max-width: 850px) {
-  .error__content__title{
-    font-size: 50px;
-  }
+	.error__content__title{
+		font-size: 50px;
+	}
 }
 
 @media screen and (max-width: 500px) {
-  .error__content__title{
-    font-size: 50px;
-  }
+	.error__content__title{
+		font-size: 50px;
+	}
 
-  .error__content__body{
-    padding: 25px;
-  }
-  .error__content p{
-    padding: 15px;
-  }
+	.error__content__body{
+		padding: 25px;
+	}
+	.error__content p{
+		padding: 15px;
+	}
 }
 
 </style>

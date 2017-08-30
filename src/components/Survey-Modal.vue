@@ -66,7 +66,7 @@
         				<span v-else-if=" language === 'ch' ">提交</span>
         				<span v-else-if=" language === 'ge' ">Absenden</span>
         				<span v-else-if=" language === 'ja' ">送信</span>
-        				<span v-else-if=" language === 'ko' ">올리기</span>
+        				<span v-else-if=" language === 'ko' ">제출</span>
         				<span v-else>Submit</span>
               </button>
             </form>

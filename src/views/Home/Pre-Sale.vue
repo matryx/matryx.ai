@@ -198,11 +198,11 @@ export default {
         },
         {
           img: discount10,
-          text: '구매 > 10% 할인된 가격으로 150 ETH 가능*'
+          text: '150 ETH 이상 구매 시10% 할인 적용*'
         },
         {
           img: discount15,
-          text: '구매 > 15% 할인된 가격으로 300 ETH 가능*'
+          text: '(300 ETH 이상 구매 시 15% 할인적용*'
         },
         {
           img: upto50,

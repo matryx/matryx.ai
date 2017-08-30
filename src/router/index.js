@@ -7,7 +7,7 @@ import TokenSale from '@/views/TokenSale/index'
 // import Accordion from '@/views/FAQ/Accordion'
 import About from '@/views/FAQ/Accordions/About'
 import Question from '@/views/FAQ/Accordion-Question'
-import ErrorPage from '@/views/ErrorPage/index'
+import ErrorPage from '@/views/ErrorPage'
 
 Vue.use(Router)
 

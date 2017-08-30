@@ -44,7 +44,7 @@
         				<span v-else-if=" language === 'ch' ">马歇尔请求 3D 宇宙飞船模型并发布奖励金</span>
         				<span v-else-if=" language === 'ge' ">Marshall stellt eine Anfrage für ein 3D-Raumschiffmodell und postet eine Belohnung</span>
         				<span v-else-if=" language === 'ja' ">Marshallが3Dの宇宙探査機モデルを要求し、報奨金を掲示する</span>
-        				<span v-else-if=" language === 'ko' ">Marshall이 3D 우주선 모델링을 요청하면서 포상금을 게시합니다</span>
+        				<span v-else-if=" language === 'ko' ">Marshall이 3D 우주선 모델링을 게시하면서 포상금을 게시합니다</span>
         				<span v-else>Marshall requests a 3D Spacecraft model &#38; posts a bounty</span>
               </p>
             </div>
@@ -63,7 +63,7 @@
         				<span v-else-if=" language === 'ch' ">两位用户提交他们最好的宇宙飞船模型。马歇尔喜欢某个设计，请求社区进行一轮修正。</span>
         				<span v-else-if=" language === 'ge' ">Zwei Nutzer reichen ihre besten Raumschiffmodelle ein. Marshall gefällt einer der Entwürfe und er bittet die Community um eine Überarbeitungsrunde.</span>
         				<span v-else-if=" language === 'ja' ">2人のユーザーが自己最高の宇宙探査機モデルを提出する。Marshallはその中の1つのデザインが気に入り、コミュニティからの改訂を要請する。</span>
-        				<span v-else-if=" language === 'ko' ">2명의 이용자들이 최선을 다한 자신의 우주선 모델링 결과물을 제출합니다. Marshal은 그 중 하나가 마음에 들어 커뮤니티에 1회의 수정을 요청합니다.</span>
+        				<span v-else-if=" language === 'ko' ">2명의 이용자들이 자신들의 최고의 우주선 모델린 결과물을 제출합니다. Marshal은 그 중 마음에 드는 한가지 결과물을 커뮤니티에 1회의 수정을 요청합니다.</span>
         				<span v-else>Two users submit their best Spacecraft models.
                 Marshall likes a design and requests a round of revision from the community.</span>
               </p>
