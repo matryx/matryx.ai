@@ -78,7 +78,7 @@
       <b-nav is-nav-bar class="ml-auto">
         <b-nav-item class="get-notified">
           <button @click.prevent="openGetNotified">
-            <span class="russian" v-if=" language === 'ru' ">ПОЛУЧАЙТЕ <span class="line-break"></span> УВЕДОМЛЕНИЯ</span>
+            <span class="russian" v-if=" language === 'ru' ">ПОЛУЧАЙТЕ УВЕДОМЛЕНИЯ</span>
             <span v-else-if=" language === 'ch' ">接收通知</span>
             <span class="german" v-else-if=" language === 'ge' ">MICH BENACHRICHTIGEN</span>
             <span v-else-if=" language === 'ja' ">通知を受ける</span>
@@ -137,6 +137,13 @@ export default {
 @import '../../assets/css/styles';
 
 #nav {
+  .russian {
+    font-size: 10px;
+  }
+  .german {
+    font-size: 10px;
+  }
+
   box-shadow: 0px 1px 10px #bdbdbd;
   width: 100%;
   z-index: 2;
