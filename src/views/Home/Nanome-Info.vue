@@ -15,7 +15,7 @@
         	<span v-else-if=" language === 'ch' ">Nanome 构建智能虚拟现实界面，使科学家和工程师能够合作、设计和模拟纳米级精度。我们的软件利用云计算来整合亲身实践的虚拟现实界面，进而帮助推动生命科学、材料科学和纳米工程的研究和发展。</span>
         	<span v-else-if=" language === 'ge' ">Nanome erstellt intelligente Virtual-Reality-Interfaces, die Wissenschaftlern und Ingenieuren eine Zusammenarbeit, Konzeption und Simulation mit Präzision im Nanomaßstab ermöglichen. Unsere Software fördert den Fortschritt von Forschung und Entwicklung in Biowissenschaften, Materialwissenschaften und Nanotechnik durch die Kombination eines interaktiven Virtual-Reality-Interfaces mit Cloud Computing.</span>
         	<span v-else-if=" language === 'ja' ">Nanomeはインテリジェントなバーチャルリアリティインターフェイスを構築し、科学者とエンジニアがナノスケールの精度で協力、設計、シミュレーションを行うことを可能にしています。当社のソフトウェアは、実践的なバーチャルリアリティインターフェースとクラウドコンピューティングを統合することにより、ライフサイエンス、材料科学、ナノエンジニアリングの研究開発を進める上で役立ちます。</span>
-        	<span v-else-if=" language === 'ko' ">Nanome은 과학자들과 엔지니어들이 나노 수준의 정밀도로 협업하고 디자인하고 시뮬레이션을 할 수 있도록 해주는 지능형 가상현실 인터페이스를 제작하고 있습니다. 저희 소프트웨어는 직접 조작하는 가상현실 인터페이스와 클라우드 컴퓨팅의 통합을 통해 생명과학, 재료과학, 나노엔지니어링 분야에서의 연구와 개발을 지원하고 있습니다.</span>
+        	<span v-else-if=" language === 'ko' ">Nanome은 과학자들과 엔지니어들이 나노 수준의 정밀도로 협력 및 디자인하고 시뮬레이션을 할 수 있도록 해주는 지능형 가상현실 인터페이스를 제작하고 있습니다. 저희 소프트웨어는 직접 조작하는 가상현실 인터페이스와 클라우드 컴퓨팅의 통합을 통해 생명과학, 재료과학, 나노엔지니어링 분야에서의 연구와 개발을 지원하고 있습니다.</span>
         	<span v-else>Nanome builds intelligent virtual reality interfaces that enable scientists and engineers to collaborate, design and simulate with nanoscale precision. Our software helps advance research and development in life sciences, materials sciences, and nanoengineering by integrating a hands-on virtual reality interface with cloud computing.</span>
         </div>
       </div>
