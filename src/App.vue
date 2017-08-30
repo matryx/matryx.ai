@@ -89,7 +89,11 @@
           </li>
 
           <li class="nav-item nav-item-language">
-            <b-form-select v-model="language" :options="languages" @input="changeLanguage"></b-form-select>
+            <b-form-select
+              v-model="selectedLanguage"
+              :options="languages"
+              @input="changeLanguage">
+            </b-form-select>
           </li>
         </ul>
       </div>
@@ -133,9 +137,8 @@ export default {
 
   data () {
     return {
-      language: null,
+      selectedLanguage: 'en',
       languages: [
-        { value: null, text: 'Language', disabled: true },
         { value: 'en', text: 'English' },
         { value: 'ru', text: 'русский' },
         { value: 'ch', text: '中文' },
@@ -174,9 +177,7 @@ export default {
       appAnalytics.socialMediaClick(media, location)
     },
     changeLanguage () {
-      console.log('changeLanguage', this.language)
-      this.$store.commit('setLanguage', this.language)
-      // this.$store.state.language = this.language
+      this.$store.commit('setLanguage', this.selectedLanguage)
     }
   }
 }
