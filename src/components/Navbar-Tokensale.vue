@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="navbar-tokensale">
     <div class="token-bar content-container content-container--large">
       <div class="token-bar__scroll">
         <div class="token-bar__section first">
@@ -14,12 +14,12 @@
     				<span v-else>Pre-Sale</span>
           </p>
           <p class="text-color--matryx-lighter-blue">
-            <span v-if=" language === 'ru' ">6 сентября 2017 года</span>
-    				<span v-else-if=" language === 'ch' ">2017 年 9 月 6 日</span>
-    				<span v-else-if=" language === 'ge' ">6. September 2017</span>
-    				<span v-else-if=" language === 'ja' ">2017年9月6日</span>
-    				<span v-else-if=" language === 'ko' ">2017년 9월 6일</span>
-    				<span v-else>September 6, 2017</span>
+            <span v-if=" language === 'ru' "> 6 сентября 2017 года</span>
+    				<span v-else-if=" language === 'ch' "> 2017 年 9 月 6 日</span>
+    				<span v-else-if=" language === 'ge' "> 6. September 2017</span>
+    				<span v-else-if=" language === 'ja' "> 2017年9月6日</span>
+    				<span v-else-if=" language === 'ko' "> 2017년 9월 6일</span>
+    				<span v-else> September 6, 2017</span>
           </p>
         </div>
         <div class="token-bar__section second">
@@ -81,7 +81,7 @@
       				<span v-else-if=" language === 'ch' ">以太坊地址只会直接发布在 matryx.ai</span>
       				<span v-else-if=" language === 'ge' ">Die Ethereum-Adresse wird nur direkt auf matryx.ai gepostet</span>
       				<span v-else-if=" language === 'ja' ">イーサリアム (Ethereum) のアドレスはmatryx.aiにのみ直接掲示されます</span>
-      				<span v-else-if=" language === 'ko' ">이더리움 주소는 matrix.ai에서만 직접 게시됩니다</span>
+      				<span v-else-if=" language === 'ko' ">이더리움 주소는 matryx.ai에서만 직접 게시됩니다</span>
       				<span v-else>Address will ONLY be posted on matryx.ai</span>
             </span>
           </p>
@@ -106,7 +106,7 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/css/colors';
 
-section{
+section.navbar-tokensale {
   margin: 0;
   padding: 0;
   background: rgb(8,31,54);
@@ -114,76 +114,79 @@ section{
   background: -webkit-linear-gradient(-45deg, rgba(8,31,54,1) 0%,rgba(0,134,203,1) 100%);
   background: linear-gradient(135deg, rgba(8,31,54,1) 0%,rgba(0,134,203,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#081f36', endColorstr='#0086cb',GradientType=1 );
-}
 
-.content-container {
-  padding: 0;
-}
-
-.token-bar {
-  height: 50px;
-  overflow: hidden;
-  position: relative;
-}
-
-.token-bar__scroll  {
-  display:flex;
-  justify-content: space-between;
-  width: 1200px;
-  height: 100%;
-  margin: 0;
-  line-height: 50px;
-  text-align: center;
-}
-
-.token-bar__section {
-  display:inline-block;
-  position:relative;
-  width:20%;
-  padding: 0;
-  margin: 0;
-
-  img, p {
-    display:inline-block;
-    height:30px;
+  .content-container {
+    padding: 0;
   }
 
-  p, & > span{
-    font-size: 12px;
-    white-space: nowrap;
-    margin-bottom:0;
-  }
-  p:first-child {
-    margin-right: 5px;
+  .token-bar {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
   }
 
-}
+  .token-bar__scroll  {
+    display:flex;
+    justify-content: space-between;
+    width: 1200px;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+  }
 
+  .token-bar__section {
+    // display:inline-block;
+    position:relative;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
 
-.first {
-  left: 100%;
-  animation: scroll-first 30s linear -30s infinite;
-}
-.second {
-  left: 80%;
-  animation: scroll-second 30s linear -24s infinite;
-}
+    img, p {
+      display:inline-block;
+      height:30px;
+      margin-right: 2px;
+      margin-left: 2px;
+    }
 
-.third {
-  left: 60%;
-  animation: scroll-third 30s linear -18s infinite;
-}
+    p, & > span{
+      font-size: 12px;
+      white-space: nowrap;
+      margin-bottom:0;
+    }
+    p:first-child {
+      margin-right: 5px;
+    }
 
-.fourth {
-  left: 40%;
-  animation: scroll-fourth 30s linear -12s infinite;
-}
+  }
 
-.fifth {
-  left: 20%;
-  animation: scroll-fifth 30s linear -6s infinite;
+  .first {
+    left: 100%;
+    animation: scroll-first 30s linear -30s infinite;
+  }
+  .second {
+    left: 80%;
+    animation: scroll-second 30s linear -24s infinite;
+  }
 
-  p{ line-height:24px; }
+  .third {
+    left: 60%;
+    animation: scroll-third 30s linear -18s infinite;
+  }
+
+  .fourth {
+    left: 40%;
+    animation: scroll-fourth 30s linear -12s infinite;
+  }
+
+  .fifth {
+    left: 20%;
+    animation: scroll-fifth 30s linear -6s infinite;
+    align-items: baseline;
+
+    p{ line-height:24px; }
+  }
 }
 
 @keyframes scroll-first {
