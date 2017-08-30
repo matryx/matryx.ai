@@ -86,6 +86,11 @@ export default {
   components: {
     SaleIcon
   },
+  computed: {
+    language () {
+      return this.$store.state.language
+    }
+  },
   data () {
     return {
       icons: [

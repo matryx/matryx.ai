@@ -2,13 +2,25 @@
 <div id="app" >
   <div id="sub-nav" class="bkg-color--dark-blue-gradient">
     <nav class="navbar navbar-light navbar-toggleable-sm">
-      <button type="button" aria-label="Toggle navigation" aria-controls="sub-nav--toggle" aria-expanded="false" class="navbar-toggler navbar-toggler-right">
+      <button type="button"
+        aria-label="Toggle navigation"
+        aria-controls="sub-nav--toggle"
+        aria-expanded="false"
+        class="navbar-toggler navbar-toggler-right"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a aria-disabled="false" href="/" target="_self" class="navbar-brand">
-          <img src="./assets/images/Matryx-Mark-White.png" alt="">
+      <a aria-disabled="false"
+        href="/"
+        target="_self"
+        class="navbar-brand"
+      >
+        <img src="./assets/images/Matryx-Mark-White.png" alt="Matryx Logo">
       </a>
-      <div id="sub-nav--toggle" class="navbar-collapse collapse" style="display: none;">
+      <div id="sub-nav--toggle"
+        class="navbar-collapse collapse"
+        style="display: none;"
+      >
         <ul class="nav navbar-nav">
           <li class="nav-item nav-link text-color--white">
             <a aria-disabled="false"
@@ -28,20 +40,25 @@
             <a aria-disabled="false"
               href="https://blog.matryx.ai/"
               target="_blank"
-              class="nav-link">
-                <span v-if=" language === 'ru' ">блог</span>
-                <span v-else-if=" language === 'ch' ">博客</span>
-                <span v-else-if=" language === 'ge' ">Blog</span>
-                <span v-else-if=" language === 'ja' ">ブログ</span>
-                <span v-else-if=" language === 'ko' ">블로그</span>
-                <span v-else>BLOG</span>
-              </a>
+              class="nav-link"
+            >
+              <span v-if=" language === 'ru' ">блог</span>
+              <span v-else-if=" language === 'ch' ">博客</span>
+              <span v-else-if=" language === 'ge' ">Blog</span>
+              <span v-else-if=" language === 'ja' ">ブログ</span>
+              <span v-else-if=" language === 'ko' ">블로그</span>
+              <span v-else>BLOG</span>
+            </a>
           </li>
           <!--  <li class="nav-item nav-link text-color--white">
             <a aria-disabled="false" href="#" target="_self" class="nav-link">FAQ</a>
           </li> -->
           <li class="nav-item nav-link text-color--white">
-            <a aria-disabled="false" href="#news-events" target="_self" class="nav-link">
+            <a aria-disabled="false"
+              href="#news-events"
+              target="_self"
+              class="nav-link"
+            >
               <span v-if=" language === 'ru' ">для прессы</span>
               <span v-else-if=" language === 'ch' ">新闻报道</span>
               <span v-else-if=" language === 'ge' ">Presse</span>
@@ -54,15 +71,16 @@
             <a aria-disabled="false" href="#" target="_self" class="nav-link">LEGAL</a>
           </li> -->
         </ul>
-        <ul class="ml-auto nav navbar-nav">
+        <ul class="ml-auto nav navbar-nav nav-right">
           <li class="nav-item social-icon">
-            <a aria-disabled="false" href="https://t.me/matryxai"
+            <a aria-disabled="false"
+              href="https://t.me/matryxai"
               target="_blank"
               rel="noopener"
               class="nav-link"
               @click="socialMediaClick('telegram', 'navbar')"
             >
-              <img src="./assets/icons/icon-telegram.svg" alt="Matryx telegram">
+              <img src="./assets/icons/icon-telegram.svg" alt="Telegram">
             </a>
           </li>
           <li class="nav-item social-icon">
@@ -73,23 +91,28 @@
             class="nav-link"
             @click="socialMediaClick('twitter', 'navbar')"
            >
-              <img src="./assets/icons/icon-twitter.png" alt="Matryx Twitter Page">
+              <img src="./assets/icons/icon-twitter.png" alt="Matryx Twitter">
             </a>
           </li>
           <li class="nav-item social-icon" >
-            <a aria-disabled="false" href="https://www.facebook.com/matryxai/"
-            target="_blank"
+            <a aria-disabled="false"
+              href="https://www.facebook.com/matryxai/"
+              target="_blank"
               rel="noopener"
               class="nav-link"
               @click="socialMediaClick('facebook', 'navbar')"
             >
-            <img src="./assets/icons/icon-facebook.png" alt="Matryx Facebook Page">
+            <img src="./assets/icons/icon-facebook.png" alt="Matryx Facebook">
             </a>
-
           </li>
 
           <li class="nav-item nav-item-language">
-            <b-form-select v-model="language" :options="languages" @input="changeLanguage"></b-form-select>
+            <b-form-select
+              v-model="selectedLanguage"
+              :options="languages"
+              @input="changeLanguage"
+            >
+            </b-form-select>
           </li>
         </ul>
       </div>
@@ -133,9 +156,8 @@ export default {
 
   data () {
     return {
-      language: null,
+      selectedLanguage: 'en',
       languages: [
-        { value: null, text: 'Language', disabled: true },
         { value: 'en', text: 'English' },
         { value: 'ru', text: 'русский' },
         { value: 'ch', text: '中文' },
@@ -174,9 +196,7 @@ export default {
       appAnalytics.socialMediaClick(media, location)
     },
     changeLanguage () {
-      console.log('changeLanguage', this.language)
-      this.$store.commit('setLanguage', this.language)
-      // this.$store.state.language = this.language
+      this.$store.commit('setLanguage', this.selectedLanguage)
     }
   }
 }
@@ -189,6 +209,18 @@ export default {
 #sub-nav {
   width:100%;
   z-index:3;
+
+  #sub-nav--toggle {
+    display: flex;
+    align-items: center;
+  }
+
+  .ml-auto.nav.navbar-nav.nav-right.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 230px;
+  }
 
   .navbar-brand img {
     max-width: 30px;
@@ -229,6 +261,13 @@ export default {
         }
       }
     }
+
+    .social-icon .nav-link img {
+      width: 29px;
+      height: 29px;
+      margin-bottom: 2px;
+    }
+
     .social-icon .nav-link:hover {
       background-color: transparent;
     }

@@ -15,30 +15,44 @@
         <b-nav-item
           class="nav-link text-color--matryx-grey nav-link--mobile-hide"
           href="#about-token-sale">
-          <!-- <span v-if=" language === 'ru' "></span>
-          <span v-else-if=" language === 'ch' "></span>
-          <span v-else-if=" language === 'ge' "></span>
-          <span v-else-if=" language === 'ja' "></span>
-          <span v-else-if=" language === 'ko' "></span>
-          <span v-else>TOKEN SALE</span> -->
-          TOKEN SALE
+          <span class="russian" v-if=" language === 'ru' ">ПРОДАЖА ТОКЕНОВ</span>
+          <span v-else-if=" language === 'ch' ">代金券销售</span>
+          <span v-else-if=" language === 'ge' ">TOKEN-VERKAUF</span>
+          <span v-else-if=" language === 'ja' ">トークンセール</span>
+          <span v-else-if=" language === 'ko' ">토큰판매</span>
+          <span v-else>TOKEN SALE</span>
         </b-nav-item>
         <b-nav-item
           class="nav-link text-color--matryx-grey nav-link--mobile-hide"
           href="#what-is-matryx">
-          ABOUT
+          <span class="russian" v-if=" language === 'ru' ">относительно</span>
+          <span v-else-if=" language === 'ch' ">关于</span>
+          <span v-else-if=" language === 'ge' ">ÜBER</span>
+          <span v-else-if=" language === 'ja' ">について</span>
+          <span v-else-if=" language === 'ko' ">에 대하여</span>
+          <span v-else>ABOUT</span>
         </b-nav-item>
         <b-nav-item
           class="nav-link text-color--matryx-grey nav-link--mobile-hide"
           href="#bounty-system">
-          BOUNTY SYSTEM
+          <span class="russian" v-if=" language === 'ru' ">системы вознаграждений</span>
+          <span v-else-if=" language === 'ch' ">奖励金制度</span>
+          <span v-else-if=" language === 'ge' ">BOUNTY-SYSTEM</span>
+          <span v-else-if=" language === 'ja' ">報奨金制度</span>
+          <span v-else-if=" language === 'ko' ">는 포상 제도</span>
+          <span v-else>BOUNTY SYSTEM</span>
         </b-nav-item>
         <b-nav-item class="nav-link text-color--matryx-grey"
           target="_blank"
           href="/matryx-whitepaper.pdf"
           @click="whitePaperClick"
         >
-          WHITEPAPER
+          <span class="russian" v-if=" language === 'ru' ">техническую документацию</span>
+          <span v-else-if=" language === 'ch' ">白皮书</span>
+          <span v-else-if=" language === 'ge' ">WHITE PAPER</span>
+          <span v-else-if=" language === 'ja' ">WHITEPAPER</span>
+          <span v-else-if=" language === 'ko' ">백서를</span>
+          <span v-else>WHITEPAPER</span>
         </b-nav-item>
 
         <!-- Only Mobile View -->
@@ -50,7 +64,11 @@
         </b-nav-item>
 <!--         <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">FAQ</b-nav-item> -->
         <b-nav-item class="nav-item-language nav-link--mobile-only"><!--  -->
-            <b-form-select v-model="language" :options="languages" @input="changeLanguage"></b-form-select>
+          <b-form-select
+            v-model="selectedLanguage"
+            :options="languages"
+            @input="changeLanguage">
+          </b-form-select>
         </b-nav-item>
 
        <!-- REMOVED MOBILE ITEMS
@@ -74,12 +92,12 @@
       <b-nav is-nav-bar class="ml-auto">
         <b-nav-item class="get-notified">
           <button @click.prevent="openGetNotified">
-            <span class="russian" v-if=" language === 'ru' ">ПОЛУЧАЙТЕ <span class="line-break"></span> УВЕДОМЛЕНИЯ</span>
+            <span class="russian" v-if=" language === 'ru' ">ПОЛУЧАЙТЕ УВЕДОМЛЕНИЯ</span>
             <span v-else-if=" language === 'ch' ">接收通知</span>
             <span class="german" v-else-if=" language === 'ge' ">MICH BENACHRICHTIGEN</span>
             <span v-else-if=" language === 'ja' ">通知を受ける</span>
             <span v-else-if=" language === 'ko' ">알림을 받으세요</span>
-            <span v-else>Get Notified</span>
+            <span v-else>GET NOTIFIED</span>
           </button>
         </b-nav-item>
       </b-nav>
@@ -97,16 +115,16 @@ export default {
 
   data () {
     return {
-      language: null,
+      selectedLanguage: 'en',
       languages: [
-        { value: null, text: 'Language', disabled: true },
         { value: 'en', text: 'English' },
         { value: 'ru', text: 'русский' },
         { value: 'ch', text: '中文' },
         { value: 'ge', text: 'Deutsche' },
         { value: 'ja', text: '日本語' },
         { value: 'ko', text: '한국어' }
-      ]
+      ],
+      russianNav: false
     }
   },
 
@@ -119,8 +137,7 @@ export default {
       appAnalytics.whitePaperClick('Navbar')
     },
     changeLanguage () {
-      console.log('changeLanguage', this.language)
-      this.$store.commit('setLanguage', this.language)
+      this.$store.commit('setLanguage', this.selectedLanguage)
     }
   },
   computed: {
@@ -135,6 +152,18 @@ export default {
 @import '../../assets/css/styles';
 
 #nav {
+  ul.nav.navbar-nav {
+    width: 700px;
+  }
+
+  .russian {
+    font-size: 10px;
+    line-height: 10px;
+  }
+  .german {
+    font-size: 10px;
+  }
+
   box-shadow: 0px 1px 10px #bdbdbd;
   width: 100%;
   z-index: 2;
@@ -142,9 +171,8 @@ export default {
   margin: 0;
 
   .navbar.navbar-light .nav-link {
-    line-height: 50px;
-    margin-right: 2.5px;
-    margin-left: 5px;
+    line-height: 20px;
+    margin: 7.5px 2.5px 5px 7.5px;
   }
 
   .navbar-toggleable-sm .navbar-nav .nav-link {

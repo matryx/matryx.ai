@@ -11,7 +11,7 @@ export default new Vuex.Store({
     showModal: false,
     showGetNotifiedModal: false,
     email: '',
-    language: null
+    language: 'en'
   },
   getters: {
 
