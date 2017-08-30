@@ -166,7 +166,7 @@ export default {
         },
         {
           img: discount15,
-          text: 'Käufe im Wert von mehr als 300 ETH SIND FÜR EINEN RABATT VON 15 % QUALIFIZIERT*'
+          text: 'Käufe im Wert von mehr als 300 ETH sind für einen Rabatt von 15 % qualifiziert*'
         },
         {
           img: upto50,
@@ -202,7 +202,7 @@ export default {
         },
         {
           img: discount15,
-          text: '(300 ETH 이상 구매 시 15% 할인적용*'
+          text: '300 ETH 이상 구매 시 15% 할인적용*'
         },
         {
           img: upto50,

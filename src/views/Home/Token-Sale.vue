@@ -144,7 +144,7 @@ export default {
         },
         {
           img: matryx,
-          text: '地址仅在 matry.ai 张贴'
+          text: '地址仅在 matryx.ai 张贴'
         }
       ],
       iconsGerman: [

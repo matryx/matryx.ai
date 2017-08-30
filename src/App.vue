@@ -30,7 +30,7 @@
             >
               <span v-if=" language === 'ru' ">контакты</span>
               <span v-else-if=" language === 'ch' ">联系人</span>
-              <span v-else-if=" language === 'ge' ">Kontakt</span>
+              <span v-else-if=" language === 'ge' ">KONTAKT</span>
               <span v-else-if=" language === 'ja' ">問い合わせ</span>
               <span v-else-if=" language === 'ko' ">연락처</span>
               <span v-else>CONTACT</span>
@@ -44,7 +44,7 @@
             >
               <span v-if=" language === 'ru' ">блог</span>
               <span v-else-if=" language === 'ch' ">博客</span>
-              <span v-else-if=" language === 'ge' ">Blog</span>
+              <span v-else-if=" language === 'ge' ">BLOG</span>
               <span v-else-if=" language === 'ja' ">ブログ</span>
               <span v-else-if=" language === 'ko' ">블로그</span>
               <span v-else>BLOG</span>
@@ -61,7 +61,7 @@
             >
               <span v-if=" language === 'ru' ">для прессы</span>
               <span v-else-if=" language === 'ch' ">新闻报道</span>
-              <span v-else-if=" language === 'ge' ">Presse</span>
+              <span v-else-if=" language === 'ge' ">PRESSE</span>
               <span v-else-if=" language === 'ja' ">プレス</span>
               <span v-else-if=" language === 'ko' ">보도자료</span>
               <span v-else>PRESS</span>
@@ -219,7 +219,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 230px;
+    width: 240px;
   }
 
   .navbar-brand img {
@@ -274,6 +274,8 @@ export default {
 
     .nav-item.nav-item-language {
       padding: 17px 0;
+      width: 115px;
+      margin-left: 5px;
 
       select.form-control.custom-select {
         border: 1px solid #fff;
