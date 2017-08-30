@@ -127,7 +127,7 @@ section.navbar-tokensale {
 
   .token-bar__scroll  {
     display:flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 1200px;
     height: 100%;
     margin: 0;
