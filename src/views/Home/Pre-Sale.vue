@@ -170,7 +170,7 @@ export default {
         },
         {
           img: upto50,
-          text: 'bis zu 50 % des Gesamtverkaufslimits für den Vorverkauf zugeteilt'
+          text: 'Bis zu 50 % des Gesamtverkaufslimits für den Vorverkauf zugeteilt'
         }
       ],
       iconsJapanese: [
