@@ -73,7 +73,7 @@
       				<span v-else-if=" language === 'ge' ">60 % stehen zum Verkauf | ETH-SMART-CONTRACT-VERKAUF</span>
       				<span v-else-if=" language === 'ja' ">60%が販売予定 | ETHスマートコントラクトセール</span>
       				<span v-else-if=" language === 'ko' ">60%의 판매할당 비율 | ETH 스마트 계약 판매</span>
-      				<span v-else>60% To Be Sold | ETH Smart Contract Sale</span>
+      				<span v-else>60% Of MTX Supply To Be Sold | ETH Smart Contract Sale</span>
             </span>
             <br>
             <span class="text-color--white">
@@ -191,51 +191,51 @@ section.navbar-tokensale {
 
 @keyframes scroll-first {
   0% { left:100%; }
-  16.7% { left: 80%; }
-  33.3% { left: 60%; }
-  50% { left: 40%; }
-  66.7% { left: 20%; }
-  83.3% { left: 0%; }
+  // 16.7% { left: 80%; }
+  // 33.3% { left: 60%; }
+  // 50% { left: 40%; }
+  // 66.7% { left: 20%; }
+  // 83.3% { left: 0%; }
   100% { left: -20%; }
 }
 
 @keyframes scroll-second {
   0% { left: 80%; }
-  16.7% { left: 60%; }
-  33.3% { left: 40%; }
-  50% { left: 20%; }
-  66.7% { left: 0%; }
-  83.3% { left: -20%; }
+  // 16.7% { left: 60%; }
+  // 33.3% { left: 40%; }
+  // 50% { left: 20%; }
+  // 66.7% { left: 0%; }
+  // 83.3% { left: -20%; }
   100% { left: -40%; }
 }
 
 @keyframes scroll-third {
   0% { left: 60%; }
-  16.7% { left: 40%; }
-  33.3% { left: 20%; }
-  50% { left: 0%; }
-  66.7% { left: -20%; }
-  83.3% { left: -40%; }
+  // 16.7% { left: 40%; }
+  // 33.3% { left: 20%; }
+  // 50% { left: 0%; }
+  // 66.7% { left: -20%; }
+  // 83.3% { left: -40%; }
   100% { left: -60%; }
 }
 
 @keyframes scroll-fourth {
   0% { left: 40%; }
-  16.7% { left: 20%; }
-  33.3% { left: 0%; }
-  50% { left: -20%; }
-  66.7% { left: -40%; }
-  83.3% { left: -60%; }
+  // 16.7% { left: 20%; }
+  // 33.3% { left: 0%; }
+  // 50% { left: -20%; }
+  // 66.7% { left: -40%; }
+  // 83.3% { left: -60%; }
   100% { left: -80%; }
 }
 
 @keyframes scroll-fifth {
   0% { left: 20%; }
-  16.7% { left: 0%; }
-  33.3% { left: -20%; }
-  50% { left: -40%; }
-  66.7% { left: -60%; }
-  83.3% { left: -80%; }
+  // 16.7% { left: 0%; }
+  // 33.3% { left: -20%; }
+  // 50% { left: -40%; }
+  // 66.7% { left: -60%; }
+  // 83.3% { left: -80%; }
   100% { left: -100%; }
 }
 
