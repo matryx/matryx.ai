@@ -2,15 +2,25 @@
 <div id="app" >
   <div id="sub-nav" class="bkg-color--dark-blue-gradient">
     <nav class="navbar navbar-light navbar-toggleable-sm">
-      <button type="button" aria-label="Toggle navigation" aria-controls="sub-nav--toggle" aria-expanded="false" class="navbar-toggler navbar-toggler-right">
+      <button type="button"
+        aria-label="Toggle navigation"
+        aria-controls="sub-nav--toggle"
+        aria-expanded="false"
+        class="navbar-toggler navbar-toggler-right"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a aria-disabled="false" href="/" target="_self" class="navbar-brand">
-        <!-- <a href="/" class="router-link-exact-active router-link-active"> -->
-          <img src="./assets/images/Matryx-Mark-White.png" alt="">
-        <!-- </a> -->
+      <a aria-disabled="false"
+        href="/"
+        target="_self"
+        class="navbar-brand"
+      >
+        <img src="./assets/images/Matryx-Mark-White.png" alt="Matryx Logo">
       </a>
-      <div id="sub-nav--toggle" class="navbar-collapse collapse" style="display: none;">
+      <div id="sub-nav--toggle"
+        class="navbar-collapse collapse"
+        style="display: none;"
+      >
         <ul class="nav navbar-nav">
           <li class="nav-item nav-link text-color--white">
             <a aria-disabled="false"
@@ -18,69 +28,92 @@
               target="_self"
               class="nav-link"
             >
-              CONTACT
+              <span v-if=" language === 'ru' ">контакты</span>
+              <span v-else-if=" language === 'ch' ">联系人</span>
+              <span v-else-if=" language === 'ge' ">KONTAKT</span>
+              <span v-else-if=" language === 'ja' ">問い合わせ</span>
+              <span v-else-if=" language === 'ko' ">연락처</span>
+              <span v-else>CONTACT</span>
             </a>
           </li>
           <li class="nav-item nav-link text-color--white">
             <a aria-disabled="false"
               href="https://blog.matryx.ai/"
               target="_blank"
-              class="nav-link">
-                BLOG
-              </a>
+              class="nav-link"
+            >
+              <span v-if=" language === 'ru' ">блог</span>
+              <span v-else-if=" language === 'ch' ">博客</span>
+              <span v-else-if=" language === 'ge' ">BLOG</span>
+              <span v-else-if=" language === 'ja' ">ブログ</span>
+              <span v-else-if=" language === 'ko' ">블로그</span>
+              <span v-else>BLOG</span>
+            </a>
           </li>
-<!--           <li class="nav-item nav-link text-color--white">
+          <!--  <li class="nav-item nav-link text-color--white">
             <a aria-disabled="false" href="#" target="_self" class="nav-link">FAQ</a>
           </li> -->
           <li class="nav-item nav-link text-color--white">
-            <a aria-disabled="false" href="#news-events" target="_self" class="nav-link">PRESS</a>
+            <a aria-disabled="false"
+              href="#news-events"
+              target="_self"
+              class="nav-link"
+            >
+              <span v-if=" language === 'ru' ">для прессы</span>
+              <span v-else-if=" language === 'ch' ">新闻报道</span>
+              <span v-else-if=" language === 'ge' ">PRESSE</span>
+              <span v-else-if=" language === 'ja' ">プレス</span>
+              <span v-else-if=" language === 'ko' ">보도자료</span>
+              <span v-else>PRESS</span>
+            </a>
           </li>
-<!--           <li class="nav-item nav-link text-color--white">
+          <!--   <li class="nav-item nav-link text-color--white">
             <a aria-disabled="false" href="#" target="_self" class="nav-link">LEGAL</a>
           </li> -->
         </ul>
-        <ul class="ml-auto nav navbar-nav">
+        <ul class="ml-auto nav navbar-nav nav-right">
           <li class="nav-item social-icon">
-            <a aria-disabled="false" href="https://t.me/matryxai"
+            <a aria-disabled="false"
+              href="https://t.me/matryxai"
               target="_blank"
               rel="noopener"
               class="nav-link"
               @click="socialMediaClick('telegram', 'navbar')"
             >
-              <img src="./assets/icons/icon-telegram.svg" alt="Matryx telegram">
+              <img src="./assets/icons/icon-telegram.svg" alt="Telegram">
             </a>
           </li>
           <li class="nav-item social-icon">
-            <a aria-disabled="false" href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Flocalhost%3A8080%2F&ref_src=twsrc%5Etfw&region=follow_link&screen_name=matryx_ai&tw_p=followbutton"
+            <a aria-disabled="false"
             target="_blank"
+            onclick="window.open( 'https://twitter.com/intent/follow?original_referer=http%3A%2F%2Flocalhost%3A8080%2F&ref_src=twsrc%5Etfw&region=follow_link&screen_name=matryx_ai&tw_p=followbutton', 'newwindow', 'width=400px,height=500'); return false;"
             rel="noopener"
             class="nav-link"
             @click="socialMediaClick('twitter', 'navbar')"
-          >
-              <img src="./assets/icons/icon-twitter.png" alt="Matryx Twitter Page">
+           >
+              <img src="./assets/icons/icon-twitter.png" alt="Matryx Twitter">
             </a>
           </li>
-          <li class="nav-item social-icon">
-            <a aria-disabled="false" href="https://www.facebook.com/matryxai/"
+          <li class="nav-item social-icon" >
+            <a aria-disabled="false"
+              href="https://www.facebook.com/matryxai/"
               target="_blank"
               rel="noopener"
               class="nav-link"
               @click="socialMediaClick('facebook', 'navbar')"
             >
-            <img src="./assets/icons/icon-facebook.png" alt="Matryx Facebook Page">
+            <img src="./assets/icons/icon-facebook.png" alt="Matryx Facebook">
             </a>
-
           </li>
 
-         <!--  <li class="nav-item nav-item-language">
-            <b-dropdown id="language" text="Language" class="language">
-              <b-dropdown-item>English</b-dropdown-item>
-              <b-dropdown-item>Chinese</b-dropdown-item>
-              <b-dropdown-item>Japanese</b-dropdown-item>
-              <b-dropdown-item>Russian</b-dropdown-item>
-              <b-dropdown-item>Spanish</b-dropdown-item>
-            </b-dropdown>
-          </li> -->
+          <li class="nav-item nav-item-language">
+            <b-form-select
+              v-model="selectedLanguage"
+              :options="languages"
+              @input="changeLanguage"
+            >
+            </b-form-select>
+          </li>
         </ul>
       </div>
     </nav>
@@ -122,7 +155,17 @@ export default {
   name: 'app',
 
   data () {
-    return {}
+    return {
+      selectedLanguage: 'en',
+      languages: [
+        { value: 'en', text: 'English' },
+        { value: 'ru', text: 'русский' },
+        { value: 'ch', text: '中文' },
+        { value: 'ge', text: 'Deutsche' },
+        { value: 'ja', text: '日本語' },
+        { value: 'ko', text: '한국어' }
+      ]
+    }
   },
 
   components: {
@@ -138,6 +181,9 @@ export default {
   computed: {
     showGetNotifiedModal () {
       return this.$store.state.showGetNotifiedModal
+    },
+    language () {
+      return this.$store.state.language
     }
   },
 
@@ -148,6 +194,9 @@ export default {
 
     socialMediaClick (media, location) {
       appAnalytics.socialMediaClick(media, location)
+    },
+    changeLanguage () {
+      this.$store.commit('setLanguage', this.selectedLanguage)
     }
   }
 }
@@ -160,6 +209,18 @@ export default {
 #sub-nav {
   width:100%;
   z-index:3;
+
+  #sub-nav--toggle {
+    display: flex;
+    align-items: center;
+  }
+
+  .ml-auto.nav.navbar-nav.nav-right.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 240px;
+  }
 
   .navbar-brand img {
     max-width: 30px;
@@ -200,25 +261,29 @@ export default {
         }
       }
     }
+
+    .social-icon .nav-link img {
+      width: 29px;
+      height: 29px;
+      margin-bottom: 2px;
+    }
+
     .social-icon .nav-link:hover {
       background-color: transparent;
     }
 
-    .nav-item-language .nav-link {
-      &:hover {
-        background-color: transparent;
+    .nav-item.nav-item-language {
+      padding: 17px 0;
+      width: 115px;
+      margin-left: 5px;
+
+      select.form-control.custom-select {
+        border: 1px solid #fff;
+        height:29px;
+        font-size: 13px;
       }
+
     }
-  }
-}
-
-.navbar .nav-item.nav-item-language {
-  &:hover {
-    background-color:transparent;
-  }
-  .nav-link {
-    padding: 0;
-
   }
 }
 

@@ -21,10 +21,29 @@
           </div>
           <!-- <div v-show="!submitted"> -->
             <h2 class="text-color--matryx-blue">
-              Thank you for subscribing
+              <span v-if=" language === 'ru' ">Спасибо, что подписались</span>
+      				<span v-else-if=" language === 'ch' ">感谢订阅</span>
+      				<span v-else-if=" language === 'ge' ">Danke fürs Abonnieren</span>
+      				<span v-else-if=" language === 'ja' ">ご購読いただきありがとうございます</span>
+      				<span v-else-if=" language === 'ko' ">구독해 주셔서 감사합니다</span>
+      				<span v-else>Thank you for subscribing</span>
             </h2>
-            <p>Token distribution is done on a first-come, first-serve basis. Please select the value of MTX you wish you purchase:</p>
-            <p v-show="noIntendedAmount" class="warn">Please select a value</p>
+            <p>
+              <span v-if=" language === 'ru' ">Токены распределяются в порядке очереди. Пожалуйста, выберите, сколько MTX вы планируете купить:</span>
+      				<span v-else-if=" language === 'ch' ">代金券以先到先得的原则分发，请选择你计划购买的 MXT 的价值：</span>
+      				<span v-else-if=" language === 'ge' ">Die Ausgabe der Tokens erfolgt nach dem Windhundverfahren. Bitte wählen Sie den MTX-Betrag, den Sie kaufen wollen:</span>
+      				<span v-else-if=" language === 'ja' ">トークン配布は先着順に行われます。 購入ご希望のMTXの値を選択してください:</span>
+      				<span v-else-if=" language === 'ko' ">토큰의 배분은 선착순으로 이루어집니다. 구매하려고 하시는 MTX의 액수를 선택해 주세요:</span>
+      				<span v-else>Token distribution is done on a first-come, first-serve basis. Please select the value of MTX you plan to purchase:</span>
+            </p>
+            <p v-show="noIntendedAmount" class="warn">
+              <span v-if=" language === 'ru' ">необходимые</span>
+      				<span v-else-if=" language === 'ch' ">需要</span>
+      				<span v-else-if=" language === 'ge' ">Erforderlich</span>
+      				<span v-else-if=" language === 'ja' ">必修</span>
+      				<span v-else-if=" language === 'ko' ">필수의</span>
+      				<span v-else>Please select a value</span>
+            </p>
 
             <form>
               <div v-for="(amt, index) in amounts">
@@ -37,10 +56,19 @@
                   <label :for="index"><span></span>{{ amt.display }} ETH</label>
                 <br>
               </div>
-              <input type="submit"
+              <!-- <input type="submit"
                 text="Submit"
                 @click.prevent="handleSubmit"
-              >
+              > -->
+              <button type="submit"
+                @click.prevent="handleSubmit">
+                <span v-if=" language === 'ru' ">Отправить</span>
+        				<span v-else-if=" language === 'ch' ">提交</span>
+        				<span v-else-if=" language === 'ge' ">Absenden</span>
+        				<span v-else-if=" language === 'ja' ">送信</span>
+        				<span v-else-if=" language === 'ko' ">제출</span>
+        				<span v-else>Submit</span>
+              </button>
             </form>
           </div>
         </div>
@@ -83,6 +111,9 @@ export default {
     },
     email () {
       return this.$store.state.email
+    },
+    language () {
+      return this.$store.state.language
     }
   },
 

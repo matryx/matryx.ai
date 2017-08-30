@@ -2,9 +2,21 @@
   <section :class="{ 'grey-bkg': greyBkg, 'white': white, 'white-bkg':whiteBkg, 'bkg-footer':footerBkg, 'blueBkg': blueBkg}" class="cta-banner">
     <div class="cta content-container content-container--large">
       <h4 class="cta__main text-color--matryx-blue">
-        Join the Token Sale
+        <span v-if=" language === 'ru' ">Присоединяйтесь к продаже токенов</span>
+      	<span v-else-if=" language === 'ch' ">加入代币销售</span>
+      	<span v-else-if=" language === 'ge' ">Nehmen Sie am Token-Verkauf teil</span>
+      	<span v-else-if=" language === 'ja' ">トークンセールに参加</span>
+      	<span v-else-if=" language === 'ko' ">토큰 판매에 참여하세요</span>
+      	<span v-else>Join the Token Sale</span>
       </h4>
-      <h6 :class="{ 'lighter-text':lighterText  }" class="cta__desc text-color--matryx-dark-grey">Enter your email address to stay updated on the token sale launch</h6>
+      <h6 :class="{ 'lighter-text':lighterText  }" class="cta__desc text-color--matryx-dark-grey">
+        <span v-if=" language === 'ru' ">Введите свой адрес электронной почты, чтобы оставаться в курсе новостей о начале продажи токенов</span>
+      	<span v-else-if=" language === 'ch' ">输入您的电子邮件地址，以便在代币销售投放市场保持更新</span>
+      	<span v-else-if=" language === 'ge' ">Geben Sie Ihre E-Mail-Adresse ein, um über den Start des Token-Verkaufs auf dem Laufenden zu bleiben.</span>
+      	<span v-else-if=" language === 'ja' ">電子メールアドレスを入力して、トークンセールの開始時にすぐ通知を受けてください</span>
+      	<span v-else-if=" language === 'ko' ">귀하의 이메일 주소를 입력하시고 토큰 판매의 런칭에 대한 최신 알림을 받으세요.</span>
+      	<span v-else>Enter your email address to stay updated on the token sale launch</span>
+      </h6>
       <Get-Notified  :ctaLocation="ctaLocation">
       </Get-Notified>
     </div>
@@ -27,6 +39,11 @@ export default {
     lighterText: Boolean,
     ctaLocation: String,
     blueBkg: Boolean
+  },
+  computed: {
+    language () {
+      return this.$store.state.language
+    }
   }
 }
 </script>

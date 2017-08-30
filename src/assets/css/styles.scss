@@ -144,6 +144,12 @@ button { font-family: 'Roboto Medium', Helvetica, sans-serif;
 h1.cd-headline.clip {
   line-height: 90px;
 }
+/*line break for inline styles -> need for translations*/
+.line-break {
+  display:block;
+  line-height: 0;
+  height: 0;
+}
 /*text styles*/
 .text-color {
   &--black {color: $deep-black;}
