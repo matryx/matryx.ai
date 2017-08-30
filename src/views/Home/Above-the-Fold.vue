@@ -216,15 +216,15 @@ section.above-the-fold {
 
 
 /*----- MEDIA QUERIES -----*/
-@media screen and (min-width: 1400px) {
-  section.above-the-fold {
-    padding-bottom: 50px;
-  }
-}
-
 @media screen and (min-width: 1690px) {
   section.above-the-fold {
     padding-bottom: 220px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  section.above-the-fold {
+    padding-bottom: 50px;
   }
 }
 
