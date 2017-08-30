@@ -9,9 +9,16 @@
 
 <script>
 export default {
-  name: 'error-page'
+  name: 'ErrorPage',
+  beforeRouteEnter (to, from, next) {
+    document.title = '(╯°□°)╯︵ ┻━┻'
+    next()
+  },
+  beforeRouteLeave (to, from, next) {
+    document.title = 'Matryx.ai'
+    next()
+  }
 }
-document.title = '(╯°□°)╯︵ ┻━┻'
 </script>
 
 <style media="screen">
@@ -35,17 +42,17 @@ document.title = '(╯°□°)╯︵ ┻━┻'
 
 .error__content__body{
 	font-size: 24px;
-	padding: 50px 0px 10px 0px; 
+	padding: 50px 0px 10px 0px;
 }
 
 @media screen and (max-width: 850px) {
-	.error__content__title{	
+	.error__content__title{
 		font-size: 50px;
 	}
 }
 
 @media screen and (max-width: 500px) {
-	.error__content__title{	
+	.error__content__title{
 		font-size: 50px;
 	}
 
