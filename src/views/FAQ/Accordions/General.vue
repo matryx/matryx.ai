@@ -39,7 +39,7 @@
 
 <script>
   export default {
-    name: 'FAQ-GENERAL',
+    name: 'FAQ-General',
 
     mounted () {
       console.log('hello')

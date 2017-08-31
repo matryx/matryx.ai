@@ -1,6 +1,6 @@
 <template>
   <div id="help1" class="faq__accordion">
-    <span class="icon"><img src="../../assets/icons/icon-Contact.svg" alt=""></span>
+    <span class="icon"><img src="../../../assets/icons/icon-Contact.svg" alt=""></span>
     <h1>Contact</h1>
     <p>info here</p>
 
@@ -14,6 +14,6 @@
 
 <script>
   export default {
-    name: 'FAQ-CONTACT'
+    name: 'FAQ-Contact'
   }
 </script>

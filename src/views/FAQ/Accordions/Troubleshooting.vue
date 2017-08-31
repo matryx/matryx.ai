@@ -1,6 +1,6 @@
 <template>
   <div id="help2" class="faq__accordion">
-    <span class="icon"><img src="../../assets/icons/icon-Troubleshooting.svg" alt=""></span>
+    <span class="icon"><img src="../../../assets/icons/icon-Troubleshooting.svg" alt=""></span>
     <h1>Troubleshooting</h1>
     <b-btn class="faq__accordion__btn" block v-b-toggle.help1-accordion-1>Section 1 Question 1
       <span class="accordion-toggle__circle"></span>

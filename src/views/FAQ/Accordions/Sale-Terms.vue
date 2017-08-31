@@ -1,8 +1,7 @@
 <template>
-  <div id="help2" class="faq__accordion">
-    <!--  question -->
-    <span class="icon"><img src="../../assets/icons/icon-Token.svg" alt=""></span>
-    <h1>Token Issuance Program</h1>
+  <div id="help1" class="faq__accordion">
+    <span class="icon"><img src="../../../assets/icons/icon-Termsofsale.svg" alt=""></span>
+    <h1>Terms Of Sale</h1>
     <b-btn class="faq__accordion__btn" block v-b-toggle.help1-accordion-1>Section 1 Question 1
       <span class="accordion-toggle__circle"></span>
       <span class="accordion-toggle__plus icon-bar"></span>
@@ -31,16 +30,17 @@
         Est dico assum sanctus at, at autem ornatus sapientem qui. Ne duo eleifend oportere splendide, sale tamquam perfecto an mel. Ex usu choro labitur. Duo no probo civibus indoctum. Sea veri dicit omnes eu, vel an mundi assentior, pri albucius voluptatum id.
       </b-card>
     </b-collapse>
-    <!-- question -->
+
   </div>
 </template>
 
-<style media="screen" lang="scss">
+<style lang="scss">
 @import '../../../assets/css/styles.scss';
+
 </style>
 
 <script>
   export default {
-    name: 'FAQ-TIP'
+    name: 'FAQ-SaleTerms'
   }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="question-answer">
     <b-btn class="faq__accordion__btn" block v-b-toggle="cssId"
-      @click.prevent="setID">
+      @click.prevent="changeRoute(cssId)">
       {{ question }}
       <span class="accordion-toggle__circle"></span>
       <span class="accordion-toggle__plus icon-bar"></span>
@@ -37,12 +37,9 @@ export default {
     },
     visible: {
       type: Boolean
-    }
-  },
-
-  methods: {
-    setID () {
-      this.$router.push({ path: `/faq/about/${this.cssId}` })
+    },
+    changeRoute: {
+      type: Function
     }
   }
 }

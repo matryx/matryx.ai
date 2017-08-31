@@ -4,48 +4,84 @@ import Home from '@/views/Home/index'
 import FAQ from '@/views/FAQ/index'
 import TokenSale from '@/views/TokenSale/index'
 
-// import Accordion from '@/views/FAQ/Accordion'
 import About from '@/views/FAQ/Accordions/About'
+import AboutQAs from '@/views/FAQ/Accordions/About-QAs'
+import Contact from '@/views/FAQ/Accordions/Contact'
 import General from '@/views/FAQ/Accordions/GeneralFAQS'
-// import Question from '@/views/FAQ/Accordion-Question'
+import Presale from '@/views/FAQ/Accordions/Presale'
+import SaleTerms from '@/views/FAQ/Accordions/Sale-Terms'
+import TokenSaleFAQs from '@/views/FAQ/Accordions/Token-Sale'
+import Troubleshooting from '@/views/FAQ/Accordions/Troubleshooting'
+import Wallet from '@/views/FAQ/Accordions/Wallet'
+
 import ErrorPage from '@/views/ErrorPage'
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  scrollBehavior (to, from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition
-    } else {
-      return { x: 0, y: 0 }
-    }
-  },
   routes: [
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      scrollBehavior (to, from, savedPosition) {
+        if (savedPosition) {
+          return savedPosition
+        } else {
+          return { x: 0, y: 0 }
+        }
+      }
     },
     {
-      path: '/faq/:accordion',
+      path: '/faq',
+      redirect: '/faq/about/who-is-matryx'
+    },
+    {
+      path: '/faq/about',
+      redirect: '/faq/about/who-is-matryx'
+    },
+    {
+      path: '/faq',
       // no worky
       // redirect: '/faq/about/who-is-matryx',
       component: FAQ,
       children: [
         {
-          path: ':question',
-          component: About
-          // children: [
-          //   {
-          //     path: 'who-is-matryx',
-          //     component: Accordion
-          //   }
-          // ]
+          path: 'about',
+          component: About,
+          children: [{
+            path: ':question',
+            component: AboutQAs
+          }]
         },
         {
-          path: ':question',
+          path: 'contact',
+          component: Contact
+        },
+        {
+          path: 'general',
           component: General
+        },
+        {
+          path: 'presale',
+          component: Presale
+        },
+        {
+          path: 'saleterms',
+          component: SaleTerms
+        },
+        {
+          path: 'tokensale',
+          component: TokenSaleFAQs
+        },
+        {
+          path: 'troubleshooting',
+          component: Troubleshooting
+        },
+        {
+          path: 'wallet',
+          component: Wallet
         }
       ]
     },
@@ -58,10 +94,6 @@ export default new Router({
       path: '/404',
       name: 'ErrorPage',
       component: ErrorPage
-    },
-    {
-      path: '/faq',
-      redirect: '/faq/about'
     }
     // {
     //   path: '*',
