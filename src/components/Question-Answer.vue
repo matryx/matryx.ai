@@ -3,7 +3,7 @@
     <b-btn class="faq__accordion__btn"
       block
       v-b-toggle="cssId"
-      @click.prevent="changeRoute(cssId)"
+      @click.prevent="changeRoute"
     >
       <slot name="question"></slot>
 
@@ -32,34 +32,36 @@ export default {
   props: {
     cssId: {
       type: String
-    },
-    visible: {
-      type: Boolean,
-      default: false
+    }
+  },
+
+  data () {
+    return {
+      visible: false
     }
   },
 
   methods: {
-    changeRoute (cssId) {
+    changeRoute () {
       const split = this.$route.path.split('/')
       const path = split[split.length - 2]
-      this.$router.push({ path: `/faq/${path}/${cssId}` })
+      this.$router.push({ path: `/faq/${path}/${this.cssId}` })
+    },
+
+    updateRoute (question) {
+      if (this.cssId === question) {
+        this.visible = true
+      }
     }
   },
 
   mounted () {
-    updateRoute(this, this.$route.params.question)
+    this.updateRoute(this.$route.params.question)
   },
 
   afterRouteUpdate (to, from, next) {
-    updateRoute(this, to.params.question)
+    this.updateRoute(to.params.question)
     next()
-  }
-}
-
-function updateRoute (vm, question) {
-  if (vm.cssId === question) {
-    vm.visible = true
   }
 }
 </script>
