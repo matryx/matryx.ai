@@ -6,7 +6,8 @@ import TokenSale from '@/views/TokenSale/index'
 
 // import Accordion from '@/views/FAQ/Accordion'
 import About from '@/views/FAQ/Accordions/About'
-import Question from '@/views/FAQ/Accordion-Question'
+import General from '@/views/FAQ/Accordions/GeneralFAQS'
+// import Question from '@/views/FAQ/Accordion-Question'
 import ErrorPage from '@/views/ErrorPage'
 
 Vue.use(Router)
@@ -33,14 +34,18 @@ export default new Router({
       component: FAQ,
       children: [
         {
-          path: '',
-          component: About,
-          children: [
-            {
-              path: '',
-              component: Question
-            }
-          ]
+          path: ':question',
+          component: About
+          // children: [
+          //   {
+          //     path: 'who-is-matryx',
+          //     component: Accordion
+          //   }
+          // ]
+        },
+        {
+          path: ':question',
+          component: General
         }
       ]
     },
@@ -55,8 +60,12 @@ export default new Router({
       component: ErrorPage
     },
     {
-      path: '*',
-      redirect: '/404'
+      path: '/faq',
+      redirect: '/faq/about'
     }
+    // {
+    //   path: '*',
+    //   redirect: '/404'
+    // }
   ]
 })
