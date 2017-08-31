@@ -12,12 +12,15 @@
         </h1>
         <p class="lead ">
           <span v-if=" language === 'ru' ">Окажитесь в центре событий. Введите ваш адрес электронной почты, чтобы получать уведомления о начале нашей продажи токенов.</span>
-          <span v-else-if=" language === 'ch' ">加入行动。输入您的电子邮箱，以便当我们的代币销售启动时接收通知。</span>
+          <span v-else-if=" language === 'ch' ">
+            加入行动。输入您的电子邮箱，以便收到代币销售的相关更新。
+          </span>
           <span v-else-if=" language === 'ge' ">Seien Sie dabei. Geben Sie Ihre E-Mail ein, um zum Start unseres Token-Verkaufs benachrichtigt zu werden.</span>
-          <span v-else-if=" language === 'ja' ">アクションに参加してください。電子メールを入力して、トークンセールが開始されたときに通知を受けてください。</span>
+          <span v-else-if=" language === 'ja' ">
+            アクションに参加してください。電子メールを入力して、トークンセールが開始されたときに通知を受けてください。
+          </span>
           <span v-else-if=" language === 'ko' ">수익활동에 참여하세요. 귀하의 이메일을 입력하시고 저희 토큰 판매의 런칭에 대한 알림을 받으세요.</span>
-          <span v-else>Join in on the action. Enter your email to be notified when our
-          token sale launches.</span>
+          <span v-else>Join in on the action. Enter your email to be notified when our token sale launches.</span>
         </p>
         <Countdown></Countdown>
         <Get-Notified ctaLocation="Above the Fold"></Get-Notified>
