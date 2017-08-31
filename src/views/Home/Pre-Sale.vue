@@ -116,7 +116,7 @@ export default {
         },
         {
           img: upto50,
-          text: 'Up to 50% of Total Sale Cap Alloted for Pre-Sale'
+          text: 'Up to 50% of Total Sale Cap Allotted for Pre-Sale'
         }
       ],
       iconsRussian: [

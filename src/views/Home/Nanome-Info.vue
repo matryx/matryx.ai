@@ -4,7 +4,7 @@
       <div class="nanome__info">
         <h2 class="nanome__info__title">
           <span v-if=" language === 'ru' ">Создано командой в Nanome</span>
-        	<span v-else-if=" language === 'ch' ">由 Nanome 的团队构建</span>
+        	<span v-else-if=" language === 'ch' ">由 Nanome团队构建</span>
         	<span v-else-if=" language === 'ge' ">Erstellt vom Nanome-Team</span>
         	<span v-else-if=" language === 'ja' ">Nanomeのチームによる構築</span>
         	<span v-else-if=" language === 'ko' ">Nanome의 팀에 의해 제작</span>
@@ -12,7 +12,7 @@
         </h2>
         <div class="nanome__info__text text-color--matryx-dark-grey">
           <span v-if=" language === 'ru' ">Nanome создает интеллектуальные интерфейсы виртуальной реальности, которые позволяют ученым и инженерам совместно работать, проектировать и моделировать с точностью до наноразмеров. Наша программа помогает продвигать исследования и разработки в биологических науках, материаловедении и наноинженерии путем интеграции практического интерфейса виртуальной реальности с облачными вычислениями.</span>
-        	<span v-else-if=" language === 'ch' ">Nanome 构建智能虚拟现实界面，使科学家和工程师能够合作、设计和模拟纳米级精度。我们的软件利用云计算来整合亲身实践的虚拟现实界面，进而帮助推动生命科学、材料科学和纳米工程的研究和发展。</span>
+        	<span v-else-if=" language === 'ch' ">Nanome 构建智能虚拟现实界面，使科学家和工程师能够在纳米级精度下进行合作、设计和模拟。我们的软件利用云计算来整合身临其境的虚拟现实界面，进而帮助推动生命科学、材料科学和纳米工程的研究和发展。</span>
         	<span v-else-if=" language === 'ge' ">Nanome erstellt intelligente Virtual-Reality-Interfaces, die Wissenschaftlern und Ingenieuren eine Zusammenarbeit, Konzeption und Simulation mit Präzision im Nanomaßstab ermöglichen. Unsere Software fördert den Fortschritt von Forschung und Entwicklung in Biowissenschaften, Materialwissenschaften und Nanotechnik durch die Kombination eines interaktiven Virtual-Reality-Interfaces mit Cloud Computing.</span>
         	<span v-else-if=" language === 'ja' ">Nanomeはインテリジェントなバーチャルリアリティインターフェイスを構築し、科学者とエンジニアがナノスケールの精度で協力、設計、シミュレーションを行うことを可能にしています。当社のソフトウェアは、実践的なバーチャルリアリティインターフェースとクラウドコンピューティングを統合することにより、ライフサイエンス、材料科学、ナノエンジニアリングの研究開発を進める上で役立ちます。</span>
         	<span v-else-if=" language === 'ko' ">Nanome은 과학자들과 엔지니어들이 나노 수준의 정밀도로 협력 및 디자인하고 시뮬레이션을 할 수 있도록 해주는 지능형 가상현실 인터페이스를 제작하고 있습니다. 저희 소프트웨어는 직접 조작하는 가상현실 인터페이스와 클라우드 컴퓨팅의 통합을 통해 생명과학, 재료과학, 나노엔지니어링 분야에서의 연구와 개발을 지원하고 있습니다.</span>
@@ -30,7 +30,7 @@
         </h3>
         <p>
           <span v-if=" language === 'ru' ">Доступно на <a href="http://store.steampowered.com/app/493430/nanoone/" target="_blank">Steam</a> и <a href="http://calcflow.io/" target="_blank">Oculus</a></span>
-        	<span v-else-if=" language === 'ch' ">可用于 <a href="http://store.steampowered.com/app/493430/nanoone/" target="_blank">Steam</a> 和 <a href="http://calcflow.io/" target="_blank">Oculus</a></span>
+        	<span v-else-if=" language === 'ch' ">已登陆 <a href="http://store.steampowered.com/app/493430/nanoone/" target="_blank">Steam</a> 和 <a href="http://calcflow.io/" target="_blank">Oculus</a> 平台</span>
         	<span v-else-if=" language === 'ge' ">Verfügbar auf <a href="http://store.steampowered.com/app/493430/nanoone/" target="_blank">Steam</a> und <a href="http://calcflow.io/" target="_blank">Oculus</a></span>
         	<span v-else-if=" language === 'ja' ">スチーム (<a href="http://store.steampowered.com/app/493430/nanoone/" target="_blank">Steam</a>) とオクラルス (<a href="http://calcflow.io/" target="_blank">Oculus</a>) で利用可能</span>
         	<span v-else-if=" language === 'ko' "><a href="http://store.steampowered.com/app/493430/nanoone/" target="_blank">Steam</a> 및 <a href="http://calcflow.io/" target="_blank">Oculus에서</a> 이용가능</span>

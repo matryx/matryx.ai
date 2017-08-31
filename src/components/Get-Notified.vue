@@ -10,21 +10,45 @@
         :class="{ 'purple-btn': purpleBkg }"
         @click.prevent="getNotified"
       >
-        <span class="russian" v-if=" language === 'ru' ">ПОЛУЧАЙТЕ <span class="line-break"></span> УВЕДОМЛЕНИЯ</span>
-        <span v-else-if=" language === 'ch' ">接收通知</span>
-        <span class="german" v-else-if=" language === 'ge' ">MICH BENACHRICHTIGEN</span>
-        <span v-else-if=" language === 'ja' ">通知を受ける</span>
-        <span v-else-if=" language === 'ko' ">알림을 받으세요</span>
-        <span v-else>Get Notified</span>
+        <span class="russian" v-if=" language === 'ru' ">
+          ПОЛУЧАЙТЕ <span class="line-break"></span> УВЕДОМЛЕНИЯ
+        </span>
+        <span v-else-if=" language === 'ch' ">
+          接收通知
+        </span>
+        <span class="german" v-else-if=" language === 'ge' ">
+          MICH BENACHRICHTIGEN
+        </span>
+        <span v-else-if=" language === 'ja' ">
+          通知を受ける
+        </span>
+        <span v-else-if=" language === 'ko' ">
+          알림을 받으세요
+        </span>
+        <span v-else>
+          Get Notified
+        </span>
       </button>
     </b-form>
     <p class="warn" v-show="showEmailWarning">
-      <span v-if=" language === 'ru' ">Пожалуйста, введите верный адрес эл. почты</span>
-				<span v-else-if=" language === 'ch' ">请输入有效的电子邮箱地址</span>
-				<span v-else-if=" language === 'ge' ">Bitte geben Sie eine gültige E-Mail-Adresse ein</span>
-				<span v-else-if=" language === 'ja' ">有効なメールアドレスを入力してください</span>
-				<span v-else-if=" language === 'ko' ">유효한 이메일 주소를 입력해 주세요</span>
-				<span v-else>Please enter a valid email address</span>
+      <span v-if=" language === 'ru' ">
+        Пожалуйста, введите верный адрес эл. почты
+      </span>
+			<span v-else-if=" language === 'ch' ">
+        请输入有效的电子邮箱地址
+      </span>
+			<span v-else-if=" language === 'ge' ">
+        Bitte geben Sie eine gültige E-Mail-Adresse ein
+      </span>
+			<span v-else-if=" language === 'ja' ">
+        有効なメールアドレスを入力してください
+      </span>
+			<span v-else-if=" language === 'ko' ">
+        유효한 이메일 주소를 입력해 주세요
+      </span>
+			<span v-else>
+        Please enter a valid email address
+      </span>
     </p>
 
     <div class="spinner-container" v-show="showSpinner">
