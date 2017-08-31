@@ -48,7 +48,7 @@
 </template>
 
 <script>
-const end = 'September 13 2017 09:00:00 GMT+0700'
+const end = 'September 13 2017 15:00:00 UTC'
 
 export default {
   name: 'Countdown',
