@@ -13,4 +13,3 @@ export default {
   name: 'FAQ-Token-Sale'
 }
 </script>
-

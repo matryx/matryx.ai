@@ -1,30 +1,23 @@
 <template>
   <div id="tokensale-faq" class="faq__accordion">
-    <QA cssId="who-is-matryx":visible="true">
+    <QA cssId="when-will-I-receive-my-mtx">
       <span slot="question">
-        A <a href="/">link</a>
+        When will I receive my MTX?
       </span>
-      <span slot="answer">
-        Blah blah blah<br><br>blahblahbalhba
-      </span>
+      <p slot="answer">
+        MTX tokens will be distributed no later than October 11, 2017.
+        <br/><br/>
+        Different wallets observe token contracts in different ways. Refer to your preferred wallet’s official documentation. In most popular wallets, the token should appear automatically. If not, you may need to add the token manually to your wallet.
+      </p>
     </QA>
 
-    <QA cssId="how-does-matryx-work">
+    <QA cssId="will-matryx-accept-fiat">
       <span slot="question">
-        How does Matryx Work?
+        Will Matryx accept fiat payment during the token sale?
       </span>
-      <span slot="answer">
-        It just works
-      </span>
-    </QA>
-
-    <QA cssId="what-currency-can-I-use">
-      <span slot="question">
-        What Currency Can I Use?
-      </span>
-      <span slot="answer">
-        You can use ETH
-      </span>
+      <p slot="answer">
+        Matryx is a blockchain platform native to digital currency. We will only accept ETH.
+      </p>
     </QA>
   </div>
 </template>
@@ -40,3 +33,16 @@ export default {
 
 <style lang="scss">
 </style>
+
+<!--
+
+<QA cssId="why-use-a-blockchain">
+  <span slot="question">
+    Why use a blockchain?
+  </span>
+  <p slot="answer">
+    Blah blah blah<br><br>blahblahbalhba
+  </p>
+</QA>
+
+ -->
