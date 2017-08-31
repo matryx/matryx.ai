@@ -1,9 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Home from '@/views/Home/index'
-import FAQ from '@/views/FAQ/index'
-import TokenSale from '@/views/TokenSale/index'
+import Home from '@/views/Home'
+import FAQ from '@/views/FAQ'
 
 import About from '@/views/FAQ/About'
 import AboutQAs from '@/views/FAQ/About-QAs'
@@ -132,11 +131,6 @@ export default new Router({
           }]
         }
       ]
-    },
-    {
-      path: '/tokensale',
-      name: 'TokenSale',
-      component: TokenSale
     },
     {
       path: '/404',
