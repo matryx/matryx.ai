@@ -11,7 +11,7 @@
       </h2>
       <p class="content-container--medium">
         <span v-if=" language === 'ru' ">Система вознаграждений Matryx призвана ускорить процесс инноваций и вознаградить всех пользователей, которые вносят свой вклад. Вознаграждение — это просто задача, опубликованная на платформе со справедливым вознаграждением MTX для пользователей, которые вносят вклад в ответ. Любой пользователь может разместить вознаграждение для сообщества Matryx и принять участие в решении задачи.</span>
-				<span v-else-if=" language === 'ch' ">Matryx 奖励金制度旨在加速创新并奖励所有作出贡献的用户。奖励金只是一个被发布到平台的挑战，对促成答案的用户给予公平的 MTX 奖励。任何用户均可发布奖励金到 Matryx 社区，任何用户均可参与。</span>
+				<span v-else-if=" language === 'ch' ">Matryx 赏金制度旨在加速创新并奖励所有作出贡献的用户。赏金只是一个被发布到平台的挑战，对促成答案的用户给予公平的 MTX 奖励。任何用户均可发布赏金到 Matryx 社区，任何用户均可参与。</span>
 				<span v-else-if=" language === 'ge' ">Ziel des Bounty-Systems von Matryx ist es, Innovation zu beschleunigen und alle mitwirkenden Nutzer zu belohnen. Eine Belohnung ist schlichtweg eine auf der Plattform gepostete Aufgabe mitsamt einer fairen MTX-Vergütung für Nutzer, die zur Lösung beitragen. Jeder Nutzer kann Belohnungen in der Matryx-Community posten und jeder Nutzer kann teilnehmen.</span>
 				<span v-else-if=" language === 'ja' ">Matryxの報奨システムは、イノベーションを加速し、貢献するすべてのユーザーに報酬を与えることを目指しています。報奨金は、答えに貢献するユーザーに対し、公平なMTX報酬でプラットフォームに掲示された挑戦でしかありません。どのユーザーもMatryxコミュニティに報奨金を掲示でき、どのユーザーでも参加できます。</span>
 				<span v-else-if=" language === 'ko' ">Matryx 포상 제도는 더 빠른 혁신은 물론 기여한 모든 이용자들에게 보상해주는 것을 목적으로 하고 있습니다. 포상금이란 간단히 말해서 해결책에 기여를 한 이용자들을 위한 적절한 액수의 MTX 보상과 함께 플랫폼 상에서 게시된 챌린지를 지칭합니다. 이용자 중 누구라도 Matryx 커뮤니티에서 포상금을 게시할 수 있으며 이용자 중 누구라도 참여할 수 있습니다.</span>
@@ -33,7 +33,7 @@
               <span>1</span>
               <h4>
                 <span v-if=" language === 'ru' ">Опубликовано вознаграждение</span>
-        				<span v-else-if=" language === 'ch' ">发布奖励金</span>
+        				<span v-else-if=" language === 'ch' ">发布赏金</span>
         				<span v-else-if=" language === 'ge' ">Belohnung wird gepostet</span>
         				<span v-else-if=" language === 'ja' ">報奨金が掲示される</span>
         				<span v-else-if=" language === 'ko' ">포상금이 게시됩니다</span>
@@ -41,7 +41,7 @@
               </h4>
               <p>
                 <span v-if=" language === 'ru' ">Маршалл запрашивает 3D-модель космического корабля и размещает вознаграждение</span>
-        				<span v-else-if=" language === 'ch' ">马歇尔请求 3D 宇宙飞船模型并发布奖励金</span>
+        				<span v-else-if=" language === 'ch' ">马歇尔请求设计 3D 宇宙飞船模型并发布赏金</span>
         				<span v-else-if=" language === 'ge' ">Marshall stellt eine Anfrage für ein 3D-Raumschiffmodell und postet eine Belohnung</span>
         				<span v-else-if=" language === 'ja' ">Marshallが3Dの宇宙探査機モデルを要求し、報奨金を掲示する</span>
         				<span v-else-if=" language === 'ko' ">Marshall이 3D 우주선 모델링을 게시하면서 포상금을 게시합니다</span>
@@ -60,7 +60,7 @@
               </h4>
               <p>
                 <span v-if=" language === 'ru' ">Два пользователя представили свои лучшие модели космического корабля. Маршаллу нравится дизайн, и он запрашивает раунд пересмотра у сообщества.</span>
-        				<span v-else-if=" language === 'ch' ">两位用户提交他们最好的宇宙飞船模型。马歇尔喜欢某个设计，请求社区进行一轮修正。</span>
+        				<span v-else-if=" language === 'ch' ">两位用户提交他们最好的宇宙飞船模型。马歇尔喜欢其中一个设计，请求matryx社区进行一轮修正。</span>
         				<span v-else-if=" language === 'ge' ">Zwei Nutzer reichen ihre besten Raumschiffmodelle ein. Marshall gefällt einer der Entwürfe und er bittet die Community um eine Überarbeitungsrunde.</span>
         				<span v-else-if=" language === 'ja' ">2人のユーザーが自己最高の宇宙探査機モデルを提出する。Marshallはその中の1つのデザインが気に入り、コミュニティからの改訂を要請する。</span>
         				<span v-else-if=" language === 'ko' ">2명의 이용자들이 자신들의 최고의 우주선 모델린 결과물을 제출합니다. Marshal은 그 중 마음에 드는 한가지 결과물을 커뮤니티에 1회의 수정을 요청합니다.</span>
@@ -80,7 +80,7 @@
               </h4>
               <p>
                 <span v-if=" language === 'ru' ">Два новых пользователя берут предпочтительные дизайны Маршалла и выполняют их «ремикс». Маршалл выбирает победителя и смарт-контракт распределяет MTX среди всех соавторов.</span>
-        				<span v-else-if=" language === 'ch' ">两位新用户采用马歇尔最喜爱的设计并进行“重新混合”。马歇尔选择一个获胜者，同时智能合同将 MTX 分配给所有贡献者。</span>
+        				<span v-else-if=" language === 'ch' ">两位新用户采用马歇尔最喜爱的设计并进行整合与改进。马歇尔选择一个获胜者，同时智能合同将 MTX 分配给所有贡献者。</span>
         				<span v-else-if=" language === 'ge' ">Zwei neue Nutzer greifen Marshalls favorisierten Entwurf auf und erstellen daraus jeweils einen „Remix”. Marshall wählt einen Sieger aus und ein Smart Contract verteilt MTX an alle Mitwirkenden.</span>
         				<span v-else-if=" language === 'ja' ">2人の新しいユーザーがMarshallが気に入ったデザインを使い、それをリミックスする。マーシャルは勝者を選び、スマートコントラクトがMTXをすべての寄稿者に配布する。</span>
         				<span v-else-if=" language === 'ko' ">2명의 새로운 이용자들이 Marshall의 마음에 드는 디자인을 가지고 재변형 작업을 합니다. Marshall은 우승자를 선정하고 스마트 계약은 MTX를 모든 기여자들에게 배분합니다.</span>

@@ -24,7 +24,7 @@
             <p class="text-color--matryx-dark-grey">
               <span v-if=" language === 'ru' ">Конечная цель Matryx — стимулирование сотрудничества в областях знаний и создание аналога STEM. Для достижения этой цели нам необходимы ресурсы, которые помогут удовлетворить потребности исследований и разработок и создать сообщество участников и доноров. Продажи токенов быстро стали надежным способом достижения такого роста для технологий, основанных на блокчейне, таких как Matryx.
 </span>
-            	<span v-else-if=" language === 'ch' ">Matryx 的终极目标是在知识和创造领域激励合作（例如 STEM）。要达成这一目标，我们需要可支持研发需求、并有助于创建参与者和贡献者社区的资源。代币销售已迅速成为行之有效的手段，可实现基于区块链技术（如 Matryx）的此类增长。</span>
+            	<span v-else-if=" language === 'ch' ">Matryx平台的终极目标是在知识和创新领域激励合作。要达成这一目标，我们需要可支持研发需求、并有助于创建参与者和贡献者社区的资源。代币销售已迅速成为行之有效的手段，可实现Matryx等基于区块链技术的快速成长。</span>
             	<span v-else-if=" language === 'ge' ">Das ultimative Ziel von Matryx besteht darin, Anreize zur Zusammenarbeit in Wissens- und Entwicklungsfeldern wie den MINT-Bereichen zu schaffen. Um dieses Ziel zu erreichen, benötigen wir Ressourcen, die den Anforderungen im Bereich Forschung und Entwicklung gerecht werden und dabei helfen, eine Community aus Teilnehmern und Mitwirkenden zu erschaffen. Token-Verkäufe haben sich rasch zu einem bewährten Mittel entwickelt, um ein solches Wachstum für blockchainbasierte Technologien wie Matryx zu erzielen.</span>
             	<span v-else-if=" language === 'ja' ">Matryxの最終目標は、STEMのような知識と創造の分野におけるコラボレーションを促進することです。その目標を達成するためには、研究開発の要求を支え、参加者と寄稿者のコミュニティを育成するのに役立つリソースが必要です。今やトークンセールは、Matryxのようなブロックチェーンベースのテクノロジーがこのような成長を達成するための確実な手段となっています。</span>
             	<span v-else-if=" language === 'ko' ">Matryx의 궁극적인 목표는 STEM과 같은 지식 및 창조 분야의 협업을 보상을 통해 장려하는 것입니다. 이 목표의 달성을 위해서 R&D 관련 수요에 응하고 참여자와 기여자로 구성된 커뮤니티의 형성을 지원하는 데 어느 정도의 자원이 필요합니다. 최근 토큰 판매는 Matryx와 같은 블록체인 기반 기술의 성장을 달성하는데 있어서 입증된 수단으로 빠르게 자리잡았습니다.</span>
@@ -42,7 +42,7 @@
             </h4>
             <p class="text-color--matryx-dark-grey">
               <span v-if=" language === 'ru' ">Используя вознаграждения, основанные на блокчейне, Matryx позволяет пользователям подтверждать вклад каждого участника в разработку решения и вознаграждать его с помощью токенов MTX. Использование токена позволяет нам использовать системы смарт-контрактов, выполнять обновления с течением времени и адаптировать платформу к потребностям пользователей.</span>
-            	<span v-else-if=" language === 'ch' ">Matryx 利用基于区块链的奖励金，使用户能够验证每位参与者对某个解决方案的贡献度，并用 MTX 代币奖励他们。使用代币使我们能够利用智能合同制度、随时间推移进行升级、并且灵活地塑造平台以满足用户需求。</span>
+            	<span v-else-if=" language === 'ch' ">Matryx 利用基于区块链的赏金，使用户能够验证每位参与者对所有解决方案的贡献度，并用 MTX 代币奖励他们。使用代币使我们能够利用智能合同制度、随时升级、并且灵活地塑造平台以满足用户需求。</span>
             	<span v-else-if=" language === 'ge' ">Mit Hilfe blockchainbasierter Belohnungen ermöglicht es Matryx seinen Nutzern, den Beitrag jedes Teilnehmers zu einer bestimmten Lösung zu validieren und die Person mit MTX-Tokens zu belohnen. Die Nutzung eines Tokens erlaubt es uns, Smart-Contract-Systeme wirksam einzusetzen und mit der Zeit Aufwertungen durchzuführen. Zudem liefert sie uns die nötige Flexibilität, um die Plattform entsprechend den Bedürfnissen der Nutzer zu gestalten.</span>
             	<span v-else-if=" language === 'ja' ">ブロックチェーンベースの報奨を利用するMatryxにより、ユーザーは各参加者のソリューションに対する貢献度を検証し、MTXトークンで報酬を与えることができます。トークンを使用することで、スマートコントラクトシステムを活用し、時間の経過とともにアップグレードし、ユーザーのニーズに合わせてプラットフォームを柔軟に構成することができます。</span>
             	<span v-else-if=" language === 'ko' ">Matryx는 블록체인 기반의 포상 제도를 활용하여 이용자들이 해결책에 대한 각 참여자의 기여도를 확인하고 그것에 대해 MTX 토큰으로 보상할 수 있도록 해줍니다. 토큰의 활용은 스마트 계약 시스템의 활용성 극대화 및 장기간 사용 시의 정기적인 업그레이드를 가능케 함은 물론 이용자들의 수요에 맞춰 플랫폼을 조정할 수 있는 유연성도 확보해 줍니다.</span>
@@ -60,7 +60,7 @@
             </h4>
             <p class="text-color--matryx-dark-grey">
               <span v-if=" language === 'ru' ">Смарт-контракты снижают затраты на отслеживание и вознаграждение соавторов. Победители каждого раунда конкурса для выдачи вознаграждения получают награды, и создается новое поколение «дочерних» решений. Все итерации управляются контрактами турнира. Происхождение идеи или работы можно легко отследить, и за них можно выплатить справедливое и публичное вознаграждение.</span>
-            	<span v-else-if=" language === 'ch' ">智能合同减少了追踪、补偿贡献者所产生的摩擦。在每一轮的奖励金竞争中，都奖励了获胜者，并创造了新一代的儿童。所有迭代均由赛事合同管理。某个创意或工作的起源可以很容易地被追踪，而且可以公平、公开地被赋予奖励。</span>
+            	<span v-else-if=" language === 'ch' ">智能合同减少了追踪和奖励贡献者的阻力。在每一轮的赏金竞争中，贡献者都会获得奖励，新一代问题也会诞生。所有迭代均由智能合同管理。某个创意或答案的起源可以被轻而易取地追寻到，而且可以公平、公开地被赋予相应奖励。</span>
             	<span v-else-if=" language === 'ge' ">Smart Contracts reduzieren die Friktion, die durch Nachverfolgung und Vergütung der Mitwirkenden entsteht. In jeder Runde eines Bounty-Wettbewerbs werden die Sieger belohnt und eine neue Kindergeneration wird erzeugt. Alle Iterationen werden durch die Turnierverträge verwaltet. Der Ursprung einer Idee oder Arbeit kann mühelos nachverfolgt sowie fair und öffentlich belohnt werden.</span>
             	<span v-else-if=" language === 'ja' ">スマートコントラクトは、貢献者を追跡し報酬を与える際の摩擦を軽減します。報奨競争の各ラウンドで、勝者は報酬を受け取り、次の段階を担う新しい後継者達が創造されます。すべての反復はトーナメントコントラクトによって管理され、アイデアや作業の出所が容易に追跡でき、公平かつ公に報酬を受けることができます。</span>
             	<span v-else-if=" language === 'ko' ">스마트 계약은 기여자를 추적하고 그들에게 보상을 해주는 과정에서 발생하는 비효율을 줄여줍니다. 포상금 경쟁전의 각 라운드별 우승자는 그에 대한 보상을 제공받으며 새로운 세대의 사람들이 나타나게 됩니다. 모든 라운드는 토너먼트 계약에 의해 관리됩니다. 아이디어 또는 작업의 출처를 간단히 추적할 수 있으며 이에 대해 공정하고 공개적으로 보상을 해줄 수 있습니다.</span>
@@ -92,7 +92,7 @@
                 </p>
                 <caption>
                   <span v-if=" language === 'ru' ">Первые инструменты STEM для современной ВР</span>
-                	<span v-else-if=" language === 'ch' ">首个现代虚拟现实用 STEM 工具</span>
+                	<span v-else-if=" language === 'ch' ">首个现代用于科学、科技、工程以及数学的虚拟现实软件</span>
                 	<span v-else-if=" language === 'ge' ">Erste MINT-Tools für moderne VR</span>
                 	<span v-else-if=" language === 'ja' ">斬新なVRのための最初のSTEMツール</span>
                 	<span v-else-if=" language === 'ko' ">현대적인 VR을 위한 최초의 STEM 도구</span>
@@ -138,7 +138,7 @@
                   <span v-if=" language === 'ru' ">Ознакомьтесь с технической документацией здесь </span>
                 	<span v-else-if=" language === 'ch' ">在此处阅读白皮书</span>
                 	<span v-else-if=" language === 'ge' ">Lesen Sie das White Paper hie</span>
-                	<span v-else-if=" language === 'ja' ">ホワイトペーパーを読む </span>
+                	<span v-else-if=" language === 'ja' ">ホワイトペーパーを読む</span>
                 	<span v-else-if=" language === 'ko' ">여기에서 백서를 읽어보세요</span>
                 	<span v-else>Read the white paper <a href="/matryx-whitepaper.pdf" target="_blank" @click="whitePaperClick">here</a></span>
                 </caption>
@@ -158,7 +158,7 @@
                 </p>
                 <caption>
                   <span v-if=" language === 'ru' ">Предварительная продажа токенов начинается 6 сентября в 10:00 по Гринвичу (GMT) и допускает покупки на суммы свыше 75 ETH. Период предварительной продажи продолжится одну неделю с 6 по 13 сентября</span>
-                	<span v-else-if=" language === 'ch' ">9 月 6 日格林威治标准时间上午 10 时启动代币预售，购买量超过 75 ETH。预售期将从 9 月 6 日到 9 月 13 日保持开放一周</span>
+                	<span v-else-if=" language === 'ch' ">9 月 6 日格林威治标准时间上午 10 时启动代币预售，最低购买量为 75 ETH。预售期将从 9 月 6 日到 9 月 13 日保持开放一周</span>
                 	<span v-else-if=" language === 'ge' ">Der Token-Vorverkauf beginnt am 6. September um 10 Uhr GMT für Käufe im Wert von über 75 ETH. Der Vorverkauf bleibt eine Woche lang vom 6. bis 13. September geöffnet.</span>
                 	<span v-else-if=" language === 'ja' ">トークンプレセール開始は9月6日午前10時グリニッジ標準時 (GMT) 、75イーサリアム (ETH) 以上の購入が対象。プレセール期間は、9月6日から13日までの1週間。</span>
                 	<span v-else-if=" language === 'ko' ">75 ETH를 초과하는 구매에 대한 토큰 사전판매가 GMT 기준 9월 6일 오전 10시에 시작됩니다. 사전판매 기간은 9월 6일부터 9월 13일까지 1주일간입니다.</span>
@@ -171,7 +171,7 @@
               <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>
                   <span v-if=" language === 'ru' ">Альфа-платформа Matryx</span>
-                	<span v-else-if=" language === 'ch' ">Matryx 平台阿尔法</span>
+                	<span v-else-if=" language === 'ch' ">Matryx 平台Alpha测试</span>
                 	<span v-else-if=" language === 'ge' ">Matryx-Plattform Alpha</span>
                 	<span v-else-if=" language === 'ja' ">Matryxプラットフォームアルファ</span>
                 	<span v-else-if=" language === 'ko' ">Matryx 플랫폼 알파</span>
@@ -193,7 +193,7 @@
               <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>
                   <span v-if=" language === 'ru' ">Альфа-тестовая сеть торговой площадки</span>
-                	<span v-else-if=" language === 'ch' ">市场阿尔法测试网</span>
+                	<span v-else-if=" language === 'ch' ">市场Alpha测试网</span>
                 	<span v-else-if=" language === 'ge' ">Marktplatz Alpha Testnet</span>
                 	<span v-else-if=" language === 'ja' ">マーケットプレイスアルファテストネット (Testnet)</span>
                 	<span v-else-if=" language === 'ko' ">거래소 알파 테스트넷</span>
@@ -201,7 +201,7 @@
                 </p>
                 <caption>
                   <span v-if=" language === 'ru' ">Рабочий MVP для общественного пользования. Расширьте сферу исследования и смоделируйте различные решения атрибуции.</span>
-                	<span v-else-if=" language === 'ch' ">公用的可行 MVP。扩大焦点以研究和模拟各类归因解决方案。</span>
+                	<span v-else-if=" language === 'ch' ">公用,可行的 最简产品。将焦点扩大至研究与构建多种归因解决方案。</span>
                 	<span v-else-if=" language === 'ge' ">Funktionierendes MVP für öffentliche Nutzung. Erweiterung des Schwerpunkts, um eine Vielzahl von Attribution-Lösungen zu erforschen und zu modellieren.</span>
                 	<span v-else-if=" language === 'ja' ">一般向けMVPの使用。様々なアトリビューションソリューションの研究とモデル作成に注力する。</span>
                 	<span v-else-if=" language === 'ko' ">대중 공개용 작동하는 최소기능제품. 다양한 종류의 귀인 솔루션들의 연구 및 모델링을 위해 관심분야를 넓혀보세요.</span>
@@ -214,7 +214,7 @@
               <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>
                   <span v-if=" language === 'ru' ">Бета-версия тестовой сети торговой площадки</span>
-                	<span v-else-if=" language === 'ch' ">市场贝塔测试网</span>
+                	<span v-else-if=" language === 'ch' ">市场Beta测试网</span>
                 	<span v-else-if=" language === 'ge' ">Marktplatz Beta Testnet</span>
                 	<span v-else-if=" language === 'ja' ">マーケットプレイスベータテストネット (Testnet)</span>
                 	<span v-else-if=" language === 'ko' ">거래소 베타 테스트넷</span>
@@ -235,7 +235,7 @@
               <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>
                   <span v-if=" language === 'ru' ">Бета-версия главной сети торговой площадки</span>
-                	<span v-else-if=" language === 'ch' ">市场贝塔主干网</span>
+                	<span v-else-if=" language === 'ch' ">市场Beta主干网</span>
                 	<span v-else-if=" language === 'ge' ">Marktplatz Beta Mainnet</span>
                 	<span v-else-if=" language === 'ja' ">マーケットプレースベータメインネット (Mainnet)</span>
                 	<span v-else-if=" language === 'ko' ">거래소 베타 메인넷</span>
@@ -243,7 +243,7 @@
                 </p>
                 <caption>
                   <span v-if=" language === 'ru' ">Расширьте базу пользователей до десятков тысяч. Культивируйте экономику практических/менее академических вознаграждений.</span>
-                	<span v-else-if=" language === 'ch' ">扩大用户群到成千上万。培养实用经济/减去学术奖励金。</span>
+                	<span v-else-if=" language === 'ch' ">扩大用户群到成千上万。培养注重实用性而非学术性的赏金经济。</span>
                 	<span v-else-if=" language === 'ge' ">Ausdehnung der Nutzerbasis auf mehrere Zehntausend. Entwicklung einer Ökonomie aus praktischen/weniger akademischen Belohnungen.</span>
                 	<span v-else-if=" language === 'ja' ">ユーザーベースを数万人に拡大。実用的な学業的でない報奨の経済を育てる。</span>
                 	<span v-else-if=" language === 'ko' ">이용자의 규모를 수만명으로 확장시키세요. 학문적 요소에 너무 치우치지 않는 실용적인 포상금 환경을 조성하세요.</span>
