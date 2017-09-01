@@ -40,11 +40,11 @@ export default new Router({
     },
     {
       path: '/faq',
-      redirect: '/faq/about/who-is-matryx'
+      redirect: '/faq/about/what-is-matryx'
     },
     {
       path: '/faq/about',
-      redirect: '/faq/about/who-is-matryx'
+      redirect: '/faq/about/what-is-matryx'
     },
     {
       path: '/faq/contact',
