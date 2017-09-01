@@ -164,7 +164,7 @@ export default {
         name: 'Wesly Xia',
         title: 'Marketer',
         src: Wesly,
-        linkedInLink: ''
+        linkedInLink: 'https://www.linkedin.com/in/weihao-xia-125401b4'
       }],
 
       advisors: [{

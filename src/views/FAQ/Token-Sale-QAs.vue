@@ -1,5 +1,14 @@
 <template>
   <div id="tokensale-faq" class="faq__accordion">
+    <QA cssId="why-is-matryx-conducting-a-token-sale">
+      <span slot="question">
+        Why is Matryx conducting a token sale?
+      </span>
+      <p slot="answer">
+        The ultimate goal of Matryx is to incentivize collaboration in fields of knowledge and creation like STEM. To reach that goal, Matryx requires a medium of exchange for ideas in a global community. Token Sales are a proven way to engage a global support network.
+      </p>
+    </QA>
+
     <QA cssId="when-will-I-receive-my-mtx">
       <span slot="question">
         When will I receive my MTX?
@@ -20,21 +29,12 @@
       </p>
     </QA>
 
-    <QA cssId="why-is-matryx-conducting-a-token-sale">
-      <span slot="question">
-        Why is Matryx conducting a token sale?
-      </span>
-      <p slot="answer">
-        The ultimate goal of Matryx is to incentivize collaboration in fields of knowledge and creation like STEM. To reach that goal, Matryx requires a medium of exchange for ideas in a global community. Token Sales are a proven way to engage a global support network.
-      </p>
-    </QA>
-
     <QA cssId="how-will-the-revenue-from-the-token-sale-be-used">
       <span slot="question">
         How will the revenue from the token sale be used?
       </span>
       <p slot="answer">
-        The incoming revenue from the token sale will be used in substantial part, to expand our platform  and conduct in-depth technical research and development with the continued goal of expanding and refining the Matryx platform. Some of this revenue will also be used to develop Calcflow and nano-one and integrate them with the Matryx platform. 
+        The incoming revenue from the token sale will be used in substantial part, to expand our platform  and conduct in-depth technical research and development with the continued goal of expanding and refining the Matryx platform. Some of this revenue will also be used to develop Calcflow and nano-one and integrate them with the Matryx platform.
       </p>
     </QA>
 

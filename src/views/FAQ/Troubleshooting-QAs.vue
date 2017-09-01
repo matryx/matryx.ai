@@ -1,6 +1,6 @@
 <template>
   <div id="troubleshooting-faq" class="faq__accordion">
-    <QA cssId="i-followed-the-instructions-but-I-still-don’t-see-my-tokens">
+    <QA cssId="i-cant-see-my-tokens">
       <span slot="question">
         I followed the instructions but I still don’t see my tokens.
       </span>
@@ -36,7 +36,7 @@
 
       </p>
     </QA>
-    
+
   </div>
 </template>
 

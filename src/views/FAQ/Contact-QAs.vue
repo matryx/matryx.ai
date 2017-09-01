@@ -1,6 +1,6 @@
 <template>
   <div id="contact-faq" class="faq__accordion">
-    <QA cssId="how-can-contribute-to-matryx">
+    <QA cssId="how-can-I-contribute-to-matryx">
       <span slot="question">How can contribute to Matryx?</span>
       <span slot="answer">
         <p>If you’re interested in joining the Matryx team, reach out to us at team@matryx.ai with a resume, intention, and as much additional information about you as possible. We are always looking to add new talent to our growing team. </p>
@@ -20,7 +20,7 @@
 
     <QA cssId="more-questions">
       <span slot="question">
-        More questions? 
+        More questions?
       </span>
       <span slot="answer">
         <p>Shoot us an email with your questions and concerns at team@matryx.ai</p>

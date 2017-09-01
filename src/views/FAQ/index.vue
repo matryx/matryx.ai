@@ -15,10 +15,10 @@
         <span class="icon"><img src="../../assets/icons/icon-Token.svg" alt=""></span>
         <router-link to="/faq/tokensale">Token Sale</router-link>
       </li>
-      <li class="faq-menu__list__list-item">
+<!--       <li class="faq-menu__list__list-item">
         <span class="icon"><img src="../../assets/icons/icon-Wallet.svg" alt=""></span>
         <router-link to="/faq/wallet">Token Wallet Management</router-link>
-      </li>
+      </li> -->
       <li class="faq-menu__list__list-item">
         <span class="icon"><img src="../../assets/icons/icon-Presale.svg" alt=""></span>
         <router-link to="/faq/presale">Pre-Sale</router-link>

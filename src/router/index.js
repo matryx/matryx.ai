@@ -48,7 +48,7 @@ export default new Router({
     },
     {
       path: '/faq/contact',
-      redirect: '/faq/contact/how-can-I-contact'
+      redirect: '/faq/contact/how-can-I-contribute-to-matryx'
     },
     {
       path: '/faq/general',
@@ -64,7 +64,7 @@ export default new Router({
     },
     {
       path: '/faq/tokensale',
-      redirect: '/faq/tokensale/how-can-I-participate-in-the-token-sale'
+      redirect: '/faq/tokensale/why-is-matryx-conducting-a-token-sale'
     },
     {
       path: '/faq/troubleshooting',
