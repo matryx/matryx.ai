@@ -50,12 +50,13 @@
               <span v-else>BLOG</span>
             </a>
           </li>
-          <!--  <li class="nav-item nav-link text-color--white">
-            <a aria-disabled="false" href="#" target="_self" class="nav-link">FAQ</a>
-          </li> -->
+          <li class="nav-item nav-link text-color--white">
+            <a aria-disabled="false" href="/faq" target="_self" class="nav-link">  FAQ
+            </a>
+          </li>
           <li class="nav-item nav-link text-color--white">
             <a aria-disabled="false"
-              href="#news-events"
+              href="/#news-events"
               target="_self"
               class="nav-link"
             >
