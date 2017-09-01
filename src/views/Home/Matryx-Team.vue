@@ -56,6 +56,8 @@ import Edward from '@/assets/images/team/Edward.png'
 import Ethan from '@/assets/images/team/Ethan.png'
 import Jacqueline from '@/assets/images/team/Jacqueline.png'
 import Lilian from '@/assets/images/team/Lilian.png'
+import Wesly from '@/assets/images/team/Wesly.png'
+import Ty from '@/assets/images/team/Ty.png'
 
 import Greg from '@/assets/images/advisors/greg.jpg'
 import Ben from '@/assets/images/advisors/ben.jpg'
@@ -153,6 +155,16 @@ export default {
         title: 'Developer',
         src: Lilian,
         linkedInLink: 'https://www.linkedin.com/in/lilianangel/'
+      }, {
+        name: 'Ty Stahnke',
+        title: 'Developer',
+        src: Ty,
+        linkedInLink: 'https://www.linkedin.com/in/tystahnke/'
+      }, {
+        name: 'Wesly Xia',
+        title: 'Marketer',
+        src: Wesly,
+        linkedInLink: ''
       }],
 
       advisors: [{
