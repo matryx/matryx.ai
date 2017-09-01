@@ -1,6 +1,6 @@
 <template>
-<div class="body-content content-container content-container--large">
-  <h1 class="font-">FAQ</h1>
+<div id="faq-page" class="body-content content-container content-container--large">
+  <h1 class="font-">Frequently Asked Questions</h1>
   <aside class="faq-menu">
     <ul class="faq-menu__list">
       <li class="faq-menu__list__list-item" @click="navigateToRoute('about')">

@@ -1,5 +1,8 @@
 @import './colors.scss';
 
+#faq-page {
+  display:flex;
+}
 
 .body-content {
   justify-content: center;
@@ -8,7 +11,9 @@
   > h1 {
     flex: 0 0 100%;
     align-self: flex-end;
-    text-align: center;
+    text-align: left;
+    margin: 0 0 40px 30px;
+    color: $matryx-grey-blue;
   }
 }
 .faq-menu {
@@ -65,7 +70,7 @@
 
         &:hover {
           cursor:pointer;
-          color: $midnight-tint-2;
+          color: $matryx-blue;
         }
       }
 
@@ -82,7 +87,7 @@
   display: -webkit-box;display: -ms-flexbox;display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  padding: 0px 60px 10px 60px;
+  padding: 0px 60px 10px 60px !important;
   margin:15px !important;
   background-color: $white;
 
