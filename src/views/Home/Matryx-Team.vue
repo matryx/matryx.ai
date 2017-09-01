@@ -47,8 +47,18 @@ import Keita from '@/assets/images/team/keita.jpg'
 import Scott from '@/assets/images/team/scott.jpg'
 import Adam from '@/assets/images/team/adam.jpg'
 import Edgardo from '@/assets/images/team/edgardo.jpg'
-import Kyle from '@/assets/images/team/kyle.jpg'
-import Vincent from '@/assets/images/team/vincent.jpg'
+import Kyle from '@/assets/images/team/kyle.png'
+import Vincent from '@/assets/images/team/vincent.png'
+
+import Kai from '@/assets/images/team/Kai.jpg'
+import Dennis from '@/assets/images/team/Dennis.png'
+import Edward from '@/assets/images/team/Edward.png'
+import Ethan from '@/assets/images/team/Ethan.png'
+import Jacqueline from '@/assets/images/team/Jacqueline.png'
+import Lilian from '@/assets/images/team/Lilian.png'
+import Wesly from '@/assets/images/team/Wesly.png'
+import Ty from '@/assets/images/team/Ty.png'
+
 import Greg from '@/assets/images/advisors/greg.jpg'
 import Ben from '@/assets/images/advisors/ben.jpg'
 import Jurgen from '@/assets/images/advisors/jurgen.jpg'
@@ -113,9 +123,50 @@ export default {
         name: 'Kyle Lee',
         title: 'Mathematician',
         src: Kyle,
-        linkedInLink: 'https://www.linkedin.com/in/kylelee4c5/',
+        linkedInLink: 'https://www.linkedin.com/in/kai-wang-1155b064',
         twitterLink: 'https://www.twitter.com/themrkylelee'
+      }, {
+        name: 'Kai Wang',
+        title: 'VP Software Development',
+        src: Kai,
+        linkedInLink: 'https://www.linkedin.com/in/kylelee4c5/',
+        twitterLink: ''
+      }, {
+        name: 'Dennis Chiang',
+        title: 'Developer',
+        src: Dennis,
+        linkedInLink: 'https://www.linkedin.com/in/dennis-tsung-chen-chiang-442b322a/'
+      }, {
+        name: 'Edward Zhou',
+        title: 'Developer',
+        src: Edward
+      }, {
+        name: 'Ethan Vanderhorn',
+        title: 'Developer',
+        src: Ethan,
+        linkedInLink: 'https://www.linkedin.com/in/ethan-vander-horn-46556b107/'
+      }, {
+        name: 'Jacqueline Bontigao',
+        title: 'Developer',
+        src: Jacqueline,
+        linkedInLink: 'https://www.linkedin.com/in/jacqueline-bontigao-0661ab120/'
+      }, {
+        name: 'Lilian Angel',
+        title: 'Developer',
+        src: Lilian,
+        linkedInLink: 'https://www.linkedin.com/in/lilianangel/'
+      }, {
+        name: 'Ty Stahnke',
+        title: 'Developer',
+        src: Ty,
+        linkedInLink: 'https://www.linkedin.com/in/tystahnke/'
+      }, {
+        name: 'Wesly Xia',
+        title: 'Marketer',
+        src: Wesly,
+        linkedInLink: ''
       }],
+
       advisors: [{
         name: 'Greg Horowitt',
         desc: 'Venture Capitalist, Author, Serial Entrepreneur',
