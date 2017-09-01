@@ -1,29 +1,29 @@
 <template>
   <div id="contact-faq" class="faq__accordion">
-    <QA cssId="who-is-matryx">
-      <span slot="question">
-        A <a href="/">link</a>
-      </span>
+    <QA cssId="how-can-contribute-to-matryx">
+      <span slot="question">How can contribute to Matryx?</span>
       <span slot="answer">
-        Blah blah blah<br><br>blahblahbalhba
+        <p>If you’re interested in joining the Matryx team, reach out to us at team@matryx.ai with a resume, intention, and as much additional information about you as possible. We are always looking to add new talent to our growing team. </p>
       </span>
     </QA>
 
-    <QA cssId="how-does-matryx-work">
+    <QA cssId="im-a-developer-and-i-want-to-submit-code">
       <span slot="question">
-        How does Matryx Work?
+        I’m a developer and I want to submit code.
       </span>
       <span slot="answer">
-        It just works
+        <p>The Matryx platform is open source. Developers who want to submit contributions can do so by submitting pull requests on our GitHub for review.</p>
+        <p>An open source project like Matryx wouldn't be possible without developers who are excited about building blockchain solutions. To discuss the Matryx code and platform design, join our telegram chat and talk to the team directly. </p>
+        <p>All contributors must agree to the Matryx CLA before their code is merged.</p>
       </span>
     </QA>
 
-    <QA cssId="what-currency-can-I-use">
+    <QA cssId="more-questions">
       <span slot="question">
-        What Currency Can I Use?
+        More questions? 
       </span>
       <span slot="answer">
-        You can use ETH
+        <p>Shoot us an email with your questions and concerns at team@matryx.ai</p>
       </span>
     </QA>
   </div>
