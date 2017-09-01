@@ -1,6 +1,6 @@
 <template>
   <div class="media-mentions bkg-color--white">
-    <div class=" content-container content-container--medium media-mentions__img-container">
+    <div class="content-container content-container--medium media-mentions__img-container">
       <p class="text-color--matryx-grey">
         <span v-if=" language === 'ru' ">
           Было показано в
