@@ -3,7 +3,8 @@ import Router from 'vue-router'
 
 const Home = () => import('@/views/Home')
 const FAQ = () => import('@/views/FAQ')
-const PressKit = () => import('@/views/PressKit/index')
+const PressKit = () => import('@/views/PressKit')
+const PreSale = () => import('@/views/PreSale')
 
 const About = () => import('@/views/FAQ/About')
 const AboutQAs = () => import('@/views/FAQ/About-QAs')
@@ -146,6 +147,14 @@ export default new Router({
     {
       path: '/presskit',
       redirect: '/press-kit'
+    },
+    {
+      path: '/pre-sale',
+      name: 'PreSale',
+      component: PreSale
+    }, {
+      path: '/presale',
+      redirect: '/pre-sale'
     },
     {
       path: '*',
