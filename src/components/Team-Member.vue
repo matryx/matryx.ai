@@ -7,20 +7,20 @@
     <div class="team-member__title member__title"> {{ title }} </div>
 
     <div class="team-member__social-icons">
-        <a :href="linkedInLink" target="_blank">
-          <img class="linkedin icon" :src="linkedinIcon">
-        </a>
-        <a :href="twitterLink" target="_blank">
-          <img class="twitter icon" :src="twitterIcon">
-        </a>
+      <a :href="linkedInLink" target="_blank" v-show="linkedInLink">
+        <img class="linkedin icon" src="../assets/icons/icon-linkedin.png">
+      </a>
+      <a :href="twitterLink" target="_blank" v-show="twitterLink">
+        <img class="twitter icon" src="../assets/icons/icon-twitter.gif">
+      </a>
+      <a :href="githubLink" target="_blank" v-show="githubLink">
+        <img class="icon" src="../assets/icons/icon-github.png">
+      </a>
     </div>
   </section>
 </template>
 
 <script>
-import twitterIcon from '../assets/icons/icon-twitter.gif'
-import linkedinIcon from '../assets/icons/icon-linkedin.png'
-
 export default {
   name: 'TeamMember',
 
@@ -29,14 +29,17 @@ export default {
     alt: String,
     name: String,
     title: String,
-    linkedInLink: String,
-    twitterLink: String
-  },
-
-  data () {
-    return {
-      twitterIcon,
-      linkedinIcon
+    linkedInLink: {
+      type: String,
+      default: ''
+    },
+    twitterLink: {
+      type: String,
+      default: ''
+    },
+    githubLink: {
+      type: String,
+      default: ''
     }
   }
 }
@@ -61,8 +64,8 @@ export default {
 }
 
 .icon {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   margin: 5px;
 }
 </style>

@@ -4,10 +4,10 @@
     <b-navbar toggleable toggle-breakpoint="sm" class="content-container content-container--medium " >
       <b-nav-toggle target="nav-toggle"></b-nav-toggle>
       <b-navbar-brand>
-        <router-link to="/">
+        <a href="#tokensale">
           <img src="../../assets/images/Matryx-Logo-Grey-CMYK.png"
             class="matryx-logo-word">
-        </router-link>
+        </a>
       </b-navbar-brand>
       <b-collapse is-nav id="nav-toggle">
 

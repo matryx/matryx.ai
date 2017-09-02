@@ -1,11 +1,11 @@
 <template>
-<div class="body-content content-container content-container--large">
-  <h1 class="font-">FAQ</h1>
+<div id="faq-page" class="body-content content-container content-container--large">
+  <h1 class="font-">Frequently Asked Questions</h1>
   <aside class="faq-menu">
     <ul class="faq-menu__list">
       <li class="faq-menu__list__list-item" @click="navigateToRoute('about')">
         <span class="icon"><img src="../../assets/icons/icon-About.svg" alt=""></span>
-        <router-link to="/faq/about">About</router-link>
+        <router-link to="/faq/about">About Matryx</router-link>
       </li>
       <li class="faq-menu__list__list-item">
         <span class="icon"><img src="../../assets/icons/icon-General.svg" alt=""></span>
@@ -13,12 +13,12 @@
       </li>
       <li class="faq-menu__list__list-item">
         <span class="icon"><img src="../../assets/icons/icon-Token.svg" alt=""></span>
-        <router-link to="/faq/token-issuant-program">Token Issuance Program</router-link>
+        <router-link to="/faq/tokensale">Token Sale</router-link>
       </li>
-      <li class="faq-menu__list__list-item">
+<!--       <li class="faq-menu__list__list-item">
         <span class="icon"><img src="../../assets/icons/icon-Wallet.svg" alt=""></span>
         <router-link to="/faq/wallet">Token Wallet Management</router-link>
-      </li>
+      </li> -->
       <li class="faq-menu__list__list-item">
         <span class="icon"><img src="../../assets/icons/icon-Presale.svg" alt=""></span>
         <router-link to="/faq/presale">Pre-Sale</router-link>
@@ -31,7 +31,7 @@
     <ul class="faq-menu__list">
       <li class="faq-menu__list__list-item">
         <span class="icon"><img src="../../assets/icons/icon-Termsofsale.svg" alt=""></span>
-        <router-link to="/faq/terms-of-sale">Terms Of Sale</router-link>
+        <router-link to="/faq/saleterms">Token Sale Terms</router-link>
       </li>
       <li class="faq-menu__list__list-item">
         <span class="icon"><img src="../../assets/icons/icon-Contact.svg" alt=""></span>
@@ -48,23 +48,11 @@
 </template>
 
 <style lang="scss">
-  // @import '../../assets/css/styles.scss';
-  @import '../../assets/css/faq.scss';
-
+@import '../../assets/css/faq.scss';
 </style>
 
 <script>
 export default {
-  name: 'FAQ',
-
-  methods: {
-    navigateToRoute (route) {
-      console.log('route', route)
-    }
-  },
-
-  mounted () {
-    document.title = 'Matryx: A Decentralized Collaboration Platform'
-  }
+  name: 'FAQ'
 }
 </script>

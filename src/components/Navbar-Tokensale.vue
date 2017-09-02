@@ -1,5 +1,5 @@
 <template>
-  <section class="navbar-tokensale">
+  <section class="navbar-tokensale" id="tokensale">
     <div class="token-bar content-container content-container--large">
       <div class="token-bar__scroll">
         <div class="token-bar__section first">

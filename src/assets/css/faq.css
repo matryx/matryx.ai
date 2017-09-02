@@ -1,9 +1,18 @@
 /*----- FONT COLORS -----*/
 /*neutrals*/
-/*purples/grays*/
+/*purples/greys*/
+/*Matryx Colors: Grey*/
+/*Matryx Colors: Blue*/
+/*Matryx Colors: Red*/
+/*Matryx Colors: Black*/
 /*blues*/
-/*reds*/
+/*yellows*/
+/*green*/
 /*----- end FONT COLORS -----*/
+#faq-page {
+  display: flex;
+}
+
 .body-content {
   justify-content: center;
   flex-wrap: wrap;
@@ -12,7 +21,9 @@
 .body-content > h1 {
   flex: 0 0 100%;
   align-self: flex-end;
-  text-align: center;
+  text-align: left;
+  margin: 0 0 40px 30px;
+  color: #829AB1;
 }
 
 .faq-menu {
@@ -67,7 +78,7 @@
 
 .faq-menu__list__list-item a:hover {
   cursor: pointer;
-  color: #696985;
+  color: #0086CB;
 }
 
 .faq-menu__list__list-item p {
@@ -82,7 +93,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  padding: 0px 60px 10px 60px;
+  padding: 0px 60px 10px 60px !important;
   margin: 15px !important;
   background-color: #FFF;
 }

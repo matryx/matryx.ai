@@ -253,9 +253,9 @@ h1.cd-headline.clip {
 }
 
 .member__img {
-  max-height: 120px;
-  max-width: 120px;
-  border-radius: 100%;
+  min-height: 120px;
+  width: 120px;
+  border-radius: 50%;
   margin-bottom: 7.5px;
 }
 /*----- end CLASSES -----*/
