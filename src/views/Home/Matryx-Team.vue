@@ -44,13 +44,14 @@ import AdvisorMember from '@/components/Advisors-Member'
 
 import Steve from '@/assets/images/team/steve.jpg'
 import Keita from '@/assets/images/team/keita.jpg'
-import Scott from '@/assets/images/team/scott.jpg'
+import Scott from '@/assets/images/team/scott.png'
 import Adam from '@/assets/images/team/adam.jpg'
 import Edgardo from '@/assets/images/team/edgardo.jpg'
 import Kyle from '@/assets/images/team/kyle.png'
 import Vincent from '@/assets/images/team/vincent.png'
 
 import Kai from '@/assets/images/team/Kai.jpg'
+import Max from '@/assets/images/team/max.png'
 import Dennis from '@/assets/images/team/Dennis.png'
 import Edward from '@/assets/images/team/Edward.png'
 import Ethan from '@/assets/images/team/Ethan.png'
@@ -58,6 +59,7 @@ import Jacqueline from '@/assets/images/team/Jacqueline.png'
 import Lilian from '@/assets/images/team/Lilian.png'
 import Wesly from '@/assets/images/team/Wesly.png'
 import Ty from '@/assets/images/team/Ty.png'
+import Jason from '@/assets/images/team/Jason.png'
 
 import Greg from '@/assets/images/advisors/greg.jpg'
 import Ben from '@/assets/images/advisors/ben.jpg'
@@ -137,6 +139,11 @@ export default {
         src: Dennis,
         linkedInLink: 'https://www.linkedin.com/in/dennis-tsung-chen-chiang-442b322a/'
       }, {
+        name: 'Max Howard',
+        title: 'Architect',
+        src: Max,
+        linkedInLink: 'https://www.linkedin.com/in/maxwell-howard-b0a34798/'
+      }, {
         name: 'Edward Zhou',
         title: 'Developer',
         src: Edward
@@ -160,6 +167,11 @@ export default {
         title: 'Developer',
         src: Ty,
         linkedInLink: 'https://www.linkedin.com/in/tystahnke/'
+      }, {
+        name: 'Jason Tsay',
+        title: 'Designer',
+        src: Jason,
+        linkedInLink: 'https://www.linkedin.com/in/jasontsay/'
       }, {
         name: 'Wesly Xia',
         title: 'Marketer',
