@@ -30,7 +30,11 @@ export default {
     name: String,
     title: String,
     linkedInLink: String,
-    twitterLink: String
+    twitterLink: String,
+    githubLink: {
+      type: String,
+      default: ''
+    }
   },
 
   data () {
