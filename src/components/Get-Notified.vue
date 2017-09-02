@@ -1,5 +1,5 @@
 <template lang="html">
-  <section :class="{ 'purple-bkg': purpleBkg }">
+  <section>
     <b-form class="form-inline cta__form">
       <input class="cta__form__email"
         v-model="email"
@@ -7,7 +7,6 @@
         placeholder="your@email.com"
       >
       <button class="btn btn-cta-blue cta__form__submit"
-        :class="{ 'purple-btn': purpleBkg }"
         @click.prevent="getNotified"
       >
         <span class="russian" v-if=" language === 'ru' ">
@@ -78,7 +77,6 @@ export default {
   name: 'GetNotified',
 
   props: {
-    purpleBkg: Boolean,
     ctaLocation: String
   },
   computed: {
@@ -122,7 +120,7 @@ export default {
         setTimeout(() => {
           this.showSpinner = false
           this.$store.commit('showModal', true)
-        }, 1000)
+        }, 1500)
       } else {
         this.showEmailWarning = true
       }
@@ -133,7 +131,6 @@ export default {
 
 <style lang="scss">
 @import '../assets/css/styles';
-@import '../assets/css/colors';
 
   .russian {
     font-size: 10px;
@@ -216,14 +213,6 @@ export default {
 
   .warn {
     color: $matryx-red;
-  }
-
-  .purple-bkg {
-    color: $white;
-  }
-
-  .purple-btn {
-    border: none;
   }
 
 

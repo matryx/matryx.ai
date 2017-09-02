@@ -120,8 +120,17 @@ button { font-family: 'Roboto Medium', Helvetica, sans-serif;
   &--dark-purple {background-color: $midnight-tint-2;}
   &--white {background-color: $white;}
   &--grey {background-color: $classic-grey;}
+  &--matryx-darker-grey {background-color: $matryx-darker-grey;}
   &--matryx-lighter-grey {background-color: $matryx-lighter-grey;}
-  &--matryx-lighter-grey {background-color: $matryx-lighter-grey;}
+  &--matryx-blue {background-color: $matryx-blue;}
+  &--matryx-light-blue {background-color: $matryx-light-blue;}
+  &--matryx-blue-gradient {
+    background: rgb(8,31,54); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(8,31,54,1) 0%, rgba(19,72,99,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(8,31,54,1) 0%,rgba(19,72,99,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(8,31,54,1) 0%,rgba(19,72,99,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#081f36', endColorstr='#134863',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
   &--dark-blue-gradient {
     background: rgb(7,24,39); /* Old browsers */
     background: -moz-linear-gradient(top, rgba(7,24,39,1) 0%, rgba(8,33,53,1) 100%); /* FF3.6-15 */
@@ -165,6 +174,7 @@ h1.cd-headline.clip {
   &--matryx-grey {color: $matryx-grey;}
   &--matryx-light-grey {color: $matryx-light-grey;}
   &--matryx-lighter-grey {color: $matryx-lighter-grey;}
+  &--matryx-grey-blue { color: $matryx-grey-blue;}
   &--matryx-blue {color: $matryx-blue;}
   &--matryx-light-blue {color: $matryx-light-blue;}
   &--matryx-lighter-blue {color: $matryx-lighter-blue;}

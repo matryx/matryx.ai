@@ -1,28 +1,28 @@
 <template>
-<div id="app" >
-  <App-Navbar></App-Navbar>
+  <div id="app">
+    <App-Navbar></App-Navbar>
 
-  <Survey-Modal></Survey-Modal>
+    <Survey-Modal></Survey-Modal>
 
-  <b-modal id="getNotified"
-    v-model="showGetNotifiedModal"
-    no-close-on-esc
-    no-close-on-backdrop
-    hide-header
-  >
-    <div class="close-modal text-muted" @click.prevent="closeModal">
-      X
-    </div>
-    <CTA-Banner ctaLocation="Header"></CTA-Banner>
-  </b-modal>
+    <b-modal id="getNotified"
+      v-model="showGetNotifiedModal"
+      no-close-on-esc
+      no-close-on-backdrop
+      hide-header
+    >
+      <div class="close-modal text-muted" @click.prevent="closeModal">
+        X
+      </div>
+      <CTA-Banner ctaLocation="Header"></CTA-Banner>
+    </b-modal>
 
-  <transition name="fade">
-    <router-view></router-view>
-  </transition>
+    <transition name="fade">
+      <router-view></router-view>
+    </transition>
 
-  <App-Footer></App-Footer>
+    <App-Footer></App-Footer>
 
-</div>
+  </div>
 </template>
 
 <script>

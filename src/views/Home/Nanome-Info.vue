@@ -40,7 +40,7 @@
           <img src="../../assets/images/nanometeam.png" alt="team">
         </div>
       </div>
-    </div>w
+    </div>
   </section>
 </template>
 

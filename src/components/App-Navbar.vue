@@ -49,6 +49,20 @@
           </li>
           <li class="nav-item nav-link text-color--white">
             <a aria-disabled="false"
+              href="/press-kit"
+              target="_self"
+              class="nav-link"
+            >
+              <span v-if=" language === 'ru' ">для прессы</span>
+              <span v-else-if=" language === 'ch' ">新闻报道</span>
+              <span v-else-if=" language === 'ge' ">PRESSE</span>
+              <span v-else-if=" language === 'ja' ">プレス</span>
+              <span v-else-if=" language === 'ko' ">보도자료</span>
+              <span v-else>PRESS</span>
+            </a>
+          </li>
+          <li class="nav-item nav-link text-color--white">
+            <a aria-disabled="false"
               href="mailto:team@matryx.ai?subject=Matryx Token Sale"
               target="_self"
               class="nav-link"
@@ -73,20 +87,6 @@
               <span v-else-if=" language === 'ja' ">ブログ</span>
               <span v-else-if=" language === 'ko' ">블로그</span>
               <span v-else>BLOG</span>
-            </a>
-          </li>
-          <li class="nav-item nav-link text-color--white">
-            <a aria-disabled="false"
-              href="/#news-events"
-              target="_self"
-              class="nav-link"
-            >
-              <span v-if=" language === 'ru' ">для прессы</span>
-              <span v-else-if=" language === 'ch' ">新闻报道</span>
-              <span v-else-if=" language === 'ge' ">PRESSE</span>
-              <span v-else-if=" language === 'ja' ">プレス</span>
-              <span v-else-if=" language === 'ko' ">보도자료</span>
-              <span v-else>PRESS</span>
             </a>
           </li>
           <!--   <li class="nav-item nav-link text-color--white">
