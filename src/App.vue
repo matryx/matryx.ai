@@ -24,6 +24,22 @@
         <ul class="nav navbar-nav">
           <li class="nav-item nav-link text-color--white">
             <a aria-disabled="false"
+              href="/"
+              target="_self"
+              class="nav-link"
+            >
+              <span class="russian" v-if=" language === 'ru' ">
+                ПРОДАЖА ТОКЕНОВ
+              </span>
+              <span v-else-if=" language === 'ch' ">代金券销售</span>
+              <span v-else-if=" language === 'ge' ">TOKEN-VERKAUF</span>
+              <span v-else-if=" language === 'ja' ">トークンセール</span>
+              <span v-else-if=" language === 'ko' ">토큰판매</span>
+              <span v-else>TOKEN SALE</span>
+            </a>
+          </li>
+          <li class="nav-item nav-link text-color--white">
+            <a aria-disabled="false"
               href="mailto:team@matryx.ai?subject=Matryx Token Sale"
               target="_self"
               class="nav-link"
