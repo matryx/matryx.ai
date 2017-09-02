@@ -144,6 +144,10 @@ export default new Router({
       component: PressKit
     },
     {
+      path: '/presskit',
+      redirect: '/press-kit'
+    },
+    {
       path: '*',
       redirect: '/404'
     }
