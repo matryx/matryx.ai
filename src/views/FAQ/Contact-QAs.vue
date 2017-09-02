@@ -3,7 +3,7 @@
     <QA cssId="how-can-I-contribute-to-matryx">
       <span slot="question">How can contribute to Matryx?</span>
       <span slot="answer">
-        <p>If you’re interested in joining the Matryx team, reach out to us at team@matryx.ai with a resume, intention, and as much additional information about you as possible. We are always looking to add new talent to our growing team. </p>
+        <p>If you’re interested in joining the Matryx team, reach out to us at <a href="mailto:team@matryx.ai">team@matryx.ai</a> with a resume, intention, and as much additional information about you as possible. We are always looking to add new talent to our growing team. </p>
       </span>
     </QA>
 
@@ -12,9 +12,15 @@
         I’m a developer and I want to submit code.
       </span>
       <span slot="answer">
-        <p>The Matryx platform is open source. Developers who want to submit contributions can do so by submitting pull requests on our GitHub for review.</p>
-        <p>An open source project like Matryx wouldn't be possible without developers who are excited about building blockchain solutions. To discuss the Matryx code and platform design, join our telegram chat and talk to the team directly. </p>
-        <p>All contributors must agree to the Matryx CLA before their code is merged.</p>
+        <p>
+          The Matryx platform is open source. Developers who want to submit contributions can do so by submitting pull requests on our <a href="https://github.com/matryx" target="_blank">GitHub</a> for review.
+        </p>
+        <p>
+          An open source project like Matryx wouldn't be possible without developers who are excited about building blockchain solutions. To discuss the Matryx code and platform design, join our <a href="https://t.me/matryxai" target="_blank">Telegram</a> chat and talk to the team directly.
+        </p>
+        <p>
+          All contributors must agree to the Matryx CLA before their code is merged
+        </p>
       </span>
     </QA>
 
@@ -23,7 +29,9 @@
         More questions?
       </span>
       <span slot="answer">
-        <p>Shoot us an email with your questions and concerns at team@matryx.ai</p>
+        <p>Shoot us an email with your questions and concerns at
+          <a href="mailto:team@matryx.ai">team@matryx.ai</a>
+        </p>
       </span>
     </QA>
   </div>

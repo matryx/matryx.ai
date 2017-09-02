@@ -34,7 +34,7 @@
         How will the revenue from the token sale be used?
       </span>
       <p slot="answer">
-        The incoming revenue from the token sale will be used in substantial part, to expand our platform  and conduct in-depth technical research and development with the continued goal of expanding and refining the Matryx platform. Some of this revenue will also be used to develop Calcflow and nano-one and integrate them with the Matryx platform.
+        The incoming revenue from the token sale will be used to expand our platform and conduct in-depth technical research and development with the continued goal of expanding and refining the Matryx platform. Some of this revenue will also be used to develop Calcflow and nano-one and integrate them with the Matryx platform.
       </p>
     </QA>
 
@@ -43,7 +43,7 @@
         What is the number of MTX in circulation? How many will be sold?
       </span>
       <p slot="answer">
-        Exactly 314,159,265 (π * 108) Matryx Tokens will be created. The tokens will be distributed at a rate of 1100 MTX per ETH, with a cap of 160,000 ETH over a four week period, whichever is reached first. This equivalent to approximately 60% of total supply.
+        Exactly 314,159,265 (π * 100,000,000) Matryx Tokens will be created. 60% of the tokens will be sold during the token sale at a rate of approximately 1165 MTX per ETH, with a cap of 161,803 (ϕ * 100,000) ETH.
       </p>
     </QA>
 
@@ -70,20 +70,19 @@
         How can I participate in the Matryx Token Sale?
       </span>
       <div slot="answer">
-        <p> Token purchasers may participate in the MTX token sale using ETH.</p>
+        <p>
+          Token purchasers may participate in the MTX token sale through the web application that will be located on the home page here on <a href="https://matryx.ai">https://matryx.ai</a>. Participants should <b>only</b> use the information listed on the website.
+        </p>
         <p class="text--bold"> Requirements:</p>
-        <ol>
+        <ul>
           <li>
-            <p>A receiving Ethereum Address- This must be from an ERC20 compatible wallet like Parity, Mist, MyEtherWallet, or Metamask. Your MTX will be delivered to this address. Non-ERC20 compatible wallet addresses will not be accepted.</p>
+            <p><b>A valid ERC20 Ethereum Address.</b> This must be from an ERC20 compatible wallet like Parity, Mist, MyEtherWallet, or Metamask. Your MTX will be delivered to this address. Non-ERC20 compatible wallet addresses will not be accepted.
+            </p>
+            <p>The Ethereum address used must not be associated with a third party exchange or service that has custody over the private key.</p>
+            <p class="text--bold">You must own the private key if your address is an exchange address.</p>
           </li>
-          <li>
-            <p>An email address- In order to keep purchasers informed and secure, an email address is required. It will never be disclosed or sold to third-parties. </p>
-          </li>
-          <li>
-             <p>The Ethereum address used must not be associated with a third part exchange or service that has custody over the private key.</p>
-          </li>
-          </ol>
-          <p class="text--bold">Addresses must not be exchange addresses, unless you own the private key.</p>
+        </ul>
+
         </div>
     </QA>
 
@@ -92,7 +91,7 @@
         Where are the MTX Token Sale terms?
       </span>
       <p slot="answer">
-        Full terms of sale are available at https://matryx.ai/sale-terms.pdf
+        Full token sale terms will be available soon.
       </p>
     </QA>
 

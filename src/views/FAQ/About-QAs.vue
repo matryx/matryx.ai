@@ -12,7 +12,8 @@
     <QA cssId="how-does-matryx-bounty-system-work">
       <span slot="question"> How does the Matryx bounty system work? </span>
       <div slot="answer">
-        <p> The Matryx bounty system aims to accelerate innovation and reward all users who contribute. A bounty is simply a challenge posted to the platform with a fair MTX reward for users who contribute to the answer. Any user can post bounties to the Matryx community and any user can participate.
+        <p>
+          The Matryx bounty system aims to accelerate innovation and reward all users who contribute. A bounty is simply a challenge posted to the platform with a fair MTX reward for users who make relevant contributions to the answer. Any user can post bounties to the Matryx community and any user can participate. Here's a simple example of how a bounty could work:
         </p>
         <ol>
           <li>
@@ -31,7 +32,8 @@
             </p>
           </li>
         </ol>
-        <p> Initially, the content submitted to the Matryx platform will be intended to fulfill user-posted bounties. These bounties will request specific solutions to specific problems, ranging from mathematical proofs to 3D designs. Bounty posters may browse through an initial batch of submissions and select a winner. More importantly, a bounty poster may select a submission as the “parent” for a new batch of community revision. When the poster is satisfied, or another parameter is met, a winner is chosen. All contributors, not just the final submitter, are rewarded with MTX. Through this process of collaborative revision, the Matryx platform aims to cultivate an unrivaled database of quality content.
+        <p>
+          Initially, the content submitted to the Matryx platform will be intended to fulfill user-posted bounties. These bounties will request specific solutions to specific problems, ranging from mathematical proofs to 3D designs. Bounty posters may browse through an initial batch of submissions and select a winner. More importantly, a bounty poster may select a submission as the “parent” for a new batch of community revision. When the poster is satisfied, or another parameter is met, a winner is chosen. All contributors, not just the final submitter, are rewarded with MTX. Through this process of collaborative revision, the Matryx platform aims to cultivate an unrivaled database of quality content.
         </p>
       </div>
     </QA>
@@ -41,7 +43,7 @@
         How are bounty splits determined for collaborative solutions?
       </span>
       <p slot="answer">
-        Users must determine concise and transparent parameters for collaborative solutions prior to posting a bounty. By default, all contributors will share a bounty reward equally.
+        Users must determine concise and transparent parameters for collaborative solutions prior to posting a bounty. By default, all relevant contributors will share a bounty reward equally.
         <br/><br/>
         In the future, contributors will be able to suggest a percentage split of the bounty with their submissions. Users will be incentivized to post reasonable and fair split suggestions by a reputation system.
       </p>
