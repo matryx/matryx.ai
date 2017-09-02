@@ -1,25 +1,25 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Home from '@/views/Home'
-import FAQ from '@/views/FAQ'
+const Home = () => import('@/views/Home')
+const FAQ = () => import('@/views/FAQ')
 
-import About from '@/views/FAQ/About'
-import AboutQAs from '@/views/FAQ/About-QAs'
-import Contact from '@/views/FAQ/Contact'
-import ContactQAs from '@/views/FAQ/Contact-QAs'
-import General from '@/views/FAQ/General'
-import GeneralQAs from '@/views/FAQ/General-QAs'
-import Presale from '@/views/FAQ/Presale'
-import PresaleQAs from '@/views/FAQ/Presale-QAs'
-import SaleTerms from '@/views/FAQ/Sale-Terms'
-import SaleTermsQAs from '@/views/FAQ/Sale-Terms-QAs'
-import TokenSaleFAQ from '@/views/FAQ/Token-Sale'
-import TokenSaleFAQQA from '@/views/FAQ/Token-Sale-QAs'
-import Troubleshooting from '@/views/FAQ/Troubleshooting'
-import TroubleshootingQAs from '@/views/FAQ/Troubleshooting-QAs'
+const About = () => import('@/views/FAQ/About')
+const AboutQAs = () => import('@/views/FAQ/About-QAs')
+const Contact = () => import('@/views/FAQ/Contact')
+const ContactQAs = () => import('@/views/FAQ/Contact-QAs')
+const General = () => import('@/views/FAQ/General')
+const GeneralQAs = () => import('@/views/FAQ/General-QAs')
+const Presale = () => import('@/views/FAQ/Presale')
+const PresaleQAs = () => import('@/views/FAQ/Presale-QAs')
+const SaleTerms = () => import('@/views/FAQ/Sale-Terms')
+const SaleTermsQAs = () => import('@/views/FAQ/Sale-Terms-QAs')
+const TokenSaleFAQ = () => import('@/views/FAQ/Token-Sale')
+const TokenSaleFAQQA = () => import('@/views/FAQ/Token-Sale-QAs')
+const Troubleshooting = () => import('@/views/FAQ/Troubleshooting')
+const TroubleshootingQAs = () => import('@/views/FAQ/Troubleshooting-QAs')
 
-import ErrorPage from '@/views/ErrorPage'
+const ErrorPage = () => import('@/views/ErrorPage')
 
 Vue.use(Router)
 
