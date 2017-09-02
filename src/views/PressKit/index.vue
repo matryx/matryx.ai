@@ -59,7 +59,7 @@
           </div>
         </div>
         <a href="/presskit.zip" download="Matryx_Assets">
-          <button class="matryx-button matryx-button--blue">DOWNLOAD FULL PRESSKIT</button>
+          <button class="matryx-button matryx-button--blue">DOWNLOAD FULL PRESS KIT</button>
         </a>
       </div>
     </section>
