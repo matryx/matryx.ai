@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/views/Home/index'
 import FAQ from '@/views/FAQ/index'
 import TokenSale from '@/views/TokenSale/index'
+import PressKit from '@/views/PressKit/index'
 
 // import Accordion from '@/views/FAQ/Accordion'
 import About from '@/views/FAQ/Accordions/About'
@@ -53,6 +54,11 @@ export default new Router({
       path: '/404',
       name: 'ErrorPage',
       component: ErrorPage
+    },
+    {
+      path: '/press-kit',
+      name: 'PressKit',
+      component: PressKit
     },
     {
       path: '*',
