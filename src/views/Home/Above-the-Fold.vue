@@ -3,30 +3,47 @@
     <div class="token-sale content-container content-container--large ">
       <div class="token-sale__text content-container--medium text-color--white">
         <h1 class="font-size--large uppercase">
-          <span v-if=" language === 'ru' ">ПРИСОЕДИНЯЙТЕСЬ К НАШЕЙ ПРОДАЖЕ ТОКЕНОВ</span>
+          <span v-if=" language === 'ru' ">
+            ПРИСОЕДИНЯЙТЕСЬ К НАШЕЙ ПРОДАЖЕ ТОКЕНОВ
+          </span>
           <span v-else-if=" language === 'ch' ">参与我们的代币销售</span>
-          <span v-else-if=" language === 'ge' ">NEHMEN SIE AN UNSEREM TOKEN-VERKAUF TEIL</span>
+          <span v-else-if=" language === 'ge' ">
+            NEHMEN SIE AN UNSEREM TOKEN-VERKAUF TEIL
+          </span>
           <span v-else-if=" language === 'ja' ">当社のトークンセールに参加</span>
           <span v-else-if=" language === 'ko' ">저희 토큰 판매에 참여하세요</span>
           <span v-else>Join Our Token Sale</span>
         </h1>
         <p class="lead ">
-          <span v-if=" language === 'ru' ">Окажитесь в центре событий. Введите ваш адрес электронной почты, чтобы получать уведомления о начале нашей продажи токенов.</span>
+          <span v-if=" language === 'ru' ">
+            Окажитесь в центре событий. Введите ваш адрес электронной почты, чтобы получать уведомления о начале нашей продажи токенов.
+          </span>
           <span v-else-if=" language === 'ch' ">
             加入行动。输入您的电子邮箱，以便收到代币销售的相关更新。
           </span>
-          <span v-else-if=" language === 'ge' ">Seien Sie dabei. Geben Sie Ihre E-Mail ein, um zum Start unseres Token-Verkaufs benachrichtigt zu werden.</span>
+          <span v-else-if=" language === 'ge' ">
+            Seien Sie dabei. Geben Sie Ihre E-Mail ein, um zum Start unseres Token-Verkaufs benachrichtigt zu werden.
+          </span>
           <span v-else-if=" language === 'ja' ">
             アクションに参加してください。電子メールを入力して、トークンセールが開始されたときに通知を受けてください。
           </span>
-          <span v-else-if=" language === 'ko' ">수익활동에 참여하세요. 귀하의 이메일을 입력하시고 저희 토큰 판매의 런칭에 대한 알림을 받으세요.</span>
-          <span v-else>Join in on the action. Enter your email to be notified when our token sale launches.</span>
+          <span v-else-if=" language === 'ko' ">
+            수익활동에 참여하세요. 귀하의 이메일을 입력하시고 저희 토큰 판매의 런칭에 대한 알림을 받으세요.
+          </span>
+          <span v-else>
+            Join in on the action. Enter your email to be notified when our token sale launches.
+          </span>
         </p>
         <Countdown></Countdown>
         <Get-Notified ctaLocation="Above the Fold"></Get-Notified>
       </div>
       <div class="token-sale__video-launcher content-container--medium">
-        <iframe class="matryx-video-yt" width="560" height="315" src="https://www.youtube.com/embed/iLHlwnaqTWw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        <iframe class="matryx-video-yt"
+          width="560" height="315"
+          src="https://www.youtube.com/embed/iLHlwnaqTWw?rel=0&amp;showinfo=0" frameborder="0"
+          allowfullscreen
+        >
+        </iframe>
         <!-- <b v-b-modal.matryx-video> -->
           <!-- <img src="../../assets/images/videothumbnail.png" class="video-link-image" alt=""> -->
         <!-- </b> -->
@@ -51,11 +68,13 @@ export default {
     Countdown,
     GetNotified
   },
+
   computed: {
     language () {
       return this.$store.state.language
     }
   },
+
   data () {
     return {
       Video
