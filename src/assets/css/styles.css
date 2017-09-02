@@ -221,8 +221,33 @@ button, button:hover, button:active, button:focus {
   background-color: #80828D;
 }
 
+.bkg-color--matryx-darker-grey {
+  background-color: #3D454D;
+}
+
 .bkg-color--matryx-lighter-grey {
   background-color: #F4F4F4;
+}
+
+.bkg-color--matryx-blue {
+  background-color: #0086CB;
+}
+
+.bkg-color--matryx-light-blue {
+  background-color: #4EB1DE;
+}
+
+.bkg-color--matryx-blue-gradient {
+  background: #081f36;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #081f36 0%, #134863 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #081f36 0%, #134863 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #081f36 0%, #134863 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#081f36', endColorstr='#134863',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
 }
 
 .bkg-color--dark-blue-gradient {
@@ -330,6 +355,10 @@ h1.cd-headline.clip {
 
 .text-color--matryx-lighter-grey {
   color: #F4F4F4;
+}
+
+.text-color--matryx-grey-blue {
+  color: #829AB1;
 }
 
 .text-color--matryx-blue {
