@@ -7,7 +7,7 @@
           <p>For press inquiries, please
             <a class="text-color--matryx-blue" href="mailto:press@matryx.ai">contact press@matryx.ai</a>
           </p>
-          <a href="../../assets/presskit.zip" download="Matryx_Assets">
+          <a href="/presskit.zip" download="Matryx_Assets" target="_blank">
             <button class="matryx-button matryx-button--blue">DOWNLOAD FULL PRESSKIT</button>
           </a>
         </div>
@@ -58,7 +58,7 @@
           </Color>
           </div>
         </div>
-        <a href="@/assets/presskit.zip" download="Matryx_Assets">
+        <a href="/presskit.zip" download="Matryx_Assets">
           <button class="matryx-button matryx-button--blue">DOWNLOAD FULL PRESSKIT</button>
         </a>
       </div>
@@ -69,6 +69,8 @@
 <script>
 import Logo from '@/components/Presskit-Download'
 import Color from '@/components/Presskit-Color'
+
+// import MatryxAssets from '@/assets/presskit.zip'
 
 import blackFullPng from '@/assets/presskit/Matryx_Black_Full_Logo.png'
 import blackFullSvg from '@/assets/presskit/Matryx_Black_Full_Logo.svg'
