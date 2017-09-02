@@ -3,6 +3,8 @@ import Router from 'vue-router'
 
 const Home = () => import('@/views/Home')
 const FAQ = () => import('@/views/FAQ')
+const PressKit = () => import('@/views/PressKit/index')
+const TokenSale = () => import('@/views/TokenSale/index')
 
 const About = () => import('@/views/FAQ/About')
 const AboutQAs = () => import('@/views/FAQ/About-QAs')
@@ -136,10 +138,15 @@ export default new Router({
       path: '/404',
       name: 'ErrorPage',
       component: ErrorPage
+    },
+    {
+      path: '/press-kit',
+      name: 'PressKit',
+      component: PressKit
+    },
+    {
+      path: '*',
+      redirect: '/404'
     }
-    // {
-    //   path: '*',
-    //   redirect: '/404'
-    // }
   ]
 })
