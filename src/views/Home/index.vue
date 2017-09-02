@@ -46,14 +46,6 @@ import AboutMatryx from './About-Matryx'
 
 export default {
   name: 'home',
-  computed: {
-    language () {
-      return this.$store.state.language
-    }
-  },
-  data () {
-    return {}
-  },
 
   components: {
     AboutTokenSale,
