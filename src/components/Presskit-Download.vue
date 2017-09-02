@@ -68,6 +68,7 @@ export default {
     &__img {
       height: 16px;
       margin-top: 1px;
+      vertical-align:text-top;
     }
 
     &--svg, &--png {
