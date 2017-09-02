@@ -435,8 +435,8 @@ h1.cd-headline.clip {
 }
 
 .member__img {
-  max-height: 120px;
-  max-width: 120px;
+  min-width: 120px;
+  min-height: 120px;
   border-radius: 100%;
   margin-bottom: 7.5px;
 }

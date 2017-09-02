@@ -7,16 +7,17 @@
       </div>
 
       <div class="matryx-team__team">
-        <div class="matryx-team__team__members" v-for="member in team">
-          <Team-Member
-            :src="member.src"
-            :alt="member.name"
-            :name="member.name"
-            :title="member.title"
-            :linkedInLink="member.linkedInLink"
-            :twitterLink="member.twitterLink"
-          ></Team-Member>
-        </div>
+        <Team-Member class="matryx-team__team__members"
+          v-for="(member, index) in team"
+          :key="index"
+          :src="member.src"
+          :alt="member.name"
+          :name="member.name"
+          :title="member.title"
+          :linkedInLink="member.linkedInLink"
+          :twitterLink="member.twitterLink"
+          :githubLink="member.githubLink"
+        ></Team-Member>
       </div>
 
       <div class="matryx-advisors__title">
@@ -44,11 +45,11 @@ import AdvisorMember from '@/components/Advisors-Member'
 
 import Steve from '@/assets/images/team/steve.jpg'
 import Keita from '@/assets/images/team/keita.jpg'
-import Scott from '@/assets/images/team/scott.png'
+import Scott from '@/assets/images/team/Scott.png'
 import Adam from '@/assets/images/team/adam.jpg'
 import Edgardo from '@/assets/images/team/edgardo.jpg'
-import Kyle from '@/assets/images/team/kyle.png'
-import Vincent from '@/assets/images/team/vincent.png'
+import Kyle from '@/assets/images/team/Kyle.png'
+import Vincent from '@/assets/images/team/Vincent.png'
 
 import Kai from '@/assets/images/team/Kai.jpg'
 import Max from '@/assets/images/team/max.png'
@@ -114,7 +115,8 @@ export default {
         title: 'Chief Technology Officer',
         src: Vincent,
         linkedInLink: 'https://www.linkedin.com/in/vbrunet/',
-        twitterLink: 'https://www.twitter.com/seriousbrunet'
+        twitterLink: 'https://www.twitter.com/seriousbrunet',
+        githubLink: 'https://github.com/VincentBrunet'
       }, {
         name: 'Adam Simon',
         title: 'Project Developer',
@@ -131,8 +133,7 @@ export default {
         name: 'Kai Wang',
         title: 'VP Software Development',
         src: Kai,
-        linkedInLink: 'https://www.linkedin.com/in/kylelee4c5/',
-        twitterLink: ''
+        linkedInLink: 'https://www.linkedin.com/in/kylelee4c5/'
       }, {
         name: 'Dennis Chiang',
         title: 'Developer',
@@ -142,7 +143,8 @@ export default {
         name: 'Max Howard',
         title: 'Architect',
         src: Max,
-        linkedInLink: 'https://www.linkedin.com/in/maxwell-howard-b0a34798/'
+        linkedInLink: 'https://www.linkedin.com/in/maxwell-howard-b0a34798/',
+        githubLink: 'https://github.com/Astrovicis'
       }, {
         name: 'Edward Zhou',
         title: 'Developer',
