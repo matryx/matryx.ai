@@ -1,13 +1,15 @@
 <template lang="html">
   <section class="presale__summary content-container content-container--large">
-    <h2 class="section__header text--center title">
-      <span v-if=" language === 'ru' ">предпродажа</span>
-      <span v-else-if=" language === 'ch' ">预售</span>
-      <span v-else-if=" language === 'ge' ">Vorverkauf</span>
-      <span v-else-if=" language === 'ja' ">プリセール</span>
-      <span v-else-if=" language === 'ko' ">사전판매</span>
-      <span v-else>PRE-SALE</span>
-    </h2>
+    <router-link :to="{ name: 'PreSale' }">
+      <h2 class="section__header text--center title">
+        <span v-if=" language === 'ru' ">предпродажа</span>
+        <span v-else-if=" language === 'ch' ">预售</span>
+        <span v-else-if=" language === 'ge' ">Vorverkauf</span>
+        <span v-else-if=" language === 'ja' ">プリセール</span>
+        <span v-else-if=" language === 'ko' ">사전판매</span>
+        <span v-else>PRE-SALE</span>
+      </h2>
+    </router-link>
     <h3 class="sub-title text--center">
       <span v-if=" language === 'ru' ">6 сентября 2017 года</span>
       <span v-else-if=" language === 'ch' ">2017 年 9 月 6 日</span>
