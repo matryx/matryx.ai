@@ -48,20 +48,25 @@
 </template>
 
 <script>
-const end = 'September 13 2017 15:00:00 UTC'
-
 export default {
   name: 'Countdown',
 
+  props: {
+    end: {
+      type: String,
+      required: true
+    }
+  },
+
   data () {
     return {
-      time: Date.parse(end) - Date.parse(new Date())
+      time: Date.parse(this.end) - Date.parse(new Date())
     }
   },
 
   mounted () {
     window.setInterval(() => {
-      this.time = Date.parse(end) - Date.parse(new Date())
+      this.time = Date.parse(this.end) - Date.parse(new Date())
     }, 1000)
   },
 

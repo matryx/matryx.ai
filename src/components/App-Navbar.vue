@@ -38,6 +38,23 @@
               <span v-else>TOKEN SALE</span>
             </router-link >
           </li>
+
+          <li class="nav-item nav-link text-color--white"
+          >
+            <router-link aria-disabled="false"
+              to="/pre-sale"
+              target="_self"
+              class="nav-link"
+            >
+              <span v-if=" language === 'ru' ">предпродажа</span>
+              <span v-else-if=" language === 'ch' ">预售</span>
+              <span v-else-if=" language === 'ge' ">VORVERKAUF</span>
+              <span v-else-if=" language === 'ja' ">プリセール</span>
+              <span v-else-if=" language === 'ko' ">사전판매</span>
+              <span v-else>PRE-SALE</span>
+            </router-link >
+          </li>
+
           <li class="nav-item nav-link text-color--white">
             <router-link aria-disabled="false"
               to="/faq"

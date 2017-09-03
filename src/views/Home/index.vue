@@ -23,7 +23,7 @@
     <CTA-Banner :whiteBkg="true" cta-location="Bottom"></CTA-Banner>
     <Matryx-Team></Matryx-Team>
     <News-Events></News-Events>
-    <CTA-Banner :lighterText="true" :footerBkg="true" cta-location="Bottom" id="Footer"></CTA-Banner>
+<!--     <CTA-Banner :lighterText="true" :footerBkg="true" cta-location="Bottom" id="Footer"></CTA-Banner> -->
   </div>
 </template>
 
@@ -38,7 +38,6 @@ import NanomeInfo from './Nanome-Info'
 import NavbarSticky from './Navbar-Sticky'
 import NewsEvents from './News-Events'
 import Quotes from './Quotes'
-import CTABanner from '../../components/CTA-Banner'
 import NavbarToken from '../../components/Navbar-Tokensale'
 import PreSale from './Pre-Sale'
 import TokenSale from './Token-Sale'
@@ -57,7 +56,6 @@ export default {
     NanomeInfo,
     NavbarSticky,
     NewsEvents,
-    CTABanner,
     Quotes,
     NavbarToken,
     PreSale,
