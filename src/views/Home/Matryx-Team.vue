@@ -109,7 +109,8 @@ export default {
         title: 'Chief Experience Officer',
         src: Edgardo,
         linkedInLink: 'https://www.linkedin.com/in/edgardoLeija',
-        twitterLink: 'https://www.twitter.com/edgardoLeija'
+        twitterLink: 'https://www.twitter.com/edgardoLeija',
+        githubLink: 'https://github.com/e-matryx'
       }, {
         name: 'Vincent Brunet',
         title: 'Chief Technology Officer',
@@ -128,7 +129,8 @@ export default {
         title: 'Mathematician',
         src: Kyle,
         linkedInLink: 'https://www.linkedin.com/in/kai-wang-1155b064',
-        twitterLink: 'https://www.twitter.com/themrkylelee'
+        twitterLink: 'https://www.twitter.com/themrkylelee',
+        githubLink: 'https://github.com/k-matryx'
       }, {
         name: 'Kai Wang',
         title: 'VP Software Development',

@@ -44,8 +44,8 @@
         </b-nav-item>
         <b-nav-item class="nav-link text-color--matryx-grey"
           target="_blank"
-          href="/matryx-whitepaper.pdf"
-          @click="whitePaperClick"
+          :href="whitePaperHref"
+          @click="whitePaperClick(language)"
         >
           <span class="russian" v-if=" language === 'ru' ">техническую документацию</span>
           <span v-else-if=" language === 'ch' ">白皮书</span>
@@ -143,16 +143,24 @@ export default {
       this.$store.commit('showGetNotifiedModal', true)
     },
 
-    whitePaperClick () {
-      appAnalytics.whitePaperClick('Navbar')
+    whitePaperClick (language) {
+      appAnalytics.whitePaperClick(`Navbar - ${language}`)
     },
     changeLanguage () {
       this.$store.commit('setLanguage', this.selectedLanguage)
     }
   },
+
   computed: {
     language () {
       return this.$store.state.language
+    },
+
+    whitePaperHref () {
+      if (this.language === 'ch') {
+        return '/matryx-whitepaper-ch.pdf'
+      }
+      return '/matryx-whitepaper.pdf'
     }
   }
 }
