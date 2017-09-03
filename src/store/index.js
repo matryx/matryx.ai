@@ -10,6 +10,7 @@ export default new Vuex.Store({
   state: {
     showModal: false,
     showGetNotifiedModal: false,
+    showSaleModal: false,
     email: '',
     language: 'en'
   },
@@ -30,6 +31,11 @@ export default new Vuex.Store({
     },
     setLanguage (state, language) {
       state.language = language
+    },
+    showSaleModal (state, show) {
+      console.log('state', show)
+      state.showSaleModal = show
+      console.log('state', state.showSaleModal)
     }
   },
   strict: debug

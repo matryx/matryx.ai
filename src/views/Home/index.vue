@@ -2,6 +2,7 @@
   <div class="body-content">
     <Navbar-Token></Navbar-Token>
     <Navbar-Sticky></Navbar-Sticky>
+    <AboveTheFoldTokenSale></AboveTheFoldTokenSale>
     <Above-the-Fold></Above-the-Fold>
     <Media-Mentions></Media-Mentions>
     <About-Matryx></About-Matryx>
@@ -28,6 +29,9 @@
 </template>
 
 <script>
+// remove this from production:
+import AboveTheFoldTokenSale from './Above-the-Fold-tokensale'
+
 import AboutTokenSale from './About-Token-Sale'
 import AboveTheFold from './Above-the-Fold'
 import BountySystem from './Bounty-System'
@@ -48,6 +52,8 @@ export default {
   name: 'home',
 
   components: {
+    // remove from production
+    AboveTheFoldTokenSale,
     AboutTokenSale,
     AboveTheFold,
     BountySystem,

@@ -3,6 +3,7 @@
     <App-Navbar></App-Navbar>
 
     <Survey-Modal></Survey-Modal>
+    <Sale-Modal></Sale-Modal>
 
     <b-modal id="getNotified"
       v-model="showGetNotifiedModal"
@@ -30,6 +31,7 @@ import AppNavbar from './components/App-Navbar'
 import AppFooter from './components/App-Footer'
 import CTABanner from './components/CTA-Banner'
 import SurveyModal from './components/Survey-Modal'
+import SaleModal from './components/Sale-Modal'
 import VueSticky from 'vue-sticky' // Es6 module
 import { appAnalytics } from '@/analytics'
 
@@ -44,7 +46,8 @@ export default {
     AppNavbar,
     AppFooter,
     CTABanner,
-    SurveyModal
+    SurveyModal,
+    SaleModal
   },
 
   directives: {
