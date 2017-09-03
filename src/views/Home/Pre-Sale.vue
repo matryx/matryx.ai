@@ -1,5 +1,5 @@
 <template lang="html">
-  <section class="content-container content-container--large">
+  <section class="presale__summary content-container content-container--large">
     <h2 class="section__header text--center title">
       <span v-if=" language === 'ru' ">предпродажа</span>
       <span v-else-if=" language === 'ch' ">预售</span>
@@ -104,7 +104,7 @@ export default {
       icons: [
         {
           img: eth,
-          text: '75 ETH Minimum Purchase'
+          text: '75 ETH Minimum Purchase for Pre-Sale'
         },
         {
           img: discount10,
@@ -215,7 +215,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-section.content-container {
+section.presale__summary {
+  margin-top: 0;
   padding: 30px 0 30px;
 
   .title {

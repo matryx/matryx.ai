@@ -136,11 +136,16 @@
                 </p>
                 <caption>
                   <span v-if=" language === 'ru' ">Ознакомьтесь с технической документацией здесь </span>
-                	<span v-else-if=" language === 'ch' ">在此处阅读白皮书</span>
+                	<span v-else-if=" language === 'ch' ">
+                    <a href="/matryx-whitepaper-ch.pdf" target="_blank" @click="whitePaperClick('ch')"
+                    >
+                    在此处阅读白皮书
+                    </a>
+                  </span>
                 	<span v-else-if=" language === 'ge' ">Lesen Sie das White Paper hie</span>
                 	<span v-else-if=" language === 'ja' ">ホワイトペーパーを読む</span>
                 	<span v-else-if=" language === 'ko' ">여기에서 백서를 읽어보세요</span>
-                	<span v-else>Read the white paper <a href="/matryx-whitepaper.pdf" target="_blank" @click="whitePaperClick">here</a></span>
+                	<span v-else>Read the white paper <a href="/matryx-whitepaper.pdf" target="_blank" @click="whitePaperClick('en')">here</a></span>
                 </caption>
                 <br/>
               </div>
@@ -310,8 +315,8 @@ export default {
   name: 'AboutTokenSale',
 
   methods: {
-    whitePaperClick () {
-      appAnalytics.whitePaperClick('Roadmap')
+    whitePaperClick (language) {
+      appAnalytics.whitePaperClick(`Roadmap - ${language}`)
     }
   },
   computed: {

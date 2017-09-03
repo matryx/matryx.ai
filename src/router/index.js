@@ -29,7 +29,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'Home',
       component: Home,
       scrollBehavior (to, from, savedPosition) {
         if (savedPosition) {
@@ -38,6 +38,14 @@ export default new Router({
           return { x: 0, y: 0 }
         }
       }
+    },
+    {
+      path: '/tokensale',
+      redirect: 'Home'
+    },
+    {
+      path: '/token-sale',
+      redirect: 'Home'
     },
     {
       path: '/faq',
@@ -134,11 +142,6 @@ export default new Router({
       ]
     },
     {
-      path: '/404',
-      name: 'ErrorPage',
-      component: ErrorPage
-    },
-    {
       path: '/press-kit',
       name: 'PressKit',
       component: PressKit
@@ -146,6 +149,11 @@ export default new Router({
     {
       path: '/presskit',
       redirect: '/press-kit'
+    },
+    {
+      path: '/404',
+      name: 'ErrorPage',
+      component: ErrorPage
     },
     {
       path: '*',
