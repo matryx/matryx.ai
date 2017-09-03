@@ -118,9 +118,11 @@
               Once a problem is solved, rewards and recognition are given to all winning contributors, not just the last contributor, for fairness and transparency.
           	</span>
           </p>
-          <a href="/matryx-whitepaper.pdf" target="_blank" @click="whitePaperClick">
+          <a :href="href" target="_blank" @click="whitePaperClick(language)">
             <button class="btn-red whitepaper-btn">
-              <span v-if=" language === 'ru' ">Прочитайте техническую документацию</span>
+              <span v-if=" language === 'ru' ">
+                Прочитайте техническую документацию
+              </span>
             	<span v-else-if=" language === 'ch' ">阅读白皮书</span>
             	<span v-else-if=" language === 'ge' ">Lesen Sie das White Paper</span>
             	<span v-else-if=" language === 'ja' ">ホワイトペーパーを読む</span>
@@ -143,14 +145,21 @@ export default {
   name: 'CompanyOverview',
 
   methods: {
-    whitePaperClick () {
-      appAnalytics.whitePaperClick('What-Is-Matryx')
+    whitePaperClick (language) {
+      appAnalytics.whitePaperClick(`What-Is-Matryx - ${language}`)
     }
   },
 
   computed: {
     language () {
       return this.$store.state.language
+    },
+
+    href () {
+      if (this.language === 'ch') {
+        return '/matryx-whitepaper-ch.pdf'
+      }
+      return '/matryx-whitepaper.pdf'
     }
   }
 }

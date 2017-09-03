@@ -180,9 +180,14 @@ export default {
     padding: 0 10px;
     background-color: transparent;
 
-    // .navbar-collapse {
-    //   height: 60px;
-    // }
+    .text-color--white > .nav-link {
+      color: #FFF;
+      font-size: 11px;
+    }
+
+    .navbar-collapse {
+      height: 60px;
+    }
 
     .nav-item{
       height: 100%;

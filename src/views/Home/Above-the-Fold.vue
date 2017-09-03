@@ -40,7 +40,7 @@
       <div class="token-sale__video-launcher content-container--medium">
         <iframe class="matryx-video-yt"
           width="560" height="315"
-          src="https://www.youtube.com/embed/iLHlwnaqTWw?rel=0&amp;showinfo=0" frameborder="0"
+          :src="selectedLanguage" frameborder="0"
           allowfullscreen
         >
         </iframe>
@@ -72,12 +72,20 @@ export default {
   computed: {
     language () {
       return this.$store.state.language
+    },
+
+    selectedLanguage () {
+      return this.language === 'ch' ? this.VideoLinks.Chinese : this.VideoLinks.English
     }
   },
 
   data () {
     return {
-      Video
+      Video,
+      VideoLinks: {
+        English: 'https://www.youtube.com/embed/iLHlwnaqTWw?rel=0&amp;showinfo=0',
+        Chinese: 'http://player.youku.com/embed/XMzAwNDA0MTQzNg=='
+      }
     }
   }
 }
