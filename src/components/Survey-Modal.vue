@@ -57,6 +57,9 @@
   				<span v-else>Please select a value</span>
         </p>
 
+        <!-- The voice of the bell at gion shrine -->
+        <!-- echoes with the impermanence of all things -->
+
         <form class="survey-form">
           <div v-for="(amt, index) in amounts">
             <input :id="index"
@@ -86,6 +89,8 @@
     				<span v-else-if=" language === 'ko' ">제출</span>
     				<span v-else>Submit</span>
           </button>
+
+          <div>* Purchase amounts of 75 ETH or more are eligible for our pre-sale.</div>
         </form>
       </div>
     </b-modal>
@@ -232,6 +237,7 @@ export default {
 
     .btn-survey-submit {
       margin-top: 20px;
+      margin-bottom: 20px;
       padding: 10px;
       transition: all 0.3s ease-in-out;
       border-radius: 20px;
