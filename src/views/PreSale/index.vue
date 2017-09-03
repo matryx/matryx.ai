@@ -81,7 +81,7 @@
         {{ message }}
       </h2>
       <Countdown :end="end" class="presale__countdown"></Countdown>
-      <h2>
+      <h2 class="text-center">
         Sign up if you're interested in participating in the Pre-Sale
       </h2>
       <Get-Notified ctaLocation="Pre-Sale"></Get-Notified>
