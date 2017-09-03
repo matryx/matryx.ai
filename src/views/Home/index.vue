@@ -5,12 +5,12 @@
     <Above-the-Fold></Above-the-Fold>
     <Media-Mentions></Media-Mentions>
     <About-Matryx></About-Matryx>
-    <Pre-Sale></Pre-Sale>
+    <Token-Sale></Token-Sale>
     <div class="cta-middle-banner">
       <CTA-Banner :lighterText="true" :blueBkg="true" cta-location="Top"></CTA-Banner>
     </div>
     <div class="bkg-color--matryx-lighter-grey">
-      <Token-Sale></Token-Sale>
+      <Pre-Sale></Pre-Sale>
     </div>
     <About-Token-Sale></About-Token-Sale>
     <div class="cta-middle-banner">
