@@ -5,7 +5,7 @@
       v-b-toggle="cssId"
       @click.prevent="changeRoute"
     >
-      <slot name="question"></slot>
+      <slot name="question" class="faq__accordion__question"></slot>
 
       <span class="accordion-toggle__circle"></span>
       <span class="accordion-toggle__plus icon-bar"></span>
@@ -66,4 +66,8 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+  .faq__accordion__question {
+    text-transform: uppercase;
+  }
+</style>

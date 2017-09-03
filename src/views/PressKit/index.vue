@@ -7,8 +7,8 @@
           <p>For press inquiries, please
             <a class="text-color--matryx-blue" href="mailto:press@matryx.ai">contact press@matryx.ai</a>
           </p>
-          <a href="/presskit.zip" download="Matryx_Assets" target="_blank">
-            <button class="matryx-button matryx-button--blue">DOWNLOAD FULL PRESSKIT</button>
+          <a href="/Matryx_Assets.zip" download="Matryx_Assets">
+            <button class="matryx-button matryx-button--blue">DOWNLOAD FULL PRESS KIT</button>
           </a>
         </div>
       </section>
@@ -58,8 +58,8 @@
           </Color>
           </div>
         </div>
-        <a href="/presskit.zip" download="Matryx_Assets">
-          <button class="matryx-button matryx-button--blue">DOWNLOAD FULL PRESSKIT</button>
+        <a href="/Matryx_Assets.zip" download="Matryx_Assets">
+          <button class="matryx-button matryx-button--blue">DOWNLOAD FULL PRESS KIT</button>
         </a>
       </div>
     </section>
