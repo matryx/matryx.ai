@@ -238,7 +238,6 @@ export default {
 
       &:hover {
         background-color: $matryx-blue;
-        color: $matryx-dark-grey;
       }
 
       .btn-group > .btn:first-child {
