@@ -301,7 +301,6 @@ export default {
     align-items: center;
     justify-content: center;
     padding-top: 80px;
-    margin-bottom: -100px;
 
     .cta__form .cta__form__email {
       border: 1px solid $matryx-blue;
