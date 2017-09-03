@@ -22,7 +22,8 @@
         </span>
       </p>
       <a class="press-logo" href="https://tokenmarket.net/blockchain/ethereum/assets/matryx/" target="_blank">
-        <img src="../../assets/images/press/tokenmarket.png" alt="Token Market">
+        <img src="../../assets/images/press/tokenmarket.png"
+          alt="Token Market" class="token-market-logo">
       </a>
       <a class="press-logo" href="https://www.gizmodo.com.au/2017/01/you-can-do-maths-in-virtual-reality-now/" target="_blank">
         <img src="../../assets/images/press/gizmodo.png" alt="Gizmodo">
@@ -87,6 +88,10 @@ export default {
     img {
       max-width: 200px;
       padding: 10px;
+    }
+
+    .token-market-logo {
+      padding: 40px;
     }
   }
 }
