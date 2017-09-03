@@ -222,7 +222,7 @@ button, button:hover, button:active, button:focus {
 }
 
 .bkg-color--matryx-darker-grey {
-  background-color: #3D454D;
+  background-color: #3B3C3F;
 }
 
 .bkg-color--matryx-lighter-grey {
@@ -283,6 +283,10 @@ button, button:hover, button:active, button:focus {
   max-width: 1200px;
 }
 
+.content-container--xlarge {
+  max-width: 1400px;
+}
+
 /*cd-word-wrapper*/
 h1.cd-headline.clip {
   line-height: 90px;
@@ -338,7 +342,7 @@ h1.cd-headline.clip {
 }
 
 .text-color--matryx-darker-grey {
-  color: #3D454D;
+  color: #3B3C3F;
 }
 
 .text-color--matryx-dark-grey {
@@ -460,9 +464,9 @@ h1.cd-headline.clip {
 }
 
 .member__img {
-  min-width: 120px;
   min-height: 120px;
-  border-radius: 100%;
+  width: 120px;
+  border-radius: 50%;
   margin-bottom: 7.5px;
 }
 

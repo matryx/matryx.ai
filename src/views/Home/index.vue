@@ -71,6 +71,15 @@ export default {
     AboutMatryx
   },
 
+  beforeRouteUpdate (to, from, next) {
+    this.$store.commit('setAppNavVisibility', true)
+    next()
+  },
+  beforeRouteLeave (to, from, next) {
+    this.$store.commit('setAppNavVisibility', false)
+    next()
+  },
+
   mounted () {
     document.title = 'Matryx: A Decentralized Collaboration Platform'
 

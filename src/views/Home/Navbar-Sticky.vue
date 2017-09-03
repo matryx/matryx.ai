@@ -13,17 +13,7 @@
 
       <b-nav is-nav-bar>
         <b-nav-item
-          class="nav-link text-color--matryx-grey nav-link--mobile-hide"
-          href="#about-token-sale">
-          <span class="russian" v-if=" language === 'ru' ">ПРОДАЖА ТОКЕНОВ</span>
-          <span v-else-if=" language === 'ch' ">代金券销售</span>
-          <span v-else-if=" language === 'ge' ">TOKEN-VERKAUF</span>
-          <span v-else-if=" language === 'ja' ">トークンセール</span>
-          <span v-else-if=" language === 'ko' ">토큰판매</span>
-          <span v-else>TOKEN SALE</span>
-        </b-nav-item>
-        <b-nav-item
-          class="nav-link text-color--matryx-grey nav-link--mobile-hide"
+          class="text-color--matryx-grey nav-link--mobile-hide"
           href="#what-is-matryx">
           <span class="russian" v-if=" language === 'ru' ">относительно</span>
           <span v-else-if=" language === 'ch' ">关于</span>
@@ -33,7 +23,7 @@
           <span v-else>ABOUT</span>
         </b-nav-item>
         <b-nav-item
-          class="nav-link text-color--matryx-grey nav-link--mobile-hide"
+          class="text-color--matryx-grey nav-link--mobile-hide"
           href="#bounty-system">
           <span class="russian" v-if=" language === 'ru' ">системы вознаграждений</span>
           <span v-else-if=" language === 'ch' ">奖励金制度</span>
@@ -42,7 +32,7 @@
           <span v-else-if=" language === 'ko' ">는 포상 제도</span>
           <span v-else>BOUNTY SYSTEM</span>
         </b-nav-item>
-        <b-nav-item class="nav-link text-color--matryx-grey"
+        <b-nav-item class="text-color--matryx-grey"
           target="_blank"
           href="/matryx-whitepaper.pdf"
           @click="whitePaperClick"
@@ -56,7 +46,7 @@
         </b-nav-item>
 
         <!-- Only Mobile View -->
-        <b-nav-item href="mailto:team@matryx.ai?subject=Matryx Token Sale" class="nav-link text-color--matryx-grey nav-link--mobile-only">
+        <b-nav-item href="mailto:team@matryx.ai?subject=Matryx Token Sale" class="text-color--matryx-grey nav-link--mobile-only">
           <span v-if=" language === 'ru' ">контакты</span>
           <span v-else-if=" language === 'ch' ">联系人</span>
           <span v-else-if=" language === 'ge' ">KONTAKT</span>
@@ -64,7 +54,7 @@
           <span v-else-if=" language === 'ko' ">연락처</span>
           <span v-else>CONTACT</span>
         </b-nav-item>
-        <b-nav-item href="https://blog.matryx.ai/" target="_blank" class="nav-link text-color--matryx-grey nav-link--mobile-only">
+        <b-nav-item href="https://blog.matryx.ai/" target="_blank" class="text-color--matryx-grey nav-link--mobile-only">
           <span v-if=" language === 'ru' ">блог</span>
           <span v-else-if=" language === 'ch' ">博客</span>
           <span v-else-if=" language === 'ge' ">BLOG</span>
@@ -72,14 +62,17 @@
           <span v-else-if=" language === 'ko' ">블로그</span>
           <span v-else>BLOG</span>
         </b-nav-item>
-<!--         <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">FAQ</b-nav-item> -->
-        <b-nav-item class="nav-item-language nav-link--mobile-only"><!--  -->
+        <b-nav-item href="/faq/about/what-is-matryx" target="_blank" class="text-color--matryx-grey nav-link--mobile-only">
+          <span>FAQ</span>
+        </b-nav-item>
+        <b-nav-item class="nav-item-language nav-link--mobile-only">
           <b-form-select
             v-model="selectedLanguage"
             :options="languages"
             @input="changeLanguage">
           </b-form-select>
         </b-nav-item>
+
 
        <!-- REMOVED MOBILE ITEMS
        <b-nav-item href="#" class="nav-link text-color--matryx-grey nav-link--mobile-only">PRESS</b-nav-item>
@@ -162,9 +155,15 @@ export default {
 @import '../../assets/css/styles';
 
 #nav {
-  ul.nav.navbar-nav {
+  box-shadow: 0px 1px 10px #bdbdbd;
+  width: 100%;
+  z-index: 2;
+  padding: 0 10px;
+  margin: 0;
+
+  /*ul.nav.navbar-nav {
     width: 700px;
-  }
+  }*/
 
   .russian {
     font-size: 10px;
@@ -174,36 +173,25 @@ export default {
     font-size: 10px;
   }
 
-  box-shadow: 0px 1px 10px #bdbdbd;
-  width: 100%;
-  z-index: 2;
-  padding: 0 10px;
-  margin: 0;
-
-  .navbar.navbar-light .nav-link {
-    line-height: 20px;
-    margin: 7.5px 2.5px 5px 7.5px;
-  }
-
-  .navbar-toggleable-sm .navbar-nav .nav-link {
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-  }
-
   .nav-link--mobile-only {
     display:none;
   }
 
   .nav-link{
     transition: all 0.3s;
-    padding: 5px 3px;
-    border-radius: 5px;
+    padding: 5px 10px;
     text-transform: uppercase;
     line-height: 40px;
     font-size: 11.5px;
 
+    height: 100%;
+    line-height: 50px;
+    margin: 0;
+
     &:hover {
       cursor: pointer;
+      background-color: $matryx-grey;
+      color: #fff;
     }
 
     &.text-color--white a.nav-link{
@@ -212,10 +200,6 @@ export default {
   }
   .nav-item.nav-item-language {
     padding: 17px 0;
-
-    a.nav-link {
-
-    }
 
     select.form-control.custom-select {
       border: 1px solid rgba(0,0,0,0.1);
@@ -252,24 +236,7 @@ export default {
       min-width: 184px;
     }
   }
-  .social-icon-holder {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .social-icon {
-    background-color: transparent;
-    height: 60px;
-    width: 60px;
-    margin: 0;
-    padding: 10px 0px;
-
-    a {
-      line-height: 30px;
-    }
-  }
-
+  
   .nav-link {
     font-size: 11.5px;
     line-height: 40px;
@@ -373,15 +340,82 @@ nav {
 @media screen and (max-width: 767px) {
   #nav {
     padding: 10px;
-  }
-  #nav .navbar.navbar-light .nav-link {
-    line-height: 15px;
-  }
-  #nav .nav-link--mobile-only {
-    display:block;
-  }
-  #nav .nav-link--mobile-hide {
-    display:none;
+    padding-left: 0;
+
+    .navbar.navbar-light {
+
+      .nav-item {
+        width: 100%;
+        height: 40px;
+
+        .nav-link {
+          width: 100%;
+          height: 100%;
+          line-height: 30px;
+          margin: 0;
+          padding: 5px 0 5px 20px !important;
+
+          &:hover {
+            background-color: $matryx-grey;
+            color: #FFF;
+            border-radius: 0;
+          }
+        }
+      }
+
+      .nav-item.nav-item-language {
+        padding: 0px 0 0;
+        width: 140px;
+
+        .nav-link:hover {
+          background-color: transparent !important;
+        }
+
+        select.form-control.custom-select {
+          border: 1px solid #fff;
+          height:29px;
+          font-size: 13px;
+          border: 1px solid rgba(0,0,0,0.1);
+          border-radius: 40px;
+          height:30px;
+          width: 140px;
+          padding-left: 20px;
+          text-transform: uppercase;
+        }
+      }
+
+      .nav-item.get-notified {
+        margin-top: 10px;
+
+        .nav-link {
+          padding-left: 10px;
+          &:hover {
+            background-color: transparent !important;
+          }
+          button {
+            height: 30px;
+            font-size: 13px;
+          }
+        }
+
+      }
+
+    }
+    #nav-toggle {
+      margin-top: 10px;
+    }
+
+    .navbar-brand {
+      margin-left: 20px;
+    }
+
+    .nav-link--mobile-only {
+      display:block;
+    }
+
+    .nav-link--mobile-hide {
+      display:none;
+    }
   }
 }
 
