@@ -19,45 +19,30 @@
         <div class="salemodal__body__terms">
           <br/>
           <h3 class="text-color--matryx-grey-blue">MATRYX TOKEN SALE TERMS</h3>
-          <div class="salemodal__body__terms__document" id="sale-terms">{{ tokenSaleTerms }}</div>
+          <div class="salemodal__body__terms__document" id="sale-terms">
+            {{ tokenSaleTerms }}
+          </div>
           <div class="salemodal__body__terms__checklist">
-
-            <input type="checkbox"
-              id="saleTermsRead"
-              value="saleTermsRead"
-              v-model="saleTermsRead.checked"
-              :disabled="!saleTermsRead.enable"
-            >
-            <label for="saleTermsRead" >
-              I have read and agree to the Sale Terms of the Matryx Token Sale
-            </label>
-
-            <input type="checkbox"
-              id="erc20WalletAddress"
-              value="erc20WalletAddress"
-              v-model="erc20WalletAddress.checked"
-              :disabled="!erc20WalletAddress.enable"
-            >
-            <label for="erc20WalletAddress" >I understand and agree that I must use a valid ERC20 compatible wallet address
-            </label>
-
-            <input type="checkbox"
-              id="noExchangeAddress"
-              value="noExchangeAddress"
-              v-model="noExchangeAddress.checked"
-              :disabled="!noExchangeAddress.enable"
-            >
-            <label for="noExchangeAddress">I understand and agree that the address I use must not be an exchange address
-            </label>
-
-            <input type="checkbox"
-              id="havePrivateKeys"
-              value="havePrivateKeys"
-              v-model="havePrivateKeys.checked"
-              :disabled="!havePrivateKeys.enable"
-            >
-            <label for="havePrivateKeys">I understand and agree that if I use an exchange address I must own the private keys
-            </label>
+            <Checkbox name="saleTermsRead" :obj="saleTermsRead">
+              <span slot="label">
+                I have read and agree to the Sale Terms of the Matryx Token Sale
+              </span>
+            </Checkbox>
+            <Checkbox name="erc20WalletAddress" :obj="erc20WalletAddress">
+              <span slot="label">
+                I understand and agree that I must use a valid ERC20 compatible wallet address
+              </span>
+            </Checkbox>
+            <Checkbox name="noExchangeAddress" :obj="noExchangeAddress">
+              <span slot="label">
+                I understand and agree that the address I use must not be an exchange address
+              </span>
+            </Checkbox>
+            <Checkbox name="havePrivateKeys" :obj="havePrivateKeys">
+              <span slot="label">
+                I understand and agree that if I use an exchange address I must own the private keys
+              </span>
+            </Checkbox>
 
             <div class="terms-email">
               <input class="terms-email--input" type="text" placeholder="Email Address" v-model="email"/>
@@ -72,24 +57,9 @@
             </button>
           </div>
         </div>
-        <div class="salemodal__body__address">
-          <h2 class="text-color--matryx-grey-blue">SALE CONTRACT</h2>
-          <form>
-            <label for="contract-address">Contract Address</label>
-            <input type="text" id="contract-address" v-model="contractAddress">
 
-            <label for="data-field">Data Field</label>
-            <input type="text" id="data-field" v-model="dataField">
-
-            <label for="gas">Gas</label>
-            <input type="text" id="gas" v-model="gas">
-          </form>
-          <h4>How to Participate Using:</h4>
-          <hr>
-          <p><a href="#" class="text-color--matryx-blue">MetaMask &rsaquo;</a></p>
-          <p><a href="#" class="text-color--matryx-blue">Mist &rsaquo;</a></p>
-          <p><a href="#" class="text-color--matryx-blue">MyEtherWallet &rsaquo;</a></p>
-        </div>
+        <Sale-Modal-Contract-Info class="salemodal__body__address">
+        </Sale-Modal-Contract-Info>
       </div>
     </div>
     </b-modal>
@@ -99,8 +69,17 @@
 <script>
 import { appAnalytics } from '@/analytics'
 import { mapState } from 'vuex'
+import Checkbox from '@/components/Checkbox'
+import SaleModalContractInfo from '@/components/Sale-Modal-Contract-Info'
 
 export default {
+  name: 'SaleModal',
+
+  components: {
+    Checkbox,
+    SaleModalContractInfo
+  },
+
   data () {
     return {
       tokenSaleTerms: `ipsum aute excepteur dolor ullamco nulla quis. Aliquip non excepteur in aliquip occaecat dolore aute anim qui in do nisi exercitation. Pariatur elit occaecat dolor magna ad fugiat dolor fugiat. Pariatur fugiat et minim ut elit cillum dolor ut occaecat cillum reprehenderit exercitation. Adipisicing anim mollit aliquip et fugiat eiusmod deserunt esse pariatur dolore occaecat anim dolor quis velit veniam culpa. Ex eu enim cillum voluptate veniam tempor cillum incididunt eiusmod irure qui. Mollit quis non aliqua ad elit pariatur velit aliquip velit ut. Ea qui ut tempor adipisicing incididunt labore adipisicing dolor nisi ipsum labore nostrud. In aliqua Lorem minim Lorem ea exercitation laborum tempor sit esse est anim dolor. Quis cillum nostrud aliquip labore in sit officia mollit ipsum excepteur irure. Magna esse ipsum nulla aliquip veniam do consectetur magna ex minim id mollit anim aliqua.lor nisi ipsum labore nostrud. In aliqua Lorem minim Lorem ea exercitation laborum tempor sit esse est anim dolor. Quis cillum nostrud aliquip labore in sit officia mollit ipsum excepteur irure. Magna esse ipsum nulla aliquip veniam do consectetur magna ex minim id mollit anim aliqua. Sit exercitation non id dolore consectetur est tempor culpa elit magna amet ea. Id ullamco pariatur magna ut cupidatat anim non adipisicing. Commodo ex non velit dolor elit do esse veniam tempor mollit eiusmod minim exercitation. Adipisicing elit sunt proident dolor commodo sunt aute aliqua duis anim dolore aliquip eiusmod. Ei Sit exercitation non id dolore consectetur est tempor culpa elit magna amet ea. Id ullamco pariatur magna ut cupidatat anim non adipisicing. Commodo ex non velit dolor elit do esse veniam tempor mollit eiusmod minim exercitation. Adipisicing elit sunt proident dolor commodo sunt aute aliqua duis anim dolore aliquip eiusmod. Eiusmod excepteur nulla qui veniam in amet culpa ad dolore adipisicing non dolore id irure magna. Fugiat cupidatat aliquip eu adipisicing aliquip incididunt reprehenderit sint. Nostrud fugiat eiusmod officia cillum sint fugiat Lorem ut minim et sunt.'`,
@@ -144,6 +123,12 @@ export default {
   methods: {
     handleSubmit () {
       appAnalytics.surveyModal(this.email, this.intendedAmount)
+
+      if (this.allChecked) {
+        console.log('wheeee')
+      } else {
+        console.log('boooo')
+      }
       // // Check for checkmarks
       // if () {
       //   // Show next page
@@ -199,6 +184,15 @@ section.sale-modal {
   border-radius: 10px;
   overflow: hidden;
   background-color: #fff;
+
+  .matryx-button--blue {
+    max-width: 300px;
+
+    &:hover {
+      background-color: $light-green;
+      border-color: $light-green;
+    }
+  }
 
   .salemodal__header {
     height:50px;
@@ -287,76 +281,15 @@ section.sale-modal {
           text-align:left;
           padding: 10px 20px;
         }
+      }
 
-        input[type="checkbox"] {
-          display: none;
-        }
-        input[type="checkbox"]:disabled + label {
-          color: $matryx-grey;
-
-          &::after, &::before {
-            border: 1px solid $matryx-lighter-grey;
-          }
-        }
-        input[type="checkbox"]:checked + label {
-          &::after {
-            background-color: $matryx-blue;
-          }
-          &::before {
-            color: #fff;
-            content: '\2713';
-            font-size: 16px;
-            left: -29px;
-            top: 1px;
-            z-index: 2;
-          }
-        }
-        label {
-          position:relative;
-          left: 30px;
-          margin-bottom: 10px;
-
-          &::after, &::before {
-            content: '';
-            position:absolute;
-            top: 0;
-            left: -30px;
-            height:20px;
-            width: 20px;
-          }
-          &::after {
-            border: 1px solid $matryx-blue;
-          }
-        }
+      &__address {
+        display: none;
       }
     }
-    &__address {
-      display:none;
-        h2 {
-
-        }
-        form {
-          label {
-
-          }
-          input {
-
-          }
-        }
-        h4 {
-
-        }
-        p {
-          a {
-
-          }
-        }
-      }
   }
 }
 
-.matryx-button--blue {
-  max-width: 300px;
-}
+
 
 </style>
