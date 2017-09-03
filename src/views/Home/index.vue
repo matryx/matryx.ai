@@ -5,12 +5,12 @@
     <Above-the-Fold></Above-the-Fold>
     <Media-Mentions></Media-Mentions>
     <About-Matryx></About-Matryx>
-    <Token-Sale></Token-Sale>
+    <Pre-Sale></Pre-Sale>
     <div class="cta-middle-banner">
       <CTA-Banner :lighterText="true" :blueBkg="true" cta-location="Top"></CTA-Banner>
     </div>
     <div class="bkg-color--matryx-lighter-grey">
-      <Pre-Sale></Pre-Sale>
+      <Token-Sale></Token-Sale>
     </div>
     <About-Token-Sale></About-Token-Sale>
     <div class="cta-middle-banner">
@@ -23,7 +23,7 @@
     <CTA-Banner :whiteBkg="true" cta-location="Bottom"></CTA-Banner>
     <Matryx-Team></Matryx-Team>
     <News-Events></News-Events>
-    <CTA-Banner :lighterText="true" :footerBkg="true" cta-location="Bottom" id="Footer"></CTA-Banner>
+<!--     <CTA-Banner :lighterText="true" :footerBkg="true" cta-location="Bottom" id="Footer"></CTA-Banner> -->
   </div>
 </template>
 
@@ -38,8 +38,8 @@ import NanomeInfo from './Nanome-Info'
 import NavbarSticky from './Navbar-Sticky'
 import NewsEvents from './News-Events'
 import Quotes from './Quotes'
-import CTABanner from '../../components/CTA-Banner'
-import NavbarToken from '../../components/Navbar-Tokensale'
+import CTABanner from '@/components/CTA-Banner'
+import NavbarToken from '@/components/Navbar-Tokensale'
 import PreSale from './Pre-Sale'
 import TokenSale from './Token-Sale'
 import AboutMatryx from './About-Matryx'
@@ -57,8 +57,8 @@ export default {
     NanomeInfo,
     NavbarSticky,
     NewsEvents,
-    CTABanner,
     Quotes,
+    CTABanner,
     NavbarToken,
     PreSale,
     TokenSale,

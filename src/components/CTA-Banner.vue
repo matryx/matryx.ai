@@ -96,15 +96,6 @@ export default {
   padding: 80px 0px;
 }
 
-#Footer {
-  background-position: top;
-  padding-top: 80px;
-  position: relative;
-  bottom: -110px;
-  padding-bottom: 60px;
-  margin-bottom: 0;
-}
-
 .grey-bkg {
   background-image: url('../assets/images/backgrounds/greywave.svg');
   background-size:cover;
@@ -149,10 +140,6 @@ export default {
 }
 
 @media screen and (max-width: 550px) {
-  #Footer {
-    bottom: -220px;
-    padding: 100px 0 170px;
-  }
 
  .cta-middle-banner .cta-banner  {
     position: relative;

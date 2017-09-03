@@ -60,11 +60,11 @@ section.content-container {
     font-size: 46px;
     margin-bottom: 20px;
   }
+}
 
-  @media screen and (max-width: 850px) {
-    section.content-container {
-      padding: 40px;
-    }
+@media screen and (max-width: 850px) {
+  section.content-container {
+    padding: 40px;
   }
 }
 </style>

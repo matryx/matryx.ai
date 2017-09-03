@@ -2,7 +2,6 @@
   <div id="sub-nav" class="bkg-color--dark-blue-gradient" :class="{ 'mobile-hide' : isHome }">
     <b-navbar toggleable toggle-breakpoint="sm" class="content-container content-container--xlarge">
       <b-nav-toggle target="sub-nav-toggle"></b-nav-toggle>
-
       <b-navbar-brand>
         <a href="/" target="_self" class="navbar-brand">
           <img src="../assets/images/Matryx-Mark-White.png" alt="Matryx">
@@ -28,8 +27,19 @@
           <b-nav-item class="text-color--white"
             aria-disabled="false"
             href="/faq/about/what-is-matryx"
+            target="_self"
           >
             <span>FAQ</span>
+          </b-nav-item>
+          <b-nav-item class="text-color--white"
+            href="/press-kit"
+          >
+            <span v-if=" language === 'ru' ">для прессы</span>
+            <span v-else-if=" language === 'ch' ">新闻报道</span>
+            <span v-else-if=" language === 'ge' ">PRESSE</span>
+            <span v-else-if=" language === 'ja' ">プレス</span>
+            <span v-else-if=" language === 'ko' ">보도자료</span>
+            <span v-else>PRESS</span>
           </b-nav-item>
           <b-nav-item class="text-color--white"
             aria-disabled="false"
@@ -54,16 +64,6 @@
             <span v-else-if=" language === 'ja' ">ブログ</span>
             <span v-else-if=" language === 'ko' ">블로그</span>
             <span v-else>BLOG</span>
-          </b-nav-item>
-          <b-nav-item class="text-color--white"
-            href="#news-events"
-          >
-            <span v-if=" language === 'ru' ">для прессы</span>
-            <span v-else-if=" language === 'ch' ">新闻报道</span>
-            <span v-else-if=" language === 'ge' ">PRESSE</span>
-            <span v-else-if=" language === 'ja' ">プレス</span>
-            <span v-else-if=" language === 'ko' ">보도자료</span>
-            <span v-else>PRESS</span>
           </b-nav-item>
         </b-nav>
         <b-nav is-nav-bar class="ml-auto" :class="{ 'space-end': !isHome }">
@@ -131,7 +131,8 @@ export default {
       return this.$store.state.language
     },
     isHome () {
-      return this.$route.name === 'home'
+      console.log('thirjekla', this.$route.name)
+      return this.$route.name === 'Home'
     }
   },
   methods: {
@@ -185,15 +186,16 @@ export default {
       font-size: 11px;
     }
 
-    .navbar-collapse {
-      height: 60px;
-    }
+    // .navbar-collapse {
+    //   height: 60px;
+    // }
 
     .nav-item{
       height: 100%;
 
       &:not(.social-icon):not(.nav-item-language):hover {
         background-color: $matryx-blue;
+        cursor: pointer;
       }
 
       .nav-link {
@@ -227,8 +229,16 @@ export default {
         vertical-align: baseline;
       }
 
-      .social-icon .nav-link:hover {
-        background-color: transparent;
+      .social-icon .nav-link {
+        &:hover {
+          background-color: transparent;
+        }
+        &:active {
+          outline: none;
+        }
+        &:focus {
+          outline: none;
+        }
       }
     }
 
@@ -256,6 +266,7 @@ export default {
       padding: 3px 0;
       width: 140px;
       margin-left: 5px;
+      margin-top: 5px;
 
       select.form-control.custom-select {
         font-size: 13px;
@@ -281,6 +292,7 @@ export default {
   .mobile-hide {
     display:none;
   }
+
   #sub-nav {
     .navbar.navbar-light {
       padding: 0;

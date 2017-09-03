@@ -70,13 +70,15 @@
         :key="index"
       ></SaleIcon>
     </div>
+    <p class="no-minimum text-center">* The minimum purchase amount of 75 ETH only applies to pre-sale purchases.<br/> There is no minimum purchase amount to participate in the main sale.
+    </p>
     <p class="discount">
       <span v-if=" language === 'ru' ">*скидки действуют только на покупки во время предпродажи</span>
       <span v-else-if=" language === 'ch' ">*折扣仅在预售期间有效</span>
       <span v-else-if=" language === 'ge' ">*Rabatte gelten nur für Käufe während des Vorverkaufs</span>
       <span v-else-if=" language === 'ja' ">*ディスカウントはプリセール中の購入にのみ適用</span>
       <span v-else-if=" language === 'ko' ">*이번 사전판매 기간 동안에 이루어진 구매에 대해서만 할인이 적용됩니다</span>
-      <span v-else>*Discounts only apply for purchases during the Pre-Sale.</span>
+      <span v-else>**Discounts only apply for purchases during the Pre-Sale.</span>
     </p>
   </section>
 </template>
@@ -104,15 +106,15 @@ export default {
       icons: [
         {
           img: eth,
-          text: '75 ETH Minimum Purchase for Pre-Sale'
+          text: '75 ETH Minimum Purchase for Pre-Sale*'
         },
         {
           img: discount10,
-          text: 'Purchases > 150 ETH Eligible for 10% Discount*'
+          text: 'Purchases > 150 ETH Eligible for 10% Discount**'
         },
         {
           img: discount15,
-          text: 'Purchases > 300 ETH Eligible for 15% Discount*'
+          text: 'Purchases > 300 ETH Eligible for 15% Discount**'
         },
         {
           img: upto50,
@@ -228,10 +230,13 @@ section.presale__summary {
     margin-bottom: 20px;
   }
 
+  .no-minimum {
+    margin-top: 50px;
+  }
+
   .discount {
     font-size: smaller;
     text-align:center;
-    margin-top: 50px;
   }
 
   .icon-list {

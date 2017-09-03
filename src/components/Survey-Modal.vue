@@ -82,7 +82,9 @@
     				<span v-else>Submit</span>
           </button>
 
-          <div>* Purchase amounts of 75 ETH or more are eligible for our pre-sale.</div>
+          <div>
+            <small>* Purchase amounts of 75 ETH or more are eligible for our pre-sale.</small>
+          </div>
         </form>
       </div>
     </b-modal>

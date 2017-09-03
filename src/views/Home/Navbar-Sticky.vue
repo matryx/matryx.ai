@@ -168,6 +168,7 @@ export default {
   z-index: 2;
   padding: 0 10px;
   margin: 0;
+  min-height:60px;
 
   /*ul.nav.navbar-nav {
     width: 700px;
@@ -185,7 +186,7 @@ export default {
     display:none;
   }
 
-  .nav-link{
+  .nav-link {
     transition: all 0.3s;
     padding: 5px 10px;
     text-transform: uppercase;
@@ -218,51 +219,90 @@ export default {
       font-size: 16px;
       text-transform: uppercase;
     }
-
   }
-}
-
-.navbar.navbar-light {
-  width: 100%;
-  background-color: $white;
-
-  .content-container--large {
+  .navbar.navbar-light {
     width: 100%;
-    margin: 0 auto;
+    min-height: 60px;
+    background-color: $white;
+
+    .content-container--large {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+    }
+
+    .navbar-brand {
+      height: 40px;
+      margin-right: 10px;
+
+      img {
+        height: 100%;
+      }
+
+      .matryx-logo-word {
+        min-width: 184px;
+      }
+    }
+
+    .nav-link {
+      font-size: 11.5px;
+      line-height: 40px;
+    }
+
+    .navbar-toggleable-sm .navbar-nav .nav-link {
+      padding-right:0 !important;
+      padding-left: 0 !important;
+      padding-top: 0 !important;
+    }
+  }
+  .navbar-toggleable-md .navbar-collapse {
+    width: calc(100% - 130px);
+  }
+  .navbar-toggler.navbar-toggler-right {
+    background-color: #fff;
+    opacity: 0.9;
+  }
+
+  /*get notified button and modal*/
+  .navbar.navbar-light .get-notified {
+    margin-right: 40px;
     display: flex;
-  }
+    align-items: center;
+    & > .nav-link {
+      padding: 3px 0 0 0 !important;
 
-  .navbar-brand {
-    height: 40px;
-    margin-right: 10px;
+      button {
+        height: 40px;
+        padding: 10px 20px;
+        border-radius: 40px;
+        border: 1px solid $matryx-light-blue;
+        color: #fff;
+        outline:none;
+        background-color: $matryx-light-blue !important;
+        display: flex;
+        align-items: center;
+        line-height: 0;
+        margin-top:2px;
 
-    img {
-      height: 100%;
+        &:active,&:hover {
+          outline: none;
+          background: $white !important;
+          color: $matryx-light-blue;
+          /*color: #082135;*/
+        }
+        &:active {
+          box-shadow: 1px 1px 10px #fff, -1px -1px 10px #fff;
+        }
+      }
+
+      &:hover {
+        background-color: transparent;
+      }
     }
-
-    .matryx-logo-word {
-      min-width: 184px;
-    }
-  }
-  
-  .nav-link {
-    font-size: 11.5px;
-    line-height: 40px;
   }
 
-  .navbar-toggleable-sm .navbar-nav .nav-link {
-    padding-right:0 !important;
-    padding-left: 0 !important;
-    padding-top: 0 !important;
-  }
 }
-.navbar-toggleable-md .navbar-collapse {
-  width: calc(100% - 130px);
-}
-.navbar-toggler.navbar-toggler-right {
-  background-color: #fff;
-  opacity: 0.9;
-}
+
 
 // language
 #language {
@@ -295,38 +335,6 @@ nav {
   }
 }
 
-/*get notified button and modal*/
-.navbar.navbar-light .get-notified {
-  margin-right: 40px;
-  display: flex;
-  align-items: center;
-  & > .nav-link {
-    padding: 3px 0 0 0 !important;
-
-    button {
-      height: 40px;
-      padding: 10px 20px;
-      border-radius: 40px;
-      border: 1px solid $matryx-light-blue;
-      color: #fff;
-      outline:none;
-      background-color: $matryx-light-blue !important;
-      display: flex;
-      align-items: center;
-      line-height: 0;
-
-      &:active,&:hover {
-        outline: none;
-        background: $white !important;
-        color: $matryx-light-blue;
-        /*color: #082135;*/
-      }
-      &:active {
-        box-shadow: 1px 1px 10px #fff, -1px -1px 10px #fff;
-      }
-    }
-  }
-}
 
 /*had to put some css for this modal inside above-the-fold file
 **because the modal css in above the fold is overriding this file's modal css*/
