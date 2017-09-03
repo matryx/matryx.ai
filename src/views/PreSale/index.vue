@@ -82,7 +82,7 @@
       </h2>
       <Countdown :end="end" class="presale__countdown"></Countdown>
       <h2 class="text-center">
-        Sign up if you're interested in participating in the Pre-Sale
+        Sign up if you are interested in participating in the Pre-Sale
       </h2>
       <Get-Notified ctaLocation="Pre-Sale"></Get-Notified>
     </div>
@@ -231,6 +231,10 @@ export default {
           border-bottom-right-radius: 0;
           margin-right: 0;
           text-align: center;
+        }
+
+        input:focus {
+          outline: none;
         }
 
         div {
