@@ -78,12 +78,9 @@
 
     <div id="presale__sign-up">
       <h2>
-        Pre-Sale Starts In:
+        {{ message }}
       </h2>
-      <Countdown end="September 6 2017 15:00:00 UTC"
-        class="presale__countdown"
-      >
-      </Countdown>
+      <Countdown :end="end" class="presale__countdown"></Countdown>
       <h2>
         Sign up if you're interested in participating in the Pre-Sale
       </h2>
@@ -116,11 +113,24 @@ export default {
       baseMtx: 1164.96662324,
       purchaseAmount: null,
       discount10,
-      discount15
+      discount15,
+      message: 'Pre-Sale Starts In:'
     }
   },
 
   computed: {
+    end () {
+      const date = 'September 6 2017 15:00:00 UTC'
+      const today = new Date()
+      const startDate = new Date(date)
+
+      if (today.getTime() - startDate.getTime() > 0) {
+        this.message = 'Pre-Sale Ends and Main Sale Starts In:'
+        return 'September 13 2017 14:59:59 UTC'
+      } else {
+        return date
+      }
+    },
     diff () {
       return this.mtxPresale - this.mtxRegular
     },
