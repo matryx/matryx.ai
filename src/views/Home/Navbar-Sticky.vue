@@ -62,7 +62,7 @@
           <span v-else-if=" language === 'ko' ">블로그</span>
           <span v-else>BLOG</span>
         </b-nav-item>
-        <b-nav-item href="/faq/about/what-is-matryx" target="_blank" class="text-color--matryx-grey nav-link--mobile-only">
+        <b-nav-item href="/faq/about/what-is-matryx" target="_self" class="text-color--matryx-grey nav-link--mobile-only">
           <span>FAQ</span>
         </b-nav-item>
         <b-nav-item class="nav-item-language nav-link--mobile-only">
