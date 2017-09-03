@@ -208,6 +208,7 @@ export default {
 
     .text-color--white > .nav-link {
       color: #FFF;
+      font-size: 11px;
     }
 
     .navbar-collapse {
