@@ -72,8 +72,14 @@
               The minimum purchase amount to receive a discount is 150 ETH.
             </p>
           </div>
+
         </div>
       </div>
+      <p class="minimum">
+        **The minimum purchase amount to participate in the pre-sale
+        is 75 ETH. <br/>
+        There is no minimum purchase amount to participate in the main sale.
+      </p>
     </div>
 
     <div id="presale__sign-up">
@@ -82,7 +88,7 @@
       </h2>
       <Countdown :end="end" class="presale__countdown"></Countdown>
       <h2 class="text-center">
-        Sign up if you are interested in participating in the Pre-Sale
+        Sign up if interested in participating in the Pre-Sale
       </h2>
       <Get-Notified ctaLocation="Pre-Sale"></Get-Notified>
     </div>
@@ -172,7 +178,7 @@ export default {
     .presale__content {
       display: flex;
       justify-content: space-between;
-      padding: 40px 20px 150px 20px;
+      padding: 40px 20px 55px;
 
       & > .content-container--medium {
         width: 100%;
@@ -293,6 +299,11 @@ export default {
         }
       }
     }
+
+    .minimum {
+      padding-bottom: 130px;
+      color: $white;
+    }
   }
 
   #presale__sign-up {
@@ -309,7 +320,7 @@ export default {
 
   /*----- MEDIA QUERIES -----*/
   @media screen and (min-width: 1690px) {
-    #presale__above-the-fold {
+    #presale__above-the-fold.minimum {
       padding-bottom: 220px;
     }
   }
@@ -332,8 +343,11 @@ export default {
 
   @media screen and (max-width: 560px) {
     #presale__above-the-fold {
-      & > .content-container {
-        padding-bottom: 200px;
+      // & > .content-container {
+      //   padding-bottom: 200px;
+      // }
+      .minimum {
+        padding-bottom: 250px;
       }
 
       .presale__calculator {
