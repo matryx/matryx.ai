@@ -4,7 +4,7 @@ import Router from 'vue-router'
 const Home = () => import('@/views/Home')
 const FAQ = () => import('@/views/FAQ')
 const PressKit = () => import('@/views/PressKit/index')
-const TokenSale = () => import('@/views/TokenSale/index')
+// const TokenSale = () => import('@/views/TokenSale/index')
 
 const About = () => import('@/views/FAQ/About')
 const AboutQAs = () => import('@/views/FAQ/About-QAs')

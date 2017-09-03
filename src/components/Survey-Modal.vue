@@ -1,13 +1,5 @@
 <template>
   <section class="survey-modal">
-    <!--
-      BARBARA:
-      All clicks on <Get-Notified> component should open the thankYouModal modal after a 2 second animation I already added.
-      When clicking on the <Get-Notified> component in the getNotifiedModal modal below it should close by calling this.getNotifiedModal = !this.getNotifiedModal
-      and then it should open the thankYouModal modal, again after the 2 second animation
-      I think that's it.
-      I'm working on the styling and email validation
-     -->
     <b-modal id="thankYouModal"
       v-model="showModal"
       hide-header
