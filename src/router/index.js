@@ -6,7 +6,7 @@ const Home = () => import('@/views/Home')
 const FAQ = () => import('@/views/FAQ')
 const PressKit = () => import('@/views/PressKit')
 const PreSale = () => import('@/views/PreSale')
-const RewardsProgram = () => import('@/views/RewardsProgram')
+// const RewardsProgram = () => import('@/views/RewardsProgram')
 
 const About = () => import('@/views/FAQ/About')
 const AboutQAs = () => import('@/views/FAQ/About-QAs')
@@ -158,15 +158,15 @@ const router = new Router({
       path: '/presale',
       redirect: '/pre-sale'
     },
-    {
-      path: '/rewards-program',
-      name: 'RewardsProgram',
-      component: RewardsProgram
-    },
-    {
-      path: '/rewardsprogram',
-      redirect: '/rewards-program'
-    },
+    // {
+    //   path: '/rewards-program',
+    //   name: 'RewardsProgram',
+    //   component: RewardsProgram
+    // },
+    // {
+    //   path: '/rewardsprogram',
+    //   redirect: '/rewards-program'
+    // },
     {
       path: '/404',
       name: 'ErrorPage',
