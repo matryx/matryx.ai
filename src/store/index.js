@@ -15,6 +15,7 @@ export default new Vuex.Store({
     language: 'en',
     routeLoaded: false,
     showPulseSpinner: false
+    dataField: 'hahfwejkfalwehflweaf'
   },
   getters: {
 

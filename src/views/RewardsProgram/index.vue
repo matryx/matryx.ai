@@ -38,5 +38,8 @@ export default {
 </script>
 
 <style lang="scss">
-
+@import '../../assets/css/colors.scss';
+  footer {
+    background-color: $matryx-darker-blue;
+  }
 </style>

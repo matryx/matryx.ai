@@ -40,7 +40,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 275px;
+  width: 300px;
 
   &__img {
     height: 80px;
@@ -53,6 +53,7 @@ export default {
     flex-direction: column;
     align-items: flex-start;
     padding: 0;
+    padding-left: 20px;
 
     li {
       list-style-image: url('../assets/images/rewardsProgram/bulletpoint.png');
@@ -60,4 +61,5 @@ export default {
     }
   }
 }
+
 </style>
