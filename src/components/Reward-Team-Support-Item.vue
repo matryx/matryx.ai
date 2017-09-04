@@ -1,7 +1,7 @@
 <template>
   <div class="reward-ts-item">
     <img class="reward-ts-item__img" :src="img">
-    <div class="reward-ts-item__label text-center">
+    <div class="reward-ts-item__label text-center text-color--white">
       <h5>{{ rewardMTX }} MTX</h5>
     </div>
 
@@ -10,7 +10,7 @@
     </div>
 
     <a :href="link">
-      <button class="btn btn-yellow">
+      <button class="btn btn-yellow reward-ts-item__btn">
         {{ linkText }}
       </button>
     </a>
@@ -47,6 +47,10 @@ export default {
   align-items: center;
   width: 275px;
 
+  &__label {
+    margin-top: 20px;
+  }
+
   &__img {
     height: 80px;
     width: 80px;
@@ -54,6 +58,19 @@ export default {
 
   &__info {
     margin: 20px 0;
+  }
+
+  &__btn {
+    border-color: $yellow;
+    color: $white;
+    background-color: $yellow;
+    width: 250px;
+    border-radius: 30px;
+    padding: 15px;
+
+    &:hover {
+      border: none;
+    }
   }
 }
 </style>

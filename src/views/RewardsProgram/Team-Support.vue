@@ -39,6 +39,29 @@
           </p>
         </Reward-Team-Support-Item>
       </div>
+
+      <div class="team-support__content">
+
+        <h3 class="team-support__content__title uppercase text-center">
+          Content Ideas
+        </h3>
+
+        <div class="team-support__content__images">
+          <div class="team-support__content__images--img">
+            <img src="../../assets/images/Matryx-Logo-Grey-CMYK.png">
+          </div>
+          <div class="team-support__content__images--img">
+            <img src="../../assets/images/Matryx-Logo-Grey-CMYK.png">
+          </div>
+          <div class="team-support__content__images--img">
+            <img src="../../assets/images/Matryx-Logo-Grey-CMYK.png">
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-red team-support__press-btn uppercase">
+        Press Kit
+      </button>
     </div>
   </section>
 </template>
@@ -56,7 +79,7 @@ export default {
     return {
       bitcoin: {
         img: bitcoinTalkImg,
-        rewardMtx: '15,000',
+        rewardMTX: '15,000',
         link: 'https://bitcointalk.org',
         linkText: 'Participate here'
       }
@@ -69,7 +92,7 @@ export default {
 @import '../../assets/css/colors';
 
 section#team-support {
-  background-color: $matryx-blue;
+  background-color: $matryx-light-blue;
 }
 
 .team-support {
@@ -89,6 +112,46 @@ section#team-support {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    margin: 30px 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__images {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      img {
+        height: 200px;
+        width: 300px;
+      }
+    }
+  }
+
+  &__press-btn {
+    border-color: $matryx-red;
+    color: $matryx-red;
+    background-color: transparent;
+    width: 250px;
+    border-radius: 30px;
+    padding: 15px;
+
+    &:hover {
+      border: none;
+      color: $matryx-red;
+    }
   }
 }
 </style>
