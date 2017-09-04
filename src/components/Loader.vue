@@ -23,6 +23,7 @@ export default {
     width: 100vw;
     height: 100vh;
     overflow:hidden;
+    animation: matryx-loader 2.5s;
 
     .loader {
       width: 50%;
@@ -55,6 +56,11 @@ export default {
         }
       }
     }
+  }
+
+  @keyframes matryx-loader {
+    90% { opacity: 1; }
+    100% { opacity: 0; }
   }
 
   @keyframes matryx-loader-center {
