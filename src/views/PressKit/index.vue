@@ -63,12 +63,16 @@
         </a>
       </div>
     </section>
+    <Media-Mentions></Media-Mentions>
+    <News-Events></News-Events>
   </div>
 </template>
 
 <script>
 import Logo from '@/components/Presskit-Download'
 import Color from '@/components/Presskit-Color'
+import MediaMentions from '@/views/Home/Media-Mentions'
+import NewsEvents from '@/views/Home/News-Events'
 
 import blackFullPng from '@/assets/presskit/Matryx_Black_Full_Logo.png'
 import blackFullSvg from '@/assets/presskit/Matryx_Black_Full_Logo.svg'
@@ -88,7 +92,9 @@ export default {
   name: 'Presskit',
   components: {
     Logo,
-    Color
+    Color,
+    MediaMentions,
+    NewsEvents
   },
   data () {
     return {
