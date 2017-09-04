@@ -143,7 +143,6 @@ export default {
       return this.$store.state.language
     },
     isHome () {
-      console.log('thirjekla', this.$route.name)
       return this.$route.name === 'Home'
     }
   },
