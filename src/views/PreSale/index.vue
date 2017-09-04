@@ -2,8 +2,7 @@
   <section id="presale" class="body-content">
     <Navbar-TokenSale></Navbar-TokenSale>
     <div id="presale__above-the-fold">
-      <div class="presale__header
-        font-size--large uppercase text-color--white">
+      <div class="presale__header uppercase text-color--white">
         <h1>Join the Matryx Token Pre-Sale</h1>
       </div>
       <div class="presale__content content-container content-container--large text-color--white">
@@ -31,13 +30,14 @@
         <div class="presale__calculator__results content-container--medium">
           <div class="presale__calculator">
             <h3 class="presale__calculator--title">
-              How much could you save?
+              How much extra MTX could you get?
             </h3>
             <div class="presale__calculator--input">
               <input type="number"
                 name="presale-calculator"
                 placeholder="ETH"
                 v-model="purchaseAmount"
+                max="80901"
               >
               <div> ETH spent </div>
             </div>
@@ -60,7 +60,7 @@
           </div>
 
           <div class="presale__results--explanation">
-            <p v-show="diff > 0">
+            <p v-show="purchaseAmount >= 150 && purchaseAmount <= 80901">
               By participating in the Pre-Sale, you <br/>receive
               <span class="diff"
                 :class="{ 'text-color--light-green': diff > 0 }">
@@ -68,8 +68,11 @@
               </span>
               <span class="extra">extra MTX!</span>
             </p>
-            <p v-show="diff <= 0">
+            <p v-show="purchaseAmount < 150">
               The minimum purchase amount to receive a discount is 150 ETH.
+            </p>
+            <p v-show="purchaseAmount > 80901">
+              Thanks for your support, but you've reached the limit!
             </p>
           </div>
 
@@ -116,11 +119,13 @@ export default {
 
   data () {
     return {
-      baseMtx: 1164.96662324,
+      rateBase: 1164.96662324,
+      rate10: 1294.40736,
+      rate15: 1370.54896,
       purchaseAmount: null,
+      message: 'Pre-Sale Starts In:',
       discount10,
-      discount15,
-      message: 'Pre-Sale Starts In:'
+      discount15
     }
   },
 
@@ -142,19 +147,23 @@ export default {
     },
 
     mtxPresale () {
+      if (this.purchaseAmount <= 0 && this.purchaseAmount < 150) {
+        return Math.round(this.purchaseAmount * this.rateBase)
+      }
+
       if (this.purchaseAmount >= 150 && this.purchaseAmount < 300) {
-        return Math.round(this.purchaseAmount * (this.baseMtx * 1.1))
+        return Math.round(this.purchaseAmount * this.rate10)
       }
 
-      if (this.purchaseAmount > 300) {
-        return Math.round(this.purchaseAmount * (this.baseMtx * 1.15))
+      if (this.purchaseAmount >= 300 && this.purchaseAmount <= 80901.5) {
+        return Math.round(this.purchaseAmount * this.rate15)
       }
 
-      return Math.round(this.purchaseAmount * this.baseMtx)
+      return this.mtxRegular
     },
 
     mtxRegular () {
-      return Math.round(this.purchaseAmount * this.baseMtx)
+      return Math.round(this.purchaseAmount * this.rateBase)
     }
   }
 }
@@ -272,9 +281,9 @@ export default {
         width: 300px;
         margin-top: 5px;
         margin-bottom: 20px;
-        background-color: $white;
+        background-color: $matryx-blue;
         border-radius: 8px;
-        color: $matryx-blue;
+        color: $white;
         font-size: 22px;
         display: flex;
         align-items: center;
