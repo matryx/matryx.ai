@@ -1,14 +1,16 @@
 <template>
   <div class="reward-ts-item">
     <img class="reward-ts-item__img" :src="img">
-    <div class="reward-ts-item__label text-center">
+    <div class="reward-ts-item__label text-center text-color--white">
       <h5>{{ rewardMTX }} MTX</h5>
     </div>
 
-    <slot class="reward-ts-item__info" name="info"></slot>
+    <div class="reward-ts-item__info text-color--white">
+      <slot name="info"></slot>
+    </div>
 
     <a :href="link">
-      <button class="btn btn-yellow">
+      <button class="btn btn-yellow reward-ts-item__btn">
         {{ linkText }}
       </button>
     </a>
@@ -45,21 +47,29 @@ export default {
   align-items: center;
   width: 275px;
 
+  &__label {
+    margin-top: 20px;
+  }
+
   &__img {
     height: 80px;
     width: 80px;
   }
 
-  &__stakes {
-    color: $matryx-light-blue;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0;
+  &__info {
+    margin: 20px 0;
+  }
 
-    li {
-      list-style-image: url('../assets/images/rewardsProgram/bulletpoint.png');
-      margin-bottom: 10px;
+  &__btn {
+    border-color: $yellow;
+    color: $white;
+    background-color: $yellow;
+    width: 250px;
+    border-radius: 30px;
+    padding: 15px;
+
+    &:hover {
+      border: none;
     }
   }
 }
