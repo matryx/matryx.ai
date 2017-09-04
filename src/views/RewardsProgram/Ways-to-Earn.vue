@@ -1,26 +1,27 @@
 <template>
-  <section class="ways-to-earn content-container content-container--large">
+  <section id="ways-to-earn">
     <h2 class="ways-to-earn--title uppercase text-color--matryx-grey text-center">
       Ways to Earn
     </h2>
+    <div class="ways-to-earn content-container content-container--large">
+      <h5 class="ways-to-earn--subtitle text-color--matryx-light-blue">
+        You can earn MTX by creating content fostering conversation about Matryx,
+        supporting the team!
+      </h5>
 
-    <h5 class="ways-to-earn--subtitle text-color--matryx-light-blue">
-      You can earn MTX by creating content fostering conversation about Matryx,
-      supporting the team!
-    </h5>
-
-    <div class="ways-to-earn__social">
-      <h3 class="ways-to-earn__social--title uppercase text-color--matryx-grey text-center">Social</h3>
-      <div class="ways-to-earn__social--platform">
-        <Reward-Social-Item
-          :maxMTX="youtube.maxMTX" :stakes="youtube.stakes" :src="youtube.src"
-        ></Reward-Social-Item>
-        <Reward-Social-Item
-          :maxMTX="twitter.maxMTX" :stakes="twitter.stakes" :src="twitter.src"
-        ></Reward-Social-Item>
-        <Reward-Social-Item
-          :maxMTX="medium.maxMTX" :stakes="medium.stakes" :src="medium.src"
-        ></Reward-Social-Item>
+      <div class="ways-to-earn__social">
+        <h3 class="ways-to-earn__social--title uppercase text-color--matryx-grey text-center">Social</h3>
+        <div class="ways-to-earn__social--platform">
+          <Reward-Social-Item :maxMTX="youtube.maxMTX" :stakes="youtube.stakes"
+           :src="youtube.src"
+          ></Reward-Social-Item>
+          <Reward-Social-Item :maxMTX="twitter.maxMTX" :stakes="twitter.stakes"
+           :src="twitter.src"
+          ></Reward-Social-Item>
+          <Reward-Social-Item :maxMTX="medium.maxMTX" :stakes="medium.stakes"
+            :src="medium.src"
+          ></Reward-Social-Item>
+        </div>
       </div>
     </div>
   </section>
@@ -76,6 +77,12 @@ export default {
 
 <style lang="scss">
 @import '../../assets/css/colors';
+
+#ways-to-earn {
+  .content-container {
+    padding-top: 0;
+  }
+}
 
 .ways-to-earn {
   display: flex;

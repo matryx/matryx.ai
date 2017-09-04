@@ -1,5 +1,5 @@
 <template>
-  <section class="reward-social-item">
+  <div class="reward-social-item">
     <img class="reward-social-item__img" :src="src">
     <div class="reward-social-item__label text-center">
       <small>up to </small>
@@ -12,7 +12,7 @@
       </li>
     </ul>
 
-  </section>
+  </div>
 </template>
 
 <script>
