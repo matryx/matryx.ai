@@ -5,7 +5,9 @@
       <h5>{{ rewardMTX }} MTX</h5>
     </div>
 
-    <slot class="reward-ts-item__info" name="info"></slot>
+    <div class="reward-ts-item__info text-color--white">
+      <slot name="info"></slot>
+    </div>
 
     <a :href="link">
       <button class="btn btn-yellow">
@@ -50,17 +52,8 @@ export default {
     width: 80px;
   }
 
-  &__stakes {
-    color: $matryx-light-blue;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0;
-
-    li {
-      list-style-image: url('../assets/images/rewardsProgram/bulletpoint.png');
-      margin-bottom: 10px;
-    }
+  &__info {
+    margin: 20px 0;
   }
 }
 </style>
