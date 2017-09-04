@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import store from '../store'
+import store from '../store'
 
 const Home = () => import('@/views/Home')
 const FAQ = () => import('@/views/FAQ')
