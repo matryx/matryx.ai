@@ -40,10 +40,10 @@ export default {
         position:relative;
 
         &--left {
-          animation: matryx-loader-left 5s infinite;
+          animation: matryx-loader-left 2.5s infinite;
         }
         &--right {
-          animation: matryx-loader-right 5s infinite;
+          animation: matryx-loader-right 2.5s infinite;
         }
         &--center {
           position:absolute;
@@ -51,7 +51,7 @@ export default {
           height:35px;
           padding-top: 15px;
           transform: translateX(-50%);
-          animation: matryx-loader-center 5s infinite;
+          animation: matryx-loader-center 2.5s infinite;
         }
       }
     }

@@ -3,17 +3,19 @@
     <h1 class="error__content__title">404 ERROR</h1>
     <img src="../../assets/images/backgrounds/404.png" alt="">
     <p class="error__content__body text-color--matryx-dark-grey">Something's not right here, you and I both know it.</p>
-    <p class="text-color--matryx-dark-grey">Were you looking for our <a href="https://matryx.ai/matryx-whitepaper.pdf"> whitepaper</a>? No? Then maybe you should make your way back <router-link :to="{ name: 'home' }"> home.</router-link></p>
+    <p class="text-color--matryx-dark-grey">Were you looking for our <a href="https://matryx.ai/matryx-whitepaper.pdf"> whitepaper</a>? No? Then maybe you should make your way back <router-link :to="{ name: 'Home' }"> home.</router-link></p>
   </div>
 </template>
 
 <script>
 export default {
   name: 'ErrorPage',
+
   beforeRouteEnter (to, from, next) {
     document.title = '(╯°□°)╯︵ ┻━┻'
     next()
   },
+
   beforeRouteLeave (to, from, next) {
     document.title = 'Matryx: A Decentralized Collaboration Platform'
     next()

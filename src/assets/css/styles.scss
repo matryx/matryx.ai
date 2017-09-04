@@ -274,6 +274,28 @@ h1.cd-headline.clip {
 }
 /*----- end CLASSES -----*/
 
+/*----- TRANSITIONS -----*/
+
+.fade-enter-active {
+  transition-property: opacity;
+  transition-duration: .5s;
+  transition-delay: .05s;
+}
+.fade-enter {
+  opacity: 0
+}
+
+.fade-leave-active {
+  transition-property: opacity;
+  transition-duration: .5s;
+  transition-delay: .05s;
+}
+.fade-leave {
+  opacity: 1
+}
+
+/*----- end TRANSITIONS -----*/
+
 /* ID's */
 #app {
   margin: 0;

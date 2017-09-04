@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import store from '../store'
 
 const Home = () => import('@/views/Home')
 const FAQ = () => import('@/views/FAQ')
@@ -25,7 +26,7 @@ const ErrorPage = () => import('@/views/ErrorPage')
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   scrollBehavior () {
     return { x: 0, y: 0 }
@@ -167,3 +168,16 @@ export default new Router({
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  store.commit('toggleRouteLoaded', false)
+  setTimeout(() => {
+    next()
+  }, 2000)
+})
+
+router.afterEach(() => {
+  store.commit('toggleRouteLoaded', true)
+})
+
+export default router

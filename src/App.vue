@@ -21,9 +21,9 @@
       <router-view></router-view>
     </transition>
 
-    <Loader></Loader>
-
     <App-Footer></App-Footer>
+
+    <Loader v-show="!loaded"></Loader>
 
   </div>
 </template>
@@ -32,9 +32,9 @@
 import AppNavbar from './components/App-Navbar'
 import AppFooter from './components/App-Footer'
 import CTABanner from './components/CTA-Banner'
+import Loader from './components/Loader'
 import SurveyModal from './components/Survey-Modal'
 import SaleModal from './components/Sale-Modal'
-import Loader from './components/Loader'
 import VueSticky from 'vue-sticky' // Es6 module
 import { appAnalytics } from '@/analytics'
 
@@ -49,9 +49,9 @@ export default {
     AppNavbar,
     AppFooter,
     CTABanner,
+    Loader,
     SurveyModal,
-    SaleModal,
-    Loader
+    SaleModal
   },
 
   directives: {
@@ -61,6 +61,10 @@ export default {
   computed: {
     showGetNotifiedModal () {
       return this.$store.state.showGetNotifiedModal
+    },
+
+    loaded () {
+      return this.$store.state.routeLoaded
     }
   },
 
