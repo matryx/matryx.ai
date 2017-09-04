@@ -3,6 +3,11 @@
     <div class="content-container content-container--small bkg-color--blue-yellow-gradient text-center">
       <h2 class="blogging__header text-color--white">Blogging</h2>
       <hr class="blogging__hr">
+      <Reward-Social-Item :maxMTX="medium.maxMTX" :stakes="medium.stakes"
+        :src="medium.src" :img="medium.img"
+        class="blogging__social-item"
+      ></Reward-Social-Item>
+
       <p class="blogging__paragraph">
         Topic: Use Cases Of Matryx Blogs must be in English, Chinese,
         Russian, Korean, Japanese or Spanish and have 300 or more followers.
@@ -11,13 +16,39 @@
         Blogs will be evaluated for quality and length and will earn between
         30 - 200 stakes, as determined by the judgement of the Matryx team.
       </p>
+
     </div>
   </section>
 </template>
 
 <script>
+import RewardSocialItem from '@/components/Reward-Social-Item'
+import mediumSrc from '@/assets/icons/icon-medium.svg'
+// import mediumSrc from '@/assets/images/rewardsProgram/icon-medium.png'
+import mediumBar from '@/assets/images/rewardsProgram/matryx-blog.png'
+
 export default {
-  name: 'Blogging'
+  name: 'Blogging',
+
+  components: {
+    RewardSocialItem
+  },
+
+  data () {
+    return {
+      medium: {
+        stakes: [
+          '20 stakes → < 500 Views',
+          '50 stakes → 500  - 999 Views',
+          '75 stakes → 1000 - 1499 Views',
+          '100 stakes → 1500+ Views'
+        ],
+        img: mediumBar,
+        src: mediumSrc,
+        maxMTX: '40,000'
+      }
+    }
+  }
 }
 </script>
 
@@ -49,11 +80,15 @@ export default {
       }
     }
   }
+  &__social-item {
+    margin: 0 auto;
+  }
   &__hr {
     border-color: #FFF;
     border-width: 2px;
   }
 }
+
 
 @media screen and (max-width: 650px) {
   .blogging {

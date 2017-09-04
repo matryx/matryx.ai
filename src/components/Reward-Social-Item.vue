@@ -6,6 +6,8 @@
       <h5>{{ maxMTX }} MTX</h5>
     </div>
 
+    <img :src="img" alt="" class="reward-social-item__progress-bar">
+
     <ul class="reward-social-item__stakes">
       <li v-for="stake in stakes">
         {{ stake }}
@@ -20,6 +22,9 @@ export default {
   name: 'RewardSocialItem',
 
   props: {
+    img: {
+      type: String
+    },
     src: {
       type: String
     },
@@ -60,6 +65,17 @@ export default {
       margin-bottom: 10px;
     }
   }
+
+  &__progress-bar {
+    width: 100%;
+  }
 }
+.blogging__social-item.reward-social-item {
+  .reward-social-item__label {
+    color: #FFF;
+  }
+}
+
+
 
 </style>

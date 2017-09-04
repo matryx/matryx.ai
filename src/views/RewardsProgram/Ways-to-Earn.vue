@@ -13,13 +13,13 @@
         <h3 class="ways-to-earn__social--title uppercase text-color--matryx-grey text-center">Social</h3>
         <div class="ways-to-earn__social--platform">
           <Reward-Social-Item :maxMTX="youtube.maxMTX" :stakes="youtube.stakes"
-           :src="youtube.src"
+           :src="youtube.src" :img="youtube.img"
           ></Reward-Social-Item>
           <Reward-Social-Item :maxMTX="twitter.maxMTX" :stakes="twitter.stakes"
-           :src="twitter.src"
+           :src="twitter.src" :img="twitter.img"
           ></Reward-Social-Item>
-          <Reward-Social-Item :maxMTX="medium.maxMTX" :stakes="medium.stakes"
-            :src="medium.src"
+          <Reward-Social-Item :maxMTX="forum.maxMTX" :stakes="forum.stakes"
+            :src="forum.src" :img="forum.img"
           ></Reward-Social-Item>
         </div>
       </div>
@@ -31,7 +31,10 @@
 import RewardSocialItem from '@/components/Reward-Social-Item'
 import youtubeSrc from '@/assets/images/rewardsProgram/icon-youtube.jpg'
 import twitterSrc from '@/assets/images/rewardsProgram/icon-twitter.png'
-import mediumSrc from '@/assets/images/rewardsProgram/icon-medium.png'
+import forumSrc from '@/assets/images/rewardsProgram/icon-bitcointalk.png'
+import youtubeBar from '@/assets/images/rewardsProgram/youtube1.png'
+import matryxTwitterBar from '@/assets/images/rewardsProgram/matryx-twitter.png'
+import matryxForumBar from '@/assets/images/rewardsProgram/matryx-forum.png'
 
 export default {
   name: 'WaysToEarn',
@@ -44,35 +47,41 @@ export default {
     return {
       youtube: {
         stakes: [
-          '10 stakes - Every Video',
-          '20 stakes - Every Video',
-          '40 stakes - Every Video'
+          '10 stakes → < 500 Views',
+          '50 stakes → 500 - 999 Views',
+          '75 stakes → 1000 - 1499 Views',
+          '100 stakes → 1500+ Views'
         ],
+        img: youtubeBar,
         src: youtubeSrc,
         maxMTX: '40,000'
       },
       twitter: {
         stakes: [
-          '10 stakes - 100-300 followers',
-          '20 stakes - 300-1,000 followers',
-          '30 stakes - 1,000-5,000 followers',
-          '50 stakes - 5,000 or more followers'
+          '5 stakes → Re-Tweet',
+          '20 stakes → 100 - 299 followers',
+          '50 stakes → 300 - 499 followers',
+          '75 stakes → 500 - 999 followers',
+          '100 stakes → 1,000+ followers'
         ],
+        img: matryxTwitterBar,
         src: twitterSrc,
         maxMTX: '40,000'
       },
-      medium: {
+      forum: {
         stakes: [
-          '10 stakes - Every post (media or link)',
-          '20 stakes - Comment (40+ characters)',
-          '30 stakes - Public share of any post by Matryx'
+          '20 stakes → Comment',
+          '30 stakes → Report suspicious activity',
+          '100 stakes → Thread creation'
         ],
-        src: mediumSrc,
+        img: matryxForumBar,
+        src: forumSrc,
         maxMTX: '40,000'
       }
     }
   }
 }
+
 </script>
 
 <style lang="scss">
