@@ -71,7 +71,7 @@ import { mapState } from 'vuex'
 import Checkbox from '@/components/Checkbox'
 import SaleModalContractInfo from '@/components/Sale-Modal-Contract-Info'
 import TokensaleSaleTerms from '@/components/Tokensale-Sale-Terms'
-import axios from 'axios'
+// import axios from 'axios'
 
 export default {
   name: 'SaleModal',
@@ -103,7 +103,8 @@ export default {
       havePrivateKeys: {
         checked: false,
         enable: false
-      }
+      },
+      showSpinner: false
     }
   },
 
@@ -126,9 +127,28 @@ export default {
       appAnalytics.surveyModal(this.email, this.intendedAmount)
 
       if (this.allChecked) {
-        console.log('wheeee')
+        // start spinner
+        this.$store.commit('togglePulseSpinner', true)
+
+        setTimeout(() => {
+          this.$store.commit('togglePulseSpinner', false)
+        }, 2000)
         // submit axios request to get data
+        // set data end spinner
         // transition to next page
+        // axios.post('/contract', {
+        //   email: this.email,
+        //   agreedToTerms: this.allChecked
+        // })
+        // .then((result) => {
+        //   const d = result.data
+        //   this.dataField = d.dataField
+        //   this.gas = d.gas
+        //   this.contractAddress = d.contractAddress
+
+        //   this.saleTerms = false
+        //   this.saleTermsContract = true
+        // })
       } else {
         return
       }

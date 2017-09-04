@@ -13,7 +13,8 @@ export default new Vuex.Store({
     showSaleModal: false,
     email: '',
     language: 'en',
-    routeLoaded: false
+    routeLoaded: false,
+    showPulseSpinner: false
   },
   getters: {
 
@@ -37,6 +38,9 @@ export default new Vuex.Store({
     },
     toggleRouteLoaded (state, loaded) {
       state.routeLoaded = loaded
+    },
+    togglePulseSpinner (state, show) {
+      state.showPulseSpinner = show
     }
   },
   strict: debug
