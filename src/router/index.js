@@ -187,7 +187,7 @@ router.beforeEach((to, from, next) => {
   store.commit('toggleRouteLoaded', false)
   setTimeout(() => {
     next()
-  }, 2000)
+  }, 2500)
 })
 
 router.afterEach((to, from) => {

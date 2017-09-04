@@ -68,13 +68,14 @@ export default {
 
   @keyframes matryx-loader-left {
     0% {opacity: 0; left:-100px;}
-    1% {opacity: 1;}
-    2% {opacity: 0;}
-    3% {opacity: 1;}
-    4% {opacity: 0;}
-    5% {opacity: 1;}
-    6% {opacity: 0}
-    10% {opacity:1; left: -100px;}
+    10% {opacity: 0; left:-100px;}
+    11% {opacity: 1;}
+    12% {opacity: 0;}
+    13% {opacity: 1;}
+    14% {opacity: 0;}
+    15% {opacity: 1;}
+    16% {opacity: 0}
+    20% {opacity:1; left: -100px;}
     40% {left: 0;}
     50% {left: -50px;}
     70% {opacity: 1; left: -50px;}
@@ -84,13 +85,14 @@ export default {
 
   @keyframes matryx-loader-right {
     0% {opacity: 0; right:-100px;}
-    1% {opacity: 1;}
-    2% {opacity: 0;}
-    3% {opacity: 1;}
-    4% {opacity: 0;}
-    5% {opacity: 1;}
-    6% {opacity: 0}
-    10% {opacity:1; right: -100px;}
+    10% {opacity: 0; right:-100px;}
+    11% {opacity: 1;}
+    12% {opacity: 0;}
+    13% {opacity: 1;}
+    14% {opacity: 0;}
+    15% {opacity: 1;}
+    16% {opacity: 0}
+    20% {opacity:1; right: -100px;}
     40% {right: 0;}
     50% {right: -50px;}
     70% {opacity: 1; right: -50px;}
