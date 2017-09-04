@@ -63,8 +63,8 @@
         </a>
       </div>
     </section>
-    <Media-Mentions></Media-Mentions>
     <News-Events></News-Events>
+    <Media-Mentions></Media-Mentions>
   </div>
 </template>
 
