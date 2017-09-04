@@ -48,15 +48,8 @@
         Click to copy
       </button>
 
-      <input type="text" v-model="message">
-      <button type="button" v-clipboard:copy="message">
-        Copy!
-      </button>
-
-
     </form>
-    <h4 class="salemodal-contract-info__participate--header">How to Participate Using:</h4>
-    <hr>
+    <h4 class="salemodal-contract-info__participate--header">How to participate using:</h4>
     <p class="salemodal-contract-info__participate--item">
       <a href="#" class="text-color--matryx-blue">MetaMask &rsaquo;</a>
     </p>
@@ -142,7 +135,26 @@
       font-size: 20px;
       background-color: $light-grey;
       border:none;
+    }
+
+    &__copy {
+      border: none;
+      background-color: transparent;
       margin-bottom: 20px;
+      font-size: 12px;
+      width: 100%;
+      text-align:right;
+    }
+  }
+
+  &__participate {
+    &--header {
+      width: 100%;
+      text-align:left;
+      font-size: 18px;
+      max-width: 400px;
+      margin: 0 auto;
+      border-bottom: 2px solid $matryx-grey;
     }
   }
 }
