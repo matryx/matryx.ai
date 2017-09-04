@@ -2,14 +2,17 @@
   <div class="salemodal-contract-info">
     <h2 class="text-color--matryx-grey-blue">SALE CONTRACT</h2>
     <form>
+    <!-- these should be click to copy
+    cannot change input
+     -->
       <label for="contract-address">Contract Address</label>
-      <input type="text" id="contract-address" v-model="contractAddress">
+      <input type="text" id="contract-address" :value="contractAddress">
 
       <label for="data-field">Data Field</label>
-      <input type="text" id="data-field" v-model="dataField">
+      <input type="text" id="data-field" :value="dataField">
 
       <label for="gas">Gas</label>
-      <input type="text" id="gas" v-model="gas">
+      <input type="text" id="gas" :value="gas">
     </form>
     <h4>How to Participate Using:</h4>
     <hr>
@@ -21,7 +24,22 @@
 
 <script>
   export default {
-    name: 'SaleModalContractInfo'
+    name: 'SaleModalContractInfo',
+
+    props: {
+      dataField: {
+        type: String,
+        default: '0x89r2jf2nklf2klafeafwefewafwef'
+      },
+      gas: {
+        type: String,
+        default: '23423423'
+      },
+      contractAddress: {
+        type: String,
+        default: '02394lxjrfafwewae23'
+      }
+    }
   }
 </script>
 

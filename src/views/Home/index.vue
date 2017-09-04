@@ -2,6 +2,9 @@
   <div class="body-content">
     <Navbar-Token></Navbar-Token>
     <Navbar-Sticky></Navbar-Sticky>
+
+    <Above-the-Fold-Tokensale></Above-the-Fold-Tokensale>
+
     <Above-the-Fold></Above-the-Fold>
     <Media-Mentions></Media-Mentions>
     <About-Matryx></About-Matryx>
@@ -29,6 +32,9 @@
 
 <script>
 import AboutTokenSale from './About-Token-Sale'
+// remove for production
+import AboveTheFoldTokensale from './Above-the-Fold-tokensale'
+
 import AboveTheFold from './Above-the-Fold'
 import BountySystem from './Bounty-System'
 import CompanyOverview from './Company-Overview'
@@ -49,6 +55,9 @@ export default {
 
   components: {
     AboutTokenSale,
+// remove for production
+
+    AboveTheFoldTokensale,
     AboveTheFold,
     BountySystem,
     CompanyOverview,
