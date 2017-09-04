@@ -112,7 +112,7 @@ label.font-size--small {
 }
 
 section {
-  margin: 20px 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -237,6 +237,20 @@ button, button:hover, button:active, button:focus {
   background-color: #4EB1DE;
 }
 
+.bkg-color--blue-gradient {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#071827+0,0086cb+100 */
+  background: #071827;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #071827 0%, #0086cb 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #071827 0%, #0086cb 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #071827 0%, #0086cb 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#071827', endColorstr='#0086cb',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
 .bkg-color--matryx-blue-gradient {
   background: #081f36;
   /* Old browsers */
@@ -261,6 +275,20 @@ button, button:hover, button:active, button:focus {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#071827', endColorstr='#082135',GradientType=0 );
   /* IE6-9 */
+}
+
+.bkg-color--blue-yellow-gradient {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2b455b+0,3f4950+50,63594e+100 */
+  background: #2b455b;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #2b455b 0%, #3f4950 50%, #63594e 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #2b455b 0%, #3f4950 50%, #63594e 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #2b455b 0%, #3f4950 50%, #63594e 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b455b', endColorstr='#63594e',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
 }
 
 /*content container*/
@@ -318,6 +346,14 @@ h1.cd-headline.clip {
 
 .text-color--purple {
   color: #423176;
+}
+
+.text-color--green {
+  color: #42B883;
+}
+
+.text-color--light-green {
+  color: #49b749;
 }
 
 .text-color--dark-purple {
@@ -471,6 +507,28 @@ h1.cd-headline.clip {
 }
 
 /*----- end CLASSES -----*/
+/*----- TRANSITIONS -----*/
+.fade-enter-active {
+  transition-property: opacity;
+  transition-duration: .5s;
+  transition-delay: .05s;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-leave-active {
+  transition-property: opacity;
+  transition-duration: .5s;
+  transition-delay: .05s;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+/*----- end TRANSITIONS -----*/
 /* ID's */
 #app {
   margin: 0;
@@ -483,6 +541,12 @@ h1.cd-headline.clip {
 }
 
 /* end ID's */
+@media screen and (max-width: 767px) {
+  .content-container {
+    padding: 40px 20px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   h2.font-size--large {
     font-size: 36px;

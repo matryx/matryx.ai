@@ -12,21 +12,21 @@
 </template>
 
 <script>
-import NavbarToken from '@/components/Navbar-Token'
-import AbovetheFold from '@/components/Above-the-Fold'
-import Blurb from '@/components/Blurb'
-import Announcement from '@/components/Announcement'
-import Blogging from '@/components/Blogging'
-import WaysToEarn from '@/components/Ways-to-Earn'
-import TeamSupport from '@/components/Team-Support'
-import ContentIdeas from '@/components/Content-Ideas'
+import NavbarToken from '@/components/Navbar-Tokensale'
+import AboveTheFold from './Above-the-Fold'
+import Blurb from './Blurb'
+import Announcement from './Announcement'
+import Blogging from './Blogging'
+import WaysToEarn from './Ways-to-Earn'
+import TeamSupport from './Team-Support'
+import ContentIdeas from './Content-Ideas'
 
 export default {
-  name: 'RewardsProgram'
+  name: 'RewardsProgram',
 
   components: {
     NavbarToken,
-    AbovetheFold,
+    AboveTheFold,
     Blurb,
     Announcement,
     Blogging,
