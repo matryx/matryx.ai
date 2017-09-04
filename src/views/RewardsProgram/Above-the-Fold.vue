@@ -24,6 +24,7 @@ export default {
     flex-direction:column;
     text-align:center;
     margin: 0;
+    padding-top: 100px;
     background: url('../../assets/images/rewardsProgram/rewards-program-bkg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -35,10 +36,9 @@ export default {
 
     .above-the-fold-rp__button {
       display:block;
-      margin:0 auto;
+      margin:0 auto 20px;
       height: 70px;
       width: 300px;
-      margin-bottom: 20px;
       line-height: 70px;
       font-size: 1.5em;
       color: #fff;
@@ -73,9 +73,13 @@ export default {
 
   @media screen and (max-width: 767px) {
     #above-the-fold-rp {
+      padding-top: 0px;
       .font-size--large {
         font-size: 3em;
         line-height: 1.2em;
+      }
+      .above-the-fold-rp__button {
+        margin: 40px auto;
       }
     }
   }

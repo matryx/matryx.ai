@@ -107,10 +107,41 @@ export default {
     width: 85%;
     border-top: 2px solid $matryx-light-grey;
 
+    &--title {
+      margin: 20px 0;
+    }
+
     &--platform {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+    }
+  }
+}
+
+@media screen and (max-width: 767px ) {
+  #ways-to-earn {
+    .content-container {
+      padding-top: 0;
+    }
+  }
+
+  .ways-to-earn {
+
+    &--title {
+    }
+
+    &--subtitle {
+      font-size: 18px;
+      width: 300px;
+    }
+
+    &__social {
+
+      &--platform {
+        flex-direction: column;
+        align-items:center;
+      }
     }
   }
 }
