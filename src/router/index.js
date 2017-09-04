@@ -170,13 +170,17 @@ const router = new Router({
 })
 
 router.beforeEach((to, from, next) => {
+  if (to.matched[0] === from.matched[0]) {
+    return next()
+  }
+
   store.commit('toggleRouteLoaded', false)
   setTimeout(() => {
     next()
   }, 2000)
 })
 
-router.afterEach(() => {
+router.afterEach((to, from) => {
   store.commit('toggleRouteLoaded', true)
 })
 
