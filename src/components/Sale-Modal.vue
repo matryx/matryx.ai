@@ -61,7 +61,7 @@
 
         <transition name="fade">
           <Sale-Modal-Contract-Info class="salemodal__body__address"
-            v-if="saleContract"
+            v-if="saleTermsContract"
             :dataField="dataField" :gas="gas"
             :contractAddress="contractAddress"
           >

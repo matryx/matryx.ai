@@ -14,8 +14,7 @@ export default new Vuex.Store({
     email: '',
     language: 'en',
     routeLoaded: false,
-    showPulseSpinner: false,
-    dataField: 'hahfwejkfalwehflweaf'
+    showPulseSpinner: false
   },
   getters: {
 
