@@ -293,23 +293,23 @@ h1.cd-headline.clip {
 
 /*----- TRANSITIONS -----*/
 
-.fade-enter-active {
-  transition-property: opacity;
-  transition-duration: .5s;
-  transition-delay: .05s;
-}
-.fade-enter {
-  opacity: 0
-}
+// .fade-enter-active {
+//   transition-property: opacity;
+//   transition-duration: .5s;
+//   transition-delay: .05s;
+// }
+// .fade-enter {
+//   opacity: 0
+// }
 
-.fade-leave-active {
-  transition-property: opacity;
-  transition-duration: .5s;
-  transition-delay: .05s;
-}
-.fade-leave {
-  opacity: 1
-}
+// .fade-leave-active {
+//   transition-property: opacity;
+//   transition-duration: .5s;
+//   transition-delay: .05s;
+// }
+// .fade-leave {
+//   opacity: 1
+// }
 
 /*----- end TRANSITIONS -----*/
 
