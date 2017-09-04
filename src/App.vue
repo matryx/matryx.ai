@@ -23,7 +23,7 @@
 
     <App-Footer></App-Footer>
 
-    <Loader v-show="!loaded"></Loader>
+    <!-- <Loader v-show="!loaded"></Loader> -->
 
   </div>
 </template>
