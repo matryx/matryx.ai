@@ -16,49 +16,54 @@
         </div>
       </div>
       <div class="salemodal__body">
-        <div class="salemodal__body__terms">
-          <br/>
-          <h3 class="text-color--matryx-grey-blue">MATRYX TOKEN SALE TERMS</h3>
-          <Tokensale-Sale-Terms class="salemodal__body__terms__document" id="sale-terms">
-          </Tokensale-Sale-Terms>
-          <div class="salemodal__body__terms__checklist">
-            <Checkbox name="saleTermsRead" :obj="saleTermsRead">
-              <span slot="label">
-                I have read and agree to the Sale Terms of the Matryx Token Sale
-              </span>
-            </Checkbox>
-            <Checkbox name="erc20WalletAddress" :obj="erc20WalletAddress">
-              <span slot="label">
-                I understand and agree that I must use a valid ERC20 compatible wallet address
-              </span>
-            </Checkbox>
-            <Checkbox name="noExchangeAddress" :obj="noExchangeAddress">
-              <span slot="label">
-                I understand and agree that the address I use must not be an exchange address
-              </span>
-            </Checkbox>
-            <Checkbox name="havePrivateKeys" :obj="havePrivateKeys">
-              <span slot="label">
-                I understand and agree that if I use an exchange address I must own the private keys
-              </span>
-            </Checkbox>
+        <transition name="fade">
+          <div class="salemodal__body__terms" v-if="saleTerms">
+            <br/>
+            <h3 class="text-color--matryx-grey-blue">MATRYX TOKEN SALE TERMS</h3>
+            <Tokensale-Sale-Terms class="salemodal__body__terms__document" id="sale-terms">
+            </Tokensale-Sale-Terms>
+            <div class="salemodal__body__terms__checklist">
+              <Checkbox name="saleTermsRead" :obj="saleTermsRead">
+                <span slot="label">
+                  I have read and agree to the Sale Terms of the Matryx Token Sale
+                </span>
+              </Checkbox>
+              <Checkbox name="erc20WalletAddress" :obj="erc20WalletAddress">
+                <span slot="label">
+                  I understand and agree that I must use a valid ERC20 compatible wallet address
+                </span>
+              </Checkbox>
+              <Checkbox name="noExchangeAddress" :obj="noExchangeAddress">
+                <span slot="label">
+                  I understand and agree that the address I use must not be an exchange address
+                </span>
+              </Checkbox>
+              <Checkbox name="havePrivateKeys" :obj="havePrivateKeys">
+                <span slot="label">
+                  I understand and agree that if I use an exchange address I must own the private keys
+                </span>
+              </Checkbox>
 
-            <div class="terms-email">
-              <input class="terms-email--input" type="text" placeholder="Email Address" v-model="email"/>
-              <span class="text-smaller">* Sign up to receive updates</span>
+              <div class="terms-email">
+                <input class="terms-email--input" type="text" placeholder="Email Address" v-model="email"/>
+                <span class="text-smaller">* Sign up to receive updates</span>
+              </div>
+
+              <button class="submit-btn matryx-button matryx-button--blue"
+                @click.prevent="handleSubmit"
+                :disabled="!allChecked"
+              >
+                SUBMIT
+              </button>
             </div>
-
-            <button class="submit-btn matryx-button matryx-button--blue"
-              @click.prevent="handleSubmit"
-              :disabled="!allChecked"
-            >
-              SUBMIT
-            </button>
           </div>
-        </div>
+        </transition>
 
-        <Sale-Modal-Contract-Info class="salemodal__body__address">
-        </Sale-Modal-Contract-Info>
+        <transition name="fade">
+          <Sale-Modal-Contract-Info class="salemodal__body__address" v-if="saleContract">
+          </Sale-Modal-Contract-Info>
+        </transition>
+
       </div>
     </div>
     </b-modal>
@@ -82,6 +87,8 @@ export default {
 
   data () {
     return {
+      saleTerms: true,
+      saleContract: false,
       email: '',
       dataField: '',
       gas: '',
@@ -125,6 +132,8 @@ export default {
 
       if (this.allChecked) {
         console.log('wheeee')
+        this.saleTerms = false
+        this.saleContract = true
       } else {
         console.log('boooo')
       }
@@ -289,6 +298,12 @@ section.sale-modal {
   }
 }
 
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0
+}
 
 
 </style>

@@ -13,7 +13,8 @@ export default new Vuex.Store({
     showSaleModal: false,
     email: '',
     language: 'en',
-    routeLoaded: false
+    routeLoaded: false,
+    dataField: 'hahfwejkfalwehflweaf'
   },
   getters: {
 
