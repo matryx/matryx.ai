@@ -13,7 +13,7 @@
 
 <script>
 import NavbarToken from '@/components/Navbar-Tokensale'
-import AbovetheFold from './Above-the-Fold'
+import AboveTheFold from './Above-the-Fold'
 import Blurb from './Blurb'
 import Announcement from './Announcement'
 import Blogging from './Blogging'
@@ -26,7 +26,7 @@ export default {
 
   components: {
     NavbarToken,
-    AbovetheFold,
+    AboveTheFold,
     Blurb,
     Announcement,
     Blogging,
