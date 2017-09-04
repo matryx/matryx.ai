@@ -104,14 +104,16 @@ footer {
 
 @media screen and (max-width: 767px) {
   footer .footer__social {
-    position:relative;
     position: relative;
-    margin: 20px auto 0;
+    margin: 40px auto 0;
     padding-right: 0;
+    float: none;
+    text-align: center;
   }
-}
 
-@media screen and (max-width: 550px) {
+// }
+
+// @media screen and (max-width: 550px) {
   footer {
     #Footer {
       bottom: -220px;

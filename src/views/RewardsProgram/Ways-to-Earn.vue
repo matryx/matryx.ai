@@ -90,8 +90,8 @@ export default {
   align-items: center;
 
   &--title {
-    padding: 20px 0;
-    font-size: 40px;
+    padding: 60px 0;
+    font-size: 3em;
     background-color: $matryx-lighter-grey;
     width: 100%;
   }
@@ -104,11 +104,12 @@ export default {
 
   &__social {
     margin-top: 20px;
-    width: 85%;
+    width: 100%;
     border-top: 2px solid $matryx-light-grey;
 
     &--title {
-      margin: 20px 0;
+      margin: 40px 0;
+      font-size: 2.3em;
     }
 
     &--platform {

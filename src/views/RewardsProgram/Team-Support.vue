@@ -59,9 +59,11 @@
         </div>
       </div>
 
-      <button class="btn btn-red team-support__press-btn uppercase">
-        Press Kit
-      </button>
+      <a href="/press-kit">
+        <button class="btn btn-red team-support__press-btn uppercase">
+          Press Kit
+        </button>
+      </a>
     </div>
   </section>
 </template>
@@ -101,10 +103,11 @@ section#team-support {
   align-items: center;
 
   &__title {
-    font-size: 4.5em;
+    font-size: 4em;
     padding: 30px;
-    margin: 30px;
+    margin: 30px 0 70px;
     line-height: 1.2em;
+    opacity: 0.9;
   }
 
   &__platform {
@@ -125,7 +128,9 @@ section#team-support {
     margin-bottom: 50px;
 
     &__title {
-      margin-bottom: 30px;
+      margin-bottom: 50px;
+      font-size: 2em;
+      opacity: 0.9;
     }
 
     &__images {
@@ -135,7 +140,7 @@ section#team-support {
       justify-content: space-between;
 
       &--img {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
       }
 
       img {

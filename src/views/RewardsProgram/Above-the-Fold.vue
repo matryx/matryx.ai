@@ -3,7 +3,7 @@
     <div class="content-container content-container--large">
       <h1 class="font-size--large text-color--white">Matryx Rewards Program</h1>
       <a href="#ways-to-earn" class="above-the-fold-rp__button text-color--white">
-        EARN MTX
+        <span>EARN MTX</span>
       </a>
       <h2 class="above-the-fold-rp__lead text-color--white">Join The Conversation</h2>
       <div class="above-the-fold-rp__arrow text-color--matryx-light-blue">&lang;</div>
@@ -23,7 +23,7 @@ export default {
     display:flex;
     flex-direction:column;
     text-align:center;
-    margin: 0;
+    margin: 0 0 -50px;
     padding-top: 100px;
     background: url('../../assets/images/rewardsProgram/rewards-program-bkg.jpg');
     background-size: cover;
@@ -36,7 +36,7 @@ export default {
 
     .above-the-fold-rp__button {
       display:block;
-      margin:0 auto 20px;
+      margin: 20px auto 40px;
       height: 70px;
       width: 300px;
       line-height: 70px;

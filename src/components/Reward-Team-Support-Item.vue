@@ -62,9 +62,9 @@ export default {
   }
 
   &__btn {
-    border-color: $yellow;
+    border-color: $light-yellow;
     color: $white;
-    background-color: $yellow;
+    background-color: $light-yellow;
     width: 250px;
     border-radius: 30px;
     padding: 15px;
