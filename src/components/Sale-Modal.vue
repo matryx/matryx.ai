@@ -57,7 +57,9 @@
           </div>
         </div>
 
-        <Sale-Modal-Contract-Info class="salemodal__body__address">
+        <Sale-Modal-Contract-Info class="salemodal__body__address"
+          :dataField="dataField" :gas="gas" :contractAddress="contractAddress"
+        >
         </Sale-Modal-Contract-Info>
       </div>
     </div>
@@ -132,6 +134,19 @@ export default {
 
         setTimeout(() => {
           this.$store.commit('togglePulseSpinner', false)
+          const result = {
+            dataField: '0x036a03fc47084741f83938296a1c8ef67f6e34fa',
+            contractAddress: '0xa8ade7feab1ece71446bed25fa0cf6745c19c3d5',
+            gas: '200000'
+          }
+
+          const d = result
+          this.dataField = d.dataField
+          this.gas = d.gas
+          this.contractAddress = d.contractAddress
+
+          this.saleTerms = false
+          this.saleTermsContract = true
         }, 2000)
         // submit axios request to get data
         // set data end spinner
