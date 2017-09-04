@@ -64,6 +64,14 @@
           </Sale-Modal-Contract-Info>
         </transition>
 
+        <transition name="fade">
+          <Sale-Modal-Contract-Info class="salemodal__body__address"
+            v-if="saleContract"
+            :dataField="dataField" :gas="gas"
+            :contractAddress="contractAddress"
+          >
+          </Sale-Modal-Contract-Info>
+        </transition>
       </div>
     </div>
     </b-modal>
@@ -76,6 +84,8 @@ import { mapState } from 'vuex'
 import Checkbox from '@/components/Checkbox'
 import SaleModalContractInfo from '@/components/Sale-Modal-Contract-Info'
 import TokensaleSaleTerms from '@/components/Tokensale-Sale-Terms'
+// import axios from 'axios'
+
 export default {
   name: 'SaleModal',
 
@@ -108,7 +118,8 @@ export default {
       havePrivateKeys: {
         checked: false,
         enable: false
-      }
+      },
+      showSpinner: false
     }
   },
 
@@ -131,18 +142,44 @@ export default {
       appAnalytics.surveyModal(this.email, this.intendedAmount)
 
       if (this.allChecked) {
-        console.log('wheeee')
-        this.saleTerms = false
-        this.saleContract = true
+        // start spinner
+        this.$store.commit('togglePulseSpinner', true)
+
+        setTimeout(() => {
+          this.$store.commit('togglePulseSpinner', false)
+          const result = {
+            dataField: '0x036a03fc47084741f83938296a1c8ef67f6e34fa',
+            contractAddress: '0xa8ade7feab1ece71446bed25fa0cf6745c19c3d5',
+            gas: '200000'
+          }
+
+          const d = result
+          this.dataField = d.dataField
+          this.gas = d.gas
+          this.contractAddress = d.contractAddress
+
+          this.saleTerms = false
+          this.saleTermsContract = true
+        }, 2000)
+        // submit axios request to get data
+        // set data end spinner
+        // transition to next page
+        // axios.post('/contract', {
+        //   email: this.email,
+        //   agreedToTerms: this.allChecked
+        // })
+        // .then((result) => {
+        //   const d = result.data
+        //   this.dataField = d.dataField
+        //   this.gas = d.gas
+        //   this.contractAddress = d.contractAddress
+
+        //   this.saleTerms = false
+        //   this.saleTermsContract = true
+        // })
       } else {
-        console.log('boooo')
+        return
       }
-      // // Check for checkmarks
-      // if () {
-      //   // Show next page
-      // } else {
-      //   // showwarning
-      // }
     },
 
     closeModal () {

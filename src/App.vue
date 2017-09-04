@@ -11,9 +11,7 @@
       no-close-on-backdrop
       hide-header
     >
-      <div class="close-modal text-muted" @click.prevent="closeModal">
-        X
-      </div>
+      <div class="close-modal text-muted" @click.prevent="closeModal">X</div>
       <CTA-Banner ctaLocation="Header"></CTA-Banner>
     </b-modal>
 
@@ -23,7 +21,9 @@
 
     <App-Footer></App-Footer>
 
+    <!-- Loaders that take up the whole page -->
     <Loader v-show="!loaded"></Loader>
+    <Pulse-Spinner v-show="showPulseSpinner"></Pulse-Spinner>
 
   </div>
 </template>
@@ -33,10 +33,12 @@ import AppNavbar from './components/App-Navbar'
 import AppFooter from './components/App-Footer'
 import CTABanner from './components/CTA-Banner'
 import Loader from './components/Loader'
+import PulseSpinner from './components/Pulse-Spinner'
 import SurveyModal from './components/Survey-Modal'
 import SaleModal from './components/Sale-Modal'
 import VueSticky from 'vue-sticky' // Es6 module
 import { appAnalytics } from '@/analytics'
+import { mapState } from 'vuex'
 
 jQuery(document).ready(function () {
   jQuery('.spinner-container').appendTo('body')
@@ -50,6 +52,7 @@ export default {
     AppFooter,
     CTABanner,
     Loader,
+    PulseSpinner,
     SurveyModal,
     SaleModal
   },
@@ -58,15 +61,11 @@ export default {
     'sticky': VueSticky
   },
 
-  computed: {
-    showGetNotifiedModal () {
-      return this.$store.state.showGetNotifiedModal
-    },
-
-    loaded () {
-      return this.$store.state.routeLoaded
-    }
-  },
+  computed: mapState({
+    showGetNotifiedModal: state => state.showGetNotifiedModal,
+    loaded: state => state.routeLoaded,
+    showPulseSpinner: state => state.showPulseSpinner
+  }),
 
   methods: {
     closeModal () {

@@ -14,6 +14,7 @@ export default new Vuex.Store({
     email: '',
     language: 'en',
     routeLoaded: false,
+    showPulseSpinner: false
     dataField: 'hahfwejkfalwehflweaf'
   },
   getters: {
@@ -38,6 +39,9 @@ export default new Vuex.Store({
     },
     toggleRouteLoaded (state, loaded) {
       state.routeLoaded = loaded
+    },
+    togglePulseSpinner (state, show) {
+      state.showPulseSpinner = show
     }
   },
   strict: debug
