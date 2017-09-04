@@ -61,7 +61,7 @@
 
         <transition name="fade">
           <Sale-Modal-Contract-Info class="salemodal__body__address"
-            v-if="saleTermsContract"
+            v-if="saleContract"
             :dataField="dataField" :gas="gas"
             :contractAddress="contractAddress"
           >
@@ -95,9 +95,9 @@ export default {
       saleTerms: false,
       saleContract: true,
       email: '',
-      dataField: '',
-      gas: '',
-      contractAddress: '',
+      dataField: '0x89r2jf2nklf2klafeafwefewafwef',
+      gas: '23423423',
+      contractAddress: '02394lxjrfafwewae23',
       saleTermsRead: {
         checked: false,
         enable: false

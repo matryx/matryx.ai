@@ -1,59 +1,43 @@
 <template>
   <div class="salemodal-contract-info">
     <h2 class="text-color--matryx-grey-blue">SALE CONTRACT</h2>
-    <form class="salemodal-contract-info__form">
+    <div class="salemodal-contract-info__form">
         <!-- these should be click to copy
         cannot change input
          -->
       <label class="salemodal-contract-info__form__label" for="contract-address">Contract Address</label>
-      <input class="salemodal-contract-info__form__input"
-        type="text"
-        id="contract-address"
-        readonly
-        :value="contractAddress"
+      <input class="salemodal-contract-info__form__input" id="contractAddress"
+        :value="contractAddress" readonly
       >
-      <button type="text"
-        class="salemodal-contract-info__form__copy"
-        v-clipboard="contractAddress"
-        @click.prevent="handleClick"
-        >
+
+      <button class="salemodal-contract-info__form__copy"
+        @click="handleCopy('#contractAddress')"
+      >
         Click to copy
       </button>
 
 
       <label class="salemodal-contract-info__form__label" for="data-field">Data Field</label>
-      <input class="salemodal-contract-info__form__input"
-        type="text"
-        id="data-field"
-        readonly
-        :value="dataField"
+      <input class="salemodal-contract-info__form__input" id="dataField" :value="dataField" readonly>
+      <button class="salemodal-contract-info__form__copy"
+        @click="handleCopy('#dataField')"
       >
-      <button type="text"
-        class="salemodal-contract-info__form__copy"
-        v-clipboard="dataField"
-        >
         Click to copy
       </button>
-
 
       <label class="salemodal-contract-info__form__label" for="gas">Gas</label>
       <input class="salemodal-contract-info__form__input"
-        v-model="gas"
+        :value="gas"
         type="text"
+        id="gas" readonly
         >
       <button type="button"
         class="salemodal-contract-info__form__copy"
-        v-clipboard:copy="gas"
+        @click="handleCopy('#gas')"
         >
         Click to copy
       </button>
-
-      <div id="message">{{ message }}</div>
-      <button data-clipboard-target="#message">
-        Copy!
-      </button>
-
-    </form>
+    </div>
     <h4 class="salemodal-contract-info__participate--header">How to participate using:</h4>
     <p class="salemodal-contract-info__participate--item">
       <a href="#" class="text-color--matryx-blue">MetaMask &rsaquo;</a>
@@ -77,31 +61,18 @@
   export default {
     name: 'SaleModalContractInfo',
 
-    computed: {
-      dataField () {
-        return this.$store.state.dataField
-      }
-    },
-
     props: {
-      // dataField: {
-      //   type: String,
-      //   default: '0x89r2jf2nklf2klafeafwefewafwef'
-      // },
-      // gas: {
-      //   type: String,
-      //   default: '23423423'
-      // },
+      dataField: {
+        type: String,
+        default: ''
+      },
+      gas: {
+        type: String,
+        default: ''
+      },
       contractAddress: {
         type: String,
-        default: '02394lxjrfafwewae23'
-      }
-    },
-
-    data () {
-      return {
-        gas: '120381293081293018293',
-        message: 'HAIAHAIA'
+        default: ''
       }
     },
 
@@ -109,19 +80,11 @@
       closeSaleModal () {
         this.$store.commit('showSaleModal', false)
       },
-      handleSuccess (e) {
-        e.preventDefault()
-        console.log('e', e)
-      },
 
-      handleClick () {
-        console.log('click')
-      },
-      onCopy: function (e) {
-        alert('You just copied: ' + e.text)
-      },
-      onError: function (e) {
-        alert('Failed to copy texts')
+      handleCopy (id) {
+        var s = document.querySelector(id)
+        s.select()
+        document.execCommand('Copy')
       }
     }
   }
