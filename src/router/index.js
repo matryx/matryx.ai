@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import store from '../store'
+// import store from '../store'
 
 const Home = () => import('@/views/Home')
 const FAQ = () => import('@/views/FAQ')
@@ -179,15 +179,15 @@ const router = new Router({
   ]
 })
 
-router.beforeEach((to, from, next) => {
-  store.commit('toggleRouteLoaded', false)
-  setTimeout(() => {
-    next()
-  }, 2000)
-})
+// router.beforeEach((to, from, next) => {
+//   store.commit('toggleRouteLoaded', false)
+//   setTimeout(() => {
+//     next()
+//   }, 2000)
+// })
 
-router.afterEach(() => {
-  store.commit('toggleRouteLoaded', true)
-})
+// router.afterEach(() => {
+//   store.commit('toggleRouteLoaded', true)
+// })
 
 export default router
