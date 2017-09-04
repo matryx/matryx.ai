@@ -1,9 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import store from '../store'
 
 const Home = () => import('@/views/Home')
 const FAQ = () => import('@/views/FAQ')
-const PressKit = () => import('@/views/PressKit/index')
+const PressKit = () => import('@/views/PressKit')
+const PreSale = () => import('@/views/PreSale')
+const RewardsProgram = () => import('@/views/RewardsProgram')
 
 const About = () => import('@/views/FAQ/About')
 const AboutQAs = () => import('@/views/FAQ/About-QAs')
@@ -24,20 +27,16 @@ const ErrorPage = () => import('@/views/ErrorPage')
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   mode: 'history',
+  scrollBehavior () {
+    return { x: 0, y: 0 }
+  },
   routes: [
     {
       path: '/',
       name: 'Home',
-      component: Home,
-      scrollBehavior (to, from, savedPosition) {
-        if (savedPosition) {
-          return savedPosition
-        } else {
-          return { x: 0, y: 0 }
-        }
-      }
+      component: Home
     },
     {
       path: '/tokensale',
@@ -151,6 +150,24 @@ export default new Router({
       redirect: '/press-kit'
     },
     {
+      path: '/pre-sale',
+      name: 'PreSale',
+      component: PreSale
+    },
+    {
+      path: '/presale',
+      redirect: '/pre-sale'
+    },
+    {
+      path: '/rewards-program',
+      name: 'RewardsProgram',
+      component: RewardsProgram
+    },
+    {
+      path: '/rewardsprogram',
+      redirect: '/rewards-program'
+    },
+    {
       path: '/404',
       name: 'ErrorPage',
       component: ErrorPage
@@ -161,3 +178,20 @@ export default new Router({
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  if (to.matched[0] === from.matched[0]) {
+    return next()
+  }
+
+  store.commit('toggleRouteLoaded', false)
+  setTimeout(() => {
+    next()
+  }, 2500)
+})
+
+router.afterEach((to, from) => {
+  store.commit('toggleRouteLoaded', true)
+})
+
+export default router

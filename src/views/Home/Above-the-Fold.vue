@@ -34,7 +34,7 @@
             Join in on the action. Enter your email to be notified when our token sale launches.
           </span>
         </p>
-        <Countdown></Countdown>
+        <Countdown end="September 13 2017 15:00:00 UTC"></Countdown>
         <Get-Notified ctaLocation="Above the Fold"></Get-Notified>
       </div>
       <div class="token-sale__video-launcher content-container--medium">

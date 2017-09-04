@@ -12,14 +12,14 @@ export default new Vuex.Store({
     showGetNotifiedModal: false,
     showSaleModal: false,
     email: '',
-    language: 'en'
+    language: 'en',
+    routeLoaded: false
   },
   getters: {
 
   },
   mutations: {
     showModal (state, show) {
-      console.log('toggle modal', show)
       state.showModal = show
     },
     setEmail (state, email) {
@@ -33,9 +33,10 @@ export default new Vuex.Store({
       state.language = language
     },
     showSaleModal (state, show) {
-      console.log('state', show)
       state.showSaleModal = show
-      console.log('state', state.showSaleModal)
+    },
+    toggleRouteLoaded (state, loaded) {
+      state.routeLoaded = loaded
     }
   },
   strict: debug

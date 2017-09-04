@@ -21,6 +21,10 @@ Vue.filter('two_digits', function (value) {
   return val
 })
 
+Vue.filter('num_commas', function (value) {
+  return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+})
+
 Vue.use(BootstrapVue)
 Vue.use(SocialSharing)
 

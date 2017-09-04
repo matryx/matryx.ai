@@ -1,5 +1,12 @@
 <template>
   <footer>
+    <CTA-Banner :lighterText="true"
+      :footerBkg="true"
+      :cta-location="bottomAndPage"
+      id="Footer"
+    >
+    </CTA-Banner>
+
     <div class="footer__social">
       <!-- <a href="https://join.slack.com/t/matryx-ai/shared_invite/MjE0MDA2MDk2ODE4LTE1MDAzMzA5ODctNDMxZWVjNGNiMQ" target="_blank">
         <img class="footer__social__icon" src="../assets/icons/slack.svg" alt="Slack">
@@ -32,8 +39,19 @@
 
 <script>
 import { appAnalytics } from '@/analytics'
+import CTABanner from '@/components/CTA-Banner'
 
 export default {
+  name: 'AppFooter',
+
+  components: { CTABanner },
+
+  data () {
+    return {
+      bottomAndPage: `Bottom - ${this.$route.name}`
+    }
+  },
+
   methods: {
     socialMediaClick (media, location) {
       appAnalytics.socialMediaClick(media, location)
@@ -45,15 +63,25 @@ export default {
 <style lang="scss">
 footer {
   margin-top: -20px;
-  padding: 20px;
   width: 100%;
   position:relative;
 
+  #Footer {
+    background-position: top;
+    padding: 80px 20px 60px 20px;
+    position: relative;
+    bottom: -110px;
+    margin-bottom: 0;
+  }
+
   .footer__legal {
     float: left;
-    p{
+
+    p {
       opacity: 0.8;
+      margin-left: 50px;
     }
+
     img {
       width: 100px;
       margin-bottom: 20px;
@@ -80,6 +108,15 @@ footer {
     position: relative;
     margin: 20px auto 0;
     padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  footer {
+    #Footer {
+      bottom: -220px;
+      padding: 100px 0 170px;
+    }
   }
 }
 </style>

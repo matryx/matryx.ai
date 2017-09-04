@@ -2,16 +2,15 @@
   <div class="body-content">
     <Navbar-Token></Navbar-Token>
     <Navbar-Sticky></Navbar-Sticky>
-    <AboveTheFoldTokenSale></AboveTheFoldTokenSale>
     <Above-the-Fold></Above-the-Fold>
     <Media-Mentions></Media-Mentions>
     <About-Matryx></About-Matryx>
-    <Token-Sale></Token-Sale>
+    <Pre-Sale></Pre-Sale>
     <div class="cta-middle-banner">
       <CTA-Banner :lighterText="true" :blueBkg="true" cta-location="Top"></CTA-Banner>
     </div>
     <div class="bkg-color--matryx-lighter-grey">
-      <Pre-Sale></Pre-Sale>
+      <Token-Sale></Token-Sale>
     </div>
     <About-Token-Sale></About-Token-Sale>
     <div class="cta-middle-banner">
@@ -24,14 +23,11 @@
     <CTA-Banner :whiteBkg="true" cta-location="Bottom"></CTA-Banner>
     <Matryx-Team></Matryx-Team>
     <News-Events></News-Events>
-    <CTA-Banner :lighterText="true" :footerBkg="true" cta-location="Bottom" id="Footer"></CTA-Banner>
+<!--     <CTA-Banner :lighterText="true" :footerBkg="true" cta-location="Bottom" id="Footer"></CTA-Banner> -->
   </div>
 </template>
 
 <script>
-// remove this from production:
-import AboveTheFoldTokenSale from './Above-the-Fold-tokensale'
-
 import AboutTokenSale from './About-Token-Sale'
 import AboveTheFold from './Above-the-Fold'
 import BountySystem from './Bounty-System'
@@ -42,8 +38,8 @@ import NanomeInfo from './Nanome-Info'
 import NavbarSticky from './Navbar-Sticky'
 import NewsEvents from './News-Events'
 import Quotes from './Quotes'
-import CTABanner from '../../components/CTA-Banner'
-import NavbarToken from '../../components/Navbar-Tokensale'
+import CTABanner from '@/components/CTA-Banner'
+import NavbarToken from '@/components/Navbar-Tokensale'
 import PreSale from './Pre-Sale'
 import TokenSale from './Token-Sale'
 import AboutMatryx from './About-Matryx'
@@ -52,8 +48,6 @@ export default {
   name: 'home',
 
   components: {
-    // remove from production
-    AboveTheFoldTokenSale,
     AboutTokenSale,
     AboveTheFold,
     BountySystem,
@@ -63,12 +57,21 @@ export default {
     NanomeInfo,
     NavbarSticky,
     NewsEvents,
-    CTABanner,
     Quotes,
+    CTABanner,
     NavbarToken,
     PreSale,
     TokenSale,
     AboutMatryx
+  },
+
+  beforeRouteUpdate (to, from, next) {
+    this.$store.commit('setAppNavVisibility', true)
+    next()
+  },
+  beforeRouteLeave (to, from, next) {
+    this.$store.commit('setAppNavVisibility', false)
+    next()
   },
 
   mounted () {

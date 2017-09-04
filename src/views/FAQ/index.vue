@@ -3,7 +3,7 @@
   <h1 class="font-">Frequently Asked Questions</h1>
   <aside class="faq-menu">
     <ul class="faq-menu__list">
-      <li class="faq-menu__list__list-item" @click="navigateToRoute('about')">
+      <li class="faq-menu__list__list-item">
         <span class="icon"><img src="../../assets/icons/icon-About.svg" alt=""></span>
         <router-link to="/faq/about">About Matryx</router-link>
       </li>
