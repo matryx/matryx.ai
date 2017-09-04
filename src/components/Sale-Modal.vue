@@ -60,11 +60,6 @@
         </transition>
 
         <transition name="fade">
-          <Sale-Modal-Contract-Info class="salemodal__body__address" v-if="saleContract">
-          </Sale-Modal-Contract-Info>
-        </transition>
-
-        <transition name="fade">
           <Sale-Modal-Contract-Info class="salemodal__body__address"
             v-if="saleContract"
             :dataField="dataField" :gas="gas"
@@ -97,8 +92,8 @@ export default {
 
   data () {
     return {
-      saleTerms: true,
-      saleContract: false,
+      saleTerms: false,
+      saleContract: true,
       email: '',
       dataField: '',
       gas: '',
@@ -159,7 +154,7 @@ export default {
           this.contractAddress = d.contractAddress
 
           this.saleTerms = false
-          this.saleTermsContract = true
+          this.saleContract = true
         }, 2000)
         // submit axios request to get data
         // set data end spinner

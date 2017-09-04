@@ -48,8 +48,8 @@
         Click to copy
       </button>
 
-      <input type="text" v-model="message">
-      <button type="button" v-clipboard:copy="message">
+      <div id="message">{{ message }}</div>
+      <button data-clipboard-target="#message">
         Copy!
       </button>
 
