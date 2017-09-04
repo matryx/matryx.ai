@@ -21,6 +21,8 @@
       <router-view></router-view>
     </transition>
 
+    <Loader></Loader>
+
     <App-Footer></App-Footer>
 
   </div>
@@ -32,6 +34,7 @@ import AppFooter from './components/App-Footer'
 import CTABanner from './components/CTA-Banner'
 import SurveyModal from './components/Survey-Modal'
 import SaleModal from './components/Sale-Modal'
+import Loader from './components/Loader'
 import VueSticky from 'vue-sticky' // Es6 module
 import { appAnalytics } from '@/analytics'
 
@@ -47,7 +50,8 @@ export default {
     AppFooter,
     CTABanner,
     SurveyModal,
-    SaleModal
+    SaleModal,
+    Loader
   },
 
   directives: {
