@@ -71,6 +71,8 @@ import { mapState } from 'vuex'
 import Checkbox from '@/components/Checkbox'
 import SaleModalContractInfo from '@/components/Sale-Modal-Contract-Info'
 import TokensaleSaleTerms from '@/components/Tokensale-Sale-Terms'
+import axios from 'axios'
+
 export default {
   name: 'SaleModal',
 
@@ -125,15 +127,11 @@ export default {
 
       if (this.allChecked) {
         console.log('wheeee')
+        // submit axios request to get data
+        // transition to next page
       } else {
-        console.log('boooo')
+        return
       }
-      // // Check for checkmarks
-      // if () {
-      //   // Show next page
-      // } else {
-      //   // showwarning
-      // }
     },
 
     closeModal () {
