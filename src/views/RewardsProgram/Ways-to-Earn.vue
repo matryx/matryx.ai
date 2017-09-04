@@ -1,14 +1,28 @@
 <template>
-  <section class="ways-to-earn">
-    <Reward-Social-Item
-      :maxMTX="youtube.maxMTX" :stakes="youtube.stakes" :src="youtube.src"
-    ></Reward-Social-Item>
-    <Reward-Social-Item
-      :maxMTX="twitter.maxMTX" :stakes="twitter.stakes" :src="twitter.src"
-    ></Reward-Social-Item>
-    <Reward-Social-Item
-      :maxMTX="medium.maxMTX" :stakes="medium.stakes" :src="medium.src"
-    ></Reward-Social-Item>
+  <section class="ways-to-earn content-container content-container--large">
+    <h2 class="ways-to-earn--title uppercase text-color--matryx-grey text-center">
+      Ways to Earn
+    </h2>
+
+    <h5 class="ways-to-earn--subtitle text-color--matryx-light-blue">
+      You can earn MTX by creating content fostering conversation about Matryx,
+      supporting the team!
+    </h5>
+
+    <div class="ways-to-earn__social">
+      <h3 class="ways-to-earn__social--title uppercase text-color--matryx-grey text-center">Social</h3>
+      <div class="ways-to-earn__social--platform">
+        <Reward-Social-Item
+          :maxMTX="youtube.maxMTX" :stakes="youtube.stakes" :src="youtube.src"
+        ></Reward-Social-Item>
+        <Reward-Social-Item
+          :maxMTX="twitter.maxMTX" :stakes="twitter.stakes" :src="twitter.src"
+        ></Reward-Social-Item>
+        <Reward-Social-Item
+          :maxMTX="medium.maxMTX" :stakes="medium.stakes" :src="medium.src"
+        ></Reward-Social-Item>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -48,8 +62,8 @@ export default {
       },
       medium: {
         stakes: [
-          '10 stakes - Every post (media or link)'
-          '20 stakes - Comment (40+ characters)'
+          '10 stakes - Every post (media or link)',
+          '20 stakes - Comment (40+ characters)',
           '30 stakes - Public share of any post by Matryx'
         ],
         src: mediumSrc,
@@ -61,4 +75,36 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../../assets/css/colors';
+
+.ways-to-earn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &--title {
+    padding: 20px 0;
+    font-size: 40px;
+    background-color: $matryx-lighter-grey;
+    width: 100%;
+  }
+
+  &--subtitle {
+    width: 400px;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  &__social {
+    margin-top: 20px;
+    width: 85%;
+    border-top: 2px solid $matryx-light-grey;
+
+    &--platform {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
 </style>

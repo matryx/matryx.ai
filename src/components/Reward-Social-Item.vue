@@ -40,6 +40,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 275px;
 
   &__img {
     height: 80px;
