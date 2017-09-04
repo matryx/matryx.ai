@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'Blurb'
+  name: 'Blogging'
 }
 </script>
 
