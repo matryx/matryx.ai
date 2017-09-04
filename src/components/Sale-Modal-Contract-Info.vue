@@ -59,6 +59,12 @@
     <p class="salemodal-contract-info__participate--item">
       <a href="#" class="text-color--matryx-blue">MyEtherWallet &rsaquo;</a>
     </p>
+    <button type="button"
+      class="salemodal-contract-info__button--close"
+      @click.prevent="closeSaleModal"
+    >
+      I'm done!
+    </button>
   </div>
 </template>
 
@@ -95,6 +101,9 @@
     },
 
     methods: {
+      closeSaleModal () {
+        this.$store.commit('showSaleModal', false)
+      },
       handleSuccess (e) {
         e.preventDefault()
         console.log('e', e)
@@ -126,14 +135,15 @@
       display: block;
       text-align:left;
       font-size: 18px;
-      color: $classic-grey;
+      color: $matryx-dark-grey;
     }
 
     &__input {
       width: 100%;
       padding: 5px 10px;
       font-size: 20px;
-      background-color: $light-grey;
+      background-color: $matryx-lighter-blue;
+      color:$matryx-dark-blue;
       border:none;
     }
 
@@ -153,9 +163,45 @@
       text-align:left;
       font-size: 18px;
       max-width: 400px;
-      margin: 0 auto;
+      margin: 0 auto 10px;
       border-bottom: 2px solid $matryx-grey;
     }
+
+    &--item {
+      text-align:left;
+      width: 100%;
+      margin: 0 auto;
+      max-width: 400px;
+
+      a {
+        color: $matryx-blue;
+
+        &:hover {
+          cursor:pointer;
+          text-decoration: none;
+          color: $matryx-grey;
+        }
+      }
+    }
   }
+
+  &__button {
+    &--close {
+      border: none;
+      border-radius: 40px;
+      width: 200px;
+      background-color: $matryx-lighter-grey;
+      color: $matryx-dark-blue;
+      padding: 10px 20px;
+      margin-top: 40px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $matryx-dark-blue;
+        color: $matryx-lighter-grey;
+      }
+    }
+  }
+
 }
 </style>
