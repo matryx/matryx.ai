@@ -40,10 +40,6 @@ import VueSticky from 'vue-sticky' // Es6 module
 import { appAnalytics } from '@/analytics'
 import { mapState } from 'vuex'
 
-jQuery(document).ready(function () {
-  jQuery('.spinner-container').appendTo('body')
-})
-
 export default {
   name: 'app',
 

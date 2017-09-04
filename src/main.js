@@ -6,10 +6,8 @@ import router from './router'
 import store from './store'
 import BootstrapVue from 'bootstrap-vue'
 import SocialSharing from 'vue-social-sharing'
-import VueClipboards from 'vue-clipboard2'
 
 import 'bootstrap/dist/css/bootstrap.css'
-import 'jquery'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.config.productionTip = false
@@ -28,7 +26,6 @@ Vue.filter('num_commas', function (value) {
 
 Vue.use(BootstrapVue)
 Vue.use(SocialSharing)
-Vue.use(VueClipboards)
 
 /* eslint-disable no-new */
 new Vue({

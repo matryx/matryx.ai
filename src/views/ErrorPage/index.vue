@@ -23,12 +23,7 @@ export default {
 }
 </script>
 
-<style media="screen">
-@import '../../assets/css/font-awesome.css';
-@import '../../assets/css/magnific-popup.css';
-@import '../../assets/css/isotope.css';
-@import '../../assets/css/jquery.mCustomScrollbar.css';
-@import '../../assets/css/responsive.css';
+<style lang="scss">
 
 .error__content img {
   position: relative;

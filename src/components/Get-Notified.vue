@@ -83,7 +83,6 @@ export default {
     return {
       email: '',
       openSuccessModal: false,
-      showSpinner: false,
       showEmailWarning: false
     }
   },

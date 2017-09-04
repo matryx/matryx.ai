@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-    <g fill="#4EB1DE" fill-rule="evenodd">
-        <path fill-rule="nonzero" d="M9.512 0C4.25 0 0 4.288 0 9.6c0 5.312 4.249 9.6 9.512 9.6 5.264 0 9.513-4.288 9.513-9.6 0-5.312-4.25-9.6-9.513-9.6zm0 18.133c-4.671 0-8.455-3.818-8.455-8.533S4.84 1.067 9.512 1.067c4.672 0 8.456 3.818 8.456 8.533s-3.784 8.533-8.456 8.533z"/>
-        <text font-family="Helvetica-Bold, Helvetica" font-size="5.6" font-weight="bold">
-            <tspan x="3.956" y="12.2">ETH</tspan>
-        </text>
-    </g>
-</svg>
