@@ -1,7 +1,7 @@
 <template>
   <section id="team-support">
     <div class="team-support content-container content-container--large">
-      <h2 class="team-support__title uppercase text-color--matryx-lighter-grey">
+      <h2 class="team-support__title uppercase text-color--matryx-lighter-grey text-center">
         Team Support
       </h2>
 
@@ -42,7 +42,7 @@
 
       <div class="team-support__content">
 
-        <h3 class="team-support__content__title uppercase text-center">
+        <h3 class="team-support__content__title uppercase text-center text-color--white">
           Content Ideas
         </h3>
 
@@ -92,7 +92,7 @@ export default {
 @import '../../assets/css/colors';
 
 section#team-support {
-  background-color: $matryx-light-blue;
+  background-color: $matryx-darker-blue;
 }
 
 .team-support {
@@ -104,6 +104,7 @@ section#team-support {
     font-size: 4.5em;
     padding: 30px;
     margin: 30px;
+    line-height: 1.2em;
   }
 
   &__platform {
@@ -133,6 +134,10 @@ section#team-support {
       flex-wrap: wrap;
       justify-content: space-between;
 
+      &--img {
+        margin-bottom: 50px;
+      }
+
       img {
         height: 200px;
         width: 300px;
@@ -151,6 +156,19 @@ section#team-support {
     &:hover {
       border: none;
       color: $matryx-red;
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .team-support {
+    &__platform {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__content__images {
+      justify-content: center;
     }
   }
 }

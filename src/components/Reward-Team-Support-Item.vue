@@ -46,6 +46,7 @@ export default {
   flex-direction: column;
   align-items: center;
   width: 275px;
+  margin-bottom: 75px;
 
   &__label {
     margin-top: 20px;
@@ -71,6 +72,12 @@ export default {
     &:hover {
       border: none;
     }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .reward-ts-item {
+    width: calc(100% - 40px);
   }
 }
 </style>
