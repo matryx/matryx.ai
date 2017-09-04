@@ -55,4 +55,18 @@ export default {
   }
 }
 
+@media screen and (max-width: 650px) {
+  .blogging {
+    .content-container {
+      border-radius: 0px;
+      margin-left: 0px;
+      max-width: 100%;
+      margin-right: 0px;
+    }
+
+    &__paragraph {
+
+    }
+  }
+}
 </style>
