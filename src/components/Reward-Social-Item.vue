@@ -53,6 +53,7 @@ export default {
     flex-direction: column;
     align-items: flex-start;
     padding: 0;
+    padding-left: 20px;
 
     li {
       list-style-image: url('../assets/images/rewardsProgram/bulletpoint.png');
@@ -60,4 +61,5 @@ export default {
     }
   }
 }
+
 </style>
