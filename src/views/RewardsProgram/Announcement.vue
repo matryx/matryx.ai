@@ -10,12 +10,21 @@
       </h2>
       <h2 class="announcement__header text-color--white">150,000 MTX!</h2>
       <img class="announcement__token-img" src="../../assets/images/rewardsProgram/mtx-token.png" alt="mtx coin">
-      <h4 class="announcement__sub-header text-color--white">Receiving MTX</h4>
       <hr class="announcement__hr"></hr>
       <p class="announcement__submit text-color--white">
-        Submit post URLs with a public Ethereum address to
-          <a href="mailto:bounties@matryx.ai">bounties@matryx.ai.</a>
+        <br/>
+        The Matryx platform has the potential to help solve the world’s biggest–and smallest–problems by building a community of innovators, contributors, and enthusiasts. To help build this, we are excited to announce the launch of the Matryx Rewards Program–a fun way to help engage the community and earn MTX while you’re at it!
+        <br/><br/>
+        As our community driven outreach grows, tiers are unlocked which
+        increase the possible MTX per stake!
       </p>
+      <h4 class="announcement__sub-header text-color--white">
+        <!-- As our community driven outreach grows, new levels are unlocked to
+        increase the possible MTX per stake available! -->
+      </h4>
+      <a href="#ways-to-earn" class="announcement__button">
+       PARTICIPATE
+      </a>
     </div>
   </section>
 </template>
@@ -46,7 +55,7 @@ export default {
   }
   &__sub-header {
     margin: 20px;
-    font-size: 32px;
+    font-size: 28px;
   }
   &__hr {
     margin: 0 0 5px 0;
@@ -54,6 +63,24 @@ export default {
   &__submit {
     padding-top: 10px;
     font-size: 20px;
+  }
+  &__button {
+    display:block;
+    margin: 0 auto;
+    line-height: 50px;
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 40px;
+    background-color: $light-yellow;
+    color: #FFF;
+
+    &:hover {
+      background-color: #FFF;
+      color: $light-yellow;
+      cursor:pointer;
+      text-decoration: none !important;
+    }
   }
 }
 
@@ -76,6 +103,7 @@ export default {
       border-color: $matryx-blue;
       border-width: 2px;
     }
+
   }
 }
 </style>

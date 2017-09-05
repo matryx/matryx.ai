@@ -24,6 +24,7 @@
             <span v-else-if=" language === 'ko' ">토큰판매</span>
             <span v-else>TOKEN SALE</span>
           </b-nav-item>
+
           <b-nav-item class="text-color--white"
             aria-disabled="false"
             href="/pre-sale"
@@ -31,11 +32,12 @@
           >
             <span v-if=" language === 'ru' ">предпродажа</span>
             <span v-else-if=" language === 'ch' ">预售</span>
-            <span v-else-if=" language === 'ge' ">Vorverkauf</span>
+            <span v-else-if=" language === 'ge' ">VORVERKAUF</span>
             <span v-else-if=" language === 'ja' ">プリセール</span>
             <span v-else-if=" language === 'ko' ">사전판매</span>
             <span v-else>PRE-SALE</span>
           </b-nav-item>
+
           <b-nav-item class="text-color--white"
             aria-disabled="false"
             href="/faq/about/what-is-matryx"
@@ -43,6 +45,16 @@
           >
             <span>FAQ</span>
           </b-nav-item>
+
+          <b-nav-item class="text-color--white"
+            aria-disabled="false"
+            href="/rewards"
+            target="_self"
+          >
+            <span>REWARDS</span>
+          </b-nav-item>
+
+
           <b-nav-item class="text-color--white"
             href="/press-kit"
           >

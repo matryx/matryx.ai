@@ -159,13 +159,13 @@ const router = new Router({
       redirect: '/pre-sale'
     },
     {
-      path: '/rewards-program',
+      path: '/rewards',
       name: 'RewardsProgram',
       component: RewardsProgram
     },
     {
       path: '/rewardsprogram',
-      redirect: '/rewards-program'
+      redirect: '/rewards'
     },
     {
       path: '/404',

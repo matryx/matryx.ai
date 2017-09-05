@@ -7,7 +7,6 @@
     <Ways-to-Earn></Ways-to-Earn>
     <Blogging></Blogging>
     <Team-Support></Team-Support>
-    <Content-Ideas></Content-Ideas>
   </div>
 </template>
 
@@ -19,7 +18,6 @@ import Announcement from './Announcement'
 import Blogging from './Blogging'
 import WaysToEarn from './Ways-to-Earn'
 import TeamSupport from './Team-Support'
-import ContentIdeas from './Content-Ideas'
 
 export default {
   name: 'RewardsProgram',
@@ -31,8 +29,7 @@ export default {
     Announcement,
     Blogging,
     WaysToEarn,
-    TeamSupport,
-    ContentIdeas
+    TeamSupport
   }
 }
 </script>
@@ -42,4 +39,5 @@ export default {
   footer {
     background-color: $matryx-darker-blue;
   }
+
 </style>
