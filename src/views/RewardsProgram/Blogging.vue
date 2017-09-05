@@ -9,11 +9,9 @@
       ></Reward-Social-Item>
 
       <p class="blogging__paragraph">
-      </br>
-        <strong>Topic: Use Cases Of Matryx</strong>
-      </br>
+        <br/>
         Blogs must be in English, Chinese, Russian, Korean, Japanese or Spanish.
-
+        <br/><br/>
         Blogs must be 700 characters or more, link directly to the Matryx homepage (<a class="blogging__link text-color--matryx-light-blue" href="https://matryx.ai">https://matryx.ai</a>), and contain entirely unique content.
       </p>
       <a href="https://goo.gl/forms/jiNQxJEfLVf7QBdc2" target="_blank" class="btn btn-yellow participate__btn uppercase">

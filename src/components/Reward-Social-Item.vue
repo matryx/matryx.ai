@@ -95,6 +95,7 @@ export default {
     width: 100%;
     max-width: 400px;
     margin-bottom: 100px;
+    height: 520px;
   }
 }
 
