@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+
+<title>Matryx Press Release RSS Feed</title>
+<link>https://matryx.ai/</link>
+<description>Decentralized Collaboration</description>
+
+  <item>
+    <title>Matryx Hosts Token Pre-Sale</title>
+    <link>https://matryx.ai/Matryx-Token-Pre-Sale-Media-Alert.html</link>
+    <guid>https://matryx.ai/Matryx-Token-Pre-Sale-Media-Alert.html</guid>
+    <pubDate>Tues, 5 Sept 2017 09:00:00 GMT</pubDate>
+    <description>[CDATA[ MTX token available for discounted purchase until September 13, 2017 ]]</description>
+  </item>
+
+  <item>
+    <title>Matryx Platform Aims to Breakthrough Barriers Impeding STEM Innovations</title>
+    <link>https://matryx.ai/Matryx-Explainer-Video-Announcement.html</link>
+    <guid>https://matryx.ai/Matryx-Explainer-Video-Announcement.html</guid>
+    <pubDate>Tues, 5 Sept 2017 10:00:00 GMT</pubDate>
+    <description>[CDATA[ Blockchain-based bounty system incentivizes collaborative problem solving ]]</description>
+  </item>
+
+</channel>
+</rss>
