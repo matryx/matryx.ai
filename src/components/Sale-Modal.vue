@@ -80,6 +80,7 @@ import Checkbox from '@/components/Checkbox'
 import SaleModalContractInfo from '@/components/Sale-Modal-Contract-Info'
 import TokensaleSaleTerms from '@/components/Tokensale-Sale-Terms'
 // import axios from 'axios'
+// import config from '../../config'
 
 export default {
   name: 'SaleModal',
@@ -92,8 +93,8 @@ export default {
 
   data () {
     return {
-      saleTerms: false,
-      saleContract: true,
+      saleTerms: true,
+      saleContract: false,
       email: '',
       dataField: '0x89r2jf2nklf2klafeafwefewafwef',
       gas: '23423423',
@@ -159,11 +160,12 @@ export default {
         // submit axios request to get data
         // set data end spinner
         // transition to next page
-        // axios.post('/contract', {
+        // axios.post(`/${config.app.contractServer}/token`, {
         //   email: this.email,
         //   agreedToTerms: this.allChecked
         // })
         // .then((result) => {
+        //   console.log('result')
         //   const d = result.data
         //   this.dataField = d.dataField
         //   this.gas = d.gas

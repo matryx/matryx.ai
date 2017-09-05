@@ -39,6 +39,6 @@ module.exports = {
   app: {
     contractServer: isProduction ?
         process.env.SERVER_ADDRESS :
-        'localhost:8080/api'
+        'http://localhost:4000/api'
   }
 }
