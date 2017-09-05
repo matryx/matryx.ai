@@ -69,6 +69,7 @@ export default {
     text-align: center;
     text-transform: uppercase;
     width: 100%;
+    font-size: 24px;
   }
   a{
     opacity: 0.2;

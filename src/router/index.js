@@ -165,7 +165,7 @@ const router = new Router({
     },
     {
       path: '/rewardsprogram',
-      redirect: '/rewards-program'
+      redirect: '/rewards'
     },
     {
       path: '/404',

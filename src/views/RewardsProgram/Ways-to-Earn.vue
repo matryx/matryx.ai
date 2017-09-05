@@ -66,7 +66,7 @@ export default {
         ],
         img: youtubeBar,
         src: youtubeSrc,
-        maxMTX: '40,000'
+        maxMTX: '45,000'
       },
       twitter: {
         stakes: [
@@ -78,17 +78,17 @@ export default {
         ],
         img: matryxTwitterBar,
         src: twitterSrc,
-        maxMTX: '40,000'
+        maxMTX: '30,000'
       },
       forum: {
         stakes: [
-          '20 stakes → Comment',
-          '30 stakes → Report suspicious activity',
+          '10 stakes → Comment',
+          '25 stakes → Report suspicious activity',
           '100 stakes → Thread creation'
         ],
         img: matryxForumBar,
         src: forumSrc,
-        maxMTX: '40,000'
+        maxMTX: '20,000'
       }
     }
   }

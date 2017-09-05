@@ -12,12 +12,9 @@
       </br>
         <strong>Topic: Use Cases Of Matryx</strong>
       </br>
- Blogs must be in English, Chinese,
-        Russian, Korean, Japanese or Spanish and have 300 or more followers.
-        Blogs must be 700 characters or more, link directly to the Matryx homepage
-        (<a  class="blogging__link text-color--matryx-light-blue" href="https://matryx.ai">https://matryx.ai</a>), and contain entirely unique content.
-        Blogs will be evaluated for quality and length and will earn between
-        30 - 200 stakes, as determined by the judgement of the Matryx team.
+        Blogs must be in English, Chinese, Russian, Korean, Japanese or Spanish.
+
+        Blogs must be 700 characters or more, link directly to the Matryx homepage (<a class="blogging__link text-color--matryx-light-blue" href="https://matryx.ai">https://matryx.ai</a>), and contain entirely unique content.
       </p>
       <a href="https://goo.gl/forms/jiNQxJEfLVf7QBdc2" target="_blank" class="btn btn-yellow participate__btn uppercase">
         Participate
@@ -50,7 +47,7 @@ export default {
         ],
         img: mediumBar,
         src: mediumSrc,
-        maxMTX: '40,000'
+        maxMTX: '35,000'
       }
     }
   }
