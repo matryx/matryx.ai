@@ -6,8 +6,8 @@
     <Announcement></Announcement>
     <Ways-to-Earn></Ways-to-Earn>
     <Blogging></Blogging>
-    <Team-Support></Team-Support>
-    <Content-Ideas></Content-Ideas>
+    <!-- <Team-Support></Team-Support> -->
+    <!-- <Content-Ideas></Content-Ideas> -->
   </div>
 </template>
 
