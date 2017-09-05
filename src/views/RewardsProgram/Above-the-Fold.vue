@@ -3,7 +3,7 @@
     <div class="content-container content-container--large">
       <h1 class="font-size--large text-color--white">Matryx Rewards Program</h1>
       <a href="#ways-to-earn" class="above-the-fold-rp__button text-color--white">
-        <span>EARN MTX</span>
+        EARN MTX
       </a>
       <h2 class="above-the-fold-rp__lead text-color--white">Join The Conversation</h2>
       <div class="above-the-fold-rp__arrow text-color--matryx-light-blue">&lang;</div>
@@ -65,8 +65,9 @@ export default {
     }
 
     .above-the-fold-rp__arrow {
-      margin-top: 50px;
+      margin: 50px auto;
       font-size: 5em;
+      width: 100px;
       transform: rotate(-90deg);
     }
   }

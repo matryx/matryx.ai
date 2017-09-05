@@ -1,16 +1,10 @@
 <template>
-  <div class="reward-social-item">
-    <img class="reward-social-item__img" :src="src">
-    <div class="reward-social-item__label text-center">
-      <small>up to </small>
-      <h5>{{ maxMTX }} MTX</h5>
-    </div>
+  <div class="reward-social-item-rules">
+    <img class="reward-social-item-rules__img" :src="img">
 
-    <img :src="img" alt="" class="reward-social-item__progress-bar">
-
-    <ul class="reward-social-item__stakes">
-      <li v-for="stake in stakes">
-        {{ stake }}
+    <ul class="reward-social-item-rules__stakes">
+      <li v-for="rule in rules">
+        {{ rule }}
       </li>
     </ul>
 
@@ -26,13 +20,7 @@ export default {
     img: {
       type: String
     },
-    src: {
-      type: String
-    },
-    maxMTX: {
-      type: String
-    },
-    stakes: {
+    rules: {
       type: Array
     }
   }
@@ -42,17 +30,21 @@ export default {
 <style lang="scss">
 @import '../assets/css/colors';
 
-.reward-social-item {
+.reward-social-item-rules {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px;
-  height: 490px;
+  width: calc(50% - 60px);
+  padding: 40px 20px 20px;
+  margin: 30px 30px 30px 30px;
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 20px;
 
   &__img {
     height: 80px;
     width: 80px;
+    margin-bottom: 20px;
   }
 
   &__stakes {
@@ -63,6 +55,7 @@ export default {
     padding: 0;
     padding-left: 20px;
     margin-top: 15px;
+    max-width: 300px;
 
     li {
       list-style-image: url('../assets/images/rewardsProgram/bulletpoint.png');
@@ -74,8 +67,8 @@ export default {
     width: 100%;
   }
 }
-.blogging__social-item.reward-social-item {
-  .reward-social-item__label {
+.blogging__social-item.reward-social-item-rules {
+  .reward-social-item-rules__label {
     color: #FFF;
   }
 }

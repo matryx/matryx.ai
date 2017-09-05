@@ -2,46 +2,39 @@
   <section id="team-support">
     <div class="team-support content-container content-container--large">
       <h2 class="team-support__title uppercase text-color--matryx-lighter-grey text-center">
-        Team Support
+        Rewards Guidelines
       </h2>
 
       <div class="team-support__platform">
-        <Reward-Team-Support-Item
-          :img="bitcoin.img"
-          :rewardMTX="bitcoin.rewardMTX"
-          :link="bitcoin.link"
-          :linkText="bitcoin.linkText"
+        <Reward-Social-Item-Rules
+          :img="twitter.img"
+          :rules="twitter.rules"
         >
-          <p slot="info">
-            So much information Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </Reward-Team-Support-Item>
+        </Reward-Social-Item-Rules>
+        <Reward-Social-Item-Rules
+          :img="youtube.img"
+          :rules="youtube.rules"
+        >
+        </Reward-Social-Item-Rules>
+        <Reward-Social-Item-Rules
+          :img="blog.img"
+          :rules="blog.rules"
+        >
+        </Reward-Social-Item-Rules>
+        <Reward-Social-Item-Rules
+          :img="bitcointalk.img"
+          :rules="bitcointalk.rules"
+        >
+        </Reward-Social-Item-Rules>
 
-        <Reward-Team-Support-Item
-          :img="bitcoin.img"
-          :rewardMTX="bitcoin.rewardMTX"
-          :link="bitcoin.link"
-          :linkText="bitcoin.linkText"
-        >
-          <p slot="info">
-            So much information Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </Reward-Team-Support-Item>
-
-        <Reward-Team-Support-Item
-          :img="bitcoin.img"
-          :rewardMTX="bitcoin.rewardMTX"
-          :link="bitcoin.link"
-          :linkText="bitcoin.linkText"
-        >
-          <p slot="info">
-            So much information Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </Reward-Team-Support-Item>
+        <a href="/press-kit" class="team-support__press-tag">
+          <button class="btn btn-red team-support__press-btn uppercase">
+            Press Kit
+          </button>
+        </a>
       </div>
 
-      <div class="team-support__content">
-
+<!--       <div class="team-support__content">
         <h3 class="team-support__content__title uppercase text-center text-color--white">
           Content Ideas
         </h3>
@@ -57,33 +50,60 @@
             <img src="../../assets/images/Matryx-Logo-Grey-CMYK.png">
           </div>
         </div>
-      </div>
-
-      <a href="/press-kit">
-        <button class="btn btn-red team-support__press-btn uppercase">
-          Press Kit
-        </button>
-      </a>
+      </div> -->
     </div>
   </section>
 </template>
 
 <script>
-import RewardTeamSupportItem from '@/components/Reward-Team-Support-Item'
-import bitcoinTalkImg from '@/assets/images/rewardsProgram/icon-bitcointalk.png'
-
+import RewardSocialItemRules from '@/components/Reward-Social-Item-Rules'
+import twitterImg from '@/assets/images/rewardsProgram/icon-twitter.png'
+import youtubeImg from '@/assets/images/rewardsProgram/icon-youtube.png'
+import mediumImg from '@/assets/icons/icon-medium.svg'
+import bitcointalkImg from '@/assets/images/rewardsProgram/icon-bitcointalk.png'
 export default {
   name: 'TeamSupport',
 
-  components: { RewardTeamSupportItem },
+  components: { RewardSocialItemRules },
 
   data () {
     return {
-      bitcoin: {
-        img: bitcoinTalkImg,
-        rewardMTX: '15,000',
-        link: 'https://bitcointalk.org',
-        linkText: 'Participate here'
+      bitcointalk: {
+        img: bitcointalkImg,
+        rules: [
+          'Threads must link back to matryx.ai',
+          'Must be able to track threads/comments via URL or keep list and submit at the end to rewards@matryx.ai'
+        ]
+      },
+
+      twitter: {
+        img: twitterImg,
+        rules: [
+          'Tweet up to 3 posts daily',
+          'Tweets must be organic',
+          'Encouraged to use #Matryx',
+          'Must either link matryx.ai or @matryx_ai'
+        ]
+      },
+
+      youtube: {
+        img: youtubeImg,
+        rules: [
+          'Over 2 minutes',
+          'matryx.ai must appear in video description',
+          '"Matryx" must appear in title',
+          'Only positive, professional, and thought-out videos considered'
+        ]
+      },
+
+      blog: {
+        img: mediumImg,
+        rules: [
+          'matryx.ai linked in page',
+          'Must be able to see the number of views',
+          '700+ words',
+          'Post should be professional, positive, and thought-out'
+        ]
       }
     }
   }
@@ -100,7 +120,7 @@ section#team-support {
 .team-support {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
 
   &__title {
     font-size: 4em;
@@ -150,6 +170,10 @@ section#team-support {
     }
   }
 
+  &__press-tag {
+    margin: 50px auto 0;
+  }
+
   &__press-btn {
     border-color: $matryx-red;
     color: $matryx-red;
@@ -160,7 +184,8 @@ section#team-support {
 
     &:hover {
       border: none;
-      color: $matryx-red;
+      color: #FFF;
+      background-color: $matryx-red;
     }
   }
 }

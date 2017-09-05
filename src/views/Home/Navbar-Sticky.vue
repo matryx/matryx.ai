@@ -65,6 +65,12 @@
         <b-nav-item href="/faq/about/what-is-matryx" target="_self" class="text-color--matryx-grey nav-link--mobile-only">
           <span>FAQ</span>
         </b-nav-item>
+        <b-nav-item href="/rewards" target="_self" class="text-color--matryx-grey nav-link--mobile-only">
+          <span>REWARDS</span>
+        </b-nav-item>
+        <b-nav-item href="/press-kit" target="_self" class="text-color--matryx-grey nav-link--mobile-only">
+          <span>PRESS</span>
+        </b-nav-item>
         <b-nav-item class="nav-item-language nav-link--mobile-only">
           <b-form-select
             v-model="selectedLanguage"

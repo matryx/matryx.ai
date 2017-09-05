@@ -1,6 +1,6 @@
 <template>
   <section id="ways-to-earn">
-    <h2 class="ways-to-earn--title uppercase text-color--matryx-grey text-center">
+    <h2 class="ways-to-earn--title uppercase text-color--matryx-dark-grey text-center">
       Ways to Earn
     </h2>
     <div class="ways-to-earn content-container content-container--large">
@@ -14,13 +14,22 @@
         <div class="ways-to-earn__social--platform">
           <Reward-Social-Item :maxMTX="youtube.maxMTX" :stakes="youtube.stakes"
            :src="youtube.src" :img="youtube.img"
-          ></Reward-Social-Item>
+          >
+            <Reward-Social-Item-Btn :link="googleForm" linkText="Participate" slot="button">
+            </Reward-Social-Item-Btn>
+          </Reward-Social-Item>
           <Reward-Social-Item :maxMTX="twitter.maxMTX" :stakes="twitter.stakes"
            :src="twitter.src" :img="twitter.img"
-          ></Reward-Social-Item>
+          >
+            <Reward-Social-Item-Btn :link="googleForm" linkText="Participate" slot="button">
+            </Reward-Social-Item-Btn>
+          </Reward-Social-Item>
           <Reward-Social-Item :maxMTX="forum.maxMTX" :stakes="forum.stakes"
             :src="forum.src" :img="forum.img"
-          ></Reward-Social-Item>
+          >
+            <Reward-Social-Item-Btn :link="googleForm" linkText="Participate" slot="button">
+            </Reward-Social-Item-Btn>
+          </Reward-Social-Item>
         </div>
       </div>
     </div>
@@ -29,6 +38,7 @@
 
 <script>
 import RewardSocialItem from '@/components/Reward-Social-Item'
+import RewardSocialItemBtn from '@/components/Reward-Social-Item-Btn'
 import youtubeSrc from '@/assets/images/rewardsProgram/icon-youtube.jpg'
 import twitterSrc from '@/assets/images/rewardsProgram/icon-twitter.png'
 import forumSrc from '@/assets/images/rewardsProgram/icon-bitcointalk.png'
@@ -40,11 +50,13 @@ export default {
   name: 'WaysToEarn',
 
   components: {
-    RewardSocialItem
+    RewardSocialItem,
+    RewardSocialItemBtn
   },
 
   data () {
     return {
+      googleForm: 'https://goo.gl/forms/jiNQxJEfLVf7QBdc2',
       youtube: {
         stakes: [
           '10 stakes → < 500 Views',

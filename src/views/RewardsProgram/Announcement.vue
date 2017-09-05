@@ -13,9 +13,7 @@
       <hr class="announcement__hr"></hr>
       <p class="announcement__submit text-color--white">
         <br/>
-        The Matryx Rewards program is a unique avenue with which we can simultaneously
-        engage and grow the community through a tiered bounty system. It is designed to reward
-        participants who significantly contribute to our overall outreach.
+        The Matryx platform has the potential to help solve the world’s biggest–and smallest–problems by building a community of innovators, contributors, and enthusiasts. To help build this, we are excited to announce the launch of the Matryx Rewards Program–a fun way to help engage the community and earn MTX while you’re at it!
         <br/><br/>
         As our community driven outreach grows, tiers are unlocked which
         increase the possible MTX per stake!
@@ -24,8 +22,8 @@
         <!-- As our community driven outreach grows, new levels are unlocked to
         increase the possible MTX per stake available! -->
       </h4>
-      <a href="" >
-        <span class="announcement__button">PARTICIPATE</span>
+      <a href="#ways-to-earn" class="announcement__button">
+       PARTICIPATE
       </a>
     </div>
   </section>
@@ -74,14 +72,14 @@ export default {
     height: 50px;
     font-size: 20px;
     border-radius: 40px;
-    background-color: $yellow;
+    background-color: $light-yellow;
     color: #FFF;
 
     &:hover {
       background-color: #FFF;
       color: $light-yellow;
       cursor:pointer;
-      text-decoration: none;
+      text-decoration: none !important;
     }
   }
 }

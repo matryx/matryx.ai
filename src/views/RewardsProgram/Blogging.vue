@@ -12,14 +12,16 @@
       </br>
         <strong>Topic: Use Cases Of Matryx</strong>
       </br>
-         Blogs must be in English, Chinese,
+ Blogs must be in English, Chinese,
         Russian, Korean, Japanese or Spanish and have 300 or more followers.
         Blogs must be 700 characters or more, link directly to the Matryx homepage
         (<a  class="blogging__link text-color--matryx-light-blue" href="https://matryx.ai">https://matryx.ai</a>), and contain entirely unique content.
         Blogs will be evaluated for quality and length and will earn between
         30 - 200 stakes, as determined by the judgement of the Matryx team.
       </p>
-
+      <a href="https://goo.gl/forms/jiNQxJEfLVf7QBdc2" target="_blank" class="btn btn-yellow participate__btn uppercase">
+        Participate
+      </a>
     </div>
   </section>
 </template>
@@ -59,6 +61,7 @@ export default {
 @import '../../assets/css/colors.scss';
 
 .blogging {
+  position: relative;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50,082c49+50 */
   background: rgb(255,255,255); /* Old browsers */
   background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(8,44,73,1) 50%); /* FF3.6-15 */
@@ -86,9 +89,33 @@ export default {
   &__social-item {
     margin: 0 auto;
   }
+
+  .blogging__social-item.reward-social-item {
+    height: 400px;
+  }
+
   &__hr {
     border-color: #FFF;
     border-width: 2px;
+  }
+}
+
+.participate__btn {
+  border-color: $light-yellow;
+  color: $white !important;
+  background-color: $light-yellow;
+  width: 250px;
+  border-radius: 30px;
+  padding: 15px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: $white !important;
+    color: $yellow !important;
+    cursor: pointer !important;
   }
 }
 
