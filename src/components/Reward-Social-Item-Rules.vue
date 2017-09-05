@@ -73,6 +73,11 @@ export default {
   }
 }
 
-
+@media screen and (max-width: 1000px) {
+  .reward-social-item-rules {
+    margin: 20px;
+    width: calc(100% - 40px);
+  }
+}
 
 </style>

@@ -4,7 +4,7 @@
       <h2 class="blogging__header text-color--white">Blogging</h2>
       <hr class="blogging__hr">
       <Reward-Social-Item :maxMTX="medium.maxMTX" :stakes="medium.stakes"
-        :src="medium.src" :img="medium.img"
+        :src="medium.src" :img="medium.img" :name="medium.name"
         class="blogging__social-item"
       ></Reward-Social-Item>
 
@@ -39,6 +39,7 @@ export default {
   data () {
     return {
       medium: {
+        name: 'Blogs',
         stakes: [
           '20 stakes → < 500 Views',
           '50 stakes → 500  - 999 Views',

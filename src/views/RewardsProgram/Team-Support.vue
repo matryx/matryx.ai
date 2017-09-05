@@ -79,8 +79,8 @@ export default {
       twitter: {
         img: twitterImg,
         rules: [
-          'Tweet up to 3 posts daily',
-          'Tweets must be organic',
+          'Maximum of 3 tweets per day',
+          'Tweets must be original',
           'Encouraged to use #Matryx',
           'Must either link matryx.ai or @matryx_ai'
         ]
@@ -200,6 +200,13 @@ section#team-support {
     &__content__images {
       justify-content: center;
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .team-support__title {
+    font-size: 3em;
+    margin-bottom: 0px;
   }
 }
 </style>

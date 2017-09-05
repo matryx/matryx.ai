@@ -15,19 +15,19 @@
         <h3 class="ways-to-earn__social--title uppercase text-color--matryx-grey text-center">Social</h3>
         <div class="ways-to-earn__social--platform">
           <Reward-Social-Item :maxMTX="youtube.maxMTX" :stakes="youtube.stakes"
-           :src="youtube.src" :img="youtube.img"
+           :src="youtube.src" :img="youtube.img" :name="youtube.name"
           >
             <Reward-Social-Item-Btn :link="googleForm" linkText="Participate" slot="button">
             </Reward-Social-Item-Btn>
           </Reward-Social-Item>
           <Reward-Social-Item :maxMTX="twitter.maxMTX" :stakes="twitter.stakes"
-           :src="twitter.src" :img="twitter.img"
+           :src="twitter.src" :img="twitter.img" :name="twitter.name"
           >
             <Reward-Social-Item-Btn :link="googleForm" linkText="Participate" slot="button">
             </Reward-Social-Item-Btn>
           </Reward-Social-Item>
           <Reward-Social-Item :maxMTX="forum.maxMTX" :stakes="forum.stakes"
-            :src="forum.src" :img="forum.img"
+            :src="forum.src" :img="forum.img" :name="forum.name"
           >
             <Reward-Social-Item-Btn :link="googleForm" linkText="Participate" slot="button">
             </Reward-Social-Item-Btn>
@@ -60,6 +60,7 @@ export default {
     return {
       googleForm: 'https://goo.gl/forms/jiNQxJEfLVf7QBdc2',
       youtube: {
+        name: 'YouTube',
         stakes: [
           '10 stakes → < 500 Views',
           '50 stakes → 500 - 999 Views',
@@ -71,6 +72,7 @@ export default {
         maxMTX: '45,000'
       },
       twitter: {
+        name: 'Twitter',
         stakes: [
           '5 stakes → Re-Tweet',
           '20 stakes → 100 - 299 followers',
@@ -83,6 +85,7 @@ export default {
         maxMTX: '30,000'
       },
       forum: {
+        name: 'Forums',
         stakes: [
           '10 stakes → Comment',
           '25 stakes → Report suspicious activity',
@@ -143,6 +146,7 @@ export default {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      width: 100%;
     }
   }
 }
@@ -153,7 +157,9 @@ export default {
       padding-top: 0;
     }
   }
+}
 
+@media screen and (max-width: 1000px) {
   .ways-to-earn {
 
     &--title {

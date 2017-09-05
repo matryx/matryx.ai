@@ -2,6 +2,7 @@
   <div class="reward-social-item">
     <img class="reward-social-item__img" :src="src">
     <div class="reward-social-item__label text-center">
+      <h5 class="reward-social-item__name uppercase">{{ name }}</h5>
       <small>up to </small>
       <h5>{{ maxMTX }} MTX</h5>
     </div>
@@ -23,6 +24,9 @@ export default {
   name: 'RewardSocialItem',
 
   props: {
+    name: {
+      type: String
+    },
     img: {
       type: String
     },
@@ -49,6 +53,12 @@ export default {
   align-items: center;
   width: 300px;
   height: 490px;
+
+  &__name {
+    line-height: 21px;
+    margin-top: 13px;
+    margin-bottom: 0;
+  }
 
   &__img {
     height: 80px;
@@ -80,6 +90,12 @@ export default {
   }
 }
 
-
+@media screen and (max-width: 1000px) {
+  .reward-social-item {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 100px;
+  }
+}
 
 </style>
