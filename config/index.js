@@ -1,5 +1,6 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require('path')
+var isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
   build: {
@@ -34,5 +35,10 @@ module.exports = {
     // In our experience, they generally work as expected,
     // just be aware of this issue when enabling this option.
     cssSourceMap: false
+  },
+  app: {
+    contractServer: isProduction ?
+        process.env.SERVER_ADDRESS :
+        'localhost:8080/api'
   }
 }

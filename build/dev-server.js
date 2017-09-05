@@ -80,6 +80,14 @@ devMiddleware.waitUntilValid(() => {
   _resolve()
 })
 
+// Testing Route for Contract Server
+app.post('/tokensale', (req, res) => {
+  if (!req.body.agreedToTerms) {
+    return res.status(403).send('User must agree to all terms')
+  }
+
+})
+
 var server = app.listen(port)
 
 module.exports = {
