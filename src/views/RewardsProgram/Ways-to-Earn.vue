@@ -74,7 +74,7 @@ export default {
       twitter: {
         name: 'Twitter',
         stakes: [
-          '5 stakes → Re-Tweet',
+          '5 stakes → RT a @matryx_ai tweet',
           '20 stakes → 100 - 299 followers',
           '50 stakes → 300 - 499 followers',
           '75 stakes → 500 - 999 followers',
