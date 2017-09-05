@@ -5,8 +5,10 @@
     </h2>
     <div class="ways-to-earn content-container content-container--large">
       <h5 class="ways-to-earn--subtitle text-color--matryx-light-blue">
-        You can earn MTX by creating content fostering conversation about Matryx,
-        supporting the team!
+        You can earn MTX by creating content fostering conversation about Matryx, supporting the team!
+        <br/><br/>
+        20,000 MTX will be set aside for innovative ideas!<br/>
+        Submit your ideas to <a href="mailto:rewards@matryx.ai">rewards@matryx.ai</a>.
       </h5>
 
       <div class="ways-to-earn__social">
@@ -118,9 +120,13 @@ export default {
   }
 
   &--subtitle {
-    width: 400px;
+    width: 900px;
     margin: 20px auto;
     text-align: center;
+
+    a:hover {
+      text-decoration: none;
+    }
   }
 
   &__social {

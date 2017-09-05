@@ -6,7 +6,6 @@
         <br>
         That's why we need the entire community involved!
       </h3>
-      <div class="blurb__hr content-container content-container--small"></div>
     </div>
   </section>
 </template>
@@ -24,11 +23,6 @@ export default {
     .blurb {
       &__text {
         text-align:center;
-      }
-      &__hr {
-        border-top: 1px solid $matryx-blue;
-        padding:0 !important;
-        margin-top: 20px;
       }
     }
   }
