@@ -6,7 +6,9 @@
         EARN MTX
       </a>
       <h2 class="above-the-fold-rp__lead text-color--white">Join The Conversation</h2>
-      <div class="above-the-fold-rp__arrow text-color--matryx-light-blue">&lang;</div>
+      <div>
+        <span class="above-the-fold-rp__arrow text-color--matryx-light-blue">&lang;</span>
+      </div>
     </div>
   </section>
 </template>
@@ -65,6 +67,7 @@ export default {
     }
 
     .above-the-fold-rp__arrow {
+      display: block;
       margin: 50px auto;
       font-size: 5em;
       width: 100px;
