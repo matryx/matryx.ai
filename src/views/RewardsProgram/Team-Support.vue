@@ -82,7 +82,8 @@ export default {
           'Maximum of 3 tweets per day',
           'Tweets must be original',
           'Encouraged to use #Matryx',
-          'Must either link matryx.ai or @matryx_ai'
+          'Must either link matryx.ai or @matryx_ai',
+          'Re-Tweets must be on an original @matryx_ai tweet about our token sale'
         ]
       },
 
