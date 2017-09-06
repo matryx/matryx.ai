@@ -20,24 +20,6 @@ export default new Vuex.Store({
       contractAddress: '',
       dataField: '',
       gas: ''
-    },
-    checked: {
-      saleTermsRead: {
-        checked: false,
-        enable: false
-      },
-      erc20WalletAddress: {
-        checked: false,
-        enable: false
-      },
-      noExchangeAddress: {
-        checked: false,
-        enable: false
-      },
-      havePrivateKeys: {
-        checked: false,
-        enable: false
-      }
     }
   },
   getters: {

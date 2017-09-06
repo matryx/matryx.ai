@@ -64,6 +64,7 @@
             v-if="showSaleContract"
             :dataField="contractInfo.dataField" :gas="contractInfo.gas"
             :contractAddress="contractInfo.contractAddress"
+            :handleSubmit="closeModal"
           >
           </Sale-Modal-Contract-Info>
         </transition>
@@ -162,6 +163,19 @@ export default {
       this.$store.commit('clearContractInfo')
       this.$store.commit('toggleSaleContract', false)
       this.$store.commit('showSaleModal', false)
+
+      this.clearAllChecked()
+    },
+
+    clearAllChecked () {
+      this.saleTerms.checked = false
+      this.saleTerms.enable = false
+      this.erc20WalletAddress.checked = false
+      this.erc20WalletAddress.enable = false
+      this.noExchangeAddress.checked = false
+      this.noExchangeAddress.enable = false
+      this.havePrivateKeys.checked = false
+      this.havePrivateKeys.enable = false
     }
   },
 
