@@ -83,7 +83,7 @@
     </div>
 
     <div id="presale__discounts">
-      <h3 class="presale__discounts--title">Pre-Sale Discounts</h3>
+      <h2 class="text-color--matryx-dark-grey presale__discounts--title">Pre-Sale Discounts</h2>
       <div class="presale__discounts--list">
         <div class="presale__discounts--list--10">
           <SaleIcon
@@ -91,7 +91,7 @@
             text="10% for purchases between 150 - 300 ETH*"
           ></SaleIcon>
         </div>
-        <div class="presale__discounts--list-15">
+        <div class="presale__discounts--list--15">
           <SaleIcon
             :img="discount15"
             text="15% for purchases over 300 ETH*"
@@ -224,7 +224,7 @@ export default {
       align-items: center;
 
       .matryx-button {
-        width: 400px;
+        // width: 400px;
         height: 70px;
         background-color: $light-green;
         border-color: $light-green;
@@ -339,21 +339,24 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 80px;
+    padding: 80px 20px 20px;
 
-    &--list {
+    .presale__discounts--list {
       display: flex;
-      justify-content: space-around;
+      flex-direction: row;
       flex-wrap: wrap;
+      justify-content: space-between;
       width: 100%;
+      max-width: 1000px;
       padding: 25px;
 
       div {
-        width: 200px;
+        width: 300px;
+        margin: 0 auto;
       }
 
       img {
-        width: 130px;
+        width: 250px;
       }
     }
 
@@ -363,6 +366,7 @@ export default {
       border: 1px solid $matryx-blue;
     }
   }
+
 
   /*----- MEDIA QUERIES -----*/
   @media screen and (min-width: 1690px) {
