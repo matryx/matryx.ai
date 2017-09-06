@@ -30,6 +30,7 @@
 
     <div class="footer__legal">
       <img src="../assets/images/Matryx-Logo-White-640px.png" alt="Logo">
+      <p class="font-size--small text-color--white"><a href="/privacy-policy.pdf">Privacy Policy</a></p>
       <p class="font-size--small text-color--white">
         &copy; 2017 All rights reserved.
       </p>

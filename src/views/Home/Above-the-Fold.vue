@@ -15,7 +15,7 @@
           <span v-else>Join Our Token Sale</span>
         </h1>
 
-        <Matryx-Btn v-if="!showPreSale" text="Participate in Pre-Sale"
+        <Matryx-Btn v-if="showPreSale" text="Participate in Pre-Sale"
           :handleClick="goToPreSale">
         </Matryx-Btn>
 
