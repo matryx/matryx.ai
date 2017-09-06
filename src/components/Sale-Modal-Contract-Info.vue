@@ -67,7 +67,7 @@
         default: ''
       },
       gas: {
-        type: String,
+        type: Number,
         default: ''
       },
       saleAddress: {
@@ -80,11 +80,11 @@
     },
 
     methods: {
-      // closeSaleModal () {
-      //   this.$store.commit('clearContractInfo')
-      //   this.$store.commit('toggleSaleContract', false)
-      //   this.$store.commit('showSaleModal', false)
-      // },
+      closeSaleModal () {
+        this.$store.commit('clearContractInfo')
+        this.$store.commit('toggleSaleContract', false)
+        this.$store.commit('showSaleModal', false)
+      },
 
       handleCopy (id) {
         var s = document.querySelector(id)
@@ -101,7 +101,7 @@
 .salemodal-contract-info {
   &__form {
     width: 100%;
-    max-width: 400px;
+    max-width: 475px;
     margin: 40px auto;
 
     &__label {
@@ -114,7 +114,7 @@
     &__input {
       width: 100%;
       padding: 5px 10px;
-      font-size: 20px;
+      font-size: 19px;
       background-color: $matryx-lighter-blue;
       color:$matryx-dark-blue;
       border:none;

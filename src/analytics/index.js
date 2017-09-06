@@ -47,6 +47,15 @@ const appAnalytics = {
       category: 'email',
       label: 'get-notified'
     })
+  },
+
+  rewardsParticipate (location) {
+    window.analytics.identify(getlStorage('email')
+
+    window.analytics.track(`Participate - ${location} - ${social}`, {
+      category: 'Rewards',
+      label: `rewards-${location}-${social}`
+    })
   }
 }
 

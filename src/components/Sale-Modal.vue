@@ -50,7 +50,7 @@
               </div>
 
               <button class="submit-btn matryx-button matryx-button--blue"
-                @click.prevent="handleSubmit"
+                @click.prevent="submitVerified"
                 :disabled="!allChecked"
               >
                 SUBMIT
@@ -131,7 +131,7 @@ export default {
   },
 
   methods: {
-    handleSubmit () {
+    submitVerified () {
       appAnalytics.surveyModal(this.email, this.intendedAmount)
 
       if (this.allChecked) {
@@ -168,32 +168,37 @@ export default {
     },
 
     clearAllChecked () {
-      this.saleTerms.checked = false
-      this.saleTerms.enable = false
+      this.email = ''
+      this.saleTermsRead.checked = false
+      this.saleTermsRead.enable = false
       this.erc20WalletAddress.checked = false
       this.erc20WalletAddress.enable = false
       this.noExchangeAddress.checked = false
       this.noExchangeAddress.enable = false
       this.havePrivateKeys.checked = false
       this.havePrivateKeys.enable = false
+    },
+
+    resetTerms () {
+      const vm = this
+      var saleTerms = document.querySelector('#sale-terms')
+      saleTerms.addEventListener('scroll', function () {
+        if (this.scrollHeight - (this.offsetHeight - 2) === this.scrollTop) {
+          vm.saleTermsRead.enable = true
+          vm.erc20WalletAddress.enable = true
+          vm.noExchangeAddress.enable = true
+          vm.havePrivateKeys.enable = true
+        }
+      })
     }
   },
 
   mounted () {
-    const vm = this
-    var saleTerms = document.querySelector('#sale-terms')
-    saleTerms.addEventListener('scroll', function () {
-      if (this.scrollHeight - (this.offsetHeight - 2) === this.scrollTop) {
-        vm.saleTermsRead.enable = true
-        vm.erc20WalletAddress.enable = true
-        vm.noExchangeAddress.enable = true
-        vm.havePrivateKeys.enable = true
-      }
-    })
+    this.resetTerms()
   },
 
-  destroyed () {
-
+  updated () {
+    this.resetTerms()
   }
 }
 </script>

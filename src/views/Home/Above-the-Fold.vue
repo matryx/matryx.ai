@@ -129,6 +129,16 @@ section.above-the-fold {
     justify-content: space-between;
     padding: 40px 40px 160px;
   }
+
+  .matryx-button {
+    background-color: $light-green;
+    border-color: $light-green;
+
+    &:hover {
+      background-color: $matryx-blue;
+      border-color: $white;
+    }
+  }
 }
 
 .token-sale__text {

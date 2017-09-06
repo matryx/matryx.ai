@@ -60,26 +60,6 @@ export default new Vuex.Store({
     },
     toggleSaleContract (state, show) {
       state.showSaleContract = show
-    },
-    clearChecked (state) {
-      state.checked = {
-        saleTermsRead: {
-          checked: false,
-          enable: false
-        },
-        erc20WalletAddress: {
-          checked: false,
-          enable: false
-        },
-        noExchangeAddress: {
-          checked: false,
-          enable: false
-        },
-        havePrivateKeys: {
-          checked: false,
-          enable: false
-        }
-      }
     }
   },
   strict: debug
