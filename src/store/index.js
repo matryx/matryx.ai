@@ -17,7 +17,7 @@ export default new Vuex.Store({
     showPulseSpinner: false,
     showSaleContract: false,
     contractInfo: {
-      contractAddress: '',
+      saleAddress: '',
       dataField: '',
       gas: ''
     }
@@ -53,7 +53,7 @@ export default new Vuex.Store({
     },
     clearContractInfo (state) {
       state.contractInfo = {
-        contractAddress: '',
+        saleAddress: '',
         dataField: '',
         gas: ''
       }

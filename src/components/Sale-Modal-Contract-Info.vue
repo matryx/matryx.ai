@@ -6,12 +6,12 @@
         cannot change input
          -->
       <label class="salemodal-contract-info__form__label" for="contract-address">Contract Address</label>
-      <input class="salemodal-contract-info__form__input" id="contractAddress"
-        :value="contractAddress" readonly
+      <input class="salemodal-contract-info__form__input" id="saleAddress"
+        :value="saleAddress" readonly
       >
 
       <button class="salemodal-contract-info__form__copy"
-        @click="handleCopy('#contractAddress')"
+        @click="handleCopy('#saleAddress')"
       >
         Click to copy
       </button>
@@ -70,7 +70,7 @@
         type: String,
         default: ''
       },
-      contractAddress: {
+      saleAddress: {
         type: String,
         default: ''
       },

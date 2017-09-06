@@ -63,7 +63,7 @@
           <Sale-Modal-Contract-Info class="salemodal__body__address"
             v-if="showSaleContract"
             :dataField="contractInfo.dataField" :gas="contractInfo.gas"
-            :contractAddress="contractInfo.contractAddress"
+            :saleAddress="contractInfo.saleAddress"
             :handleSubmit="closeModal"
           >
           </Sale-Modal-Contract-Info>
