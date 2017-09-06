@@ -14,7 +14,12 @@ export default new Vuex.Store({
     email: '',
     language: 'en',
     routeLoaded: false,
-    showPulseSpinner: false
+    showPulseSpinner: false,
+    contractInfo: {
+      contractAddress: '',
+      dataField: '',
+      gas: ''
+    }
   },
   getters: {
 
@@ -41,6 +46,16 @@ export default new Vuex.Store({
     },
     togglePulseSpinner (state, show) {
       state.showPulseSpinner = show
+    },
+    setContractInfo (state, info) {
+      state.contractInfo = info
+    },
+    clearContractInfo (state) {
+      state.contractInfo = {
+        contractAddress: '',
+        dataField: '',
+        gas: ''
+      }
     }
   },
   strict: debug

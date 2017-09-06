@@ -62,8 +62,8 @@
         <transition name="fade">
           <Sale-Modal-Contract-Info class="salemodal__body__address"
             v-if="saleContract"
-            :dataField="dataField" :gas="gas"
-            :contractAddress="contractAddress"
+            :dataField="contractInfo.dataField" :gas="contractInfo.gas"
+            :contractAddress="contractInfo.contractAddress"
           >
           </Sale-Modal-Contract-Info>
         </transition>
@@ -79,8 +79,8 @@ import { mapState } from 'vuex'
 import Checkbox from '@/components/Checkbox'
 import SaleModalContractInfo from '@/components/Sale-Modal-Contract-Info'
 import TokensaleSaleTerms from '@/components/Tokensale-Sale-Terms'
-// import axios from 'axios'
-// import config from '../../config'
+import axios from 'axios'
+import config from '../../config'
 
 export default {
   name: 'SaleModal',
@@ -96,9 +96,6 @@ export default {
       saleTerms: true,
       saleContract: false,
       email: '',
-      dataField: '0x89r2jf2nklf2klafeafwefewafwef',
-      gas: '23423423',
-      contractAddress: '02394lxjrfafwewae23',
       saleTermsRead: {
         checked: false,
         enable: false
@@ -114,8 +111,7 @@ export default {
       havePrivateKeys: {
         checked: false,
         enable: false
-      },
-      showSpinner: false
+      }
     }
   },
 
@@ -129,7 +125,8 @@ export default {
     },
     ...mapState({
       showSaleModal: state => state.showSaleModal,
-      language: state => state.language
+      language: state => state.language,
+      contractInfo: state => state.contractInfo
     })
   },
 
@@ -140,46 +137,32 @@ export default {
       if (this.allChecked) {
         // start spinner
         this.$store.commit('togglePulseSpinner', true)
-
-        setTimeout(() => {
-          this.$store.commit('togglePulseSpinner', false)
-          const result = {
-            dataField: '0x036a03fc47084741f83938296a1c8ef67f6e34fa',
-            contractAddress: '0xa8ade7feab1ece71446bed25fa0cf6745c19c3d5',
-            gas: '200000'
-          }
-
-          const d = result
-          this.dataField = d.dataField
-          this.gas = d.gas
-          this.contractAddress = d.contractAddress
-
-          this.saleTerms = false
-          this.saleContract = true
-        }, 2000)
         // submit axios request to get data
         // set data end spinner
         // transition to next page
-        // axios.post(`/${config.app.contractServer}/token`, {
-        //   email: this.email,
-        //   agreedToTerms: this.allChecked
-        // })
-        // .then((result) => {
-        //   console.log('result')
-        //   const d = result.data
-        //   this.dataField = d.dataField
-        //   this.gas = d.gas
-        //   this.contractAddress = d.contractAddress
+        axios.post(`${config.app.contractServer}/api/token`, {
+          email: this.email,
+          allVerified: this.allChecked
+        })
+        .then((result) => {
+          this.$store.commit('setContractInfo', result.data.info)
+          this.$store.commit('togglePulseSpinner', false)
 
-        //   this.saleTerms = false
-        //   this.saleTermsContract = true
-        // })
+          this.saleTerms = false
+          this.saleContract = true
+        })
+        .catch((err) => {
+          console.log('error', err)
+          this.$store.commit('togglePulseSpinner', false)
+        })
       } else {
-        return
+        this.$store.commit('togglePulseSpinner', false)
+        console.log('error no checked')
       }
     },
 
     closeModal () {
+      this.$store.commit('clearContractInfo')
       this.$store.commit('showSaleModal', false)
     }
   },
