@@ -23,7 +23,7 @@ export default {
   name: 'RewardsProgram',
 
   mounted () {
-    window.analytics.page('Home')
+    window.analytics.page('Rewards')
   },
 
   components: {

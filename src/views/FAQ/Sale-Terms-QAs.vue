@@ -6,7 +6,7 @@
        </span>
        <span slot="answer">
          <p>
-          Full Sale Terms coming soon.
+          Click <a href="/sale-terms.pdf">here</a> to view full sale terms.
          </p>
        </span>
      </QA>
