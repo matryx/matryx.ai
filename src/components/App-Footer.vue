@@ -71,7 +71,7 @@ footer {
     background-position: top;
     padding: 80px 20px 60px 20px;
     position: relative;
-    bottom: -110px;
+    bottom: -125px;
     margin-bottom: 0;
   }
 

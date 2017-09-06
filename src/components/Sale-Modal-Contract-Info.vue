@@ -1,6 +1,9 @@
 <template>
   <div class="salemodal-contract-info">
-    <h2 class="text-color--matryx-grey-blue">SALE CONTRACT</h2>
+    <h2 class="text-color--matryx-grey-blue">SALE CONTRACT INFO</h2>
+    <br/>
+    <b>Instructions: </b>
+    <h6>The following is the sale contract information needed in order to complete the MTX transaction using your Ethereum wallet. Take each value and paste it into the corresponding field in your wallet, along with the amount of ETH you wish to spend:</h6>
     <div class="salemodal-contract-info__form">
         <!-- these should be click to copy
         cannot change input
@@ -38,7 +41,7 @@
         Click to copy
       </button>
     </div>
-    <h4 class="salemodal-contract-info__participate--header">How to participate using:</h4>
+    <!-- <h4 class="salemodal-contract-info__participate--header">How to participate using:</h4>
     <p class="salemodal-contract-info__participate--item">
       <a href="#" class="text-color--matryx-blue">MetaMask &rsaquo;</a>
     </p>
@@ -47,7 +50,7 @@
     </p>
     <p class="salemodal-contract-info__participate--item">
       <a href="#" class="text-color--matryx-blue">MyEtherWallet &rsaquo;</a>
-    </p>
+    </p> -->
     <button type="button"
       class="salemodal-contract-info__button--close"
       @click.prevent="handleSubmit"
@@ -166,7 +169,7 @@
       background-color: $matryx-lighter-grey;
       color: $matryx-dark-blue;
       padding: 10px 20px;
-      margin-top: 40px;
+      // margin-top: 40px;
 
       &:hover {
         cursor: pointer;

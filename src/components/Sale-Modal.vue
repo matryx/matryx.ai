@@ -45,7 +45,10 @@
               </Checkbox>
 
               <div class="terms-email">
-                <input class="terms-email--input" type="text" placeholder="Email Address" v-model="email"/>
+                <input class="terms-email--input" type="email" placeholder="Email Address" v-model="email"/>
+                <p class="warn text-smaller" v-show="showEmailWarn">
+                  Please enter a valid email address
+                </p>
                 <span class="text-smaller">* Sign up to receive updates</span>
               </div>
 
@@ -55,6 +58,10 @@
               >
                 SUBMIT
               </button>
+
+              <p class="warn text-smaller text-center email-warn" v-show="submitError">
+               {{ submitError }}
+              </p>
             </div>
           </div>
         </transition>
@@ -77,11 +84,12 @@
 <script>
 import { appAnalytics } from '@/analytics'
 import { mapState } from 'vuex'
+import { isValidEmail } from '@/utils'
 import Checkbox from '@/components/Checkbox'
 import SaleModalContractInfo from '@/components/Sale-Modal-Contract-Info'
 import TokensaleSaleTerms from '@/components/Tokensale-Sale-Terms'
 import axios from 'axios'
-import config from '../../config'
+// import config from '../../config'
 
 export default {
   name: 'SaleModal',
@@ -95,6 +103,7 @@ export default {
   data () {
     return {
       email: '',
+      showEmailWarn: false,
       saleTermsRead: {
         checked: false,
         enable: false
@@ -110,7 +119,8 @@ export default {
       havePrivateKeys: {
         checked: false,
         enable: false
-      }
+      },
+      submitError: false
     }
   },
 
@@ -132,6 +142,13 @@ export default {
 
   methods: {
     submitVerified () {
+      this.showEmailWarn = false
+
+      if (this.email && !isValidEmail(this.email)) {
+        this.showEmailWarn = true
+        return
+      }
+
       appAnalytics.submitVerify(this.email, 'pre-sale')
 
       if (this.allChecked) {
@@ -140,7 +157,7 @@ export default {
         // submit axios request to get data
         // set data end spinner
         // transition to next page
-        axios.post(`${config.app.contractServer}/api/token`, {
+        axios.post(`http://tokensalewebapp.matryx.ai/api/token`, {
           email: this.email,
           allVerified: this.allChecked
         })
@@ -152,6 +169,10 @@ export default {
         .catch((err) => {
           console.log('error', err)
           this.$store.commit('togglePulseSpinner', false)
+          this.submitError = 'Error processing request. Please try again.'
+          setTimeout(() => {
+            this.submitError = ''
+          }, 2000)
         })
       } else {
         this.$store.commit('togglePulseSpinner', false)
@@ -169,6 +190,8 @@ export default {
 
     clearAllChecked () {
       this.email = ''
+      this.submitError = ''
+      this.showEmailWarn = false
       this.saleTermsRead.checked = false
       this.saleTermsRead.enable = false
       this.erc20WalletAddress.checked = false
@@ -238,6 +261,10 @@ section.sale-modal {
       background-color: $light-green;
       border-color: $light-green;
     }
+  }
+
+  .email-warn {
+    margin: 0 auto;
   }
 
   .salemodal__header {

@@ -27,7 +27,7 @@
         <div class="presale__calculator__results content-container--medium">
           <div class="presale__calculator">
             <h3 class="presale__calculator--title">
-              How much extra MTX could you get?
+              Calculate your extra MTX:
             </h3>
             <div class="presale__calculator--input">
               <input type="number"
@@ -155,7 +155,7 @@ export default {
       const date = 'September 6 2017 15:00:00 UTC'
 
       if (!isPreSale()) {
-        this.message = 'Pre-Sale Ends and Main Sale Starts In:'
+        this.message = 'Pre-Sale Ends & Main Sale Starts In'
         return 'September 13 2017 14:59:59 UTC'
       } else {
         return date
