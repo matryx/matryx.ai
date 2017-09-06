@@ -130,6 +130,8 @@ export default {
   },
 
   mounted () {
+    window.analytics.page('PreSale')
+
     if (!isPreSale()) {
       this.showPurchaseBtn = true
     }

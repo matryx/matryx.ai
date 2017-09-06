@@ -90,6 +90,11 @@ import whiteVerticalSvg from '@/assets/presskit/Matryx_White_Vertical_Logo.svg'
 
 export default {
   name: 'Presskit',
+
+  mounted () {
+    window.analytics.page('PressKit')
+  },
+
   components: {
     Logo,
     Color,

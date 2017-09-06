@@ -22,6 +22,10 @@ import TeamSupport from './Team-Support'
 export default {
   name: 'RewardsProgram',
 
+  mounted () {
+    window.analytics.page('Home')
+  },
+
   components: {
     NavbarToken,
     AboveTheFold,

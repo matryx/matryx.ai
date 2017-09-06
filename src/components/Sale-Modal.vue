@@ -132,7 +132,7 @@ export default {
 
   methods: {
     submitVerified () {
-      appAnalytics.surveyModal(this.email, this.intendedAmount)
+      appAnalytics.submitVerify(this.email, 'pre-sale')
 
       if (this.allChecked) {
         // start spinner

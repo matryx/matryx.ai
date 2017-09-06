@@ -65,6 +65,17 @@ const appAnalytics = {
       category: 'Purchase',
       label: `pre-sale_${location}`
     })
+  },
+
+  submitVerify (email, sale) {
+    var useEmail = email || getlStorage('email')
+
+    window.analytics.identify(useEmail)
+
+    window.analytics.track(`Verify Contract - ${sale}`, {
+      category: 'Verify',
+      label: `verify_${sale}`
+    })
   }
 }
 

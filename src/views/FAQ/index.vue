@@ -53,6 +53,10 @@
 
 <script>
 export default {
-  name: 'FAQ'
+  name: 'FAQ',
+
+  mounted () {
+    window.analytics.page('FAQ')
+  }
 }
 </script>
