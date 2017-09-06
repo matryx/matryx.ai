@@ -47,3 +47,13 @@ export function setlStorage (name, item) {
     }
   }
 }
+
+export function isPreSale () {
+  const date = 'September 6 2017 15:00:00 UTC'
+  const today = new Date()
+  const startDate = new Date(date)
+
+  if (today.getTime() - startDate.getTime() > 0) {
+    return true
+  }
+}

@@ -6,25 +6,22 @@
         <h1>Join the Matryx Token Pre-Sale</h1>
       </div>
       <div class="presale__content content-container content-container--large text-color--white">
-        <div class="presale__discounts content-container--medium">
-          <h3 class="presale__discounts--title">Pre-Sale Discounts</h3>
-          <div class="presale__discounts--list">
-            <div class="presale__discounts--list--10">
-              <SaleIcon
-                :img="discount10"
-                text="10% for purchases between 150 - 300 ETH*"
-              ></SaleIcon>
-            </div>
-            <div class="presale__discounts--list-15">
-              <SaleIcon
-                :img="discount15"
-                text="15% for purchases over 300 ETH*"
-              ></SaleIcon>
-            </div>
+
+        <div class="presale__sign-up content-container--medium">
+          <h2>
+            {{ message }}
+          </h2>
+          <Countdown :end="end" class="presale__countdown"></Countdown>
+
+          <div v-if="!showPurchaseBtn">
+            <h2 class="text-center" >
+              Sign up if interested in participating in the Pre-Sale
+            </h2>
+            <Get-Notified ctaLocation="Pre-Sale"></Get-Notified>
           </div>
-          <div class="presale__discounts--disclaimer">
-            *Discounts only available for purchases made during the pre-sale period
-          </div>
+
+          <Matryx-Btn v-else text="Purchase MTX" :handleClick="openSaleModal">
+          </Matryx-Btn>
         </div>
 
         <div class="presale__calculator__results content-container--medium">
@@ -85,15 +82,25 @@
       </p>
     </div>
 
-    <div id="presale__sign-up">
-      <h2>
-        {{ message }}
-      </h2>
-      <Countdown :end="end" class="presale__countdown"></Countdown>
-      <h2 class="text-center">
-        Sign up if interested in participating in the Pre-Sale
-      </h2>
-      <Get-Notified ctaLocation="Pre-Sale"></Get-Notified>
+    <div id="presale__discounts">
+      <h3 class="presale__discounts--title">Pre-Sale Discounts</h3>
+      <div class="presale__discounts--list">
+        <div class="presale__discounts--list--10">
+          <SaleIcon
+            :img="discount10"
+            text="10% for purchases between 150 - 300 ETH*"
+          ></SaleIcon>
+        </div>
+        <div class="presale__discounts--list-15">
+          <SaleIcon
+            :img="discount15"
+            text="15% for purchases over 300 ETH*"
+          ></SaleIcon>
+        </div>
+      </div>
+      <div class="presale__discounts--disclaimer">
+        *Discounts only available for purchases made during the pre-sale period
+      </div>
     </div>
   </section>
 </template>
@@ -103,9 +110,12 @@ import NavbarTokenSale from '@/components/Navbar-Tokensale'
 import SaleIcon from '@/components/Sale-Icon'
 import GetNotified from '@/components/Get-Notified'
 import Countdown from '@/components/Countdown'
+import MatryxBtn from '@/components/Matryx-Btn'
 
 import discount10 from '@/assets/icons/icon-sale-10discount.svg'
 import discount15 from '@/assets/icons/icon-sale-15discount.svg'
+
+import { isPreSale } from '@/utils'
 
 export default {
   name: 'PreSale',
@@ -114,7 +124,14 @@ export default {
     NavbarTokenSale,
     SaleIcon,
     GetNotified,
-    Countdown
+    Countdown,
+    MatryxBtn
+  },
+
+  mounted () {
+    if (!isPreSale()) {
+      this.showPurchaseBtn = true
+    }
   },
 
   data () {
@@ -125,23 +142,23 @@ export default {
       purchaseAmount: null,
       message: 'Pre-Sale Starts In:',
       discount10,
-      discount15
+      discount15,
+      showPurchaseBtn: false
     }
   },
 
   computed: {
     end () {
       const date = 'September 6 2017 15:00:00 UTC'
-      const today = new Date()
-      const startDate = new Date(date)
 
-      if (today.getTime() - startDate.getTime() > 0) {
+      if (!isPreSale()) {
         this.message = 'Pre-Sale Ends and Main Sale Starts In:'
         return 'September 13 2017 14:59:59 UTC'
       } else {
         return date
       }
     },
+
     diff () {
       return this.mtxPresale - this.mtxRegular
     },
@@ -164,6 +181,12 @@ export default {
 
     mtxRegular () {
       return Math.round(this.purchaseAmount * this.rateBase)
+    }
+  },
+
+  methods: {
+    openSaleModal () {
+      this.$store.commit('showSaleModal', true)
     }
   }
 }
@@ -194,25 +217,21 @@ export default {
       }
     }
 
-    .presale__discounts {
+    .presale__sign-up {
       margin-top: 30px;
       display: flex;
       flex-direction: column;
       align-items: center;
 
-      &--list {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        width: 100%;
-        padding: 25px;
+      .matryx-button {
+        width: 400px;
+        height: 70px;
+        background-color: $light-green;
+        border-color: $light-green;
 
-        div {
-          width: 200px;
-        }
-
-        img {
-          width: 130px;
+        &:hover {
+          background-color: $white;
+          color: $light-green;
         }
       }
     }
@@ -315,12 +334,30 @@ export default {
     }
   }
 
-  #presale__sign-up {
+  #presale__discounts {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-top: 80px;
+
+    &--list {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 25px;
+
+      div {
+        width: 200px;
+      }
+
+      img {
+        width: 130px;
+      }
+    }
+
+
 
     .cta__form .cta__form__email {
       border: 1px solid $matryx-blue;

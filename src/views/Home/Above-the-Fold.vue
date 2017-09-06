@@ -14,6 +14,11 @@
           <span v-else-if=" language === 'ko' ">저희 토큰 판매에 참여하세요</span>
           <span v-else>Join Our Token Sale</span>
         </h1>
+
+        <Matryx-Btn v-if="!showPreSale" text="Participate in Pre-Sale"
+          :handleClick="goToPreSale">
+        </Matryx-Btn>
+
         <p class="lead ">
           <span v-if=" language === 'ru' ">
             Окажитесь в центре событий. Введите ваш адрес электронной почты, чтобы получать уведомления о начале нашей продажи токенов.
@@ -36,6 +41,7 @@
         </p>
         <Countdown end="September 13 2017 15:00:00 UTC"></Countdown>
         <Get-Notified ctaLocation="Above the Fold"></Get-Notified>
+
       </div>
       <div class="token-sale__video-launcher content-container--medium">
         <iframe class="matryx-video-yt"
@@ -60,13 +66,22 @@
 import Countdown from '@/components/Countdown'
 import GetNotified from '@/components/Get-Notified'
 import Video from '../../assets/media/giphy.mp4'
+import MatryxBtn from '@/components/Matryx-Btn'
+import { isPreSale } from '@/utils'
 
 export default {
   name: 'AboveTheFold',
 
   components: {
     Countdown,
-    GetNotified
+    GetNotified,
+    MatryxBtn
+  },
+
+  mounted () {
+    if (isPreSale()) {
+      this.showPreSale = true
+    }
   },
 
   computed: {
@@ -85,7 +100,14 @@ export default {
       VideoLinks: {
         English: 'https://www.youtube.com/embed/iLHlwnaqTWw?rel=0&amp;showinfo=0',
         Chinese: 'http://player.youku.com/embed/XMzAwNDA0MTQzNg=='
-      }
+      },
+      showPreSale: false
+    }
+  },
+
+  methods: {
+    goToPreSale () {
+      this.$router.push({ name: 'PreSale' })
     }
   }
 }
