@@ -47,6 +47,7 @@
         <button class="matryx-button matryx-button--blue" @click="openSaleModal">
           PURCHASE MTX
         </button>
+        <p>Already purchased MTX? Check your balance <span class="checkMTXLink" @click="openCheckMTXModal">here</span>.</p>
       </div>
       <div class="token-sale__video-launcher content-container--medium">
         <iframe class="matryx-video-yt"
@@ -88,6 +89,9 @@ export default {
     openSaleModal () {
       console.log('hello openSaleModal')
       this.$store.commit('showSaleModal', true)
+    },
+    openCheckMTXModal () {
+      this.$store.commit('showCheckMTXModal', true)
     }
   },
 
@@ -115,6 +119,15 @@ section.above-the-fold {
     display:flex;
     justify-content: space-between;
     padding: 40px 40px 160px;
+  }
+}
+
+.checkMTXLink {
+  color: $matryx-blue;
+  text-decoration: underline;
+
+  &:hover {
+    cursor:pointer;
   }
 }
 

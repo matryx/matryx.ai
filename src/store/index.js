@@ -62,7 +62,7 @@ export default new Vuex.Store({
       state.showSaleModal = show
     },
     showCheckMTXModal (state, show) {
-      state.showSaleModal = show;
+      state.showCheckMTXModal = show
     },
     toggleRouteLoaded (state, loaded) {
       state.routeLoaded = loaded

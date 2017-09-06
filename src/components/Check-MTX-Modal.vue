@@ -1,7 +1,7 @@
 <template>
   <section class="check-mtx">
-    <b-modal id="checkMTXModal"
-      v-model="showSaleModal"
+    <b-modal id="showCheckMTXModal"
+      v-model="showCheckMTXModal"
       hide-header
       hide-footer
       no-close-on-esc
@@ -16,31 +16,40 @@
         </div>
       </div>
       <div class="checkmtx__body">
-        <div class="checkmtx__body__terms">
-          <br/>
-          <h3 class="text-color--matryx-grey-blue">CHECK MTX BALANCE</h3>
-          <div class="checkmtx__body__terms__checklist">
+        <br/>
+        <h3 class="text-color--matryx-grey-blue">CHECK MTX BALANCE</h3>
 
+        <input class="checkmtx__body__input"
+          type="text"
+          placeholder="Enter ETH Address"
+          v-model="userEthAddress"
+        >
+        <p class="warn" v-if="hasInput">Please enter your ETH Address</p>
+        <br>
 
-            <button class="submit-btn matryx-button matryx-button--blue"
-              @click.prevent="handleSubmit"
-              :disabled="!allChecked"
-            >
-              SUBMIT
-            </button>
-          </div>
+        <button class="submit-btn matryx-button matryx-button--blue"
+          @click.prevent="handleSubmit"
+        >
+          SUBMIT
+        </button>
+
+        <div v-if="mtxAmountAvailable">
+          <p class="mtx-amount-text">You have
+            <span class="text-color--matryx-blue">{{ mtxAmount }}</span>
+            MTX
+          </p>
         </div>
-      </div>
+    </div>
     </div>
     </b-modal>
   </section>
 </template>
 
 <script>
-import { appAnalytics } from '@/analytics'
+// import { appAnalytics } from '@/analytics'
 import { mapState } from 'vuex'
-import axios from 'axios'
-import config from '../../config'
+// import axios from 'axios'
+// import config from '../../config'
 
 export default {
   name: 'CheckMTXModal',
@@ -50,62 +59,55 @@ export default {
 
   data () {
     return {
-      email: '',
-      saleTermsRead: {
-        checked: false,
-        enable: false
-      },
-      erc20WalletAddress: {
-        checked: false,
-        enable: false
-      },
-      noExchangeAddress: {
-        checked: false,
-        enable: false
-      },
-      havePrivateKeys: {
-        checked: false,
-        enable: false
-      }
+      hasInput: false,
+      warnNoInput: false,
+      mtxAmount: '',
+      userEthAddress: '',
+      mtxAmountAvailable: false
     }
   },
 
   computed: {
     ...mapState({
-      showCheckMTXModal: state => state.showCheckMTXModal,
+      showCheckMTXModal: state => state.showCheckMTXModal
     })
   },
 
   methods: {
     handleSubmit () {
-      if (this.hasEthAddress) {
+      if (this.userEthAddress) {
         // start spinner
-        this.warnNoInput = false;
+        this.hasInput = false
         this.$store.commit('togglePulseSpinner', true)
+        setTimeout(() => {
+          this.$store.commit('togglePulseSpinner', false)
+          this.mtxAmountAvailable = true
+          this.mtxAmount = '19384'
+        }, 1500)
         // submit axios request to get data
         // set data end spinner
         // axios.post(`${config.app.contractServer}/api/token`, {
-        //   email: this.email,
-        //   allVerified: this.allChecked
+        //   mtxAddress: this.userEthAddress
         // })
         // .then((result) => {
-        //   this.$store.commit('setContractInfo', result.data.info)
         //   this.$store.commit('togglePulseSpinner', false)
-        //   this.$store.commit('toggleSaleContract', true)
+        //   this.$store.commit('setEthAddress', result)
         // })
         // .catch((err) => {
         //   console.log('error', err)
         //   this.$store.commit('togglePulseSpinner', false)
         // })
       } else {
-        this.warnNoInput = true
+        this.$store.commit('togglePulseSpinner', false)
+        this.hasInput = true
       }
     },
 
     closeModal () {
-      this.$store.commit('clearContractInfo')
-      this.$store.commit('toggleEthAddress', false)
-      this.$store.commit('showSaleModal', false)
+      this.mtxAmountAvailable = false
+      this.mtxAmoutn = ''
+      this.userEthAddress = ''
+      this.$store.commit('showCheckMTXModal', false)
     }
   },
 
@@ -118,9 +120,14 @@ export default {
   }
 }
 </script>
-
+<!-- Yuku kawa no nagare ha taezu shite -->
+<!-- Shika mo moto no mizu ni arazu -->
 <style lang="scss">
 @import '../assets/css/colors';
+
+.mtx-amount-text {
+  font-size: 24px;
+}
 
 section.check-mtx {
   margin: 0;
@@ -173,90 +180,19 @@ section.check-mtx {
     padding: 15px;
     text-align:center;
 
-    &__terms {
+    > h3 {
+      margin-bottom: 50px;
+    }
 
-      h3 {
-        margin-bottom: 20px;
-      }
-
-      &__document {
-        width: calc(100% - 40px);
-        max-height: 200px;
-        margin: 0 auto;
-        padding: 10px;
-        text-align: left;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        border: 1px solid $matryx-dark-grey !important;
-
-        &::-webkit-scrollbar {
-          width: 1em;
-        }
-        &::-webkit-scrollbar-track {
-          border-left: 1px solid $matryx-dark-grey;
-        }
-        &::-webkit-scrollbar-thumb {
-          background-color: $matryx-dark-grey;
-        }
-      }
-
-      &__checklist {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 30px 20px;
-
-        .terms-email {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 100%;
-        }
-
-        .terms-email--input {
-          padding: 5px 20px;
-          width: 300px;
-          height: 50px;
-          font-size: 14px;
-
-          &:focus {
-            outline: none;
-          }
-        }
-
-        p {
-          font-size: 18px;
-          margin-bottom: 5px;
-        }
-
-        .submit-btn:disabled {
-          opacity: 0.4;
-          box-shadow: none;
-          cursor: not-allowed;
-
-          &:hover {
-            background-color: $matryx-blue;
-          }
-        }
-
-        div {
-          text-align:left;
-          padding: 10px 20px;
-        }
-      }
-
-      &__address {
-        display: none;
-      }
+    &__input {
+      width: 413px;
+      padding: 5px 10px;
     }
   }
 }
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0
+.warn {
+  color: $matryx-red;
 }
 
 
