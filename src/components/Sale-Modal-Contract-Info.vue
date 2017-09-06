@@ -79,6 +79,7 @@
     methods: {
       closeSaleModal () {
         this.$store.commit('clearContractInfo')
+        this.$store.commit('toggleSaleContract', false)
         this.$store.commit('showSaleModal', false)
       },
 

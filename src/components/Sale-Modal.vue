@@ -17,7 +17,7 @@
       </div>
       <div class="salemodal__body">
         <transition name="fade">
-          <div class="salemodal__body__terms" v-if="saleTerms">
+          <div class="salemodal__body__terms" v-if="!showSaleContract">
             <br/>
             <h3 class="text-color--matryx-grey-blue">MATRYX TOKEN SALE TERMS</h3>
             <Tokensale-Sale-Terms class="salemodal__body__terms__document" id="sale-terms">
@@ -61,7 +61,7 @@
 
         <transition name="fade">
           <Sale-Modal-Contract-Info class="salemodal__body__address"
-            v-if="saleContract"
+            v-if="showSaleContract"
             :dataField="contractInfo.dataField" :gas="contractInfo.gas"
             :contractAddress="contractInfo.contractAddress"
           >
@@ -93,8 +93,6 @@ export default {
 
   data () {
     return {
-      saleTerms: true,
-      saleContract: false,
       email: '',
       saleTermsRead: {
         checked: false,
@@ -126,7 +124,8 @@ export default {
     ...mapState({
       showSaleModal: state => state.showSaleModal,
       language: state => state.language,
-      contractInfo: state => state.contractInfo
+      contractInfo: state => state.contractInfo,
+      showSaleContract: state => state.showSaleContract
     })
   },
 
@@ -147,9 +146,7 @@ export default {
         .then((result) => {
           this.$store.commit('setContractInfo', result.data.info)
           this.$store.commit('togglePulseSpinner', false)
-
-          this.saleTerms = false
-          this.saleContract = true
+          this.$store.commit('toggleSaleContract', true)
         })
         .catch((err) => {
           console.log('error', err)
@@ -163,6 +160,7 @@ export default {
 
     closeModal () {
       this.$store.commit('clearContractInfo')
+      this.$store.commit('toggleSaleContract', false)
       this.$store.commit('showSaleModal', false)
     }
   },
@@ -178,6 +176,10 @@ export default {
         vm.havePrivateKeys.enable = true
       }
     })
+  },
+
+  destroyed () {
+
   }
 }
 </script>

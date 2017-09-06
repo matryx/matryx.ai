@@ -15,10 +15,29 @@ export default new Vuex.Store({
     language: 'en',
     routeLoaded: false,
     showPulseSpinner: false,
+    showSaleContract: false,
     contractInfo: {
       contractAddress: '',
       dataField: '',
       gas: ''
+    },
+    checked: {
+      saleTermsRead: {
+        checked: false,
+        enable: false
+      },
+      erc20WalletAddress: {
+        checked: false,
+        enable: false
+      },
+      noExchangeAddress: {
+        checked: false,
+        enable: false
+      },
+      havePrivateKeys: {
+        checked: false,
+        enable: false
+      }
     }
   },
   getters: {
@@ -55,6 +74,29 @@ export default new Vuex.Store({
         contractAddress: '',
         dataField: '',
         gas: ''
+      }
+    },
+    toggleSaleContract (state, show) {
+      state.showSaleContract = show
+    },
+    clearChecked (state) {
+      state.checked = {
+        saleTermsRead: {
+          checked: false,
+          enable: false
+        },
+        erc20WalletAddress: {
+          checked: false,
+          enable: false
+        },
+        noExchangeAddress: {
+          checked: false,
+          enable: false
+        },
+        havePrivateKeys: {
+          checked: false,
+          enable: false
+        }
       }
     }
   },
