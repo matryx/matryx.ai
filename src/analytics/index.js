@@ -50,11 +50,20 @@ const appAnalytics = {
   },
 
   rewardsParticipate (location) {
-    window.analytics.identify(getlStorage('email')
+    window.analytics.identify(getlStorage('email'))
 
-    window.analytics.track(`Participate - ${location} - ${social}`, {
+    window.analytics.track(`Participate`, {
       category: 'Rewards',
-      label: `rewards-${location}-${social}`
+      label: `participate-${location}`
+    })
+  },
+
+  purchasePreSaleBtn (location) {
+    window.analytics.identify(getlStorage('email'))
+
+    window.analytics.track(`Pre-Sale Btn`, {
+      category: 'Purchase',
+      label: `pre-sale_${location}`
     })
   }
 }

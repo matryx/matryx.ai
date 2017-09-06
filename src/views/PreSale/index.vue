@@ -116,6 +116,7 @@ import discount10 from '@/assets/icons/icon-sale-10discount.svg'
 import discount15 from '@/assets/icons/icon-sale-15discount.svg'
 
 import { isPreSale } from '@/utils'
+import { appAnalytics } from '@/analytics'
 
 export default {
   name: 'PreSale',
@@ -186,6 +187,7 @@ export default {
 
   methods: {
     openSaleModal () {
+      appAnalytics.purchasePreSaleBtn('presale-page')
       this.$store.commit('showSaleModal', true)
     }
   }
