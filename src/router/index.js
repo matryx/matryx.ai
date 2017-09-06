@@ -7,6 +7,7 @@ const FAQ = () => import('@/views/FAQ')
 const PressKit = () => import('@/views/PressKit')
 const PreSale = () => import('@/views/PreSale')
 const RewardsProgram = () => import('@/views/RewardsProgram')
+const PrivacyPolicy = () => import('@/views/PrivacyPolicy')
 
 const About = () => import('@/views/FAQ/About')
 const AboutQAs = () => import('@/views/FAQ/About-QAs')
@@ -166,6 +167,11 @@ const router = new Router({
     {
       path: '/rewardsprogram',
       redirect: '/rewards'
+    },
+    {
+      path: '/privacy-policy',
+      name: 'PrivacyPolicy',
+      component: PrivacyPolicy
     },
     {
       path: '/404',
