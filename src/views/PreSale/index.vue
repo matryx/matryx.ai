@@ -14,9 +14,9 @@
           <Countdown :end="end" class="presale__countdown"></Countdown>
 
           <div v-if="!showPurchaseBtn">
-            <h2 class="text-center" >
-              Sign up if interested in participating in the Pre-Sale
-            </h2>
+            <h3 class="text-center" >
+              Sign up if interested in the Pre-Sale!
+            </h3>
             <Get-Notified ctaLocation="Pre-Sale"></Get-Notified>
           </div>
 
@@ -27,7 +27,7 @@
         <div class="presale__calculator__results content-container--medium">
           <div class="presale__calculator">
             <h3 class="presale__calculator--title">
-              Calculate your extra MTX:
+              Calculate your extra MTX <br/>during the Pre-Sale:
             </h3>
             <div class="presale__calculator--input">
               <input type="number"
@@ -132,7 +132,7 @@ export default {
   mounted () {
     window.analytics.page('PreSale')
 
-    if (!isPreSale()) {
+    if (isPreSale()) {
       this.showPurchaseBtn = true
     }
   },
@@ -143,7 +143,7 @@ export default {
       rate10: 1294.40736,
       rate15: 1370.54896,
       purchaseAmount: null,
-      message: 'Pre-Sale Starts In:',
+      message: 'Pre-Sale Starts In',
       discount10,
       discount15,
       showPurchaseBtn: false
@@ -154,7 +154,7 @@ export default {
     end () {
       const date = 'September 6 2017 15:00:00 UTC'
 
-      if (!isPreSale()) {
+      if (isPreSale()) {
         this.message = 'Pre-Sale Ends & Main Sale Starts In'
         return 'September 13 2017 14:59:59 UTC'
       } else {
