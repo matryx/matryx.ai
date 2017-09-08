@@ -27,7 +27,7 @@ export default {
 .matryx-button {
   width: 100%;
   max-width: 400px;
-  height: 50px;
+  height: 70px;
   text-align:center;
   border-radius: 40px;
   text-transform: uppercase;
@@ -50,6 +50,7 @@ export default {
       top: 2px;
     }
   }
+
 }
 /*----- END tokensale styles-----*/
 </style>

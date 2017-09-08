@@ -2,7 +2,8 @@
   <div class="body-content">
     <Navbar-Token></Navbar-Token>
     <Navbar-Sticky></Navbar-Sticky>
-    <Above-the-Fold></Above-the-Fold>
+    <!-- <Above-the-Fold></Above-the-Fold> -->
+    <Above-the-Fold-Start></Above-the-Fold-Start>
     <Media-Mentions></Media-Mentions>
     <About-Matryx></About-Matryx>
     <Pre-Sale></Pre-Sale>
@@ -43,6 +44,7 @@ import NavbarToken from '@/components/Navbar-Tokensale'
 import PreSale from './Pre-Sale'
 import TokenSale from './Token-Sale'
 import AboutMatryx from './About-Matryx'
+import AboveTheFoldStart from './Above-the-Fold-Start'
 
 export default {
   name: 'home',
@@ -62,7 +64,8 @@ export default {
     NavbarToken,
     PreSale,
     TokenSale,
-    AboutMatryx
+    AboutMatryx,
+    AboveTheFoldStart
   },
 
   beforeRouteUpdate (to, from, next) {
