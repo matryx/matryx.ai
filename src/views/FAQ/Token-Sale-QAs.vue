@@ -36,7 +36,8 @@
         Where are the MTX Token Sale terms?
       </span>
       <p slot="answer">
-        Full token sale terms will be available soon.
+        Full token sale terms are available at
+        <a href="/sale-terms.pdf" target="_blank">https://matryx.ai/sale-terms.pdf</a>
       </p>
     </QA>
 

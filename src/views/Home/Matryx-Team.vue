@@ -128,14 +128,14 @@ export default {
         name: 'Kyle Lee',
         title: 'Mathematician',
         src: Kyle,
-        linkedInLink: 'https://www.linkedin.com/in/kai-wang-1155b064',
+        linkedInLink: 'https://www.linkedin.com/in/kylelee4c5/',
         twitterLink: 'https://www.twitter.com/themrkylelee',
         githubLink: 'https://github.com/k-matryx'
       }, {
         name: 'Kai Wang',
         title: 'VP Software Development',
         src: Kai,
-        linkedInLink: 'https://www.linkedin.com/in/kylelee4c5/'
+        linkedInLink: 'https://www.linkedin.com/in/kai-wang-1155b064'
       }, {
         name: 'Dennis Chiang',
         title: 'Developer',

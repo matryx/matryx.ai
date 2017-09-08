@@ -3,7 +3,18 @@
     <h2 class="text-color--matryx-grey-blue">SALE CONTRACT INFO</h2>
     <br/>
     <b>Instructions: </b>
-    <h6>The following is the sale contract information needed in order to complete the MTX transaction using your Ethereum wallet. Take each value and paste it into the corresponding field in your wallet, along with the amount of ETH you wish to spend:</h6>
+    <p>The following is the sale contract information needed in order to complete the MTX transaction using your Ethereum wallet. Take each value and paste it into the corresponding field in your wallet, along with the amount of ETH you wish to spend.
+    <br/><br/>
+    <b class="uppercase">75 ETH is the minimum amount to make a purchase for the pre-sale.</b> <br/>
+    <span style="text-decoration:underline; color: red;">Transactions less than 75 ETH will fail.</span>
+    <br/>
+    <p> Purchases between 150 ETH and 300 ETH will receive a 10% discount.
+    <br/>
+    Purchase 300 ETH and greater will receive a 15% discount.</p>
+
+    For additional instructions, please refer to our <a href="https://blog.matryx.ai/matryx-pre-sale-how-to-participate-tips-on-staying-safe-711938733015" target="_blank">blog post.</a>
+
+    </p>
     <div class="salemodal-contract-info__form">
         <!-- these should be click to copy
         cannot change input
@@ -41,6 +52,20 @@
         Click to copy
       </button>
     </div>
+    <p>Transactions usually take several minutes to process, but may take longer.</p>
+    <div class="salemodal-contract-info__check-balance">
+      <p>
+      Check your MTX balance:
+      </p>
+      <ol >
+        <li>Go to <a href=" https://etherscan.io/address/0x0af44e2784637218dd1d32a322d44e603a8f0c6a#readContract">
+        Etherscan</a>
+        </li>
+        <li>
+          Enter your wallet address in the "balanceOf" field
+        </li>
+      </ol>
+    </div>
     <!-- <h4 class="salemodal-contract-info__participate--header">How to participate using:</h4>
     <p class="salemodal-contract-info__participate--item">
       <a href="#" class="text-color--matryx-blue">MetaMask &rsaquo;</a>
@@ -51,12 +76,12 @@
     <p class="salemodal-contract-info__participate--item">
       <a href="#" class="text-color--matryx-blue">MyEtherWallet &rsaquo;</a>
     </p> -->
-    <button type="button"
+<!--     <button type="button"
       class="salemodal-contract-info__button--close"
       @click.prevent="handleSubmit"
     >
       I'm done!
-    </button>
+    </button> -->
   </div>
 </template>
 
@@ -176,6 +201,23 @@
         background-color: $matryx-dark-blue;
         color: $matryx-lighter-grey;
       }
+    }
+  }
+
+  &__check-balance {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid $matryx-dark-grey;
+
+    p {
+      text-color: $matryx-dark-grey;
+      font-size: 18px;
+    }
+
+    ol {
+      text-align:left;
     }
   }
 

@@ -41,6 +41,7 @@ export default {
 <style lang="scss">
 @import '../../assets/css/colors.scss';
   footer {
+    margin-top: 0;
     background-color: $matryx-darker-blue;
   }
 

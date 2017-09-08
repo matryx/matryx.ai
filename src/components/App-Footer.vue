@@ -63,7 +63,7 @@ export default {
 
 <style lang="scss">
 footer {
-  margin-top: -20px;
+  margin-top: 150px;
   width: 100%;
   position:relative;
 

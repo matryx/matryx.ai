@@ -73,7 +73,7 @@ const router = new Router({
     },
     {
       path: '/faq/tokensale',
-      redirect: '/faq/tokensale/why-is-matryx-conducting-a-token-sale'
+      redirect: '/faq/tokensale/how-can-i-participate-in-the-matryx-token-sale'
     },
     {
       path: '/faq/troubleshooting',

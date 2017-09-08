@@ -5,9 +5,8 @@
          What are the sale terms?
        </span>
        <span slot="answer">
-         <p>
-          Click <a href="/sale-terms.pdf">here</a> to view full sale terms.
-         </p>
+         Full token sale terms are available at
+         <a href="/sale-terms.pdf" target="_blank">https://matryx.ai/sale-terms.pdf</a>
        </span>
      </QA>
 

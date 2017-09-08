@@ -25,22 +25,22 @@
             <div class="salemodal__body__terms__checklist">
               <Checkbox name="saleTermsRead" :obj="saleTermsRead">
                 <span slot="label">
-                  I have read and agree to the Sale Terms of the Matryx Token Sale
+                  I have read and agree to the Sale Terms of the Matryx Token Sale.
                 </span>
               </Checkbox>
               <Checkbox name="erc20WalletAddress" :obj="erc20WalletAddress">
                 <span slot="label">
-                  I understand and agree that I must use a valid ERC20 compatible wallet address
+                  I understand and agree that I must use a valid ERC20 compatible wallet address.
                 </span>
               </Checkbox>
               <Checkbox name="noExchangeAddress" :obj="noExchangeAddress">
                 <span slot="label">
-                  I understand and agree that the address I use must not be an exchange address
+                  I understand and agree that the address I use must not be an exchange address.
                 </span>
               </Checkbox>
               <Checkbox name="havePrivateKeys" :obj="havePrivateKeys">
                 <span slot="label">
-                  I understand and agree that if I use an exchange address I must own the private keys
+                  I understand and agree that if I use an exchange address I must own the private keys.
                 </span>
               </Checkbox>
 
@@ -157,7 +157,7 @@ export default {
         // submit axios request to get data
         // set data end spinner
         // transition to next page
-        axios.post(`http://tokensalewebapp.matryx.ai/api/token`, {
+        axios.post(`/api/token`, {
           email: this.email,
           allVerified: this.allChecked
         })
@@ -204,15 +204,21 @@ export default {
 
     resetTerms () {
       const vm = this
-      var saleTerms = document.querySelector('#sale-terms')
-      saleTerms.addEventListener('scroll', function () {
-        if (this.scrollHeight - (this.offsetHeight - 2) === this.scrollTop) {
-          vm.saleTermsRead.enable = true
-          vm.erc20WalletAddress.enable = true
-          vm.noExchangeAddress.enable = true
-          vm.havePrivateKeys.enable = true
-        }
-      })
+
+      vm.saleTermsRead.enable = true
+      vm.erc20WalletAddress.enable = true
+      vm.noExchangeAddress.enable = true
+      vm.havePrivateKeys.enable = true
+
+      // var saleTerms = document.querySelector('#sale-terms')
+      // saleTerms.addEventListener('scroll', function () {
+      //   if (this.scrollHeight - (this.offsetHeight - 2) === this.scrollTop) {
+      //     vm.saleTermsRead.enable = true
+      //     vm.erc20WalletAddress.enable = true
+      //     vm.noExchangeAddress.enable = true
+      //     vm.havePrivateKeys.enable = true
+      //   }
+      // })
     }
   },
 
