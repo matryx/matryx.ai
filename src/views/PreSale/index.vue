@@ -82,6 +82,13 @@
       </p>
     </div>
 
+    <div class="presale__audited">
+      <h2>Audited by</h2>
+      <a href="https://tokenmarket.net/blog/matryx-token-and-token-sale-smart-contract-audit/" target="_blank">
+        <img src="../../assets/icons/icon-tokenmarket-horizontal.png">
+      </a>
+    </div>
+
     <div id="presale__discounts">
       <h2 class="text-color--matryx-dark-grey presale__discounts--title">Pre-Sale Discounts</h2>
       <div class="presale__discounts--list">
@@ -335,6 +342,20 @@ export default {
     .minimum {
       padding-bottom: 130px;
       color: $white;
+    }
+  }
+
+  .presale__audited {
+    padding-bottom: 130px;
+    color: $matryx-dark-grey;
+    text-align: center;
+    max-width: 400px;
+    padding: 20px 40px;
+    margin: 50px auto;
+
+    img {
+      margin-top: 10px;
+      width: 100%;
     }
   }
 
