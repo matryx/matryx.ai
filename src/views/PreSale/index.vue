@@ -196,7 +196,6 @@ export default {
 
   methods: {
     openSaleModal () {
-      appAnalytics.purchasePreSaleBtn('presale-page')
       this.$store.commit('showSaleModal', true)
     }
   }
