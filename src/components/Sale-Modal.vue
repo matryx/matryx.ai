@@ -236,6 +236,7 @@ export default {
 @import '../assets/css/colors';
 
 section.sale-modal {
+  z-index: 1000002;
   margin: 0;
 }
 

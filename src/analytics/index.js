@@ -58,6 +58,27 @@ const appAnalytics = {
     })
   },
 
+<<<<<<< HEAD
+=======
+  purchasePreSaleBtn (location) {
+    window.analytics.identify(getlStorage('email'))
+
+    window.analytics.track(`Pre-Sale Btn`, {
+      category: 'Purchase',
+      label: `pre-sale_${location}`
+    })
+  },
+
+  purchaseSaleBtn (location) {
+    window.analytics.identify(getlStorage('email'))
+
+    window.analytics.track(`Sale Btn`, {
+      category: 'Purchase',
+      label: `sale_${location}`
+    })
+  },
+
+>>>>>>> start
   submitVerify (email, sale) {
     var useEmail = email || getlStorage('email')
 

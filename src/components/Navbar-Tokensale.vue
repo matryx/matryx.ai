@@ -2,10 +2,10 @@
   <section class="navbar-tokensale" id="tokensale">
     <div class="token-bar content-container content-container--large">
       <div class="token-bar__scroll">
-        <div class="token-bar__section first">
+        <div class="token-bar__section first" v-if="showPreSale">
           <!-- GIVE TEXT A TEXT SHADOW -->
-          <img src="../assets/icons/icon-lightning.png" alt="">
-          <p class="text-color--white">
+          <img src="../assets/icons/icon-lightning.png" alt="" >
+          <p class="text-color--white" >
             <span v-if=" language === 'ru' ">Предпродажа</span>
     				<span v-else-if=" language === 'ch' ">预售</span>
     				<span v-else-if=" language === 'ge' ">Vorverkauf</span>
@@ -21,6 +21,16 @@
     				<span v-else-if=" language === 'ko' "> 2017년 9월 6일</span>
     				<span v-else> September 6, 2017</span>
           </p>
+        </div>
+        <div class="token-bar__section first" v-if="showMainSale">
+          <span class="text-color--matryx-grey">
+            <span v-if=" language === 'ru' ">60% будет продано | ПРОДАЖА СМАРТ-КОНТРАКТОВ ETH</span>
+            <span v-else-if=" language === 'ch' ">60% 待售 | ETH 智能销售联系人</span>
+            <span v-else-if=" language === 'ge' ">60 % stehen zum Verkauf | ETH-SMART-CONTRACT-VERKAUF</span>
+            <span v-else-if=" language === 'ja' ">60%が販売予定 | ETHスマートコントラクトセール</span>
+            <span v-else-if=" language === 'ko' ">60%의 판매할당 비율 | ETH 스마트 계약 판매</span>
+            <span v-else>60% Of MTX Supply To Be Sold | ETH Smart Contract Sale</span>
+          </span>
         </div>
         <div class="token-bar__section second">
           <img src="../assets/icons/icon-rocket.png" alt="">
@@ -67,7 +77,7 @@
         </div>
         <div class="token-bar__section fifth">
           <p>
-            <span class="text-color--matryx-grey">
+            <span class="text-color--matryx-grey" v-if="showPreSale">
               <span v-if=" language === 'ru' ">60% будет продано | ПРОДАЖА СМАРТ-КОНТРАКТОВ ETH</span>
       				<span v-else-if=" language === 'ch' ">60% 待售 | ETH 智能销售联系人</span>
       				<span v-else-if=" language === 'ge' ">60 % stehen zum Verkauf | ETH-SMART-CONTRACT-VERKAUF</span>
@@ -75,7 +85,8 @@
       				<span v-else-if=" language === 'ko' ">60%의 판매할당 비율 | ETH 스마트 계약 판매</span>
       				<span v-else>60% Of MTX Supply To Be Sold | ETH Smart Contract Sale</span>
             </span>
-            <br>
+            <br v-if="showPreSale">
+            <span v-if="showMainSale" style="line-height: 50px;"></span>
             <span class="text-color--white">
               <span v-if=" language === 'ru' ">Адрес Ethereum будет размещаться непосредственно на matryx.ai</span>
       				<span v-else-if=" language === 'ch' ">以太坊地址只会直接发布在 matryx.ai</span>
@@ -93,11 +104,26 @@
 </template>
 
 <script>
+import { isPreSale, isMainSale } from '@/utils'
+
 export default {
   name: 'NavbarToken',
   computed: {
     language () {
       return this.$store.state.language
+    }
+  },
+  mounted () {
+    if (isPreSale()) {
+      this.showPreSale = true
+    } else if (isMainSale()) {
+      this.showMainSale = true
+    }
+  },
+  data () {
+    return {
+      showPreSale: false,
+      showMainSale: false
     }
   }
 }
