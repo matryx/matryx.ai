@@ -150,6 +150,7 @@ export default {
 
   section {
     margin: 0 ;
+    z-index: 1000002;
   }
 
   #thank-you--body {

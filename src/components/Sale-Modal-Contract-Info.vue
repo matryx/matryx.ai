@@ -127,6 +127,8 @@
 @import '../assets/css/colors.scss';
 
 .salemodal-contract-info {
+  z-index: 1000002;
+
   &__form {
     width: 100%;
     max-width: 475px;

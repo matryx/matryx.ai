@@ -129,8 +129,8 @@ import SaleIcon from '@/components/Sale-Icon'
 import GetNotified from '@/components/Get-Notified'
 import Countdown from '@/components/Countdown'
 import MatryxBtn from '@/components/Matryx-Btn'
-import AuditedBy from '@/components/Audited-By'
 import TokenSaleInfo from '@/views/Home/Token-Sale'
+import AuditedBy from '@/components/Audited-By'
 
 import discount10 from '@/assets/icons/icon-sale-10discount.svg'
 import discount15 from '@/assets/icons/icon-sale-15discount.svg'
@@ -398,6 +398,28 @@ export default {
     }
   }
 
+  footer {
+    margin-top: 0px;
+  }
+
+  .sale.matryx-button {
+    &--blue {
+      border: 1px solid #49b749;
+      background-color: #49b749;
+      color: rgba(255, 255, 255, 0.9);
+
+
+      &:hover {
+        border: 1px solid #FFF;
+        background-color: $matryx-blue;
+        color: #FFF;
+      }
+      &:active {
+        position:relative;
+        top: 2px;
+      }
+    }
+  }
 
   /*----- MEDIA QUERIES -----*/
   @media screen and (min-width: 1690px) {
