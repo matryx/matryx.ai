@@ -3,7 +3,6 @@
     <Navbar-Token></Navbar-Token>
     <Navbar-Sticky></Navbar-Sticky>
     <Above-the-Fold></Above-the-Fold>
-    <Audited-By></Audited-By>
     <Media-Mentions></Media-Mentions>
     <About-Matryx></About-Matryx>
     <Pre-Sale></Pre-Sale>
@@ -13,6 +12,7 @@
     <div class="bkg-color--matryx-lighter-grey">
       <Token-Sale></Token-Sale>
     </div>
+    <Audited-By></Audited-By>
     <About-Token-Sale></About-Token-Sale>
     <div class="cta-middle-banner">
       <CTA-Banner :lighterText="true" :greyBkg="true" cta-location="Middle"></CTA-Banner>
