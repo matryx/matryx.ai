@@ -37,8 +37,8 @@ module.exports = {
     cssSourceMap: false
   },
   app: {
-    contractServer: isProduction ?
-        process.env.SERVER_ADDRESS :
+    host: isProduction ?
+        'https://tokensaleapp.matryx.ai' :
         'http://localhost:4000'
   }
 }
