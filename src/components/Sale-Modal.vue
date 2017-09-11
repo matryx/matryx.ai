@@ -89,7 +89,7 @@ import Checkbox from '@/components/Checkbox'
 import SaleModalContractInfo from '@/components/Sale-Modal-Contract-Info'
 import TokensaleSaleTerms from '@/components/Tokensale-Sale-Terms'
 import axios from 'axios'
-// import config from '../../config'
+import config from '../../config'
 
 export default {
   name: 'SaleModal',
@@ -157,7 +157,7 @@ export default {
         // submit axios request to get data
         // set data end spinner
         // transition to next page
-        axios.post(`/api/token`, {
+        axios.post(`${config.app.host}/api/token`, {
           email: this.email,
           allVerified: this.allChecked
         })
