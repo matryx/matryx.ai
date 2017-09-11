@@ -2,8 +2,8 @@
   <div class="body-content">
     <Navbar-Token></Navbar-Token>
     <Navbar-Sticky></Navbar-Sticky>
-    <!-- <Above-the-Fold></Above-the-Fold> -->
-    <Above-the-Fold-Start></Above-the-Fold-Start>
+    <Above-the-Fold></Above-the-Fold>
+    <!-- <Above-the-Fold-Start></Above-the-Fold-Start> -->
     <Media-Mentions></Media-Mentions>
     <About-Matryx></About-Matryx>
     <Pre-Sale></Pre-Sale>

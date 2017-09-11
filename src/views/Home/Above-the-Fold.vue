@@ -19,7 +19,11 @@
           :handleClick="goToPreSale">
         </Matryx-Btn>
 
-        <p class="lead ">
+        <Matryx-Btn v-if="showMainSale" text="Purchase MTX"
+          :handleClick="openSaleModal">
+        </Matryx-Btn>
+
+        <p class="lead " v-if="showPreSale">
           <span v-if=" language === 'ru' ">
             Окажитесь в центре событий. Введите ваш адрес электронной почты, чтобы получать уведомления о начале нашей продажи токенов.
           </span>
@@ -39,8 +43,15 @@
             Join in on the action. Enter your email to be notified when our token sale launches.
           </span>
         </p>
-        <Countdown end="September 13 2017 15:00:00 UTC"></Countdown>
-        <Get-Notified ctaLocation="Above the Fold"></Get-Notified>
+
+        <p class="lead " v-if="showMainSale">
+          Token Sale Ends In:
+        </p>
+
+        <Countdown v-if="showPreSale" end="September 13 2017 15:00:00 UTC"></Countdown>
+        <Countdown v-if="showMainSale" end="October 13 2017 15:00:00 UTC"></Countdown>
+
+        <Get-Notified v-if="showPreSale" ctaLocation="Above the Fold"></Get-Notified>
 
       </div>
       <div class="token-sale__video-launcher content-container--medium">
@@ -67,7 +78,8 @@ import Countdown from '@/components/Countdown'
 import GetNotified from '@/components/Get-Notified'
 import Video from '../../assets/media/giphy.mp4'
 import MatryxBtn from '@/components/Matryx-Btn'
-import { isPreSale } from '@/utils'
+import { isPreSale, isMainSale } from '@/utils'
+import { appAnalytics } from '@/analytics'
 
 export default {
   name: 'AboveTheFold',
@@ -81,6 +93,8 @@ export default {
   mounted () {
     if (isPreSale()) {
       this.showPreSale = true
+    } else if (isMainSale()) {
+      this.showMainSale = true
     }
   },
 
@@ -101,13 +115,18 @@ export default {
         English: 'https://www.youtube.com/embed/iLHlwnaqTWw?rel=0&amp;showinfo=0',
         Chinese: 'http://player.youku.com/embed/XMzAwNDA0MTQzNg=='
       },
-      showPreSale: false
+      showPreSale: false,
+      showMainSale: false
     }
   },
 
   methods: {
     goToPreSale () {
       this.$router.push({ name: 'PreSale' })
+    },
+    openSaleModal () {
+      appAnalytics.purchaseSaleBtn('sale-page')
+      this.$store.commit('showSaleModal', true)
     }
   }
 }
