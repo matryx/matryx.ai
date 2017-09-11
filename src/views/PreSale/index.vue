@@ -82,12 +82,7 @@
       </p>
     </div>
 
-    <div class="presale__audited">
-      <h2>Audited by</h2>
-      <a href="https://tokenmarket.net/blog/matryx-token-and-token-sale-smart-contract-audit/" target="_blank">
-        <img src="../../assets/icons/icon-tokenmarket-horizontal.png">
-      </a>
-    </div>
+    <Audited-By></Audited-By>
 
     <div id="presale__discounts">
       <h2 class="text-color--matryx-dark-grey presale__discounts--title">Pre-Sale Discounts</h2>
@@ -118,6 +113,7 @@ import SaleIcon from '@/components/Sale-Icon'
 import GetNotified from '@/components/Get-Notified'
 import Countdown from '@/components/Countdown'
 import MatryxBtn from '@/components/Matryx-Btn'
+import AuditedBy from '@/components/Audited-By'
 
 import discount10 from '@/assets/icons/icon-sale-10discount.svg'
 import discount15 from '@/assets/icons/icon-sale-15discount.svg'
@@ -133,7 +129,8 @@ export default {
     SaleIcon,
     GetNotified,
     Countdown,
-    MatryxBtn
+    MatryxBtn,
+    AuditedBy
   },
 
   mounted () {
@@ -341,20 +338,6 @@ export default {
     .minimum {
       padding-bottom: 130px;
       color: $white;
-    }
-  }
-
-  .presale__audited {
-    padding-bottom: 130px;
-    color: $matryx-dark-grey;
-    text-align: center;
-    max-width: 400px;
-    padding: 20px 40px;
-    margin: 50px auto;
-
-    img {
-      margin-top: 10px;
-      width: 100%;
     }
   }
 

@@ -3,6 +3,7 @@
     <Navbar-Token></Navbar-Token>
     <Navbar-Sticky></Navbar-Sticky>
     <Above-the-Fold></Above-the-Fold>
+    <Audited-By></Audited-By>
     <Media-Mentions></Media-Mentions>
     <About-Matryx></About-Matryx>
     <Pre-Sale></Pre-Sale>
@@ -43,6 +44,7 @@ import NavbarToken from '@/components/Navbar-Tokensale'
 import PreSale from './Pre-Sale'
 import TokenSale from './Token-Sale'
 import AboutMatryx from './About-Matryx'
+import AuditedBy from '@/components/Audited-By'
 
 export default {
   name: 'home',
@@ -62,7 +64,8 @@ export default {
     NavbarToken,
     PreSale,
     TokenSale,
-    AboutMatryx
+    AboutMatryx,
+    AuditedBy
   },
 
   beforeRouteUpdate (to, from, next) {
