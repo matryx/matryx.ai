@@ -3,7 +3,6 @@
     <Navbar-Token></Navbar-Token>
     <Navbar-Sticky></Navbar-Sticky>
     <Above-the-Fold></Above-the-Fold>
-    <!-- <Above-the-Fold-Start></Above-the-Fold-Start> -->
     <Media-Mentions></Media-Mentions>
     <About-Matryx></About-Matryx>
     <Pre-Sale></Pre-Sale>
@@ -13,6 +12,7 @@
     <div class="bkg-color--matryx-lighter-grey">
       <Token-Sale></Token-Sale>
     </div>
+    <Audited-By></Audited-By>
     <About-Token-Sale></About-Token-Sale>
     <div class="cta-middle-banner">
       <CTA-Banner :lighterText="true" :greyBkg="true" cta-location="Middle"></CTA-Banner>
@@ -44,7 +44,11 @@ import NavbarToken from '@/components/Navbar-Tokensale'
 import PreSale from './Pre-Sale'
 import TokenSale from './Token-Sale'
 import AboutMatryx from './About-Matryx'
+<<<<<<< HEAD
 import AboveTheFoldStart from './Above-the-Fold-Start'
+=======
+import AuditedBy from '@/components/Audited-By'
+>>>>>>> master
 
 export default {
   name: 'home',
@@ -65,7 +69,11 @@ export default {
     PreSale,
     TokenSale,
     AboutMatryx,
+<<<<<<< HEAD
     AboveTheFoldStart
+=======
+    AuditedBy
+>>>>>>> master
   },
 
   beforeRouteUpdate (to, from, next) {

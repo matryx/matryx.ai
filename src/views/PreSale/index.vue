@@ -89,6 +89,7 @@
           <img src="../../assets/icons/icon-tokenmarket-horizontal.png">
         </a>
       </div>
+<<<<<<< HEAD
 
       <div id="presale__discounts">
         <h2 class="text-color--matryx-dark-grey presale__discounts--title">Pre-Sale Discounts</h2>
@@ -105,6 +106,25 @@
               text="15% for purchases over 300 ETH*"
             ></SaleIcon>
           </div>
+=======
+      <p class="minimum">
+        **The minimum purchase amount to participate in the pre-sale
+        is 75 ETH. <br/>
+        There is no minimum purchase amount to participate in the main sale.
+      </p>
+    </div>
+
+    <Audited-By></Audited-By>
+
+    <div id="presale__discounts">
+      <h2 class="text-color--matryx-dark-grey presale__discounts--title">Pre-Sale Discounts</h2>
+      <div class="presale__discounts--list">
+        <div class="presale__discounts--list--10">
+          <SaleIcon
+            :img="discount10"
+            text="10% for purchases between 150 - 300 ETH*"
+          ></SaleIcon>
+>>>>>>> master
         </div>
         <div class="presale__discounts--disclaimer">
           *Discounts only available for purchases made during the pre-sale period
@@ -133,7 +153,11 @@ import SaleIcon from '@/components/Sale-Icon'
 import GetNotified from '@/components/Get-Notified'
 import Countdown from '@/components/Countdown'
 import MatryxBtn from '@/components/Matryx-Btn'
+<<<<<<< HEAD
 import TokenSaleInfo from '@/views/Home/Token-Sale'
+=======
+import AuditedBy from '@/components/Audited-By'
+>>>>>>> master
 
 import discount10 from '@/assets/icons/icon-sale-10discount.svg'
 import discount15 from '@/assets/icons/icon-sale-15discount.svg'
@@ -150,7 +174,11 @@ export default {
     GetNotified,
     Countdown,
     MatryxBtn,
+<<<<<<< HEAD
     TokenSaleInfo
+=======
+    AuditedBy
+>>>>>>> master
   },
 
   mounted () {
@@ -364,20 +392,6 @@ export default {
     .minimum {
       padding-bottom: 130px;
       color: $white;
-    }
-  }
-
-  .presale__audited {
-    padding-bottom: 130px;
-    color: $matryx-dark-grey;
-    text-align: center;
-    max-width: 400px;
-    padding: 20px 40px;
-    margin: 50px auto;
-
-    img {
-      margin-top: 10px;
-      width: 100%;
     }
   }
 
