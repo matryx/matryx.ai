@@ -97,7 +97,7 @@ export default {
   box-shadow: 0 2px 5px rgba(0,0,0,0.5);
   margin: 20px 20px;
   position: relative;
-  height: 560px;
+  height: 565px;
 
   &__heading {
     height: 155px;
@@ -186,7 +186,7 @@ export default {
     justify-content: space-between;
     padding: 20px 30px;
     color: $matryx-dark-grey;
-    height: 210px;
+    height: 230px;
 
     a {
     }

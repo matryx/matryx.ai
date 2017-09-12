@@ -67,7 +67,7 @@ export default {
 .event-item {
   width: calc(33.3333% - 40px);
   min-width: 300px;
-  min-height: 420px;
+  min-height: 450px;
   box-sizing: border-box;
   box-shadow: 0 2px 5px rgba(0,0,0,0.5);
   margin: 20px 20px;
@@ -139,7 +139,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 165px;
+    min-height: 185px;
 
     &__description {
       color: $matryx-dark-grey;
