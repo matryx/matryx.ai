@@ -54,9 +54,9 @@ export function isPreSale () {
   const startDate = new Date(date)
 
   if (today.getTime() - startDate.getTime() > 0) {
-    return true
+    return false
   }
-  return false
+  return true
 }
 
 export function isMainSale () {
@@ -65,7 +65,24 @@ export function isMainSale () {
   const startDate = new Date(date)
 
   if (today.getTime() - startDate.getTime() > 0) {
-    return true
+    return false
   }
-  return false
+  return true
+}
+
+export function isValidETHAddress (value) {
+  const rightStart = value.substring(0, 2) === '0x'
+  const rightLength = value.length === 40
+
+  if (rightStart && rightLength) {
+    return 'Address is valid'
+  }
+
+  if (!rightStart) {
+    return 'Address must start with "0x"'
+  }
+
+  if (!rightLength) {
+    return 'Address must be 40 characters'
+  }
 }

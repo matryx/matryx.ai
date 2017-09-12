@@ -149,7 +149,7 @@ section.check-mtx {
   width: calc(100% + 30px);
   position:relative;
   left: -15px;
-  top: -15px;
+  top: 20px;
   border-radius: 10px;
   overflow: hidden;
   background-color: #fff;
