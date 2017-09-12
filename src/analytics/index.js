@@ -1,6 +1,6 @@
 // Group all analytics here so we can see them at a glance
 // Import into components
-import { getlStorage } from '../utils'
+import { getlStorage, isPreSale } from '../utils'
 
 const appAnalytics = {
   surveyModal (email, intendedAmount) {
@@ -76,8 +76,9 @@ const appAnalytics = {
     })
   },
 
-  submitVerify (email, sale) {
+  submitVerify (email) {
     var useEmail = email || getlStorage('email')
+    var sale = isPreSale() ? 'pre-sale' : 'sale'
 
     window.analytics.identify(useEmail, {
       Purchase: 'Yes'

@@ -4,15 +4,17 @@
     <br/>
     <b>Instructions: </b>
     <p>The following is the sale contract information needed in order to complete the MTX transaction using your Ethereum wallet. Take each value and paste it into the corresponding field in your wallet, along with the amount of ETH you wish to spend.
-    <br/><br/>
-    <b class="uppercase">75 ETH is the minimum amount to make a purchase for the pre-sale.</b> <br/>
-    <span style="text-decoration:underline; color: red;">Transactions less than 75 ETH will fail.</span>
-    <br/>
-    <p> Purchases between 150 ETH and 300 ETH will receive a 10% discount.
-    <br/>
-    Purchase 300 ETH and greater will receive a 15% discount.</p>
 
-    For additional instructions, please refer to our <a href="https://blog.matryx.ai/matryx-pre-sale-how-to-participate-tips-on-staying-safe-711938733015" target="_blank">blog post.</a>
+    <div v-if="showPreSale">
+      <b class="uppercase">75 ETH is the minimum amount to make a purchase for the pre-sale.</b> <br/>
+      <span style="text-decoration:underline; color: red;">Transactions less than 75 ETH will fail.</span>
+      <br/>
+      <p> Purchases between 150 ETH and 300 ETH will receive a 10% discount.
+      <br/>
+      Purchase 300 ETH and greater will receive a 15% discount.</p>
+    </div>
+
+    For detailed instructions, please refer to our <a href="https://blog.matryx.ai/matryx-pre-sale-how-to-participate-tips-on-staying-safe-711938733015" target="_blank">blog post.</a>
 
     </p>
     <div class="salemodal-contract-info__form">
@@ -86,6 +88,8 @@
 </template>
 
 <script>
+  import { isPreSale } from '@/utils'
+
   export default {
     name: 'SaleModalContractInfo',
 
@@ -104,6 +108,18 @@
       },
       handleSubmit: {
         type: Function
+      }
+    },
+
+    data () {
+      return {
+        showPreSale: false
+      }
+    },
+
+    mounted () {
+      if (isPreSale()) {
+        this.showPreSale = true
       }
     },
 

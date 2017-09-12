@@ -1,14 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+>
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+  <url>
+    <loc>https://matryx.ai/</loc>
+    <lastmod>2017-09-11</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
 
-<url>
-  <loc>https://matryx.ai/</loc>
-  <lastmod>2017-09-10T21:24:48+00:00</lastmod>
-  <changefreq>daily</changefreq>
-</url>
+  <url>
+    <loc>https://matryx.ai/faq/about/what-is-matryx</loc>
+    <lastmod>2017-09-11</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <url>
+    <loc>https://matryx.ai/faq/contact/how-can-I-contribute-to-matryx</loc>
+    <lastmod>2017-09-11</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <url>
+    <loc>https://matryx.ai/faq/general/why-use-a-blockchain</loc>
+    <lastmod>2017-09-11</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <url>
+    <loc>https://matryx.ai/faq/presale/how-can-I-participate-in-the-presale</loc>
+    <lastmod>2017-09-11</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <url>
+    <loc>https://matryx.ai/faq/saleterms/what-are-the-saleterms</loc>
+    <lastmod>2017-09-11</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <url>
+    <loc>https://matryx.ai/faq/tokensale/how-can-i-participate-in-the-matryx-token-sale</loc>
+    <lastmod>2017-09-11</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <url>
+    <loc>https://matryx.ai/faq/troubleshooting/i-cant-see-my-tokens</loc>
+    <lastmod>2017-09-11</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <url>
+    <loc>https://matryx.ai/press-kit</loc>
+    <lastmod>2017-09-11</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <url>
+    <loc>https://matryx.ai/pre-sale</loc>
+    <lastmod>2017-09-11</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <url>
+    <loc>https://matryx.ai/rewards</loc>
+    <lastmod>2017-09-11</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <url>
+    <loc>https://matryx.ai/privacy-policy</loc>
+    <lastmod>2017-09-11</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <url>
+    <loc>https://matryx.ai/matryx-whitepaper.pdf</loc>
+    <lastmod>2017-09-11</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <url>
+    <loc>https://matryx.ai/matryx-whitepaper-ch.pdf</loc>
+    <lastmod>2017-09-11</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <url>
+    <loc>https://matryx.ai/sale-terms.pdf</loc>
+    <lastmod>2017-09-11</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
 </urlset>

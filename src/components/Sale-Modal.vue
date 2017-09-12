@@ -149,7 +149,7 @@ export default {
         return
       }
 
-      appAnalytics.submitVerify(this.email, 'pre-sale')
+      appAnalytics.submitVerify(this.email)
 
       if (this.allChecked) {
         // start spinner
