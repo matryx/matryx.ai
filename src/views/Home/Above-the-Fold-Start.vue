@@ -51,7 +51,6 @@ import GetNotified from '@/components/Get-Notified'
 import Video from '../../assets/media/giphy.mp4'
 import MatryxBtn from '@/components/Matryx-Btn'
 import { isPreSale } from '@/utils'
-import { appAnalytics } from '@/analytics'
 
 export default {
   name: 'AboveTheFold',
@@ -91,7 +90,6 @@ export default {
 
   methods: {
     openSaleModal () {
-      appAnalytics.purchaseSaleBtn('sale-page')
       this.$store.commit('showSaleModal', true)
     }
   }
