@@ -21,27 +21,27 @@
           Featured in
         </span>
       </p>
-      <a class="press-logo" href="https://tokenmarket.net/blockchain/ethereum/assets/matryx/" target="_blank">
+      <a class="press-logo" href="http://matryx.fyi/wt4sz" target="_blank">
         <img src="../../assets/images/press/tokenmarket.png"
           alt="Token Market" class="token-market-logo">
       </a>
-      <a class="press-logo" href="https://www.gizmodo.com.au/2017/01/you-can-do-maths-in-virtual-reality-now/" target="_blank">
+      <a class="press-logo" href="http://matryx.fyi/2khb0" target="_blank">
         <img src="../../assets/images/press/gizmodo.png" alt="Gizmodo">
       </a>
-      <a class="press-logo" href="http://markets.businessinsider.com/news/stocks/Virtual-Reality-Software-Maker-Nanome-Introduces-Matryx-with-Token-Sale-1002282833?utm_source=matryx&utm_medium=web" target="_blank">
+      <a class="press-logo" href="http://matryx.fyi/qu9j5" target="_blank">
         <img src="../../assets/images/press/business-insider.png" alt="Business Insider">
       </a>
-      <a class="press-logo" href="http://www.sandiegouniontribune.com/business/sd-fi-ignite-conference-20170223-story.html" target="_blank">
+      <a class="press-logo" href="http://matryx.fyi/5zss6" target="_blank">
         <img src="../../assets/images/press/sdut-logo.png" alt="SDUT">
       </a>
 
-      <a class="press-logo" href="http://jacobsschool.ucsd.edu/news/news_releases/release.sfe?id=2081" target="_blank">
+      <a class="press-logo" href="http://matryx.fyi/l9pgu" target="_blank">
         <img src="../../assets/images/press/UCSD-logo.png" alt="UCSD">
       </a>
-      <a class="press-logo" href="http://sdtimes.com/nanome-launches-vr-collaboration-platform-matryx/" target="_blank">
+      <a class="press-logo" href="http://matryx.fyi/3260b" target="_blank">
         <img src="../../assets/images/press/sd_times.png" alt="SD Times">
       </a>
-      <a class="press-logo" href="https://singularityhub.com/2017/01/18/get-ready-to-love-math-with-this-sweet-vr-calculator/" target="_blank">
+      <a class="press-logo" href="http://matryx.fyi/eqc3k" target="_blank">
         <img src="../../assets/images/press/singularity.png" alt="Singularity">
       </a>
     </div>
