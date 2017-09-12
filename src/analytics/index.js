@@ -1,6 +1,6 @@
 // Group all analytics here so we can see them at a glance
 // Import into components
-import { getlStorage } from '../utils'
+import { getlStorage, isPreSale } from '../utils'
 
 const appAnalytics = {
   surveyModal (email, intendedAmount) {
@@ -46,6 +46,29 @@ const appAnalytics = {
     window.analytics.track('submit', {
       category: 'email',
       label: 'get-notified'
+    })
+  },
+
+  rewardsParticipate (location) {
+    window.analytics.identify(getlStorage('email'))
+
+    window.analytics.track(`Participate`, {
+      category: 'Rewards',
+      label: `participate-${location}`
+    })
+  },
+
+  submitVerify (email) {
+    var useEmail = email || getlStorage('email')
+    var sale = isPreSale() ? 'pre-sale' : 'sale'
+
+    window.analytics.identify(useEmail, {
+      Purchase: 'Yes'
+    })
+
+    window.analytics.track(`Verify Contract - ${sale}`, {
+      category: 'Verify',
+      label: `verify_${sale}`
     })
   }
 }

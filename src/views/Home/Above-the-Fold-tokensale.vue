@@ -34,20 +34,7 @@
             Participate in Pre-Sale. Click button below to begin
           </span>
         </p>
-        <div class="progress-bar">
-          <div class="progress-bar__bar-container">
-            <div class="progress-bar__bar-progress" :style="ETHProgress"></div>
-            <div class="progress-bar__bar-total"></div>
-          </div>
-          <p>
-            <span class="progress-bar__bar-progress--text">{{ ETHPurchased }}</span>
-            <span class="progress-bar__bar-total--text">/ 161803 ETH</span>
-          </p>
-        </div>
-        <button class="matryx-button matryx-button--blue" @click="openSaleModal">
-          PURCHASE MTX
-        </button>
-        <p>Already purchased MTX? Check your balance <span class="checkMTXLink" @click="openCheckMTXModal">here</span>.</p>
+        <Progress-Bar></Progress-Bar>
       </div>
       <div class="token-sale__video-launcher content-container--medium">
         <iframe class="matryx-video-yt"
@@ -67,39 +54,17 @@
 <script>
 // import Countdown from '@/components/Countdown'
 // import GetNotified from '@/components/Get-Notified'
+import ProgressBar from '@/components/Progress-Bar'
 
 export default {
   name: 'AboveTheFoldTokensale',
+
+  components: { ProgressBar },
 
   computed: {
     language () {
       return this.$store.state.language
     }
-  },
-
-  data () {
-    return {
-      ETHPurchased: Number,
-      ETHProgress: String,
-      ETHData: [ 1356, 15677, 48768, 89235, 156098 ]
-    }
-  },
-
-  methods: {
-    openSaleModal () {
-      console.log('hello openSaleModal')
-      this.$store.commit('showSaleModal', true)
-    },
-    openCheckMTXModal () {
-      this.$store.commit('showCheckMTXModal', true)
-    }
-  },
-
-  mounted () {
-    this.ETHPurchased = this.ETHData[(Math.floor(Math.random() * 5))]
-    var ETHPercent = (this.ETHPurchased / 161803) * 100
-    this.ETHProgress = 'width: ' + ETHPercent + '%;'
-    console.log(this.ETHPurchased, this.ETHProgress, ETHPercent)
   }
 }
 </script>
@@ -248,69 +213,6 @@ section.above-the-fold {
 }
 
 /*----- tokensale styles-----*/
-/* progress bar */
-.progress-bar {
-  background-color: transparent;
-  margin: 30px 0;
-
-  &__bar-container {
-    position:relative;
-    height: 20px;
-    width: 100%;
-  }
-  &__bar-progress {
-    background-color: $matryx-light-blue;
-
-    &--text {
-      color: #FFF;
-    }
-  }
-  &__bar-total {
-    width: 100%;
-
-    &--text {
-      color: $matryx-light-blue;
-    }
-  }
-  &__bar-progress, &__bar-total {
-    float:left;
-    border: 1px solid $matryx-light-blue;
-    height: 100%;
-    position:absolute;
-    top: 0;
-    left: 0;
-  }
-}
-
-/*matryx button */
-.matryx-button {
-  width: 100%;
-  height: 50px;
-  text-align:center;
-  border-radius: 40px;
-  text-transform: uppercase;
-  padding: 20px auto;
-  margin: 30px auto;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.7);
-
-  &--blue {
-    border: 1px solid $matryx-blue;
-    background-color: $matryx-blue;
-    color: #FFF;
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-      color: rgba(255, 255, 255, 0.9);
-    }
-    &:active {
-      position:relative;
-      top: 2px;
-    }
-  }
-}
-/*----- END tokensale styles-----*/
-
-
 
 
 .tokensale-background {
@@ -320,14 +222,6 @@ section.above-the-fold {
   top:0;
   left:0;
   z-index: 1;
-}
-
-
-
-
-
-.purple-btn {
-  border: none;
 }
 
 

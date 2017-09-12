@@ -23,7 +23,7 @@
         increase the possible MTX per stake available! -->
       </h4>
       <a href="#ways-to-earn" class="announcement__button">
-       PARTICIPATE
+       LEARN MORE
       </a>
     </div>
   </section>

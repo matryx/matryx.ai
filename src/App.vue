@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="bkg-color--white">
     <App-Navbar></App-Navbar>
 
     <Survey-Modal></Survey-Modal>

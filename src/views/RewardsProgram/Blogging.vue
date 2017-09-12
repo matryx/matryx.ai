@@ -14,7 +14,7 @@
         <br/><br/>
         Blogs must be 700 characters or more, link directly to the Matryx homepage (<a class="blogging__link text-color--matryx-light-blue" href="https://matryx.ai">https://matryx.ai</a>), and contain entirely unique content.
       </p>
-      <a href="https://goo.gl/forms/jiNQxJEfLVf7QBdc2" target="_blank" class="btn btn-yellow participate__btn uppercase">
+      <a href="https://goo.gl/forms/jiNQxJEfLVf7QBdc2" target="_blank" class="btn btn-yellow participate__btn uppercase" @click="handleClick">
         Participate
       </a>
     </div>
@@ -24,8 +24,8 @@
 <script>
 import RewardSocialItem from '@/components/Reward-Social-Item'
 import mediumSrc from '@/assets/icons/icon-medium.svg'
-// import mediumSrc from '@/assets/images/rewardsProgram/icon-medium.png'
 import mediumBar from '@/assets/images/rewardsProgram/matryx-blog.png'
+import { appAnalytics } from '@/analytics'
 
 export default {
   name: 'Blogging',
@@ -47,6 +47,10 @@ export default {
         img: mediumBar,
         src: mediumSrc,
         maxMTX: '35,000'
+      },
+
+      handleClick () {
+        appAnalytics.rewardsParticipate('Blogging')
       }
     }
   }

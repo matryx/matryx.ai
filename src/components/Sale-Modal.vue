@@ -25,36 +25,43 @@
             <div class="salemodal__body__terms__checklist">
               <Checkbox name="saleTermsRead" :obj="saleTermsRead">
                 <span slot="label">
-                  I have read and agree to the Sale Terms of the Matryx Token Sale
+                  I have read and agree to the Sale Terms of the Matryx Token Sale.
                 </span>
               </Checkbox>
               <Checkbox name="erc20WalletAddress" :obj="erc20WalletAddress">
                 <span slot="label">
-                  I understand and agree that I must use a valid ERC20 compatible wallet address
+                  I understand and agree that I must use a valid ERC20 compatible wallet address.
                 </span>
               </Checkbox>
               <Checkbox name="noExchangeAddress" :obj="noExchangeAddress">
                 <span slot="label">
-                  I understand and agree that the address I use must not be an exchange address
+                  I understand and agree that the address I use must not be an exchange address.
                 </span>
               </Checkbox>
               <Checkbox name="havePrivateKeys" :obj="havePrivateKeys">
                 <span slot="label">
-                  I understand and agree that if I use an exchange address I must own the private keys
+                  I understand and agree that if I use an exchange address I must own the private keys.
                 </span>
               </Checkbox>
 
               <div class="terms-email">
-                <input class="terms-email--input" type="text" placeholder="Email Address" v-model="email"/>
+                <input class="terms-email--input" type="email" placeholder="Email Address" v-model="email"/>
+                <p class="warn text-smaller" v-show="showEmailWarn">
+                  Please enter a valid email address
+                </p>
                 <span class="text-smaller">* Sign up to receive updates</span>
               </div>
 
               <button class="submit-btn matryx-button matryx-button--blue"
-                @click.prevent="handleSubmit"
+                @click.prevent="submitVerified"
                 :disabled="!allChecked"
               >
                 SUBMIT
               </button>
+
+              <p class="warn text-smaller text-center email-warn" v-show="submitError">
+               {{ submitError }}
+              </p>
             </div>
           </div>
         </transition>
@@ -63,7 +70,8 @@
           <Sale-Modal-Contract-Info class="salemodal__body__address"
             v-if="showSaleContract"
             :dataField="contractInfo.dataField" :gas="contractInfo.gas"
-            :contractAddress="contractInfo.contractAddress"
+            :saleAddress="contractInfo.saleAddress"
+            :handleSubmit="closeModal"
           >
           </Sale-Modal-Contract-Info>
         </transition>
@@ -76,6 +84,7 @@
 <script>
 import { appAnalytics } from '@/analytics'
 import { mapState } from 'vuex'
+import { isValidEmail } from '@/utils'
 import Checkbox from '@/components/Checkbox'
 import SaleModalContractInfo from '@/components/Sale-Modal-Contract-Info'
 import TokensaleSaleTerms from '@/components/Tokensale-Sale-Terms'
@@ -94,6 +103,7 @@ export default {
   data () {
     return {
       email: '',
+      showEmailWarn: false,
       saleTermsRead: {
         checked: false,
         enable: false
@@ -109,7 +119,8 @@ export default {
       havePrivateKeys: {
         checked: false,
         enable: false
-      }
+      },
+      submitError: false
     }
   },
 
@@ -130,8 +141,15 @@ export default {
   },
 
   methods: {
-    handleSubmit () {
-      appAnalytics.surveyModal(this.email, this.intendedAmount)
+    submitVerified () {
+      this.showEmailWarn = false
+
+      if (this.email && !isValidEmail(this.email)) {
+        this.showEmailWarn = true
+        return
+      }
+
+      appAnalytics.submitVerify(this.email)
 
       if (this.allChecked) {
         // start spinner
@@ -139,7 +157,7 @@ export default {
         // submit axios request to get data
         // set data end spinner
         // transition to next page
-        axios.post(`${config.app.contractServer}/api/token`, {
+        axios.post(`${config.app.host}/api/token`, {
           email: this.email,
           allVerified: this.allChecked
         })
@@ -151,6 +169,10 @@ export default {
         .catch((err) => {
           console.log('error', err)
           this.$store.commit('togglePulseSpinner', false)
+          this.submitError = 'Error processing request. Please try again.'
+          setTimeout(() => {
+            this.submitError = ''
+          }, 2000)
         })
       } else {
         this.$store.commit('togglePulseSpinner', false)
@@ -162,24 +184,50 @@ export default {
       this.$store.commit('clearContractInfo')
       this.$store.commit('toggleSaleContract', false)
       this.$store.commit('showSaleModal', false)
+
+      this.clearAllChecked()
+    },
+
+    clearAllChecked () {
+      this.email = ''
+      this.submitError = ''
+      this.showEmailWarn = false
+      this.saleTermsRead.checked = false
+      this.saleTermsRead.enable = false
+      this.erc20WalletAddress.checked = false
+      this.erc20WalletAddress.enable = false
+      this.noExchangeAddress.checked = false
+      this.noExchangeAddress.enable = false
+      this.havePrivateKeys.checked = false
+      this.havePrivateKeys.enable = false
+    },
+
+    resetTerms () {
+      const vm = this
+
+      vm.saleTermsRead.enable = true
+      vm.erc20WalletAddress.enable = true
+      vm.noExchangeAddress.enable = true
+      vm.havePrivateKeys.enable = true
+
+      // var saleTerms = document.querySelector('#sale-terms')
+      // saleTerms.addEventListener('scroll', function () {
+      //   if (this.scrollHeight - (this.offsetHeight - 2) === this.scrollTop) {
+      //     vm.saleTermsRead.enable = true
+      //     vm.erc20WalletAddress.enable = true
+      //     vm.noExchangeAddress.enable = true
+      //     vm.havePrivateKeys.enable = true
+      //   }
+      // })
     }
   },
 
   mounted () {
-    const vm = this
-    var saleTerms = document.querySelector('#sale-terms')
-    saleTerms.addEventListener('scroll', function () {
-      if (this.scrollHeight - (this.offsetHeight - 2) === this.scrollTop) {
-        vm.saleTermsRead.enable = true
-        vm.erc20WalletAddress.enable = true
-        vm.noExchangeAddress.enable = true
-        vm.havePrivateKeys.enable = true
-      }
-    })
+    this.resetTerms()
   },
 
-  destroyed () {
-
+  updated () {
+    this.resetTerms()
   }
 }
 </script>
@@ -188,6 +236,7 @@ export default {
 @import '../assets/css/colors';
 
 section.sale-modal {
+  z-index: 1000002;
   margin: 0;
 }
 
@@ -219,6 +268,10 @@ section.sale-modal {
       background-color: $light-green;
       border-color: $light-green;
     }
+  }
+
+  .email-warn {
+    margin: 0 auto;
   }
 
   .salemodal__header {

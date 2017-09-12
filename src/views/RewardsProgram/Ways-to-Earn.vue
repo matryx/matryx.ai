@@ -17,19 +17,19 @@
           <Reward-Social-Item :maxMTX="youtube.maxMTX" :stakes="youtube.stakes"
            :src="youtube.src" :img="youtube.img" :name="youtube.name"
           >
-            <Reward-Social-Item-Btn :link="googleForm" linkText="Participate" slot="button">
+            <Reward-Social-Item-Btn :link="googleForm" linkText="Participate" slot="button" location="Youtube">
             </Reward-Social-Item-Btn>
           </Reward-Social-Item>
           <Reward-Social-Item :maxMTX="twitter.maxMTX" :stakes="twitter.stakes"
            :src="twitter.src" :img="twitter.img" :name="twitter.name"
           >
-            <Reward-Social-Item-Btn :link="googleForm" linkText="Participate" slot="button">
+            <Reward-Social-Item-Btn :link="googleForm" linkText="Participate" slot="button" location="Twitter">
             </Reward-Social-Item-Btn>
           </Reward-Social-Item>
           <Reward-Social-Item :maxMTX="forum.maxMTX" :stakes="forum.stakes"
             :src="forum.src" :img="forum.img" :name="forum.name"
           >
-            <Reward-Social-Item-Btn :link="googleForm" linkText="Participate" slot="button">
+            <Reward-Social-Item-Btn :link="googleForm" linkText="Participate" slot="button" location="Forums">
             </Reward-Social-Item-Btn>
           </Reward-Social-Item>
         </div>

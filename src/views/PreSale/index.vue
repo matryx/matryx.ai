@@ -1,101 +1,126 @@
 <template>
-  <section id="presale" class="body-content">
-    <Navbar-TokenSale></Navbar-TokenSale>
-    <div id="presale__above-the-fold">
-      <div class="presale__header uppercase text-color--white">
-        <h1>Join the Matryx Token Pre-Sale</h1>
-      </div>
-      <div class="presale__content content-container content-container--large text-color--white">
-        <div class="presale__discounts content-container--medium">
-          <h3 class="presale__discounts--title">Pre-Sale Discounts</h3>
-          <div class="presale__discounts--list">
-            <div class="presale__discounts--list--10">
-              <SaleIcon
-                :img="discount10"
-                text="10% for purchases between 150 - 300 ETH*"
-              ></SaleIcon>
-            </div>
-            <div class="presale__discounts--list-15">
-              <SaleIcon
-                :img="discount15"
-                text="15% for purchases over 300 ETH*"
-              ></SaleIcon>
-            </div>
-          </div>
-          <div class="presale__discounts--disclaimer">
-            *Discounts only available for purchases made during the pre-sale period
-          </div>
+  <div class="body-content">
+    <section v-if="showPreSale" id="presale">
+      <Navbar-TokenSale></Navbar-TokenSale>
+      <div id="presale__above-the-fold">
+        <div class="presale__header uppercase text-color--white">
+          <h1>Join the Matryx Token Pre-Sale</h1>
         </div>
+        <div class="presale__content content-container content-container--large text-color--white">
 
-        <div class="presale__calculator__results content-container--medium">
-          <div class="presale__calculator">
-            <h3 class="presale__calculator--title">
-              How much extra MTX could you get?
-            </h3>
-            <div class="presale__calculator--input">
-              <input type="number"
-                name="presale-calculator"
-                placeholder="ETH"
-                v-model="purchaseAmount"
-                max="80901"
-              >
-              <div> ETH spent </div>
+          <div class="presale__sign-up content-container--medium">
+            <h2>
+              {{ message }}
+            </h2>
+            <Countdown :end="end" class="presale__countdown"></Countdown>
+
+            <div v-if="!showPurchaseBtn">
+              <h3 class="text-center" >
+                Sign up if interested in the Pre-Sale!
+              </h3>
+              <Get-Notified ctaLocation="Pre-Sale"></Get-Notified>
             </div>
+
+            <Matryx-Btn v-else text="Purchase MTX" :handleClick="openSaleModal">
+            </Matryx-Btn>
           </div>
 
-          <div class="presale__results">
-            <div class="presale__results--pre">
-              <p>MTX Tokens during Pre-Sale</p>
-              <div class="presale__results--box">
-                {{ mtxPresale | num_commas }}
+          <div class="presale__calculator__results content-container--medium">
+            <div class="presale__calculator">
+              <h3 class="presale__calculator--title">
+                Calculate your extra MTX <br/>during the Pre-Sale:
+              </h3>
+              <div class="presale__calculator--input">
+                <input type="number"
+                  name="presale-calculator"
+                  placeholder="ETH"
+                  v-model="purchaseAmount"
+                  max="80901"
+                >
+                <div> ETH spent </div>
               </div>
             </div>
 
-            <div class="presale__results--reg">
-              <p>MTX Tokens during Regular Sale</p>
-              <div class="presale__results--box">
-                {{ mtxRegular | num_commas }}
+            <div class="presale__results">
+              <div class="presale__results--pre">
+                <p>MTX Tokens during Pre-Sale</p>
+                <div class="presale__results--box">
+                  {{ mtxPresale | num_commas }}
+                </div>
+              </div>
+
+              <div class="presale__results--reg">
+                <p>MTX Tokens during Regular Sale</p>
+                <div class="presale__results--box">
+                  {{ mtxRegular | num_commas }}
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="presale__results--explanation">
-            <p v-show="purchaseAmount >= 150 && purchaseAmount <= 80901">
-              By participating in the Pre-Sale, you <br/>receive
-              <span class="diff"
-                :class="{ 'text-color--light-green': diff > 0 }">
-                {{ diff | num_commas }}
-              </span>
-              <span class="extra">extra MTX!</span>
-            </p>
-            <p v-show="purchaseAmount < 150">
-              The minimum purchase amount to receive a discount is 150 ETH.
-            </p>
-            <p v-show="purchaseAmount > 80901">
-              Thanks for your support, but you've reached the limit!
-            </p>
-          </div>
+            <div class="presale__results--explanation">
+              <p v-show="purchaseAmount >= 150 && purchaseAmount <= 80901">
+                By participating in the Pre-Sale, you <br/>receive
+                <span class="diff"
+                  :class="{ 'text-color--light-green': diff > 0 }">
+                  {{ diff | num_commas }}
+                </span>
+                <span class="extra">extra MTX!</span>
+              </p>
+              <p v-show="purchaseAmount < 150">
+                The minimum purchase amount to receive a discount is 150 ETH.
+              </p>
+              <p v-show="purchaseAmount > 80901">
+                Thanks for your support, but you've reached the limit!
+              </p>
+            </div>
 
+          </div>
+        </div>
+        <p class="minimum">
+          **The minimum purchase amount to participate in the pre-sale
+          is 75 ETH. <br/>
+          There is no minimum purchase amount to participate in the main sale.
+        </p>
+      </div>
+
+      <Audited-By></Audited-By>
+
+      <div id="presale__discounts">
+        <h2 class="text-color--matryx-dark-grey presale__discounts--title">Pre-Sale Discounts</h2>
+        <div class="presale__discounts--list">
+          <div class="presale__discounts--list--10">
+            <SaleIcon
+              :img="discount10"
+              text="10% for purchases between 150 - 300 ETH*"
+            ></SaleIcon>
+          </div>
+          <div class="presale__discounts--list--15">
+            <SaleIcon
+              :img="discount15"
+              text="15% for purchases over 300 ETH*"
+            ></SaleIcon>
+          </div>
+        </div>
+        <div class="presale__discounts--disclaimer">
+          *Discounts only available for purchases made during the pre-sale period
         </div>
       </div>
-      <p class="minimum">
-        **The minimum purchase amount to participate in the pre-sale
-        is 75 ETH. <br/>
-        There is no minimum purchase amount to participate in the main sale.
-      </p>
-    </div>
+    </section>
+    <section v-if="showMainSale" id="presale">
+      <Navbar-TokenSale></Navbar-TokenSale>
+      <div id="presale__above-the-fold">
+        <div class="presale__header  text-color--white content-container--medium content-container">
+          <h2>Pre-Sale has ended.</h2>
+          <br>
+          <h1 class="uppercase"> Participate in main sale</h1>
+          <Matryx-Btn class="sale" text="Purchase MTX" :handleClick="openSaleModal">
+          </Matryx-Btn>
+        </div>
+      </div>
+      <Token-Sale-Info></Token-Sale-Info>
+    </section>
+  </div>
 
-    <div id="presale__sign-up">
-      <h2>
-        {{ message }}
-      </h2>
-      <Countdown :end="end" class="presale__countdown"></Countdown>
-      <h2 class="text-center">
-        Sign up if interested in participating in the Pre-Sale
-      </h2>
-      <Get-Notified ctaLocation="Pre-Sale"></Get-Notified>
-    </div>
-  </section>
 </template>
 
 <script>
@@ -103,9 +128,14 @@ import NavbarTokenSale from '@/components/Navbar-Tokensale'
 import SaleIcon from '@/components/Sale-Icon'
 import GetNotified from '@/components/Get-Notified'
 import Countdown from '@/components/Countdown'
+import MatryxBtn from '@/components/Matryx-Btn'
+import TokenSaleInfo from '@/views/Home/Token-Sale'
+import AuditedBy from '@/components/Audited-By'
 
 import discount10 from '@/assets/icons/icon-sale-10discount.svg'
 import discount15 from '@/assets/icons/icon-sale-15discount.svg'
+
+import { isPreSale, isMainSale } from '@/utils'
 
 export default {
   name: 'PreSale',
@@ -114,7 +144,21 @@ export default {
     NavbarTokenSale,
     SaleIcon,
     GetNotified,
-    Countdown
+    Countdown,
+    MatryxBtn,
+    AuditedBy,
+    TokenSaleInfo
+  },
+
+  mounted () {
+    window.analytics.page('PreSale')
+
+    if (isPreSale()) {
+      this.showPurchaseBtn = true
+      this.showPreSale = true
+    } else if (isMainSale()) {
+      this.showMainSale = true
+    }
   },
 
   data () {
@@ -123,25 +167,27 @@ export default {
       rate10: 1294.40736,
       rate15: 1370.54896,
       purchaseAmount: null,
-      message: 'Pre-Sale Starts In:',
+      message: 'Pre-Sale Starts In',
       discount10,
-      discount15
+      discount15,
+      showPurchaseBtn: false,
+      showPreSale: false,
+      showMainSale: false
     }
   },
 
   computed: {
     end () {
       const date = 'September 6 2017 15:00:00 UTC'
-      const today = new Date()
-      const startDate = new Date(date)
 
-      if (today.getTime() - startDate.getTime() > 0) {
-        this.message = 'Pre-Sale Ends and Main Sale Starts In:'
+      if (isPreSale()) {
+        this.message = 'Pre-Sale Ends & Main Sale Starts In'
         return 'September 13 2017 14:59:59 UTC'
       } else {
         return date
       }
     },
+
     diff () {
       return this.mtxPresale - this.mtxRegular
     },
@@ -164,6 +210,12 @@ export default {
 
     mtxRegular () {
       return Math.round(this.purchaseAmount * this.rateBase)
+    }
+  },
+
+  methods: {
+    openSaleModal () {
+      this.$store.commit('showSaleModal', true)
     }
   }
 }
@@ -194,25 +246,21 @@ export default {
       }
     }
 
-    .presale__discounts {
+    .presale__sign-up {
       margin-top: 30px;
       display: flex;
       flex-direction: column;
       align-items: center;
 
-      &--list {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        width: 100%;
-        padding: 25px;
+      .matryx-button {
+        // width: 400px;
+        height: 70px;
+        background-color: $light-green;
+        border-color: $light-green;
 
-        div {
-          width: 200px;
-        }
-
-        img {
-          width: 130px;
+        &:hover {
+          background-color: $white;
+          color: $light-green;
         }
       }
     }
@@ -315,15 +363,59 @@ export default {
     }
   }
 
-  #presale__sign-up {
+  #presale__discounts {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 80px;
+    padding: 80px 20px 20px;
+
+    .presale__discounts--list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1000px;
+      padding: 25px;
+
+      div {
+        width: 300px;
+        margin: 0 auto;
+      }
+
+      img {
+        width: 250px;
+      }
+    }
+
+
 
     .cta__form .cta__form__email {
       border: 1px solid $matryx-blue;
+    }
+  }
+
+  footer {
+    margin-top: 0px;
+  }
+
+  .sale.matryx-button {
+    &--blue {
+      border: 1px solid #49b749;
+      background-color: #49b749;
+      color: rgba(255, 255, 255, 0.9);
+
+
+      &:hover {
+        border: 1px solid #FFF;
+        background-color: $matryx-blue;
+        color: #FFF;
+      }
+      &:active {
+        position:relative;
+        top: 2px;
+      }
     }
   }
 

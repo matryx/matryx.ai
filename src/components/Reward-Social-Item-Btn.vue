@@ -1,14 +1,25 @@
 <template>
-  <a :href="link" target="_blank" class="btn btn-yellow reward-ts-item__btn uppercase">
+  <a :href="link" target="_blank"
+    class="btn btn-yellow reward-ts-item__btn uppercase"
+    @click="handleClick"
+  >
     {{ linkText }}
   </a>
 </template>
 
 <script>
+import { appAnalytics } from '@/analytics'
+
 export default {
   name: 'RewardSocialItemBtn',
 
-  props: ['link', 'linkText']
+  props: ['link', 'linkText', 'location'],
+
+  methods: {
+    handleClick () {
+      appAnalytics.rewardsParticipate(this.location)
+    }
+  }
 }
 </script>
 

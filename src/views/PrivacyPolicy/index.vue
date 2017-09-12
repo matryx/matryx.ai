@@ -145,6 +145,11 @@
 
 <script>
 export default {
+  name: 'PrivacyPolicy',
+
+  mounted () {
+    window.analytics.page('Privacy Policy')
+  }
 }
 </script>
 

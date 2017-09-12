@@ -172,7 +172,7 @@ export default {
 /*navbar*/
 #sub-nav {
   width:100%;
-  z-index:3;
+  z-index: 100001;
 
   button.navbar-toggler {
     background-color:#FFF;

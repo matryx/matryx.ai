@@ -11,6 +11,10 @@
 export default {
   name: 'ErrorPage',
 
+  mounted () {
+    window.analytics.page('Error')
+  },
+
   beforeRouteEnter (to, from, next) {
     document.title = '(╯°□°)╯︵ ┻━┻'
     next()

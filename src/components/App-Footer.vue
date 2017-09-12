@@ -30,6 +30,7 @@
 
     <div class="footer__legal">
       <img src="../assets/images/Matryx-Logo-White-640px.png" alt="Logo">
+      <p class="font-size--small text-color--white"><a href="/privacy-policy.pdf">Privacy Policy</a></p>
       <p class="font-size--small text-color--white">
         &copy; 2017 All rights reserved.
       </p>
@@ -62,7 +63,7 @@ export default {
 
 <style lang="scss">
 footer {
-  margin-top: -20px;
+  margin-top: 150px;
   width: 100%;
   position:relative;
 
@@ -70,7 +71,7 @@ footer {
     background-position: top;
     padding: 80px 20px 60px 20px;
     position: relative;
-    bottom: -110px;
+    bottom: -125px;
     margin-bottom: 0;
   }
 

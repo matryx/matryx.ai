@@ -22,6 +22,10 @@ import TeamSupport from './Team-Support'
 export default {
   name: 'RewardsProgram',
 
+  mounted () {
+    window.analytics.page('Rewards')
+  },
+
   components: {
     NavbarToken,
     AboveTheFold,
@@ -37,6 +41,7 @@ export default {
 <style lang="scss">
 @import '../../assets/css/colors.scss';
   footer {
+    margin-top: 0;
     background-color: $matryx-darker-blue;
   }
 

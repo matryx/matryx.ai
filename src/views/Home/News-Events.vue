@@ -56,6 +56,7 @@ import newsImage1 from '@/assets/images/backgrounds/bg1.jpg'
 import newsImage2 from '@/assets/images/backgrounds/bg2.jpg'
 import newsImage3 from '@/assets/images/backgrounds/bg3.jpg'
 import newsImage4 from '@/assets/images/backgrounds/bg4.jpg'
+import newsImage5 from '@/assets/images/backgrounds/bg5.jpg'
 
 export default {
   name: 'NewsEvents',
@@ -93,7 +94,16 @@ export default {
         facebookLink: 'https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ethnews.com%2Fstate-of-digital-money-2017-recap',
         twitterLink: 'https://twitter.com/intent/tweet/?text=&amp;url=https%3A%2F%2Fwww.ethnews.com%2Fstate-of-digital-money-2017-recap'
       }],
+
       events: [{
+        name: 'Virtual Reality & Blockchain for STEM & Research',
+        date: '08 Sept 2017 @ 6:30pm',
+        day: 'Coinbase Co-founder & Matryx CEO present in San Francisco, CA',
+        image: newsImage5,
+        eventLink: 'https://www.eventbrite.com/e/vr-x-blockchaintoken-conversation-with-fred-ehrsam-coinbase-co-founder-tickets-37440777373',
+        facebookLink: 'https://facebook.com/sharer/sharer.php?u=https://www.eventbrite.com/e/vr-x-blockchaintoken-conversation-with-fred-ehrsam-coinbase-co-founder-tickets-37440777373',
+        twitterLink: 'https://twitter.com/intent/tweet/?text=&amp;url=https://www.eventbrite.com/e/vr-x-blockchaintoken-conversation-with-fred-ehrsam-coinbase-co-founder-tickets-37440777373'
+      }, {
         name: 'Matryx. A Decentralized Research Platform',
         date: '13 Sept 2017 @ 7pm',
         day: 'Nanome CEO presents Matryx in Venice CA',

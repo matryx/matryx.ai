@@ -8,7 +8,7 @@
       <span v-else-if=" language === 'ko' ">토큰판매</span>
       <span v-else>TOKEN SALE</span>
     </h2>
-    <h3 class="text--center sub-title">
+    <h3 class="text--center sub-title" v-if="showPreSale">
       <span v-if=" language === 'ru' ">13 сентября 2017 года</span>
       <span v-else-if=" language === 'ch' ">2017 年 9 月 13 日</span>
       <span v-else-if=" language === 'ge' ">13. September 2017</span>
@@ -70,6 +70,10 @@
         :key="index"
       ></SaleIcon>
     </div>
+    <br/><br/>
+    <h5 class="text-center">Sale Terms available at <a href="/sale-terms.pdf" target="_blank">
+      https://matryx.ai/sale-terms.pdf</a>
+    </h5>
   </section>
 </template>
 
@@ -81,10 +85,19 @@ import cap from '../../assets/icons/icon-sale-cap.svg'
 import allocated60 from '../../assets/icons/icon-sale-60allocated.svg'
 import mtx from '../../assets/icons/icon-sale-mtx.png'
 
+import { isPreSale, isMainSale } from '@/utils'
+
 export default {
   name: 'TokenSale',
   components: {
     SaleIcon
+  },
+  mounted () {
+    if (isPreSale()) {
+      this.showPreSale = true
+    } else if (isMainSale()) {
+      this.showMainSale = true
+    }
   },
   computed: {
     language () {
@@ -93,6 +106,8 @@ export default {
   },
   data () {
     return {
+      showPreSale: false,
+      showMainSale: false,
       icons: [
         {
           img: mtx,
