@@ -149,7 +149,7 @@ export default {
         return
       }
 
-      appAnalytics.submitVerify(this.email, 'pre-sale')
+      appAnalytics.submitVerify(this.email)
 
       if (this.allChecked) {
         // start spinner
@@ -236,6 +236,7 @@ export default {
 @import '../assets/css/colors';
 
 section.sale-modal {
+  z-index: 1000002;
   margin: 0;
 }
 

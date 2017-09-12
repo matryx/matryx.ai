@@ -56,4 +56,16 @@ export function isPreSale () {
   if (today.getTime() - startDate.getTime() > 0) {
     return true
   }
+  return false
+}
+
+export function isMainSale () {
+  const date = 'September 13 2017 15:00:00 UTC'
+  const today = new Date()
+  const startDate = new Date(date)
+
+  if (today.getTime() - startDate.getTime() > 0) {
+    return true
+  }
+  return false
 }
