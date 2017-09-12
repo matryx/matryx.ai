@@ -104,7 +104,7 @@ export default {
       }],
 
       events: [{
-        name: 'New kids on the Blockchain',
+        name: 'New Kids on the Blockchain',
         date: '23 Sept 2017 @ 2:00pm',
         day: 'Matryx CEO guest speaker at Dubai Cryptocurrencies Club & Blockchain Technology Meetup',
         image: newsImage5,
@@ -127,14 +127,6 @@ export default {
         eventLink: 'https://www.eventbrite.com/e/vr-x-blockchaintoken-conversation-with-fred-ehrsam-coinbase-co-founder-tickets-37440777373',
         facebookLink: 'https://facebook.com/sharer/sharer.php?u=https://www.eventbrite.com/e/vr-x-blockchaintoken-conversation-with-fred-ehrsam-coinbase-co-founder-tickets-37440777373',
         twitterLink: 'https://twitter.com/intent/tweet/?text=&amp;url=https://www.eventbrite.com/e/vr-x-blockchaintoken-conversation-with-fred-ehrsam-coinbase-co-founder-tickets-37440777373'
-      }, {
-        name: 'Matryx. A Decentralized Research Platform',
-        date: '13 Sept 2017 @ 7pm',
-        day: 'Nanome CEO presents Matryx in Venice CA',
-        image: newsImage4,
-        eventLink: 'https://www.meetup.com/Los-Angeles-Ethereum/events/242566534/',
-        facebookLink: 'https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.meetup.com%2FLos-Angeles-Ethereum%2Fevents%2F242566534%2F',
-        twitterLink: 'https://twitter.com/intent/tweet/?text=&amp;url=https%3A%2F%2Fwww.meetup.com%2FLos-Angeles-Ethereum%2Fevents%2F242566534%2F'
       }]
     }
   }
