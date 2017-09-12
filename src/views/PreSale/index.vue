@@ -135,12 +135,8 @@ import AuditedBy from '@/components/Audited-By'
 import discount10 from '@/assets/icons/icon-sale-10discount.svg'
 import discount15 from '@/assets/icons/icon-sale-15discount.svg'
 
-<<<<<<< HEAD
-import { isPreSale } from '@/utils'
-=======
 import { isPreSale, isMainSale } from '@/utils'
-import { appAnalytics } from '@/analytics'
->>>>>>> start
+// import { appAnalytics } from '@/analytics'
 
 export default {
   name: 'PreSale',

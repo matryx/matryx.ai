@@ -162,9 +162,11 @@ export default {
           allVerified: this.allChecked
         })
         .then((result) => {
-          this.$store.commit('setContractInfo', result.data.info)
-          this.$store.commit('togglePulseSpinner', false)
-          this.$store.commit('toggleSaleContract', true)
+          setTimeout(() => {
+            this.$store.commit('setContractInfo', result.data.info)
+            this.$store.commit('togglePulseSpinner', false)
+            this.$store.commit('toggleSaleContract', true)
+          }, 2000)
         })
         .catch((err) => {
           console.log('error', err)

@@ -58,8 +58,6 @@ const appAnalytics = {
     })
   },
 
-<<<<<<< HEAD
-=======
   purchasePreSaleBtn (location) {
     window.analytics.identify(getlStorage('email'))
 
@@ -78,7 +76,6 @@ const appAnalytics = {
     })
   },
 
->>>>>>> start
   submitVerify (email, sale) {
     var useEmail = email || getlStorage('email')
 
