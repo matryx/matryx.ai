@@ -110,11 +110,12 @@
       <Navbar-TokenSale></Navbar-TokenSale>
       <div id="presale__above-the-fold">
         <div class="presale__header  text-color--white content-container--medium content-container">
-          <h2>Pre-Sale has ended.</h2>
-          <br>
-          <h1 class="uppercase"> Participate in main sale</h1>
-          <Matryx-Btn class="sale" text="Purchase MTX" :handleClick="openSaleModal">
-          </Matryx-Btn>
+          <h1 class="uppercase" style="font-size: 45px;">Pre-Sale has ended</h1>
+          <a href="/">
+            <Matryx-Btn class="sale" text="Participate in the main sale">
+            </Matryx-Btn>
+          </a>
+
         </div>
       </div>
       <Token-Sale-Info></Token-Sale-Info>
@@ -210,12 +211,6 @@ export default {
 
     mtxRegular () {
       return Math.round(this.purchaseAmount * this.rateBase)
-    }
-  },
-
-  methods: {
-    openSaleModal () {
-      this.$store.commit('showSaleModal', true)
     }
   }
 }
@@ -405,7 +400,7 @@ export default {
       border: 1px solid #49b749;
       background-color: #49b749;
       color: rgba(255, 255, 255, 0.9);
-
+      font-size: 20px;
 
       &:hover {
         border: 1px solid #FFF;
