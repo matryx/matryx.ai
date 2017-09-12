@@ -56,6 +56,7 @@ export function isPreSale () {
   if (today.getTime() - startDate.getTime() > 0) {
     return true
   }
+  return false
 }
 
 export function isMainSale () {
@@ -66,4 +67,5 @@ export function isMainSale () {
   if (today.getTime() - startDate.getTime() > 0) {
     return true
   }
+  return false
 }
