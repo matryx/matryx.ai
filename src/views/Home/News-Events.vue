@@ -70,6 +70,14 @@ export default {
     return {
       // http://sharingbuttons.io/
       news: [{
+        name: 'How Blockchain Can Change The Way Science Works, Explained',
+        date: '6 Sept 2017',
+        desc: 'Projects like Matryx allow science, technology, engineering, and mathematics research and projects may become accessible to everyone.',
+        image: newsImage1,
+        articleLink: 'https://cointelegraph.com/explained/how-blockchain-can-change-the-way-science-works-explained',
+        facebookLink: 'https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcointelegraph.com%2Fexplained%2Fhow-blockchain-can-change-the-way-science-works-explained',
+        twitterLink: 'https://twitter.com/intent/tweet/?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url=https%3A%2F%2Fcointelegraph.com%2Fexplained%2Fhow-blockchain-can-change-the-way-science-works-explained'
+      }, {
         name: 'SD News: Nanome Launches Matryx',
         date: '24 Aug 2017',
         desc: 'The three primary components of Matryx are the bounty system for rewarding users for solving problems posed on the platform by researchers, a library of digital assets for use in developing models and solutions and a marketplace for exchanging these ideas and assets.',
@@ -82,9 +90,9 @@ export default {
         date: '24 Aug 2017',
         desc: 'Nanome, creator of virtual reality software for scientific research and development, has announced Matryx, an open source platform for decentralized collaboration. The Matryx token sale will kick off with a public pre-sale on Wednesday, September 6, 2017.',
         image: newsImage2,
-        articleLink: 'http://www.prnewswire.com/news-releases/virtual-reality-software-maker-nanome-introduces-matryx-with-token-sale-300509203.html',
-        facebookLink: 'https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.prnewswire.com%2Fnews-releases%2Fvirtual-reality-software-maker-nanome-introduces-matryx-with-token-sale-300509203.html',
-        twitterLink: 'https://twitter.com/intent/tweet/?text=&amp;url=http%3A%2F%2Fwww.prnewswire.com%2Fnews-releases%2Fvirtual-reality-software-maker-nanome-introduces-matryx-with-token-sale-300509203.html'
+        articleLink: 'http://www.the-blockchain.com/2017/08/24/virtual-reality-software-maker-nanome-introduces-matryx-token-sale/',
+        facebookLink: 'https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.the-blockchain.com%2F2017%2F08%2F24%2Fvirtual-reality-software-maker-nanome-introduces-matryx-token-sale%2F',
+        twitterLink: 'https://twitter.com/intent/tweet/?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url=http%3A%2F%2Fwww.the-blockchain.com%2F2017%2F08%2F24%2Fvirtual-reality-software-maker-nanome-introduces-matryx-token-sale%2F'
       }, {
         name: 'ETH News: State of Digital Money 2017',
         date: '24 July 2017',
@@ -96,6 +104,22 @@ export default {
       }],
 
       events: [{
+        name: 'New Kids on the Blockchain',
+        date: '23 Sept 2017 @ 2:00pm',
+        day: 'Matryx CEO guest speaker at Dubai Cryptocurrencies Club & Blockchain Technology Meetup',
+        image: newsImage5,
+        eventLink: 'https://www.meetup.com/Dubai-Cryptocurrency-Blockchain-Meetup/events/243245854/?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging%3B9NmTE%2BCJSvasJP7jmhtTyw%3D%3D',
+        facebookLink: 'https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.meetup.com%2FDubai-Cryptocurrency-Blockchain-Meetup%2Fevents%2F243245854%2F%3Flipi%3Durn%253Ali%253Apage%253Ad_flagship3_messaging%253B9NmTE%252BCJSvasJP7jmhtTyw%253D%253D',
+        twitterLink: 'https://twitter.com/intent/tweet/?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url=https%3A%2F%2Fwww.meetup.com%2FDubai-Cryptocurrency-Blockchain-Meetup%2Fevents%2F243245854%2F%3Flipi%3Durn%253Ali%253Apage%253Ad_flagship3_messaging%253B9NmTE%252BCJSvasJP7jmhtTyw%253D%253D'
+      }, {
+        name: 'Matryx. A Decentralized Research Platform.',
+        date: '13 Sept 2017 @ 7:00pm',
+        day: 'Los Angeles Ethereum hosts Matryx presentation',
+        image: newsImage4,
+        eventLink: 'https://www.meetup.com/Los-Angeles-Ethereum/events/242566534/',
+        facebookLink: 'https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.meetup.com%2FLos-Angeles-Ethereum%2Fevents%2F242566534%2F',
+        twitterLink: 'https://twitter.com/intent/tweet/?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url=https%3A%2F%2Fwww.meetup.com%2FLos-Angeles-Ethereum%2Fevents%2F242566534%2F'
+      }, {
         name: 'Virtual Reality & Blockchain for STEM & Research',
         date: '08 Sept 2017 @ 6:30pm',
         day: 'Coinbase Co-founder & Matryx CEO present in San Francisco, CA',
@@ -103,14 +127,6 @@ export default {
         eventLink: 'https://www.eventbrite.com/e/vr-x-blockchaintoken-conversation-with-fred-ehrsam-coinbase-co-founder-tickets-37440777373',
         facebookLink: 'https://facebook.com/sharer/sharer.php?u=https://www.eventbrite.com/e/vr-x-blockchaintoken-conversation-with-fred-ehrsam-coinbase-co-founder-tickets-37440777373',
         twitterLink: 'https://twitter.com/intent/tweet/?text=&amp;url=https://www.eventbrite.com/e/vr-x-blockchaintoken-conversation-with-fred-ehrsam-coinbase-co-founder-tickets-37440777373'
-      }, {
-        name: 'Matryx. A Decentralized Research Platform',
-        date: '13 Sept 2017 @ 7pm',
-        day: 'Nanome CEO presents Matryx in Venice CA',
-        image: newsImage4,
-        eventLink: 'https://www.meetup.com/Los-Angeles-Ethereum/events/242566534/',
-        facebookLink: 'https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.meetup.com%2FLos-Angeles-Ethereum%2Fevents%2F242566534%2F',
-        twitterLink: 'https://twitter.com/intent/tweet/?text=&amp;url=https%3A%2F%2Fwww.meetup.com%2FLos-Angeles-Ethereum%2Fevents%2F242566534%2F'
       }]
     }
   }

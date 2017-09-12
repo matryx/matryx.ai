@@ -22,6 +22,9 @@
             <h3 class="text-color--matryx-grey-blue">MATRYX TOKEN SALE TERMS</h3>
             <Tokensale-Sale-Terms class="salemodal__body__terms__document" id="sale-terms">
             </Tokensale-Sale-Terms>
+            <p class="salemodal__body__terms__link text-color--matryx-blue">
+              <a href="/sale-terms.pdf" target="_blank">View sale terms in PDF format.</a>
+            </p>
             <div class="salemodal__body__terms__checklist">
               <Checkbox name="saleTermsRead" :obj="saleTermsRead">
                 <span slot="label">
@@ -162,9 +165,11 @@ export default {
           allVerified: this.allChecked
         })
         .then((result) => {
-          this.$store.commit('setContractInfo', result.data.info)
-          this.$store.commit('togglePulseSpinner', false)
-          this.$store.commit('toggleSaleContract', true)
+          setTimeout(() => {
+            this.$store.commit('setContractInfo', result.data.info)
+            this.$store.commit('togglePulseSpinner', false)
+            this.$store.commit('toggleSaleContract', true)
+          }, 2000)
         })
         .catch((err) => {
           console.log('error', err)
@@ -295,6 +300,16 @@ section.sale-modal {
 
       h3 {
         margin-bottom: 20px;
+      }
+
+      &__link {
+        margin-top: 10px;
+        margin-bottom: -20px;
+        a {
+          &:focus {
+            outline: none;
+          }
+        }
       }
 
       &__document {
