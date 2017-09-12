@@ -44,6 +44,17 @@
           <span v-else-if=" language === 'ko' ">백서를</span>
           <span v-else>WHITEPAPER</span>
         </b-nav-item>
+        <b-nav-item class="text-color--matryx-grey"
+          target="_blank"
+          href="/sale-terms.pdf"
+        >
+          <!-- <span class="russian" v-if=" language === 'ru' ">техническую документацию</span>
+          <span v-else-if=" language === 'ch' ">白皮书</span>
+          <span v-else-if=" language === 'ge' ">WHITE PAPER</span>
+          <span v-else-if=" language === 'ja' ">WHITEPAPER</span>
+          <span v-else-if=" language === 'ko' ">백서를</span> -->
+          <span>Sale Terms</span>
+        </b-nav-item>
 
         <!-- Only Mobile View -->
         <b-nav-item href="mailto:team@matryx.ai?subject=Matryx Token Sale" class="text-color--matryx-grey nav-link--mobile-only">

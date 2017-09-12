@@ -13,6 +13,9 @@
       <div class="primary-event__body__description">
         <span>{{ desc }}</span>
       </div>
+    </div>
+
+    <div class="primary-event__btns">
       <a :href="articleLink" target="_blank">
         <button class="btn-blue">Read Article</button>
       </a>
@@ -35,12 +38,9 @@
           </div>
         </a>
       </div>
-
-
-
-
-
     </div>
+
+
   </div>
 </template>
 
@@ -96,7 +96,8 @@ export default {
   box-sizing: border-box;
   box-shadow: 0 2px 5px rgba(0,0,0,0.5);
   margin: 20px 20px;
-
+  position: relative;
+  height: 565px;
 
   &__heading {
     height: 155px;
@@ -185,10 +186,18 @@ export default {
     justify-content: space-between;
     padding: 20px 30px;
     color: $matryx-dark-grey;
-    height:calc(100% - 165px);
+    height: 230px;
 
     a {
     }
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: 0;
   }
 
   button.btn-blue {
