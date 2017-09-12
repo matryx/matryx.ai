@@ -21,6 +21,9 @@
           Featured in
         </span>
       </p>
+      <a href="http://matryx.fyi/d3mf8" class="press-logo">
+        <img src="../../assets/images/press/cointelegraph.png" alt="CoinTelegraph">
+      </a>
       <a class="press-logo" href="https://tokenmarket.net/blockchain/ethereum/assets/matryx/" target="_blank">
         <img src="../../assets/images/press/tokenmarket.png"
           alt="Token Market" class="token-market-logo">
