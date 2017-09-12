@@ -70,6 +70,14 @@ export default {
     return {
       // http://sharingbuttons.io/
       news: [{
+        name: 'How Blockchain Can Change The Way Science Works, Explained',
+        date: '6 Sept 2017',
+        desc: 'Projects like Matryx allow science, technology, engineering, and mathematics research and projects may become accessible to everyone.',
+        image: newsImage1,
+        articleLink: 'https://cointelegraph.com/explained/how-blockchain-can-change-the-way-science-works-explained',
+        facebookLink: 'https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcointelegraph.com%2Fexplained%2Fhow-blockchain-can-change-the-way-science-works-explained',
+        twitterLink: 'https://twitter.com/intent/tweet/?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url=https%3A%2F%2Fcointelegraph.com%2Fexplained%2Fhow-blockchain-can-change-the-way-science-works-explained'
+      }, {
         name: 'SD News: Nanome Launches Matryx',
         date: '24 Aug 2017',
         desc: 'The three primary components of Matryx are the bounty system for rewarding users for solving problems posed on the platform by researchers, a library of digital assets for use in developing models and solutions and a marketplace for exchanging these ideas and assets.',
@@ -82,9 +90,9 @@ export default {
         date: '24 Aug 2017',
         desc: 'Nanome, creator of virtual reality software for scientific research and development, has announced Matryx, an open source platform for decentralized collaboration. The Matryx token sale will kick off with a public pre-sale on Wednesday, September 6, 2017.',
         image: newsImage2,
-        articleLink: 'http://www.prnewswire.com/news-releases/virtual-reality-software-maker-nanome-introduces-matryx-with-token-sale-300509203.html',
-        facebookLink: 'https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.prnewswire.com%2Fnews-releases%2Fvirtual-reality-software-maker-nanome-introduces-matryx-with-token-sale-300509203.html',
-        twitterLink: 'https://twitter.com/intent/tweet/?text=&amp;url=http%3A%2F%2Fwww.prnewswire.com%2Fnews-releases%2Fvirtual-reality-software-maker-nanome-introduces-matryx-with-token-sale-300509203.html'
+        articleLink: 'http://www.the-blockchain.com/2017/08/24/virtual-reality-software-maker-nanome-introduces-matryx-token-sale/',
+        facebookLink: 'https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.the-blockchain.com%2F2017%2F08%2F24%2Fvirtual-reality-software-maker-nanome-introduces-matryx-token-sale%2F',
+        twitterLink: 'https://twitter.com/intent/tweet/?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url=http%3A%2F%2Fwww.the-blockchain.com%2F2017%2F08%2F24%2Fvirtual-reality-software-maker-nanome-introduces-matryx-token-sale%2F'
       }, {
         name: 'ETH News: State of Digital Money 2017',
         date: '24 July 2017',
