@@ -1,34 +1,46 @@
 <template>
   <div class="progress-bar">
+    <h6 class="progress-bar__title uppercase">Amount Raised</h6>
     <div class="progress-bar__bar-container">
       <div class="progress-bar__bar-progress" :style="ETHProgress"></div>
       <div class="progress-bar__bar-total"></div>
     </div>
-    <p>
-      <span class="progress-bar__bar-progress--text">{{ ETHPurchased }}</span>
-      <span class="progress-bar__bar-total--text">/ 161803 ETH</span>
-    </p>
+    <div class="progress-bar__percent">
+      <span class="progress-bar__percent--start">0%</span>
+      <span class="progress-bar__percent--end">100%</span>
+    </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+import config from '../../config'
+
 export default {
   name: 'ProgressBar',
 
   data () {
     return {
-      ETHPurchased: Number,
-      ETHProgress: String,
-      ETHData: [ 1356, 15677, 48768, 89235, 156098 ]
+      ETHPercent: 0
     }
   },
 
   mounted () {
-    this.ETHPurchased = this.ETHData[(Math.floor(Math.random() * 5))]
-    var ETHPercent = (this.ETHPurchased / 161803) * 100
-    this.ETHProgress = 'width: ' + ETHPercent + '%;'
-    console.log(this.ETHPurchased, this.ETHProgress, ETHPercent)
+    axios.get(`${config.app.host}/api/sold`)
+      .then((result) => {
+        this.ETHPercent = result.data.percentage
+      })
+      .catch((err) => {
+        console.log('Error retrieving total sold', err)
+      })
+  },
+
+  computed: {
+    ETHProgress () {
+      return `width: ${this.ETHPercent}%;`
+    }
   }
+
 }
 </script>
 
@@ -40,6 +52,10 @@ export default {
     background-color: transparent;
     margin: 30px 0;
 
+    &__title {
+      font-size: 12px;
+    }
+
     &__bar-container {
       position:relative;
       height: 20px;
@@ -47,17 +63,9 @@ export default {
     }
     &__bar-progress {
       background-color: $matryx-light-blue;
-
-      &--text {
-        color: #FFF;
-      }
     }
     &__bar-total {
       width: 100%;
-
-      &--text {
-        color: $matryx-light-blue;
-      }
     }
     &__bar-progress, &__bar-total {
       float:left;
@@ -66,6 +74,15 @@ export default {
       position:absolute;
       top: 0;
       left: 0;
+    }
+
+    &__percent {
+      &--start {
+        float: left;
+      }
+      &--end {
+        float: right;
+      }
     }
   }
 </style>
