@@ -96,6 +96,14 @@ export default {
       }],
 
       events: [{
+        name: 'New kids on the Blockchain',
+        date: '23 Sept 2017 @ 2:00pm',
+        day: 'Matryx CEO guest speaker at Dubai Cryptocurrencies Club & Blockchain Technology Meetup',
+        image: newsImage5,
+        eventLink: 'https://www.meetup.com/Dubai-Cryptocurrency-Blockchain-Meetup/events/243245854/?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging%3B9NmTE%2BCJSvasJP7jmhtTyw%3D%3D',
+        facebookLink: 'https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.meetup.com%2FDubai-Cryptocurrency-Blockchain-Meetup%2Fevents%2F243245854%2F%3Flipi%3Durn%253Ali%253Apage%253Ad_flagship3_messaging%253B9NmTE%252BCJSvasJP7jmhtTyw%253D%253D',
+        twitterLink: 'https://twitter.com/intent/tweet/?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url=https%3A%2F%2Fwww.meetup.com%2FDubai-Cryptocurrency-Blockchain-Meetup%2Fevents%2F243245854%2F%3Flipi%3Durn%253Ali%253Apage%253Ad_flagship3_messaging%253B9NmTE%252BCJSvasJP7jmhtTyw%253D%253D'
+      }, {
         name: 'Matryx. A Decentralized Research Platform.',
         date: '13 Sept 2017 @ 7:00pm',
         day: 'Los Angeles Ethereum hosts Matryx presentation',
