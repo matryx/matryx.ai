@@ -96,6 +96,14 @@ export default {
       }],
 
       events: [{
+        name: 'Matryx. A Decentralized Research Platform.',
+        date: '13 Sept 2017 @ 7:00pm',
+        day: 'Los Angeles Ethereum hosts Matryx presentation',
+        image: newsImage4,
+        eventLink: 'https://www.meetup.com/Los-Angeles-Ethereum/events/242566534/',
+        facebookLink: 'https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.meetup.com%2FLos-Angeles-Ethereum%2Fevents%2F242566534%2F',
+        twitterLink: 'https://twitter.com/intent/tweet/?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url=https%3A%2F%2Fwww.meetup.com%2FLos-Angeles-Ethereum%2Fevents%2F242566534%2F'
+      }, {
         name: 'Virtual Reality & Blockchain for STEM & Research',
         date: '08 Sept 2017 @ 6:30pm',
         day: 'Coinbase Co-founder & Matryx CEO present in San Francisco, CA',
