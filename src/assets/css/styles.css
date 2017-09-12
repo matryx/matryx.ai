@@ -405,6 +405,10 @@ h1.cd-headline.clip {
   color: #0086CB;
 }
 
+.text-color--matryx-blue a {
+  color: #0086CB;
+}
+
 .text-color--matryx-light-blue {
   color: #4EB1DE;
 }
@@ -508,26 +512,6 @@ h1.cd-headline.clip {
 
 /*----- end CLASSES -----*/
 /*----- TRANSITIONS -----*/
-.fade-enter-active {
-  transition-property: opacity;
-  transition-duration: .5s;
-  transition-delay: .05s;
-}
-
-.fade-enter {
-  opacity: 0;
-}
-
-.fade-leave-active {
-  transition-property: opacity;
-  transition-duration: .5s;
-  transition-delay: .05s;
-}
-
-.fade-leave {
-  opacity: 1;
-}
-
 /*----- end TRANSITIONS -----*/
 /* ID's */
 #app {

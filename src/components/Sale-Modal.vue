@@ -22,6 +22,7 @@
             <h3 class="text-color--matryx-grey-blue">MATRYX TOKEN SALE TERMS</h3>
             <Tokensale-Sale-Terms class="salemodal__body__terms__document" id="sale-terms">
             </Tokensale-Sale-Terms>
+            <p class="text-color--matryx-blue"><a href="/sale-terms.pdf"class="text-color--matryx-blue">View sale terms in PDF format.</a></p>
             <div class="salemodal__body__terms__checklist">
               <Checkbox name="saleTermsRead" :obj="saleTermsRead">
                 <span slot="label">

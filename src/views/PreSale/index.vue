@@ -23,6 +23,7 @@
 
             <Matryx-Btn v-else text="Purchase MTX" :handleClick="openSaleModal">
             </Matryx-Btn>
+            <p class="text-color--matryx-blue"><a href="/sale-terms.pdf"class="text-color--matryx-blue">View sale terms in PDF format.</a></p>
           </div>
 
           <div class="presale__calculator__results content-container--medium">
@@ -115,9 +116,10 @@
             <Matryx-Btn class="sale" text="Participate in the main sale">
             </Matryx-Btn>
           </a>
-
+          <p class="text-color--matryx-blue"><a href="/sale-terms.pdf"class="text-color--matryx-blue">View sale terms in PDF format.</a></p>
         </div>
       </div>
+      <Audited-By></Audited-By>
       <Token-Sale-Info></Token-Sale-Info>
     </section>
   </div>
@@ -159,6 +161,12 @@ export default {
       this.showPreSale = true
     } else if (isMainSale()) {
       this.showMainSale = true
+    }
+  },
+
+  methods: {
+    openSaleModal () {
+      this.$store.commit('showSaleModal', true)
     }
   },
 
