@@ -195,7 +195,7 @@ h1.cd-headline.clip {
   &--matryx-light-grey {color: $matryx-light-grey;}
   &--matryx-lighter-grey {color: $matryx-lighter-grey;}
   &--matryx-grey-blue { color: $matryx-grey-blue;}
-  &--matryx-blue {color: $matryx-blue;}
+  &--matryx-blue {color: $matryx-blue; a{ color: $matryx-blue}}
   &--matryx-light-blue {color: $matryx-light-blue;}
   &--matryx-lighter-blue {color: $matryx-lighter-blue;}
   &--matryx-black {color: $matryx-black;}
