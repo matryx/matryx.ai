@@ -16,9 +16,9 @@
     <About-Token-Sale></About-Token-Sale>
     <div class="cta-middle-banner">
       <CTA-Banner :lighterText="true" :greyBkg="true" cta-location="Middle"></CTA-Banner>
+    </div>
     <Nanome-Info></Nanome-Info>
     <Company-Overview id="company-overview"></Company-Overview>
-    </div>
     <Quotes></Quotes>
     <Bounty-System></Bounty-System>
     <CTA-Banner :whiteBkg="true" cta-location="Bottom"></CTA-Banner>
