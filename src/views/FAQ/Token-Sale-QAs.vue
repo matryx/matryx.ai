@@ -55,9 +55,11 @@
         When will I receive my MTX?
       </span>
       <p slot="answer">
-        MTX tokens will be distributed no later than October 13, 2017.
+        MTX tokens are minted and distributed upon purchase, but will not be tradeable until the completion of the token sale.
         <br/><br/>
-        Different wallets observe token contracts in different ways. Refer to your preferred wallet’s official documentation. In most popular wallets, the token should appear automatically. If not, you may need to add the token manually to your wallet.
+        <b>Viewing tokens in your wallet:</b>
+        <br/>
+        Different wallets observe token contracts in different ways. In most popular wallets, the token should appear automatically. If not, you may need to refer to your preferred wallet’s official documentation and add the token manually to your wallet.
       </p>
     </QA>
 
