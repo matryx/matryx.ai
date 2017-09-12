@@ -55,7 +55,7 @@
         When will I receive my MTX?
       </span>
       <p slot="answer">
-        MTX tokens are minted and distributed upon purchase, but will not be tradeable until the completion of the token sale.
+        MTX tokens are minted and distributed upon purchase, but will not be transferable until the completion of the token sale.
         <br/><br/>
         <b>Viewing tokens in your wallet:</b>
         <br/>
