@@ -1,6 +1,6 @@
 <template>
   <div class="progress-bar">
-    <h6 class="progress-bar__title uppercase">Amount Raised</h6>
+    <h6 class="progress-bar__title uppercase">Tokens Sold</h6>
     <div class="progress-bar__bar-container">
       <div class="progress-bar__bar-progress" :style="ETHProgress"></div>
       <div class="progress-bar__bar-total"></div>
