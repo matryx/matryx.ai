@@ -23,7 +23,7 @@
       </p>
 
       <a href="http://matryx.fyi/d3mf8" class="press-logo" target="_blank">
-        <img src="../../assets/images/press/cointelegraph.png" alt="CoinTelegraph">
+        <img src="../../assets/images/press/cointelegraph.png" alt="CoinTelegraph" class="cointelegraph-logo">
       </a>
       <a class="press-logo" href="http://matryx.fyi/wt4sz" target="_blank">
         <img src="../../assets/images/press/tokenmarket.png"
@@ -97,6 +97,10 @@ export default {
 
     .token-market-logo {
       padding: 40px;
+    }
+
+    .cointelegraph-logo {
+      padding: 25px;
     }
   }
 }
