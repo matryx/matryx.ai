@@ -4,6 +4,7 @@
 
     <Survey-Modal></Survey-Modal>
     <Sale-Modal></Sale-Modal>
+    <Check-MTX-Modal></Check-MTX-Modal>
 
     <b-modal id="getNotified"
       v-model="showGetNotifiedModal"
@@ -36,6 +37,7 @@ import Loader from './components/Loader'
 import PulseSpinner from './components/Pulse-Spinner'
 import SurveyModal from './components/Survey-Modal'
 import SaleModal from './components/Sale-Modal'
+import CheckMTXModal from './components/Check-MTX-Modal'
 import VueSticky from 'vue-sticky' // Es6 module
 import { appAnalytics } from '@/analytics'
 import { mapState } from 'vuex'
@@ -50,7 +52,8 @@ export default {
     Loader,
     PulseSpinner,
     SurveyModal,
-    SaleModal
+    SaleModal,
+    CheckMTXModal
   },
 
   directives: {

@@ -16,6 +16,7 @@ export default new Vuex.Store({
     routeLoaded: false,
     showPulseSpinner: false,
     showSaleContract: false,
+    showCheckMTXModal: false,
     contractInfo: {
       saleAddress: '',
       dataField: '',
@@ -41,6 +42,9 @@ export default new Vuex.Store({
     },
     showSaleModal (state, show) {
       state.showSaleModal = show
+    },
+    showCheckMTXModal (state, show) {
+      state.showCheckMTXModal = show
     },
     toggleRouteLoaded (state, loaded) {
       state.routeLoaded = loaded

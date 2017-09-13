@@ -55,35 +55,6 @@
       </button>
     </div>
     <p>Transactions usually take several minutes to process, but may take longer.</p>
-    <div class="salemodal-contract-info__check-balance">
-      <p>
-      Check your MTX balance:
-      </p>
-      <ol >
-        <li>Go to <a href=" https://etherscan.io/address/0x0af44e2784637218dd1d32a322d44e603a8f0c6a#readContract">
-        Etherscan</a>
-        </li>
-        <li>
-          Enter your wallet address in the "balanceOf" field
-        </li>
-      </ol>
-    </div>
-    <!-- <h4 class="salemodal-contract-info__participate--header">How to participate using:</h4>
-    <p class="salemodal-contract-info__participate--item">
-      <a href="#" class="text-color--matryx-blue">MetaMask &rsaquo;</a>
-    </p>
-    <p class="salemodal-contract-info__participate--item">
-      <a href="#" class="text-color--matryx-blue">Mist &rsaquo;</a>
-    </p>
-    <p class="salemodal-contract-info__participate--item">
-      <a href="#" class="text-color--matryx-blue">MyEtherWallet &rsaquo;</a>
-    </p> -->
-<!--     <button type="button"
-      class="salemodal-contract-info__button--close"
-      @click.prevent="handleSubmit"
-    >
-      I'm done!
-    </button> -->
   </div>
 </template>
 
@@ -227,11 +198,16 @@
     max-width: 430px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid $matryx-dark-grey;
 
     p {
-      text-color: $matryx-dark-grey;
+      color: $matryx-dark-grey;
       font-size: 18px;
+      text-decoration: underline;
+
+      &:hover {
+        color: $matryx-blue;
+        cursor: pointer;
+      }
     }
 
     ol {

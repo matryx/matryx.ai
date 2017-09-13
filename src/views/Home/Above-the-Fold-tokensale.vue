@@ -34,18 +34,7 @@
             Participate in Pre-Sale. Click button below to begin
           </span>
         </p>
-        <!-- <div class="progress-bar">
-          <div class="progress-bar__bar-container">
-            <div class="progress-bar__bar-progress" :style="ETHProgress"></div>
-            <div class="progress-bar__bar-total"></div>
-          </div>
-          <p>
-            <span class="progress-bar__bar-progress--text">{{ ETHPurchased }}</span>
-            <span class="progress-bar__bar-total--text">/ 161803 ETH</span>
-          </p>
-        </div> -->
         <Progress-Bar></Progress-Bar>
-
       </div>
       <div class="token-sale__video-launcher content-container--medium">
         <iframe class="matryx-video-yt"
@@ -95,6 +84,15 @@ section.above-the-fold {
     display:flex;
     justify-content: space-between;
     padding: 40px 40px 160px;
+  }
+}
+
+.checkMTXLink {
+  color: $matryx-blue;
+  text-decoration: underline;
+
+  &:hover {
+    cursor:pointer;
   }
 }
 
