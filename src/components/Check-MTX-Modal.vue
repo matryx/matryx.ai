@@ -24,16 +24,20 @@
           placeholder="Enter ETH Address"
           v-model="userEthAddress"
         >
-        <p class="warn" v-if="hasInput">Please enter your ETH Address</p>
         <br>
 
         <button class="submit-btn matryx-button matryx-button--blue"
           @click.prevent="handleSubmit"
+          :disabled="!userEthAddress"
         >
           SUBMIT
         </button>
 
-        <div v-if="mtxAmountAvailable">
+        <div v-if="userEthAddressError">
+          <p class="warn"> {{ userEthAddressError }} </p>
+        </div>
+
+        <div v-if="mtxAmount">
           <p class="mtx-amount-text">You have
             <span class="text-color--matryx-blue">{{ mtxAmount }}</span>
             MTX
@@ -48,22 +52,18 @@
 <script>
 // import { appAnalytics } from '@/analytics'
 import { mapState } from 'vuex'
-// import axios from 'axios'
-// import config from '../../config'
+import { isValidETHAddress } from '@/utils'
+import axios from 'axios'
+import config from '../../config'
 
 export default {
   name: 'CheckMTXModal',
 
-  components: {
-  },
-
   data () {
     return {
-      hasInput: false,
-      warnNoInput: false,
       mtxAmount: '',
       userEthAddress: '',
-      mtxAmountAvailable: false
+      userEthAddressError: ''
     }
   },
 
@@ -75,48 +75,39 @@ export default {
 
   methods: {
     handleSubmit () {
-      if (this.userEthAddress) {
-        // start spinner
-        this.hasInput = false
-        this.$store.commit('togglePulseSpinner', true)
-        setTimeout(() => {
-          this.$store.commit('togglePulseSpinner', false)
-          this.mtxAmountAvailable = true
-          this.mtxAmount = '19384'
-        }, 1500)
-        // submit axios request to get data
-        // set data end spinner
-        // axios.post(`${config.app.contractServer}/api/token`, {
-        //   mtxAddress: this.userEthAddress
-        // })
-        // .then((result) => {
-        //   this.$store.commit('togglePulseSpinner', false)
-        //   this.$store.commit('setEthAddress', result)
-        // })
-        // .catch((err) => {
-        //   console.log('error', err)
-        //   this.$store.commit('togglePulseSpinner', false)
-        // })
-      } else {
-        this.$store.commit('togglePulseSpinner', false)
-        this.hasInput = true
+      if (!this.userEthAddress) {
+        return
       }
+
+      const addressCheckResult = isValidETHAddress(this.userEthAddress)
+
+      if (addressCheckResult !== 'Address is valid') {
+        this.userEthAddressError = addressCheckResult
+        return
+      }
+
+      this.$store.commit('togglePulseSpinner', true)
+
+      axios.post(`${config.app.host}/api/balance`, {
+        mtxAddress: this.userEthAddress
+      })
+      .then((result) => {
+        this.mtxAmount = result.data.balance
+        this.userEthAddressError = ''
+        this.$store.commit('togglePulseSpinner', false)
+      })
+      .catch(() => {
+        this.userEthAddressError = 'Error. Please try again later.'
+        this.$store.commit('togglePulseSpinner', false)
+      })
     },
 
     closeModal () {
-      this.mtxAmountAvailable = false
-      this.mtxAmoutn = ''
+      this.mtxAmount = ''
       this.userEthAddress = ''
+      this.userEthAddressError = ''
       this.$store.commit('showCheckMTXModal', false)
     }
-  },
-
-  mounted () {
-
-  },
-
-  destroyed () {
-
   }
 }
 </script>
@@ -160,6 +151,16 @@ section.check-mtx {
     &:hover {
       background-color: $light-green;
       border-color: $light-green;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+
+      &:hover {
+        cursor: not-allowed;
+        background-color: $matryx-blue;
+        border-color: transparent;
+      }
     }
   }
 

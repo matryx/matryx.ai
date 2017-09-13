@@ -72,7 +72,7 @@ export function isMainSale () {
 
 export function isValidETHAddress (value) {
   const rightStart = value.substring(0, 2) === '0x'
-  const rightLength = value.length === 40
+  const rightLength = value.length === 42 // account for ''
 
   if (rightStart && rightLength) {
     return 'Address is valid'
