@@ -21,14 +21,11 @@
           Featured in
         </span>
       </p>
-<<<<<<< HEAD
-      <a class="press-logo" href="http://matryx.fyi/wt4sz" target="_blank">
-=======
+
       <a href="http://matryx.fyi/d3mf8" class="press-logo" target="_blank">
         <img src="../../assets/images/press/cointelegraph.png" alt="CoinTelegraph">
       </a>
-      <a class="press-logo" href="https://tokenmarket.net/blockchain/ethereum/assets/matryx/" target="_blank">
->>>>>>> 7b0960329866361119f68e166dae73b1b164b447
+      <a class="press-logo" href="http://matryx.fyi/wt4sz" target="_blank">
         <img src="../../assets/images/press/tokenmarket.png"
           alt="Token Market" class="token-market-logo">
       </a>
