@@ -32,6 +32,7 @@
 
 
         <div v-if="showPreSale">
+          <br/>
           <Matryx-Btn text="Participate in Pre-Sale"
             :handleClick="goToPreSale">
           </Matryx-Btn>

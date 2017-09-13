@@ -78,7 +78,7 @@ export default {
         facebookLink: 'https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcointelegraph.com%2Fexplained%2Fhow-blockchain-can-change-the-way-science-works-explained',
         twitterLink: 'https://twitter.com/intent/tweet/?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url=https%3A%2F%2Fcointelegraph.com%2Fexplained%2Fhow-blockchain-can-change-the-way-science-works-explained'
       }, {
-        name: 'SD News: Nanome Launches Matryx',
+        name: 'SD News: Matryx Launch',
         date: '24 Aug 2017',
         desc: 'The three primary components of Matryx are the bounty system for rewarding users for solving problems posed on the platform by researchers, a library of digital assets for use in developing models and solutions and a marketplace for exchanging these ideas and assets.',
         image: newsImage3,
@@ -86,9 +86,9 @@ export default {
         facebookLink: 'https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsdtimes.com%2Fnanome-launches-vr-collaboration-platform-matryx%2F',
         twitterLink: 'https://twitter.com/intent/tweet/?text=&amp;url=http%3A%2F%2Fsdtimes.com%2Fnanome-launches-vr-collaboration-platform-matryx%2F'
       }, {
-        name: 'Blockchain News: Nanome Introduces Matryx',
+        name: 'Blockchain News: Introducing Matryx',
         date: '24 Aug 2017',
-        desc: 'Nanome, creator of virtual reality software for scientific research and development, has announced Matryx, an open source platform for decentralized collaboration. The Matryx token sale will kick off with a public pre-sale on Wednesday, September 6, 2017.',
+        desc: 'The Matryx team creates virtual reality software for scientific research and development, and has announced Matryx, an open source platform for decentralized collaboration. The Matryx token sale will kick off with a public pre-sale on Wednesday, September 6, 2017.',
         image: newsImage2,
         articleLink: 'http://www.the-blockchain.com/2017/08/24/virtual-reality-software-maker-nanome-introduces-matryx-token-sale/',
         facebookLink: 'https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.the-blockchain.com%2F2017%2F08%2F24%2Fvirtual-reality-software-maker-nanome-introduces-matryx-token-sale%2F',
