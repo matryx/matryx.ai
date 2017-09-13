@@ -167,7 +167,7 @@
                 	<span v-else-if=" language === 'ge' ">Der Token-Vorverkauf beginnt am 6. September um 10 Uhr GMT für Käufe im Wert von über 75 ETH. Der Vorverkauf bleibt eine Woche lang vom 6. bis 13. September geöffnet.</span>
                 	<span v-else-if=" language === 'ja' ">トークンプレセール開始は9月6日午前10時グリニッジ標準時 (GMT) 、75イーサリアム (ETH) 以上の購入が対象。プレセール期間は、9月6日から13日までの1週間。</span>
                 	<span v-else-if=" language === 'ko' ">75 ETH를 초과하는 구매에 대한 토큰 사전판매가 GMT 기준 9월 6일 오전 10시에 시작됩니다. 사전판매 기간은 9월 6일부터 9월 13일까지 1주일간입니다.</span>
-                	<span v-else>Token Pre-Sale Launches Sept. 6 at 10am GMT for purchases of over 75 ETH. Pre-sale period will remain open for one week from Sept. 6 to Sept 13</span>
+                	<span v-else>Token Pre-Sale Launches Sept. 6 at 10am GMT for purchases of over 75 ETH, and will remain open for one week. The Main Sale launches Sept. 13 at 10am GMT, and will remain open for four weeks or until the ETH cap is reached.</span>
                 </caption>
               </div>
             </div>

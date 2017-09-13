@@ -28,7 +28,7 @@
               Matryx는 <a target="_blank" href="http://nanome.ai/">Nanome</a>의 제품입니다. Nanome은 가상현실 및 블록체인 기술을 이용하여 모든 이용자들이 참여하는 과학, 공학, 연구를 실현시킬 수 있는 방법을 찾기 위해 노력하고 있습니다. Nanome은 업계를 선도하는 VR 수학 툴킷인 Calcflow와 나노 수준의 정밀도를 가진 디자인 및 시뮬레이션을 위한 VR 인터페이스인 nano-one의 제작자이기도 합니다.
             </span>
           	<span v-else>
-              Matryx is a product of <a target="_blank" href="http://nanome.ai/">Nanome</a>. Nanome seeks to democratize science, engineering, and research using Virtual Reality and blockchain technology. Nanome is the creator of Calcflow, the industry-leading VR mathematics toolkit, and nano-one, a VR interface for nanoscale design and simulation.
+              Matryx aims to incentivize collaboration in fields of knowledge and creation like science, technology, engineering, and mathematics (STEM). Additionally, the Matryx team focuses on creating virtual reality software for scientific research and development. The software suite includes Calcflow, the industry-leading VR mathematics toolkit, and nano-one, a VR interface for nanoscale design and simulation.
             </span>
           </p>
         </div>
@@ -196,6 +196,10 @@ export default {
     justify-content: space-between;
     padding: 30px 0;
     border-bottom: 1px solid $light-purple-border;
+
+    &:last-child {
+      border-bottom: none;
+    }
 
     & > * {
       background-size: cover;

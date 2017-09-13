@@ -1,10 +1,10 @@
 <template>
-  <section class="advisors-member member">
-    <img class="advisor-member__img member__img" :src="src" :alt="alt">
+  <section class="advisors-member member" itemscope itemtype="http://schema.org/Person">
+    <img class="advisor-member__img member__img" :src="src" :alt="alt" itemprop="image">
 
-    <div class="advisor-member__name">{{ name }}</div>
+    <div class="advisor-member__name" itemprop="name">{{ name }}</div>
 
-    <div class="advisor-member__desc">{{ desc }}</div>
+    <div class="advisor-member__desc" itemprop="description">{{ desc }}</div>
 
   </section>
 </template>
