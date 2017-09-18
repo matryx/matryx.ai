@@ -27,7 +27,7 @@
       <p slot="answer">
         There is no minimum purchase amount to participate in the regular Matryx Token Sale, which starts on Wednesday, September 13.
         <br/><br/>
-        For individuals who wish to participate in the pre-sale, which starts on Wednesday, September 6, there is a minimum purchase amount of 75 ETH.
+        For individuals who participated in the pre-sale, there was a minimum purchase amount of 75 ETH.
       </p>
     </QA>
 

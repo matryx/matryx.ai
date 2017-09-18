@@ -27,19 +27,6 @@
 
           <b-nav-item class="text-color--white"
             aria-disabled="false"
-            href="/pre-sale"
-            target="_self"
-          >
-            <span v-if=" language === 'ru' ">предпродажа</span>
-            <span v-else-if=" language === 'ch' ">预售</span>
-            <span v-else-if=" language === 'ge' ">VORVERKAUF</span>
-            <span v-else-if=" language === 'ja' ">プリセール</span>
-            <span v-else-if=" language === 'ko' ">사전판매</span>
-            <span v-else>PRE-SALE</span>
-          </b-nav-item>
-
-          <b-nav-item class="text-color--white"
-            aria-disabled="false"
             href="/faq/about/what-is-matryx"
             target="_self"
           >

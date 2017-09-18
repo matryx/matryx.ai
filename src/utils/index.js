@@ -54,7 +54,7 @@ export function isPreSale () {
   const startDate = new Date(date)
 
   if (today.getTime() - startDate.getTime() > 0) {
-    return true
+    return false
   }
   return false
 }
@@ -67,7 +67,7 @@ export function isMainSale () {
   if (today.getTime() - startDate.getTime() > 0) {
     return true
   }
-  return false
+  return true
 }
 
 export function isValidETHAddress (value) {
