@@ -1,43 +1,34 @@
 <template>
   <div class="progress-bar">
-    <h6 class="progress-bar__title uppercase">Tokens Sold</h6>
+    <h5 class="progress-bar__title uppercase text-center">Token Sale Progress</h5>
     <div class="progress-bar__bar-container">
       <div class="progress-bar__bar-progress" :style="ETHProgress"></div>
       <div class="progress-bar__bar-total"></div>
-    </div>
-    <div class="progress-bar__percent">
-      <span class="progress-bar__percent--start">0%</span>
-      <span class="progress-bar__percent--end">100%</span>
     </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
-import config from '../../config'
+import { getTotalSold } from '../api'
 
 export default {
   name: 'ProgressBar',
 
   data () {
     return {
-      ETHPercent: 0
+      ETHTotal: 0
     }
   },
 
   mounted () {
-    axios.get(`${config.app.host}/api/sold`)
-      .then((result) => {
-        this.ETHPercent = result.data.percentage
-      })
-      .catch((err) => {
-        console.log('Error retrieving total sold', err)
-      })
+    getTotalSold().then((total) => {
+      this.ETHTotal = total
+    })
   },
 
   computed: {
     ETHProgress () {
-      return `width: ${this.ETHPercent}%;`
+      return `width: ${this.ETHTotal}%;`
     }
   }
 
@@ -53,12 +44,12 @@ export default {
     margin: 30px 0;
 
     &__title {
-      font-size: 12px;
+
     }
 
     &__bar-container {
       position:relative;
-      height: 20px;
+      height: 35px;
       width: 100%;
     }
     &__bar-progress {
