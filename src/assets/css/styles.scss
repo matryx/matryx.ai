@@ -246,6 +246,15 @@ h1.cd-headline.clip {
   }
 }
 
+.link {
+  color: $matryx-blue;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
 /*social*/
 .social-icon {
   height: 40px;
