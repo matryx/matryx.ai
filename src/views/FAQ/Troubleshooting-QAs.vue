@@ -27,12 +27,27 @@
       </p>
     </QA>
 
-    <QA cssId="im-confused-about-the-number-of-tokens-i-received.">
+    <QA cssId="im-confused-about-the-number-of-tokens-i-received">
       <span slot="question">
         I’m confused about the number of tokens I received.
       </span>
       <p slot="answer">
         Should you have questions about or noticed a discrepancy in the number of MTX you received, reach out to <a href="mailto:team@matryx.ai">team@matryx.ai</a> with as much additional information as possible, including transaction metadata. This can be found on an ether block explorer, such as <a href="https://etherscan.io" target="_blank">Etherscan.io.</a> Attach original payment confirmation and any pertinent details for us to investigate.
+      </p>
+    </QA>
+
+    <QA cssId="why-is-my-purchase-submission-not-working">
+      <span slot="question">
+        Why is my purchase submission not working?
+      </span>
+      <p slot="answer">
+        There may be several reasons why the purchase submission is not working, such as network issues or geographical location restrictions.
+        <br/></br/>
+        <b>Please carefully review the <a href="/sale-terms.pdf">Sale Terms</a> to ensure that you can legally purchase MTX.
+        </b>
+        <br/><br/>
+
+        If none of the restrictions of the Sale Terms apply to you and you are still receiving an error, then please reach out to one of our team members at <a href="mailto:team@matryx.ai">team@matryx.ai</a> with as much information as possible so we can investigate further.
       </p>
     </QA>
 

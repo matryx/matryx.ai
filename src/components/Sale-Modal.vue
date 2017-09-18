@@ -62,9 +62,17 @@
                 SUBMIT
               </button>
 
-              <p class="warn text-smaller text-center email-warn" v-show="submitError">
-               {{ submitError }}
-              </p>
+              <div class="email-warn text-center" v-show="submitError">
+                <p class="warn">
+                 {{ submitError }}
+                </p>
+
+                 <p>
+                   <small>See our <span class="link" @click="goToTroubleshooting">Troubleshooting FAQs</span> for additional details.
+                   </small>
+                </p>
+              </div>
+
             </div>
           </div>
         </transition>
@@ -123,7 +131,7 @@ export default {
         checked: false,
         enable: false
       },
-      submitError: false
+      submitError: ''
     }
   },
 
@@ -155,29 +163,30 @@ export default {
       appAnalytics.submitVerify(this.email)
 
       if (this.allChecked) {
-        // start spinner
+        this.submitError = ''
         this.$store.commit('togglePulseSpinner', true)
-        // submit axios request to get data
-        // set data end spinner
-        // transition to next page
+
         axios.post(`${config.app.host}/api/token`, {
           email: this.email,
           allVerified: this.allChecked
         })
         .then((result) => {
           setTimeout(() => {
+            this.submitError = ''
             this.$store.commit('setContractInfo', result.data.info)
             this.$store.commit('togglePulseSpinner', false)
             this.$store.commit('toggleSaleContract', true)
-          }, 2000)
+          }, 1200)
         })
         .catch((err) => {
-          console.log('error', err)
-          this.$store.commit('togglePulseSpinner', false)
-          this.submitError = 'Error processing request. Please try again.'
           setTimeout(() => {
-            this.submitError = ''
-          }, 2000)
+            this.$store.commit('togglePulseSpinner', false)
+
+            if (err.message === 'Network Error') {
+              this.submitError = 'Error processing request.'
+              this.clearAllChecked()
+            }
+          }, 1200)
         })
       } else {
         this.$store.commit('togglePulseSpinner', false)
@@ -195,7 +204,6 @@ export default {
 
     clearAllChecked () {
       this.email = ''
-      this.submitError = ''
       this.showEmailWarn = false
       this.saleTermsRead.checked = false
       this.saleTermsRead.enable = false
@@ -224,6 +232,11 @@ export default {
       //     vm.havePrivateKeys.enable = true
       //   }
       // })
+    },
+
+    goToTroubleshooting () {
+      this.$store.commit('showSaleModal', false)
+      this.$router.push({ path: '/faq/troubleshooting/why-is-my-purchase-submission-not-working' })
     }
   },
 

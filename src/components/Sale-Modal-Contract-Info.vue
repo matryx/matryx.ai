@@ -5,23 +5,19 @@
     <b>Instructions: </b>
     <p>The following is the sale contract information needed in order to complete the MTX transaction using your Ethereum wallet. Take each value and paste it into the corresponding field in your wallet, along with the amount of ETH you wish to spend.
 
-    <div v-if="showPreSale">
-      <b class="uppercase">75 ETH is the minimum amount to make a purchase for the pre-sale.</b> <br/>
-      <span style="text-decoration:underline; color: red;">Transactions less than 75 ETH will fail.</span>
-      <br/>
-      <p> Purchases between 150 ETH and 300 ETH will receive a 10% discount.
-      <br/>
-      Purchase 300 ETH and greater will receive a 15% discount.</p>
-    </div>
+    <br>
 
-    For detailed instructions, please refer to our <a href="https://blog.matryx.ai/matryx-pre-sale-how-to-participate-tips-on-staying-safe-711938733015" target="_blank">blog post.</a>
+    <h5>
+      For detailed instructions, please refer to our <a href="https://blog.matryx.ai/matryx-pre-sale-how-to-participate-tips-on-staying-safe-711938733015" target="_blank">blog post.</a>
+    </h5>
 
     </p>
     <div class="salemodal-contract-info__form">
         <!-- these should be click to copy
         cannot change input
          -->
-      <label class="salemodal-contract-info__form__label" for="contract-address">Contract Address</label>
+      <label class="salemodal-contract-info__form__label" for="contract-address">Sale Address <small><span class="text-color--green uppercase">*required</span></small>
+      </label>
       <input class="salemodal-contract-info__form__input" id="saleAddress"
         :value="saleAddress" readonly
       >
@@ -32,8 +28,26 @@
         Click to copy
       </button>
 
+      <label class="salemodal-contract-info__form__label" for="gas">
+        Gas
+        <small class="text-color--green uppercase">*recommended</small>
+        <br/><small>Using less than this amount may result in a failed transaction.</small>
+      </label>
+      <input class="salemodal-contract-info__form__input"
+        :value="gas"
+        type="text"
+        id="gas" readonly
+      >
+      <button type="button"
+        class="salemodal-contract-info__form__copy"
+        @click="handleCopy('#gas')"
+        >
+        Click to copy
+      </button>
 
-      <label class="salemodal-contract-info__form__label" for="data-field">Data Field</label>
+      <label class="salemodal-contract-info__form__label" for="data-field">Data <small class="text-color--green uppercase">*required</small>
+        <br/><small>You <em>must</em> have a Data field when you send your transaction.<br/> Depending on your wallet, this field may be under 'Advanced'. </small>
+      </label>
       <input class="salemodal-contract-info__form__input" id="dataField" :value="dataField" readonly>
       <button class="salemodal-contract-info__form__copy"
         @click="handleCopy('#dataField')"
@@ -41,18 +55,6 @@
         Click to copy
       </button>
 
-      <label class="salemodal-contract-info__form__label" for="gas">Gas</label>
-      <input class="salemodal-contract-info__form__input"
-        :value="gas"
-        type="text"
-        id="gas" readonly
-        >
-      <button type="button"
-        class="salemodal-contract-info__form__copy"
-        @click="handleCopy('#gas')"
-        >
-        Click to copy
-      </button>
     </div>
     <p>Transactions usually take several minutes to process, but may take longer.</p>
   </div>
