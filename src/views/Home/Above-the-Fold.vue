@@ -2,6 +2,7 @@
   <section class="above-the-fold">
     <div class="token-sale content-container content-container--large ">
       <div class="token-sale__text content-container--medium text-color--white">
+        <Eth-Bought></Eth-Bought>
         <h1 class="font-size--large uppercase">
           <span v-if=" language === 'ru' ">
             ПРИСОЕДИНЯЙТЕСЬ К НАШЕЙ ПРОДАЖЕ ТОКЕНОВ
@@ -25,6 +26,7 @@
           <p class="text-center text-color--matryx-blue">
             Already purchased MTX? <span class="link" @click="openMTXModal">Check your balance.</span>
           </p>
+
         </div>
       </div>
 
@@ -37,6 +39,7 @@
         </iframe>
       </div>
 
+
     </div>
   </section>
 </template>
@@ -46,6 +49,7 @@ import Countdown from '@/components/Countdown'
 import GetNotified from '@/components/Get-Notified'
 import Video from '../../assets/media/giphy.mp4'
 import MatryxBtn from '@/components/Matryx-Btn'
+import EthBought from '@/components/Eth-Bought'
 
 export default {
   name: 'AboveTheFold',
@@ -53,7 +57,8 @@ export default {
   components: {
     Countdown,
     GetNotified,
-    MatryxBtn
+    MatryxBtn,
+    EthBought
   },
 
   mounted () {
