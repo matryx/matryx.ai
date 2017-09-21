@@ -2,6 +2,7 @@
   <section class="above-the-fold">
     <div class="token-sale content-container content-container--large ">
       <div class="token-sale__text content-container--medium text-color--white">
+        <Eth-Bought :eth-value="totalSold"></Eth-Bought>
         <h1 class="font-size--large uppercase">
           <span v-if=" language === 'ru' ">
             ПРИСОЕДИНЯЙТЕСЬ К НАШЕЙ ПРОДАЖЕ ТОКЕНОВ
@@ -25,6 +26,7 @@
           <p class="text-center text-color--matryx-blue">
             Already purchased MTX? <span class="link" @click="openMTXModal">Check your balance.</span>
           </p>
+
         </div>
       </div>
 
@@ -36,7 +38,6 @@
         >
         </iframe>
       </div>
-      {{ totalSold }}
     </div>
   </section>
 </template>
@@ -46,6 +47,7 @@ import Countdown from '@/components/Countdown'
 import GetNotified from '@/components/Get-Notified'
 import Video from '../../assets/media/giphy.mp4'
 import MatryxBtn from '@/components/Matryx-Btn'
+import EthBought from '@/components/Eth-Bought'
 import { getTotalSold } from '@/api'
 
 export default {
@@ -54,12 +56,15 @@ export default {
   components: {
     Countdown,
     GetNotified,
-    MatryxBtn
+    MatryxBtn,
+    EthBought
   },
 
   mounted () {
     getTotalSold().then((total) => {
-      this.totalSold = total
+      if (total) {
+        this.totalSold = Math.round(total)
+      }
     })
   },
 
@@ -80,7 +85,7 @@ export default {
         English: 'https://www.youtube.com/embed/iLHlwnaqTWw?rel=0&amp;showinfo=0',
         Chinese: 'http://player.youku.com/embed/XMzAwNDA0MTQzNg=='
       },
-      totalSold: 2500
+      totalSold: 2600
     }
   },
 
