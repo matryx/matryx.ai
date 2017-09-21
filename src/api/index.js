@@ -8,4 +8,3 @@ export const getTotalSold = function () {
       console.log('Error retrieving total sold', err)
     })
 }
-

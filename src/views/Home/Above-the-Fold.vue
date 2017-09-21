@@ -36,7 +36,7 @@
         >
         </iframe>
       </div>
-
+      {{ totalSold }}
     </div>
   </section>
 </template>
@@ -46,6 +46,7 @@ import Countdown from '@/components/Countdown'
 import GetNotified from '@/components/Get-Notified'
 import Video from '../../assets/media/giphy.mp4'
 import MatryxBtn from '@/components/Matryx-Btn'
+import { getTotalSold } from '@/api'
 
 export default {
   name: 'AboveTheFold',
@@ -57,6 +58,9 @@ export default {
   },
 
   mounted () {
+    getTotalSold().then((total) => {
+      this.totalSold = total
+    })
   },
 
   computed: {
@@ -76,7 +80,7 @@ export default {
         English: 'https://www.youtube.com/embed/iLHlwnaqTWw?rel=0&amp;showinfo=0',
         Chinese: 'http://player.youku.com/embed/XMzAwNDA0MTQzNg=='
       },
-      totalSold: ''
+      totalSold: 2500
     }
   },
 
