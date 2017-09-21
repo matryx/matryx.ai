@@ -2,7 +2,7 @@
   <section class="above-the-fold">
     <div class="token-sale content-container content-container--large ">
       <div class="token-sale__text content-container--medium text-color--white">
-        <Eth-Bought></Eth-Bought>
+        <Eth-Bought :eth-value="totalSold"></Eth-Bought>
         <h1 class="font-size--large uppercase">
           <span v-if=" language === 'ru' ">
             ПРИСОЕДИНЯЙТЕСЬ К НАШЕЙ ПРОДАЖЕ ТОКЕНОВ
@@ -81,7 +81,7 @@ export default {
         English: 'https://www.youtube.com/embed/iLHlwnaqTWw?rel=0&amp;showinfo=0',
         Chinese: 'http://player.youku.com/embed/XMzAwNDA0MTQzNg=='
       },
-      totalSold: ''
+      totalSold: 2600
     }
   },
 
