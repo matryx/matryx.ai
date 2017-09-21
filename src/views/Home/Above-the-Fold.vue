@@ -2,7 +2,6 @@
   <section class="above-the-fold">
     <div class="token-sale content-container content-container--large ">
       <div class="token-sale__text content-container--medium text-color--white">
-        <Eth-Bought :eth-value="totalSold"></Eth-Bought>
         <h1 class="font-size--large uppercase">
           <span v-if=" language === 'ru' ">
             ПРИСОЕДИНЯЙТЕСЬ К НАШЕЙ ПРОДАЖЕ ТОКЕНОВ
@@ -27,6 +26,7 @@
             Already purchased MTX? <span class="link" @click="openMTXModal">Check your balance.</span>
           </p>
 
+          <Eth-Bought :eth-value="totalSold"></Eth-Bought>
         </div>
       </div>
 
@@ -118,7 +118,7 @@ section.above-the-fold {
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 40px 40px 160px;
+    padding: 40px 40px 180px;
   }
 
   .matryx-button {

@@ -26,10 +26,10 @@ export default {
 
     &__value {
       display:inline-block;
-      font-size: 40px;
+      font-size: 32px;
       /*color:#fff;*/
       color: #0086CB;
-      margin: 10px 0;
+      margin: 10px 5px;
       vertical-align: top;
       line-height: 40px;
     }
