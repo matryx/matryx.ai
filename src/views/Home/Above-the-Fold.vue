@@ -26,7 +26,7 @@
             Already purchased MTX? <span class="link" @click="openMTXModal">Check your balance.</span>
           </p>
 
-          <Eth-Bought :eth-value="totalSold"></Eth-Bought>
+          <Eth-Bought></Eth-Bought>
         </div>
       </div>
 
@@ -48,7 +48,6 @@ import GetNotified from '@/components/Get-Notified'
 import Video from '../../assets/media/giphy.mp4'
 import MatryxBtn from '@/components/Matryx-Btn'
 import EthBought from '@/components/Eth-Bought'
-import { getTotalSold } from '@/api'
 
 export default {
   name: 'AboveTheFold',
@@ -58,14 +57,6 @@ export default {
     GetNotified,
     MatryxBtn,
     EthBought
-  },
-
-  mounted () {
-    getTotalSold().then((total) => {
-      if (total) {
-        this.totalSold = Math.round(total)
-      }
-    })
   },
 
   computed: {

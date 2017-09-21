@@ -1,17 +1,47 @@
 <template lang="html">
   <div class="eth-bought__container">
     <img src="../assets/icons/icon-ethereum.png" alt="" class="eth-bought__logo">
-    <p class="eth-bought__value">{{ ethValue }} ETH Contributed</p>
+    <p class="eth-bought__value">{{ counter }} ETH Contributed</p>
   </div>
 </template>
 
 <script>
+import { getTotalSold } from '@/api'
+
 export default {
   name: 'EthBought',
-  props: {
-    ethValue: {
-      type: Number
+  data () {
+    return {
+      counter: 2700,
+      current: 0
     }
+  },
+
+  mounted () {
+    getTotalSold().then((total) => {
+      if (!total) {
+        return
+      }
+
+      this.counter = Math.floor(total - 75)
+      this.current = Math.floor(total)
+
+      setTimeout(() => {
+        const counter = setInterval(() => {
+          this.counter++
+          if (this.counter >= this.current) {
+            clearCounter()
+          }
+        }, 30)
+
+        function clearCounter () {
+          clearInterval(counter)
+        }
+      }, 500)
+    })
+    .catch((err) => {
+      console.log('Error retrieving total sold', err)
+    })
   }
 }
 </script>
