@@ -3,6 +3,9 @@
     <Navbar-Token></Navbar-Token>
     <Navbar-Sticky></Navbar-Sticky>
     <Above-the-Fold></Above-the-Fold>
+    <div class="cta-middle-banner">
+      <CTA-Banner :lighterText="true" :blueBkg="true" cta-location="Very Top"></CTA-Banner>
+    </div>
     <Media-Mentions></Media-Mentions>
     <About-Matryx></About-Matryx>
     <Pre-Sale v-if="showPreSale"></Pre-Sale>

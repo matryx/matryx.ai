@@ -78,12 +78,12 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import './assets/css/styles';
 
 #getNotified {
-  .modal-dialog{
-    max-width:100% ;
+  .modal-dialog {
+    max-width: 100%;
     /*background-image:url('./assets/images/backgrounds/whiteWave.png');*/
 
     #getNotified__BV_body_.modal-body {
@@ -110,6 +110,11 @@ export default {
       cursor: pointer
     }
   }
+}
+
+#getNotified > .modal-dialog {
+  top: 50px;
+  width: 500px;
 }
 
 .warn {

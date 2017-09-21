@@ -25,7 +25,7 @@
           알림을 받으세요
         </span>
         <span v-else>
-          Get Notified
+          Submit
         </span>
       </button>
     </b-form>

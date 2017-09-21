@@ -117,7 +117,7 @@
             <span class="german" v-else-if=" language === 'ge' ">MICH BENACHRICHTIGEN</span>
             <span v-else-if=" language === 'ja' ">通知を受ける</span>
             <span v-else-if=" language === 'ko' ">알림을 받으세요</span>
-            <span v-else>GET NOTIFIED</span>
+            <span v-else>STAY UPDATED</span>
           </button>
         </b-nav-item>
       </b-nav>
