@@ -1,7 +1,12 @@
 <template>
   <section class="above-the-fold">
+    <!-- <video src="https://giphy.com/embed/3oKIPaPc7NBFYWveIU" class="above-the-fold__video" autoplay="true" loop="true"></video> -->
+    <iframe src="https://giphy.com/embed/3oKIPaPc7NBFYWveIU" frameBorder="0" class="above-the-fold__video"></iframe>
+    <div class="above-the-fold__video__overlay"></div>
+    <!-- <iframe src="https://giphy.com/embed/3ohzdRQ2tYnxrR45Xi" width="1000" height="800" frameBorder="0" class="above-the-fold__video" ></iframe> -->
+    <!-- <iframe height="500" width="700" class="above-the-fold__video" src="../../assets/images/backgrounds/calcflow.gif"></iframe> -->
     <div class="token-sale content-container content-container--large ">
-      <div class="token-sale__text content-container--medium text-color--white">
+      <div class="token-sale__text  text-color--white">
         <h1 class="font-size--large uppercase">
           <span v-if=" language === 'ru' ">
             ПРИСОЕДИНЯЙТЕСЬ К НАШЕЙ ПРОДАЖЕ ТОКЕНОВ
@@ -30,14 +35,14 @@
         </div>
       </div>
 
-      <div class="token-sale__video-launcher content-container--medium">
+      <!-- <div class="token-sale__video-launcher content-container--medium">
         <iframe class="matryx-video-yt"
           width="560" height="315"
           :src="selectedLanguage" frameborder="0"
           allowfullscreen
         >
         </iframe>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>
@@ -104,12 +109,15 @@ iframe{
 section.above-the-fold {
   margin-bottom: 0px;
   margin-top:0;
+  position:relative;
 
   & > .content-container {
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 40px 40px 180px;
+    z-index: 1;
+    position:relative;
   }
 
   .matryx-button {
@@ -139,6 +147,7 @@ section.above-the-fold {
 }
 
 .token-sale__text {
+  margin: 0px auto;
 
   p.lead {
     border-left: 4px solid $matryx-blue;
@@ -146,18 +155,41 @@ section.above-the-fold {
     font-size: 16px;
     max-width: 350px;
     opacity: 0.8;
-    margin-top:20px;
+    margin: 20px auto 0px;
   }
 }
 
 .above-the-fold {
   border-radius: 0;
-  background-image: url('../../assets/images/backgrounds/abovethefoldbkg.svg');
+  /*background: url('../../assets/images/backgrounds/abovethefoldbkg.svg');*/
+  /*// background-image: url('../../assets/images/backgrounds/abovethefoldbkg.svg');*/
+  background-color: #082C49;
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 0;
   background-position-y: bottom;
 }
+
+iframe.above-the-fold__video {
+  position: absolute;
+  z-index: 1;
+  min-width:500px !important;
+}
+
+.above-the-fold__video__overlay {
+  position: absolute;
+  background-color: #000;
+  opacity: 0.7;
+  z-index:1;
+
+}
+
+.above-the-fold__video__overlay,
+.above-the-fold__video {
+  height: 100% !important;
+  width: 100% !important;
+}
+
 
 .token-sale__video-launcher button {
   padding: 0;
