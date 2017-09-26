@@ -59,7 +59,6 @@ import Ethan from '@/assets/images/team/Ethan.png'
 import Jacqueline from '@/assets/images/team/Jacqueline.png'
 import Lilian from '@/assets/images/team/Lilian.png'
 import Ty from '@/assets/images/team/Ty.png'
-import Jason from '@/assets/images/team/Jason.png'
 
 import Greg from '@/assets/images/advisors/greg.jpg'
 import Ben from '@/assets/images/advisors/ben.jpg'
@@ -170,11 +169,6 @@ export default {
         title: 'Developer',
         src: Ty,
         linkedInLink: 'https://www.linkedin.com/in/tystahnke/'
-      }, {
-        name: 'Jason Tsay',
-        title: 'Designer',
-        src: Jason,
-        linkedInLink: 'https://www.linkedin.com/in/jasontsay/'
       }],
 
       advisors: [{
