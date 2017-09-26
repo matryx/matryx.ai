@@ -74,7 +74,7 @@ export default {
       Video,
       VideoLinks: {
         English: 'https://www.youtube.com/embed/iLHlwnaqTWw?rel=0&amp;showinfo=0',
-        Chinese: 'http://player.youku.com/embed/XMzAwNDA0MTQzNg=='
+        Chinese: 'http://player.youku.com/embed/XMzA0NzY0NzM4NA=='
       },
       totalSold: 2600
     }
