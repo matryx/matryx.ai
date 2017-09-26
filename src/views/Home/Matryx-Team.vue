@@ -58,7 +58,6 @@ import Edward from '@/assets/images/team/Edward.png'
 import Ethan from '@/assets/images/team/Ethan.png'
 import Jacqueline from '@/assets/images/team/Jacqueline.png'
 import Lilian from '@/assets/images/team/Lilian.png'
-import Wesly from '@/assets/images/team/Wesly.png'
 import Ty from '@/assets/images/team/Ty.png'
 import Jason from '@/assets/images/team/Jason.png'
 
@@ -176,11 +175,6 @@ export default {
         title: 'Designer',
         src: Jason,
         linkedInLink: 'https://www.linkedin.com/in/jasontsay/'
-      }, {
-        name: 'Wesly Xia',
-        title: 'Marketer',
-        src: Wesly,
-        linkedInLink: 'https://www.linkedin.com/in/weihao-xia-125401b4'
       }],
 
       advisors: [{
