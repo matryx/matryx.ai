@@ -169,6 +169,8 @@ export default {
     whitePaperHref () {
       if (this.language === 'ch') {
         return '/matryx-whitepaper-ch.pdf'
+      } else if (this.language === 'ru') {
+        return '/matryx-whitepaper-ru.pdf'
       }
       return '/matryx-whitepaper.pdf'
     }

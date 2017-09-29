@@ -1,7 +1,7 @@
 <template lang="html">
   <section class="content-container content-container--large ">
     <h1 class="text--center text-color--matryx-dark-grey">
-      <span v-if=" language === 'ru' ">
+      <span v-if=" language === 'ru' " style="font-size: 32px;">
         Matryx — платформа для децентрализованного сотрудничества
       </span>
     	<span v-else-if=" language === 'ch' ">Matryx：分散化合作平台</span>
@@ -64,7 +64,7 @@ section.content-container {
 
 @media screen and (max-width: 850px) {
   section.content-container {
-    padding: 40px;
+    padding: 60px;
   }
 }
 </style>

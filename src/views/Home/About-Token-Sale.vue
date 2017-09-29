@@ -135,11 +135,18 @@
                 	<span v-else>Matryx White Paper Release</span>
                 </p>
                 <caption>
-                  <span v-if=" language === 'ru' ">Ознакомьтесь с технической документацией здесь </span>
-                	<span v-else-if=" language === 'ch' ">
-                    <a href="/matryx-whitepaper-ch.pdf" target="_blank" @click="whitePaperClick('ch')"
+                  <span v-if=" language === 'ru' ">
+                    <a href="/matryx-whitepaper-ru.pdf" target="_blank"
+                      @click="whitePaperClick('ru')"
                     >
-                    在此处阅读白皮书
+                      Ознакомьтесь с технической документацией здесь
+                    </a>
+                  </span>
+                	<span v-else-if=" language === 'ch' ">
+                    <a href="/matryx-whitepaper-ch.pdf" target="_blank"   
+                      @click="whitePaperClick('ch')"
+                    >
+                      在此处阅读白皮书
                     </a>
                   </span>
                 	<span v-else-if=" language === 'ge' ">Lesen Sie das White Paper hie</span>

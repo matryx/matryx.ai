@@ -2,9 +2,9 @@
   <section class="above-the-fold">
     <div class="token-sale content-container content-container--large ">
       <div class="token-sale__text content-container--medium text-color--white">
-        <h1 class="font-size--large uppercase">
-          <span v-if=" language === 'ru' ">
-            ПРИСОЕДИНЯЙТЕСЬ К НАШЕЙ ПРОДАЖЕ ТОКЕНОВ
+        <h1 class="font-size--large uppercase text-center">
+          <span v-if=" language === 'ru' " style="font-size: 34px;">
+            ПРИСОЕДИНЯЙТЕСЬ  <br/> К НАШЕЙ ПРОДАЖЕ <br/>ТОКЕНОВ
           </span>
           <span v-else-if=" language === 'ch' ">参与我们的代币销售</span>
           <span v-else-if=" language === 'ge' ">
