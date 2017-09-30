@@ -1,8 +1,8 @@
 <template>
   <section class="above-the-fold">
     <!-- <video src="https://giphy.com/embed/3oKIPaPc7NBFYWveIU" class="above-the-fold__video" autoplay="true" loop="true"></video> -->
-    <iframe src="https://giphy.com/embed/3oKIPaPc7NBFYWveIU" frameBorder="0" class="above-the-fold__video"></iframe>
-    <div class="above-the-fold__video__overlay"></div>
+    <!-- <iframe src="https://giphy.com/embed/3oKIPaPc7NBFYWveIU" frameBorder="0" class="above-the-fold__video"></iframe> -->
+    <!-- <div class="above-the-fold__video__overlay"></div> -->
     <!-- <iframe src="https://giphy.com/embed/3ohzdRQ2tYnxrR45Xi" width="1000" height="800" frameBorder="0" class="above-the-fold__video" ></iframe> -->
     <!-- <iframe height="500" width="700" class="above-the-fold__video" src="../../assets/images/backgrounds/calcflow.gif"></iframe> -->
     <div class="token-sale content-container content-container--large ">
@@ -21,28 +21,32 @@
         </h1>
 
         <div>
-          <p class="uppercase text-center text-color--matryx-blue" style="margin-bottom: -10px;">Ends in:</p>
+          <p class="uppercase text-center text-color--matryx-blue" style="margin-bottom: -10px;">
+            <span v-if=" language === 'ch' ">距结束时间</span>
+            <span v-else>Ends in:</span>
+          </p>
           <Countdown end="October 13 2017 15:00:00 UTC" style="margin-top: 0px;"></Countdown>
 
-          <Matryx-Btn text="Purchase MTX" :handleClick="openSaleModal">
+          <Matryx-Btn :text="buttonText" :handleClick="openSaleModal">
           </Matryx-Btn>
 
           <p class="text-center text-color--matryx-blue">
-            Already purchased MTX? <span class="link" @click="openMTXModal">Check your balance.</span>
+            <span v-if=" language === 'ch' ">已经拥有MTX了吗？<span class="link" @click="openMTXModal">检查您的余额</span></span>
+            <span v-else>Already purchased MTX? <span class="link" @click="openMTXModal">Check your balance.</span></span>
           </p>
 
           <Eth-Bought></Eth-Bought>
         </div>
       </div>
 
-      <!-- <div class="token-sale__video-launcher content-container--medium">
+      <div class="token-sale__video-launcher content-container--medium">
         <iframe class="matryx-video-yt"
           width="560" height="315"
           :src="selectedLanguage" frameborder="0"
           allowfullscreen
         >
         </iframe>
-      </div> -->
+      </div>
     </div>
   </section>
 </template>
@@ -71,7 +75,12 @@ export default {
 
     selectedLanguage () {
       return this.language === 'ch' ? this.VideoLinks.Chinese : this.VideoLinks.English
+    },
+
+    buttonText () {
+      return this.language === 'ch' ? '购买MTX' : 'Purchase MTX'
     }
+
   },
 
   data () {

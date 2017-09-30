@@ -1,7 +1,8 @@
 <template lang="html">
   <div class="eth-bought__container">
     <img src="../assets/icons/icon-ethereum.png" alt="" class="eth-bought__logo">
-    <p class="eth-bought__value">{{ counter }} ETH Contributed</p>
+    <p v-if=" language === 'ch' " class="eth-bought__value"> 已筹 {{ counter }}</p>
+    <p v-else class="eth-bought__value">{{ counter }} ETH Contributed</p>
   </div>
 </template>
 
@@ -14,6 +15,12 @@ export default {
     return {
       counter: 2700,
       current: 0
+    }
+  },
+
+  computed: {
+    language () {
+      return this.$store.state.language
     }
   },
 
