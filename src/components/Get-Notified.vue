@@ -4,7 +4,7 @@
       <input class="cta__form__email"
         v-model="email"
         type="email"
-        placeholder="your@email.com"
+        :placeholder="placeholder"
       >
       <button class="btn btn-cta-blue cta__form__submit"
         @click.prevent="getNotified"
@@ -76,6 +76,10 @@ export default {
   computed: {
     language () {
       return this.$store.state.language
+    },
+
+    placeholder () {
+      return this.language === 'ch' ? '您的邮箱' : 'your@email.com'
     }
   },
 

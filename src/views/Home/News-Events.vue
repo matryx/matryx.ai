@@ -1,7 +1,10 @@
 <template>
   <section class="news-events" id="news-events">
     <div class="content-container content-container--large">
-      <h2 class="news-events__sectionHeader text-color--matryx-grey">NEWS &#38; EVENTS</h2>
+      <h2 class="news-events__sectionHeader text-color--matryx-grey text-center">
+        <span v-if="language === 'ch' ">国外新闻报道&#38;相关活动</span>
+        <span v-else>NEWS &#38; EVENTS</span>
+      </h2>
       <div class="news-events__title">
         <h3 class="news-events__title__sub">News</h3>
         <div class="news-events__title__line"></div>
@@ -128,6 +131,12 @@ export default {
         facebookLink: 'https://facebook.com/sharer/sharer.php?u=https://www.eventbrite.com/e/vr-x-blockchaintoken-conversation-with-fred-ehrsam-coinbase-co-founder-tickets-37440777373',
         twitterLink: 'https://twitter.com/intent/tweet/?text=&amp;url=https://www.eventbrite.com/e/vr-x-blockchaintoken-conversation-with-fred-ehrsam-coinbase-co-founder-tickets-37440777373'
       }]
+    }
+  },
+
+  computed: {
+    language () {
+      return this.$store.state.language
     }
   }
 }

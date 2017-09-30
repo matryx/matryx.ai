@@ -4,7 +4,10 @@
 
     <div class="advisor-member__name" itemprop="name">{{ name }}</div>
 
-    <div class="advisor-member__desc" itemprop="description">{{ desc }}</div>
+    <div class="advisor-member__desc" itemprop="description">
+      <span v-if="language === 'ch'">{{ chDesc }}</span>
+      <span v-else>{{ desc }}</span>
+    </div>
 
   </section>
 </template>
@@ -13,11 +16,18 @@
 export default {
   name: 'AdvisorsMember',
 
+  computed: {
+    language () {
+      return this.$store.state.language
+    }
+  },
+
   props: {
     src: String,
     alt: String,
     name: String,
-    desc: String
+    desc: String,
+    chDesc: String
   }
 }
 </script>

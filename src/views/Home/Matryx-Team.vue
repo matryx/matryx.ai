@@ -31,6 +31,7 @@
             :alt="advisor.name"
             :name="advisor.name"
             :desc="advisor.desc"
+            :chDesc="advisor.chDesc"
           >
           </Advisor-Member>
         </div>
@@ -174,55 +175,68 @@ export default {
       advisors: [{
         name: 'Greg Horowitt',
         desc: 'Venture Capitalist, Author, Serial Entrepreneur',
+        chDesc: '天使投资人，作家，企业家',
         twitterLink: 'https://www.twitter.com/themrkylelee',
         src: Greg
       }, {
         name: 'Benjamin Bratton',
         desc: 'Professor of Visual Arts at UCSD, Author',
+        chDesc: '加州大学圣地亚哥分校视觉艺术教授，作家',
         src: Ben
       }, {
         name: 'Paul Puey',
         desc: 'CEO & Co-Founder at Airbitz',
+        chDesc: 'Airbitz钱包创始人',
         src: Paul
       }, {
         name: 'David Brin',
         desc: 'Author, Futurist, Public Speaker',
+        chDesc: '(大卫▪布林) 著名作家，未来学家，tedtalk演讲人',
         src: David
       }, {
         name: 'Geoff Odell',
         desc: 'CEO at Trusted-HIT | former Novartis VP of Global Operations',
+        chDesc: '首席执行官|前诺华全球业务副主席',
         src: Geoff
       }, {
         name: 'Ronald Graham',
         desc: 'Inventor of Grahamʼs Number | Mathematician and Chief Scientist at CalIT2',
+        chDesc: '(葛立恆) 知名数学家，美国数学学会（AMS）主席',
         src: Graham
       }, {
         name: 'Mark Thiemens',
         desc: 'Former dean of Physical Sciences at UC San Diego',
+        chDesc: '(马克▪蒂门斯) 前加州大学圣地亚哥分校物理院校主席',
         src: Mark
       }, {
         name: 'Jurgen Schulze',
         desc: 'Prof. of Computer Science at UCSD. 18+ years in VR & Computer Graphics',
+        chDesc: '加州大学圣地亚哥分校计算机学教授，虚拟现实经验以及计算机图像设计专家',
         src: Jurgen
       }, {
         name: 'Silvia Mah',
         desc: 'Executive Director of Hera-Labs',
+        chDesc: '实验室的执行董事',
         src: Silvia
       }, {
         name: 'Daniel Berard',
         desc: 'Former Lead Engineer at Accelrys/Dassault Systemes',
+        chDesc: '前首席工程师',
         src: Dan
       }, {
         name: 'Deborah Jude',
         desc: 'Communications Officer at Center for Microbiome Innovation at UCSD',
+        chDesc: '加州大学圣地亚哥分校微生物发展通讯执行官',
         src: Deb
       }, {
         name: 'John Graham',
         desc: 'Lead Engineer of Pacific Research Platform',
+        chDesc: '太平洋研究中心首席工程师',
         src: John
       }, {
         name: 'Bruna Mori',
         desc: 'Director of Engagement at The Center for Design and Geopolitics',
+        chDesc: '设计和地缘、政治中心参与总监',
         src: Bruna
       }]
     }
