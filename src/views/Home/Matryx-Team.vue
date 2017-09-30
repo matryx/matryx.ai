@@ -14,6 +14,7 @@
           :alt="member.name"
           :name="member.name"
           :title="member.title"
+          :chTitle="member.chTitle"
           :linkedInLink="member.linkedInLink"
           :twitterLink="member.twitterLink"
           :githubLink="member.githubLink"
@@ -58,9 +59,7 @@ import Edward from '@/assets/images/team/Edward.png'
 import Ethan from '@/assets/images/team/Ethan.png'
 import Jacqueline from '@/assets/images/team/Jacqueline.png'
 import Lilian from '@/assets/images/team/Lilian.png'
-import Wesly from '@/assets/images/team/Wesly.png'
 import Ty from '@/assets/images/team/Ty.png'
-import Jason from '@/assets/images/team/Jason.png'
 
 import Greg from '@/assets/images/advisors/greg.jpg'
 import Ben from '@/assets/images/advisors/ben.jpg'
@@ -89,24 +88,28 @@ export default {
       team: [{
         name: 'Steve McCloskey',
         title: 'Chief Executive Officer',
+        chTitle: '',
         src: Steve,
         linkedInLink: 'https://www.linkedin.com/in/stevenmccloskey/',
         twitterLink: 'https://www.twitter.com/StevenMcCloskey'
       }, {
         name: 'Keita Funakawa',
         title: 'Chief Operations Officer',
+        chTitle: '',
         src: Keita,
         linkedInLink: 'https://www.linkedin.com/in/keitawf/',
         twitterLink: 'https://www.twitter.com/keitawf/'
       }, {
         name: 'Scott Morgan',
         title: 'Chief Financial Officer',
+        chTitle: '',
         src: Scott,
         linkedInLink: 'https://www.linkedin.com/in/scottdmorgan/',
         twitterLink: 'https://twitter.com/btcjournal'
       }, {
         name: 'Edgardo Leija',
         title: 'Chief Experience Officer',
+        chTitle: '',
         src: Edgardo,
         linkedInLink: 'https://www.linkedin.com/in/edgardoLeija',
         twitterLink: 'https://www.twitter.com/edgardoLeija',
@@ -114,6 +117,7 @@ export default {
       }, {
         name: 'Vincent Brunet',
         title: 'Chief Technology Officer',
+        chTitle: '',
         src: Vincent,
         linkedInLink: 'https://www.linkedin.com/in/vbrunet/',
         twitterLink: 'https://www.twitter.com/seriousbrunet',
@@ -121,12 +125,14 @@ export default {
       }, {
         name: 'Adam Simon',
         title: 'Project Developer',
+        chTitle: '',
         src: Adam,
         linkedInLink: 'https://www.linkedin.com/in/ottomanbob/',
         twitterLink: 'https://www.twitter.com/ottomanbob/'
       }, {
         name: 'Kyle Lee',
         title: 'Mathematician',
+        chTitle: '',
         src: Kyle,
         linkedInLink: 'https://www.linkedin.com/in/kylelee4c5/',
         twitterLink: 'https://www.twitter.com/themrkylelee',
@@ -134,53 +140,51 @@ export default {
       }, {
         name: 'Kai Wang',
         title: 'VP Software Development',
+        chTitle: '',
         src: Kai,
         linkedInLink: 'https://www.linkedin.com/in/kai-wang-1155b064'
       }, {
         name: 'Dennis Chiang',
         title: 'Developer',
+        chTitle: '',
         src: Dennis,
         linkedInLink: 'https://www.linkedin.com/in/dennis-tsung-chen-chiang-442b322a/'
       }, {
         name: 'Max Howard',
         title: 'Architect',
+        chTitle: '',
         src: Max,
         linkedInLink: 'https://www.linkedin.com/in/maxwell-howard-b0a34798/',
         githubLink: 'https://github.com/Astrovicis'
       }, {
         name: 'Edward Zhou',
         title: 'Developer',
+        chTitle: '软件开发人',
         src: Edward
       }, {
         name: 'Ethan Vanderhorn',
         title: 'Developer',
+        chTitle: '软件开发人',
         src: Ethan,
         linkedInLink: 'https://www.linkedin.com/in/ethan-vander-horn-46556b107/'
       }, {
         name: 'Jacqueline Bontigao',
         title: 'Developer',
+        chTitle: '软件开发人',
         src: Jacqueline,
         linkedInLink: 'https://www.linkedin.com/in/jacqueline-bontigao-0661ab120/'
       }, {
         name: 'Lilian Angel',
         title: 'Developer',
+        chTitle: '软件开发人',
         src: Lilian,
         linkedInLink: 'https://www.linkedin.com/in/lilianangel/'
       }, {
         name: 'Ty Stahnke',
         title: 'Developer',
+        chTitle: '软件开发人',
         src: Ty,
         linkedInLink: 'https://www.linkedin.com/in/tystahnke/'
-      }, {
-        name: 'Jason Tsay',
-        title: 'Designer',
-        src: Jason,
-        linkedInLink: 'https://www.linkedin.com/in/jasontsay/'
-      }, {
-        name: 'Wesly Xia',
-        title: 'Marketer',
-        src: Wesly,
-        linkedInLink: 'https://www.linkedin.com/in/weihao-xia-125401b4'
       }],
 
       advisors: [{

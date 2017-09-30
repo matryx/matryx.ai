@@ -4,7 +4,10 @@
 
     <div class="team-member__name">{{ name }}</div>
 
-    <div class="team-member__title member__title"> {{ title }} </div>
+    <div class="team-member__title member__title">
+      <span v-if=" language === 'ch' "> {{ chTitle }} </span>
+      <span v-else> {{ title }} </span>
+    </div>
 
     <div class="team-member__social-icons">
       <a :href="linkedInLink" target="_blank" v-show="linkedInLink">
@@ -29,6 +32,7 @@ export default {
     alt: String,
     name: String,
     title: String,
+    chTitle: String,
     linkedInLink: {
       type: String,
       default: ''
