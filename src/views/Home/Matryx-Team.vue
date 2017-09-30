@@ -2,7 +2,10 @@
   <section class="matryx-team bkg--grey-gradient">
     <div class="content-container content-container--large">
       <div class="matryx-team__title">
-        <h2 class="matryx-team__title__title">The Team</h2>
+        <h2 class="matryx-team__title__title">
+          <span v-if="language === 'ch'">团队</span>
+          <span v-else>The Team</span>
+        </h2>
         <div class="matryx-team__title__line"></div>
       </div>
 
@@ -22,7 +25,10 @@
       </div>
 
       <div class="matryx-advisors__title">
-        <h2 class="matryx-advisors__title__title">The Advisors</h2>
+        <h2 class="matryx-advisors__title__title">
+          <span v-if="language === 'ch'"> 顾问 </span>
+          <span v-else>The Advisors</span>
+        </h2>
         <div class="matryx-advisors__title__line"></div>
       </div>
       <div class="matryx-team__advisors">
@@ -82,6 +88,12 @@ export default {
   components: {
     TeamMember,
     AdvisorMember
+  },
+
+  computed: {
+    language () {
+      return this.$store.state.language
+    }
   },
 
   data () {

@@ -6,7 +6,10 @@
         <span v-else>NEWS &#38; EVENTS</span>
       </h2>
       <div class="news-events__title">
-        <h3 class="news-events__title__sub">News</h3>
+        <h3 class="news-events__title__sub">
+          <span v-if="language === 'ch'">新闻</span>
+          <span v-else>News</span>
+        </h3>
         <div class="news-events__title__line"></div>
       </div>
 
@@ -29,7 +32,10 @@
 
       <div class="news-events__title">
         <div class="news-events__title__line"></div>
-        <h3 class="news-events__title__sub--events">Events</h3>
+        <h3 class="news-events__title__sub--events">
+          <span v-if="language === 'ch'">大事</span>
+          <span v-else>Events</span>
+        </h3>
       </div>
 
       <div class="news-events__events">

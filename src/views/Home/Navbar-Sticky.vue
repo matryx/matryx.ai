@@ -53,7 +53,10 @@
           <span v-else-if=" language === 'ge' ">WHITE PAPER</span>
           <span v-else-if=" language === 'ja' ">WHITEPAPER</span>
           <span v-else-if=" language === 'ko' ">백서를</span> -->
-          <span>Sale Terms</span>
+          <span v-if=" language === 'ch' ">
+            销售条款
+          </span>
+          <span v-else>Sale Terms</span>
         </b-nav-item>
 
         <!-- Only Mobile View -->

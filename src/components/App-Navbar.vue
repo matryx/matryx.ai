@@ -30,7 +30,8 @@
             href="/faq/about/what-is-matryx"
             target="_self"
           >
-            <span>FAQ</span>
+            <span v-if="language === 'ch'"> 常见问题 </span>
+            <span v-else>FAQ</span>
           </b-nav-item>
 
           <b-nav-item class="text-color--white"
@@ -38,7 +39,8 @@
             href="/rewards"
             target="_self"
           >
-            <span>REWARDS</span>
+            <span v-if="language === 'ch'">奖励</span>
+            <span v-else>REWARDS</span>
           </b-nav-item>
 
 
