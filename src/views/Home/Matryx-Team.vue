@@ -89,28 +89,28 @@ export default {
       team: [{
         name: 'Steve McCloskey',
         title: 'Chief Executive Officer',
-        chTitle: '',
+        chTitle: '首席执行官',
         src: Steve,
         linkedInLink: 'https://www.linkedin.com/in/stevenmccloskey/',
         twitterLink: 'https://www.twitter.com/StevenMcCloskey'
       }, {
         name: 'Keita Funakawa',
         title: 'Chief Operations Officer',
-        chTitle: '',
+        chTitle: '首席运营官',
         src: Keita,
         linkedInLink: 'https://www.linkedin.com/in/keitawf/',
         twitterLink: 'https://www.twitter.com/keitawf/'
       }, {
         name: 'Scott Morgan',
         title: 'Chief Financial Officer',
-        chTitle: '',
+        chTitle: '首席财务官',
         src: Scott,
         linkedInLink: 'https://www.linkedin.com/in/scottdmorgan/',
         twitterLink: 'https://twitter.com/btcjournal'
       }, {
         name: 'Edgardo Leija',
         title: 'Chief Experience Officer',
-        chTitle: '',
+        chTitle: '首席实验官',
         src: Edgardo,
         linkedInLink: 'https://www.linkedin.com/in/edgardoLeija',
         twitterLink: 'https://www.twitter.com/edgardoLeija',
@@ -118,7 +118,7 @@ export default {
       }, {
         name: 'Vincent Brunet',
         title: 'Chief Technology Officer',
-        chTitle: '',
+        chTitle: '首席技术官',
         src: Vincent,
         linkedInLink: 'https://www.linkedin.com/in/vbrunet/',
         twitterLink: 'https://www.twitter.com/seriousbrunet',
@@ -126,14 +126,14 @@ export default {
       }, {
         name: 'Adam Simon',
         title: 'Project Developer',
-        chTitle: '',
+        chTitle: '项目开发人',
         src: Adam,
         linkedInLink: 'https://www.linkedin.com/in/ottomanbob/',
         twitterLink: 'https://www.twitter.com/ottomanbob/'
       }, {
         name: 'Kyle Lee',
         title: 'Mathematician',
-        chTitle: '',
+        chTitle: '项目数学家',
         src: Kyle,
         linkedInLink: 'https://www.linkedin.com/in/kylelee4c5/',
         twitterLink: 'https://www.twitter.com/themrkylelee',
@@ -141,7 +141,7 @@ export default {
       }, {
         name: 'Kai Wang',
         title: 'VP Software Development',
-        chTitle: '',
+        chTitle: '软件运营官',
         src: Kai,
         linkedInLink: 'https://www.linkedin.com/in/kai-wang-1155b064'
       }, {
@@ -153,7 +153,7 @@ export default {
       }, {
         name: 'Max Howard',
         title: 'Architect',
-        chTitle: '',
+        chTitle: '软件建筑师',
         src: Max,
         linkedInLink: 'https://www.linkedin.com/in/maxwell-howard-b0a34798/',
         githubLink: 'https://github.com/Astrovicis'
