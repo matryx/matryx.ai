@@ -22,7 +22,12 @@
             <h3 class="text-color--matryx-grey-blue">MATRYX TOKEN SALE TERMS</h3>
             <Tokensale-Sale-Terms class="salemodal__body__terms__document" id="sale-terms">
             </Tokensale-Sale-Terms>
-            <p class="salemodal__body__terms__link text-color--matryx-blue">
+            <p class="salemodal__body__terms__link text-color--matryx-blue" v-if="language === 'ch'">
+              <a href="/sale-terms-ch.pdf" target="_blank">
+                销售条款
+              </a>
+            </p>
+            <p class="salemodal__body__terms__link text-color--matryx-blue" v-else>
               <a href="/sale-terms.pdf" target="_blank">
                 View sale terms in PDF format.
               </a>
