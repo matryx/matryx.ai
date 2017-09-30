@@ -147,7 +147,7 @@ export default {
       }, {
         name: 'Dennis Chiang',
         title: 'Developer',
-        chTitle: '',
+        chTitle: '软件开发人',
         src: Dennis,
         linkedInLink: 'https://www.linkedin.com/in/dennis-tsung-chen-chiang-442b322a/'
       }, {

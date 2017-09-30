@@ -27,6 +27,12 @@
 export default {
   name: 'TeamMember',
 
+  computed: {
+    language () {
+      return this.$store.state.language
+    }
+  },
+
   props: {
     src: String,
     alt: String,
