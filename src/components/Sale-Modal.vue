@@ -48,7 +48,7 @@
               </Checkbox>
               <Checkbox name="havePrivateKeys" :obj="havePrivateKeys">
                 <span slot="label" v-if="language === 'ch'">
-                  我理解并同意假设我用交易平台地址我必须拥有它的私匙.
+                  我理解并同意假设我用交易平台地址我必须拥有它的私匙
                 </span>
                 <span slot="label" v-else>
                   I understand and agree that if I use an exchange address I must own the private keys.
