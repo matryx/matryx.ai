@@ -72,7 +72,7 @@
     </div>
     <br/><br/>
     <h5 class="text-center">
-      <span v-if=" language === 'ch' ">销售合同 <a href="/sale-terms.pdf" target="_blank"> https://matryx.ai/sale-terms.pdf</a></span>
+      <span v-if=" language === 'ch' ">销售合同 <a href="/sale-terms-ch.pdf" target="_blank"> https://matryx.ai/sale-terms.pdf</a></span>
       <span v-else >Sale Terms available at <a href="/sale-terms.pdf" target="_blank"> https://matryx.ai/sale-terms.pdf</a></span>
     </h5>
   </section>

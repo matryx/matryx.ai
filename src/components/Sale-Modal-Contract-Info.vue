@@ -1,14 +1,21 @@
 <template>
   <div class="salemodal-contract-info">
-    <h2 class="text-color--matryx-grey-blue">SALE CONTRACT INFO</h2>
+    <h2 class="text-color--matryx-grey-blue">
+      <span v-if=" language === 'ch' ">销售合约明细</span>
+      <span v-else>SALE CONTRACT INFO</span></h2>
     <br/>
-    <b>Instructions: </b>
-    <p>The following is the sale contract information needed in order to complete the MTX transaction using your Ethereum wallet. Take each value and paste it into the corresponding field in your wallet, along with the amount of ETH you wish to spend.
-
+    <b>
+      <span v-if=" language === 'ch' ">指令：</span>
+      <span v-else>Instructions: </span>
+    </b>
+    <p>
+      <span v-if=" language === 'ch' ">以下是如有需要利用您的以太钱包交易MTX币的销售合约信息。请黏贴并复制所有同等的信息到您的以太钱包中，并且明确表明您在本次所需花费的以太币。</span>
+      <span v-else>The following is the sale contract information needed in order to complete the MTX transaction using your Ethereum wallet. Take each value and paste it into the corresponding field in your wallet, along with the amount of ETH you wish to spend.</span>
     <br>
 
     <h5>
-      For detailed instructions, please refer to our <a href="https://blog.matryx.ai/matryx-pre-sale-how-to-participate-tips-on-staying-safe-711938733015" target="_blank">blog post.</a>
+      <span v-if=" language === 'ch' ">如果需要更明确的购买指引信息，请浏览<a href="https://blog.matryx.ai/matryx-pre-sale-how-to-participate-tips-on-staying-safe-711938733015" target="_blank">我们的博客</a></span>
+      <span v-else>For detailed instructions, please refer to our <a href="https://blog.matryx.ai/matryx-pre-sale-how-to-participate-tips-on-staying-safe-711938733015" target="_blank">blog post.</a></span>
     </h5>
 
     </p>
@@ -16,7 +23,9 @@
         <!-- these should be click to copy
         cannot change input
          -->
-      <label class="salemodal-contract-info__form__label" for="contract-address">Sale Address <small><span class="text-color--green uppercase">*required</span></small>
+      <label class="salemodal-contract-info__form__label" for="contract-address">
+        <span v-if=" language === 'ch' ">购买地址</span>
+        <span v-else>Sale Address <small><span class="text-color--green uppercase">*required</span></small></span>
       </label>
       <input class="salemodal-contract-info__form__input" id="saleAddress"
         :value="saleAddress" readonly
@@ -29,9 +38,13 @@
       </button>
 
       <label class="salemodal-contract-info__form__label" for="gas">
-        Gas
-        <small class="text-color--green uppercase">*recommended</small>
-        <br/><small>Using less than this amount may result in a failed transaction.</small>
+        <span v-if=" language === 'ch' ">油量</span>
+        <span v-else>Gas<small class="text-color--green uppercase">*recommended</small>
+        </span>
+        <br/><small>
+          <span v-if=" language === 'ch' ">所有低于此数据则可能导致一次失败的</span>
+          <span v-else>Using less than this amount may result in a failed transaction.</span>
+        </small>
       </label>
       <input class="salemodal-contract-info__form__input"
         :value="gas"
@@ -45,8 +58,14 @@
         Click to copy
       </button>
 
-      <label class="salemodal-contract-info__form__label" for="data-field">Data <small class="text-color--green uppercase">*required</small>
-        <br/><small>You <em>must</em> have a Data field when you send your transaction.<br/> Depending on your wallet, this field may be under 'Advanced'. </small>
+      <label class="salemodal-contract-info__form__label" for="data-field">
+        <span v-if=" language === 'ch' ">信息</span>
+        <span v-else>Data <small class="text-color--green uppercase">*required</small></span>
+        <br/>
+        <small>
+          <span v-if=" language === 'ch' ">当您发送金额时，您需要有一个信息库。取决于不同的钱包，这一选项也许会在“高级”中</span>
+          <span v-else>You <em>must</em> have a Data field when you send your transaction.<br/> Depending on your wallet, this field may be under 'Advanced'. </span>
+        </small>
       </label>
       <input class="salemodal-contract-info__form__input" id="dataField" :value="dataField" readonly>
       <button class="salemodal-contract-info__form__copy"
@@ -56,7 +75,10 @@
       </button>
 
     </div>
-    <p>Transactions usually take several minutes to process, but may take longer.</p>
+    <p>
+      <span v-if=" language === 'ch' ">交易通常会通过几分钟短暂的时间，也可能会更长。</span>
+      <span v-else>Transactions usually take several minutes to process, but may take longer.</span>
+    </p>
   </div>
 </template>
 
@@ -81,6 +103,12 @@
       },
       handleSubmit: {
         type: Function
+      }
+    },
+
+    computed: {
+      language () {
+        return this.$store.state.language
       }
     },
 
