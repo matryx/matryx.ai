@@ -28,17 +28,20 @@
             <div class="salemodal__body__terms__checklist">
               <Checkbox name="saleTermsRead" :obj="saleTermsRead">
                 <span slot="label">
-                  I have read and agree to the Sale Terms of the Matryx Token Sale.
+                  <span v-if=" language === 'ch' ">我已阅读并同意Matryx币销售条款</span>
+                  <span v-else>I have read and agree to the Sale Terms of the Matryx Token Sale.</span>
                 </span>
               </Checkbox>
               <Checkbox name="erc20WalletAddress" :obj="erc20WalletAddress">
                 <span slot="label">
-                  I understand and agree that I must use a valid ERC20 compatible wallet address.
+                  <span v-if=" language === 'ch' ">我理解并同意我必须用一个有效的ERC20兼容钱包地址</span>
+                  <span v-else>I understand and agree that I must use a valid ERC20 compatible wallet address.</span>
                 </span>
               </Checkbox>
               <Checkbox name="noExchangeAddress" :obj="noExchangeAddress">
                 <span slot="label">
-                  I understand and agree that the address I use must not be an exchange address.
+                  <span v-if=" language === 'ch' ">我理解并同意我用的地址并不是一个交易平台地址</span>
+                  <span v-else>I understand and agree that the address I use must not be an exchange address.</span>
                 </span>
               </Checkbox>
               <Checkbox name="havePrivateKeys" :obj="havePrivateKeys">
