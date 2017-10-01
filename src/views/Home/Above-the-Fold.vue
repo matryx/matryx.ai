@@ -170,9 +170,9 @@ section.above-the-fold {
 
 .above-the-fold {
   border-radius: 0;
-  /*background: url('../../assets/images/backgrounds/abovethefoldbkg.svg');*/
-  /*// background-image: url('../../assets/images/backgrounds/abovethefoldbkg.svg');*/
-  background-color: #082C49;
+  // background: url('../../assets/images/backgrounds/abovethefoldbkg.svg');
+  background-image: url('../../assets/images/backgrounds/abovethefoldbkg.svg');
+  // background-color: #082C49;
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 0;
@@ -185,19 +185,18 @@ iframe.above-the-fold__video {
   min-width:500px !important;
 }
 
-.above-the-fold__video__overlay {
-  position: absolute;
-  background-color: #000;
-  opacity: 0.7;
-  z-index:1;
+// .above-the-fold__video__overlay {
+//   position: absolute;
+//   background-color: #000;
+//   opacity: 0.7;
+//   z-index:1;
+// }
 
-}
-
-.above-the-fold__video__overlay,
-.above-the-fold__video {
-  height: 100% !important;
-  width: 100% !important;
-}
+// .above-the-fold__video__overlay,
+// .above-the-fold__video {
+//   height: 100% !important;
+//   width: 100% !important;
+// }
 
 
 .token-sale__video-launcher button {
@@ -329,7 +328,7 @@ iframe.above-the-fold__video {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
 
   .token-sale {
     flex-direction: column;
@@ -361,10 +360,13 @@ iframe.above-the-fold__video {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   section.above-the-fold {
+    // padding-bottom: 200px;
+  
     & > .content-container {
       padding-top: 40px;
+      // margin-bottom: 140px;
     }
   }
   #getNotified .modal-dialog .cta__form__email {
