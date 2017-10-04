@@ -362,7 +362,6 @@ iframe.above-the-fold__video {
 
 @media screen and (max-width: 550px) {
   section.above-the-fold {
-    // padding-bottom: 200px;
   
     & > .content-container {
       padding-top: 40px;
