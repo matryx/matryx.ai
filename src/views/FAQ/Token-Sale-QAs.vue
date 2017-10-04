@@ -81,15 +81,6 @@
       </p>
     </QA>
 
-    <QA cssId="what-is-the-number-of-mtx-in-circulation">
-      <span slot="question">
-        What is the number of MTX in circulation? How many will be sold?
-      </span>
-      <p slot="answer">
-        Exactly 314,159,265 (π * 100,000,000) MTX will be created. 60% of the tokens will be sold during the token sale at a rate of 1164 MTX per ETH, with a cap of 161,803 (ϕ * 100,000) ETH.
-      </p>
-    </QA>
-
     <QA cssId="what-is-the-difference-between-matryx">
       <span slot="question">
         What is the difference between Matryx and MTX?
