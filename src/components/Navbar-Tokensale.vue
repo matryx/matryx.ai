@@ -51,7 +51,7 @@
     				<span v-else>September 13, 2017</span>
           </p>
         </div>
-        <div class="token-bar__section third">
+        <!-- <div class="token-bar__section third">
           <img src="../assets/icons/icon-matryx-token-blue.png" alt="">
           <p class="text-color--white">314,159,265</p>
           <p class="text-color--matryx-lighter-blue">
@@ -62,10 +62,10 @@
     				<span v-else-if=" language === 'ko' ">이용가능 MTX 총액</span>
     				<span v-else>Total MTX Available</span>
           </p>
-        </div>
+        </div> -->
         <div class="token-bar__section fourth">
           <img src="../assets/icons/icon-eth-token-blue.png" alt="">
-          <p class="text-color--white">161,803</p>
+          <p class="text-color--white">26,888</p>
           <p class="text-color--matryx-lighter-blue">
             <span v-if=" language === 'ru' ">Предел ETH</span>
     				<span v-else-if=" language === 'ch' ">ETH 上限</span>

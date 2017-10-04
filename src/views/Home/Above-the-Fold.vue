@@ -28,10 +28,10 @@
           <Countdown end="November 15 2017 15:00:00 UTC" style="margin-top: 0px;"></Countdown>
 
           <p class="text-center text-color--matryx-blue">
-            We've extended our token sale!
+            We've extended and updated our token sale!
             <br/>Check out our
             <a class="link"
-              href="https://blog.matryx.ai/token-sale-update-changing-things-up-your-questions-answered" 
+              href="https://blog.matryx.ai/token-sale-update-changing-it-up-667c5750882cd" 
               target="_blank"
             >
               blog post

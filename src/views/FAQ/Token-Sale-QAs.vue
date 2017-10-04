@@ -81,6 +81,15 @@
       </p>
     </QA>
 
+    <QA cssId="what-is-the-number-of-mtx-in-circulation">
+      <span slot="question">
+        What is the number of MTX in circulation? How many will be sold?
+      </span>
+      <p slot="answer">
+        Up to 31,297,632 tokens will be sold at a rate of 1164 MTX per ETH. At the end of the sale, any unsold tokens will be burnt. The total amount of tokens sold will become 60% of the total supply.
+      </p>
+    </QA>
+
     <QA cssId="what-is-the-difference-between-matryx">
       <span slot="question">
         What is the difference between Matryx and MTX?
