@@ -25,7 +25,18 @@
             <span v-if=" language === 'ch' ">距结束时间</span>
             <span v-else>Ends in:</span>
           </p>
-          <Countdown end="October 13 2017 15:00:00 UTC" style="margin-top: 0px;"></Countdown>
+          <Countdown end="November 15 2017 15:00:00 UTC" style="margin-top: 0px;"></Countdown>
+
+          <p class="text-center text-color--matryx-blue">
+            We've extended our token sale!
+            <br/>Check out our
+            <a class="link"
+              href="https://blog.matryx.ai/token-sale-update-changing-things-up-your-questions-answered" 
+              target="_blank"
+            >
+              blog post
+            </a> for more information.
+          </p>
 
           <Matryx-Btn :text="buttonText" :handleClick="openSaleModal">
           </Matryx-Btn>
@@ -132,7 +143,7 @@ section.above-the-fold {
   .matryx-button {
     background-color: $light-green;
     border-color: $light-green;
-    margin: 0 auto 10px;
+    margin: -5px auto 10px;
 
     &:hover {
       background-color: $matryx-blue;
