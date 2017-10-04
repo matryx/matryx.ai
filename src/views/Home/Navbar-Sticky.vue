@@ -44,19 +44,21 @@
           <span v-else-if=" language === 'ko' ">백서를</span>
           <span v-else>WHITEPAPER</span>
         </b-nav-item>
+        
+        <b-nav-item class="text-color--matryx-grey"
+          target="_blank"
+          href="/sale-terms-ch.pdf"
+          v-if="language === 'ch'"
+        >
+          销售条款
+        </b-nav-item>
+
         <b-nav-item class="text-color--matryx-grey"
           target="_blank"
           href="/sale-terms.pdf"
+          v-else
         >
-          <!-- <span class="russian" v-if=" language === 'ru' ">техническую документацию</span>
-          <span v-else-if=" language === 'ch' ">白皮书</span>
-          <span v-else-if=" language === 'ge' ">WHITE PAPER</span>
-          <span v-else-if=" language === 'ja' ">WHITEPAPER</span>
-          <span v-else-if=" language === 'ko' ">백서를</span> -->
-          <span v-if=" language === 'ch' ">
-            销售条款
-          </span>
-          <span v-else>Sale Terms</span>
+          Sale Terms
         </b-nav-item>
 
         <!-- Only Mobile View -->
