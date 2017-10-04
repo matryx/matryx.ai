@@ -21,21 +21,20 @@
         </h1>
 
         <div>
-          <p class="uppercase text-center text-color--matryx-blue" style="margin-bottom: -10px;">
+          <h4 class="uppercase text-center text-color--matryx-blue" style="margin-bottom: -10px; margin-top: 20px;">
             <span v-if=" language === 'ch' ">距结束时间</span>
-            <span v-else>Ends in:</span>
-          </p>
-          <Countdown end="November 15 2017 15:00:00 UTC" style="margin-top: 0px;"></Countdown>
+            <span v-else>10% Bonus Ends in:</span>
+          </h4>
+          <Countdown end="October 13 2017 15:00:00 UTC" style="margin-top: 0px;"></Countdown>
 
           <p class="text-center text-color--matryx-blue">
-            We've extended and updated our token sale!
-            <br/>Check out our
+            We appreciate everyone’s support so far
+            <br/> and have some
             <a class="link"
               href="https://blog.matryx.ai/token-sale-update-changing-it-up-667c5750882cd" 
               target="_blank"
             >
-              blog post
-            </a> for more information.
+              exciting news!</a>
           </p>
 
           <Matryx-Btn :text="buttonText" :handleClick="openSaleModal">
