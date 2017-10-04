@@ -1,6 +1,6 @@
 <template>
   <div class="body-content">
-    <Navbar-Token></Navbar-Token>
+    <!-- <Navbar-Token></Navbar-Token> -->
     <Above-the-Fold></Above-the-Fold>
     <Blurb></Blurb>
     <Announcement></Announcement>

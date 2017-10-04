@@ -1,6 +1,6 @@
 <template>
   <div class="body-content" style="background-color:#FFF;">
-    <Navbar-Token></Navbar-Token>
+    <!-- <Navbar-Token></Navbar-Token> -->
     <Navbar-Sticky></Navbar-Sticky>
     <Above-the-Fold></Above-the-Fold>
     <div class="cta-middle-banner">
