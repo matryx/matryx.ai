@@ -29,7 +29,8 @@
               <span v-else>Ends In:</span>
             </span>
           </h4>
-          <Countdown end="October 13 2017 15:00:00 UTC" style="margin-top: 0px;"></Countdown>
+
+          <Countdown :end="endDate" style="margin-top: 0px;"></Countdown>
 
           <p class="text-center text-color--matryx-blue">
             We appreciate everyone’s support so far
@@ -93,8 +94,36 @@ export default {
 
     buttonText () {
       return this.language === 'ch' ? '购买MTX' : 'Purchase MTX'
-    }
+    },
 
+    endDate () {
+      const end10 = 'October 13 2017 15:00:00 UTC'
+      const end5 = 'October 31 2017 15:00:00 UTC'
+      const endSale = 'November 15 2017 15:00:00 UTC'
+      const today = new Date()
+
+      if (today.getTime() > new Date(endSale).getTime()) {
+        this.is5 = false
+        this.is10 = false
+        return today
+      }
+
+      if (today.getTime() > new Date(end5).getTime()) {
+        this.is5 = false
+        this.is10 = false
+        return endSale
+      }
+
+      if (today.getTime() > new Date(end10).getTime()) {
+        this.is5 = true
+        this.is10 = false
+        return end5
+      }
+
+      this.is10 = true
+      this.is5 = false
+      return end10
+    }
   },
 
   data () {
@@ -104,7 +133,9 @@ export default {
         English: 'https://www.youtube.com/embed/iLHlwnaqTWw?rel=0&amp;showinfo=0',
         Chinese: 'http://player.youku.com/embed/XMzA0NzY0NzM4NA=='
       },
-      totalSold: 2600
+      totalSold: 2600,
+      is5: false,
+      is10: false
     }
   },
 
