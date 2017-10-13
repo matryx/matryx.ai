@@ -8,7 +8,6 @@
     </div>
     <Media-Mentions></Media-Mentions>
     <About-Matryx></About-Matryx>
-    <Pre-Sale v-if="showPreSale"></Pre-Sale>
     <div class="cta-middle-banner">
       <CTA-Banner :lighterText="true" :blueBkg="true" cta-location="Top"></CTA-Banner>
     </div>
@@ -48,8 +47,6 @@ import PreSale from './Pre-Sale'
 import TokenSale from './Token-Sale'
 import AboutMatryx from './About-Matryx'
 import AuditedBy from '@/components/Audited-By'
-
-import { isPreSale } from '@/utils'
 
 export default {
   name: 'home',
@@ -93,10 +90,6 @@ export default {
 
     if (this.$route.query.email) {
       this.$store.commit('setEmail', this.$route.query.email)
-    }
-
-    if (isPreSale()) {
-      this.showPreSale = true
     }
   },
   data () {

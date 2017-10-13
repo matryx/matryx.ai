@@ -23,7 +23,11 @@
         <div>
           <h4 class="uppercase text-center text-color--matryx-blue" style="margin-bottom: -10px; margin-top: 20px;">
             <span v-if=" language === 'ch' ">距结束时间</span>
-            <span v-else>10% Bonus Ends in:</span>
+            <span v-else>
+              <span v-if="is10">10% Bonus Ends in:</span>
+              <span v-else-if="is5">5% Bonus Ends in:</span>
+              <span v-else>Ends In:</span>
+            </span>
           </h4>
           <Countdown end="October 13 2017 15:00:00 UTC" style="margin-top: 0px;"></Countdown>
 
@@ -31,7 +35,7 @@
             We appreciate everyone’s support so far
             <br/> and have some
             <a class="link"
-              href="https://blog.matryx.ai/token-sale-update-changing-it-up-667c5750882cd" 
+              href="https://blog.matryx.ai/token-sale-update-changing-it-up-5f83de13a76d" 
               target="_blank"
             >
               exciting news!</a>
@@ -49,7 +53,7 @@
         </div>
       </div>
 
-      <div class="token-sale__video-launcher content-container--medium">
+      <div matrclass="token-sale__video-launcher content-container--medium">
         <iframe class="matryx-video-yt"
           width="560" height="315"
           :src="selectedLanguage" frameborder="0"

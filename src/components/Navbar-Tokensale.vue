@@ -104,8 +104,6 @@
 </template>
 
 <script>
-import { isPreSale, isMainSale } from '@/utils'
-
 export default {
   name: 'NavbarToken',
   computed: {
@@ -113,13 +111,7 @@ export default {
       return this.$store.state.language
     }
   },
-  mounted () {
-    if (isPreSale()) {
-      this.showPreSale = true
-    } else if (isMainSale()) {
-      this.showMainSale = true
-    }
-  },
+
   data () {
     return {
       showPreSale: false,

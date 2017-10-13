@@ -83,8 +83,6 @@
 </template>
 
 <script>
-  import { isPreSale } from '@/utils'
-
   export default {
     name: 'SaleModalContractInfo',
 
@@ -115,12 +113,6 @@
     data () {
       return {
         showPreSale: false
-      }
-    },
-
-    mounted () {
-      if (isPreSale()) {
-        this.showPreSale = true
       }
     },
 

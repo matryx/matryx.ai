@@ -79,7 +79,7 @@
     <h5 class="text-center">
       Read the updates to our token sale on our 
       <a class="link"
-        href="https://blog.matryx.ai/token-sale-update-changing-it-up-667c5750882c"
+        href="https://blog.matryx.ai/token-sale-update-changing-it-up-5f83de13a76d"
         target="_blank"
       > blog</a>.
     </h5>
@@ -94,19 +94,10 @@ import cap from '../../assets/icons/icon-sale-cap.svg'
 import allocated60 from '../../assets/icons/icon-sale-60allocated.svg'
 // import mtx from '../../assets/icons/icon-sale-mtx.png'
 
-import { isPreSale, isMainSale } from '@/utils'
-
 export default {
   name: 'TokenSale',
   components: {
     SaleIcon
-  },
-  mounted () {
-    if (isPreSale()) {
-      this.showPreSale = true
-    } else if (isMainSale()) {
-      this.showMainSale = true
-    }
   },
   computed: {
     language () {
