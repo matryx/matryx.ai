@@ -72,16 +72,24 @@ export default {
 
   computed: {
     days () {
-      return Math.floor(this.time / (1000 * 60 * 60 * 24))
+      const val = Math.floor(this.time / (1000 * 60 * 60 * 24))
+      if (val < 0) return 0
+      return val
     },
     hours () {
-      return Math.floor((this.time / (1000 * 60 * 60)) % 24)
+      const val = Math.floor((this.time / (1000 * 60 * 60)) % 24)
+      if (val < 0) return 0
+      return val
     },
     minutes () {
-      return Math.floor((this.time / 1000 / 60) % 60)
+      const val = Math.floor((this.time / 1000 / 60) % 60)
+      if (val < 0) return 0
+      return val
     },
     seconds () {
-      return Math.floor((this.time / 1000) % 60)
+      const val = Math.floor((this.time / 1000) % 60)
+      if (val < 0) return 0
+      return val
     },
     language () {
       return this.$store.state.language
