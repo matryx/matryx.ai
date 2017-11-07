@@ -8,27 +8,71 @@
       	<span v-else-if=" language === 'ge' ">Über unseren Token-Verkauf</span>
       	<span v-else-if=" language === 'ja' ">当社のトークンセールについて</span>
       	<span v-else-if=" language === 'ko' ">저희 토큰 판매에 대하여</span>
+        <span v-else-if=" language === 'es' ">INFORMACION DE LA VENTA</span>
       	<span v-else>ABOUT OUR TOKEN SALE</span>
       </h2>
       <div class="card-container--horizontal">
         <div class="about-container card-container--vertical">
           <div class="card">
             <h4 class="text-color--matryx-black">
+              <span v-if=" language === 'es' ">La MTX Token</span>
+              <span v-else-if=" language === 'ch' ">MTX 토큰</span>
+              <span v-else-if=" language === 'ru' ">Ток MTX</span>
+              <span v-else-if=" language === 'ru' ">MTXトークン</span>
+              <span v-else-if=" language === 'ko' ">MTX 토큰</span>
+              <span v-else-if=" language === 'ge' ">Der MTX-Token</span>
+              <span v-else>The MTX Token</span>
+            </h4>
+            <p>
+              <span v-if=" language === 'es' ">MTX es el token nativo de la plataforma Matryx. Los contribuyentes a la plataforma o recompensas serán recompensados solo en MTX.</span>
+              <span v-else-if=" language === 'ch' ">MTX是Matryx平台的原生令牌。 平台或奖励的贡献者将仅在MTX中获得奖励。</span>
+              <span v-else-if=" language === 'ja' ">MTXはMatryxプラットフォームのネイティブトークンです。 プラットフォームや賞金の寄付者はMTXのみで報酬を受けるでしょう。 </span>
+              <span v-else-if=" language === 'ru' ">MTX является родным маркером платформы Matryx. Сторонники платформы или награды будут вознаграждены только в MTX.  </span>
+              <span v-else-if=" language === 'ko' ">MTX는 Matryx 플랫폼의 기본 토큰입니다. 플랫폼 또는 현상금에 기여한 사람은 MTX에서만 보상을받습니다. </span>
+              <span v-else-if=" language === 'ge' ">MTX ist das native Token der Matryx-Plattform. Mitwirkende an der Plattform oder Prämien werden nur in MTX belohnt. </span>
+              <span v-else>MTX is the native token of the Matryx platform. Contributors to the platform or bounties will be rewarded in MTX only. </span>
+            </p>
+          </div>
+          <div class="card">
+            <h4 class="text-color--matryx-black">
               <span v-if=" language === 'ru' ">Почему мы проводим продажу токенов</span>
-            	<span v-else-if=" language === 'ch' ">我们为何拥有代币销售</span>
-            	<span v-else-if=" language === 'ge' ">Warum wir einen Token-Verkauf durchführen</span>
-            	<span v-else-if=" language === 'ja' ">当社がトークンセールを行う理由</span>
-            	<span v-else-if=" language === 'ko' ">저희가 토큰 판매를 하는 이유</span>
+              <span v-else-if=" language === 'ch' ">为什么在区块链上？</span>
+              <span v-else-if=" language === 'ge' ">Warum auf der Blockchain?</span>
+              <span v-else-if=" language === 'ja' ">なぜブロックチャンスで？</span>
+              <span v-else-if=" language === 'ko' ">Warum auf der Blockchain?</span>
+              <span v-else-if=" language === 'es' ">Porque Blockchain</span>
+              <span v-else>Why on the Blockchain?</span>
+            </h4>
+            <p class="text-color--matryx-dark-grey">
+              <span v-if=" language === 'ru' ">Технология Blockchain, маркировка и интеллектуальные контракты позволяют Matryx точно отслеживать вклад пользователей и соответственно компенсировать их. Matryx позволяет распределенное сотрудничество по всему миру</span>
+              <span v-else-if=" language === 'ch' ">区块链技术，标记和智能合约使Matryx能够准确地跟踪用户的贡献并相应地进行补偿。 Matryx允许在全球范围内进行分布式协作。</span>
+              <span v-else-if=" language === 'ge' ">Durch Blockchain-Technologie, Tokenisierung und intelligente Verträge kann Matryx die Beiträge der Benutzer genau nachverfolgen und entsprechend kompensieren. Matryx ermöglicht eine verteilte Zusammenarbeit auf globaler Ebene.</span>
+              <span v-else-if=" language === 'ja' ">Blockchain技術、トークン化、およびスマートコントラクトにより、Matryxはユーザーの貢献を正確に追跡し、それに応じて補償することができます。 Matryxは、グローバル規模での分散型コラボレーションを可能にします。</span>
+              <span v-else-if=" language === 'ko' ">Blockchain 기술, 토큰 화 및 스마트 계약을 통해 Matryx는 사용자의 기여도를 정확하게 추적하고 적절하게 보상 할 수 있습니다. Matryx는 전 세계적으로 분산 된 협업을 가능하게합니다.</span>
+              <span v-else-if=" language === 'es' ">La tecnología de Blockchain, la tokenización y los contratos inteligentes le permiten a Matryx realizar un seguimiento preciso de las contribuciones de los usuarios y compensarlas en consecuencia. Matryx permite la colaboración distribuida a escala global.</span>
+              <span v-else>Blockchain technology, tokenization, and smart contracts allows Matryx to accurately track user’s contributions and compensate them accordingly. Matryx allows distributed collaboration on a global scale.</span>
+            </p>
+
+          </div>
+          <div class="card">
+            <h4 class="text-color--matryx-black">
+              <span v-if=" language === 'ru' ">Почему мы проводим продажу токенов</span>
+            	<span v-else-if=" language === 'ch' ">为什么我们有一个令牌销售</span>
+            	<span v-else-if=" language === 'ge' ">Warum wir einen Token-Verkauf haben</span>
+            	<span v-else-if=" language === 'ja' ">なぜ我々はトークンセールを持っているのですか？</span>
+            	<span v-else-if=" language === 'ko' ">토큰 세일을하는 이유</span>
+              <span v-else-if=" language === 'es' ">Por qué tenemos una venta de tokens</span>
             	<span v-else>Why We're Having a Token Sale</span>
             </h4>
             <p class="text-color--matryx-dark-grey">
               <span v-if=" language === 'ru' ">Конечная цель Matryx — стимулирование сотрудничества в областях знаний и создание аналога STEM. Для достижения этой цели нам необходимы ресурсы, которые помогут удовлетворить потребности исследований и разработок и создать сообщество участников и доноров. Продажи токенов быстро стали надежным способом достижения такого роста для технологий, основанных на блокчейне, таких как Matryx.
 </span>
-            	<span v-else-if=" language === 'ch' ">Matryx平台的终极目标是在知识和创新领域激励合作。要达成这一目标，我们需要可支持研发需求、并有助于创建参与者和贡献者社区的资源。代币销售已迅速成为行之有效的手段，可实现Matryx等基于区块链技术的快速成长。</span>
+            	<span v-else-if=" language === 'ch' ">Matryx的最终目标是激励知识和创造领域的合作，如STEM。 为了实现这一目标，我们需要支持研发需求的资源，并帮助建立一个参与者和贡献者社区。</span>
             	<span v-else-if=" language === 'ge' ">Das ultimative Ziel von Matryx besteht darin, Anreize zur Zusammenarbeit in Wissens- und Entwicklungsfeldern wie den MINT-Bereichen zu schaffen. Um dieses Ziel zu erreichen, benötigen wir Ressourcen, die den Anforderungen im Bereich Forschung und Entwicklung gerecht werden und dabei helfen, eine Community aus Teilnehmern und Mitwirkenden zu erschaffen. Token-Verkäufe haben sich rasch zu einem bewährten Mittel entwickelt, um ein solches Wachstum für blockchainbasierte Technologien wie Matryx zu erzielen.</span>
             	<span v-else-if=" language === 'ja' ">Matryxの最終目標は、STEMのような知識と創造の分野におけるコラボレーションを促進することです。その目標を達成するためには、研究開発の要求を支え、参加者と寄稿者のコミュニティを育成するのに役立つリソースが必要です。今やトークンセールは、Matryxのようなブロックチェーンベースのテクノロジーがこのような成長を達成するための確実な手段となっています。</span>
             	<span v-else-if=" language === 'ko' ">Matryx의 궁극적인 목표는 STEM과 같은 지식 및 창조 분야의 협업을 보상을 통해 장려하는 것입니다. 이 목표의 달성을 위해서 R&D 관련 수요에 응하고 참여자와 기여자로 구성된 커뮤니티의 형성을 지원하는 데 어느 정도의 자원이 필요합니다. 최근 토큰 판매는 Matryx와 같은 블록체인 기반 기술의 성장을 달성하는데 있어서 입증된 수단으로 빠르게 자리잡았습니다.</span>
-            	<span v-else>The ultimate goal of Matryx is to incentivize collaboration in fields of knowledge and creation like STEM. To reach that goal, we need resources that support R&#38;D demands and help create a community of participants and contributors. Token Sales have quickly become a proven means to achieve such growth for blockchain-based technologies like Matryx.</span>
+              <span v-else-if=" language === 'es' ">El objetivo final de Matryx es incentivar la colaboración en campos de conocimiento y creación como STEM. Para alcanzar ese objetivo, necesitamos recursos que respalden las demandas de I + D y ayudar a crear una comunidad de participantes y contribuyentes.</span>
+            	<span v-else>The ultimate goal of Matryx is to incentivize collaboration in fields of knowledge and creation like STEM. To reach that goal, we need resources that support R&#38;D demands and help create a community of participants and contributors.</span>
             </p>
           </div>
           <div class="card">
@@ -38,18 +82,20 @@
             	<span v-else-if=" language === 'ge' ">So nutzt Matryx die Blockchain</span>
             	<span v-else-if=" language === 'ja' ">Matryxがブロックチェーンを使用する方法</span>
             	<span v-else-if=" language === 'ko' ">Matryx가 블록체인을 활용하는 방법</span>
+              <span v-else-if=" language === 'es' ">Cómo utiliza Matryx el Blockchain</span>
             	<span v-else>How Matryx Uses the Blockchain</span>
             </h4>
             <p class="text-color--matryx-dark-grey">
-              <span v-if=" language === 'ru' ">Используя вознаграждения, основанные на блокчейне, Matryx позволяет пользователям подтверждать вклад каждого участника в разработку решения и вознаграждать его с помощью токенов MTX. Использование токена позволяет нам использовать системы смарт-контрактов, выполнять обновления с течением времени и адаптировать платформу к потребностям пользователей.</span>
+              <span v-if=" language === 'ru' ">Matryx позволяет пользователям проверять вклад каждого участника в решение и вознаграждать их токенами MTX. Токены позволяют нам использовать интеллектуальные контракты, обновлять их с течением времени и формировать платформу для нужд пользователей.</span>
             	<span v-else-if=" language === 'ch' ">Matryx 利用基于区块链的赏金，使用户能够验证每位参与者对所有解决方案的贡献度，并用 MTX 代币奖励他们。使用代币使我们能够利用智能合同制度、随时升级、并且灵活地塑造平台以满足用户需求。</span>
-            	<span v-else-if=" language === 'ge' ">Mit Hilfe blockchainbasierter Belohnungen ermöglicht es Matryx seinen Nutzern, den Beitrag jedes Teilnehmers zu einer bestimmten Lösung zu validieren und die Person mit MTX-Tokens zu belohnen. Die Nutzung eines Tokens erlaubt es uns, Smart-Contract-Systeme wirksam einzusetzen und mit der Zeit Aufwertungen durchzuführen. Zudem liefert sie uns die nötige Flexibilität, um die Plattform entsprechend den Bedürfnissen der Nutzer zu gestalten.</span>
-            	<span v-else-if=" language === 'ja' ">ブロックチェーンベースの報奨を利用するMatryxにより、ユーザーは各参加者のソリューションに対する貢献度を検証し、MTXトークンで報酬を与えることができます。トークンを使用することで、スマートコントラクトシステムを活用し、時間の経過とともにアップグレードし、ユーザーのニーズに合わせてプラットフォームを柔軟に構成することができます。</span>
-            	<span v-else-if=" language === 'ko' ">Matryx는 블록체인 기반의 포상 제도를 활용하여 이용자들이 해결책에 대한 각 참여자의 기여도를 확인하고 그것에 대해 MTX 토큰으로 보상할 수 있도록 해줍니다. 토큰의 활용은 스마트 계약 시스템의 활용성 극대화 및 장기간 사용 시의 정기적인 업그레이드를 가능케 함은 물론 이용자들의 수요에 맞춰 플랫폼을 조정할 수 있는 유연성도 확보해 줍니다.</span>
-            	<span v-else>Utilizing blockchain-based bounties, Matryx enables users to validate each participant's contribution to a solution and reward them with MTX tokens. Using a token enables us to leverage smart contract systems, upgrade over time, and gives us the flexibility to shape the platform to the needs of the users.</span>
+            	<span v-else-if=" language === 'ge' ">Mit Matryx können Benutzer den Beitrag jedes Teilnehmers zu einer Lösung validieren und sie mit MTX-Tokens belohnen. Mit Tokens können wir intelligente Verträge nutzen, im Laufe der Zeit ein Upgrade durchführen und die Plattform an die Bedürfnisse der Nutzer anpassen.</span>
+            	<span v-else-if=" language === 'ja' ">Matryxは、ユーザーがソリューションへの各参加者の貢献を検証し、MTXトークンで報酬を与えることができます。 トークンは、われわれがスマートな契約を活用し、時間をかけてアップグレードし、プラットフォームをユーザーのニーズに合わせて形作ることを可能にします。</span>
+            	<span v-else-if=" language === 'ko' ">Matryx는 사용자가 솔루션에 대한 각 참가자의 기여도를 확인하고 MTX 토큰으로 보상 할 수 있습니다. 토큰을 통해 우리는 현명한 계약을 활용하고 시간이 지남에 따라 업그레이드하며 플랫폼을 사용자의 요구에 맞게 조정할 수 있습니다.</span>
+              <span v-else-if=" language === 'es' ">Matryx permite a los usuarios validar la contribución de cada participante a una solución y recompensarlos con tokens MTX. Tokens nos permite aprovechar los contratos inteligentes, actualizar en el tiempo y dar forma a la plataforma a las necesidades de los usuarios.</span>
+            	<span v-else>Matryx enables users to validate each participant's contribution to a solution and reward them with MTX tokens. Tokens enables us to leverage smart contracts, upgrade over time, and shape the platform to the needs of the users.</span>
             </p>
           </div>
-          <div class="card">
+          <!--<div class="card">
             <h4 class="text-color--matryx-black">
               <span v-if=" language === 'ru' ">Преимущества блокчейна</span>
             	<span v-else-if=" language === 'ch' ">区块链益处</span>
@@ -64,9 +110,9 @@
             	<span v-else-if=" language === 'ge' ">Smart Contracts reduzieren die Friktion, die durch Nachverfolgung und Vergütung der Mitwirkenden entsteht. In jeder Runde eines Bounty-Wettbewerbs werden die Sieger belohnt und eine neue Kindergeneration wird erzeugt. Alle Iterationen werden durch die Turnierverträge verwaltet. Der Ursprung einer Idee oder Arbeit kann mühelos nachverfolgt sowie fair und öffentlich belohnt werden.</span>
             	<span v-else-if=" language === 'ja' ">スマートコントラクトは、貢献者を追跡し報酬を与える際の摩擦を軽減します。報奨競争の各ラウンドで、勝者は報酬を受け取り、次の段階を担う新しい後継者達が創造されます。すべての反復はトーナメントコントラクトによって管理され、アイデアや作業の出所が容易に追跡でき、公平かつ公に報酬を受けることができます。</span>
             	<span v-else-if=" language === 'ko' ">스마트 계약은 기여자를 추적하고 그들에게 보상을 해주는 과정에서 발생하는 비효율을 줄여줍니다. 포상금 경쟁전의 각 라운드별 우승자는 그에 대한 보상을 제공받으며 새로운 세대의 사람들이 나타나게 됩니다. 모든 라운드는 토너먼트 계약에 의해 관리됩니다. 아이디어 또는 작업의 출처를 간단히 추적할 수 있으며 이에 대해 공정하고 공개적으로 보상을 해줄 수 있습니다.</span>
-            	<span v-else>Smart contracts reduce the friction of tracking and compensating contributors. Each round of a bounty competition, the winners are rewarded, and a new generation of children is created. All iterations are managed by the tournament contracts. The provenance of an idea or work can be easily tracked and can be rewarded fairly and publicly.</span>
+            	<span v-else>Smart contracts reduce the friction of tracking and compensating contributors. All iterations are managed by the tournament contracts. The provenance of an idea or work can be easily tracked and can be rewarded fairly and publicly.</span>
             </p>
-          </div>
+          </div>-->
         </div>
         <div class="roadmap-container card-container--vertical">
           <div class="roadmap">
@@ -143,7 +189,7 @@
                     </a>
                   </span>
                 	<span v-else-if=" language === 'ch' ">
-                    <a href="/matryx-whitepaper-ch.pdf" target="_blank"   
+                    <a href="/matryx-whitepaper-ch.pdf" target="_blank"
                       @click="whitePaperClick('ch')"
                     >
                       在此处阅读白皮书
@@ -169,12 +215,12 @@
                 	<span v-else>Token Sale Launch</span>
                 </p>
                 <caption>
-                  <span v-if=" language === 'ru' ">Предварительная продажа токенов начинается 6 сентября в 10:00 по Гринвичу (GMT) и допускает покупки на суммы свыше 75 ETH. Период предварительной продажи продолжится одну неделю с 6 по 13 сентября</span>
-                	<span v-else-if=" language === 'ch' ">9 月 6 日格林威治标准时间上午 10 时启动代币预售，最低购买量为 75 ETH。预售期将从 9 月 6 日到 9 月 13 日保持开放一周</span>
-                	<span v-else-if=" language === 'ge' ">Der Token-Vorverkauf beginnt am 6. September um 10 Uhr GMT für Käufe im Wert von über 75 ETH. Der Vorverkauf bleibt eine Woche lang vom 6. bis 13. September geöffnet.</span>
-                	<span v-else-if=" language === 'ja' ">トークンプレセール開始は9月6日午前10時グリニッジ標準時 (GMT) 、75イーサリアム (ETH) 以上の購入が対象。プレセール期間は、9月6日から13日までの1週間。</span>
-                	<span v-else-if=" language === 'ko' ">75 ETH를 초과하는 구매에 대한 토큰 사전판매가 GMT 기준 9월 6일 오전 10시에 시작됩니다. 사전판매 기간은 9월 6일부터 9월 13일까지 1주일간입니다.</span>
-                	<span v-else>Matryx Token Sale begins Sept. 13 at 10am GMT, and will remain open for four weeks or until the ETH cap is reached.</span>
+                  <span v-if=" language === 'ru' ">Предварительная продажа токенов начинается 6 сентября в 10:00 по Гринвичу (GMT)</span>
+                	<span v-else-if=" language === 'ch' ">令牌销售于9月6日开始</span>
+                	<span v-else-if=" language === 'ge' ">Der Token-Vorverkauf beginnt am 13. September um 10 Uhr GMT</span>
+                	<span v-else-if=" language === 'ja' ">トークンプレセール開始は9月6日午前10時グリニッジ標準時 (GMT) </span>
+                	<span v-else-if=" language === 'ko' ">토큰 판매는 9 월 13 일에 시작됩니다.</span>
+                	<span v-else>Matryx Token Sale begins Sept. 13 at 10am GMT</span>
                 </caption>
               </div>
             </div>
@@ -367,7 +413,7 @@ section#about-token-sale {
       }
 
       &.about-container > * {
-        height: calc(33.3333% - 20px);
+        height: calc(33.3333% - 80px);
       }
     }
     &--horizontal {

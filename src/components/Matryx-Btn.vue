@@ -27,12 +27,12 @@ export default {
 .matryx-button {
   width: 100%;
   max-width: 400px;
-  height: 70px;
+  /*height: 70px;*/
   text-align:center;
   border-radius: 40px;
   text-transform: uppercase;
-  padding: 20px auto;
-  margin: 30px auto;
+  /*padding: 20px auto;*/
+  /*margin: 30px auto;*/
   box-shadow: 2px 2px 10px rgba(0,0,0,0.7);
   font-size: 22px;
 

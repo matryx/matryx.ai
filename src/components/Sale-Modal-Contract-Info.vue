@@ -2,6 +2,7 @@
   <div class="salemodal-contract-info">
     <h2 class="text-color--matryx-grey-blue">
       <span v-if=" language === 'ch' ">销售合约明细</span>
+      <span v-if=" language === 'es' ">INFORMACIÓN DEL CONTRATO DE VENTA</span>
       <span v-else>SALE CONTRACT INFO</span></h2>
     <br/>
     <b>
@@ -25,6 +26,7 @@
          -->
       <label class="salemodal-contract-info__form__label" for="contract-address">
         <span v-if=" language === 'ch' ">购买地址</span>
+        <span v-else-if=" language === 'es' ">Dirección de venta </span>
         <span v-else>Sale Address <small><span class="text-color--green uppercase">*required</span></small></span>
       </label>
       <input class="salemodal-contract-info__form__input" id="saleAddress"
@@ -39,10 +41,12 @@
 
       <label class="salemodal-contract-info__form__label" for="gas">
         <span v-if=" language === 'ch' ">油量</span>
+        <span v-else-if=" language === 'es' ">Gas</span>
         <span v-else>Gas<small class="text-color--green uppercase">*recommended</small>
         </span>
         <br/><small>
           <span v-if=" language === 'ch' ">所有低于此数据则可能导致一次失败的</span>
+          <span v-else-if=" language === 'es' ">Usar menos de esta cantidad puede resultar en una transacción fallida.</span>
           <span v-else>Using less than this amount may result in a failed transaction.</span>
         </small>
       </label>
@@ -60,10 +64,12 @@
 
       <label class="salemodal-contract-info__form__label" for="data-field">
         <span v-if=" language === 'ch' ">信息</span>
+        <span v-if=" language === 'es' ">Datos</span>
         <span v-else>Data <small class="text-color--green uppercase">*required</small></span>
         <br/>
         <small>
           <span v-if=" language === 'ch' ">当您发送金额时，您需要有一个信息库。取决于不同的钱包，这一选项也许会在“高级”中</span>
+          <span v-if=" language === 'es' "><em> debe </em> tener un campo de datos cuando envíe su transacción. <br/> Dependiendo de su billetera, este campo puede estar en 'Avanzado'. </span>
           <span v-else>You <em>must</em> have a Data field when you send your transaction.<br/> Depending on your wallet, this field may be under 'Advanced'. </span>
         </small>
       </label>
@@ -77,6 +83,7 @@
     </div>
     <p>
       <span v-if=" language === 'ch' ">交易通常会通过几分钟短暂的时间，也可能会更长。</span>
+      <span v-if=" language === 'es' ">Las transacciones generalmente demoran varios minutos en procesarse, pero pueden demorar más.</span>
       <span v-else>Transactions usually take several minutes to process, but may take longer.</span>
     </p>
   </div>

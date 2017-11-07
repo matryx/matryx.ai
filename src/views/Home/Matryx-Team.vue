@@ -4,6 +4,11 @@
       <div class="matryx-team__title">
         <h2 class="matryx-team__title__title">
           <span v-if="language === 'ch'">团队</span>
+          <span v-else-if="language === 'es'">El Equipo</span>
+          <span v-else-if="language === 'ja'">チーム</span>
+          <span v-else-if="language === 'ko'">El Equipo</span>
+          <span v-else-if="language === 'ru'">Команда</span>
+          <span v-else-if="language === 'ge'">Das Team</span>
           <span v-else>The Team</span>
         </h2>
         <div class="matryx-team__title__line"></div>
@@ -27,6 +32,11 @@
       <div class="matryx-advisors__title">
         <h2 class="matryx-advisors__title__title">
           <span v-if="language === 'ch'"> 顾问 </span>
+          <span v-else-if="language === 'es'"> Los asesores </span>
+          <span v-else-if="language === 'ja'">チーム</span>
+          <span v-else-if="language === 'ko'">고문</span>
+          <span v-else-if="language === 'ru'">Советники</span>
+          <span v-else-if="language === 'ge'">Das Team</span>
           <span v-else>The Advisors</span>
         </h2>
         <div class="matryx-advisors__title__line"></div>

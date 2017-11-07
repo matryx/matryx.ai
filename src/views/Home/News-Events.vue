@@ -3,11 +3,13 @@
     <div class="content-container content-container--large">
       <h2 class="news-events__sectionHeader text-color--matryx-grey text-center">
         <span v-if="language === 'ch' ">国外新闻报道&#38;相关活动</span>
+        <span v-else-if="language === 'es' ">NOTICIAS Y EVENTOS</span>
         <span v-else>NEWS &#38; EVENTS</span>
       </h2>
       <div class="news-events__title">
         <h3 class="news-events__title__sub">
           <span v-if="language === 'ch'">新闻</span>
+          <span v-else-if="language === 'es'">Noticias</span>
           <span v-else>News</span>
         </h3>
         <div class="news-events__title__line"></div>
@@ -34,6 +36,7 @@
         <div class="news-events__title__line"></div>
         <h3 class="news-events__title__sub--events">
           <span v-if="language === 'ch'">大事</span>
+          <span v-else-if="language === 'es'">Eventos</span>
           <span v-else>Events</span>
         </h3>
       </div>
@@ -81,7 +84,7 @@ export default {
       news: [{
         name: 'How Blockchain Can Change The Way Science Works, Explained',
         date: '6 Sept 2017',
-        desc: 'Projects like Matryx allow science, technology, engineering, and mathematics research and projects may become accessible to everyone.',
+        desc: 'Projects like Matryx allow science, technology, engineering, and mathematics research projects to become accessible to everyone.',
         image: newsImage1,
         articleLink: 'https://cointelegraph.com/explained/how-blockchain-can-change-the-way-science-works-explained',
         facebookLink: 'https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcointelegraph.com%2Fexplained%2Fhow-blockchain-can-change-the-way-science-works-explained',

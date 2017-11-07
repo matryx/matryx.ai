@@ -6,6 +6,7 @@
       <span v-else-if=" language === 'ge' ">Token-Verkauf</span>
       <span v-else-if=" language === 'ja' ">トークンセール</span>
       <span v-else-if=" language === 'ko' ">토큰판매</span>
+      <span v-else-if=" language === 'es' ">VENTA DE TOKENS</span>
       <span v-else>TOKEN SALE</span>
     </h2>
     <h3 class="text--center sub-title" v-if="showPreSale">
@@ -14,6 +15,7 @@
       <span v-else-if=" language === 'ge' ">13. September 2017</span>
       <span v-else-if=" language === 'ja' ">2017年9月13日</span>
       <span v-else-if=" language === 'ko' ">2017년 9월 13일</span>
+      <span v-else-if=" language === 'es' ">Comienza Septiembre 13, 2017</span>
       <span v-else>Launches September 13, 2017</span>
     </h3>
     <div class="icon-list" v-if=" language === 'ru' ">
@@ -61,6 +63,15 @@
         :key="index"
       ></SaleIcon>
     </div>
+    <div class="icon-list" v-else-if=" language === 'es' ">
+      <SaleIcon
+        v-for="(icon, index) in iconsSpanish"
+        :img="icon.img"
+        :text="icon.text"
+        :alt="icon.text"
+        :key="index"
+      ></SaleIcon>
+    </div>
     <div class="icon-list" v-else>
       <SaleIcon
         v-for="(icon, index) in icons"
@@ -73,15 +84,30 @@
     <br/><br/>
     <h5 class="text-center">
       <span v-if=" language === 'ch' ">销售合同 <a href="/sale-terms-ch.pdf" target="_blank"> https://matryx.ai/sale-terms-ch.pdf</a></span>
+      <span v-else-if=" language === 'es' "> Términos de venta disponibles en  <a href="/sale-terms.pdf" target="_blank"> https://matryx.ai/sale-terms.pdf</a></span>
       <span v-else >Sale Terms available at <a href="/sale-terms.pdf" target="_blank"> https://matryx.ai/sale-terms.pdf</a></span>
     </h5>
 
     <h5 class="text-center">
-      Read the updates to our token sale on our 
+      <span v-if=" language === 'ch' ">
+        <a class="link"
+          href="https://blog.matryx.ai/token-sale-update-changing-it-up-5f83de13a76d"
+          target="_blank"
+        >点击进入</a>我们的博客阅读我们的的代币销售更新
+      </span>
+      <span v-else-if=" language === 'es' ">
+        Lea las actualizaciones de nuestra venta de tokens en nuestra
+        <a class="link"
+          href="https://blog.matryx.ai/token-sale-update-changing-it-up-5f83de13a76d"
+          target="_blank"
+        >blog</a>
+      </span>
+      <span v-else >
+      Read the updates to our token sale on our
       <a class="link"
         href="https://blog.matryx.ai/token-sale-update-changing-it-up-5f83de13a76d"
         target="_blank"
-      > blog</a>.
+      > blog</a>.</span>
     </h5>
   </section>
 </template>
@@ -198,6 +224,24 @@ export default {
           text: 'アドレスはmatryx.ai上にのみ掲載されます'
         }
       ],
+      iconsSpanish: [
+        // {
+        //   img: mtx,
+        //   text: '314,159,265 MTX合計サプライ量'
+        // },
+        {
+          img: allocated60,
+          text: '60% del suministro total de MTX asignado para la venta'
+        },
+        {
+          img: cap,
+          text: '26,888 ETH Venta CAP'
+        },
+        {
+          img: matryx,
+          text: 'La dirección SOLO se publicará en matryx.ai'
+        }
+      ],
       iconsKorean: [
         // {
         //   img: mtx,
@@ -224,10 +268,11 @@ export default {
 <style lang="scss" scoped>
 section.content-container {
   margin-top: 0;
-  padding: 40px 0 80px;
+  padding: 100px 0 100px;
 
   .title {
-    font-size: 24px;
+    font-size: 40px;
+    padding-bottom: 30px;
   }
 
   .sub-title {

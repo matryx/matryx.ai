@@ -7,6 +7,7 @@
       	<span v-else-if=" language === 'ge' ">Nehmen Sie am Token-Verkauf teil</span>
       	<span v-else-if=" language === 'ja' ">トークンセールに参加</span>
       	<span v-else-if=" language === 'ko' ">토큰 판매에 참여하세요</span>
+        <span v-else-if=" language === 'es' ">Mantengase Informado</span>
       	<span v-else>Stay Updated</span>
       </h4>
 
@@ -16,7 +17,8 @@
       	<span v-else-if=" language === 'ge' ">Geben Sie Ihre E-Mail-Adresse ein, um über den Start des Token-Verkaufs auf dem Laufenden zu bleiben.</span>
       	<span v-else-if=" language === 'ja' ">電子メールアドレスを入力して、トークンセールの開始時にすぐ通知を受けてください</span>
       	<span v-else-if=" language === 'ko' ">귀하의 이메일 주소를 입력하시고 토큰 판매의 런칭에 대한 최신 알림을 받으세요.</span>
-      	<span v-else>Enter your email address to stay up to date on the Matryx Platform.</span>
+        <span v-else-if=" language === 'es' ">Entre su correo electronico para recibir noticias de Matryx</span>
+      	<span v-else>Enter your email address to stay up to date on the Matryx Platform</span>
       </h6>
       <Get-Notified  :ctaLocation="ctaLocation">
       </Get-Notified>
@@ -144,7 +146,7 @@ export default {
 
  .cta-middle-banner .cta-banner  {
     position: relative;
-    padding: 180px 0 90px;
+    padding: 120px 0 90px;
     // margin-top: -130px;
   }
 

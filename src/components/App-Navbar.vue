@@ -12,7 +12,7 @@
         <b-nav is-nav-bar>
           <b-nav-item class="text-color--white"
             aria-disabled="false"
-            href="/"
+            href="#token-sale-section"
             target="_self"
           >
             <span class="russian" v-if=" language === 'ru' ">
@@ -22,6 +22,7 @@
             <span v-else-if=" language === 'ge' ">TOKEN-VERKAUF</span>
             <span v-else-if=" language === 'ja' ">トークンセール</span>
             <span v-else-if=" language === 'ko' ">토큰판매</span>
+            <span v-else-if=" language === 'es' ">VENTA DE TOKEN</span>
             <span v-else>TOKEN SALE</span>
           </b-nav-item>
 
@@ -40,6 +41,7 @@
             target="_self"
           >
             <span v-if="language === 'ch'">奖励</span>
+            <span v-if="language === 'es'">RECOMPENSAS</span>
             <span v-else>REWARDS</span>
           </b-nav-item>
 
@@ -52,6 +54,7 @@
             <span v-else-if=" language === 'ge' ">PRESSE</span>
             <span v-else-if=" language === 'ja' ">プレス</span>
             <span v-else-if=" language === 'ko' ">보도자료</span>
+            <span v-else-if=" language === 'es' ">PRENSA</span>
             <span v-else>PRESS</span>
           </b-nav-item>
           <b-nav-item class="text-color--white"
@@ -64,6 +67,7 @@
             <span v-else-if=" language === 'ge' ">KONTAKT</span>
             <span v-else-if=" language === 'ja' ">問い合わせ</span>
             <span v-else-if=" language === 'ko' ">연락처</span>
+            <span v-else-if=" language === 'es' ">CONTACTO</span>
             <span v-else>CONTACT</span>
           </b-nav-item>
           <b-nav-item class="text-color--white"
@@ -135,7 +139,8 @@ export default {
         { value: 'ch', text: '中文' },
         { value: 'ge', text: 'Deutsche' },
         { value: 'ja', text: '日本語' },
-        { value: 'ko', text: '한국어' }
+        { value: 'ko', text: '한국어' },
+        { value: 'es', text: 'Español' }
       ]
     }
   },

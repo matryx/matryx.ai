@@ -2,29 +2,35 @@
   <div class="body-content" style="background-color:#FFF;">
     <Navbar-Token></Navbar-Token>
     <Navbar-Sticky></Navbar-Sticky>
-    <Above-the-Fold></Above-the-Fold>
-    <div class="cta-middle-banner">
-      <CTA-Banner :lighterText="true" :blueBkg="true" cta-location="Very Top"></CTA-Banner>
-    </div>
-    <Media-Mentions></Media-Mentions>
+    <Above-the-Fold></Above-the-Fold>  <!-- tokensale-button -->
     <About-Matryx></About-Matryx>
+    <Nanome-Info></Nanome-Info>
+
+    <!--<div class="cta-middle-banner">
+      <CTA-Banner :lighterText="true" :blueBkg="true" cta-location="Very Top"></CTA-Banner>
+    </div>-->
+    <!-- <div class="cta-middle-banner">
+      <CTA-Banner :lighterText="true" :greyBkg="true" cta-location="Middle"></CTA-Banner>
+    </div> -->
+    <Company-Overview id="company-overview"></Company-Overview>
+
+    <Bounty-System></Bounty-System>
+
+    <!-- <div class="bkg-color--matryx-lighter-grey"> -->
+    <Token-Sale></Token-Sale>
+    <!-- </div> -->
+    <Audited-By></Audited-By>
     <div class="cta-middle-banner">
       <CTA-Banner :lighterText="true" :blueBkg="true" cta-location="Top"></CTA-Banner>
     </div>
-    <div class="bkg-color--matryx-lighter-grey">
-      <Token-Sale></Token-Sale>
-    </div>
-    <Audited-By></Audited-By>
-    <About-Token-Sale></About-Token-Sale>
-    <div class="cta-middle-banner">
-      <CTA-Banner :lighterText="true" :greyBkg="true" cta-location="Middle"></CTA-Banner>
-    </div>
-    <Nanome-Info></Nanome-Info>
-    <Company-Overview id="company-overview"></Company-Overview>
     <Quotes></Quotes>
-    <Bounty-System></Bounty-System>
-    <CTA-Banner :whiteBkg="true" cta-location="Bottom"></CTA-Banner>
+    <About-Token-Sale></About-Token-Sale>
+
+
+
+    <!-- <CTA-Banner :whiteBkg="true" cta-location="Bottom"></CTA-Banner> -->
     <Matryx-Team></Matryx-Team>
+    <Media-Mentions></Media-Mentions>
     <News-Events></News-Events>
 <!--     <CTA-Banner :lighterText="true" :footerBkg="true" cta-location="Bottom" id="Footer"></CTA-Banner> -->
   </div>

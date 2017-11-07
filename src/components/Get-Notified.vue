@@ -24,6 +24,9 @@
         <span v-else-if=" language === 'ko' ">
           알림을 받으세요
         </span>
+        <span v-else-if=" language === 'es' ">
+          Enviar
+        </span>
         <span v-else>
           Submit
         </span>

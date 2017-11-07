@@ -14,37 +14,27 @@
       <b-nav is-nav-bar>
         <b-nav-item
           class="text-color--matryx-grey nav-link--mobile-hide"
-          href="#what-is-matryx">
-          <span class="russian" v-if=" language === 'ru' ">относительно</span>
-          <span v-else-if=" language === 'ch' ">关于</span>
-          <span v-else-if=" language === 'ge' ">ÜBER</span>
-          <span v-else-if=" language === 'ja' ">について</span>
-          <span v-else-if=" language === 'ko' ">에 대하여</span>
-          <span v-else>ABOUT</span>
-        </b-nav-item>
-        <b-nav-item
-          class="text-color--matryx-grey nav-link--mobile-hide"
           href="#bounty-system">
           <span class="russian" v-if=" language === 'ru' ">системы вознаграждений</span>
           <span v-else-if=" language === 'ch' ">奖励金制度</span>
           <span v-else-if=" language === 'ge' ">BOUNTY-SYSTEM</span>
           <span v-else-if=" language === 'ja' ">報奨金制度</span>
           <span v-else-if=" language === 'ko' ">는 포상 제도</span>
+          <span v-else-if=" language === 'es' ">SISTEMA BOUNTY</span>
           <span v-else>BOUNTY SYSTEM</span>
         </b-nav-item>
-        <b-nav-item class="text-color--matryx-grey"
-          target="_blank"
-          :href="whitePaperHref"
-          @click="whitePaperClick(language)"
-        >
-          <span class="russian" v-if=" language === 'ru' ">техническую документацию</span>
-          <span v-else-if=" language === 'ch' ">白皮书</span>
-          <span v-else-if=" language === 'ge' ">WHITE PAPER</span>
-          <span v-else-if=" language === 'ja' ">WHITEPAPER</span>
-          <span v-else-if=" language === 'ko' ">백서를</span>
-          <span v-else>WHITEPAPER</span>
+        <b-nav-item
+          class="text-color--matryx-grey nav-link--mobile-hide"
+          href="#token-sale-section">
+          <span class="russian" v-if=" language === 'ru' ">продажа токенов</span>
+          <span v-else-if=" language === 'ch' ">令牌销售</span>
+          <span v-else-if=" language === 'ge' ">Token Verkauf</span>
+          <span v-else-if=" language === 'ja' ">トークン販売</span>
+          <span v-else-if=" language === 'ko' ">토큰 판매</span>
+          <span v-else-if=" language === 'es' ">VENTA DE TOKEN</span>
+          <span v-else>TOKEN SALE</span>
         </b-nav-item>
-        
+
         <b-nav-item class="text-color--matryx-grey"
           target="_blank"
           href="/sale-terms-ch.pdf"
@@ -58,7 +48,19 @@
           href="/sale-terms.pdf"
           v-else
         >
-          Sale Terms
+          Terms
+        </b-nav-item>
+        <b-nav-item class="text-color--matryx-grey"
+          target="_blank"
+          :href="whitePaperHref"
+          @click="whitePaperClick(language)"
+        >
+          <span class="russian" v-if=" language === 'ru' ">техническую документацию</span>
+          <span v-else-if=" language === 'ch' ">白皮书</span>
+          <span v-else-if=" language === 'ge' ">WHITE PAPER</span>
+          <span v-else-if=" language === 'ja' ">WHITEPAPER</span>
+          <span v-else-if=" language === 'ko' ">백서를</span>
+          <span v-else>WHITEPAPER</span>
         </b-nav-item>
 
         <!-- Only Mobile View -->
@@ -68,6 +70,7 @@
           <span v-else-if=" language === 'ge' ">KONTAKT</span>
           <span v-else-if=" language === 'ja' ">問い合わせ</span>
           <span v-else-if=" language === 'ko' ">연락처</span>
+          <span v-else-if=" language === 'es' ">CONTACTO</span>
           <span v-else>CONTACT</span>
         </b-nav-item>
         <b-nav-item href="https://blog.matryx.ai/" target="_blank" class="text-color--matryx-grey nav-link--mobile-only">
@@ -76,6 +79,7 @@
           <span v-else-if=" language === 'ge' ">BLOG</span>
           <span v-else-if=" language === 'ja' ">ブログ</span>
           <span v-else-if=" language === 'ko' ">블로그</span>
+          <span v-else-if=" language === 'es' ">BLOG</span>
           <span v-else>BLOG</span>
         </b-nav-item>
         <b-nav-item href="/faq/about/what-is-matryx" target="_self" class="text-color--matryx-grey nav-link--mobile-only">
@@ -116,14 +120,16 @@
 
       <b-nav is-nav-bar class="ml-auto">
         <b-nav-item class="get-notified">
-          <button @click.prevent="openGetNotified">
+          <!-- <button @click.prevent="openGetNotified">
             <span class="russian" v-if=" language === 'ru' ">ПОЛУЧАЙТЕ УВЕДОМЛЕНИЯ</span>
             <span v-else-if=" language === 'ch' ">接收通知</span>
             <span class="german" v-else-if=" language === 'ge' ">MICH BENACHRICHTIGEN</span>
             <span v-else-if=" language === 'ja' ">通知を受ける</span>
             <span v-else-if=" language === 'ko' ">알림을 받으세요</span>
             <span v-else>STAY UPDATED</span>
-          </button>
+          </button> -->
+          <Matryx-Btn :text="buttonText" :handleClick="openSaleModal">
+          </Matryx-Btn>
         </b-nav-item>
       </b-nav>
       </b-collapse>
@@ -134,9 +140,14 @@
 
 <script>
 import { appAnalytics } from '@/analytics'
+import MatryxBtn from '@/components/Matryx-Btn'
 
 export default {
   name: 'NavbarSticky',
+
+  components: {
+    MatryxBtn
+  },
 
   data () {
     return {
@@ -163,12 +174,34 @@ export default {
     },
     changeLanguage () {
       this.$store.commit('setLanguage', this.selectedLanguage)
+    },
+    openSaleModal () {
+      this.$store.commit('showSaleModal', true)
     }
   },
 
   computed: {
     language () {
       return this.$store.state.language
+    },
+
+    buttonText () {
+      if (this.language === 'ch') {
+        return '购买MTX'
+      } else if (this.language === 'es') {
+        return 'Compra MTX'
+      } else if (this.language === 'ko') {
+        return 'MTX매수'
+      } else if (this.language === 'ru') {
+        return 'Покупка MTX'
+      } else if (this.language === 'ja') {
+        return 'MTXを購入する'
+      } else if (this.language === 'de') {
+        return 'Koop MTX'
+      }
+      return 'Purchase MTX'
+      // this.language === 'ch' ? '购买MTX' : 'Purchase MTX',
+      // return this.language === 'es' ? 'MTX' : 'Compra MTX'
     },
 
     whitePaperHref () {
@@ -298,21 +331,22 @@ export default {
       button {
         height: 40px;
         padding: 10px 20px;
+        font-size: 16px;
         border-radius: 40px;
-        border: 1px solid $matryx-light-blue;
+        border: 1px solid $light-green;
         color: #fff;
         outline:none;
-        background-color: $matryx-light-blue !important;
+        background-color: $light-green !important;
         display: flex;
         align-items: center;
-        line-height: 0;
-        margin-top:2px;
+        /*line-height: 0;*/
+        /*margin-top:2px;*/
 
         &:active,&:hover {
           outline: none;
-          background: $white !important;
-          color: $matryx-light-blue;
-          /*color: #082135;*/
+          background: $matryx-blue !important;
+          color: $white;
+          border: 1px solid $white;
         }
         &:active {
           box-shadow: 1px 1px 10px #fff, -1px -1px 10px #fff;
@@ -375,6 +409,12 @@ nav {
   .navbar.navbar-light .get-notified {
     margin-right: 0px;
   }
+    #nav .nav-link {
+      /*padding: 2px 5px;*/
+    }
+  #nav .navbar.navbar-light .get-notified > .nav-link button {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -383,6 +423,8 @@ nav {
     padding-left: 0;
 
     .navbar.navbar-light {
+
+      margin-top: 10px;
 
       .nav-item {
         width: 100%;
@@ -433,8 +475,10 @@ nav {
             background-color: transparent !important;
           }
           button {
-            height: 30px;
+            height: 33px;
             font-size: 13px;
+            padding: 6px 40px;
+            max-width: 200px;
           }
         }
 
@@ -443,6 +487,7 @@ nav {
     }
     #nav-toggle {
       margin-top: 10px;
+      padding-bottom: 12px;
     }
 
     .navbar-brand {

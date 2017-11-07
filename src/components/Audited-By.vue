@@ -2,6 +2,7 @@
   <div class="audited">
     <h2>
       <span v-if=" language === 'ch' ">已通过</span>
+      <span v-if=" language === 'es' ">Auditado por</span>
       <span v-else> Audited by </span>
     </h2>
     <a href="https://tokenmarket.net/blog/matryx-token-and-token-sale-smart-contract-audit/" target="_blank">

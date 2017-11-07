@@ -8,6 +8,7 @@
 				<span v-else-if=" language === 'ge' ">Tage</span>
 				<span v-else-if=" language === 'ja' ">日</span>
 				<span v-else-if=" language === 'ko' ">일</span>
+        <span v-else-if=" language === 'es' ">dias</span>
 				<span v-else>days</span>
       </div>
     </div>
@@ -19,6 +20,7 @@
 				<span v-else-if=" language === 'ge' ">Stunden</span>
 				<span v-else-if=" language === 'ja' ">時</span>
 				<span v-else-if=" language === 'ko' ">시간</span>
+        <span v-else-if=" language === 'es' ">horas</span>
 				<span v-else>hours</span>
       </div>
     </div>
@@ -30,6 +32,7 @@
 				<span v-else-if=" language === 'ge' ">Minuten</span>
 				<span v-else-if=" language === 'ja' ">分</span>
 				<span v-else-if=" language === 'ko' ">분</span>
+        <span v-else-if=" language === 'es' ">minutos</span>
 				<span v-else>minutes</span>
       </div>
     </div>
@@ -41,6 +44,7 @@
 				<span v-else-if=" language === 'ge' ">Sekunden</span>
 				<span v-else-if=" language === 'ja' ">秒</span>
 				<span v-else-if=" language === 'ko' ">초</span>
+        <span v-else-if=" language === 'es' ">segundos</span>
 				<span v-else>seconds</span>
       </div>
     </div>

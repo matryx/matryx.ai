@@ -2,9 +2,9 @@
   <section id="announcement" class="announcement bkg-color--blue-gradient">
     <div class="content-container content-container--large">
       <h2 class="announcement__header text-color--white">
-        From now until
+          From now until
         <span class="announcement__header__date text-color--matryx-blue">
-          October 13th
+          November 15th
         </span>
         we are offering up to
       </h2>

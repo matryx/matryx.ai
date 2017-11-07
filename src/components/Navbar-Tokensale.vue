@@ -11,6 +11,7 @@
     				<span v-else-if=" language === 'ge' ">Vorverkauf</span>
     				<span v-else-if=" language === 'ja' ">プリセール</span>
     				<span v-else-if=" language === 'ko' ">사전판매</span>
+            <span v-else-if=" language === 'es' ">Venta</span>
     				<span v-else>Pre-Sale</span>
           </p>
           <p class="text-color--matryx-lighter-blue">
@@ -19,6 +20,7 @@
     				<span v-else-if=" language === 'ge' "> 6. September 2017</span>
     				<span v-else-if=" language === 'ja' "> 2017年9月6日</span>
     				<span v-else-if=" language === 'ko' "> 2017년 9월 6일</span>
+            <span v-else-if=" language === 'es' ">Septiembre 6, 2017</span>
     				<span v-else> September 6, 2017</span>
           </p>
         </div>
@@ -29,6 +31,7 @@
             <span v-else-if=" language === 'ge' ">60 % stehen zum Verkauf | ETH-SMART-CONTRACT-VERKAUF</span>
             <span v-else-if=" language === 'ja' ">60%が販売予定 | ETHスマートコントラクトセール</span>
             <span v-else-if=" language === 'ko' ">60%의 판매할당 비율 | ETH 스마트 계약 판매</span>
+            <span v-else-if=" language === 'es' ">60% del suministro de MTX se venderá | Venta de contrato inteligente ETH</span>
             <span v-else>60% Of MTX Supply To Be Sold | ETH Smart Contract Sale</span>
           </span>
         </div>
@@ -40,6 +43,7 @@
     				<span v-else-if=" language === 'ge' ">Start</span>
     				<span v-else-if=" language === 'ja' ">ローンチ</span>
     				<span v-else-if=" language === 'ko' ">런칭</span>
+    				<span v-else-if=" language === 'es' ">Lanzamiento</span>
     				<span v-else>Launch</span>
           </p>
           <p class="text-color--matryx-lighter-blue">
@@ -48,6 +52,7 @@
     				<span v-else-if=" language === 'ge' ">13. September 2017</span>
     				<span v-else-if=" language === 'ja' ">2017年9月13日</span>
     				<span v-else-if=" language === 'ko' ">2017년 9월 13일</span>
+            <span v-else-if=" language === 'es' ">Septiembre 13, 2017</span>
     				<span v-else>September 13, 2017</span>
           </p>
         </div>
@@ -63,6 +68,10 @@
     				<span v-else>Total MTX Available</span>
           </p>
         </div> -->
+        <div class="token-bar__section third">
+          <img src="../assets/icons/icon-matryx-token-blue.png" alt="">
+          <p class="text-color--white">1 ETh = 1164 MTX</p>
+        </div>
         <div class="token-bar__section fourth">
           <img src="../assets/icons/icon-eth-token-blue.png" alt="">
           <p class="text-color--white">26,888</p>
@@ -72,6 +81,7 @@
     				<span v-else-if=" language === 'ge' ">ETH-Limit</span>
     				<span v-else-if=" language === 'ja' ">ETHキャップ</span>
     				<span v-else-if=" language === 'ko' ">ETH 한도</span>
+            <span v-else-if=" language === 'es' ">ETH Cap</span>
     				<span v-else>ETH Cap</span>
           </p>
         </div>
@@ -83,7 +93,8 @@
       				<span v-else-if=" language === 'ge' ">60 % stehen zum Verkauf | ETH-SMART-CONTRACT-VERKAUF</span>
       				<span v-else-if=" language === 'ja' ">60%が販売予定 | ETHスマートコントラクトセール</span>
       				<span v-else-if=" language === 'ko' ">60%의 판매할당 비율 | ETH 스마트 계약 판매</span>
-      				<span v-else>60% Of MTX Supply To Be Sold | ETH Smart Contract Sale</span>
+              <span v-else-if=" language === 'es' ">60% del suministro de MTX se venderá | Venta de contrato inteligente ETH</span>
+              <span v-else>60% Of MTX Supply To Be Sold | ETH Smart Contract Sale</span>
             </span>
             <br v-if="showPreSale">
             <span v-if="showMainSale" style="line-height: 50px;"></span>
@@ -93,7 +104,8 @@
       				<span v-else-if=" language === 'ge' ">Die Ethereum-Adresse wird nur direkt auf matryx.ai gepostet</span>
       				<span v-else-if=" language === 'ja' ">イーサリアム (Ethereum) のアドレスはmatryx.aiにのみ直接掲示されます</span>
       				<span v-else-if=" language === 'ko' ">이더리움 주소는 matryx.ai에서만 직접 게시됩니다</span>
-      				<span v-else>Address will ONLY be posted on matryx.ai</span>
+              <span v-else-if=" language === 'es' ">La dirección SOLO se publicará en matryx.ai</span>
+              <span v-else>Address will ONLY be posted on matryx.ai</span>
             </span>
           </p>
         </div>
@@ -201,7 +213,7 @@ section.navbar-tokensale {
   .fifth {
     left: 20%;
     animation: scroll-fifth 30s linear -6s infinite;
-    align-items: baseline;
+    /*align-items: baseline;*/
 
     p{ line-height:24px; }
   }

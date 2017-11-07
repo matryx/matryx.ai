@@ -27,6 +27,11 @@
                 销售条款
               </a>
             </p>
+            <p class="salemodal__body__terms__link text-color--matryx-blue" v-if="language === 'es'">
+              <a href="/sale-terms-ch.pdf" target="_blank">
+                Ver términos de venta en formato PDF.
+              </a>
+            </p>
             <p class="salemodal__body__terms__link text-color--matryx-blue" v-else>
               <a href="/sale-terms.pdf" target="_blank">
                 View sale terms in PDF format.
@@ -36,25 +41,27 @@
               <Checkbox name="saleTermsRead" :obj="saleTermsRead">
                 <span slot="label">
                   <span v-if=" language === 'ch' ">我已阅读并同意Matryx币销售条款</span>
+                  <span v-if=" language === 'es' ">He leído y acepto los términos de venta de la Venta de Token de Matryx.</span>
                   <span v-else>I have read and agree to the Sale Terms of the Matryx Token Sale.</span>
                 </span>
               </Checkbox>
               <Checkbox name="erc20WalletAddress" :obj="erc20WalletAddress">
                 <span slot="label">
                   <span v-if=" language === 'ch' ">我理解并同意我必须用一个有效的ERC20兼容钱包地址</span>
+                  <span v-if=" language === 'es' ">Entiendo y acepto que debo usar una dirección de billetera compatible con ERC20 válida.</span>
                   <span v-else>I understand and agree that I must use a valid ERC20 compatible wallet address.</span>
                 </span>
               </Checkbox>
               <Checkbox name="noExchangeAddress" :obj="noExchangeAddress">
                 <span slot="label">
                   <span v-if=" language === 'ch' ">我理解并同意我用的地址并不是一个交易平台地址</span>
+                  <span v-if=" language === 'es' ">Entiendo y acepto que la dirección que uso no debe ser una dirección de intercambio.</span>
                   <span v-else>I understand and agree that the address I use must not be an exchange address.</span>
                 </span>
               </Checkbox>
               <Checkbox name="havePrivateKeys" :obj="havePrivateKeys">
-                <span slot="label" v-if="language === 'ch'">
-                  我理解并同意假设我用交易平台地址我必须拥有它的私匙
-                </span>
+                <span slot="label" v-if="language === 'ch'">我理解并同意假设我用交易平台地址我必须拥有它的私匙</span>
+                <span slot="label" v-if="language === 'es'">Entiendo y acepto que si uso una dirección de intercambio, debo ser dueño de las claves privadas.</span>
                 <span slot="label" v-else>
                   I understand and agree that if I use an exchange address I must own the private keys.
                 </span>
@@ -387,7 +394,10 @@ section.sale-modal {
           font-size: 18px;
           margin-bottom: 5px;
         }
-
+        .submit-btn{
+          margin: 30px auto;
+          height: 70px;
+        }
         .submit-btn:disabled {
           opacity: 0.4;
           box-shadow: none;

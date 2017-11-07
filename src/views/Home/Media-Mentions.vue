@@ -1,7 +1,7 @@
 <template>
   <div class="media-mentions bkg-color--white">
-    <div class="content-container content-container--medium media-mentions__img-container">
-      <p class="text-color--matryx-grey">
+    <div class="content-container content-container--large text-center">
+      <h2 class="text-color--matryx-grey">
         <span v-if=" language === 'ru' ">
           Было показано в
         </span>
@@ -17,10 +17,16 @@
         <span v-else-if=" language === 'ko' ">
           다뤄진 매체들
         </span>
-        <span v-else>
-          Featured in
+        <span v-else-if=" language === 'es' ">
+          PRESENTADO EN
         </span>
-      </p>
+        <span v-else>
+          FEATURED IN
+        </span>
+      </h2>
+    </div>
+    <div class="content-container content-container--medium media-mentions__img-container">
+
 
       <a href="http://matryx.fyi/d3mf8" class="press-logo" target="_blank">
         <img src="../../assets/images/press/cointelegraph.png" alt="CoinTelegraph" class="cointelegraph-logo">
@@ -69,6 +75,12 @@ export default {
   display:-webkit-box;display:-ms-flexbox;display:flex;
   flex-direction: column;
 
+  h2{
+    font-size: 40px;
+    display: block;
+    padding-top: 50px;
+  }
+
   p{
     text-align: center;
     text-transform: uppercase;
@@ -82,6 +94,14 @@ export default {
   a:hover{
     opacity: 1;
     transition: all 0.3s;
+  }
+  .content-container--large{
+    padding-bottom: 0px;
+  }
+
+  .content-container--medium{
+    padding-top: 20px;
+    padding-bottom: 10px;
   }
 
   &__img-container {

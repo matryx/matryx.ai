@@ -1,6 +1,9 @@
 <template lang="html">
   <section class="content-container content-container--large ">
-    <h1 class="text--center text-color--matryx-dark-grey">
+    <div class="MatryxLogo content-container">
+      <img src="../../assets/images/Matryx_Black_Full_Logo.png" alt="">
+    </div>
+    <h2 class="text--center text-color--matryx-darker-grey">
       <span v-if=" language === 'ru' " style="font-size: 32px;">
         Matryx — платформа для децентрализованного сотрудничества
       </span>
@@ -12,9 +15,19 @@
         Matryx：分散型コラボレーションのプラットフォーム
       </span>
     	<span v-else-if=" language === 'ko' ">Matryx: 분산화 협업을 위한 플랫폼</span>
-    	<span v-else>Matryx: A Decentralized Collaboration Platform</span>
-    </h1>
-    <p class="text-color--matryx-dark-grey">
+      <span v-else-if=" language === 'es' ">La platforma colaborativa de investigación y desarrollo</span>
+    	<span v-else>The Collaborative Research &#38; Development Engine </span>
+    </h2>
+    <h3 class="text--center text-color--matryx-dark-grey">
+      <span v-if=" language === 'ru' ">Оптимизирован для виртуальных интерфейсов</span>
+      <span v-else-if=" language === 'ch' ">最大级别优化虚拟现实</span>
+      <span v-else-if=" language === 'ge' ">Optimiert für Virtual Reality Interfaces</span>
+      <span v-else-if=" language === 'ja' ">バーチャルリアリティインターフェイスに最適化</span>
+      <span v-else-if=" language === 'ko' ">가상 현실 인터페이스에 최적화 됨</span>
+      <span v-else-if=" language === 'es' ">Optimizado para interfaces de realidad virtual</span>
+      <span v-else>Optimized for Virtual Reality Interfaces</span>
+    </h3>
+    <!-- <p class="text-color--matryx-dark-grey">
       <span v-if=" language === 'ru' ">
         Matryx — это платформа децентрализованного сотрудничества. Matryx состоит из системы вознаграждений, библиотеки цифровых активов и торговой площадки. Публикация сведений о проблемах осуществляется вместе с назначением вознаграждения за проверенное решение. Пользователи затем работают совместно над решением проблем, делятся результатами и получают вознаграждение. Вознаграждения выдаются всем соответствующим соавторам, и все материалы добавляются в библиотеку Matryx и на торговую площадку для дальнейшей покупки. Это приводит к возникновению экосистемы общественного сотрудничества и создания идей, которая будет стимулировать исследования и инноваций.
       </span>
@@ -33,7 +46,7 @@
     	<span v-else>
         Matryx is a platform for decentralized collaboration. Matryx consists of a bounty system, a library of digital assets, and a marketplace. Problems are posted, along with a bounty for a verified solution. Users then collaborate to solve problems, share results, and earn rewards. Rewards are given to all relevant contributors, and all submissions are added to the Matryx library and marketplace for future purchase. This will create an ecosystem of public collaboration and ideas that will drive research and innovation.
       </span>
-    </p>
+    </p> -->
   </section>
 </template>
 
@@ -51,20 +64,62 @@ export default {
 <style lang="scss" scoped>
 @import '../../assets/css/colors.scss';
 
-section.content-container {
-  border-top: 1px solid $matryx-grey;
-  border-bottom: 1px solid $matryx-grey;
-  padding: 40px 80px;
+.MatryxLogo{
+  margin: 0 auto;
+  text-align: center;
+}
 
-  h1 {
+.MatryxLogo img{
+  max-width: 400px;
+}
+
+.content-container{
+  padding: 20px 40px;
+}
+
+section.content-container {
+  /*border-top: 1px solid $matryx-grey;
+  border-bottom: 1px solid $matryx-grey;*/
+  padding: 0px 80px 20px 80px;
+  h1{
     font-size: 46px;
     margin-bottom: 20px;
+  }
+  h2{
+    font-weight: 700px;
+    font-size: 32px;
+  }
+  h3{
+    padding:5px;
+  }
+  p{
+    padding: 25px;
+    font-size: 18px;
   }
 }
 
 @media screen and (max-width: 850px) {
+  .MatryxLogo img{
+    max-width: 250px;
+    padding: 0px;
+  }
+  .content-container{
+    margin: 0 auto;
+    padding-bottom: 15px;
+  }
+
+  section.above-the-fold > .content-container {
+    padding-top: 150px;
+  }
   section.content-container {
-    padding: 60px;
+    padding: 10px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  h3{
+    font-size: 24px;
+    line-height: 30px;
   }
 }
 </style>

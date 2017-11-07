@@ -2,6 +2,121 @@
   <section>
     <div class="content-container--large text--light content-container" id="what-is-matryx">
       <div class="overview">
+        <div class="overview__column-2 overview__img--2">
+        </div>
+        <div class="overview__column-1">
+          <h3 class="text-color--matryx-black subheader">
+            <span v-if=" language === 'ru' ">Проблема взаимодействия</span>
+          	<span v-else-if=" language === 'ch' ">合作问题</span>
+          	<span v-else-if=" language === 'ge' ">Das Kollaborationsproblem</span>
+          	<span v-else-if=" language === 'ja' ">コラボレーションの問題</span>
+          	<span v-else-if=" language === 'ko' ">협업 문제</span>
+          	<span v-else>Solving the Collaboration Problem</span>
+          </h3>
+          <p class="text-color--matryx-dark-grey">
+            <span v-if=" language === 'ru' ">
+              Решение самых сложных проблем в мире в самодостаточных подразделениях приводит к дублированию усилий и избыточности. Создания глобального сообщества, которое поощряет и стимулирует обмен идеями, значительно сокращает время создания инновации и позволяет решать проблемы с такой высокой скоростью, которая была бы невозможна в другой ситуации.<br/> <br/>Усилия в области исследований и инженерных разработок являются разрозненными. Время и деньги тратятся впустую, когда различные команды работают над одной и той же проблемой без координации между собой. Признание и гранты получают последние люди, которые работали над проблемой, а десятки важнейших соавторов остаются без внимания. Таким образом, нет никаких стимулов для сотрудничества с другими группами и никакого хранилища сведений о решенных проблемах.
+            </span>
+          	<span v-else-if=" language === 'ch' ">
+              在筒仓内解决世上最困难的问题导致成倍的工作和冗余。通过提供一个以交换创意为主的全球化社区，创新周期可以被大幅缩短，而刁钻的问题也能迎刃而解。
+              <br/> <br/>
+              目前，研究和设计工作被碎片化。当不同的团队独自应对相同的问题时，时间和金钱都被浪费了。不仅如此，荣誉和奖赏通常归于最后解决问题的人，而忽视了之前的关键贡献者。因此，没有与其他团队合作的动机，也不会有已解决问题的知识库。
+            </span>
+          	<span v-else-if=" language === 'ge' ">
+              Die schwierigsten Probleme der Welt isoliert zu lösen führt zur Verdopplung des Aufwandes und zu Redundanz. Durch die Bereitstellung einer globalen Community, die den Austausch von Ideen fördert und anregt, wird die Innovationszeit deutlich reduziert und Probleme werden mit einer ansonsten unerreichbaren Geschwindigkeit gelöst.
+              <br/><br/>
+              Bemühungen in Forschung und Technik sind fragmentiert. Es werden Zeit und Geld verschwendet, wenn verschiedene Teams ohne Koordination an demselben Problem arbeiten. Anerkennung und Fördergelder gehen an diejenigen, die als Letzte an einem Problem gearbeitet haben, während Dutzende entscheidender Mitwirkender unbeachtet bleiben. Es besteht somit kein Anreiz zur Zusammenarbeit mit anderen Teams und es existiert kein Archiv bereits gelöster Probleme.
+            </span>
+          	<span v-else-if=" language === 'ja' ">
+              世界でも最も困難な問題を個々に解決しようとすれば、労力の重複と冗長性につながります。アイデアの交換を奨励するグローバルなコミュニティを提供することにより、イノベーションにかかる時間が大幅に短縮され、他の方法では不可能な速度で問題が解決されます。
+              <br/> <br/>
+              研究と工学の努力は分断されており、異なるチームが同じ問題を調整せずに作業する場合、時間と資金が無駄になります。評価と助成金は、問題について最後に取り組んだ人々に送られ、何十人という重要な貢献者達を無視してしまいます。したがって、他のチームと協力するインセンティブはなく、解決された問題の保存場所もありません。
+            </span>
+          	<span v-else-if=" language === 'ko' ">
+              세계에서 가장 높은 난이도를 가진 문제들을 서로 고립된 환경에서 해결하는 것은 노력의 중복과 낭비를 야기하게 됩니다. 아이디어의 교환을 장려하고 제도적으로 그것에 대해 보상을 해주는 전세계적 커뮤니티를 마련함으로써 혁신을 위해 소비되는 시간이 엄청나게 단축되게 됨은 물론 많은 문제들이 이전에는 불가능하다고 여겨졌던 속도로 해결됩니다.
+              <br/> <br/>대체로 연구 및 공학 분야에서 투자되는 노력은 파편화되어 있기 마련입니다. 복수의 팀들이 서로 간의 조율없이 동일한 문제를 해결하기 위해 노력할 때 시간과 돈이 낭비됩니다. 인지도와 보상은 문제의 해결을 위해 가장 나중에 노력한 사람들에게 돌아가며 수십명의 중요한 기여자들의 노력은 무시됩니다. 다른 팀들과의 협동에 대한 보상이 없음은 물론, 해결된 문제들에 대한 보관 역시 갖추어져 있지 않습니다.
+            </span>
+            <span v-else-if=" language === 'es' ">
+              Resolver los problemas más difíciles del mundo en silos conduce a la duplicación del esfuerzo y la redundancia. Se pierde tiempo y dinero cuando diferentes equipos trabajan en el mismo problema sin coordinación.
+               <br/> <br/>El reconocimiento y las subvenciones van a las últimas personas para trabajar en un problema, ignorando docenas de colaboradores críticos. Como tal, no hay ningún incentivo para cooperar con otros equipos ni repositorio de problemas resueltos.
+            </span>
+          	<span v-else>
+              Solving the world’s hardest problems in silos leads to duplication of effort and redundancy. Time and money are wasted when different teams work on the same problem without coordination.
+              <br/> <br/>Recognition and grants go to the last people to work on a problem, ignoring dozens of critical contributors. As such, there’s no incentive to cooperate with other teams, and no repository of solved problems.
+              <h6 class=text-color--matryx-black>Matryx provides an environment in which collaboration is monetarily incentivized, grants are distributed fairly, R&D expenses are reduced and time is saved.</h6>
+            </span>
+          </p>
+        </div>
+      </div>
+      <h4 class="text-color--matryx-black" id="solution-title" >
+        <span v-if=" language === 'ru' ">Решение Matryx</span>
+        <span v-else-if=" language === 'ch' ">Matryx 平台之解决方案</span>
+        <span v-else-if=" language === 'ge' ">Die Matryx-Lösung</span>
+        <span v-else-if=" language === 'ja' ">Matryxソリューション</span>
+        <span v-else-if=" language === 'ko' ">과학적 협업을위한 Matryx 솔루션</span>
+        <span v-else-if=" language === 'es' ">La solución de Matryx para la colaboración científica</span>
+        <span v-else>The Matryx Solution for Scientific Collaboration</span>
+      </h4>
+      <div class="overview">
+        <div class="overview__column-1 mobile--order-1">
+          <h3 class="text-color--matryx-black subheader">
+            <span v-if=" language === 'ru' ">Решение проблем путем совместной конкуренции</span>
+          	<span v-else-if=" language === 'ch' ">通过合作竞争解决问题</span>
+          	<span v-else-if=" language === 'ge' ">Problemlösung durch kooperativen Wettbewerb</span>
+          	<span v-else-if=" language === 'ja' ">協調競争による問題解決</span>
+          	<span v-else-if=" language === 'ko' ">협력 경쟁을 통한 문제 해결</span>
+            <span v-else-if=" language === 'es' ">Solución de problemas a través de la competencia cooperativa</span>
+          	<span v-else>Problem Solving Through Cooperative Competition</span>
+          </h3>
+          <p class="text-color--matryx-dark-grey">
+            <span v-if=" language === 'ru' ">
+              Системы вознаграждений на базе блокчейна от Matrix обеспечивает стимулы для совместного решения проблем. Авторы получают вознаграждение за свой вклад в виде токенов MTX. Любое лицо может размещать вознаграждения за решение проблем на Matryx. Участники соревнуются в решении этих проблем в ходе турнира.
+              <br/> <br/>Решение, победившее в каждом раунде, публикуется, чтобы новые авторы смогли добавить к нему что-то свое в его новом воплощении. Все это позволяет пользователям быстрее и эффективней достигать целей. После решения проблемы награды и знаки признания будут выданы всем участникам победившего решения, а не только последнему соавтору для обеспечения объективности и прозрачности.
+            </span>
+          	<span v-else-if=" language === 'ch' ">
+          	  Matryx 基于区块链的赏金制度促进了解决问题所需的协作性。创造者因贡献而获得MTX代币回报。任何人均可发布赏金到 Matryx平台上。参与者们可在答题过程中竞争以求解决这些学术上的难题。
+              <br><br>
+              每一轮胜出的解决方案被公开分享，以便新的贡献者可以融入新的迭代，使用户更快、更有效地实现目标。问题一旦解决，荣誉与奖赏会被赋予所有胜出的贡献者，而不仅仅是最后一位贡献者，以体现公平和透明。
+          	</span>
+          	<span v-else-if=" language === 'ge' ">
+          	  Das blockchainbasierte Bounty-System von Matryx bietet Anreize zur kollaborativen Problemlösung. Urheber werden für ihre Beiträge mit MTX-Tokens belohnt. Jeder kann in Matryx Belohnungen posten. Teilnehmer treten in einem Wettkampf gegeneinander an, um diese Probleme zu lösen.
+              <br><br>Die siegreiche Lösung jeder Runde wird öffentlich geteilt, sodass neue Mitwirkende sie als Grundlage für eine neue Iteration verwenden und die Nutzer das Ziel somit schneller und effektiver erreichen können. Sobald ein Problem gelöst ist, werden Belohnungen und Anerkennung an alle siegreichen Mitarbeiter – nicht nur an den letzten Mitwirkenden – verteilt, um Fairness und Transparenz zu gewährleisten.
+          	</span>
+          	<span v-else-if=" language === 'ja' ">
+          	  Matryxのブロックチェーンベースの報奨システムは、協力的な問題解決のインセンティブを提供し、クリエイターはMTXトークンによって報酬を受け取ります。誰でもMatryxに報奨を掲示でき、参加者はトーナメントでこれらの問題を解決するために競争します。
+              <br><br>
+              各ラウンドで勝利した解決策は公に共有され、新しい貢献者が新しいバージョンにリミックスでき、ユーザーはより迅速かつ効果的に目標に到達できます。問題が解決されると、公平性と透明性のために、最後の投稿者だけでなく、勝利した貢献者全員に報奨と評価が与えられます。
+          	</span>
+          	<span v-else-if=" language === 'ko' ">
+          	  Matryx의 블록체인 기반의 포상 제도는 협업적 문제해결에 대해 보상을 제공합니다. 창작자들은 그들의 기여에 대해 MTX 토큰을 통해 보상을 받게 됩니다. 누구나 Matryx에 포상금을 게시할 수 있습니다. 참가자들은 토너먼트 내에서 이 문제들의 해결을 위해 서로 경쟁합니다.
+              <br><br>각 라운드에서 우승하는 해결책은 모든 사람들에게 공유되며 이와 더불어 새 기여자들이 새로운 버전으로 재변형을 할 수 있기 때문에 이용자들이 목표에 더 빠르고 더 효율적으로 도달할 수 있습니다. 문제가 해결되면 보상 및 인지도는 공정성과 투명성을 위해 가장 나중의 기여자가 아닌 우승에 기여한 모든 참가자들에게 주어집니다.
+          	</span>
+            <span v-else-if=" language === 'es' ">En Matryx, los participantes compiten por la resolución de problemas de I + D en una competencia abierta de recompensas.
+               <br/> Cada competencia se subdivide en rondas. La solución ganadora de cada ronda se comparte públicamente para que los nuevos colaboradores puedan remezclarla en una nueva iteración, lo que permite a los usuarios alcanzar su objetivo de manera más rápida y efectiva. Una vez que se resuelve un problema, se otorgan recompensas y reconocimiento a todos los contribuyentes ganadores.
+            </span>
+          	<span v-else>
+              On Matryx, participants compete over the solving of R&#38;D problems in an open bounty competition.
+              <br/> <br/>Each competition is sub-divided into rounds. The winning solution of each round is shared publicly so that new contributors can remix it into a new iteration, enabling users to reach their goal faster and more effectively. Once a problem is solved, rewards and recognition are given to all winning contributors.
+            </span>
+          </p>
+          <a :href="href" target="_blank" @click="whitePaperClick(language)">
+            <button class="btn-red whitepaper-btn">
+              <span v-if=" language === 'ru' ">
+                Прочитайте техническую документацию
+              </span>
+            	<span v-else-if=" language === 'ch' ">阅读白皮书</span>
+            	<span v-else-if=" language === 'ge' ">Lesen Sie das White Paper</span>
+            	<span v-else-if=" language === 'ja' ">ホワイトペーパーを読む</span>
+            	<span v-else-if=" language === 'ko' ">백서를 읽어보세요</span>
+              <span v-else-if=" language === 'es' ">Lee el Whitepaper</span>
+              <span v-else>Read the Whitepaper</span>
+            </button>
+          </a>
+        </div>
+        <div class="overview__column-2 mobile--order-2 overview__img--3">
+        </div>
+      </div>
+      <!-- <div class="overview">
         <div class="overview__column-1 mobile--order-1">
           <h3 class="text-color--matryx-black subheader">
             <span v-if=" language === 'ru' ">Основные сведения о Matryx</span>
@@ -34,106 +149,7 @@
         </div>
         <div class="overview__column-2 mobile--order-2 overview__img--1">
         </div>
-      </div>
-      <div class="overview">
-        <div class="overview__column-2 overview__img--2">
-        </div>
-        <div class="overview__column-1">
-          <h3 class="text-color--matryx-black subheader">
-            <span v-if=" language === 'ru' ">Проблема взаимодействия</span>
-          	<span v-else-if=" language === 'ch' ">合作问题</span>
-          	<span v-else-if=" language === 'ge' ">Das Kollaborationsproblem</span>
-          	<span v-else-if=" language === 'ja' ">コラボレーションの問題</span>
-          	<span v-else-if=" language === 'ko' ">협업 문제</span>
-          	<span v-else>The Collaboration Problem</span>
-          </h3>
-          <p class="text-color--matryx-dark-grey">
-            <span v-if=" language === 'ru' ">
-              Решение самых сложных проблем в мире в самодостаточных подразделениях приводит к дублированию усилий и избыточности. Создания глобального сообщества, которое поощряет и стимулирует обмен идеями, значительно сокращает время создания инновации и позволяет решать проблемы с такой высокой скоростью, которая была бы невозможна в другой ситуации.<br/> <br/>Усилия в области исследований и инженерных разработок являются разрозненными. Время и деньги тратятся впустую, когда различные команды работают над одной и той же проблемой без координации между собой. Признание и гранты получают последние люди, которые работали над проблемой, а десятки важнейших соавторов остаются без внимания. Таким образом, нет никаких стимулов для сотрудничества с другими группами и никакого хранилища сведений о решенных проблемах.
-            </span>
-          	<span v-else-if=" language === 'ch' ">
-              在筒仓内解决世上最困难的问题导致成倍的工作和冗余。通过提供一个以交换创意为主的全球化社区，创新周期可以被大幅缩短，而刁钻的问题也能迎刃而解。
-              <br/> <br/>
-              目前，研究和设计工作被碎片化。当不同的团队独自应对相同的问题时，时间和金钱都被浪费了。不仅如此，荣誉和奖赏通常归于最后解决问题的人，而忽视了之前的关键贡献者。因此，没有与其他团队合作的动机，也不会有已解决问题的知识库。
-            </span>
-          	<span v-else-if=" language === 'ge' ">
-              Die schwierigsten Probleme der Welt isoliert zu lösen führt zur Verdopplung des Aufwandes und zu Redundanz. Durch die Bereitstellung einer globalen Community, die den Austausch von Ideen fördert und anregt, wird die Innovationszeit deutlich reduziert und Probleme werden mit einer ansonsten unerreichbaren Geschwindigkeit gelöst.
-              <br/><br/>
-              Bemühungen in Forschung und Technik sind fragmentiert. Es werden Zeit und Geld verschwendet, wenn verschiedene Teams ohne Koordination an demselben Problem arbeiten. Anerkennung und Fördergelder gehen an diejenigen, die als Letzte an einem Problem gearbeitet haben, während Dutzende entscheidender Mitwirkender unbeachtet bleiben. Es besteht somit kein Anreiz zur Zusammenarbeit mit anderen Teams und es existiert kein Archiv bereits gelöster Probleme.
-            </span>
-          	<span v-else-if=" language === 'ja' ">
-              世界でも最も困難な問題を個々に解決しようとすれば、労力の重複と冗長性につながります。アイデアの交換を奨励するグローバルなコミュニティを提供することにより、イノベーションにかかる時間が大幅に短縮され、他の方法では不可能な速度で問題が解決されます。
-              <br/> <br/>
-              研究と工学の努力は分断されており、異なるチームが同じ問題を調整せずに作業する場合、時間と資金が無駄になります。評価と助成金は、問題について最後に取り組んだ人々に送られ、何十人という重要な貢献者達を無視してしまいます。したがって、他のチームと協力するインセンティブはなく、解決された問題の保存場所もありません。
-            </span>
-          	<span v-else-if=" language === 'ko' ">
-              세계에서 가장 높은 난이도를 가진 문제들을 서로 고립된 환경에서 해결하는 것은 노력의 중복과 낭비를 야기하게 됩니다. 아이디어의 교환을 장려하고 제도적으로 그것에 대해 보상을 해주는 전세계적 커뮤니티를 마련함으로써 혁신을 위해 소비되는 시간이 엄청나게 단축되게 됨은 물론 많은 문제들이 이전에는 불가능하다고 여겨졌던 속도로 해결됩니다.
-              <br/> <br/>
-              대체로 연구 및 공학 분야에서 투자되는 노력은 파편화되어 있기 마련입니다. 복수의 팀들이 서로 간의 조율없이 동일한 문제를 해결하기 위해 노력할 때 시간과 돈이 낭비됩니다. 인지도와 보상은 문제의 해결을 위해 가장 나중에 노력한 사람들에게 돌아가며 수십명의 중요한 기여자들의 노력은 무시됩니다. 다른 팀들과의 협동에 대한 보상이 없음은 물론, 해결된 문제들에 대한 보관 역시 갖추어져 있지 않습니다.
-            </span>
-          	<span v-else>
-              Solving the world’s hardest problems in silos leads to duplication of effort and redundancy. By providing a global community that encourages and incentivizes the exchange of ideas, time to innovation is greatly reduced while problems are solved at a rate otherwise impossible.
-              <br/> <br/>
-              Research and engineering efforts are fragmented. Time and money are wasted when different teams work on the same problem without coordination. Recognition and grants go to the last people to work on a problem, ignoring dozens of critical contributors. As such there’s no incentive to cooperate with other teams, and no repository of solved problems.
-            </span>
-          </p>
-        </div>
-      </div>
-      <div class="overview">
-        <div class="overview__column-1 mobile--order-1">
-          <h3 class="text-color--matryx-black subheader">
-            <span v-if=" language === 'ru' ">Решение Matryx</span>
-          	<span v-else-if=" language === 'ch' ">Matryx 平台之解决方案</span>
-          	<span v-else-if=" language === 'ge' ">Die Matryx-Lösung</span>
-          	<span v-else-if=" language === 'ja' ">Matryxソリューション</span>
-          	<span v-else-if=" language === 'ko' ">Matryx의 해결책</span>
-          	<span v-else>The Matryx Solution</span>
-          </h3>
-          <p class="text-color--matryx-dark-grey">
-            <span v-if=" language === 'ru' ">
-              Системы вознаграждений на базе блокчейна от Matrix обеспечивает стимулы для совместного решения проблем. Авторы получают вознаграждение за свой вклад в виде токенов MTX. Любое лицо может размещать вознаграждения за решение проблем на Matryx. Участники соревнуются в решении этих проблем в ходе турнира.
-              <br/> <br/>Решение, победившее в каждом раунде, публикуется, чтобы новые авторы смогли добавить к нему что-то свое в его новом воплощении. Все это позволяет пользователям быстрее и эффективней достигать целей. После решения проблемы награды и знаки признания будут выданы всем участникам победившего решения, а не только последнему соавтору для обеспечения объективности и прозрачности.
-            </span>
-          	<span v-else-if=" language === 'ch' ">
-          	  Matryx 基于区块链的赏金制度促进了解决问题所需的协作性。创造者因贡献而获得MTX代币回报。任何人均可发布赏金到 Matryx平台上。参与者们可在答题过程中竞争以求解决这些学术上的难题。
-              <br><br>
-              每一轮胜出的解决方案被公开分享，以便新的贡献者可以融入新的迭代，使用户更快、更有效地实现目标。问题一旦解决，荣誉与奖赏会被赋予所有胜出的贡献者，而不仅仅是最后一位贡献者，以体现公平和透明。
-          	</span>
-          	<span v-else-if=" language === 'ge' ">
-          	  Das blockchainbasierte Bounty-System von Matryx bietet Anreize zur kollaborativen Problemlösung. Urheber werden für ihre Beiträge mit MTX-Tokens belohnt. Jeder kann in Matryx Belohnungen posten. Teilnehmer treten in einem Wettkampf gegeneinander an, um diese Probleme zu lösen.
-              <br><br>Die siegreiche Lösung jeder Runde wird öffentlich geteilt, sodass neue Mitwirkende sie als Grundlage für eine neue Iteration verwenden und die Nutzer das Ziel somit schneller und effektiver erreichen können. Sobald ein Problem gelöst ist, werden Belohnungen und Anerkennung an alle siegreichen Mitarbeiter – nicht nur an den letzten Mitwirkenden – verteilt, um Fairness und Transparenz zu gewährleisten.
-          	</span>
-          	<span v-else-if=" language === 'ja' ">
-          	  Matryxのブロックチェーンベースの報奨システムは、協力的な問題解決のインセンティブを提供し、クリエイターはMTXトークンによって報酬を受け取ります。誰でもMatryxに報奨を掲示でき、参加者はトーナメントでこれらの問題を解決するために競争します。
-              <br><br>
-              各ラウンドで勝利した解決策は公に共有され、新しい貢献者が新しいバージョンにリミックスでき、ユーザーはより迅速かつ効果的に目標に到達できます。問題が解決されると、公平性と透明性のために、最後の投稿者だけでなく、勝利した貢献者全員に報奨と評価が与えられます。
-          	</span>
-          	<span v-else-if=" language === 'ko' ">
-          	  Matryx의 블록체인 기반의 포상 제도는 협업적 문제해결에 대해 보상을 제공합니다. 창작자들은 그들의 기여에 대해 MTX 토큰을 통해 보상을 받게 됩니다. 누구나 Matryx에 포상금을 게시할 수 있습니다. 참가자들은 토너먼트 내에서 이 문제들의 해결을 위해 서로 경쟁합니다.
-              <br><br>각 라운드에서 우승하는 해결책은 모든 사람들에게 공유되며 이와 더불어 새 기여자들이 새로운 버전으로 재변형을 할 수 있기 때문에 이용자들이 목표에 더 빠르고 더 효율적으로 도달할 수 있습니다. 문제가 해결되면 보상 및 인지도는 공정성과 투명성을 위해 가장 나중의 기여자가 아닌 우승에 기여한 모든 참가자들에게 주어집니다.
-          	</span>
-          	<span v-else>
-              Matryx’s blockchain-based bounty system provides incentives for collaborative problem solving. Creators are rewarded for contributions with MTX tokens. Anyone can post bounties to Matryx. Participants compete to solve these problems in a tournament.
-              <br/> <br/>The winning solution of each round is shared publicly so that new contributors can remix into a new iteration, enabling users to reach the goal faster and more effectively.
-              Once a problem is solved, rewards and recognition are given to all winning contributors, not just the last contributor, for fairness and transparency.
-          	</span>
-          </p>
-          <a :href="href" target="_blank" @click="whitePaperClick(language)">
-            <button class="btn-red whitepaper-btn">
-              <span v-if=" language === 'ru' ">
-                Прочитайте техническую документацию
-              </span>
-            	<span v-else-if=" language === 'ch' ">阅读白皮书</span>
-            	<span v-else-if=" language === 'ge' ">Lesen Sie das White Paper</span>
-            	<span v-else-if=" language === 'ja' ">ホワイトペーパーを読む</span>
-            	<span v-else-if=" language === 'ko' ">백서를 읽어보세요</span>
-            	<span v-else>Read the Whitepaper</span>
-            </button>
-          </a>
-        </div>
-        <div class="overview__column-2 mobile--order-2 overview__img--3">
-        </div>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>
@@ -170,6 +186,15 @@ export default {
 <style lang="scss">
 @import '../../assets/css/colors';
 
+.text-align-center{
+  text-align: center;
+}
+
+#solution-title
+{
+  text-align: center;
+  padding-top:50px;
+}
 #what-is-matryx {
   margin-top: 0px;
   padding-top: 40px;
@@ -196,7 +221,7 @@ export default {
   .overview {
     display:-webkit-box;display:-ms-flexbox;display:flex;
     justify-content: space-between;
-    padding: 30px 0;
+    padding: 50px;
     border-bottom: 1px solid $light-purple-border;
 
     &:last-child {

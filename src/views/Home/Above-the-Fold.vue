@@ -1,5 +1,5 @@
 <template>
-  <section class="above-the-fold">
+  <section class="above-the-fold" id="token-sale-section">
     <!-- <video src="https://giphy.com/embed/3oKIPaPc7NBFYWveIU" class="above-the-fold__video" autoplay="true" loop="true"></video> -->
     <!-- <iframe src="https://giphy.com/embed/3oKIPaPc7NBFYWveIU" frameBorder="0" class="above-the-fold__video"></iframe> -->
     <!-- <div class="above-the-fold__video__overlay"></div> -->
@@ -17,12 +17,14 @@
           </span>
           <span v-else-if=" language === 'ja' ">当社のトークンセールに参加</span>
           <span v-else-if=" language === 'ko' ">저희 토큰 판매에 참여하세요</span>
+          <span v-else-if=" language === 'es' ">PARTICIPA EN LA VENTA</span>
           <span v-else>Join Our Token Sale</span>
         </h1>
 
         <div>
           <h4 class="uppercase text-center text-color--matryx-blue" style="margin-bottom: -10px; margin-top: 20px;">
             <span v-if=" language === 'ch' ">距结束时间</span>
+            <span v-if=" language === 'es' ">TERMINA EN</span>
             <span v-else>
               <span v-if="is10">10% Bonus Ends in:</span>
               <span v-else-if="is5">5% Bonus Ends in:</span>
@@ -33,13 +35,19 @@
           <Countdown :end="endDate" style="margin-top: 0px;"></Countdown>
 
           <p class="text-center text-color--matryx-blue">
+            <span v-if=" language === 'ch' ">我们感谢大家的参与，点击查看我们的
+            <a class="link" href="https://matryx.ai/matryx-token-sale-extension-cn.pdf" target="_blank"> 最新消息</a></span>
+            <span v-else-if=" language === 'es' ">Apreciamos el apoyo de todos. Tenomos
+            <a class="link" href="https://blog.matryx.ai/token-sale-update-changing-it-up-5f83de13a76d" target="_blank"> noticias exitosas!</a></span>
+            <span v-else>
             We appreciate everyone’s support so far
             <br/> and have some
             <a class="link"
-              href="https://blog.matryx.ai/token-sale-update-changing-it-up-5f83de13a76d" 
+              href="https://blog.matryx.ai/token-sale-update-changing-it-up-5f83de13a76d"
               target="_blank"
             >
               exciting news!</a>
+              </span>
           </p>
 
           <Matryx-Btn :text="buttonText" :handleClick="openSaleModal">
@@ -47,6 +55,7 @@
 
           <p class="text-center text-color--matryx-blue">
             <span v-if=" language === 'ch' ">已经拥有MTX了吗？<span class="link" @click="openMTXModal">检查您的余额</span></span>
+            <span v-else-if=" language === 'es' ">Ya compró? <span class="link" @click="openMTXModal">Verfica tu balance</span></span>
             <span v-else>Already purchased MTX? <span class="link" @click="openMTXModal">Check your balance.</span></span>
           </p>
 
@@ -54,7 +63,7 @@
         </div>
       </div>
 
-      <div matrclass="token-sale__video-launcher content-container--medium">
+      <div class="token-sale__video-launcher content-container--medium">
         <iframe class="matryx-video-yt"
           width="560" height="315"
           :src="selectedLanguage" frameborder="0"
@@ -164,12 +173,13 @@ section.above-the-fold {
   margin-bottom: 0px;
   margin-top:0;
   position:relative;
+  padding-top: 50px;
+  padding-bottom: 250px;
 
   & > .content-container {
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 40px 40px 180px;
     z-index: 1;
     position:relative;
   }
@@ -178,7 +188,7 @@ section.above-the-fold {
     background-color: $light-green;
     border-color: $light-green;
     margin: -5px auto 10px;
-
+    height: 70px;
     &:hover {
       background-color: $matryx-blue;
       border-color: $white;
@@ -221,7 +231,7 @@ section.above-the-fold {
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 0;
-  background-position-y: bottom;
+  background-position-y: initial;
 }
 
 iframe.above-the-fold__video {
@@ -351,30 +361,40 @@ iframe.above-the-fold__video {
   z-index: 1;
 }
 
-
-
-
-
 .purple-btn {
   border: none;
 }
 
 
 /*----- MEDIA QUERIES -----*/
-@media screen and (min-width: 1690px) {
-  section.above-the-fold {
-    padding-bottom: 220px;
-  }
-}
 
-@media screen and (min-width: 1400px) {
+// @media screen and (min-width: 1690px) {
+//   section.above-the-fold {
+//     padding-top: 0px;
+//     padding-bottom: 300px;
+//   }
+// }
+
+// @media screen and (max-width: 1500px) {
+//   section.above-the-fold {
+//     max-height: 800px;
+//   }
+// }
+
+@media screen and (min-width: 1700px) {
   section.above-the-fold {
-    padding-bottom: 50px;
+    padding-top: 0px;
+    padding-bottom: 300px;
+    max-height: 1000px;
   }
 }
 
 @media screen and (max-width: 1050px) {
-
+  section.above-the-fold {
+    & > .content-container {
+      padding-top: 0px;
+    }
+  }
   .token-sale {
     flex-direction: column;
   }
@@ -384,11 +404,9 @@ iframe.above-the-fold__video {
     margin: 20px 0;
     max-width: 100%;
     text-align:center;
+
   }
-  .token-sale__video-launcher {
-    width: 100%;
-    img {width: 100%;}
-  }
+
   .token-sale__text p.lead {
     margin: 20px auto;
     width: 100%;
@@ -399,6 +417,12 @@ iframe.above-the-fold__video {
 }
 
 @media screen and (max-width: 750px) {
+  section.above-the-fold {
+    & > .content-container {
+      padding-top: 0px;
+    }
+  }
+
   iframe{
     width: 300px !important;
     height: 200px !important;
@@ -407,9 +431,9 @@ iframe.above-the-fold__video {
 
 @media screen and (max-width: 550px) {
   section.above-the-fold {
-  
+
     & > .content-container {
-      padding-top: 40px;
+      padding-top: 100px;
       // margin-bottom: 140px;
     }
   }
