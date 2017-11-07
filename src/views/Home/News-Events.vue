@@ -82,13 +82,37 @@ export default {
     return {
       // http://sharingbuttons.io/
       news: [{
+        name: 'A UC San Diego-Based Tech Startup (and Professor) Is Testing the Limits of Blockchain, VR',
+        date: '01 Nov 2017',
+        desc: 'Amid eucalyptus trees and native shrubs, a biotechnology-focused virtual reality and blockchain company found a home on the University of California, San Diego (UCSD) campus in La Jolla. Nanome Inc. is headquartered at a central hub of science and technology.',
+        image: newsImage1,
+        articleLink: 'http://www.maxkeiser.com/2017/11/a-uc-san-diego-based-tech-startup-and-professor-are-testing-the-limits-of-blockchain-and-vr/',
+        facebookLink: 'https://facebook.com/sharer/sharer.php?u=http://www.maxkeiser.com/2017/11/a-uc-san-diego-based-tech-startup-and-professor-are-testing-the-limits-of-blockchain-and-vr/',
+        twitterLink: 'https://twitter.com/intent/tweet/?text=Check%20out%20what%20%23Matryx%20is%20up%20to%20- &amp;url=http://www.maxkeiser.com/2017/11/a-uc-san-diego-based-tech-startup-and-professor-are-testing-the-limits-of-blockchain-and-vr/'
+      }, {
+        name: 'Matryx Partners with Edge (formerly Airbitz)',
+        date: '30 Oct 2017',
+        desc: 'Two San Diego-based blockchain companies are hoping to merge blockchain and virtual reality. Bitcoin wallet and edge security platform Airbitz has partnered with Matryx, a tool for distributed collaboration in science, technology, engineering and mathematics.',
+        image: newsImage2,
+        articleLink: 'https://www.huffingtonpost.com/entry/airbitz-and-matryx-partnership-combines-blockchain_us_59f4cd01e4b06acda25f4a66',
+        facebookLink: 'https://facebook.com/sharer/sharer.php?u=https://www.huffingtonpost.com/entry/airbitz-and-matryx-partnership-combines-blockchain_us_59f4cd01e4b06acda25f4a66',
+        twitterLink: 'https://twitter.com/intent/tweet/?text=Check%20out%20what%20%23Matryx%20is%20up%20to%20- &amp;url=https://www.huffingtonpost.com/entry/airbitz-and-matryx-partnership-combines-blockchain_us_59f4cd01e4b06acda25f4a66'
+      }, {
+        name: 'This Virtual Reality Company Leverages Blockchain for Science',
+        date: '28 Oct 2017',
+        desc: 'A biotech software company based on the University of California, San Diego (UCSD) campus is blending blockchain and virtual reality to transform the way scientists research their fields, and how that information is shared. Nanome Inc., the team behind Matryx, is now serving client in the pharma industry.',
+        image: newsImage4,
+        articleLink: 'http://www.thedrum.com/profile/news/275210/virtual-reality-company-leverages-blockchain-science',
+        facebookLink: 'https://facebook.com/sharer/sharer.php?u=http://www.thedrum.com/profile/news/275210/virtual-reality-company-leverages-blockchain-science',
+        twitterLink: 'https://twitter.com/intent/tweet/?text=Check%20out%20what%20%23Matryx%20is%20up%20to%20- &amp;url=http://www.thedrum.com/profile/news/275210/virtual-reality-company-leverages-blockchain-science'
+      }, {
         name: 'How Blockchain Can Change The Way Science Works, Explained',
         date: '6 Sept 2017',
         desc: 'Projects like Matryx allow science, technology, engineering, and mathematics research projects to become accessible to everyone.',
-        image: newsImage1,
+        image: newsImage2,
         articleLink: 'https://cointelegraph.com/explained/how-blockchain-can-change-the-way-science-works-explained',
         facebookLink: 'https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcointelegraph.com%2Fexplained%2Fhow-blockchain-can-change-the-way-science-works-explained',
-        twitterLink: 'https://twitter.com/intent/tweet/?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url=https%3A%2F%2Fcointelegraph.com%2Fexplained%2Fhow-blockchain-can-change-the-way-science-works-explained'
+        twitterLink: 'https://twitter.com/intent/tweet/?text=Check%20out%20what%20%23Matryx%20is%20up%20to%20- &amp;url=https%3A%2F%2Fcointelegraph.com%2Fexplained%2Fhow-blockchain-can-change-the-way-science-works-explained'
       }, {
         name: 'SD News: Matryx Launch',
         date: '24 Aug 2017',
@@ -101,15 +125,15 @@ export default {
         name: 'Blockchain News: Introducing Matryx',
         date: '24 Aug 2017',
         desc: 'The Matryx team creates virtual reality software for scientific research and development, and has announced Matryx, an open source platform for decentralized collaboration. The Matryx token sale will kick off with a public pre-sale on Wednesday, September 6, 2017.',
-        image: newsImage2,
+        image: newsImage1,
         articleLink: 'http://www.the-blockchain.com/2017/08/24/virtual-reality-software-maker-nanome-introduces-matryx-token-sale/',
         facebookLink: 'https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.the-blockchain.com%2F2017%2F08%2F24%2Fvirtual-reality-software-maker-nanome-introduces-matryx-token-sale%2F',
-        twitterLink: 'https://twitter.com/intent/tweet/?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url=http%3A%2F%2Fwww.the-blockchain.com%2F2017%2F08%2F24%2Fvirtual-reality-software-maker-nanome-introduces-matryx-token-sale%2F'
+        twitterLink: 'https://twitter.com/intent/tweet/?text=Check%20out%20what%20%23Matryx%20is%20up%20to%20- &amp;url=http%3A%2F%2Fwww.the-blockchain.com%2F2017%2F08%2F24%2Fvirtual-reality-software-maker-nanome-introduces-matryx-token-sale%2F'
       }, {
         name: 'ETH News: State of Digital Money 2017',
         date: '24 July 2017',
         desc: 'A number of use cases for Ethereum were also highlighted. A team from Matryx took a significant share of the spotlight for the debut of its take on virtual reality applications. Matryx debuted a custom built vector calculus tool to learn the subject in VR.',
-        image: newsImage1,
+        image: newsImage4,
         articleLink: 'https://www.ethnews.com/state-of-digital-money-2017-recap',
         facebookLink: 'https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ethnews.com%2Fstate-of-digital-money-2017-recap',
         twitterLink: 'https://twitter.com/intent/tweet/?text=&amp;url=https%3A%2F%2Fwww.ethnews.com%2Fstate-of-digital-money-2017-recap'
@@ -122,7 +146,7 @@ export default {
         image: newsImage5,
         eventLink: 'https://www.meetup.com/Dubai-Cryptocurrency-Blockchain-Meetup/events/243245854/?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging%3B9NmTE%2BCJSvasJP7jmhtTyw%3D%3D',
         facebookLink: 'https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.meetup.com%2FDubai-Cryptocurrency-Blockchain-Meetup%2Fevents%2F243245854%2F%3Flipi%3Durn%253Ali%253Apage%253Ad_flagship3_messaging%253B9NmTE%252BCJSvasJP7jmhtTyw%253D%253D',
-        twitterLink: 'https://twitter.com/intent/tweet/?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url=https%3A%2F%2Fwww.meetup.com%2FDubai-Cryptocurrency-Blockchain-Meetup%2Fevents%2F243245854%2F%3Flipi%3Durn%253Ali%253Apage%253Ad_flagship3_messaging%253B9NmTE%252BCJSvasJP7jmhtTyw%253D%253D'
+        twitterLink: 'https://twitter.com/intent/tweet/?text=Check%20out%20what%20%23Matryx%20is%20up%20to%20- &amp;url=https%3A%2F%2Fwww.meetup.com%2FDubai-Cryptocurrency-Blockchain-Meetup%2Fevents%2F243245854%2F%3Flipi%3Durn%253Ali%253Apage%253Ad_flagship3_messaging%253B9NmTE%252BCJSvasJP7jmhtTyw%253D%253D'
       }, {
         name: 'Matryx. A Decentralized Research Platform.',
         date: '13 Sept 2017 @ 7:00pm',
@@ -130,7 +154,7 @@ export default {
         image: newsImage4,
         eventLink: 'https://www.meetup.com/Los-Angeles-Ethereum/events/242566534/',
         facebookLink: 'https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.meetup.com%2FLos-Angeles-Ethereum%2Fevents%2F242566534%2F',
-        twitterLink: 'https://twitter.com/intent/tweet/?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url=https%3A%2F%2Fwww.meetup.com%2FLos-Angeles-Ethereum%2Fevents%2F242566534%2F'
+        twitterLink: 'https://twitter.com/intent/tweet/?text=Check%20out%20what%20%23Matryx%20is%20up%20to%20- &amp;url=https%3A%2F%2Fwww.meetup.com%2FLos-Angeles-Ethereum%2Fevents%2F242566534%2F'
       }, {
         name: 'Virtual Reality & Blockchain for STEM & Research',
         date: '08 Sept 2017 @ 6:30pm',

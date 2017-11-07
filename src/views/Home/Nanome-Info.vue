@@ -178,7 +178,7 @@ iframe{
     flex-wrap: wrap;
   }
   iframe{
-    width: 400px !important;
+    width: 380px !important;
     position: relative;
     z-index: 1;
     margin-left: -25px;
