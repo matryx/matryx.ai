@@ -120,7 +120,7 @@ export default {
         image: newsImage3,
         articleLink: 'http://sdtimes.com/nanome-launches-vr-collaboration-platform-matryx/',
         facebookLink: 'https://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsdtimes.com%2Fnanome-launches-vr-collaboration-platform-matryx%2F',
-        twitterLink: 'https://twitter.com/intent/tweet/?text=&amp;url=http%3A%2F%2Fsdtimes.com%2Fnanome-launches-vr-collaboration-platform-matryx%2F'
+        twitterLink: 'https://twitter.com/intent/tweet/?text=Check%20out%20what%20%23Matryx%20is%20up%20to%20- &amp;url=http%3A%2F%2Fsdtimes.com%2Fnanome-launches-vr-collaboration-platform-matryx%2F'
       }, {
         name: 'Blockchain News: Introducing Matryx',
         date: '24 Aug 2017',
@@ -136,7 +136,7 @@ export default {
         image: newsImage4,
         articleLink: 'https://www.ethnews.com/state-of-digital-money-2017-recap',
         facebookLink: 'https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ethnews.com%2Fstate-of-digital-money-2017-recap',
-        twitterLink: 'https://twitter.com/intent/tweet/?text=&amp;url=https%3A%2F%2Fwww.ethnews.com%2Fstate-of-digital-money-2017-recap'
+        twitterLink: 'https://twitter.com/intent/tweet/?text=Check%20out%20what%20%23Matryx%20is%20up%20to%20- &amp;url=https%3A%2F%2Fwww.ethnews.com%2Fstate-of-digital-money-2017-recap'
       }],
 
       events: [{
@@ -162,7 +162,7 @@ export default {
         image: newsImage5,
         eventLink: 'https://www.eventbrite.com/e/vr-x-blockchaintoken-conversation-with-fred-ehrsam-coinbase-co-founder-tickets-37440777373',
         facebookLink: 'https://facebook.com/sharer/sharer.php?u=https://www.eventbrite.com/e/vr-x-blockchaintoken-conversation-with-fred-ehrsam-coinbase-co-founder-tickets-37440777373',
-        twitterLink: 'https://twitter.com/intent/tweet/?text=&amp;url=https://www.eventbrite.com/e/vr-x-blockchaintoken-conversation-with-fred-ehrsam-coinbase-co-founder-tickets-37440777373'
+        twitterLink: 'https://twitter.com/intent/tweet/?text=Check%20out%20what%20%23Matryx%20is%20up%20to%20- &amp;url=https://www.eventbrite.com/e/vr-x-blockchaintoken-conversation-with-fred-ehrsam-coinbase-co-founder-tickets-37440777373'
       }]
     }
   },
