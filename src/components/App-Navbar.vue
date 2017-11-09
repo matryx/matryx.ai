@@ -37,8 +37,8 @@
 
           <b-nav-item class="text-color--white"
             aria-disabled="false"
-            href="/rewards"
-            target="_self"
+            href="https://blog.matryx.ai/matryx-bounty-campaign-expanded-71e5663e16e"
+            target="_blank"
           >
             <span v-if="language === 'ch'">奖励</span>
             <span v-if="language === 'es'">RECOMPENSAS</span>
