@@ -3,8 +3,8 @@
     <img src="../assets/icons/icon-ethereum.png" alt="" class="eth-bought__logo">
     <p v-if=" language === 'ch' " class="eth-bought__value"> 已筹 {{ counter }}</p>
     <p v-else class="eth-bought__value">{{ counter }} ETH Contributed</p>
-    <p class="eth-bought__container text-color--matryx-blue">For BTC &#38; LTC purchases, please contact: <a href="mailto:team@matryx.ai?subject=Matryx Token Sale"
-    target="_self">team@matryx.ai</a></p>
+    <!-- <p class="eth-bought__container text-color--matryx-blue">For BTC &#38; LTC purchases, please contact: <a href="mailto:team@matryx.ai?subject=Matryx Token Sale"
+    target="_self">team@matryx.ai</a></p> -->
   </div>
 </template>
 

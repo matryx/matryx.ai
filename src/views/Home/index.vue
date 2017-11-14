@@ -17,16 +17,16 @@
     <Bounty-System></Bounty-System>
 
     <!-- <div class="bkg-color--matryx-lighter-grey"> -->
-    <Token-Sale></Token-Sale>
+    <!-- <Token-Sale></Token-Sale> -->
     <!-- </div> -->
-    <Audited-By></Audited-By>
-    <div class="cta-middle-banner">
+
+    <!-- <div class="cta-middle-banner">
       <CTA-Banner :lighterText="true" :blueBkg="true" cta-location="Top"></CTA-Banner>
-    </div>
-    <Quotes></Quotes>
+    </div> -->
+
     <About-Token-Sale></About-Token-Sale>
-
-
+    <Audited-By></Audited-By>
+    <Quotes></Quotes>
 
     <!-- <CTA-Banner :whiteBkg="true" cta-location="Bottom"></CTA-Banner> -->
     <Matryx-Team></Matryx-Team>

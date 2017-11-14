@@ -25,7 +25,7 @@
             </h4>
             <p>
               <span v-if=" language === 'es' ">MTX es el token nativo de la plataforma Matryx. Los contribuyentes a la plataforma o recompensas serán recompensados solo en MTX.</span>
-              <span v-else-if=" language === 'ch' ">MTX是Matryx平台的原生令牌。 平台或奖励的贡献者将仅在MTX中获得奖励。</span>
+              <span v-else-if=" language === 'ch' ">MTX是Matryx平台的原生令牌。 平台或奖励的贡献者将仅通过MTX获得奖励。</span>
               <span v-else-if=" language === 'ja' ">MTXはMatryxプラットフォームのネイティブトークンです。 プラットフォームや賞金の寄付者はMTXのみで報酬を受けるでしょう。 </span>
               <span v-else-if=" language === 'ru' ">MTX является родным маркером платформы Matryx. Сторонники платформы или награды будут вознаграждены только в MTX.  </span>
               <span v-else-if=" language === 'ko' ">MTX는 Matryx 플랫폼의 기본 토큰입니다. 플랫폼 또는 현상금에 기여한 사람은 MTX에서만 보상을받습니다. </span>
@@ -152,7 +152,7 @@
               <div class="roadmap__section__description text-color--matryx-dark-grey">
                 <p>
                   <span v-if=" language === 'ru' ">Начало частного бета-тестирования Nano Pro</span>
-                	<span v-else-if=" language === 'ch' ">纳米专业内测开放</span>
+                	<span v-else-if=" language === 'ch' ">Nano Pro 内测开放</span>
                 	<span v-else-if=" language === 'ge' ">Eröffnung der Private Beta von Nano Pro</span>
                 	<span v-else-if=" language === 'ja' ">Nano Proプライベートベータがオープン</span>
                   <span v-else-if=" language === 'ko' ">Nano Pro Private 베타 시작</span>
@@ -345,7 +345,7 @@
                 </p>
                 <caption>
                   <span v-if=" language === 'ru' ">Дальнейшее поэтапное движение к полностью децентрализованной платформе и уточнение экономики токенов для массового восприятия.</span>
-                	<span v-else-if=" language === 'ch' ">继续完全分散化平台的步骤，并完善代币经济以供大规模采用。</span>
+                	<span v-else-if=" language === 'ch' ">继续完全分散化平台的步伐，并完善代币经济以供大规模采用。</span>
                 	<span v-else-if=" language === 'ge' ">Weitere Schritte in Richtung einer vollständig dezentralen Plattform und Verfeinerung der Token-Ökonomie für die Übernahme im Massenbetrieb.</span>
                 	<span v-else-if=" language === 'ja' ">完全に分散されたプラットフォームに向けたステップを進め、大量採用のためにトークン経済を改良する。</span>
                 	<span v-else-if=" language === 'ko' ">완전 분산화 플랫폼의 달성을 위한 절차를 계속 밟아나가면서 동시에 대규모 채용에 대비해 토큰 경제를 재정비하세요.</span>

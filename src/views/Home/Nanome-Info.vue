@@ -21,7 +21,7 @@
             <br/><br/>Nuestro paquete de software ampliamente utilizado incluye código abierto <a href="http://calcflow.io/" target="_blank">Calcflow</a>, el conjunto de herramientas de matemáticas VR líder de la industria, y <a href="http://store.steampowered.com/app/493430/nanoone/" target="_blank">nano-one</a> una interfaz VR para el diseño y la simulación a nanoescala.</span>
           <span v-else>
             The Nanome team builds intelligent virtual reality interfaces that enable scientists and engineers to collaborate, design and simulate with nanoscale precision.
-            <br/><br/>Our widely used software suite includes open source <a href="http://calcflow.io/" target="_blank">Calcflow</a>, the industry-leading VR mathematics toolkit, and <a href="http://store.steampowered.com/app/493430/nanoone/" target="_blank">nano-one</a>, una interfaz VR para el diseño y la simulación a nanoescala.
+            <br/><br/>Our widely used software suite includes open source <a href="http://calcflow.io/" target="_blank">Calcflow</a>, the industry-leading VR mathematics toolkit, and <a href="http://store.steampowered.com/app/493430/nanoone/" target="_blank">nano-one</a>, a VR interface for design and simulation at the nanoscale.
           </span>
         </div>
       </div>

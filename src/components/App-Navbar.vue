@@ -135,12 +135,12 @@ export default {
       selectedLanguage: 'en',
       languages: [
         { value: 'en', text: 'English' },
-        { value: 'ru', text: 'русский' },
-        { value: 'ch', text: '中文' },
-        { value: 'ge', text: 'Deutsche' },
-        { value: 'ja', text: '日本語' },
-        { value: 'ko', text: '한국어' },
-        { value: 'es', text: 'Español' }
+        // { value: 'ru', text: 'русский' },
+        { value: 'ch', text: '中文' }
+        // { value: 'ge', text: 'Deutsche' },
+        // { value: 'ja', text: '日本語' }
+        // { value: 'ko', text: '한국어' },
+        // { value: 'es', text: 'Español' }
       ]
     }
   },

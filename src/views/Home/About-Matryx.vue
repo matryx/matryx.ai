@@ -20,7 +20,7 @@
     </h2>
     <h3 class="text--center text-color--matryx-dark-grey">
       <span v-if=" language === 'ru' ">Оптимизирован для виртуальных интерфейсов</span>
-      <span v-else-if=" language === 'ch' ">最大级别优化虚拟现实</span>
+      <span v-else-if=" language === 'ch' ">为虚拟现实界面优化</span>
       <span v-else-if=" language === 'ge' ">Optimiert für Virtual Reality Interfaces</span>
       <span v-else-if=" language === 'ja' ">バーチャルリアリティインターフェイスに最適化</span>
       <span v-else-if=" language === 'ko' ">가상 현실 인터페이스에 최적화 됨</span>

@@ -2,7 +2,7 @@
   <section class="news-events" id="news-events">
     <div class="content-container content-container--large">
       <h2 class="news-events__sectionHeader text-color--matryx-grey text-center">
-        <span v-if="language === 'ch' ">国外新闻报道&#38;相关活动</span>
+        <span v-if="language === 'ch' ">相关新闻报道&#38;相关活动</span>
         <span v-else-if="language === 'es' ">NOTICIAS Y EVENTOS</span>
         <span v-else>NEWS &#38; EVENTS</span>
       </h2>

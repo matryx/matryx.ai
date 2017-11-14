@@ -8,7 +8,7 @@
     <div class="token-sale content-container content-container--large ">
       <div class="token-sale__text content-container--medium text-color--white">
         <h1 class="font-size--large uppercase text-center">
-          <span v-if=" language === 'ru' " style="font-size: 34px;">
+          <!-- <span v-if=" language === 'ru' " style="font-size: 34px;">
             ПРИСОЕДИНЯЙТЕСЬ  <br/> К НАШЕЙ ПРОДАЖЕ <br/>ТОКЕНОВ
           </span>
           <span v-else-if=" language === 'ch' ">参与我们的代币销售</span>
@@ -18,48 +18,48 @@
           <span v-else-if=" language === 'ja' ">当社のトークンセールに参加</span>
           <span v-else-if=" language === 'ko' ">저희 토큰 판매에 참여하세요</span>
           <span v-else-if=" language === 'es' ">PARTICIPA EN LA VENTA</span>
-          <span v-else>Join Our Token Sale</span>
+          <span v-else>Join Our Token Sale</span> -->
+          <span v-if=" language === 'ch' "> 万分感谢！ </span>
+          <span v-else> THANK YOU! </span>
         </h1>
 
-        <div>
-          <h4 class="uppercase text-center text-color--matryx-blue" style="margin-bottom: -10px; margin-top: 20px;">
-            <span v-if=" language === 'ch' ">距结束时间</span>
-            <span v-if=" language === 'es' ">TERMINA EN</span>
+        <div id="phase-an">
+          <!-- <p class="text-center">Thanks to all who participated in the Matryx Token Sale.</p> -->
+          <Eth-Bought></Eth-Bought>
+          <h2 class="text-center text-color--matryx-blue" style="margin-bottom: -10px; margin-top: 20px;">
+            <span v-if=" language === 'ch' "> 第一阶段圆满结束</span>
+            <!-- <span v-if=" language === 'es' "> TERMINA EN </span>
             <span v-else>
               <span v-if="is10">10% Bonus Ends in:</span>
-              <span v-else-if="is5">5% Bonus Ends in:</span>
-              <span v-else>Ends In:</span>
-            </span>
-          </h4>
+              <span v-else-if="is5">5% Bonus Ends in:</span> -->
+              <span v-else> Phase 1 Successfully Complete </span>
+            <!-- </span> -->
+          </h2>
 
-          <Countdown :end="endDate" style="margin-top: 0px;"></Countdown>
-
+          <!-- <Countdown :end="endDate" style="margin-top: 0px;"></Countdown> -->
+          <br/>
           <p class="text-center text-color--matryx-blue">
-            <span v-if=" language === 'ch' ">我们感谢大家的参与，点击查看我们的
-            <a class="link" href="https://matryx.ai/matryx-token-sale-extension-cn.pdf" target="_blank"> 最新消息</a></span>
-            <span v-else-if=" language === 'es' ">Apreciamos el apoyo de todos. Tenomos
-            <a class="link" href="https://blog.matryx.ai/token-sale-update-changing-it-up-5f83de13a76d" target="_blank"> noticias exitosas!</a></span>
+            <span v-if=" language === 'ch' "> 由于亚洲对于Matryx平台的需求令我们受宠若惊，我们将于十一月18号，19号，20号继续第二阶段的售卖。
+              <br/> 若想了解更多细节，请阅读我们的最新
+            <a class="link" href="https://blog.matryx.ai/token-sale-update-rising-asia-d15b931b1027" target="_blank"> 博文</a>。</span>
             <span v-else>
-            We appreciate everyone’s support so far
-            <br/> and have some
-            <a class="link"
-              href="https://blog.matryx.ai/token-sale-update-changing-it-up-5f83de13a76d"
+            Due to overwhelming demand in Asia, we will be resuming a Phase II of the sale on November 18th, 19th, and 20th.
+            <!-- <a class="link"
+              href="http://wetoken.info/#/wetoken/news/detail/40"
               target="_blank"
             >
-              exciting news!</a>
+              weToken.</a>-->
+            <br/> For more details read our
+            <a class="link"
+              href="https://blog.matryx.ai/token-sale-update-rising-asia-d15b931b1027"
+              target="_blank"
+            >
+              latest blog</a>.
               </span>
           </p>
 
-          <Matryx-Btn :text="buttonText" :handleClick="openSaleModal">
-          </Matryx-Btn>
-
-          <p class="text-center text-color--matryx-blue">
-            <span v-if=" language === 'ch' ">已经拥有MTX了吗？<span class="link" @click="openMTXModal">检查您的余额</span></span>
-            <span v-else-if=" language === 'es' ">Ya compró? <span class="link" @click="openMTXModal">Verfica tu balance</span></span>
-            <span v-else>Already purchased MTX? <span class="link" @click="openMTXModal">Check your balance.</span></span>
-          </p>
-
-          <Eth-Bought></Eth-Bought>
+          <!-- <Matryx-Btn :text="buttonText" :handleClick="openSaleModal">
+          </Matryx-Btn> -->
         </div>
       </div>
 
@@ -169,12 +169,17 @@ iframe{
   width: 560px !important;
 }
 
+#phase-an{
+  width: 500px;
+  margin: 0 auto;
+}
+
 section.above-the-fold {
   margin-bottom: 0px;
   margin-top:0;
   position:relative;
   padding-top: 50px;
-  padding-bottom: 250px;
+  padding-bottom: 200px;
 
   & > .content-container {
     display:flex;
@@ -231,7 +236,7 @@ section.above-the-fold {
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 0;
-  background-position-y: initial;
+  background-position-y: bottom;
 }
 
 iframe.above-the-fold__video {
@@ -407,6 +412,11 @@ iframe.above-the-fold__video {
 
   }
 
+  #phase-an{
+    width: 500px;
+    margin: 0 auto;
+  }
+
   .token-sale__text p.lead {
     margin: 20px auto;
     width: 100%;
@@ -436,6 +446,10 @@ iframe.above-the-fold__video {
       padding-top: 100px;
       // margin-bottom: 140px;
     }
+  }
+  #phase-an{
+    width: 350px;
+    margin: 0 auto;
   }
   #getNotified .modal-dialog .cta__form__email {
     border-right: 1px solid $purple;

@@ -82,30 +82,30 @@
       ></SaleIcon>
     </div>
     <br/><br/>
-    <h5 class="text-center">
+    <!-- <h5 class="text-center">
       <span v-if=" language === 'ch' ">销售合同 <a href="/sale-terms-ch.pdf" target="_blank"> https://matryx.ai/sale-terms-ch.pdf</a></span>
       <span v-else-if=" language === 'es' "> Términos de venta disponibles en  <a href="/sale-terms.pdf" target="_blank"> https://matryx.ai/sale-terms.pdf</a></span>
       <span v-else >Sale Terms available at <a href="/sale-terms.pdf" target="_blank"> https://matryx.ai/sale-terms.pdf</a></span>
-    </h5>
+    </h5> -->
 
     <h5 class="text-center">
       <span v-if=" language === 'ch' ">
         <a class="link"
-          href="https://blog.matryx.ai/token-sale-update-changing-it-up-5f83de13a76d"
+          href="https://medium.com/@ottomanbob/d15b931b1027"
           target="_blank"
         >点击进入</a>我们的博客阅读我们的的代币销售更新
       </span>
       <span v-else-if=" language === 'es' ">
         Lea las actualizaciones de nuestra venta de tokens en nuestra
         <a class="link"
-          href="https://blog.matryx.ai/token-sale-update-changing-it-up-5f83de13a76d"
+          href="https://medium.com/@ottomanbob/d15b931b1027"
           target="_blank"
         >blog</a>
       </span>
       <span v-else >
       Read the updates to our token sale on our
       <a class="link"
-        href="https://blog.matryx.ai/token-sale-update-changing-it-up-5f83de13a76d"
+        href="https://medium.com/@ottomanbob/d15b931b1027"
         target="_blank"
       > blog</a>.</span>
     </h5>
